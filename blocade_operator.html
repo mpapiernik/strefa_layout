@@ -1,0 +1,39 @@
+<!-- Modal -->
+
+<div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+            <button aria-hidden="true" data-dismiss="modal" class="close" type="button">×</button>
+            <h4 id="myModalPublish" class="modal-title">Zablokuj operatora</h4>
+        </div>
+        <div class="modal-body">
+            <div class="cbp_tmlabel">
+                Czy na pewno chcesz zablokować operatora? 
+            </div>
+             <div class="cbp_tmlabel">
+                Spowoduje to wysłanie powiadomienia e-mail do operatora o szczegółach akcji.  
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn-u btn-u-default" onclick=" $('#confirmPublishModal').modal('hide')">Anuluj</button>
+            <button id="publishButton" type="button" class="btn-u">Zablokuj/Aktywuj</button>
+        </div>
+
+    </div>
+</div>
+<!-- End Modal -->
+
+<script type="text/javascript">
+    jQuery(document).ready(function () {
+        $('#publishButton').click(function () {
+            $('#confirmBlockOperator').modal('hide');
+            var $aTag = $('#confirmBlocade');
+            if ($aTag.find('i').hasClass("fa-ban")) {
+                $aTag.find('i').removeClass('fa-ban').addClass('fa-chevron-down');
+            }
+            else {
+                $aTag.find('i').removeClass('fa-chevron-down').addClass('fa-ban');
+            }
+        });
+    });
+</script>

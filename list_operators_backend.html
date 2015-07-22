@@ -1,0 +1,166 @@
+<!DOCTYPE html> 
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->  
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->  
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->  
+    <head>
+        <title>Panelu Partnera Benefit Systems</title>
+
+        <!-- Meta -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <!-- Favicon -->
+        <link rel="shortcut icon" href="favicon.ico">
+
+        <!-- Web Fonts -->
+        <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:400,300,600&amp;subset=cyrillic,latin">
+
+        <!-- CSS Global Compulsory -->
+        <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+
+        <!-- CSS Header and Footer -->
+        <link rel="stylesheet" href="assets/css/headers/header-default.css">
+        <link rel="stylesheet" href="assets/css/footers/footer-v1.css">
+
+        <!-- CSS Implementing Plugins -->
+        <link rel="stylesheet" href="assets/plugins/animate.css">
+        <link rel="stylesheet" href="assets/plugins/line-icons/line-icons.css">
+        <link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.min.css">
+
+        <!-- CSS Customization -->
+        <link rel="stylesheet" href="assets/css/theme-colors/dark-red.css">
+
+        <!-- DataTables -->
+        <link rel="stylesheet" type="text/css" href="assets/plugins/datatable/css/jquery.dataTables.css">
+    </head>
+
+    <body>    
+        <div class="wrapper">
+            <!--=== Header ===-->    
+            <div class="header" id="includedContentHeader">
+            </div>
+            <!--=== End Header ===--> 
+            <!--=== Breadcrumbs ===-->
+            <div class="breadcrumbs">
+                <div class="container">
+                    <h1 class="pull-left">Lista operatorów Benefit Systems</h1>
+                    <ul class="pull-right breadcrumb">
+                        <li><a href="index_backend.html">Home</a></li>
+                        <li><a href="list_operators_backend.html">Użytkownicy</a></li>
+                        <li><a href="list_operators_backend.html">Lista operatorów</a></li>
+                    </ul>
+                </div>
+            </div><!--/breadcrumbs-->
+            <!--=== End Breadcrumbs ===-->
+
+            <!--=== Content Part ===-->
+            <div class="container content">     
+                <div class="row">
+                    <!-- Begin Content -->
+                    
+                    <div class="col-md-12">
+                        <div class="margin-bottom-20">
+                            <div class="btn-group">
+                                    <a href="add_operator_backend.html" class="button btn-u pull-right"><i class="fa fa-plus fa-fw"></i>Dodaj operatora</a>         
+                            </div>
+                            <!-- End Single button -->                    
+                        </div>
+                        <hr>
+                        <div>
+                            <table id="operatorsList" class="display" cellspacing="0" width="100%" style="text-align: left">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Login</th>
+                                        <th>Imię&nbsp;i&nbsp;nazwisko</th>
+                                        <th class="hidden-sm hidden-xs">E-mail</th>
+                                        <th class="hidden-sm hidden-xs">Data logowania</th>
+                                        <th class="hidden-sm hidden-xs">Status</th>
+                                        <th class="hidden-sm hidden-xs">Rola</th>
+                                        <th>Akcja</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td><a href="profile_operator.html">g.nowecki_backend</a></td>
+                                        <td>Grzegorz Nowecki</td>
+                                        <td class="hidden-sm hidden-xs">g.nowecki@benefitsystems.com.pl</td>
+                                        <td class="hidden-sm hidden-xs">15-07-2015, 10:00:18</td>
+                                        <td class="hidden-sm hidden-xs">Aktywny</td>
+                                        <td class="hidden-sm hidden-xs">Administrator</td>
+                                        <td>
+                                            <div class="btn-group">
+                                                <button type="button" class="btn-u btn-brd btn-u-default btn-brd-hover btn-u-sm btn-u-split-default dropdown-toggle" data-toggle="dropdown">
+                                                    <i class="fa fa fa-cog"></i>
+                                                    <span class="sr-only">Toggle Dropdown</span>                            
+                                                </button>
+                                                <ul class="dropdown-menu" role="menu">
+                                                    <li><a href="profile_operator.html"><i class="fa fa-user"></i> Profil operatora</a></li>
+                                                    <li><a href="" data-toggle="modal" data-target="#confirmBlockOperator" id="confirmBlocade"><i class="fa fa-ban"></i> Zablokuj/Aktywuj</a></li>
+                                                    <li class="divider"></li>
+                                                    <li><a href="#"><i class="fa fa-edit"></i> Edytuj</a></li>
+                                                    <li><a href="#"><i class="fa fa-remove"></i> Usuń</a></li>
+                                                </ul>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+                    <!-- End Content -->
+                </div>          
+            </div><!--/container-->     
+            <!--=== End Content Part ===-->
+            <div class="modal fade" id="confirmBlockOperator" tabindex="-1" role="dialog" aria-hidden="true"></div>
+
+            <!--=== Footer Version 1 ===-->
+            <div class="footer-v1" id="includedContentFooter">
+            </div>     
+            <!--=== End Footer Version 1 ===-->
+        </div><!--/End Wrapepr-->
+        <!-- JS Global Compulsory -->           
+        <script type="text/javascript" src="assets/plugins/jquery/jquery.min.js"></script>
+        <script type="text/javascript" src="assets/plugins/jquery/jquery-migrate.min.js"></script>
+        <script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+        <!-- JS Implementing Plugins -->
+        <script type="text/javascript" src="assets/plugins/back-to-top.js"></script>
+        <script type="text/javascript" src="assets/plugins/smoothScroll.js"></script>
+        <!-- JS Customization -->
+        <script type="text/javascript" src="assets/js/custom.js"></script>
+        <!-- JS Page Level -->           
+        <script type="text/javascript" src="assets/js/app.js"></script>
+        <!-- JS DataTables -->
+        <script type="text/javascript" language="javascript" src="assets/plugins/datatable/js/jquery.dataTables.js"></script>
+        <script type="text/javascript">
+            jQuery(document).ready(function () {
+                App.init();
+                $(document).ready(function () {
+                    $('#operatorsList').DataTable({
+                        "language": {
+                            "url": "assets/plugins/datatable/lang/Polish.json"
+                        }
+                    });
+                });
+            });
+        </script>
+        <script>
+            $(function () {
+                $("#includedContentHeader").load("header_backend.html");
+                $("#includedContentFooter").load("footer.html");
+                $("#confirmBlockOperator").load("blocade_operator.html");
+            });
+        </script> 
+        <!--[if lt IE 9]>
+            <script src="assets/plugins/respond.js"></script>
+            <script src="assets/plugins/html5shiv.js"></script>
+            <script src="assets/plugins/placeholder-IE-fixes.js"></script>
+        <![endif]-->
+
+    </body>
+</html> 

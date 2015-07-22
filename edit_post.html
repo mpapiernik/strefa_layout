@@ -1,0 +1,266 @@
+<!DOCTYPE html> 
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->  
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->  
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->  
+    <head>
+        <title>Panel Benefit Systems</title>
+
+        <!-- Meta -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <!-- Favicon -->
+        <link rel="shortcut icon" href="favicon.ico">
+
+        <!-- Web Fonts -->
+        <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:400,300,600&amp;subset=cyrillic,latin">
+
+        <!-- CSS Global Compulsory -->
+        <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+
+        <!-- CSS Header and Footer -->
+        <link rel="stylesheet" href="assets/css/headers/header-default.css">
+        <link rel="stylesheet" href="assets/css/footers/footer-v1.css">
+
+        <!-- CSS Implementing Plugins -->
+        <link rel="stylesheet" href="assets/plugins/animate.css">
+        <link rel="stylesheet" href="assets/plugins/line-icons/line-icons.css">
+        <link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.min.css">
+
+        <!-- CSS Page Style -->    
+        <link rel="stylesheet" href="assets/css/pages/shortcode_timeline2.css">
+
+        <!-- CSS Customization -->
+        <link rel="stylesheet" href="assets/css/theme-colors/dark-red.css">
+
+        <!-- DataTables -->
+        <link rel="stylesheet" type="text/css" href="assets/plugins/datatable/css/jquery.dataTables.css">
+
+        <!-- CSS Implementing Plugins -->
+        <link rel="stylesheet" href="assets/plugins/animate.css">
+        <link rel="stylesheet" href="assets/plugins/line-icons/line-icons.css">
+        <link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="assets/plugins/sky-forms-pro/skyforms/css/sky-forms.css">
+        <link rel="stylesheet" href="assets/plugins/sky-forms-pro/skyforms/custom/custom-sky-forms.css">
+        <!--[if lt IE 9]><link rel="stylesheet" href="assets/plugins/sky-forms-pro/skyforms/css/sky-forms-ie8.css"><![endif]-->
+
+
+        <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/bootstrap-duallistbox.css">
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/prettify/r298/run_prettify.min.js"></script>
+        <script src="assets/js/jquery.bootstrap-duallistbox.js"></script>
+
+
+
+    </head>
+
+    <body>    
+        <div class="wrapper">
+            <!--=== Header ===-->    
+            <div class="header" id="includedContentHeader">
+            </div>
+            <!--=== End Header ===--> 
+            <!--=== Breadcrumbs ===-->
+            <div class="breadcrumbs">
+                <div class="container">
+                    <h1 class="pull-left">Panel Benefit Systems</h1>
+                    <ul class="pull-right breadcrumb">
+                        <li><a href="index_backend.html">Home</a></li>
+                        <li><a href="">Posty</a></li>
+                        <li><a href="">Edytuj post</a></li>
+                    </ul>
+                </div>
+            </div><!--/breadcrumbs-->
+            <!--=== End Breadcrumbs ===-->
+
+            <!--=== Content Part ===-->
+            <div class="container content">     
+                <div class="row">
+                    <!-- Begin Content -->
+                    <div class="col-md-8 col-md-offset-2">
+                        <!-- Post -->
+                        <form action="assets/php/demo-contacts-process.php" method="post" id="sky-form3" class="sky-form">
+                            <header>Edituj post</header>
+
+                            <fieldset>                  
+                                <section>
+                                    <label class="label">Tytuł</label>
+                                    <label class="input">
+                                        <i class="icon-append fa fa-tag"></i>
+                                        <input type="text" name="subject" id="subject" value="Proin sodales pulvinar">
+                                    </label>
+                                </section>
+
+                                <section>
+                                    <label class="label">Treść posta</label>
+                                    <label class="textarea">
+                                        <i class="icon-append fa fa-comment"></i>
+                                        <textarea rows="6" name="message" id="message" >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio.</textarea>
+                                    </label>
+                                </section>
+
+                                <div class="row">
+                                    <section class="col col-6">
+                                        <label class="label">Data publikacji</label> 
+                                        <label class="input">
+                                            <i class="icon-append fa fa-calendar"></i>
+                                            <input type="text" name="date" id="start" value="2015-07-14">
+                                        </label>
+                                    </section>
+                                    <section class="col col-6">
+                                        <label class="label">Data wstrzymania publikacji</label> 
+                                        <label class="input">
+                                            <i class="icon-append fa fa-calendar"></i>
+                                            <input type="text" name="date" id="finish">
+                                        </label>
+                                    </section>
+                                </div>
+
+                                <section>
+                                    <label class="checkbox"><input id="publicCheckbox" type="checkbox" name="public" onclick="showPartnerDiv()"><i></i>Publiczny</label>
+                                </section>
+
+                                <section>
+                                    <div id="partnerState">
+                                        <label class="label">Lista partnerów</label>
+                                        <select multiple="multiple" size="10" name="duallistbox_demo1[]" id="duallistbox">
+                                            <option value="option1">Option 1</option>
+                                            <option value="option2">Option 2</option>
+                                            <option id="groupB" value="option3">Grupa B</option>
+                                            <option value="option4">Option 4</option>
+                                            <option value="option5">Option 5</option>
+                                            <option value="option6" selected="selected">Option 6</option>
+                                            <option value="option7">Option 7</option>
+                                            <option value="option8">Option 8</option>
+                                            <option value="option9">Option 9</option>
+                                            <option value="option0">Option 10</option>
+                                        </select>
+
+                                        <script>
+                                            var demo1 = $('select[name="duallistbox_demo1[]"]').bootstrapDualListbox();
+                                            var groups = {
+                                                groupA: {12: "Option 12", 14: "Option 14", },
+                                                groupB: {12: "Option 12", 14: "Option 14", 17: "Option 17", 18: "Option 18"},
+                                                groupC: {2: "partner2", 5: "partner14", }
+                                            };
+                                            var select = $('#duallistbox');
+                                            var options = $('select[name="duallistbox_demo1[]"] option');
+                                            options.each(function ()
+                                            {
+                                                if (typeof $(this).attr("id") != 'undefined') {
+                                                    var groupID = $(this).attr('id');
+                                                    $(this).selected = false;
+                                                    var partners = groups[groupID];
+                                                    for (var partner in partners) {
+                                                        var option = document.createElement("option");
+                                                        option.value = "option" + partner;
+                                                        option.innerText = partners[partner];
+                                                        option.selected = true;
+                                                        select.append(option);
+                                                    }
+                                                    demo1.bootstrapDualListbox('refresh', true);
+                                                }
+                                            });
+                                        </script>
+                                    </div>
+                                </section>
+
+                                <section>
+                                    <label class="checkbox"><input type="checkbox" name="new_window"><i></i>Otwórz link w osobnej karcie</label>
+                                </section>
+
+                                <section>
+                                    <label class="label">Link do źródła</label>
+                                    <label class="input">
+                                        <i class="icon-append fa fa-tag"></i>
+                                        <input type="text" name="link" id="link" value="http://localhost:8088/spbs_frontend/wall.html">
+                                    </label>
+                                </section>
+
+                                <section>
+                                    <label class="checkbox"><input type="checkbox" name="important" checked="checked"><i></i>Oznacz post jako ważny</label>
+                                </section>
+
+                            </fieldset>
+                            <footer>
+                                <a href="index_backend.html" class="btn-u">Edytuj</a>  
+                                <button type="button" class="btn-u btn-u-default" onclick="window.history.back();">Wróć</button>
+                            </footer>
+                        </form>         
+                        <!-- Post -->
+                    </div>
+                    <!-- End Content -->
+                    <!-- Begin Sidebar Menu -->
+                    <div class="col-md-3" id="includedContentSideBar">
+                    </div>
+                    <!-- End Sidebar Menu -->
+                </div>          
+            </div><!--/container-->     
+            <!--=== End Content Part ===-->
+
+            <!--=== Footer Version 1 ===-->
+            <div class="footer-v1" id="includedContentFooter">
+            </div>     
+            <!--=== End Footer Version 1 ===-->
+
+        </div><!--/End Wrapepr-->
+
+        <!-- JS Global Compulsory -->           
+        <script type="text/javascript" src="assets/plugins/jquery/jquery.min.js"></script>
+        <script type="text/javascript" src="assets/plugins/jquery/jquery-migrate.min.js"></script>
+        <script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+        <!-- JS Implementing Plugins -->
+        <script type="text/javascript" src="assets/plugins/back-to-top.js"></script>
+        <script type="text/javascript" src="assets/plugins/smoothScroll.js"></script>
+        <script src="assets/plugins/sky-forms-pro/skyforms/js/jquery.validate.min.js"></script>
+        <script src="assets/plugins/sky-forms-pro/skyforms/js/jquery.maskedinput.min.js"></script>
+        <script src="assets/plugins/sky-forms-pro/skyforms/js/jquery-ui.min.js"></script>
+        <script src="assets/plugins/sky-forms-pro/skyforms/js/jquery.form.min.js"></script>
+        <!-- JS Customization -->
+        <script type="text/javascript" src="assets/js/custom.js"></script>
+        <!-- JS Page Level -->           
+        <script type="text/javascript" src="assets/js/app.js"></script>
+        <script type="text/javascript" src="assets/js/forms/contact.js"></script>
+        <script type="text/javascript" src="assets/js/plugins/masking.js"></script>
+        <script type="text/javascript" src="assets/js/plugins/datepicker.js"></script>
+        <script type="text/javascript" src="assets/js/plugins/validation.js"></script>
+        <script type="text/javascript">
+            jQuery(document).ready(function () {
+                App.init();
+                ContactForm.initContactForm();
+                Masking.initMasking();
+                Datepicker.initDatepicker();
+                Validation.initValidation();
+
+                $('#publicCheckbox').click(function () {
+                    $('#partnerState').slideToggle('fast', function () {
+                        // Animation complete.
+                    });
+                });
+            });
+        </script>
+        <script>
+            $(function () {
+                $("#includedContentHeader").load("header_backend.html");
+                $("#includedContentFooter").load("footer.html");
+
+            });
+
+
+
+
+        </script> 
+        <!--[if lt IE 9]>
+            <script src="assets/plugins/respond.js"></script>
+            <script src="assets/plugins/html5shiv.js"></script>
+            <script src="assets/plugins/placeholder-IE-fixes.js"></script>
+        <![endif]-->
+
+    </body>
+</html> 
