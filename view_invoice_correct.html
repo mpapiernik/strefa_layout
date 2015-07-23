@@ -39,7 +39,7 @@
 
         <!-- CSS Page Style -->    
         <link rel="stylesheet" href="assets/css/pages/page_invoice.css">
-        
+
     </head>
 
     <body>    
@@ -55,7 +55,7 @@
                     <ul class="pull-right breadcrumb">
                         <li><a href="wall.html">Home</a></li>
                         <li><a href="list_invoices.html">Faktury</a></li>
-                        <li><a href="#">Podgląd faktury</a></li>
+                        <li><a href="#">Podgląd faktury korygującej</a></li>
                     </ul>
                 </div>
             </div><!--/breadcrumbs-->
@@ -74,12 +74,12 @@
                     </div>
                     <div class="col-xs-4">
                         <div class="tag-box tag-box-v3">
-                            <h3>Faktura VAT</h3>
+                            <h3>Faktura korygująca do faktury VAT nr 2015/FVS/25015</h3>
                         </div>
                     </div>
                     <div class="col-xs-4">
                         <div class="tag-box tag-box-v3">
-                            <h3>Nr: 2015/FVS/25015</h3>
+                            <h3>Nr: 2015/FVK/15</h3>
                         </div>
                     </div>
                 </div>
@@ -148,7 +148,7 @@
                 <!--Invoice Table-->
                 <div class="panel panel-default margin-bottom-20">
                     <div class="panel-heading">
-                        <h3 class="panel-title">Szczegóły</h3>
+                        <h3 class="panel-title">PRZED KOREKTĄ</h3>
                     </div>
                     <table class="table table-striped invoice-table">
                         <thead>
@@ -198,7 +198,7 @@
                                 <td class="hidden-sm">270,00</td>
                                 <td>2070,00</td>
                             </tr>
-                             <tr>
+                            <tr>
                                 <td>4</td>
                                 <td class="table-product">Zajęcia jogi</td>
                                 <td>100</td>
@@ -209,61 +209,131 @@
                                 <td class="hidden-sm">460,00</td>
                                 <td>2460,00</td>
                             </tr>
-                         <tr class="space">
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td class="hidden-sm"></td>
-                            <td></td>
-                            <td></td>
-                            <td class="hidden-sm"></td>
-                            <td class="hidden-sm"></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td class="no-border"></td>
-                            <td class="no-border"></td>
-                            <td class="no-border"></td>
-                            <td class="hidden-sm no-border"></td>
-                            <td class="summary summary-text summary-row">RAZEM</td>
-                            <td class="summary-cell summary-row">7074,00</td>
-                            <td class="hidden-sm summary-row">X</td>
-                            <td class="hidden-sm summary-row">999,18</td>
-                            <td class="summary-row">8073,18</td>
-                        </tr>
-                        <tr>
-                            <td class="no-border"></td>
-                            <td class="no-border"></td>
-                            <td class="no-border"></td>
-                            <td class="hidden-sm no-border"></td>
-                            <td class="summary summary-text">W tym</td>
-                            <td class="summary-cell">3024,00</td>
-                            <td class="hidden-sm">7%</td>
-                            <td class="hidden-sm">211,68</td>
-                            <td>3235,68</td>
-                        </tr>
-                        <tr>
-                            <td class="no-border"></td>
-                            <td class="no-border"></td>
-                            <td class="no-border"></td>
-                            <td class="hidden-sm no-border"></td>
-                            <td class="no-border"></td>
-                            <td class="summary-cell">1800,00</td>
-                            <td class="hidden-sm">15%</td>
-                            <td class="hidden-sm">270,00</td>
-                            <td>2070,00</td>
-                        </tr>
-                         <tr>
-                            <td class="no-border"></td>
-                            <td class="no-border"></td>
-                            <td class="no-border"></td>
-                            <td class="hidden-sm no-border"></td>
-                            <td class="no-border"></td>
-                            <td class="summary-cell">2250,00</td>
-                            <td class="hidden-sm">23%</td>
-                            <td class="hidden-sm">517,50</td>
-                            <td>2767,50</td>
-                        </tr>
+                        </tbody>
+
+                    </table>
+                </div>
+                <!--End Invoice Table-->
+
+                <!--Invoice Table-->
+                <div class="panel panel-default margin-bottom-20">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">PO KOREKCIE</h3>
+                    </div>
+                    <table class="table table-striped invoice-table">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th class="table-product">Nazwa</th>
+                                <th>Ilość</th>
+                                <th class="hidden-sm">J.m.</th>
+                                <th>Cena jedn. netto</th>
+                                <th>Wartość netto</th>
+                                <th class="hidden-sm">Stawka VAT</th>
+                                <th class="hidden-sm">Kwota VAT</th>
+                                <th>Wartość brutto</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td class="table-product">Sauna</td>
+                                <td>2520</td>
+                                <td class="hidden-sm">szt.</td>
+                                <td>12,00</td>
+                                <td>30240,00</td>
+                                <td class="hidden-sm">7%</td>
+                                <td class="hidden-sm">2116,80</td>
+                                <td>32356,80</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td class="table-product">Zajęcia sportowe pracownika</td>
+                                <td>0</td>
+                                <td class="hidden-sm">szt.</td>
+                                <td>10,00</td>
+                                <td>250,00</td>
+                                <td class="hidden-sm">23%</td>
+                                <td class="hidden-sm">57,50</td>
+                                <td>307,50</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td class="table-product">Zajęcia fitness</td>
+                                <td>0</td>
+                                <td class="hidden-sm">szt.</td>
+                                <td>15,00</td>
+                                <td>0</td>
+                                <td class="hidden-sm">15%</td>
+                                <td class="hidden-sm">0</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td class="table-product">Zajęcia jogi</td>
+                                <td>100</td>
+                                <td class="hidden-sm">szt.</td>
+                                <td>20,00</td>
+                                <td>2000,00</td>
+                                <td class="hidden-sm">23%</td>
+                                <td class="hidden-sm">460,00</td>
+                                <td>2460,00</td>
+                            </tr>
+                            <tr class="space">
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td class="hidden-sm"></td>
+                                <td></td>
+                                <td></td>
+                                <td class="hidden-sm"></td>
+                                <td class="hidden-sm"></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="no-border"></td>
+                                <td class="no-border"></td>
+                                <td class="no-border"></td>
+                                <td class="hidden-sm no-border"></td>
+                                <td class="summary summary-text summary-row">RAZEM</td>
+                                <td class="summary-cell summary-row">27666,00</td>
+                                <td class="hidden-sm summary-row">X</td>
+                                <td class="hidden-sm summary-row">2152,62</td>
+                                <td class="summary-row">29818,62</td>
+                            </tr>
+                            <tr>
+                                <td class="no-border"></td>
+                                <td class="no-border"></td>
+                                <td class="no-border"></td>
+                                <td class="hidden-sm no-border"></td>
+                                <td class="summary summary-text">W tym</td>
+                                <td class="summary-cell">27216,00</td>
+                                <td class="hidden-sm">7%</td>
+                                <td class="hidden-sm">1905,12</td>
+                                <td>29121,12</td>
+                            </tr>
+                            <tr>
+                                <td class="no-border"></td>
+                                <td class="no-border"></td>
+                                <td class="no-border"></td>
+                                <td class="hidden-sm no-border"></td>
+                                <td class="no-border"></td>
+                                <td class="summary-cell">-1800,00</td>
+                                <td class="hidden-sm">15%</td>
+                                <td class="hidden-sm">-270,00</td>
+                                <td>-2070,00</td>
+                            </tr>
+                            <tr>
+                                <td class="no-border"></td>
+                                <td class="no-border"></td>
+                                <td class="no-border"></td>
+                                <td class="hidden-sm no-border"></td>
+                                <td class="no-border"></td>
+                                <td class="summary-cell">2250,00</td>
+                                <td class="hidden-sm">23%</td>
+                                <td class="hidden-sm">517,50</td>
+                                <td>2767,50</td>
+                            </tr>
                         </tbody>
 
                     </table>
@@ -271,18 +341,19 @@
                 <!--End Invoice Table-->
 
                 <!--Invoice Footer-->
-               
+
                 <div class="row">
                     <div class="col-xs-4">
                         <div class="tag-box tag-box-v3 no-margin-bottom">
-                            <strong>Razem do zapłaty: </strong>8073,18 PLN
+                            <h2>KOREKTA ZWIĘKSZAJĄCA</h2>        
+                            <strong>Razem do zapłaty: </strong>29818,62 PLN
                         </div>    
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-xs-12">
                         <div class="tag-box tag-box-v3 no-margin-bottom">
-                            <strong>Słownie: </strong>osiem tysięcy sielemdziesiąt trzy i 0,18 PLN
+                            <strong>Słownie: </strong>dwadzieście dzięwięć tysięcy osiemset osiemnaście i 0,62 PLN
                         </div>    
                     </div>
                 </div>
@@ -290,8 +361,8 @@
                     <div class="col-xs-6">
                         Faktura bez podpisu odbiorcy
                     </div>
-                      <div class="col-xs-6">
-                     Wystawił(a) : Anna Nowak
+                    <div class="col-xs-6">
+                        Wystawił(a) : Anna Nowak
                     </div>
                 </div>
                 <!--End Invoice Footer-->
@@ -299,7 +370,7 @@
                 <!--Invoice Footer-->
                 <div class="row">
                     <div class="col-xs-6 text-right pull-right">
-                        <a href="http://83.144.70.78:8082/benefit_dev/web/testinvoice/invoice" class="btn-u margin-bottom-5"><i class="fa fa-file-pdf-o"></i> Podgląd PDF</a>        
+                        <a href="http://83.144.70.78:8082/benefit_dev/web/testinvoice/invoiceCorrect" class="btn-u margin-bottom-5"><i class="fa fa-file-pdf-o"></i> Podgląd PDF</a>        
                         <a href="#" class="btn-u margin-bottom-5"><i class="fa fa-file-excel-o"></i> Wystaw korektę</a>        
                         <a href="#" class="btn-u margin-bottom-5"><i class="fa fa-pencil-square-o"></i> Wystaw notę</a>        
                     </div>
@@ -325,10 +396,10 @@
         <!-- JS Page Level -->           
         <script type="text/javascript" src="assets/js/app.js"></script>
         <script type="text/javascript">
-                            jQuery(document).ready(function () {
-                                App.init();
+            jQuery(document).ready(function () {
+                App.init();
 
-                            });
+            });
         </script>
         <script>
             $(function () {

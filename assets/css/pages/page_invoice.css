@@ -102,3 +102,12 @@ address {
  
 }
 
+.summary-note{
+    font-weight: bold;
+    background: #BBB !important;
+    border-left:1px solid #ddd !important;
+}
+.summary-note th {
+     text-align: center !important; 
+}
+
