@@ -46,6 +46,19 @@
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
         <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/prettify/r298/run_prettify.min.js"></script>
+
+        <!-- Multiselect -->
+        <link rel="stylesheet" href="assets/css/bootstrap-example.css" type="text/css">
+        <link rel="stylesheet" href="assets/css/prettify.css" type="text/css">
+
+        <script type="text/javascript" src="assets/js/jquery-2.1.3.min.js"></script>
+        <script type="text/javascript" src="assets/js/bootstrap-3.3.2.min.js"></script>
+        <script type="text/javascript" src="assets/js/prettify.js"></script>
+
+        <link rel="stylesheet" href="dist/css/bootstrap-multiselect.css" type="text/css">
+        <script type="text/javascript" src="assets/js/bootstrap-multiselect.js"></script>
+        <script type="text/javascript" src="assets/js/bootstrap-multiselect-collapsible-groups.js"></script>
+
     </head>
 
     <body>    
@@ -57,11 +70,11 @@
             <!--=== Breadcrumbs ===-->
             <div class="breadcrumbs">
                 <div class="container">
-                    <h1 class="pull-left">Nowy operator partnera</h1>
+                    <h1 class="pull-left">Edycja operatora Benefitu</h1>
                     <ul class="pull-right breadcrumb">
                         <li><a href="index_backend.html">Home</a></li>
-                        <li><a href="list_partners.html">Partnerzy</a></li>
-                        <li><a href="list_operators_backend.html">Lista operatorów</a></li>
+                        <li><a href="index_backend.html">Ustawienia</a></li>
+                        <li><a href="list_benefit_operators.html">Operatorzy Benefitu</a></li>
                     </ul>
                 </div>
             </div><!--/breadcrumbs-->
@@ -73,49 +86,42 @@
                     <!-- Begin Content -->
                     <div class="col-md-8 col-md-offset-2">
                         <!-- Checkout-Form -->
-                        <form action="list_operators_backend.html" id="sky-form" class="sky-form">
-                            <header>Dodaj operatora partnera</header>
+                        <form action="list_benefit_operators.html" id="sky-form" class="sky-form">
+                            <header>Edytuj dane operatora Beneditu (1)</header>
                             <fieldset>                  
                                 <div class="row">
                                     <section class="col col-6">
                                         <label class="label">Imię</label>
                                         <label class="input">
                                             <i class="icon-prepend fa fa-user"></i>
-                                            <input type="text" name="fname">
+                                            <input type="text" name="fname"  value="Grzegorz">
                                         </label>
                                     </section>
                                     <section class="col col-6">
                                         <label class="label">Nazwisko</label>
                                         <label class="input">
                                             <i class="icon-prepend fa fa-user"></i>
-                                            <input type="text" name="lname">
+                                            <input type="text" name="lname"  value="Nowecki">
                                         </label>
                                     </section>
                                 </div>
                                 <div class="row">
                                     <section class="col col-6">
-                                        <label class="label">Partner</label>
-                                        <label class="select">
-                                            <select name="partner" disabled>
-                                                <option value="1">Calypso Spólka Akcyjna</option>
-                                                <option value="2">Gymnasion</option>
-                                                <option value="3">Fit</option>
-                                            </select>
-                                            <i></i>
+                                        <label class="label">E-mail</label>
+                                        <label class="input">
+                                            <i class="icon-prepend fa fa-envelope"></i>
+                                            <input type="email" name="email" value="g.nowecki@benefitsystems.com.pl">
                                         </label>
                                     </section>
                                     <section class="col col-6">
-                                        <label class="label">Rola</label>
-                                        <label class="select">
-                                            <select name="role">
-                                                <option value="1">Operator partnera</option>
-                                                <option value="2">Operator FK</option>
-                                                <option value="3">Administrator</option>
-                                            </select>
-                                            <i></i>
+                                        <label class="label">Telefon kontaktowy</label>
+                                        <label class="input">
+                                            <i class="icon-prepend fa fa-phone"></i>
+                                            <input type="tel" name="phone" value="123-4556-789">
                                         </label>
                                     </section>
                                 </div>
+
                             </fieldset>
                             <fieldset>
                                 <div class="row">
@@ -123,14 +129,18 @@
                                         <label class="label">Login</label>
                                         <label class="input">
                                             <i class="icon-prepend fa fa-user"></i>
-                                            <input type="text" name="login">
+                                            <input type="text" name="login" value="g.nowecki_backend">
                                         </label>
                                     </section>
                                     <section class="col col-6">
-                                        <label class="label">E-mail</label>
-                                        <label class="input">
-                                            <i class="icon-prepend fa fa-envelope"></i>
-                                            <input type="email" name="email">
+                                        <label class="label">Rola</label>
+                                        <label class="select">
+                                            <select name="role">
+                                                <option value="1">Opiekun partnera</option>
+                                                <option value="2">Redaktor</option>
+                                                <option value="3">Administrator</option>
+                                            </select>
+                                            <i></i>
                                         </label>
                                     </section>
                                 </div>
@@ -153,57 +163,7 @@
                                     </section>
                                 </div>
                             </fieldset>
-
                             <fieldset>
-                                <div class="row">
-                                    <section class="col col-8">
-                                        <label class="label">Domyślny obiekt</label>
-                                        <label class="select">
-                                            <select name="country">
-                                                <option value="0">Aaland Islands</option>
-                                                <option value="1">Afghanistan</option>
-                                                <option value="2">Albania</option>
-                                                <option value="3">Algeria</option>
-                                                <option value="4">American Samoa</option>
-                                                <option value="5">Andorra</option>
-                                                <option value="6">Angola</option>
-                                            </select>
-                                            <i></i>
-                                        </label>
-                                    </section>
-
-                                    <section class="col col-4">
-                                        <label class="label">Stanowisko</label>
-                                        <label class="input">
-                                            <input type="text">
-                                        </label>
-                                    </section>
-                                </div>
-
-                                <div class="row">
-                                    <section class="col col-4">
-                                        <label class="label">Telefon kontaktowy</label>
-                                        <label class="input">
-                                            <i class="icon-prepend fa fa-phone"></i>
-                                            <input type="tel" name="phone">
-                                        </label>
-                                    </section>
-                                    <section class="col col-4">
-                                        <label class="label">Telefon kontaktowy 2</label>
-                                        <label class="input">
-                                            <i class="icon-prepend fa fa-phone"></i>
-                                            <input type="tel" name="phone">
-                                        </label>
-                                    </section>
-                                    <section class="col col-4">
-                                        <label class="label">Telefon kontaktowy 3</label>
-                                        <label class="input">
-                                            <i class="icon-prepend fa fa-phone"></i>
-                                            <input type="tel" name="phone">
-                                        </label>
-                                    </section>
-                                </div>
-
                                 <section>
                                     <label class="label">Komentarz</label>
                                     <label class="textarea">
@@ -211,27 +171,43 @@
                                     </label>
                                 </section>
                             </fieldset>
-
                             <fieldset>
+
                                 <section>
-                                    <label class="label">Powiadomienia</label>
-                                    <div class="row">
-                                        <div class="col col-12">
-                                            <label class="checkbox"><input type="checkbox" name="checkbox" checked><i></i>Posty ważne</label>
-                                            <label class="checkbox"><input type="checkbox" name="checkbox" disabled><i></i>Posty normalne</label>
-                                            <label class="checkbox"><input type="checkbox" name="checkbox" disabled><i></i>Wnioski</label>
+                                    <label class="label"> Partnerzy opiekuna </label>
+                                    <script type="text/javascript">
+                                        $(document).ready(function () {
+                                            $('#example-filter-placeholder2').multiselect({
+                                                enableFiltering: true,
+                                                filterPlaceholder: 'Wybierz partnera...'
+                                            });
+                                        });
+                                    </script>
+
+                                    <select id="example-filter-placeholder2" multiple="multiple" style="width:100%">
+                                        <option selected> (1212) Tyger Gym </option>
+                                        <option> (12313) Calypso spółka akcyjna</option>
+                                        <option selected> (1232) Fit Active</option>
+                                        <option> (1232) Fit</option>
+                                    </select>
+                                </section>
+
+                                <section>
+                                    <div class="margin-bottom-20">
+                                        <div class="btn-group">
+                                            <a href="list_partners.html" class="btn-u pull-right"><i class="fa fa-list fa-fw"></i>Lista partnerów operatora</a>         
                                         </div>
+                                        <!-- End Single button -->                    
                                     </div>
                                 </section>
                             </fieldset>
                             <fieldset>
                                 <section>
-                                    <label class="checkbox"><input type="checkbox" name="checkbox" checked><i></i>Aktywuj operatora (użytkownik uzyska dostęp do Panelu Partnera)</label>
+                                    <label class="checkbox"><input type="checkbox" name="checkbox" checked><i></i>Aktywuj operatora (użytkownik uzyska dostęp do Panelu Benefit)</label>
                                 </section>
                             </fieldset>
-
                             <footer>
-                                <button type="submit" class="btn-u" onclick="">Dodaj</button>  
+                                <button type="submit" class="btn-u" onclick="">Edytuj</button>  
                                 <button type="button" class="btn-u btn-u-default" onclick="window.history.back();">Wróć</button>
                             </footer>
                         </form>         
@@ -246,6 +222,7 @@
             </div><!--/container-->     
             <!--=== End Content Part ===-->
 
+
             <!--=== Footer Version 1 ===-->
             <div class="footer-v1" id="includedContentFooter">
             </div>     
@@ -254,7 +231,6 @@
         </div><!--/End Wrapepr-->
 
         <!-- JS Global Compulsory -->           
-        <script type="text/javascript" src="assets/plugins/jquery/jquery.min.js"></script>
         <script type="text/javascript" src="assets/plugins/jquery/jquery-migrate.min.js"></script>
         <script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
         <!-- JS Implementing Plugins -->
@@ -274,19 +250,18 @@
         <script type="text/javascript" src="assets/js/plugins/validation.js"></script>
         <script type="text/javascript" src="assets/js/forms/checkout.js"></script>
         <script type="text/javascript">
-            jQuery(document).ready(function () {
-                App.init();
-                ContactForm.initContactForm();
-                CheckoutForm.initCheckoutForm();
-            });
+                                    jQuery(document).ready(function () {
+                                        App.init();
+                                        ContactForm.initContactForm();
+                                        CheckoutForm.initCheckoutForm();
+                                    });
         </script>
         <script>
             $(function () {
                 $("#includedContentHeader").load("header_backend.html");
                 $("#includedContentFooter").load("footer.html");
-
             });
-        </script> 
+        </script>
         <!--[if lt IE 9]>
             <script src="assets/plugins/respond.js"></script>
             <script src="assets/plugins/html5shiv.js"></script>

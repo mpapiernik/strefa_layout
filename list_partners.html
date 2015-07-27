@@ -3,7 +3,7 @@
 <!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->  
 <!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->  
     <head>
-        <title>Panel Benefit Systems</title>
+        <title>Panel Partnera Benefit Systems</title>
 
         <!-- Meta -->
         <meta charset="utf-8">
@@ -30,9 +30,6 @@
         <link rel="stylesheet" href="assets/plugins/line-icons/line-icons.css">
         <link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.min.css">
 
-        <!-- CSS Page Style -->    
-        <link rel="stylesheet" href="assets/css/pages/shortcode_timeline2.css">
-
         <!-- CSS Customization -->
         <link rel="stylesheet" href="assets/css/theme-colors/dark-red.css">
 
@@ -49,10 +46,11 @@
             <!--=== Breadcrumbs ===-->
             <div class="breadcrumbs">
                 <div class="container">
-                    <h1 class="pull-left">Lista postów</h1>
+                    <h1 class="pull-left">Lista partnerów</h1>
                     <ul class="pull-right breadcrumb">
-                        <li><a href="index_backend.html">Home</a></li>
-                        <li><a href="list_posts.html">Posty</a></li>
+                        <li><a href="wall.html">Home</a></li>
+                        <li><a href="list_partners.html">Partnerzy</a></li>
+                        <li><a href="list_partners.html">Lista partnerów</a></li>
                     </ul>
                 </div>
             </div><!--/breadcrumbs-->
@@ -62,76 +60,58 @@
             <div class="container content">     
                 <div class="row">
                     <!-- Begin Content -->
+                    
                     <div class="col-md-12">
-                        <div class="margin-bottom-20">
-                            <div class="btn-group">
-                                    <a href="add_post.html" class="button btn-u pull-right"><i class="fa fa-plus fa-fw"></i>Dodaj post</a>         
-                            </div>
-                            <!-- End Single button -->                    
-                        </div>
-                        <hr>
-
                         <div>
-                            <table id="facilityList" class="display" cellspacing="0" width="100%">
+                            <table id="operatorsList" class="display" cellspacing="0" width="100%" style="text-align: left">
                                 <thead>
                                     <tr>
-                                        <th>Tytuł</th>
-                                        <th>Autor</th>
-                                        <th>Priorytet</th>
-                                        <th>Czas publikacji</th>
-                                        <th>Czas edycji</th>
-                                        <th>Opublikowany</th>
+                                        <th>#</th>
+                                        <th>Nazwa</th>
+                                        <th class="hidden-sm hidden-xs">E-mail</th>
+                                        <th class="hidden-sm hidden-xs">Status</th>
+                                        <th class="hidden-sm hidden-xs">Osoba kontaktowa</th>
+                                        <th class="hidden-sm hidden-xs">Opiekun</th>
                                         <th>Akcja</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td>Nowe pliki do pobrania</td>
-                                        <td>Adam Nowak</td>
-                                        <td>Tak</td>
-                                        <td>2015-07-09 12:32</td>
-                                        <td>2015-07-11 12:32</td>
-                                        <td>Tak</td>
-                                        <td><a href="edit_post.html" class="btn-u btn-brd btn-brd-hover btn-u-sm"><i class="fa fa-pencil"></i></a>
-                                        <a class="btn-u btn-brd btn-u-default btn-brd-hover btn-u-s" data-toggle="modal" data-target="#myModal"><i class="fa fa-history"></i></a>
-                                        <a class="btn-u btn-brd btn-u-dark btn-brd-hover btn-u-s" data-toggle="modal" data-target="#confirmPublishModal" id="confirmPublish"><i class="fa fa-ban"></i></a></td>
+                                        <td>1</td>
+                                        <td class="hidden-sm hidden-xs"><a href="profile_partner.html">Calypso Spółka Akcyjna</a></td>
+                                        <td class="hidden-sm hidden-xs">calypso@calypso.pl</td>
+                                        <td class="hidden-sm hidden-xs">Aktywny</td>
+                                        <td><a href="profile_operator.html">Adam Kowalski</a></td>
+                                        <td><a href="profile_benefit_operator.html">Jacek Benefitowski</a></td>
+                                        <td>
+                                            <div class="btn-group">
+                                                <button type="button" class="btn-u btn-brd btn-u-default btn-brd-hover btn-u-sm btn-u-split-default dropdown-toggle" data-toggle="dropdown">
+                                                    <i class="fa fa fa-cog"></i>
+                                                    <span class="sr-only">Toggle Dropdown</span>                            
+                                                </button>
+                                                <ul class="dropdown-menu" role="menu">
+                                                    <li><a href="profile_partner.html"><i class="fa fa-user"></i> Profil partnera</a></li>
+                                                    <li><a href="list_operators_backend.html"><i class="fa fa-users"></i> Lista operatorów</a></li>
+                                                </ul>
+                                            </div>
+                                        </td>
                                     </tr>
-                                    <tr>
-                                        <td>Witaj w Strefie Partnera</td>
-                                        <td>Adam Nowak</td>
-                                        <td>Nie</td>
-                                        <td>2015-07-09 12:32</td>
-                                        <td>2015-07-11 12:32</td>
-                                        <td>Tak</td>
-                                        <td><a href="edit_post.html" class="btn-u btn-brd btn-brd-hover btn-u-sm"><i class="fa fa-pencil"></i></a>
-                                        <a class="btn-u btn-brd btn-u-default btn-brd-hover btn-u-s" data-toggle="modal" data-target="#myModal"><i class="fa fa-history"></i></a>
-                                        <a class="btn-u btn-brd btn-u-dark btn-brd-hover btn-u-s" data-toggle="modal" data-target="#confirmPublishModal" id="confirmPublish"><i class="fa fa-ban"></i></a></td>
-                                    </tr>
-
                                 </tbody>
                             </table>
                         </div>
 
                     </div>
                     <!-- End Content -->
-                    <!-- Begin Sidebar Menu -->
-                    <div class="col-md-3" id="includedContentSideBar">
-                    </div>
-                    <!-- End Sidebar Menu -->
                 </div>          
             </div><!--/container-->     
             <!--=== End Content Part ===-->
-            
-            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"></div>
-            <div class="modal fade" id="confirmPublishModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"></div>
+            <div class="modal fade" id="confirmBlockOperator" tabindex="-1" role="dialog" aria-hidden="true"></div>
 
             <!--=== Footer Version 1 ===-->
             <div class="footer-v1" id="includedContentFooter">
             </div>     
             <!--=== End Footer Version 1 ===-->
-
         </div><!--/End Wrapepr-->
-
         <!-- JS Global Compulsory -->           
         <script type="text/javascript" src="assets/plugins/jquery/jquery.min.js"></script>
         <script type="text/javascript" src="assets/plugins/jquery/jquery-migrate.min.js"></script>
@@ -149,7 +129,7 @@
             jQuery(document).ready(function () {
                 App.init();
                 $(document).ready(function () {
-                    $('#facilityList').DataTable({
+                    $('#operatorsList').DataTable({
                         "language": {
                             "url": "assets/plugins/datatable/lang/Polish.json"
                         }
@@ -161,8 +141,6 @@
             $(function () {
                 $("#includedContentHeader").load("header_backend.html");
                 $("#includedContentFooter").load("footer.html");
-                $("#myModal").load("post_modal.html");
-                $("#confirmPublishModal").load("publish_post.html");
             });
         </script> 
         <!--[if lt IE 9]>
