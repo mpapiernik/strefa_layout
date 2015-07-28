@@ -60,7 +60,7 @@
                 <div class="row">
                     <!-- Begin Content -->
 
-                    <div class="col-md-12">
+                    <div class="col-md-12 margin-bottom-50">
                         <div class="tag-box tag-box-v3">
 
                             <!-- Descriptions -->
@@ -144,7 +144,7 @@
                             </div><!--/row-->
                             <!-- End Ordered and Unordered Lists -->
 
-                             <footer>
+                            <footer>
                                 <button type="button" class="btn-u btn-u-default" onclick="window.history.back();">Wróć</button>
                             </footer>
                         </div>
@@ -155,11 +155,11 @@
             <!--=== End Content Part ===-->
             <div class="modal fade" id="confirmBlockOperator" tabindex="-1" role="dialog" aria-hidden="true"></div>
 
-            <!--=== Footer Version 1 ===-->
-            <div class="footer-v1" id="includedContentFooter">
-            </div>     
-            <!--=== End Footer Version 1 ===-->
         </div><!--/End Wrapepr-->
+        <!--=== Footer Version 1 ===-->
+        <div class="footer-v1" id="includedContentFooter">
+        </div>     
+        <!--=== End Footer Version 1 ===-->
         <!-- JS Global Compulsory -->           
         <script type="text/javascript" src="assets/plugins/jquery/jquery.min.js"></script>
         <script type="text/javascript" src="assets/plugins/jquery/jquery-migrate.min.js"></script>
@@ -174,16 +174,16 @@
         <!-- JS DataTables -->
         <script type="text/javascript" language="javascript" src="assets/plugins/datatable/js/jquery.dataTables.js"></script>
         <script type="text/javascript">
-            jQuery(document).ready(function () {
-                App.init();
-                $(document).ready(function () {
-                    $('#operatorsList').DataTable({
-                        "language": {
-                            "url": "assets/plugins/datatable/lang/Polish.json"
-                        }
-                    });
-                });
-            });
+                                    jQuery(document).ready(function () {
+                                        App.init();
+                                        $(document).ready(function () {
+                                            $('#operatorsList').DataTable({
+                                                "language": {
+                                                    "url": "assets/plugins/datatable/lang/Polish.json"
+                                                }
+                                            });
+                                        });
+                                    });
         </script>
         <script>
             $(function () {

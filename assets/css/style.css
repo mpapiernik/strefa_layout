@@ -12,6 +12,10 @@
 @import url(plugins.css);
 @import url(app.css);
 
+html, body {
+    height: 100% !important;
+}
+
 body { 
    color: #333; 
    font-size: 13px;
@@ -58,6 +62,7 @@ a:hover {
 ------------------------------------*/
 .wrapper {
   background: #fff;
+  min-height: 100%;
 }
 
 .boxed-layout {
@@ -1652,4 +1657,10 @@ img.img-mouse {
 /*Team v1*/
 .team-v1 li > h3 {
 	color: #555;
+}
+
+
+.footer-v1 {
+    height: 62px;
+    margin-top: -62px;
 }

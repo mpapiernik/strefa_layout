@@ -82,7 +82,7 @@
             <div class="container content">     
                 <div class="row">
                     <!-- Begin Content -->
-                    <div class="col-md-8 col-md-offset-2">
+                    <div class="col-md-8 col-md-offset-2 margin-bottom-50">
                         <!-- Post -->
                         <form action="assets/php/demo-contacts-process.php" method="post" id="sky-form3" class="sky-form">
                             <header>Edytuj post</header>
@@ -202,13 +202,12 @@
                 </div>          
             </div><!--/container-->     
             <!--=== End Content Part ===-->
-
-            <!--=== Footer Version 1 ===-->
-            <div class="footer-v1" id="includedContentFooter">
-            </div>     
-            <!--=== End Footer Version 1 ===-->
-
         </div><!--/End Wrapepr-->
+
+        <!--=== Footer Version 1 ===-->
+        <div class="footer-v1" id="includedContentFooter">
+        </div>     
+        <!--=== End Footer Version 1 ===-->
 
         <!-- JS Global Compulsory -->           
         <script type="text/javascript" src="assets/plugins/jquery/jquery.min.js"></script>
@@ -230,19 +229,19 @@
         <script type="text/javascript" src="assets/js/plugins/datepicker.js"></script>
         <script type="text/javascript" src="assets/js/plugins/validation.js"></script>
         <script type="text/javascript">
-            jQuery(document).ready(function () {
-                App.init();
-                ContactForm.initContactForm();
-                Masking.initMasking();
-                Datepicker.initDatepicker();
-                Validation.initValidation();
+                                    jQuery(document).ready(function () {
+                                        App.init();
+                                        ContactForm.initContactForm();
+                                        Masking.initMasking();
+                                        Datepicker.initDatepicker();
+                                        Validation.initValidation();
 
-                $('#publicCheckbox').click(function () {
-                    $('#partnerState').slideToggle('fast', function () {
-                        // Animation complete.
-                    });
-                });
-            });
+                                        $('#publicCheckbox').click(function () {
+                                            $('#partnerState').slideToggle('fast', function () {
+                                                // Animation complete.
+                                            });
+                                        });
+                                    });
         </script>
         <script>
             $(function () {
