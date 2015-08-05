@@ -47,7 +47,6 @@
         <link rel="stylesheet" href="assets/plugins/sky-forms-pro/skyforms/custom/custom-sky-forms.css">
         <!--[if lt IE 9]><link rel="stylesheet" href="assets/plugins/sky-forms-pro/skyforms/css/sky-forms-ie8.css"><![endif]-->
 
-
         <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.css">
         <link rel="stylesheet" type="text/css" href="assets/css/bootstrap-duallistbox.css">
@@ -55,8 +54,7 @@
         <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/prettify/r298/run_prettify.min.js"></script>
         <script src="assets/js/jquery.bootstrap-duallistbox.js"></script>
-
-
+        <link rel="stylesheet" type="text/css" href="assets/css/jquery.timepicker.css" />
 
     </head>
 
@@ -104,20 +102,52 @@
                                     </label>
                                 </section>
 
-                                <div class="row">
+                                  <div class="row" >
                                     <section class="col col-6">
-                                        <label class="label">Data publikacji</label> 
-                                        <label class="input">
-                                            <i class="icon-append fa fa-calendar"></i>
-                                            <input type="text" name="date" id="start" value="2015-07-14">
-                                        </label>
+                                        <label class="label">Data i czas publikacji</label>
+                                        <div class="row">
+                                            <section class="col col-6">
+                                                <label class="input">
+                                                    <i class="icon-append fa fa-calendar"></i>
+                                                    <input type="text" name="date" id="start" value="2015-07-14">
+                                                </label>
+                                            </section>
+                                            <section class="col col-6">
+                                                <label class="input">
+                                                    <i class="icon-append fa fa-clock-o"></i>
+                                                    <input type="text" autocomplete="on" id="startTime" value="20:30">
+                                                    <script>
+                                                        $(function () {
+                                                            $('#startTime').timepicker({'step': 15});
+                                                            $('#startTime').timepicker({'timeFormat': 'H:i'});
+                                                        });
+                                                    </script>
+                                                </label>
+                                            </section>
+                                        </div>
                                     </section>
                                     <section class="col col-6">
-                                        <label class="label">Data wstrzymania publikacji</label> 
-                                        <label class="input">
-                                            <i class="icon-append fa fa-calendar"></i>
-                                            <input type="text" name="date" id="finish">
-                                        </label>
+                                        <label class="label">Wstrzymanie publikacji</label>
+                                        <div class="row">
+                                            <section class="col col-6">
+                                                <label class="input">
+                                                    <i class="icon-append fa fa-calendar"></i>
+                                                    <input type="text" name="date" id="finish">
+                                                </label>
+                                            </section>
+                                            <section class="col col-6">
+                                                <label class="input">
+                                                    <i class="icon-append fa fa-clock-o"></i>
+                                                    <input type="text" name="time" id="finishTime">
+                                                    <script>
+                                                        $(function () {
+                                                            $('#finishTime').timepicker({'step': 15});
+                                                            $('#finishTime').timepicker({'timeFormat': 'H:i'});
+                                                        });
+                                                    </script>
+                                                </label>
+                                            </section>
+                                        </div>
                                     </section>
                                 </div>
 
@@ -228,6 +258,9 @@
         <script type="text/javascript" src="assets/js/plugins/masking.js"></script>
         <script type="text/javascript" src="assets/js/plugins/datepicker.js"></script>
         <script type="text/javascript" src="assets/js/plugins/validation.js"></script>
+        
+        <script type="text/javascript" src="assets/js/jquery.timepicker.js"></script>
+        <script type="text/javascript" src="assets/js/site.js"></script>
         <script type="text/javascript">
                                     jQuery(document).ready(function () {
                                         App.init();

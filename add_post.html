@@ -49,6 +49,9 @@
 
         <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.css">
         <link rel="stylesheet" type="text/css" href="assets/css/bootstrap-duallistbox.css">
+
+        <link rel="stylesheet" type="text/css" href="assets/css/jquery.timepicker.css" />
+
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
         <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/prettify/r298/run_prettify.min.js"></script>
@@ -99,29 +102,57 @@
                                         <textarea rows="6" name="message" id="message"></textarea>
                                     </label>
                                 </section>
-
-                                <div class="row">
+                                <div class="row" >
                                     <section class="col col-6">
-                                        <label class="label">Data publikacji</label> 
-                                        <label class="input">
-                                            <i class="icon-append fa fa-calendar"></i>
-                                            <input type="text" name="date" id="start">
-                                        </label>
+                                        <label class="label">Data i czas publikacji</label>
+                                        <div class="row">
+                                            <section class="col col-6">
+                                                <label class="input">
+                                                    <i class="icon-append fa fa-calendar"></i>
+                                                    <input type="text" name="date" id="start">
+                                                </label>
+                                            </section>
+                                            <section class="col col-6">
+                                                <label class="input">
+                                                    <i class="icon-append fa fa-clock-o"></i>
+                                                    <input type="text" autocomplete="on" id="startTime">
+                                                    <script>
+                                                        $(function () {
+                                                            $('#startTime').timepicker({'step': 15});
+                                                            $('#startTime').timepicker({'timeFormat': 'H:i'});
+                                                        });
+                                                    </script>
+                                                </label>
+                                            </section>
+                                        </div>
                                     </section>
                                     <section class="col col-6">
-                                        <label class="label">Data wstrzymania publikacji</label> 
-                                        <label class="input">
-                                            <i class="icon-append fa fa-calendar"></i>
-                                            <input type="text" name="date" id="finish">
-                                        </label>
+                                        <label class="label">Wstrzymanie publikacji</label>
+                                        <div class="row">
+                                            <section class="col col-6">
+                                                <label class="input">
+                                                    <i class="icon-append fa fa-calendar"></i>
+                                                    <input type="text" name="date" id="finish">
+                                                </label>
+                                            </section>
+                                            <section class="col col-6">
+                                                <label class="input">
+                                                    <i class="icon-append fa fa-clock-o"></i>
+                                                    <input type="text" name="time" id="finishTime">
+                                                    <script>
+                                                        $(function () {
+                                                            $('#finishTime').timepicker({'step': 15});
+                                                            $('#finishTime').timepicker({'timeFormat': 'H:i'});
+                                                        });
+                                                    </script>
+                                                </label>
+                                            </section>
+                                        </div>
                                     </section>
                                 </div>
-
                                 <section>
                                     <label class="checkbox"><input id="publicCheckbox" type="checkbox" name="public" onclick="showPartnerDiv()"><i></i>Publiczny</label>
                                 </section>
-
-
                                 <section>
                                     <div id="partnerState">
                                         <label class="label">Lista partnerów</label>
@@ -225,6 +256,8 @@
         <script type="text/javascript" src="assets/js/plugins/masking.js"></script>
         <script type="text/javascript" src="assets/js/plugins/datepicker.js"></script>
         <script type="text/javascript" src="assets/js/plugins/validation.js"></script>
+        <script type="text/javascript" src="assets/js/jquery.timepicker.js"></script>
+        <script type="text/javascript" src="assets/js/site.js"></script>
         <script type="text/javascript">
                                     jQuery(document).ready(function () {
                                         App.init();
@@ -244,7 +277,6 @@
             $(function () {
                 $("#includedContentHeader").load("header_backend.html");
                 $("#includedContentFooter").load("footer.html");
-
             });
         </script> 
         <!--[if lt IE 9]>
