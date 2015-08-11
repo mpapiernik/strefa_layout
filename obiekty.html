@@ -32,14 +32,14 @@
 
         <!-- CSS Customization -->
         <link rel="stylesheet" href="assets/css/theme-colors/dark-red.css">
-        
+
         <!-- DataTables -->
         <link rel="stylesheet" type="text/css" href="assets/plugins/datatable/css/jquery.dataTables.css">
-        
+
     </head>
-    
+
     <body> 
-        
+
         <div class="wrapper">
             <!--=== Header ===-->    
             <div class="header" id="includedContentHeader">
@@ -48,10 +48,10 @@
             <!--=== Breadcrumbs ===-->
             <div class="breadcrumbs">
                 <div class="container">
-                    <h1 class="pull-left">Tytuł do zmiany</h1>
+                    <h1 class="pull-left">Obiekty</h1>
                     <ul class="pull-right breadcrumb">
                         <li><a href="wall.html">Home</a></li>
-                        <li><a href="#">Zagnieższenie</a></li>
+                        <li><a href="obiekty.html">Obiekty</a></li>
                     </ul>
                 </div>
             </div><!--/breadcrumbs-->
@@ -60,110 +60,129 @@
             <!--=== Content Part ===-->
             <div class="container content">     
                 <div class="row">
-                    <!-- Begin Content -->
                     <div class="col-md-9 margin-bottom-50">
-                        <div class="headline">
-                            <button class="btn btn-danger" type="button"><i class="fa fa-file-text"></i> Dodaj obiekt (wniosek)</button>
+                        <div class="margin-bottom-20">
+                            <div class="btn-group">
+                                <a href="add_facility.html" class="button btn-u pull-right" data-toggle="tooltip" data-placement="bottom" title="Złóż wniosek"><i class="fa fa-plus fa-fw"></i>Dodaj obiekt</a>         
+                            </div>
+                            <!-- End Single button -->                    
                         </div>
-                        <table id="facilityList" class="display" cellspacing="0" width="100%">
-                            <thead>
-                                <tr>
-                                    <th>Nazwa obiektu</th>
-                                    <th>Status</th>
-                                    <th>Kod</th>
-                                    <th>Miejscowość</th>
-                                    <th>Ulica, numer</th>
-                                    <th>Email</th>
-                                    <th>Telefon</th>
-                                    <th></th>
-                                </tr>
-                            </thead>
+                        <hr>
+                        <div>
+                            <table id="facilityList" class="display" cellspacing="0" width="100%">
+                                <thead>
+                                    <tr>
+                                        <th>Nazwa obiektu</th>
+                                        <th>Status</th>
+                                        <th>Kod</th>
+                                        <th>Miejscowość</th>
+                                        <th>Ulica, numer</th>
+                                        <th>Email</th>
+                                        <th>Telefon</th>
+                                        <th class="col-md-2">Akcja</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Calypso Fitness Club Warszawa Adgar Plaza Mokotów</td>
+                                        <td>Aktywny</td>
+                                        <td>02-333</td>
+                                        <td>Warszawa</td>
+                                        <td>Fredry 6/2</td>
+                                        <td>arek@calypso.com.pl</td>
+                                        <td>123 455 666</td>
+                                        <td><a href="edit_facility.html" class="btn-u btn-brd btn-brd-hover btn-u-sm" data-toggle="tooltip" data-placement="bottom" title="Edytuj (wniosek)"><i class="fa fa-pencil"></i></a> 
+                                            <a href="delete_facility.html" class="btn-u btn-brd btn-u-dark btn-brd-hover btn-u-sm" data-toggle="tooltip" data-placement="bottom" title="Usuń (wniosek)"><i class="fa fa-trash-o"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Calypso Fitness Club Warszawa Adgar Plaza Mokotów</td>
+                                        <td>Aktywny</td>
+                                        <td>02-333</td>
+                                        <td>Warszawa</td>
+                                        <td>Fredry 6/2</td>
+                                        <td>arek@calypso.com.pl</td>
+                                        <td>123 455 666</td>
+                                        <td><a href="edit_facility.html" class="btn-u btn-brd btn-brd-hover btn-u-sm" data-toggle="tooltip" data-placement="bottom" title="Edytuj (wniosek)"><i class="fa fa-pencil"></i></a> 
+                                            <a href="delete_facility.html" class="btn-u btn-brd btn-u-dark btn-brd-hover btn-u-sm" data-toggle="tooltip" data-placement="bottom" title="Usuń (wniosek)"><i class="fa fa-trash-o"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Calypso Fitness Club Warszawa Adgar Plaza Mokotów</td>
+                                        <td>Aktywny</td>
+                                        <td>02-333</td>
+                                        <td>Warszawa</td>
+                                        <td>Fredry 6/2</td>
+                                        <td>arek@calypso.com.pl</td>
+                                        <td>123 455 666</td>
+                                        <td><a href="edit_facility.html" class="btn-u btn-brd btn-brd-hover btn-u-sm" data-toggle="tooltip" data-placement="bottom" title="Edytuj (wniosek)"><i class="fa fa-pencil"></i></a> 
+                                            <a href="delete_facility.html" class="btn-u btn-brd btn-u-dark btn-brd-hover btn-u-sm" data-toggle="tooltip" data-placement="bottom" title="Usuń (wniosek)"><i class="fa fa-trash-o"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Calypso Fitness Club Warszawa Adgar Plaza Mokotów</td>
+                                        <td>Aktywny</td>
+                                        <td>02-333</td>
+                                        <td>Warszawa</td>
+                                        <td>Fredry 6/2</td>
+                                        <td>arek@calypso.com.pl</td>
+                                        <td>123 455 666</td>
+                                         <td><a href="edit_facility.html" class="btn-u btn-brd btn-brd-hover btn-u-sm" data-toggle="tooltip" data-placement="bottom" title="Edytuj (wniosek)"><i class="fa fa-pencil"></i></a> 
+                                            <a href="delete_facility.html" class="btn-u btn-brd btn-u-dark btn-brd-hover btn-u-sm" data-toggle="tooltip" data-placement="bottom" title="Usuń (wniosek)"><i class="fa fa-trash-o"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Calypso Fitness Club Warszawa Adgar Plaza Mokotów</td>
+                                        <td>Aktywny</td>
+                                        <td>02-333</td>
+                                        <td>Warszawa</td>
+                                        <td>Fredry 6/2</td>
+                                        <td>arek@calypso.com.pl</td>
+                                        <td>123 455 666</td>
+                                         <td><a href="edit_facility.html" class="btn-u btn-brd btn-brd-hover btn-u-sm" data-toggle="tooltip" data-placement="bottom" title="Edytuj (wniosek)"><i class="fa fa-pencil"></i></a> 
+                                            <a href="delete_facility.html" class="btn-u btn-brd btn-u-dark btn-brd-hover btn-u-sm" data-toggle="tooltip" data-placement="bottom" title="Usuń (wniosek)"><i class="fa fa-trash-o"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Calypso Fitness Club Warszawa Adgar Plaza Mokotów</td>
+                                        <td>Aktywny</td>
+                                        <td>02-333</td>
+                                        <td>Warszawa</td>
+                                        <td>Fredry 6/2</td>
+                                        <td>arek@calypso.com.pl</td>
+                                        <td>123 455 666</td>
+                                         <td><a href="edit_facility.html" class="btn-u btn-brd btn-brd-hover btn-u-sm" data-toggle="tooltip" data-placement="bottom" title="Edytuj (wniosek)"><i class="fa fa-pencil"></i></a> 
+                                            <a href="delete_facility.html" class="btn-u btn-brd btn-u-dark btn-brd-hover btn-u-sm" data-toggle="tooltip" data-placement="bottom" title="Usuń (wniosek)"><i class="fa fa-trash-o"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Calypso Fitness Club Warszawa Adgar Plaza Mokotów</td>
+                                        <td>Aktywny</td>
+                                        <td>02-333</td>
+                                        <td>Warszawa</td>
+                                        <td>Fredry 6/2</td>
+                                        <td>arek@calypso.com.pl</td>
+                                        <td>123 455 666</td>
+                                        <td><a href="edit_facility.html" class="btn-u btn-brd btn-brd-hover btn-u-sm" data-toggle="tooltip" data-placement="bottom" title="Edytuj (wniosek)"><i class="fa fa-pencil"></i></a> 
+                                            <a href="delete_facility.html" class="btn-u btn-brd btn-u-dark btn-brd-hover btn-u-sm" data-toggle="tooltip" data-placement="bottom" title="Usuń (wniosek)"><i class="fa fa-trash-o"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Calypso Fitness Club Warszawa Adgar Plaza Mokotów</td>
+                                        <td>Aktywny</td>
+                                        <td>02-333</td>
+                                        <td>Warszawa</td>
+                                        <td>Fredry 6/2</td>
+                                        <td>arek@calypso.com.pl</td>
+                                        <td>123 455 666</td>
+                                         <td><a href="edit_facility.html" class="btn-u btn-brd btn-brd-hover btn-u-sm" data-toggle="tooltip" data-placement="bottom" title="Edytuj (wniosek)"><i class="fa fa-pencil"></i></a> 
+                                            <a href="delete_facility.html" class="btn-u btn-brd btn-u-dark btn-brd-hover btn-u-sm" data-toggle="tooltip" data-placement="bottom" title="Usuń (wniosek)"><i class="fa fa-trash-o"></i></a>
+                                        </td>
+                                    </tr>
 
-
-                            <tbody>
-                                <tr>
-                                    <td>Calypso Fitness Club Warszawa Adgar Plaza Mokotów</td>
-                                    <td>Aktywny</td>
-                                    <td>02-333</td>
-                                    <td>Warszawa</td>
-                                    <td>Fredry 6/2</td>
-                                    <td>arek@calypso.com.pl</td>
-                                    <td>123 455 666</td>
-                                    <td><button class="btn btn-warning btn-xs"><i class="fa fa-pencil"></i> Edit</button></td>
-                                </tr>
-                                <tr>
-                                    <td>Calypso Fitness Club Warszawa Adgar Plaza Mokotów</td>
-                                    <td>Aktywny</td>
-                                    <td>02-333</td>
-                                    <td>Warszawa</td>
-                                    <td>Fredry 6/2</td>
-                                    <td>arek@calypso.com.pl</td>
-                                    <td>123 455 666</td>
-                                    <td><button class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Usuń obiekt(wniosek)</button></td>
-                                </tr>
-                                <tr>
-                                    <td>Calypso Fitness Club Warszawa Adgar Plaza Mokotów</td>
-                                    <td>Aktywny</td>
-                                    <td>02-333</td>
-                                    <td>Warszawa</td>
-                                    <td>Fredry 6/2</td>
-                                    <td>arek@calypso.com.pl</td>
-                                    <td>123 455 666</td>
-                                    <td><button class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Usuń obiekt(wniosek)</button></td>
-                                </tr>
-                                <tr>
-                                    <td>Calypso Fitness Club Warszawa Adgar Plaza Mokotów</td>
-                                    <td>Aktywny</td>
-                                    <td>02-333</td>
-                                    <td>Warszawa</td>
-                                    <td>Fredry 6/2</td>
-                                    <td>arek@calypso.com.pl</td>
-                                    <td>123 455 666</td>
-                                    <td><button class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Usuń obiekt(wniosek)</button></td>
-                                </tr>
-                                <tr>
-                                    <td>Calypso Fitness Club Warszawa Adgar Plaza Mokotów</td>
-                                    <td>Aktywny</td>
-                                    <td>02-333</td>
-                                    <td>Warszawa</td>
-                                    <td>Fredry 6/2</td>
-                                    <td>arek@calypso.com.pl</td>
-                                    <td>123 455 666</td>
-                                    <td><button class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Usuń obiekt(wniosek)</button></td>
-                                </tr>
-                                <tr>
-                                    <td>Calypso Fitness Club Warszawa Adgar Plaza Mokotów</td>
-                                    <td>Aktywny</td>
-                                    <td>02-333</td>
-                                    <td>Warszawa</td>
-                                    <td>Fredry 6/2</td>
-                                    <td>arek@calypso.com.pl</td>
-                                    <td>123 455 666</td>
-                                    <td><button class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Usuń obiekt(wniosek)</button></td>
-                                </tr>
-                                <tr>
-                                    <td>Calypso Fitness Club Warszawa Adgar Plaza Mokotów</td>
-                                    <td>Aktywny</td>
-                                    <td>02-333</td>
-                                    <td>Warszawa</td>
-                                    <td>Fredry 6/2</td>
-                                    <td>arek@calypso.com.pl</td>
-                                    <td>123 455 666</td>
-                                    <td><button class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Usuń obiekt(wniosek)</button></td>
-                                </tr>
-                                <tr>
-                                    <td>Calypso Fitness Club Warszawa Adgar Plaza Mokotów</td>
-                                    <td>Aktywny</td>
-                                    <td>02-333</td>
-                                    <td>Warszawa</td>
-                                    <td>Fredry 6/2</td>
-                                    <td>arek@calypso.com.pl</td>
-                                    <td>123 455 666</td>
-                                    <td><button class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Usuń obiekt(wniosek)</button></td>
-                                </tr>
-
-                            </tbody>
-                        </table>		
+                                </tbody>
+                            </table>
+                        </div>
 
                     </div>
                     <!-- End Content -->
@@ -211,6 +230,7 @@
                 $("#includedContentSideBar").load("sidebar.html");
                 $("#includedContentHeader").load("header.html");
                 $("#includedContentFooter").load("footer.html");
+                $('[data-toggle="tooltip"]').tooltip();  
             });
         </script> 
         <!--[if lt IE 9]>
