@@ -111,3 +111,11 @@ address {
      text-align: center !important; 
 }
 
+.summary-border-right{
+     border-right:1px solid #ddd !important;
+}
+
+.summary-border-bottom{
+     border-bottom:1px solid #ddd !important;
+}
+

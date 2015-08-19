@@ -316,7 +316,7 @@
 	background: #fff;
 }
 .sky-form .toggle i:after {
-	content: 'OFF';
+	content: 'NIE';
 	position: absolute;
 	top: 2px;
 	right: 8px;
@@ -344,7 +344,7 @@
 	-webkit-transition: right 0.2s;
 }
 .sky-form .toggle input:checked + i:after {
-	content: 'ON';
+	content: 'TAK';
 	text-align: right;
 }
 .sky-form .toggle input:checked + i:before {

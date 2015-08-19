@@ -25,17 +25,17 @@
         <link rel="stylesheet" href="assets/css/headers/header-default.css">
         <link rel="stylesheet" href="assets/css/footers/footer-v1.css">
 
-    <!-- CSS Implementing Plugins -->
-    <link rel="stylesheet" href="assets/plugins/animate.css">
-    <link rel="stylesheet" href="assets/plugins/line-icons/line-icons.css">
-    <link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="assets/plugins/sky-forms-pro/skyforms/css/sky-forms.css">
-    <link rel="stylesheet" href="assets/plugins/sky-forms-pro/skyforms/custom/custom-sky-forms.css">
-    <!--[if lt IE 9]><link rel="stylesheet" href="assets/plugins/sky-forms-pro/skyforms/css/sky-forms-ie8.css"><![endif]-->
+        <!-- CSS Implementing Plugins -->
+        <link rel="stylesheet" href="assets/plugins/animate.css">
+        <link rel="stylesheet" href="assets/plugins/line-icons/line-icons.css">
+        <link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="assets/plugins/sky-forms-pro/skyforms/css/sky-forms.css">
+        <link rel="stylesheet" href="assets/plugins/sky-forms-pro/skyforms/custom/custom-sky-forms.css">
+        <!--[if lt IE 9]><link rel="stylesheet" href="assets/plugins/sky-forms-pro/skyforms/css/sky-forms-ie8.css"><![endif]-->
 
         <!-- CSS Page Style -->    
-    <!-- CSS Customization -->
-    <link rel="stylesheet" href="assets/css/custom.css">
+        <!-- CSS Customization -->
+        <link rel="stylesheet" href="assets/css/custom.css">
         <!-- CSS Customization -->
         <link rel="stylesheet" href="assets/css/theme-colors/dark-red.css">
     </head>
@@ -54,42 +54,50 @@
                 </div><!--/end container-->
             </div>
             <!--=== End Header ===-->
-         
+
             <!--=== Content Part ===-->
             <div class="container content">		
                 <div class="row">
                     <div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3">
-                           <div class="tab-pane fade in active" id="alert-1">
+                        <div class="tab-pane fade in active" id="alert-1">
                             <div class="margin-bottom-15"></div>                        
                             <div class="alert alert-danger fade in text-center">
                                 <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
                                 Wprowadź poprawne dane do logowania
                             </div>                
                         </div>
-                        <form class="reg-page">
-                            <div class="input-group margin-bottom-20">
-                                <span class="input-group-addon"><i class="fa fa-user"></i></span>
-                                <input type="text" placeholder="Login / e-mail" class="form-control" >
-                            </div>                    
-                            <div class="input-group margin-bottom-20">
-                                <span class="input-group-addon"><i class="fa fa-lock"></i></span>
-                                <input type="password" placeholder="Hasło" class="form-control">
-                            </div>                    
-
-                            <div class="row">
-                                <div class="col-md-6 checkbox">
-                                    <label><input type="checkbox"> Zapamiętaj mnie</label>                    
-                                    <!--===            <label><input type="checkbox"> Stay signed in</label>     ===-->                         
-                                </div>
-                                <div class="col-md-6">
-                                    <a href="wall.html" class="button btn-u pull-right">Zaloguj</a>             
-                                    <!--===          <a href="wall.html" class="button btn-u pull-right">Sign in</a>         ===-->                  
-                                </div>
-                            </div>
-                            <hr>
-                            <p><a class="color-green" href="reset_password.html">Resetuj</a></p>
-                            <!--===       <p><a class="color-green" href="reset_password.html">Reset your password</a></p>     ===-->    
-                        </form>            
+                        <form id="sky-form1" class="sky-form">
+                            <fieldset>                  
+                                <section>
+                                    <div class="input-group margin-bottom-20 state-error" >
+                                        <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                                        <input type="text" placeholder="Login / e-mail" class="form-control">
+                                    </div>                    
+                                    <div class="input-group margin-bottom-20 state-error">
+                                        <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+                                        <input type="password" placeholder="Hasło" class="form-control">
+                                    </div>
+                                </section>
+                            </fieldset>
+                            <fieldset>
+                                <section>
+                                    <div class="row">
+                                        <div class="col-md-8 checkbox">
+                                            <!--===            <label><input type="checkbox"> Stay signed in</label>     ===-->       
+                                            <label class="checkbox"><input type="checkbox" name="remember" checked><i></i>Zapamiętaj mnie</label>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <!--- <a href="" class="button btn-u pull-right">Zaloguj</a>         -->
+                                            <button type="submit" class="btn-u btn-u pull-right">Zaloguj</button>
+                                            <!--===          <a href="wall.html" class="button btn-u pull-right">Sign in</a>         ===-->                  
+                                        </div>
+                                    </div>
+                                </section>
+                            </fieldset>
+                        </form>  
+                        <hr>
+                        <p><a class="color-green" href="reset_password.html">Resetuj</a></p>
+                        <!--===       <p><a class="color-green" href="reset_password.html">Reset your password</a></p>     ===-->    
                     </div>
                 </div><!--/row-->
             </div><!--/container-->	
@@ -108,13 +116,17 @@
         <!-- JS Implementing Plugins -->
         <script type="text/javascript" src="assets/plugins/back-to-top.js"></script>
         <script type="text/javascript" src="assets/plugins/smoothScroll.js"></script>
+        <script src="assets/plugins/sky-forms-pro/skyforms/js/jquery.validate.min.js"></script>
         <!-- JS Customization -->
         <script type="text/javascript" src="assets/js/custom.js"></script>
         <!-- JS Page Level -->           
         <script type="text/javascript" src="assets/js/app.js"></script>
+
+        <script type="text/javascript" src="assets/js/plugins/validation.js"></script>
         <script type="text/javascript">
             jQuery(document).ready(function () {
                 App.init();
+                Validation.initValidation();
             });
         </script>
         <script>

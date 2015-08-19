@@ -1,0 +1,656 @@
+<!DOCTYPE html> 
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->  
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->  
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->  
+    <head>
+        <title>Panelu Partnera Benefit Systems</title>
+
+        <!-- Meta -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <!-- Favicon -->
+        <link rel="shortcut icon" href="favicon.ico">
+
+        <!-- Web Fonts -->
+        <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:400,300,600&amp;subset=cyrillic,latin">
+
+        <!-- CSS Global Compulsory -->
+        <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+
+        <!-- CSS Header and Footer -->
+        <link rel="stylesheet" href="assets/css/headers/header-default.css">
+        <link rel="stylesheet" href="assets/css/footers/footer-v1.css">
+
+        <!-- CSS Implementing Plugins -->
+        <link rel="stylesheet" href="assets/plugins/animate.css">
+        <link rel="stylesheet" href="assets/plugins/line-icons/line-icons.css">
+        <link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="assets/plugins/sky-forms-pro/skyforms/css/sky-forms.css">
+        <link rel="stylesheet" href="assets/plugins/sky-forms-pro/skyforms/custom/custom-sky-forms.css">
+        <!--[if lt IE 9]><link rel="stylesheet" href="assets/plugins/sky-forms-pro/skyforms/css/sky-forms-ie8.css"><![endif]-->
+
+        <!-- CSS Page Style -->    
+        <link rel="stylesheet" href="assets/css/pages/shortcode_timeline2.css">
+
+        <!-- CSS Customization -->
+        <link rel="stylesheet" href="assets/css/theme-colors/dark-red.css">
+
+
+        <!-- CSS Page Style -->    
+        <link rel="stylesheet" href="assets/css/pages/page_invoice.css">
+
+        <!-- DataTables -->
+        <link rel="stylesheet" type="text/css" href="assets/plugins/datatable/css/jquery.dataTables.css">
+
+    </head>
+    <body>    
+        <div class="wrapper">
+            <!--=== Header ===-->    
+            <div class="header" id="includedContentHeader">
+            </div>
+            <!--=== End Header ===--> 
+            <!--=== Breadcrumbs ===-->
+            <div class="breadcrumbs">
+                <div class="container">
+                    <h1 class="pull-left">Nowa faktura VAT</h1>
+                    <ul class="pull-right breadcrumb">
+                        <li><a href="wall.html">Home</a></li>
+                        <li><a href="list_invoices.html">Faktury</a></li>
+                    </ul>
+                </div>
+            </div><!--/breadcrumbs-->
+            <!--=== End Breadcrumbs ===-->
+            <!--=== Content Part ===-->
+            <div class="container content">     
+                <div class="row">
+                    <!-- Begin Content -->
+                    <div class="col-md-9 margin-bottom-50">
+                        <!--Invoice Detials-->
+                        <div class="row invoice-header text-center">
+                            <div class="col-xs-4">
+                                <div class="tag-box tag-box-v3">
+                                    <img src="assets/img/img.jpg" alt="" style="width: 84px">
+                                </div>        
+                            </div>
+                            <div class="col-xs-4">
+                                <div class="tag-box tag-box-v3">
+                                    <h3>Faktura VAT</h3>
+                                </div>
+                            </div>
+                            <div class="col-xs-4">
+                                <div class="tag-box tag-box-v3">
+                                    <span>
+                                        <a class="pull-right accordion-toggle" data-toggle="modal" data-target="#modalNumber">
+                                            <i class="fa fa-pencil"></i>
+                                        </a>
+                                    </span>    
+                                    <h3>Nr: 2015/FVS/25015</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Modal -->
+                        <div class="modal fade" id="modalNumber" tabindex="-1" role="dialog" aria-labelledby="modalNumberLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button aria-hidden="true" data-dismiss="modal" class="close" type="button">×</button>
+                                        <h4 id="modalNumberLabel" class="modal-title">  Nadpisz numer</h4>
+                                    </div>
+                                    <form action="#" id="sky-form-number" class="sky-form">
+                                        <fieldset>
+                                            <div class="row">
+                                                <section class="col col-6">
+                                                    <label class="label">Numer dokumentu</label>
+                                                    <label class="input">
+                                                        <i class="icon-prepend fa fa-file"></i>
+                                                        <input type="text" name="number">
+                                                    </label>
+                                                </section>
+                                            </div>
+                                        </fieldset>
+                                        <div class="modal-footer">
+                                            <button data-dismiss="modal" class="btn-u btn-u-default" type="button">Wróć</button>
+                                            <button  type="submit" class="btn-u">Zapisz zmiany</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Modal -->
+                        <!--End Invoice Detials-->
+                        <!--Invoice Detials-->
+                        <div class="row invoice-info">
+                            <div class="col-xs-6">
+                                <div class="tag-box tag-box-v3">
+                                    <span>
+                                        <a class="pull-right accordion-toggle" data-toggle="modal" data-target="#modalSeller">
+                                            <i class="fa fa-pencil"></i>
+                                        </a>
+                                    </span>    
+                                    <h2>Sprzedawca: </h2>        
+                                    <ul class="list-unstyled">
+                                        <li><strong>Nazwa: </strong>Tyger Gym S. Z O.O.</li>
+                                        <li><strong>Adres: </strong>00-097 Gdańsk, Grunwaldzka 346</li>
+                                        <li><strong>NIP: </strong>836-16-76-510</li>
+                                        <li> 
+                                            <div class="row">
+                                                <div class="col-xs-6"><strong>Telefon: </strong>22 224 40 00</div>
+                                                <div class="col-xs-6"><strong>FAX: </strong>22 831 79 30</div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-xs-6">
+                                <div class="tag-box tag-box-v3">
+                                    <span>
+                                        <a class="pull-right accordion-toggle" data-toggle="modal" data-target="#modalBuyer">
+                                            <i class="fa fa-pencil"></i>
+                                        </a>
+                                    </span>    
+                                    <h2>Nabywca: </h2>    
+                                    <ul class="list-unstyled">
+                                        <li><strong>Nazwa: </strong>Benefit Systems S.A</li>
+                                        <li><strong>Adres: </strong>00-097 Warszawa, Fredry 6</li>
+                                        <li><strong>NIP: </strong>836-16-76-510</li>
+                                        <li> 
+                                            <div class="row">
+                                                <div class="col-xs-6"><strong>Telefon: </strong>22 224 40 00</div>
+                                                <div class="col-xs-6"><strong>FAX: </strong>22 831 79 30</div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Modal Seller-->
+                        <div class="modal fade" id="modalSeller" tabindex="-1" role="dialog" aria-labelledby="modalSellerLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-lg">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button aria-hidden="true" data-dismiss="modal" class="close" type="button">×</button>
+                                        <h4 id="modalSellerLabel" class="modal-title">  Sprzedawca</h4>
+                                    </div>
+                                    <form action="#" id="sky-form-seller" class="sky-form">
+                                        <fieldset>
+                                            <div class="row">
+                                                <section class="col col-9">
+                                                    <label class="label">Nazwa</label>
+                                                    <label class="input">
+                                                        <i class="icon-prepend fa fa-user-md"></i>
+                                                        <input type="text" name="seller_number">
+                                                    </label>
+                                                </section>
+                                                <section class="col col-3">
+                                                    <label class="label">Numer NIP</label>
+                                                    <label class="input">
+                                                        <i class="icon-prepend fa fa-neuter"></i>
+                                                        <input type="text" name="seller_nip">
+                                                    </label>
+                                                </section>
+                                            </div>
+                                            <div class="row">
+                                                <section class="col col-3">
+                                                    <label class="label">Kod pocztowy</label>
+                                                    <label class="input">
+                                                        <i class="icon-prepend fa fa-globe"></i>
+                                                        <input type="text" name="seller_zip" id="seller_zip">
+                                                    </label>
+                                                </section>
+                                                <section class="col col-3">
+                                                    <label class="label">Miasto</label>
+                                                    <label class="input">
+                                                        <i class="icon-prepend fa fa-university"></i>
+                                                        <input type="text" name="seller_city">
+                                                    </label>
+                                                </section>
+                                                <section class="col col-6">
+                                                    <label class="label">Address</label>
+                                                    <label class="input">
+                                                        <i class="icon-prepend fa fa fa-building"></i>
+                                                        <input type="text" name="seller_street">
+                                                    </label>
+                                                </section>
+                                            </div>
+                                            <div class="row">
+                                                <section class="col col-6">
+                                                    <label class="label">Telefon kontaktowy</label>
+                                                    <label class="input">
+                                                        <i class="icon-prepend fa fa-phone"></i>
+                                                        <input type="tel" name="seller_phone">
+                                                    </label>
+                                                </section>
+                                                <section class="col col-6">
+                                                    <label class="label">Numer Fax</label>
+                                                    <label class="input">
+                                                        <i class="icon-prepend fa fa-fax"></i>
+                                                        <input type="tel" name="seller_fax">
+                                                    </label>
+                                                </section>
+                                            </div>
+                                        </fieldset>
+                                        <div class="modal-footer">
+                                            <button data-dismiss="modal" class="btn-u btn-u-default" type="button">Wróć</button>
+                                            <button  type="submit" class="btn-u">Zapisz zmiany</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Modal Seller-->
+                        <!-- Modal Buyer-->
+                        <div class="modal fade" id="modalBuyer" tabindex="-1" role="dialog" aria-labelledby="modalBuyerLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-lg">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button aria-hidden="true" data-dismiss="modal" class="close" type="button">×</button>
+                                        <h4 id="modalBuyerLabel" class="modal-title">  Nabywca</h4>
+                                    </div>
+                                    <form action="#" id="sky-form-buyer" class="sky-form">
+                                        <fieldset>
+                                            <div class="row">
+                                                <section class="col col-9">
+                                                    <label class="label">Nazwa</label>
+                                                    <label class="input">
+                                                        <i class="icon-prepend fa fa-user-md"></i>
+                                                        <input type="text" name="buyer_number">
+                                                    </label>
+                                                </section>
+                                                <section class="col col-3">
+                                                    <label class="label">Numer NIP</label>
+                                                    <label class="input">
+                                                        <i class="icon-prepend fa fa-neuter"></i>
+                                                        <input type="text" name="buyer_nip">
+                                                    </label>
+                                                </section>
+                                            </div>
+                                            <div class="row">
+                                                <section class="col col-3">
+                                                    <label class="label">Kod pocztowy</label>
+                                                    <label class="input">
+                                                        <i class="icon-prepend fa fa-globe"></i>
+                                                        <input type="text" name="buyer_zip" id="buyer_zip">
+                                                    </label>
+                                                </section>
+                                                <section class="col col-3">
+                                                    <label class="label">Miasto</label>
+                                                    <label class="input">
+                                                        <i class="icon-prepend fa fa-university"></i>
+                                                        <input type="text" name="buyer_city">
+                                                    </label>
+                                                </section>
+                                                <section class="col col-6">
+                                                    <label class="label">Address</label>
+                                                    <label class="input">
+                                                        <i class="icon-prepend fa fa fa-building"></i>
+                                                        <input type="text" name="buyer_street">
+                                                    </label>
+                                                </section>
+                                            </div>
+                                            <div class="row">
+                                                <section class="col col-6">
+                                                    <label class="label">Telefon kontaktowy</label>
+                                                    <label class="input">
+                                                        <i class="icon-prepend fa fa-phone"></i>
+                                                        <input type="tel" name="buyer_phone">
+                                                    </label>
+                                                </section>
+                                                <section class="col col-6">
+                                                    <label class="label">Numer Fax</label>
+                                                    <label class="input">
+                                                        <i class="icon-prepend fa fa-fax"></i>
+                                                        <input type="tel" name="buyer_fax">
+                                                    </label>
+                                                </section>
+                                            </div>
+                                        </fieldset>
+                                        <div class="modal-footer">
+                                            <button data-dismiss="modal" class="btn-u btn-u-default" type="button">Wróć</button>
+                                            <button  type="submit" class="btn-u">Zapisz zmiany</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Modal Buyer-->
+                        <!--End Invoice Detials-->
+                        <div class="tag-box tag-box-v3">
+                            <!--Invoice Detials-->
+                            <span>
+                                <a class="pull-right accordion-toggle" data-toggle="modal" data-target="#modalDetails">
+                                    <i class="fa fa-pencil"></i>
+                                </a>
+                            </span>
+                            <div class="row invoice-info">
+                                <div class="col-xs-6">
+                                    <ul class="list-unstyled">
+                                        <li><strong>Data wystawienia: </strong>2015-05-08</li>
+                                        <li><strong>Miejsce wystawienia: </strong>Gdańsk</li>
+                                        <li><strong>Termin sprzedaży </strong>2015-05-22</li>
+                                        <li><strong>Termin płatności: </strong>2015-05-31</li>
+                                    </ul>
+                                </div>
+
+                                <div class="col-xs-6">
+                                    <ul class="list-unstyled">
+                                        <li><strong>Forma płatności: </strong>przelew</li>
+                                        <li><strong>Nazwa banku: </strong>mBank</li>
+                                        <li><strong>Konto: </strong>85 0000 0000 0000 0000 0000 0000</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!--End Invoice Detials-->
+
+                        <!-- Modal Detailss-->
+                        <div class="modal fade" id="modalDetails" tabindex="-1" role="dialog" aria-labelledby="modalDetailsLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-lg">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button aria-hidden="true" data-dismiss="modal" class="close" type="button">×</button>
+                                        <h4 id="modalDetailsLabel" class="modal-title"> Szczegóły dokumentu</h4>
+                                    </div>
+                                    <form action="#" id="sky-form-details" class="sky-form">
+                                        <fieldset>
+                                            <div class="row">
+                                                <section class="col col-6">
+                                                    <label class="label">Data wystawienia</label>
+                                                    <label class="input">
+                                                        <i class="icon-prepend fa fa-calendar"></i>
+                                                        <input type="text" name="date" id="create_date">
+                                                    </label>
+                                                </section>
+                                                <section class="col col-6">
+                                                    <label class="label">Miasto wystawienia</label>
+                                                    <label class="input">
+                                                        <i class="icon-prepend fa fa-university"></i>
+                                                        <input type="text" name="create_city">
+                                                    </label>
+                                                </section>
+                                            </div>
+                                            <div class="row">
+                                                <section class="col col-6">
+                                                    <label class="label">Termin sprzedaży</label>
+                                                    <label class="input">
+                                                        <i class="icon-prepend fa fa-calendar"></i>
+                                                        <input type="text" name="date" id="sell_date">
+                                                    </label>
+                                                </section>
+                                                <section class="col col-6">
+                                                    <label class="label">Termin płatności</label>
+                                                    <label class="input">
+                                                        <i class="icon-prepend fa fa-calendar"></i>
+                                                        <input type="text" name="payment_date">
+                                                    </label>
+                                                </section>
+                                            </div>
+                                            <div class="row">
+                                                <section class="col col-3">
+                                                    <label class="label">Forma płatności</label>
+                                                    <label class="select">
+                                                        <select name="payment_type">
+                                                            <option value="0" selected="" disabled=""></option>
+                                                            <option value="0" selected>przelew</option>
+                                                            <option value="1">gotówka</option>
+                                                        </select>
+                                                        <i></i>
+                                                    </label>
+                                                </section>
+                                                <section class="col col-9">
+                                                    <label class="label">Nazwa banku</label>
+                                                    <label class="input">
+                                                        <i class="icon-prepend fa fa-bank"></i>
+                                                        <input type="tel" name="bank_name">
+                                                    </label>
+                                                </section>
+                                            </div>
+                                            <div class="row">
+                                                <section class="col col-lg-12 col-md-12">
+                                                    <label class="label">Numer konta bankowego</label>
+                                                    <label class="input">
+                                                        <i class="icon-prepend fa fa-bank"></i>
+                                                        <input type="tel" name="bank_account_number" id="bank_account_number">
+                                                    </label>
+                                                </section>
+                                            </div>
+                                        </fieldset>
+                                        <div class="modal-footer">
+                                            <button data-dismiss="modal" class="btn-u btn-u-default" type="button">Wróć</button>
+                                            <button  type="submit" class="btn-u">Zapisz zmiany</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Modal Details-->
+
+                        <!-- Checkout-Form -->
+                        <form action="list_invoices.html" id="sky-form" class="sky-form">
+                            <fieldset>
+                                <h4>Lista usług</h4>
+                                <table class="table table-striped invoice-table" id="example">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th class="table-product">Nazwa</th>
+                                            <th>Ilość</th>
+                                            <th class="hidden-sm">J.m.</th>
+                                            <th>Cena jedn. netto</th>
+                                            <th>Wartość netto</th>
+                                            <th class="hidden-sm">Stawka VAT</th>
+                                            <th class="hidden-sm">Kwota VAT</th>
+                                            <th>Wartość brutto</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td class="table-product">Sauna</td>
+                                            <td>252</td>
+                                            <td class="hidden-sm">szt.</td>
+                                            <td>12,00</td>
+                                            <td>3024,00</td>
+                                            <td class="hidden-sm">7%</td>
+                                            <td class="hidden-sm">211,68</td>
+                                            <td>3235,68</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td class="table-product">Zajęcia sportowe pracownika</td>
+                                            <td>25</td>
+                                            <td class="hidden-sm">szt.</td>
+                                            <td>10,00</td>
+                                            <td>250,00</td>
+                                            <td class="hidden-sm">23%</td>
+                                            <td class="hidden-sm">57,50</td>
+                                            <td>307,50</td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td class="table-product">Zajęcia fitness</td>
+                                            <td>120</td>
+                                            <td class="hidden-sm">szt.</td>
+                                            <td>15,00</td>
+                                            <td>1800,00</td>
+                                            <td class="hidden-sm">15%</td>
+                                            <td class="hidden-sm">270,00</td>
+                                            <td>2070,00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>4</td>
+                                            <td class="table-product">Zajęcia jogi</td>
+                                            <td>100</td>
+                                            <td class="hidden-sm">szt.</td>
+                                            <td>20,00</td>
+                                            <td>2000,00</td>
+                                            <td class="hidden-sm">23%</td>
+                                            <td class="hidden-sm">460,00</td>
+                                            <td>2460,00</td>
+                                        </tr>
+                                    </tbody>
+
+                                </table>
+                            </fieldset>
+                            <fieldset>
+                                <h4>Podsumowanie</h4>
+                                <table class="table table-striped invoice-table">
+                                    <thead>
+                                        <tr>
+                                            <th>&nbsp;</th>
+                                            <th class="table-product">&nbsp;</th>
+                                            <th>&nbsp;</th>
+                                            <th class="hidden-sm">&nbsp;</th>
+                                            <th>&nbsp;</th>
+                                            <th>Wartość netto</th>
+                                            <th class="hidden-sm">Stawka VAT</th>
+                                            <th class="hidden-sm">Kwota VAT</th>
+                                            <th>Wartość brutto</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="no-border">&nbsp;</td>
+                                            <td class="no-border">&nbsp;</td>
+                                            <td class="no-border">&nbsp;</td>
+                                            <td class="hidden-sm no-border">&nbsp;</td>
+                                            <td class="summary summary-text summary-row">RAZEM</td>
+                                            <td class="summary-cell summary-row">27666,00</td>
+                                            <td class="hidden-sm summary-row">X</td>
+                                            <td class="hidden-sm summary-row">2152,62</td>
+                                            <td class="summary-row summary-border-right">29818,62</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="no-border"></td>
+                                            <td class="no-border"></td>
+                                            <td class="no-border"></td>
+                                            <td class="hidden-sm no-border"></td>
+                                            <td class="summary summary-text">W tym</td>
+                                            <td class="summary-cell">27216,00</td>
+                                            <td class="hidden-sm">7%</td>
+                                            <td class="hidden-sm">1905,12</td>
+                                            <td class="summary-border-right">29121,12</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="no-border"></td>
+                                            <td class="no-border"></td>
+                                            <td class="no-border"></td>
+                                            <td class="hidden-sm no-border"></td>
+                                            <td class="no-border"></td>
+                                            <td class="summary-cell">-1800,00</td>
+                                            <td class="hidden-sm">15%</td>
+                                            <td class="hidden-sm">-270,00</td>
+                                            <td class="summary-border-right">-2070,00</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="no-border"></td>
+                                            <td class="no-border"></td>
+                                            <td class="no-border"></td>
+                                            <td class="hidden-sm no-border"></td>
+                                            <td class="no-border"></td>
+                                            <td class="summary-cell summary-border-bottom">2250,00</td>
+                                            <td class="hidden-sm summary-border-bottom">23%</td>
+                                            <td class="hidden-sm summary-border-bottom">517,50</td>
+                                            <td class="summary-border-right summary-border-bottom">2767,50</td>
+                                        </tr>
+                                    </tbody>
+
+                                </table>
+                                <div class="row">
+                                    <div class="col-xs-4">
+                                        <div class="tag-box tag-box-v3 no-margin-bottom">
+                                            <strong>Razem do zapłaty: </strong>8073,18 PLN
+                                        </div>    
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <div class="tag-box tag-box-v3 no-margin-bottom">
+                                            <strong>Słownie: </strong>osiem tysięcy sielemdziesiąt trzy i 0,18 PLN
+                                        </div>    
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <fieldset>
+                                <section>
+                                    <label class="label">Komentarz</label>
+                                    <label class="textarea">
+                                        <textarea rows="3" name="info"></textarea>
+                                    </label>
+                                </section>
+                            </fieldset>
+                            <footer>
+                                <button type="submit" class="btn-u" onclick="">Dodaj</button>  
+                                <button type="button" class="btn-u btn-u-default" onclick="window.history.back();">Wróć</button>
+                            </footer>
+                        </form>         
+                        <!-- Post -->
+                    </div>
+                    <!-- End Content -->
+                    <!-- Begin Sidebar Menu -->
+                    <div class="col-md-3" id="includedContentSideBar">
+                    </div>
+                    <!-- End Sidebar Menu -->
+                </div>          
+            </div><!--/container-->     
+            <!--=== End Content Part ===-->
+        </div><!--/End Wrapepr-->
+        <!--=== Footer Version 1 ===-->
+        <div class="footer-v1" id="includedContentFooter">
+        </div>     
+        <!--=== End Footer Version 1 ===-->
+        <!-- JS Global Compulsory -->           
+        <script type="text/javascript" src="assets/plugins/jquery/jquery.min.js"></script>
+        <script type="text/javascript" src="assets/plugins/jquery/jquery-migrate.min.js"></script>
+        <script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+        <!-- JS Implementing Plugins -->
+        <script type="text/javascript" src="assets/plugins/back-to-top.js"></script>
+        <script type="text/javascript" src="assets/plugins/smoothScroll.js"></script>
+        <!-- JS Customization -->
+        <script type="text/javascript" src="assets/js/custom.js"></script>
+        <!-- JS Page Level -->           
+        <script type="text/javascript" src="assets/js/app.js"></script>
+
+        <script type="text/javascript" language="javascript" src="assets/plugins/datatable/js/jquery.dataTables.js"></script>
+        <script type="text/javascript" src="assets/js/jquery.tabledit.js"></script>
+        <script type="text/javascript">
+                                    jQuery(document).ready(function () {
+                                        App.init();
+                                    });
+                                    $(document).ready(function () {
+                                        $('#example').DataTable({
+                                            "searching": false,
+                                            "paging": false,
+                                            "ordering": false,
+                                            "info": false,
+                                            "language": {
+                                                "url": "assets/plugins/datatable/lang/Polish.json"
+                                            }
+                                        });
+                                        $('#example').Tabledit({
+                                            columns: {
+                                                identifier: [0, '#'],
+                                                editable: [[2, 'Ilość'], [4, 'Cena jedn. netto'], [6, 'Stawka VAT']]
+                                            }
+                                        });
+                                    });
+        </script>
+        <script>
+            $(function () {
+                $("#includedContentHeader").load("header.html");
+                $("#includedContentFooter").load("footer.html");
+                $("#includedContentSideBar").load("sidebar.html");
+            });
+        </script> 
+        <!--[if lt IE 9]>
+            <script src="assets/plugins/respond.js"></script>
+            <script src="assets/plugins/html5shiv.js"></script>
+            <script src="assets/plugins/placeholder-IE-fixes.js"></script>
+        <![endif]-->
+
+    </body>
+</html> 

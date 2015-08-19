@@ -62,7 +62,7 @@
             <div class="container content">     
                 <div class="row">
                     <!-- Begin Content -->
-                    <div class="col-md-12  margin-bottom-50">
+                    <div class="col-md-9  margin-bottom-50">
                         <div class="margin-bottom-20">
                             <div class="btn-group">
                                 <a href="add_invoice.html" class="button btn-u pull-right"><i class="fa fa-plus fa-fw"></i>Wystaw nowy dokument</a>         
@@ -164,6 +164,10 @@
 
                     </div>
                     <!-- End Content -->
+                    <!-- Begin Sidebar Menu -->
+                    <div class="col-md-3" id="includedContentSideBar">
+                    </div>
+                    <!-- End Sidebar Menu -->
                 </div>          
             </div><!--/container-->     
             <!--=== End Content Part ===-->
@@ -202,6 +206,7 @@
             $(function () {
                 $("#includedContentHeader").load("header.html");
                 $("#includedContentFooter").load("footer.html");
+                $("#includedContentSideBar").load("sidebar.html");
             });
         </script> 
         <!--[if lt IE 9]>

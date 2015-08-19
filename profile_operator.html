@@ -59,9 +59,9 @@
                 <div class="container">
                     <h1 class="pull-left">Profil operatora partnera</h1>
                     <ul class="pull-right breadcrumb">
-                        <li><a href="index_backend.html">Home</a></li>
+                        <li><a href="wall.html">Home</a></li>
                         <li><a href="list_partners.html">Partnerzy</a></li>
-                        <li><a href="list_operators_backend.html">Lista operatorów</a></li>
+                        <li><a href="list_operators.html">Lista operatorów</a></li>
                     </ul>
                 </div>
             </div><!--/breadcrumbs-->
@@ -71,7 +71,7 @@
             <div class="container content">     
                 <div class="row">
                     <!-- Begin Content -->
-                    <div class="col-md-8 col-md-offset-2 margin-bottom-50">
+                    <div class="col-md-9 margin-bottom-50">
                         <!-- Checkout-Form -->
                         <div class="tab-v1">
                             <ul class="nav nav-tabs">
@@ -238,6 +238,10 @@
                         <!-- End Tabs-->
                     </div>
                     <!-- End Content -->
+                    <!-- Begin Sidebar Menu -->
+                    <div class="col-md-3" id="includedContentSideBar">
+                    </div>
+                    <!-- End Sidebar Menu -->
                 </div>          
             </div><!--/container-->     
             <!--=== End Content Part ===-->
@@ -277,9 +281,9 @@
         </script>
         <script>
             $(function () {
-                $("#includedContentHeader").load("header_backend.html");
+                $("#includedContentHeader").load("header.html");
                 $("#includedContentFooter").load("footer.html");
-
+                $("#includedContentSideBar").load("sidebar.html");
             });
         </script> 
         <!--[if lt IE 9]>

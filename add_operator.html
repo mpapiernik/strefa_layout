@@ -59,7 +59,7 @@
                 <div class="container">
                     <h1 class="pull-left">Nowy operator partnera</h1>
                     <ul class="pull-right breadcrumb">
-                        <li><a href="index_backend.html">Home</a></li>
+                        <li><a href="wall.html">Home</a></li>
                         <li><a href="list_partners.html">Partnerzy</a></li>
                         <li><a href="list_operators_backend.html">Lista operatorów</a></li>
                     </ul>
@@ -71,7 +71,7 @@
             <div class="container content">     
                 <div class="row">
                     <!-- Begin Content -->
-                    <div class="col-md-8 col-md-offset-2  margin-bottom-50">
+                    <div class="col-md-9 margin-bottom-50">
                         <!-- Checkout-Form -->
                         <form action="list_operators_backend.html" id="sky-form" class="sky-form">
                             <header>Dodaj operatora partnera</header>
@@ -274,16 +274,17 @@
         <script type="text/javascript" src="assets/js/plugins/validation.js"></script>
         <script type="text/javascript" src="assets/js/forms/checkout.js"></script>
         <script type="text/javascript">
-            jQuery(document).ready(function () {
-                App.init();
-                ContactForm.initContactForm();
-                CheckoutForm.initCheckoutForm();
-            });
+                                    jQuery(document).ready(function () {
+                                        App.init();
+                                        ContactForm.initContactForm();
+                                        CheckoutForm.initCheckoutForm();
+                                    });
         </script>
         <script>
             $(function () {
-                $("#includedContentHeader").load("header_backend.html");
+                $("#includedContentHeader").load("header.html");
                 $("#includedContentFooter").load("footer.html");
+                $("#includedContentSideBar").load("sidebar.html");
 
             });
         </script> 
