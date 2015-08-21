@@ -87,14 +87,14 @@ var CheckoutForm = function () {
                         password:
 	                {
 	                    required: true,
-	                    minlength: 3,
-	                    maxlength: 20
+	                    minlength: 8,
+	                    maxlength: 30
 	                },
 	                passwordConfirm:
 	                {
 	                    required: true,
-	                    minlength: 3,
-	                    maxlength: 20,
+	                    minlength: 8,
+	                    maxlength: 30,
 	                    equalTo: '#password'
 	                },
                         
@@ -105,32 +105,32 @@ var CheckoutForm = function () {
 	            {
 	                fname:
 	                {
-	                    required: 'Please enter your first name'
+	                    required: 'Wpisz imię'
 	                },
 	                lname:
 	                {
-	                    required: 'Please enter your last name'
+	                    required: 'Wpisz nazwisko'
 	                },
                         login:
 	                {
-	                    required: 'Please enter your login'
+	                    required: 'Wpisz login operatora'
 	                },
 	                email:
 	                {
-	                    required: 'Please enter your email address',
-	                    email: 'Please enter a VALID email address'
+	                    required: 'Wpisz adres e-mail',
+	                    email: 'Wpisz poprawny adres e-mail'
 	                },
 	                phone:
 	                {
-	                    required: 'Please enter your phone number'
+	                    required: 'Wpisz telefon kontaktowy'
 	                },
 	                country:
 	                {
-	                    required: 'Please select your country'
+	                    required: 'Wybierz kraj'
 	                },
 	                city:
 	                {
-	                    required: 'Please enter your city'
+	                    required: 'Wpisz nazwe miasta'
 	                },
 	                code:
 	                {
@@ -165,12 +165,12 @@ var CheckoutForm = function () {
 	                },
                         password:
 	                {
-	                    required: 'Please enter your password'
+	                    required: 'Wpisz hasło'
 	                },
 	                passwordConfirm:
 	                {
-	                    required: 'Please enter your password one more time',
-	                    equalTo: 'Please enter the same password as above'
+	                    required: 'Wpisz hasło',
+	                    equalTo: 'Wpisane hasła się różnią'
 	                },
 	            },                  
 	            
