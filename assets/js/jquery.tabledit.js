@@ -48,21 +48,21 @@ if (typeof jQuery === 'undefined') {
                 },
                 delete: {
                     class: 'btn btn-sm btn-default',
-                    html: '<span class="glyphicon glyphicon-eye-close"></span>',
+                    html: '<span class="glyphicon glyphicon-trash"></span>',
                     action: 'delete'
                 },
                 save: {
                     class: 'btn btn-sm btn-success',
-                    html: 'Zapisz'
+                    html: 'Save'
                 },
                 restore: {
                     class: 'btn btn-sm btn-warning',
-                    html: 'Przywróć',
+                    html: 'Restore',
                     action: 'restore'
                 },
                 confirm: {
                     class: 'btn btn-sm btn-danger',
-                    html: 'Wyzeruj'
+                    html: 'Confirm'
                 }
             },
             onDraw: function() { return; },

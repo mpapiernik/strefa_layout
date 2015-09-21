@@ -1,0 +1,41 @@
+<!-- Modal -->
+
+    <head>
+
+        <link rel="stylesheet" href="assets/plugins/sky-forms-pro/skyforms/css/sky-forms.css">
+        <link rel="stylesheet" href="assets/plugins/sky-forms-pro/skyforms/custom/custom-sky-forms.css">
+        <!--[if lt IE 9]><link rel="stylesheet" href="assets/plugins/sky-forms-pro/skyforms/css/sky-forms-ie8.css"><![endif]-->
+
+    </head>
+
+         <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button aria-hidden="true" data-dismiss="modal" class="close" type="button">×</button>
+                                        <h4 id="modalNumberLabel" class="modal-title">  Potwierdź odrzucenie dokumentu</h4>
+                                    </div>
+                                    <form action="list_invoices_backend.html" id="sky-form-number" class="sky-form">
+                                            <fieldset>
+                                <section>
+                                    <label class="label">Powód</label>
+                                    <label class="textarea">
+                                        <textarea rows="3" name="decline_reason" required=""></textarea>
+                                    </label>
+                                </section>
+                            </fieldset>
+                                        <div class="modal-footer">
+                                            <button data-dismiss="modal" class="btn-u btn-u-default" type="button">Wróć</button>
+                                            <button  type="submit" class="btn-u">Odrzuć</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+<!-- End Modal -->
+
+<script type="text/javascript">
+    jQuery(document).ready(function () {
+        $('#decline').click(function () {
+            $('#declineDocument').modal('hide');
+        });
+    });
+</script>

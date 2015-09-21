@@ -53,6 +53,12 @@ address {
     font-family: 'Open Sans'; 
 }
 
+
+.history-summary th{
+     text-align: left;
+    
+}
+
 .invoice-table tbody td, th{
     text-align: right;
 
@@ -75,6 +81,7 @@ address {
 .space{
     background: #FFF !important;
 }
+
 
 .summary {
      border:1px solid #ddd !important;
@@ -119,3 +126,6 @@ address {
      border-bottom:1px solid #ddd !important;
 }
 
+.change-data-text {
+    color: #a10f2b;
+}

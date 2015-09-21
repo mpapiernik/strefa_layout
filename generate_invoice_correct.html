@@ -78,7 +78,7 @@
                             </div>
                             <div class="col-xs-4">
                                 <div class="tag-box tag-box-v3">
-                                    <h3>Faktura VAT</h3>
+                                    <h3>Faktura korygująca do faktury VAT nr 2015/FVS/25015</h3>
                                 </div>
                             </div>
                             <div class="col-xs-4">
@@ -88,7 +88,7 @@
                                             <i class="fa fa-pencil"></i>
                                         </a>
                                     </span>    
-                                    <h3>Nr: 2015/FVS/25015</h3>
+                                    <h3 id="n1">2015/FK/25015</h3>
                                 </div>
                             </div>
                         </div>
@@ -100,44 +100,35 @@
                                         <button aria-hidden="true" data-dismiss="modal" class="close" type="button">×</button>
                                         <h4 id="modalNumberLabel" class="modal-title">  Nadpisz numer dokumentu</h4>
                                     </div>
-                                    <form action="#" id="sky-form-number" class="sky-form">
+                                    <div id="sky-form-number" class="sky-form">
                                         <fieldset>
                                             <div class="row">
                                                 <section class="col col-6">
                                                     <label class="label">Numer dokumentu</label>
                                                     <label class="input">
                                                         <i class="icon-prepend fa fa-file"></i>
-                                                        <input type="text" name="number" value="2015/FVS/25015">
+                                                        <input type="text" name="number" >
                                                     </label>
                                                 </section>
                                             </div>
                                         </fieldset>
                                         <div class="modal-footer">
                                             <button data-dismiss="modal" class="btn-u btn-u-default" type="button">Wróć</button>
-                                            <button  type="submit" class="btn-u">Potwierdź zmiany</button>
+                                            <button  data-dismiss="modal" type="button" class="btn-u add_correct_possition">Potwierdź zmiany</button>
                                         </div>
-                                    </form>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                         <!-- End Modal -->
-                        <!--End Invoice Detials-->
                         <!--Invoice Detials-->
                         <div class="row invoice-info">
                             <div class="col-xs-6">
-                                <div class="tag-box tag-box-v3" style="background-color: #f2dede;">
-                                    <span>
-                                         <a class="pull-right margin-left-10">
-                                            <i class="fa fa-history"></i>
-                                        </a>
-                                         <a class="pull-right accordion-toggle" data-toggle="modal" data-target="#modalSeller">
-                                            <i class="fa fa-pencil"></i>
-                                        </a>
-                                    </span>
-                                    <h2>Sprzedawca: </h2>        
+                                <div class="tag-box tag-box-v3">
+                                    <h2>Sprzedawca:</h2>        
                                     <ul class="list-unstyled">
                                         <li><strong>Nazwa: </strong>Tyger Gym S. Z O.O.</li>
-                                        <li style="color: #a10f2b;"><strong>Adres: </strong>00-097 Gdańsk, Grunwaldzka 346</li>
+                                        <li><strong>Adres: </strong>00-097 Gdańsk, Grunwaldzka 346</li>
                                         <li><strong>NIP: </strong>836-16-76-510</li>
                                         <li> 
                                             <div class="row">
@@ -150,12 +141,7 @@
                             </div>
                             <div class="col-xs-6">
                                 <div class="tag-box tag-box-v3">
-                                    <span>
-                                        <a class="pull-right accordion-toggle" data-toggle="modal" data-target="#modalBuyer">
-                                            <i class="fa fa-pencil"></i>
-                                        </a>
-                                    </span>    
-                                    <h2>Nabywca: </h2>    
+                                    <h2>Nabywca:</h2>        
                                     <ul class="list-unstyled">
                                         <li><strong>Nazwa: </strong>Benefit Systems S.A</li>
                                         <li><strong>Adres: </strong>00-097 Warszawa, Fredry 6</li>
@@ -170,166 +156,12 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- Modal Seller-->
-                        <div class="modal fade" id="modalSeller" tabindex="-1" role="dialog" aria-labelledby="modalSellerLabel" aria-hidden="true">
-                            <div class="modal-dialog modal-lg">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <button aria-hidden="true" data-dismiss="modal" class="close" type="button">×</button>
-                                        <h4 id="modalSellerLabel" class="modal-title"> Nadpisz dane sprzedawcy</h4>
-                                    </div>
-                                    <form action="#" id="sky-form-seller" class="sky-form">
-                                        <fieldset>
-                                            <div class="row">
-                                                <section class="col col-9">
-                                                    <label class="label">Nazwa</label>
-                                                    <label class="input">
-                                                        <i class="icon-prepend fa fa-user-md"></i>
-                                                        <input type="text" name="seller_name" value="Tyger Gym S. Z O.O.">
-                                                    </label>
-                                                </section>
-                                                <section class="col col-3">
-                                                    <label class="label">Numer NIP</label>
-                                                    <label class="input">
-                                                        <i class="icon-prepend fa fa-neuter"></i>
-                                                        <input type="text" name="seller_nip" value="836-16-76-510">
-                                                    </label>
-                                                </section>
-                                            </div>
-                                            <div class="row">
-                                                <section class="col col-3">
-                                                    <label class="label">Kod pocztowy</label>
-                                                    <label class="input">
-                                                        <i class="icon-prepend fa fa-globe"></i>
-                                                        <input type="text" name="seller_zip" id="seller_zip" value="00-097">
-                                                    </label>
-                                                </section>
-                                                <section class="col col-3">
-                                                    <label class="label">Miasto</label>
-                                                    <label class="input">
-                                                        <i class="icon-prepend fa fa-university"></i>
-                                                        <input type="text" name="seller_city" value="Gdańsk">
-                                                    </label>
-                                                </section>
-                                                <section class="col col-6">
-                                                    <label class="label">Address</label>
-                                                    <label class="input">
-                                                        <i class="icon-prepend fa fa fa-building"></i>
-                                                        <input type="text" name="seller_street" value="Grunwaldzka 346">
-                                                    </label>
-                                                </section>
-                                            </div>
-                                            <div class="row">
-                                                <section class="col col-6">
-                                                    <label class="label">Telefon kontaktowy</label>
-                                                    <label class="input">
-                                                        <i class="icon-prepend fa fa-phone"></i>
-                                                        <input type="tel" name="seller_phone" value="22 224 40 00">
-                                                    </label>
-                                                </section>
-                                                <section class="col col-6">
-                                                    <label class="label">Numer Fax</label>
-                                                    <label class="input">
-                                                        <i class="icon-prepend fa fa-fax"></i>
-                                                        <input type="tel" name="seller_fax" value="22 831 79 30">
-                                                    </label>
-                                                </section>
-                                            </div>
-                                        </fieldset>
-                                        <div class="modal-footer">
-                                            <button data-dismiss="modal" class="btn-u btn-u-default" type="button">Wróć</button>
-                                            <button  type="submit" class="btn-u">Potwierdź zmiany</button>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- End Modal Seller-->
-                        <!-- Modal Buyer-->
-                        <div class="modal fade" id="modalBuyer" tabindex="-1" role="dialog" aria-labelledby="modalBuyerLabel" aria-hidden="true">
-                            <div class="modal-dialog modal-lg">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <button aria-hidden="true" data-dismiss="modal" class="close" type="button">×</button>
-                                        <h4 id="modalBuyerLabel" class="modal-title">  Nadpisz dane nabywcy</h4>
-                                    </div>
-                                    <form action="#" id="sky-form-buyer" class="sky-form">
-                                        <fieldset>
-                                            <div class="row">
-                                                <section class="col col-9">
-                                                    <label class="label">Nazwa</label>
-                                                    <label class="input">
-                                                        <i class="icon-prepend fa fa-user-md"></i>
-                                                        <input type="text" name="buyer_name" value="Benefit Systems S.A.">
-                                                    </label>
-                                                </section>
-                                                <section class="col col-3">
-                                                    <label class="label">Numer NIP</label>
-                                                    <label class="input">
-                                                        <i class="icon-prepend fa fa-neuter"></i>
-                                                        <input type="text" name="buyer_nip" value="836-16-76-510">
-                                                    </label>
-                                                </section>
-                                            </div>
-                                            <div class="row">
-                                                <section class="col col-3">
-                                                    <label class="label">Kod pocztowy</label>
-                                                    <label class="input">
-                                                        <i class="icon-prepend fa fa-globe"></i>
-                                                        <input type="text" name="buyer_zip" id="buyer_zip" value="00-097">
-                                                    </label>
-                                                </section>
-                                                <section class="col col-3">
-                                                    <label class="label">Miasto</label>
-                                                    <label class="input">
-                                                        <i class="icon-prepend fa fa-university"></i>
-                                                        <input type="text" name="buyer_city" value="Warszawa">
-                                                    </label>
-                                                </section>
-                                                <section class="col col-6">
-                                                    <label class="label">Address</label>
-                                                    <label class="input">
-                                                        <i class="icon-prepend fa fa fa-building"></i>
-                                                        <input type="text" name="buyer_street" value="Fredry 6">
-                                                    </label>
-                                                </section>
-                                            </div>
-                                            <div class="row">
-                                                <section class="col col-6">
-                                                    <label class="label">Telefon kontaktowy</label>
-                                                    <label class="input">
-                                                        <i class="icon-prepend fa fa-phone"></i>
-                                                        <input type="tel" name="buyer_phone" value="22 224 40 00">
-                                                    </label>
-                                                </section>
-                                                <section class="col col-6">
-                                                    <label class="label">Numer Fax</label>
-                                                    <label class="input">
-                                                        <i class="icon-prepend fa fa-fax"></i>
-                                                        <input type="tel" name="buyer_fax" value="22 831 79 30">
-                                                    </label>
-                                                </section>
-                                            </div>
-                                        </fieldset>
-                                        <div class="modal-footer">
-                                            <button data-dismiss="modal" class="btn-u btn-u-default" type="button">Wróć</button>
-                                            <button  type="submit" class="btn-u">Potwierdź zmiany</button>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- End Modal Buyer-->
                         <!--End Invoice Detials-->
                         <div class="tag-box tag-box-v3">
                             <!--Invoice Detials-->
-                            <span>
-                                <a class="pull-right accordion-toggle" data-toggle="modal" data-target="#modalDetails">
-                                    <i class="fa fa-pencil"></i>
-                                </a>
-                            </span>
                             <div class="row invoice-info">
                                 <div class="col-xs-6">
+
                                     <ul class="list-unstyled">
                                         <li><strong>Data wystawienia: </strong>2015-05-08</li>
                                         <li><strong>Miejsce wystawienia: </strong>Gdańsk</li>
@@ -349,97 +181,84 @@
                         </div>
                         <!--End Invoice Detials-->
 
-                        <!-- Modal Detailss-->
-                        <div class="modal fade" id="modalDetails" tabindex="-1" role="dialog" aria-labelledby="modalDetailsLabel" aria-hidden="true">
-                            <div class="modal-dialog modal-lg">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <button aria-hidden="true" data-dismiss="modal" class="close" type="button">×</button>
-                                        <h4 id="modalDetailsLabel" class="modal-title"> Napisz szczegóły dokumentu</h4>
-                                    </div>
-                                    <form action="#" id="sky-form-details" class="sky-form">
-                                        <fieldset>
-                                            <div class="row">
-                                                <section class="col col-6">
-                                                    <label class="label">Data wystawienia</label>
-                                                    <label class="input" id="input_create_date">
-                                                        <i class="icon-prepend fa fa-calendar"></i>
-                                                        <input type="text" name="date" id="create_date" value="2015-05-16">
-                                                    </label>
-                                                    <div class="note note-error state-error" id="note_error_create_date"></div>
-                                                </section>
-                                                <section class="col col-6">
-                                                    <label class="label">Miasto wystawienia</label>
-                                                    <label class="input">
-                                                        <i class="icon-prepend fa fa-university"></i>
-                                                        <input type="text" name="create_city">
-                                                    </label>
-                                                </section>
-                                            </div>
-                                            <div class="row">
-                                                <section class="col col-6">
-                                                    <label class="label">Termin sprzedaży</label>
-                                                    <label class="input">
-                                                        <i class="icon-prepend fa fa-calendar"></i>
-                                                        <input type="text" name="date" id="sell_date" disabled>
-                                                    </label>
-                                                </section>
-                                                <section class="col col-6">
-                                                    <label class="label">Termin płatności</label>
-                                                    <label class="input">
-                                                        <i class="icon-prepend fa fa-calendar"></i>
-                                                        <input type="text" name="payment_date" disabled>
-                                                    </label>
-                                                </section>
-                                            </div>
-                                            <div class="row">
-                                                <section class="col col-3">
-                                                    <label class="label">Forma płatności</label>
-                                                    <label class="select">
-                                                        <select name="payment_type">
-                                                            <option value="0" selected>przelew</option>
-                                                            <option value="1">gotówka</option>
-                                                        </select>
-                                                        <i></i>
-                                                    </label>
-                                                </section>
-                                                <section class="col col-9">
-                                                    <label class="label">Nazwa banku</label>
-                                                    <label class="input">
-                                                        <i class="icon-prepend fa fa-bank"></i>
-                                                        <input type="tel" name="bank_name">
-                                                    </label>
-                                                </section>
-                                            </div>
-                                            <div class="row">
-                                                <section class="col col-lg-12 col-md-12">
-                                                    <label class="label">Numer konta bankowego</label>
-                                                    <label class="input">
-                                                        <i class="icon-prepend fa fa-bank"></i>
-                                                        <input type="tel" name="bank_account_number" id="bank_account_number">
-                                                    </label>
-                                                </section>
-                                            </div>
-                                        </fieldset>
-                                        <div class="modal-footer">
-                                            <button data-dismiss="modal" class="btn-u btn-u-default" type="button">Wróć</button>
-                                            <button  type="submit" class="btn-u">Potwierdź zmiany</button>
-                                        </div>
-                                    </form>
-                                </div>
+                        <!--Invoice Table-->
+                        <div class="panel panel-default margin-bottom-20">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">PRZED KOREKTĄ</h3>
                             </div>
-                        </div>
-                        <!-- End Modal Details-->
+                            <table class="table table-striped invoice-table">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th class="table-product">Nazwa</th>
+                                        <th>Ilość</th>
+                                        <th class="hidden-sm">J.m.</th>
+                                        <th>Cena jedn. netto</th>
+                                        <th>Wartość netto</th>
+                                        <th class="hidden-sm">Stawka VAT</th>
+                                        <th class="hidden-sm">Kwota VAT</th>
+                                        <th>Wartość brutto</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td class="table-product">Sauna</td>
+                                        <td>252</td>
+                                        <td class="hidden-sm">szt.</td>
+                                        <td>12,00</td>
+                                        <td>3024,00</td>
+                                        <td class="hidden-sm">7%</td>
+                                        <td class="hidden-sm">211,68</td>
+                                        <td>3235,68</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td class="table-product">Zajęcia sportowe pracownika</td>
+                                        <td>25</td>
+                                        <td class="hidden-sm">szt.</td>
+                                        <td>10,00</td>
+                                        <td>250,00</td>
+                                        <td class="hidden-sm">23%</td>
+                                        <td class="hidden-sm">57,50</td>
+                                        <td>307,50</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td class="table-product">Zajęcia fitness</td>
+                                        <td>120</td>
+                                        <td class="hidden-sm">szt.</td>
+                                        <td>15,00</td>
+                                        <td>1800,00</td>
+                                        <td class="hidden-sm">15%</td>
+                                        <td class="hidden-sm">270,00</td>
+                                        <td>2070,00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td class="table-product">Zajęcia jogi</td>
+                                        <td>100</td>
+                                        <td class="hidden-sm">szt.</td>
+                                        <td>20,00</td>
+                                        <td>2000,00</td>
+                                        <td class="hidden-sm">23%</td>
+                                        <td class="hidden-sm">460,00</td>
+                                        <td>2460,00</td>
+                                    </tr>
+                                </tbody>
 
+                            </table>
+                        </div>
+                        <!--End Invoice Table-->
                         <!-- Checkout-Form -->
                         <form action="list_invoices.html" id="sky-form" class="sky-form">
                             <fieldset>
-                                <h4>Lista usług</h4>
+                                <h4>Po korekcie</h4>
                                 <table class="table table-striped invoice-table" id="example">
                                     <thead>
                                         <tr>
                                             <th>#</th>
-                                            <th class="table-product">Obiekt&nbspId - Usługa</th>
+                                            <th class="table-product">Nazwa</th>
                                             <th>Ilość</th>
                                             <th class="hidden-sm">J.m.</th>
                                             <th>Cena jedn. netto</th>
@@ -499,7 +318,7 @@
                                 </table>
                             </fieldset>
                             <fieldset>
-                                <h4>Podsumowanie</h4>
+                                <h4>Korekta zwiększająca</h4>
                                 <table class="table table-striped invoice-table">
                                     <thead>
                                         <tr>
@@ -577,11 +396,20 @@
                                     </div>
                                 </div>
                             </fieldset>
+
+                            <fieldset>
+                                <section>
+                                    <label class="label">Powód noty</label>
+                                    <label class="textarea">
+                                        <textarea rows="3" name="document_reason" required=""></textarea>
+                                    </label>
+                                </section>
+                            </fieldset>
                             <fieldset>
                                 <section>
                                     <label class="label">Komentarz</label>
                                     <label class="textarea">
-                                        <textarea rows="3" name="info" ></textarea>
+                                        <textarea rows="3" name="commnet" ></textarea>
                                     </label>
                                 </section>
                             </fieldset>
@@ -589,8 +417,49 @@
                                 <button type="submit" class="btn-u" onclick="">Wystaw</button>  
                                 <button type="button" class="btn-u btn-u-default" onclick="window.history.back();">Wróć</button>
                             </footer>
-                        </form>         
-                        <!-- Post -->
+                        </form>  
+
+                        <!--History Invoice Table-->
+                        <div class="row margin-top-20">
+                            <div class="col-xs-12">
+                                <div class="tag-box tag-box-v3 no-margin-bottom">   
+                                    <h2>Historia faktury</h2>
+                                    <table id="history" class="display history-summary" cellspacing="0" width="100%">
+                                        <thead>
+                                            <tr>
+                                                <th>#</th>
+                                                <th class="hidden-sm hidden-xs hidden-xs">Data edycji</th>
+                                                <th>Autor</th>
+                                                <th class="hidden-sm hidden-xs">Status</th>
+                                                <th>Typ i numer dokumentu</th>
+                                                <th>Podgląd</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>1</td>
+                                                <td class="hidden-sm hidden-xs">2015-05-31</td>
+                                                <td class="hidden-sm hidden-xs">Jan Kowalski</td>
+                                                <td class="hidden-sm hidden-xs">Do akceptacji</td>
+                                                <td>Faktura VAT, 2015/FVS/25015</td>
+                                                <td><a href="view_invoice.html"  target="_blank" class="btn-u btn-brd btn-brd-hover btn-u-sm"><i class="fa fa-eye"></i></a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>2</td>
+                                                <td class="hidden-sm hidden-xs">2015-06-03</td>
+                                                <td class="hidden-sm hidden-xs">Benefit Jan</td>
+                                                <td class="hidden-sm hidden-xs">Zaakceptowana</td>
+                                                <td>Faktura VAT, 2015/FVS/25015</td>
+                                                <td><a href="view_invoice.html"  target="_blank" class="btn-u btn-brd btn-brd-hover btn-u-sm"><i class="fa fa-eye"></i></a>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>         
+
                     </div>
                     <!-- End Content -->
                     <!-- Begin Sidebar Menu -->
@@ -619,27 +488,38 @@
 
         <script type="text/javascript" language="javascript" src="assets/plugins/datatable/js/jquery.dataTables.js"></script>
         <script type="text/javascript" src="assets/js/jquery.tabledit.js"></script>
+
+        <script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
         <script type="text/javascript">
                                     jQuery(document).ready(function () {
                                         App.init();
-                                    });
-                                    $(document).ready(function () {
-                                        $('#example').DataTable({
-                                            "searching": false,
-                                            "paging": false,
-                                            "ordering": false,
-                                            "info": false,
-                                            "language": {
-                                                "url": "assets/plugins/datatable/lang/Polish.json"
-                                            }
+                                        $(document).ready(function () {
+                                            $('#history').DataTable({
+                                                "paging": false,
+                                                "info": false,
+                                                bFilter: false, bInfo: false,
+                                                "language": {
+                                                    "url": "assets/plugins/datatable/lang/Polish.json"
+                                                }
+                                            });
                                         });
-                                        $('#example').Tabledit({
-                                             confirmButton: false,
+                                        $(document).ready(function () {
+                                            $('#example').DataTable({
+                                                "searching": false,
+                                                "paging": false,
+                                                "ordering": false,
+                                                "info": false,
+                                                "language": {
+                                                    "url": "assets/plugins/datatable/lang/Polish.json"
+                                                }
+                                            });
+                                            $('#example').Tabledit({
+                                                confirmButton: false,
                                                 deleteButton: true,
                                                 restoreButton: true,
                                                 hideIdentifier: true,
                                                 editButton: true,
-                                             buttons: {
+                                                buttons: {
                                                     edit: {
                                                         class: 'btn-u btn-brd btn-u-default btn-brd-hover btn-u-s',
                                                         html: '<i class="fa fa-pencil"></i>',
@@ -663,34 +543,15 @@
                                                         html: 'Potwierdź'
                                                     }
                                                 },
-                                            columns: {
-                                                identifier: [0, '#'],
-                                                editable: [[2, 'Ilość'], [4, 'Cena jedn. netto'], [6, 'Stawka VAT']]
-                                            }
+                                                columns: {
+                                                    identifier: [0, '#'],
+                                                    editable: [[2, 'Ilość'], [4, 'Cena jedn. netto'], [6, 'Stawka VAT']]
+                                                }
+                                            });
+                                            
+
                                         });
-                                    $("#sky-form-details").submit(function (event) {
-                                        var create_date = new Date($('#create_date').val());
-                                        console.log(create_date);
-                                        if (create_date) {
-                                            var create_day = create_date.getDate();
-                                            console.log(create_day);
-                                            var start_day = 1;
-                                            var end_day = 15;
-                                            if (start_day <= create_day && create_day <= end_day) {
-                                                $('#input_create_date').removeClass("state-error");
-                                                $('#note_error_create_date').text("");
-                                            }
-                                            else {
-                                                $('#input_create_date').addClass("state-error");
-                                                $('#note_error_create_date').text("Wprowadź datę z poprawnego zakresu rozliczeniowego, tj. dzień od 1 do 15");
-                                                event.preventDefault();
-                                            }
-                                        } else {
-                                            alert("Invalid date range entered");
-                                            event.preventDefault();
-                                        }
                                     });
-                                });
         </script>
         <script>
             $(function () {

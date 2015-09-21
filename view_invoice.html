@@ -39,7 +39,10 @@
 
         <!-- CSS Page Style -->    
         <link rel="stylesheet" href="assets/css/pages/page_invoice.css">
-        
+
+        <!-- DataTables -->
+        <link rel="stylesheet" type="text/css" href="assets/plugins/datatable/css/jquery.dataTables.css">
+
     </head>
 
     <body>    
@@ -88,11 +91,6 @@
                     <div class="col-xs-6">
                         <div class="tag-box tag-box-v3">
                             <h2>Sprzedawca:</h2>
-                            <span>
-                                            <a class="pull-right" href="#">
-                                                <i class="fa fa-pencil"></i>
-                                            </a>
-                                        </span>
                             <ul class="list-unstyled">
                                 <li><strong>Nazwa: </strong>Tyger Gym S. Z O.O.</li>
                                 <li><strong>Adres: </strong>00-097 Gdańsk, Grunwaldzka 346</li>
@@ -200,7 +198,7 @@
                                 <td class="hidden-sm">270,00</td>
                                 <td>2070,00</td>
                             </tr>
-                             <tr>
+                            <tr>
                                 <td>4</td>
                                 <td class="table-product">Zajęcia jogi</td>
                                 <td>100</td>
@@ -211,61 +209,61 @@
                                 <td class="hidden-sm">460,00</td>
                                 <td>2460,00</td>
                             </tr>
-                         <tr class="space">
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td class="hidden-sm"></td>
-                            <td></td>
-                            <td></td>
-                            <td class="hidden-sm"></td>
-                            <td class="hidden-sm"></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td class="no-border"></td>
-                            <td class="no-border"></td>
-                            <td class="no-border"></td>
-                            <td class="hidden-sm no-border"></td>
-                            <td class="summary summary-text summary-row">RAZEM</td>
-                            <td class="summary-cell summary-row">7074,00</td>
-                            <td class="hidden-sm summary-row">X</td>
-                            <td class="hidden-sm summary-row">999,18</td>
-                            <td class="summary-row">8073,18</td>
-                        </tr>
-                        <tr>
-                            <td class="no-border"></td>
-                            <td class="no-border"></td>
-                            <td class="no-border"></td>
-                            <td class="hidden-sm no-border"></td>
-                            <td class="summary summary-text">W tym</td>
-                            <td class="summary-cell">3024,00</td>
-                            <td class="hidden-sm">7%</td>
-                            <td class="hidden-sm">211,68</td>
-                            <td>3235,68</td>
-                        </tr>
-                        <tr>
-                            <td class="no-border"></td>
-                            <td class="no-border"></td>
-                            <td class="no-border"></td>
-                            <td class="hidden-sm no-border"></td>
-                            <td class="no-border"></td>
-                            <td class="summary-cell">1800,00</td>
-                            <td class="hidden-sm">15%</td>
-                            <td class="hidden-sm">270,00</td>
-                            <td>2070,00</td>
-                        </tr>
-                         <tr>
-                            <td class="no-border"></td>
-                            <td class="no-border"></td>
-                            <td class="no-border"></td>
-                            <td class="hidden-sm no-border"></td>
-                            <td class="no-border"></td>
-                            <td class="summary-cell">2250,00</td>
-                            <td class="hidden-sm">23%</td>
-                            <td class="hidden-sm">517,50</td>
-                            <td>2767,50</td>
-                        </tr>
+                            <tr class="space">
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td class="hidden-sm"></td>
+                                <td></td>
+                                <td></td>
+                                <td class="hidden-sm"></td>
+                                <td class="hidden-sm"></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="no-border"></td>
+                                <td class="no-border"></td>
+                                <td class="no-border"></td>
+                                <td class="hidden-sm no-border"></td>
+                                <td class="summary summary-text summary-row">RAZEM</td>
+                                <td class="summary-cell summary-row">7074,00</td>
+                                <td class="hidden-sm summary-row">X</td>
+                                <td class="hidden-sm summary-row">999,18</td>
+                                <td class="summary-row">8073,18</td>
+                            </tr>
+                            <tr>
+                                <td class="no-border"></td>
+                                <td class="no-border"></td>
+                                <td class="no-border"></td>
+                                <td class="hidden-sm no-border"></td>
+                                <td class="summary summary-text">W tym</td>
+                                <td class="summary-cell">3024,00</td>
+                                <td class="hidden-sm">7%</td>
+                                <td class="hidden-sm">211,68</td>
+                                <td>3235,68</td>
+                            </tr>
+                            <tr>
+                                <td class="no-border"></td>
+                                <td class="no-border"></td>
+                                <td class="no-border"></td>
+                                <td class="hidden-sm no-border"></td>
+                                <td class="no-border"></td>
+                                <td class="summary-cell">1800,00</td>
+                                <td class="hidden-sm">15%</td>
+                                <td class="hidden-sm">270,00</td>
+                                <td>2070,00</td>
+                            </tr>
+                            <tr>
+                                <td class="no-border"></td>
+                                <td class="no-border"></td>
+                                <td class="no-border"></td>
+                                <td class="hidden-sm no-border"></td>
+                                <td class="no-border"></td>
+                                <td class="summary-cell">2250,00</td>
+                                <td class="hidden-sm">23%</td>
+                                <td class="hidden-sm">517,50</td>
+                                <td>2767,50</td>
+                            </tr>
                         </tbody>
 
                     </table>
@@ -286,28 +284,77 @@
                         </div>    
                     </div>
                 </div>
+                 <div class="row">
+                    <div class="col-xs-12">
+                        <div class="tag-box tag-box-v3 no-margin-bottom">
+                            <strong>Komentarz: </strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis urna erat, tempor vitae elit nec, lacinia molestie nulla. Duis fermentum, lectus id aliquet dictum, augue magna placerat mi, vulputate mattis ipsum justo sed massa. Mauris blandit mollis faucibus. Donec sed tellus magna. Fusce porttitor nisi sit amet eleifend ullamcorper. Curabitur ac risus porta, blandit ipsum scelerisque, elementum lorem. Suspendisse in auctor dolor, quis suscipit turpis.
+                        </div>    
+                    </div>
+                </div>
                 <div class="row margin-bottom-20 text-center" >
                     <div class="col-xs-6">
                         Faktura bez podpisu odbiorcy
                     </div>
-                      <div class="col-xs-6">
-                     Wystawił(a) : Anna Nowak
+                    <div class="col-xs-6">
+                        Wystawił(a) : Anna Nowak
                     </div>
                 </div>
                 <!--End Invoice Footer-->
 
-                <!--Invoice Footer-->
                 <div class="row">
-                    <div class="col-xs-6 text-right pull-right">
-                        <a href="http://83.144.70.78:8082/benefit_dev/web/testinvoice/invoice" class="btn-u margin-bottom-5"><i class="fa fa-file-pdf-o"></i> Podgląd PDF</a>        
-                        <a href="#" class="btn-u margin-bottom-5"><i class="fa fa-file-excel-o"></i> Wystaw korektę</a>        
-                        <a href="#" class="btn-u margin-bottom-5"><i class="fa fa-pencil-square-o"></i> Wystaw notę</a>        
+                    <div class="col-xs-12">
+                        <div class="tag-box tag-box-v3 no-margin-bottom " style="text-align: right;">
+                            <a href="#" data-toggle="modal" data-target="#declineDocument" id="confirmDeclineDocument" class="btn-u margin-bottom-5"><i class="fa fa fa-ban"></i> Odrzuć</a>        
+                            <a href="list_invoices_backend.html" class="btn-u btn-u-green margin-bottom-5"><i class="fa fa-chevron-down"></i> Zaakceptuj</a>     
+                        
+                        </div>    
                     </div>
                 </div>
-                <!--End Invoice Footer-->
+
+                 <!--History Invoice Table-->
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="tag-box tag-box-v3 no-margin-bottom">   
+                            <h2>Historia faktury</h2>
+                            <table id="history" class="display history-summary" cellspacing="0" width="100%">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th class="hidden-sm hidden-xs hidden-xs">Data edycji</th>
+                                        <th>Autor</th>
+                                        <th class="hidden-sm hidden-xs">Status</th>
+                                        <th>Typ i numer dokumentu</th>
+                                        <th>Podgląd</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td class="hidden-sm hidden-xs">2015-05-31</td>
+                                        <td class="hidden-sm hidden-xs">Jan Kowalski</td>
+                                        <td class="hidden-sm hidden-xs">Do akceptacji</td>
+                                        <td>Faktura VAT, 2015/FVS/25015</td>
+                                        <td><a href="view_invoice.html"  target="_blank" class="btn-u btn-brd btn-brd-hover btn-u-sm"><i class="fa fa-eye"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td class="hidden-sm hidden-xs">2015-06-03</td>
+                                        <td class="hidden-sm hidden-xs">Benefit Jan</td>
+                                        <td class="hidden-sm hidden-xs">Zaakceptowana</td>
+                                        <td>Faktura VAT, 2015/FVS/25015</td>
+                                        <td><a href="view_invoice.html"  target="_blank" class="btn-u btn-brd btn-brd-hover btn-u-sm"><i class="fa fa-eye"></i></a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>          
             </div><!--/container-->		
             <!--=== End Content Part ===-->
         </div><!--/End Wrapepr-->
+         <div class="modal fade" id="declineDocument" tabindex="-1" role="dialog" aria-hidden="true"></div>
         <!--=== Footer Version 1 ===-->
         <div class="footer-v1" id="includedContentFooter">
         </div>     
@@ -323,16 +370,27 @@
         <script type="text/javascript" src="assets/js/custom.js"></script>
         <!-- JS Page Level -->           
         <script type="text/javascript" src="assets/js/app.js"></script>
+        <script type="text/javascript" language="javascript" src="assets/plugins/datatable/js/jquery.dataTables.js"></script>
         <script type="text/javascript">
-                            jQuery(document).ready(function () {
-                                App.init();
-
-                            });
+            jQuery(document).ready(function () {
+                App.init();
+                $(document).ready(function () {
+                    $('#history').DataTable({
+                        "paging": false,
+                        "info": false,
+                        bFilter: false, bInfo: false,
+                        "language": {
+                            "url": "assets/plugins/datatable/lang/Polish.json"
+                        }
+                    });
+                });
+            });
         </script>
         <script>
             $(function () {
                 $("#includedContentHeader").load("header.html");
                 $("#includedContentFooter").load("footer.html");
+                $("#declineDocument").load("declineDocument.html");
             });
         </script> 
         <!--[if lt IE 9]>
