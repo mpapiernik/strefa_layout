@@ -615,9 +615,14 @@
                                             });
                                         $(document).on('click', 'button.add_correct_possition', function () {
                                             $('#note-table tr:last').after('<tr><td><strong>Nowa pozycja: </strong></td><td>dane 1</td><td>dane 2</td>'
-                                                    + '<td style="white-space: nowrap; width: 1%;"><div class="tabledit-toolbar btn-toolbar " style="text-align: left;">'
-                                                    + '<div class="btn-group btn-group-sm" style="float: none;"><button type="button" class="tabledit-delete-button btn btn-sm btn-danger removebutton"  style="float: none;"><span class="glyphicon glyphicon-trash"></span></button></div>'
-                                                    + '</div></td></tr>');
+                                                    + '<td style="white-space: nowrap; width: 1%;"><div class="tabledit-toolbar btn-toolbar" style="text-align: left;">'
+                                            + '<div class="btn-group btn-group-sm" style="float: none;">'
+                                            +'<button type="button" class="tabledit-delete-button btn-u btn-brd btn-brd-hover btn-u-sm margin-left-5" style="float: none;">'
+                                            +'<i class="fa fa-trash"></i></button></div>'
+                                            +'<button type="button" class="tabledit-confirm-button btn btn-sm btn-danger confirm-deleted" style="float: none; display: none;">'
+                                            + 'Potwierdź</button>'
+                                            + '<button type="button" class="tabledit-restore-button btn btn-sm btn-warning" style="display: none; float: none;">Przywróć</button>'
+                                            + '</div></td>');
                                             return false;
                                         });
                                         $("#sky-form-details").submit(function (event) {
