@@ -1,19 +1,10 @@
-var FacilityForm = function () {
-
+var InvoiceForm = function () {
     return {
         
-        //Facility Form
-        initFacilityForm: function () {
-	        // Masking
-	        $('#zip').mask('99-999', {placeholder:'X'});
-	        $('#cor_zip').mask('99-999', {placeholder:'X'});
+        //Invoice Form
+        initInvoiceForm: function () {
 	        
-	        // Add validation method
-	        $.validator.addMethod("zip_code", function(value, element, param) {
-	                return value.match(/\d/g).length===5;
-	        },
-	        $.validator.format('Wprowadź poprawy kod pocztowy'));
-	        
+	       
 	        // Validation
 	        $('#sky-form').validate({
 	            // Rules for form validation
@@ -50,11 +41,6 @@ var FacilityForm = function () {
 	                {
 	                    required: true
                         },
-                        service_desc:
-	                {
-	                    required: true
-                    
-	                },
 	            },
 	                                
 	            // Messages for form validation
@@ -92,11 +78,7 @@ var FacilityForm = function () {
                         street:
 	                {
 	                    required: 'Wporowadź nazwę ulicy'
-                        },
-                        service_desc:
-	                {
-	                    required: 'Wybierz nazwę usługi ze słownika'
-	                }
+                        }
 	            },                  
 	            
 	            // Do not change code below

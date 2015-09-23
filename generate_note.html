@@ -337,7 +337,7 @@
                                     <ul class="list-unstyled">
                                         <li><strong>Data wystawienia: </strong>2015-05-08</li>
                                         <li><strong>Miejsce wystawienia: </strong>Gdańsk</li>
-                                        <li><strong>Termin sprzedaży </strong>2015-05-22</li>
+                                        <li><strong>Data dokonania usługi: </strong>2015-05-22</li>
                                         <li><strong>Termin płatności: </strong>2015-05-31</li>
                                     </ul>
                                 </div>
@@ -382,7 +382,7 @@
                                             </div>
                                             <div class="row">
                                                 <section class="col col-6">
-                                                    <label class="label">Termin sprzedaży</label>
+                                                    <label class="label">Data dokonania usługi</label>
                                                     <label class="input">
                                                         <i class="icon-prepend fa fa-calendar"></i>
                                                         <input type="text" name="date" id="sell_date" disabled>
@@ -474,7 +474,7 @@
                                 <section>
                                     <label class="label">Powód noty</label>
                                     <label class="textarea">
-                                        <textarea rows="3" name="document_reason" required=""></textarea>
+                                        <textarea rows="3" name="document_reason" required="required"></textarea>
                                     </label>
                                 </section>
                             </fieldset>
@@ -482,7 +482,7 @@
                                 <section>
                                     <label class="label">Komentarz</label>
                                     <label class="textarea">
-                                        <textarea rows="3" name="commnet" ></textarea>
+                                        <textarea rows="3" name="commnent" ></textarea>
                                     </label>
                                 </section>
                             </fieldset>
@@ -561,12 +561,18 @@
         <script type="text/javascript" src="assets/js/app.js"></script>
 
         <script type="text/javascript" language="javascript" src="assets/plugins/datatable/js/jquery.dataTables.js"></script>
+        
+        <script src="assets/plugins/sky-forms-pro/skyforms/js/jquery.validate.min.js"></script>
         <script type="text/javascript" src="assets/js/jquery.tabledit.js"></script>
 
         <script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+        <script type="text/javascript" src="assets/js/plugins/validation.js"></script>
+        <script type="text/javascript" src="assets/js/forms/invoices.js"></script>
         <script type="text/javascript">
+
                                     jQuery(document).ready(function () {
                                         App.init();
+                                        InvoiceForm.initInvoiceForm();
                                         $(document).ready(function () {
                                             $('#history').DataTable({
                                                 "paging": false,
@@ -595,7 +601,7 @@
                                             hideIdentifier: true,
                                             buttons: {
                                                     delete: {
-                                                        class: 'btn-u btn-brd btn-brd-hover btn-u-sm margin-left-5',
+                                                        class: 'btn-u btn-brd btn-u-dark btn-brd-hover btn-u-sm margin-left-5',
                                                         html: '<i class="fa fa-trash"></i>',
                                                         action: 'delete'
                                                     },
@@ -624,7 +630,7 @@
                                             $('#note-table tr:last').after('<tr><td><strong>Nowa pozycja: </strong></td><td>dane 1</td><td>dane 2</td>'
                                                     + '<td style="white-space: nowrap; width: 1%;"><div class="tabledit-toolbar btn-toolbar" style="text-align: left;">'
                                             + '<div class="btn-group btn-group-sm" style="float: none;">'
-                                            +'<button type="button" class="tabledit-delete-button btn-u btn-brd btn-brd-hover btn-u-sm margin-left-5" style="float: none;">'
+                                            +'<button type="button" class="tabledit-delete-button btn-u btn-brd btn-u-dark btn-brd-hover btn-u-sm margin-left-5" style="float: none;">'
                                             +'<i class="fa fa-trash"></i></button></div>'
                                             +'<button type="button" class="tabledit-confirm-button btn btn-sm btn-danger confirm-deleted" style="float: none; display: none;">'
                                             + 'Potwierdź</button>'

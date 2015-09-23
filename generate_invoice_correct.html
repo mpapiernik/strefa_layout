@@ -165,7 +165,7 @@
                                     <ul class="list-unstyled">
                                         <li><strong>Data wystawienia: </strong>2015-05-08</li>
                                         <li><strong>Miejsce wystawienia: </strong>Gdańsk</li>
-                                        <li><strong>Termin sprzedaży </strong>2015-05-22</li>
+                                        <li><strong>Data dokonania usługi: </strong>2015-05-22</li>
                                         <li><strong>Termin płatności: </strong>2015-05-31</li>
                                     </ul>
                                 </div>
@@ -490,9 +490,15 @@
         <script type="text/javascript" src="assets/js/jquery.tabledit.js"></script>
 
         <script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+          <script src="assets/plugins/sky-forms-pro/skyforms/js/jquery.validate.min.js"></script>
+       <script type="text/javascript" src="assets/js/plugins/validation.js"></script>
+        <script type="text/javascript" src="assets/js/forms/invoices.js"></script>
         <script type="text/javascript">
+
                                     jQuery(document).ready(function () {
                                         App.init();
+                                        InvoiceForm.initInvoiceForm();
+                                    
                                         $(document).ready(function () {
                                             $('#history').DataTable({
                                                 "paging": false,
@@ -520,13 +526,13 @@
                                                 hideIdentifier: true,
                                                 editButton: true,
                                                 buttons: {
-                                                    edit: {
-                                                        class: 'btn-u btn-brd btn-u-default btn-brd-hover btn-u-s',
+                                                     edit: {
+                                                        class: 'btn-u btn-brd btn-brd-hover btn-u-sm btn-u-s',
                                                         html: '<i class="fa fa-pencil"></i>',
                                                         action: 'edit'
                                                     },
                                                     delete: {
-                                                        class: 'btn-u btn-brd btn-brd-hover btn-u-sm margin-left-5',
+                                                        class: 'btn-u btn-brd btn-u-dark btn-brd-hover btn-u-sm margin-left-5',
                                                         html: '<i class="fa fa-trash"></i>',
                                                         action: 'delete'
                                                     },

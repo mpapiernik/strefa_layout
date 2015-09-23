@@ -56,7 +56,7 @@
             <!--=== Breadcrumbs ===-->
             <div class="breadcrumbs">
                 <div class="container">
-                    <h1 class="pull-left">Nowa faktura VAT</h1>
+                    <h1 class="pull-left">Wystaw dokument kosztowy</h1>
                     <ul class="pull-right breadcrumb">
                         <li><a href="wall.html">Home</a></li>
                         <li><a href="list_invoices.html">Faktury</a></li>
@@ -333,7 +333,7 @@
                                     <ul class="list-unstyled">
                                         <li><strong>Data wystawienia: </strong>2015-05-08</li>
                                         <li><strong>Miejsce wystawienia: </strong>Gdańsk</li>
-                                        <li><strong>Termin sprzedaży </strong>2015-05-22</li>
+                                        <li><strong>Data dokonania usługi: </strong>2015-05-22</li>
                                         <li><strong>Termin płatności: </strong>2015-05-31</li>
                                     </ul>
                                 </div>
@@ -378,7 +378,7 @@
                                             </div>
                                             <div class="row">
                                                 <section class="col col-6">
-                                                    <label class="label">Termin sprzedaży</label>
+                                                    <label class="label">Data dokonania usługi</label>
                                                     <label class="input">
                                                         <i class="icon-prepend fa fa-calendar"></i>
                                                         <input type="text" name="date" id="sell_date" disabled>
@@ -521,10 +521,10 @@
                                             <td class="no-border">&nbsp;</td>
                                             <td class="hidden-sm no-border">&nbsp;</td>
                                             <td class="summary summary-text summary-row">RAZEM</td>
-                                            <td class="summary-cell summary-row">27666,00</td>
+                                            <td class="summary-cell summary-row">31666,00</td>
                                             <td class="hidden-sm summary-row">X</td>
-                                            <td class="hidden-sm summary-row">2152,62</td>
-                                            <td class="summary-row summary-border-right">29818,62</td>
+                                            <td class="hidden-sm summary-row">2652,62</td>
+                                            <td class="summary-row summary-border-right">34818,62</td>
                                         </tr>
                                         <tr>
                                             <td class="no-border"></td>
@@ -543,10 +543,10 @@
                                             <td class="no-border"></td>
                                             <td class="hidden-sm no-border"></td>
                                             <td class="no-border"></td>
-                                            <td class="summary-cell">-1800,00</td>
+                                            <td class="summary-cell">1800,00</td>
                                             <td class="hidden-sm">15%</td>
-                                            <td class="hidden-sm">-270,00</td>
-                                            <td class="summary-border-right">-2070,00</td>
+                                            <td class="hidden-sm">270,00</td>
+                                            <td class="summary-border-right">2070,00</td>
                                         </tr>
                                         <tr>
                                             <td class="no-border"></td>
@@ -616,12 +616,16 @@
         <script type="text/javascript" src="assets/js/custom.js"></script>
         <!-- JS Page Level -->           
         <script type="text/javascript" src="assets/js/app.js"></script>
-
         <script type="text/javascript" language="javascript" src="assets/plugins/datatable/js/jquery.dataTables.js"></script>
         <script type="text/javascript" src="assets/js/jquery.tabledit.js"></script>
+          <script src="assets/plugins/sky-forms-pro/skyforms/js/jquery.validate.min.js"></script>
+        <script type="text/javascript" src="assets/js/plugins/validation.js"></script>
+        <script type="text/javascript" src="assets/js/forms/invoices.js"></script>
         <script type="text/javascript">
+
                                     jQuery(document).ready(function () {
                                         App.init();
+                                        InvoiceForm.initInvoiceForm();
                                     });
                                     $(document).ready(function () {
                                         $('#example').DataTable({
@@ -641,12 +645,12 @@
                                                 editButton: true,
                                              buttons: {
                                                     edit: {
-                                                        class: 'btn-u btn-brd btn-u-default btn-brd-hover btn-u-s',
+                                                        class: 'btn-u btn-brd btn-brd-hover btn-u-sm btn-u-s',
                                                         html: '<i class="fa fa-pencil"></i>',
                                                         action: 'edit'
                                                     },
                                                     delete: {
-                                                        class: 'btn-u btn-brd btn-brd-hover btn-u-sm margin-left-5',
+                                                        class: 'btn-u btn-brd btn-u-dark btn-brd-hover btn-u-sm margin-left-5',
                                                         html: '<i class="fa fa-trash"></i>',
                                                         action: 'delete'
                                                     },
