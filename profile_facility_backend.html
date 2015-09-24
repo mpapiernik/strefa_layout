@@ -51,32 +51,27 @@
             <div class="breadcrumbs">
                 <div class="container">
                     <ul class="pull-right breadcrumb">
-                        <li><a href="wall.html">Profil</a></li>
-                        <li><a href="obiekty.html">Obiekty</a></li>
+                         <li><a href="">Partnerzy</a></li>
+                        <li><a href="list_partners.html">Lista partnerów</a></li>
+                        <li><a href="profile_partner.html">1</a></li>
+                        <li><a href="facility_backend.html">Obiekty</a></li>
+                        <li><a href="profile_facility_backend.html">1</a></li>
                     </ul>
                 </div>
             </div><!--/breadcrumbs-->
             <!--=== End Breadcrumbs ===-->
 
-            <!--=== Content Part ===-->
+        <!--=== Content Part ===-->
             <div class="container content">     
                 <div class="row">
                     <!-- Begin Content -->
-                    <div class="col-md-9 margin-bottom-50">
+                    <div class="col-md-12 margin-bottom-50">
 
                         <div class="row">
 
                             <!-- Horizontal Description -->
                             <div class="col-md-12">
-                                <div class="margin-bottom-20">
-                                    <div class="btn-group">
-                                        <a href="edit_facility.html" class="button btn-u "><i class="fa fa-pencil fa-fw"></i>Edytuj obiekt</a>       
-                                        <a href="delete_facility.html" class="button btn-u margin-left-5"><i class="fa fa-trash fa-fw"></i>Usuń obiekt</a>
-                                    </div>
-                                    <!-- End Single button -->                    
-                                </div>
-                                <hr>
-                                <div class="headline"><h2>Calypso Piotrków Trybunalski  <i class="fa fa-question-circle app-tooltip-header" data-toggle="tooltip" data-placement="bottom" title="Wniosek o edycje"></i></h2></div>
+                                <div class="headline"><h2>Calypso Piotrków Trybunalski <i class="fa fa-question-circle app-tooltip-header" data-toggle="tooltip" data-placement="bottom" title="Wniosek o edycje"></i></h2></div>
                                 <dl class="dl-horizontal">
                                     <dt>Status</dt>
                                     <dd>Aktywny</dd>
@@ -157,7 +152,7 @@
                                         <td class="hidden-sm hidden-xs">2015-05-31</td>
                                         <td class="hidden-sm hidden-xs">Jan Kowalski</td>
                                         <td>Nazwa, telefon kontaktowy</td>
-                                        <td><a href="profile_facility.html"  target="_blank" class="btn-u btn-brd btn-brd-hover btn-u-sm"><i class="fa fa-eye"></i></a>
+                                        <td><a href="profile_facility_backend.html"  target="_blank" class="btn-u btn-brd btn-brd-hover btn-u-sm"><i class="fa fa-eye"></i></a>
                                         </td>
                                     </tr>
                                     <tr>
@@ -165,7 +160,7 @@
                                         <td class="hidden-sm hidden-xs">2015-06-03</td>
                                         <td class="hidden-sm hidden-xs">Benefit Jan</td>
                                         <td>Nazwa, fax</td>
-                                        <td><a href="profile_facility.html"  target="_blank" class="btn-u btn-brd btn-brd-hover btn-u-sm"><i class="fa fa-eye"></i></a>
+                                        <td><a href="profile_facility_backend.html"  target="_blank" class="btn-u btn-brd btn-brd-hover btn-u-sm"><i class="fa fa-eye"></i></a>
                                         </td>
                                     </tr>
                                 </tbody>
@@ -236,6 +231,8 @@
             <div class="modal fade" id="confirmPublishModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"></div>
 
         </div><!--/End Wrapepr-->
+        
+        <div class="modal fade" id="declineDocument" tabindex="-1" role="dialog" aria-hidden="true"></div>
         <!--=== Footer Version 1 ===-->
         <div class="footer-v1" id="includedContentFooter">
         </div>     
@@ -269,7 +266,7 @@
                         "url": "assets/plugins/datatable/lang/Polish.json"
                     }
                 });
-                $('#historyTab').slideToggle('fast', function () {
+                 $('#historyTab').slideToggle('fast', function () {
                     // Animation complete.
                 });
 
@@ -308,10 +305,10 @@
         </script>
         <script>
             $(function () {
-                $("#includedContentSideBar").load("sidebar.html");
-                $("#includedContentHeader").load("header.html");
+                $("#includedContentHeader").load("header_backend.html");
                 $("#includedContentFooter").load("footer.html");
                 $('[data-toggle="tooltip"]').tooltip();
+                $("#declineDocument").load("declineDocument.html");
             });
         </script> 
         <!--[if lt IE 9]>
