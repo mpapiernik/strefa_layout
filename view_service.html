@@ -149,44 +149,7 @@
                                     <p>Sed placerat diam auctor eget. Mauris tellus eros, iaculis id leo quis, finibus aliquet ipsum. Duis volutpat lacus in purus bibendum, at sollicitudin eros malesuada. Sed nec diam a eros eleifend mattis. Phasellus in facilisis enim. Vestibulum sodales lacinia lectus, quis efficitur velit posuere sed.</p>
                                 </div>
                             </div>
-                        </div><!--/row-->   
-                        <div class="row margin-bottom-20">
-                            <div class="col-md-12">
-                                <div class="headline"><h2>Historia zmian <a id="appendHistory"><i id="historyArrow" class="fa fa-sort-desc"></i></a></h2></div>
-                            </div>
-                        </div><!--/row-->
-                        <div id="historyTab">
-                            <div id="loader" style="text-align: center;"><h2><img  alt="activity indicator" src="assets/ajax-loader.gif"></h2></div>
-                            <table id="history" class="display history-summary" cellspacing="0" width="100%">
-                                <thead>
-                                    <tr>
-                                        <th>#</th>
-                                        <th class="hidden-sm hidden-xs hidden-xs">Data edycji</th>
-                                        <th>Autor</th>
-                                        <th>Rodzaj zmiany</th>
-                                        <th>Podgląd</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>1</td>
-                                        <td class="hidden-sm hidden-xs">2015-05-31</td>
-                                        <td class="hidden-sm hidden-xs">Jan Kowalski</td>
-                                        <td>Obowiązuje do</td>
-                                        <td><a href="view_service.html"  target="_blank" class="btn-u btn-brd btn-brd-hover btn-u-sm"><i class="fa fa-eye"></i></a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>2</td>
-                                        <td class="hidden-sm hidden-xs">2015-06-03</td>
-                                        <td class="hidden-sm hidden-xs">Benefit Jan</td>
-                                        <td>Cennik</td>
-                                        <td><a href="view_service.html" target="_blank" class="btn-u btn-brd btn-brd-hover btn-u-sm"><i class="fa fa-eye"></i></a>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
+                        </div><!--/row-->  
                     </div>
                     <!-- End Content -->
                     <!-- Begin Sidebar Menu -->
@@ -233,27 +196,6 @@
                     "language": {
                         "url": "assets/plugins/datatable/lang/Polish.json"
                     }
-                });
-                 $('#historyTab').slideToggle('fast', function () {
-                    // Animation complete.
-                });
-
-                $('#appendHistory').click(function () {
-                    $('#historyTab').slideToggle('fast', function () {
-                        if ($('#historyArrow').hasClass('fa-sort-desc')) {
-                            $('#loader').hide().delay(800);
-                            $('#historyArrow').removeClass('fa-sort-desc');
-                            $('#historyArrow').addClass('fa-sort-asc');
-                        } else {
-                            $('#loader').show();
-                            $('#historyArrow').removeClass('fa-sort-asc');
-                            $('#historyArrow').addClass('fa-sort-desc');
-                        }
-                    });
-                });
-
-                $('#commentTab').slideToggle('fast', function () {
-                    // Animation complete.
                 });
 
                 $('#appendComment').click(function () {
