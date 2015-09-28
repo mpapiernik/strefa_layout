@@ -1670,3 +1670,8 @@ img.img-mouse {
     font-size: 22px !important;
     display: inline-block !important; 
 }
+
+
+.input-block-level {
+ input[type=text] { width: 100%; box-sizing: border-box; height: 28px; }
+}
