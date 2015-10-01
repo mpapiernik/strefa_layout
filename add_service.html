@@ -187,17 +187,9 @@
 
                                 </table>
                             </fieldset>
-                            <fieldset>
-                                <section>
-                                    <label class="label">Komentarz</label>
-                                    <label class="textarea">
-                                        <textarea rows="3" name="info" required="required"></textarea>
-                                    </label>
-                                </section>
-                            </fieldset>
 
                             <footer>
-                                <button type="submit" class="btn-u" onclick="">Złóż wniosek</button>  
+                                <button  type="button" data-toggle="modal" data-target="#commentApplication" class="btn-u margin-bottom-5">Złóż wniosek</button>    
                                 <button type="button" class="btn-u btn-u-default" onclick="window.history.back();">Wróć</button>
                             </footer>
                         </form>         
@@ -218,6 +210,8 @@
         <div class="footer-v1" id="includedContentFooter">
         </div>     
         <!--=== End Footer Version 1 ===-->
+
+        <div class="modal fade" id="commentApplication" tabindex="-1" role="dialog" aria-hidden="true"></div>
 
         <!-- JS Global Compulsory -->           
         <script type="text/javascript" src="assets/plugins/jquery/jquery.min.js"></script>
@@ -309,7 +303,7 @@
                 $("#includedContentHeader").load("header.html");
                 $("#includedContentFooter").load("footer.html");
                 $("#includedContentSideBar").load("sidebar.html");
-
+                $("#commentApplication").load("comment_application.html");
             });
         </script> 
         <!--[if lt IE 9]>

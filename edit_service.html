@@ -52,6 +52,9 @@
         <!-- DataTables -->
         <link rel="stylesheet" type="text/css" href="assets/plugins/datatable/css/jquery.dataTables.css">
         <script src="assets/js/bootstrap-select.js"></script>
+        
+        <link rel="stylesheet" type="text/css" href="assets/css/jquery.timepicker.css" />
+        
     </head>
 
     <body>    
@@ -201,14 +204,6 @@
 
                                 </table>
                             </fieldset>
-                            <fieldset>
-                                <section>
-                                    <label class="label">Komentarz</label>
-                                    <label class="textarea">
-                                        <textarea rows="3" name="info" required="required"></textarea>
-                                    </label>
-                                </section>
-                            </fieldset>
 
                             <footer>
                                 <button type="submit" class="btn-u" onclick="">Złóż wniosek</button>  
@@ -268,7 +263,7 @@
                                         $('#serviceList').DataTable({
                                             "searching": false,
                                             "paging": false,
-                                            "ordering": false,
+                                            "ordering": true,
                                             "info": false,
                                             "language": {
                                                 "url": "assets/plugins/datatable/lang/Polish.json"

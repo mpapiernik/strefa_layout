@@ -46,6 +46,7 @@
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
         <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/prettify/r298/run_prettify.min.js"></script>
+               <link rel="stylesheet" type="text/css" href="assets/plugins/datatable/css/jquery.dataTables.css">
     </head>
 
     <body>    
@@ -72,21 +73,89 @@
                     <!-- Begin Content -->
                     <div class="col-md-9  margin-bottom-50">
                         <!-- Checkout-Form -->
-                        <form action="profile_facility.html" id="sky-form" class="sky-form">
+                        <form action="" id="sky-form" class="sky-form">
                             <header>Usuń usługę z systemu (złóż wniosek)</header>
                             <fieldset>
-                                <section>
-                                    <label class="checkbox"><input type="checkbox" name="checkbox" checked><i></i>Archiwizuj usługę</label>
-                                </section>
-                                <section>
-                                    <label class="label">Komentarz</label>
-                                    <label class="textarea">
-                                        <textarea rows="3" name="info" required="required"></textarea>
-                                    </label>
-                                </section>
+                                <div class="row">
+                                    <!-- Horizontal Description -->
+                                    <div class="col-md-12">
+                                        <div class="row ">
+                                            <div class="col-md-6">
+                                                <div class="headline"><h2>Usługa: Basen</h2></div>
+                                                <dl class="dl-horizontal">
+                                                    <dt>Nazwa</dt>
+                                                    <dd>Basen</dd>
+                                                    <dt>Status</dt>
+                                                    <dd>Aktywny</dd>
+                                                </dl>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="headline"><h2>Szczegóły</h2></div>
+                                                <dl class="dl-horizontal">
+                                                    <dt>Obowiązuje od</dt>
+                                                    <dd>2015-07-01</dd>
+                                                    <dt>Obowiązuje do</dt>
+                                                    <dd></dd>
+                                                </dl>
+                                            </div>
+                                        </div><!--/row-->
+                                    </div>
+                                    <!-- Ordered and Unordered Lists -->
+                                    <!-- End Ordered and Unordered Lists -->
+                                    <!-- End Horizontal Description -->
+                                </div><!--/row-->
+                                <div class="row margin-bottom-20">
+                                    <div class="col-md-12">
+                                        <div class="headline"><h2>Cennik</h2></div>
+                                        <div class="margin-bottom-20">
+                                            <!-- End Single button -->                    
+                                        </div>
+                                    </div>
+                                </div><!--/row-->
+                                <div>
+                                    <table id="facilityList" class="display" cellspacing="0" width="100%">
+                                        <thead>
+                                            <tr>
+                                                <th>#</th>
+                                                <th>Wartość schodkowa</th>
+                                                <th>Cena jedn. netto</th>
+                                                <th>Stawka VAT</th>
+                                                <th>Cena jedn. brutto</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>0</td>
+                                                <td>12,00</td>
+                                                <td class="hidden-sm">23%</td>
+                                                <td>13,96</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2</td>
+                                                <td>1201</td>
+                                                <td>10,00</td>
+                                                <td class="hidden-sm">23%</td>
+                                                <td>12,30</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="row">
+                            <div class="col-md-12">
+                                <div class="headline"><h2>Komentarz <a id="appendComment"><i id="commentArrow" class="fa fa-sort-desc"></i></a></h2></div>
+                            </div>
+                        </div><!--/row-->
+                        <div class="row">
+                            <div class="col-md-12 blog">
+                                <div id ="commentTab" class="news-v3-in">
+                                    <p>Sed placerat diam auctor eget. Mauris tellus eros, iaculis id leo quis, finibus aliquet ipsum. Duis volutpat lacus in purus bibendum, at sollicitudin eros malesuada. Sed nec diam a eros eleifend mattis. Phasellus in facilisis enim. Vestibulum sodales lacinia lectus, quis efficitur velit posuere sed.</p>
+                                </div>
+                            </div>
+                        </div><!--/row-->  
                             </fieldset>
-                            <footer>
-                                <button type="submit" class="btn-u" onclick="">Złóż wniosek</button>  
+                           <footer>
+                                <button type="button" data-toggle="modal" data-target="#commentApplication" class="btn-u margin-bottom-5">Złóż wniosek</button>    
                                 <button type="button" class="btn-u btn-u-default" onclick="window.history.back();">Wróć</button>
                             </footer>
                         </form>         
@@ -108,6 +177,8 @@
         </div>     
         <!--=== End Footer Version 1 ===-->
 
+        <div class="modal fade" id="commentApplication" tabindex="-1" role="dialog" aria-hidden="true"></div>
+
         <!-- JS Global Compulsory -->           
         <script type="text/javascript" src="assets/plugins/jquery/jquery.min.js"></script>
         <script type="text/javascript" src="assets/plugins/jquery/jquery-migrate.min.js"></script>
@@ -128,10 +199,39 @@
         <script type="text/javascript" src="assets/js/plugins/datepicker.js"></script>
         <script type="text/javascript" src="assets/js/plugins/validation.js"></script>
         <script type="text/javascript" src="assets/js/forms/facility.js"></script>
+            <script type="text/javascript" language="javascript" src="assets/plugins/datatable/js/jquery.dataTables.js"></script>
         <script type="text/javascript">
                                     jQuery(document).ready(function () {
                                         App.init();
                                         FacilityForm.initFacilityForm();
+                                    });
+                                    $('#facilityList').DataTable({
+                                        "language": {
+                                            "url": "assets/plugins/datatable/lang/Polish.json"
+                                        }
+                                    });
+                                    $('#history').DataTable({
+                                        "language": {
+                                            "url": "assets/plugins/datatable/lang/Polish.json"
+                                        }
+                                    });
+                                    
+                                      $('#commentTab').slideToggle('fast', function () {
+                    // Animation complete.
+                });
+
+                                    $('#appendComment').click(function () {
+                                        $('#commentTab').slideToggle('fast', function () {
+                                            if ($('#commentArrow').hasClass('fa-sort-desc')) {
+                                                $('#loader').hide().delay(2000);
+                                                $('#commentArrow').removeClass('fa-sort-desc');
+                                                $('#commentArrow').addClass('fa-sort-asc');
+                                            } else {
+                                                $('#loader').show();
+                                                $('#commentArrow').removeClass('fa-sort-asc');
+                                                $('#commentArrow').addClass('fa-sort-desc');
+                                            }
+                                        });
                                     });
         </script>
         <script>
@@ -139,6 +239,7 @@
                 $("#includedContentHeader").load("header.html");
                 $("#includedContentFooter").load("footer.html");
                 $("#includedContentSideBar").load("sidebar.html");
+                $("#commentApplication").load("comment_application.html");
 
             });
         </script> 

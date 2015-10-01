@@ -1,30 +1,21 @@
 <!-- Modal -->
-
-<head>
-
-    <link rel="stylesheet" href="assets/plugins/sky-forms-pro/skyforms/css/sky-forms.css">
-    <link rel="stylesheet" href="assets/plugins/sky-forms-pro/skyforms/custom/custom-sky-forms.css">
-    <!--[if lt IE 9]><link rel="stylesheet" href="assets/plugins/sky-forms-pro/skyforms/css/sky-forms-ie8.css"><![endif]-->
-
-</head>
-
 <div class="modal-dialog">
     <div class="modal-content">
         <div class="modal-header">
             <button aria-hidden="true" data-dismiss="modal" class="close" type="button">×</button>
-            <h4 id="modalNumberLabel" class="modal-title">  Potwierdź odrzucenie </h4>
+            <h4 id="modalNumberLabel" class="modal-title">  Potwierdź wniosek </h4>
         </div>
         <form action="#" id="sky-form-number" class="sky-form">
             <fieldset>
                 <section>
                     <label class="label">Komentarz</label>
-                    <label class="textarea">
+                    <label class="textarea" id="comment">
                         <textarea rows="3" name="decline_reason" required=""></textarea>
                     </label>
                 </section>
             </fieldset>
             <div class="modal-footer">
-                <button  type="submit" class="btn-u">Odrzuć</button>
+                <button id='confirm' type="submit" class="btn-u" >Zatwierdź</button>
                 <button data-dismiss="modal" class="btn-u btn-u-default" type="button">Wróć</button>
             </div>
         </form>
@@ -34,8 +25,5 @@
 
 <script type="text/javascript">
     jQuery(document).ready(function () {
-        $('#decline').click(function () {
-            $('#declineDocument').modal('hide');
-        });
     });
 </script>

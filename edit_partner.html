@@ -46,9 +46,6 @@
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
         <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/prettify/r298/run_prettify.min.js"></script>
-
-        <!-- DataTables -->
-        <link rel="stylesheet" type="text/css" href="assets/plugins/datatable/css/jquery.dataTables.css">
     </head>
 
     <body>    
@@ -60,9 +57,10 @@
             <!--=== Breadcrumbs ===-->
             <div class="breadcrumbs">
                 <div class="container">
-                    <h1 class="pull-left">Lista wniosków</h1>
+                    <h1 class="pull-left"></h1>
                     <ul class="pull-right breadcrumb">
-                        <li><a href="index_backend.html">Wnioski</a></li>
+                        <li><a href="wall.html">Home</a></li>
+                        <li><a href="profile.html">Profil</a></li>
                     </ul>
                 </div>
             </div><!--/breadcrumbs-->
@@ -72,38 +70,66 @@
             <div class="container content">     
                 <div class="row">
                     <!-- Begin Content -->
-                    <div class="col-md-12 margin-bottom-50">
+                    <div class="col-md-9 margin-bottom-50">
                         <!-- Checkout-Form -->
                         <form action="" id="sky-form" class="sky-form">
-                            <header>Wniosek edycja obiektu</header>
-                            <fieldset>                  
+                            <header>Edytuj dane partnera (złóż wniosek)</header>
+                            <fieldset>   
+                                <h4>Informacje </h4>
                                 <div class="row">
-                                    <section class="col col-md-12">
+                                    <section class="col col-9">
                                         <label class="label">Nazwa</label>
                                         <label class="input">
-                                            <i class="icon-prepend fa fa-heartbeat"></i>
-                                            <input type="text" name="name" value="Calypso Piotrków Trybunalski">
+                                            <i class="icon-prepend fa fa-user-md"></i>
+                                            <input type="text" name="name" value="">
+                                        </label>
+                                    </section>
+                                    <section class="col col-3">
+                                        <label class="label">Status umowy</label>
+                                        <label class="select">
+                                            <select name="payment_type">
+                                                <option value="0" selected>Aktywna</option>
+                                                <option value="1">Nieaktywna</option>
+                                            </select>
+                                            <i></i>
                                         </label>
                                     </section>
                                 </div>
                                 <div class="row">
-                                    <section class="col col-6">
-                                        <label class="label">Partner</label>
-                                        <label class="select">
-                                            <select name="partner" disabled>
-                                                <option value="1">Calypso Spólka Akcyjna</option>
-                                                <option value="2">Gymnasion</option>
-                                                <option value="3">Fit</option>
-                                            </select>
+                                    <section class="col col-lg-12 col-md-12">
+                                        <label class="label">Numer konta bankowego</label>
+                                        <label class="input">
+                                            <i class="icon-prepend fa fa-bank"></i>
+                                            <input type="tel" name="bank_account_number" id="bank_account_number">
                                         </label>
                                     </section>
-                                    <section class="col col-6">
-                                        <label class="label">Oznacz jako główny obiekt partnera</label>
-                                        <label class="checkbox"><input type="checkbox" name="is_representative"><i></i>Główny obiekt</label>
+                                </div>
+                                <div class="row">
+                                    <section class="col col-4">
+                                        <label class="label">Numer NIP</label>
+                                        <label class="input">
+                                            <i class="icon-prepend fa fa-neuter"></i>
+                                            <input type="text" name="partner_nip" value="836-16-76-510">
+                                        </label>
+                                    </section>
+                                    <section class="col col-4">
+                                        <label class="label">REGON</label>
+                                        <label class="input">
+                                            <i class="icon-prepend fa fa-neuter"></i>
+                                            <input type="text" name="paertner_regon" value="836-16-76-510">
+                                        </label>
+                                    </section>
+                                    <section class="col col-4">
+                                        <label class="label">Numer KRS / ewid.</label>
+                                        <label class="input">
+                                            <i class="icon-prepend fa fa-neuter"></i>
+                                            <input type="text" name="partner_krs" value="836-16-76-510">
+                                        </label>
                                     </section>
                                 </div>
                             </fieldset>
                             <fieldset>
+                                <h4>Informacje kontaktowe</h4>
                                 <div class="row">
                                     <section class="col col-6">
                                         <label class="label">E-mail </label>
@@ -140,7 +166,7 @@
                             <fieldset>
                                 <h4>Adres</h4>
                                 <div class="row">
-                                    <section class="col col-9">
+                                    <section class="col col-4">
                                         <label class="label">Województwo</label>
                                         <label class="select">
                                             <select name="province">
@@ -165,6 +191,13 @@
                                             <i></i>
                                         </label>
                                     </section>
+                                    <section class="col col-5">
+                                        <label class="label">Miasto</label>
+                                        <label class="input">
+                                            <i class="icon-prepend fa fa-university"></i>
+                                            <input type="text" name="city" value="">
+                                        </label>
+                                    </section>
                                     <section class="col col-3">
                                         <label class="label">Kod pocztowy</label>
                                         <label class="input">
@@ -175,33 +208,17 @@
                                 </div>
                                 <div class="row">
                                     <section class="col col-6">
-                                        <label class="label">Miasto</label>
-                                        <label class="input">
-                                            <i class="icon-prepend fa fa-university"></i>
-                                            <input type="text" name="city" value="Piotrków Trybunalski">
-                                        </label>
-                                    </section>
-                                    <section class="col col-6">
-                                        <label class="label">Dzielnica</label>
-                                        <label class="input">
-                                            <i class="icon-prepend fa fa-building-o"></i>
-                                            <input type="text" name="district" value="">
-                                        </label>
-                                    </section>
-                                </div>
-                                <div class="row">
-                                    <section class="col col-6">
                                         <label class="label">Ulica</label>
                                         <label class="input">
                                             <i class="icon-prepend fa fa-street-view"></i>
-                                            <input type="text" name="street" value="Słowackiego">
+                                            <input type="text" name="street" value="">
                                         </label>
                                     </section>
                                     <section class="col col-3">
                                         <label class="label">Number budynku</label>
                                         <label class="input">
                                             <i class="icon-prepend fa fa-building"></i>
-                                            <input type="text" name="building_number" value="66">
+                                            <input type="text" name="building_number" value="">
                                         </label>
                                     </section>
                                     <section class="col col-3">
@@ -216,7 +233,7 @@
                             <fieldset>
                                 <h4>Adres korespondencyjny</h4>
                                 <div class="row">
-                                    <section class="col col-9">
+                                    <section class="col col-4">
                                         <label class="label">Województwo</label>
                                         <label class="select">
                                             <select name="cor_province">
@@ -241,6 +258,13 @@
                                             <i></i>
                                         </label>
                                     </section>
+                                    <section class="col col-5">
+                                        <label class="label">Miasto</label>
+                                        <label class="input">
+                                            <i class="icon-prepend fa fa-university"></i>
+                                            <input type="text" name="cor_city" value="Piotrków Trybunalski">
+                                        </label>
+                                    </section>
                                     <section class="col col-3">
                                         <label class="label">Kod pocztowy</label>
                                         <label class="input">
@@ -250,20 +274,7 @@
                                     </section>
                                 </div>
                                 <div class="row">
-                                    <section class="col col-6">
-                                        <label class="label">Miasto</label>
-                                        <label class="input">
-                                            <i class="icon-prepend fa fa-university"></i>
-                                            <input type="text" name="cor_city" value="Piotrków Trybunalski">
-                                        </label>
-                                    </section>
-                                    <section class="col col-6">
-                                        <label class="label">Dzielnica</label>
-                                        <label class="input">
-                                            <i class="icon-prepend fa fa-building-o"></i>
-                                            <input type="text" name="cor_district"  value="">
-                                        </label>
-                                    </section>
+
                                 </div>
                                 <div class="row">
                                     <section class="col col-6">
@@ -288,71 +299,13 @@
                                         </label>
                                     </section>
                                 </div>
-
                             </fieldset>
-                            <fieldset>
-                                <section>
-                                    <label class="checkbox"><input type="checkbox" name="checkbox" checked disabled="disabled"><i></i>Aktywuj obiekt</label>
-                                </section>
-                            </fieldset>
-                        </form>  
-
+                            <footer>
+                                <button type="submit" data-toggle="modal" data-target="#commentApplication" class="btn-u margin-bottom-5">Złóż wniosek</button>    
+                                <button type="button" class="btn-u btn-u-default" onclick="window.history.back();">Wróć</button>
+                            </footer>
+                        </form>         
                         <!-- Post -->
-                        <div class="row sky-form">
-                            <fieldset>                  
-                                <section class="col col-md-12" style="text-align: right;">
-                                    <a href="#" data-toggle="modal" data-target="#declineDocument"  class="btn-u  btn-u-green margin-bottom-5"><i class="fa fa-chevron-down"></i> Zaakceptuj</a>   
-                                    <a href="#" data-toggle="modal" data-target="#declineDocument"  class="btn-u margin-bottom-5"><i class="fa fa fa-ban"></i> Odrzuć</a>  
-                                    <button type="button" class="btn-u btn-u-default" onclick="window.history.back();">Wróć</button>
-                            </fieldset>
-                        </div>
-                        <!--History Invoice Table-->
-                        <div class="row sky-form">
-                            <fieldset>                  
-                                <h2>Historia</h2>
-                                <table id="history" class="display history-summary" cellspacing="0" width="100%">
-                                    <thead>
-                                        <tr>
-                                            <th>#</th>
-                                            <th class="col-1">Data edycji</th>
-                                            <th>Autor</th>
-                                            <th class="hidden-sm hidden-xs">Status</th>
-                                            <th>Komentarz</th>
-                                            <th>Podgląd</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>1</td>
-                                            <td class="hidden-sm hidden-xs">2015-05-31</td>
-                                            <td class="hidden-sm hidden-xs">Jan Kowalski</td>
-                                            <td class="hidden-sm hidden-xs">Do akceptacji</td>
-                                            <td>KOkdoado dm kdaokdokda kad kaokdasok daokda o</td>
-                                            <td><a href="view_invoice.html"  target="_blank" class="btn-u btn-brd btn-brd-hover btn-u-sm"><i class="fa fa-eye"></i></a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>2</td>
-                                            <td class="hidden-sm hidden-xs">2015-06-03</td>
-                                            <td class="hidden-sm hidden-xs">Jan Benefit</td>
-                                            <td class="hidden-sm hidden-xs">Odrzucony</td>
-                                            <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris et malesuada eros, ac vehicula ligula. Quisque mauris odio, sollicitudin ac molestie sed, finibus at ipsum. Curabitur risus erat, auctor sit amet urna in, elementum convallis turpis. Integer et fermentum quam. Sed scelerisque pulvinar urna tempus tempor. Vivamus sapien velit, varius eu orci nec, facilisis commodo turpis. Curabitur ac egestas odio, quis venenatis lorem. Nulla accumsan semper ligula nec accumsan.</td>
-                                            <td><a href="view_invoice.html"  target="_blank" class="btn-u btn-brd btn-brd-hover btn-u-sm"><i class="fa fa-eye"></i></a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>3</td>
-                                            <td class="hidden-sm hidden-xs">2015-06-07</td>
-                                            <td class="hidden-sm hidden-xs">Jan Kowalski</td>
-                                            <td class="hidden-sm hidden-xs">Do akceptacji</td>
-                                            <td>t rutrum, vel commodo sapien posuere. Nunc nec eros eget mauris blandit viverra nec vitae nunc. Proin fermentum metus eget posuere commodo</td>
-                                            <td><a href="view_invoice.html"  target="_blank" class="btn-u btn-brd btn-brd-hover btn-u-sm"><i class="fa fa-eye"></i></a>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </fieldset>
-                        </div>          
                     </div>
                     <!-- End Content -->
                     <!-- Begin Sidebar Menu -->
@@ -365,11 +318,12 @@
 
 
         </div><!--/End Wrapepr-->
-        <div class="modal fade" id="declineDocument" tabindex="-1" role="dialog" aria-hidden="true"></div>
         <!--=== Footer Version 1 ===-->
         <div class="footer-v1" id="includedContentFooter">
         </div>     
         <!--=== End Footer Version 1 ===-->
+
+        <div class="modal fade" id="commentApplication" tabindex="-1" role="dialog" aria-hidden="true"></div>
 
         <!-- JS Global Compulsory -->           
         <script type="text/javascript" src="assets/plugins/jquery/jquery.min.js"></script>
@@ -390,44 +344,20 @@
         <script type="text/javascript" src="assets/js/plugins/masking.js"></script>
         <script type="text/javascript" src="assets/js/plugins/datepicker.js"></script>
         <script type="text/javascript" src="assets/js/plugins/validation.js"></script>
-        <script type="text/javascript" src="assets/js/forms/facility.js"></script>
-
-        <script type="text/javascript" language="javascript" src="assets/plugins/datatable/js/jquery.dataTables.js"></script>
+        <script type="text/javascript" src="assets/js/forms/partner.js"></script>
         <script type="text/javascript">
-                                        jQuery(document).ready(function () {
-                                            App.init();
-                                            FacilityForm.initFacilityForm();
-                                            Masking.initMasking();
-
-                                        });
-                                        $(document).ready(function () {
-                                            $('#history').DataTable({
-                                                "paging": false,
-                                                "info": false,
-                                                bFilter: false, bInfo: false,
-                                                "language": {
-                                                    "url": "assets/plugins/datatable/lang/Polish.json"
-                                                }
-                                            });
-                                        });
-                                        $(document).ready(function () {
-                                            $("form#sky-form :input").each(function () {
-                                                var input = $(this); // This is the jquery object of the input, do what you will
-                                                input.attr("disabled", true);
-                                            });
-                                            $("form#sky-form :input").each(function () {
-                                                var input = $(this); // This is the jquery object of the input, do what you will
-                                                input.attr("disabled", true);
-                                            });
-
-                                        });
+                                    jQuery(document).ready(function () {
+                                        App.init();
+                                        PartnerForm.initPartnerForm();
+                                        Masking.initMasking();
+                                    });
         </script>
         <script>
             $(function () {
-                $("#includedContentHeader").load("header_backend.html");
+                $("#includedContentHeader").load("header.html");
                 $("#includedContentFooter").load("footer.html");
-                $("#declineDocument").load("declineDocument.html");
-
+                $("#includedContentSideBar").load("sidebar.html");
+                $("#commentApplication").load("comment_application.html");
             });
         </script> 
         <!--[if lt IE 9]>
