@@ -297,7 +297,7 @@
                             </fieldset>
                         </form>  
 
-                        <!-- Post -->
+                        <!-- Approve -->
                         <div class="row sky-form">
                             <fieldset>                  
                                 <section class="col col-md-12" style="text-align: right;">
@@ -306,7 +306,7 @@
                                     <button type="button" class="btn-u btn-u-default" onclick="window.history.back();">Wróć</button>
                             </fieldset>
                         </div>
-                        <!--History Invoice Table-->
+                        <!--History Table-->
                         <div class="row sky-form">
                             <fieldset>                  
                                 <h2>Historia</h2>
@@ -328,8 +328,7 @@
                                             <td class="hidden-sm hidden-xs">Jan Kowalski</td>
                                             <td class="hidden-sm hidden-xs">Do akceptacji</td>
                                             <td>KOkdoado dm kdaokdokda kad kaokdasok daokda o</td>
-                                            <td><a href="view_invoice.html"  target="_blank" class="btn-u btn-brd btn-brd-hover btn-u-sm"><i class="fa fa-eye"></i></a>
-                                            </td>
+                                            <td><a href="#" data-toggle="modal" data-target="#profileFacility" class="btn-u btn-brd btn-brd-hover btn-u-sm"><i class="fa fa-eye"></i></a></td>
                                         </tr>
                                         <tr>
                                             <td>2</td>
@@ -337,8 +336,7 @@
                                             <td class="hidden-sm hidden-xs">Jan Benefit</td>
                                             <td class="hidden-sm hidden-xs">Odrzucony</td>
                                             <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris et malesuada eros, ac vehicula ligula. Quisque mauris odio, sollicitudin ac molestie sed, finibus at ipsum. Curabitur risus erat, auctor sit amet urna in, elementum convallis turpis. Integer et fermentum quam. Sed scelerisque pulvinar urna tempus tempor. Vivamus sapien velit, varius eu orci nec, facilisis commodo turpis. Curabitur ac egestas odio, quis venenatis lorem. Nulla accumsan semper ligula nec accumsan.</td>
-                                            <td><a href="view_invoice.html"  target="_blank" class="btn-u btn-brd btn-brd-hover btn-u-sm"><i class="fa fa-eye"></i></a>
-                                            </td>
+                                            <td><a href="#" data-toggle="modal" data-target="#profileFacility" class="btn-u btn-brd btn-brd-hover btn-u-sm"><i class="fa fa-eye"></i></a></td>
                                         </tr>
                                         <tr>
                                             <td>3</td>
@@ -346,8 +344,7 @@
                                             <td class="hidden-sm hidden-xs">Jan Kowalski</td>
                                             <td class="hidden-sm hidden-xs">Do akceptacji</td>
                                             <td>t rutrum, vel commodo sapien posuere. Nunc nec eros eget mauris blandit viverra nec vitae nunc. Proin fermentum metus eget posuere commodo</td>
-                                            <td><a href="view_invoice.html"  target="_blank" class="btn-u btn-brd btn-brd-hover btn-u-sm"><i class="fa fa-eye"></i></a>
-                                            </td>
+                                            <td><a href="#" data-toggle="modal" data-target="#profileFacility" class="btn-u btn-brd btn-brd-hover btn-u-sm"><i class="fa fa-eye"></i></a></td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -366,6 +363,8 @@
 
         </div><!--/End Wrapepr-->
         <div class="modal fade" id="declineDocument" tabindex="-1" role="dialog" aria-hidden="true"></div>
+        
+         <div class="modal fade" id="profileFacility" tabindex="-1" role="dialog" aria-hidden="true"></div>
         <!--=== Footer Version 1 ===-->
         <div class="footer-v1" id="includedContentFooter">
         </div>     
@@ -427,6 +426,7 @@
                 $("#includedContentHeader").load("header_backend.html");
                 $("#includedContentFooter").load("footer.html");
                 $("#declineDocument").load("declineDocument.html");
+                $("#profileFacility").load("profile_facility_application.html");
 
             });
         </script> 

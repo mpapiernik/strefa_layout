@@ -361,3 +361,7 @@
   width: 26px;
   /*color: #bfbfbf;*/
 }
+
+td a.btn-u {
+  color: #555 !important; 
+}

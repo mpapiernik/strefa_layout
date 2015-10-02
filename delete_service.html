@@ -46,7 +46,7 @@
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
         <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/prettify/r298/run_prettify.min.js"></script>
-               <link rel="stylesheet" type="text/css" href="assets/plugins/datatable/css/jquery.dataTables.css">
+        <link rel="stylesheet" type="text/css" href="assets/plugins/datatable/css/jquery.dataTables.css">
     </head>
 
     <body>    
@@ -113,7 +113,7 @@
                                     </div>
                                 </div><!--/row-->
                                 <div>
-                                    <table id="facilityList" class="display" cellspacing="0" width="100%">
+                                    <table id="serviceList" class="display" cellspacing="0" width="100%">
                                         <thead>
                                             <tr>
                                                 <th>#</th>
@@ -141,21 +141,9 @@
                                         </tbody>
                                     </table>
                                 </div>
-                                <div class="row">
-                            <div class="col-md-12">
-                                <div class="headline"><h2>Komentarz <a id="appendComment"><i id="commentArrow" class="fa fa-sort-desc"></i></a></h2></div>
-                            </div>
-                        </div><!--/row-->
-                        <div class="row">
-                            <div class="col-md-12 blog">
-                                <div id ="commentTab" class="news-v3-in">
-                                    <p>Sed placerat diam auctor eget. Mauris tellus eros, iaculis id leo quis, finibus aliquet ipsum. Duis volutpat lacus in purus bibendum, at sollicitudin eros malesuada. Sed nec diam a eros eleifend mattis. Phasellus in facilisis enim. Vestibulum sodales lacinia lectus, quis efficitur velit posuere sed.</p>
-                                </div>
-                            </div>
-                        </div><!--/row-->  
                             </fieldset>
-                           <footer>
-                                <button type="button" data-toggle="modal" data-target="#commentApplication" class="btn-u margin-bottom-5">Złóż wniosek</button>    
+                           <footer style="text-align: right;">
+                                <button type="submit" data-toggle="modal" data-target="#commentApplication" class="btn-u margin-bottom-5">Złóż wniosek</button>    
                                 <button type="button" class="btn-u btn-u-default" onclick="window.history.back();">Wróć</button>
                             </footer>
                         </form>         
@@ -199,26 +187,29 @@
         <script type="text/javascript" src="assets/js/plugins/datepicker.js"></script>
         <script type="text/javascript" src="assets/js/plugins/validation.js"></script>
         <script type="text/javascript" src="assets/js/forms/facility.js"></script>
-            <script type="text/javascript" language="javascript" src="assets/plugins/datatable/js/jquery.dataTables.js"></script>
+        <script type="text/javascript" language="javascript" src="assets/plugins/datatable/js/jquery.dataTables.js"></script>
         <script type="text/javascript">
                                     jQuery(document).ready(function () {
                                         App.init();
-                                        FacilityForm.initFacilityForm();
                                     });
-                                    $('#facilityList').DataTable({
-                                        "language": {
-                                            "url": "assets/plugins/datatable/lang/Polish.json"
-                                        }
-                                    });
+                                   $('#serviceList').DataTable({
+                                                "searching": false,
+                                                "paging": false,
+                                                "ordering": true,
+                                                "info": false,
+                                                "language": {
+                                                    "url": "assets/plugins/datatable/lang/Polish.json"
+                                                }
+                                            });
                                     $('#history').DataTable({
                                         "language": {
                                             "url": "assets/plugins/datatable/lang/Polish.json"
                                         }
                                     });
-                                    
-                                      $('#commentTab').slideToggle('fast', function () {
-                    // Animation complete.
-                });
+
+                                    $('#commentTab').slideToggle('fast', function () {
+                                        // Animation complete.
+                                    });
 
                                     $('#appendComment').click(function () {
                                         $('#commentTab').slideToggle('fast', function () {

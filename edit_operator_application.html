@@ -41,11 +41,13 @@
         <link rel="stylesheet" href="assets/plugins/sky-forms-pro/skyforms/custom/custom-sky-forms.css">
         <!--[if lt IE 9]><link rel="stylesheet" href="assets/plugins/sky-forms-pro/skyforms/css/sky-forms-ie8.css"><![endif]-->
 
+        <link rel="stylesheet" type="text/css" href="assets/plugins/datatable/css/jquery.dataTables.css">
 
         <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.css">
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
         <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/prettify/r298/run_prettify.min.js"></script>
+
     </head>
 
     <body>    
@@ -57,11 +59,10 @@
             <!--=== Breadcrumbs ===-->
             <div class="breadcrumbs">
                 <div class="container">
-                    <h1 class="pull-left">Edycja operatora partnera (12)</h1>
+                    <h1 class="pull-left"></h1>
                     <ul class="pull-right breadcrumb">
-                        <li><a href="wll.html">Home</a></li>
-                        <li><a href="list_partners.html">Partnerzy</a></li>
-                        <li><a href="list_operators.html">Lista operatorów</a></li>
+                        <li><a href="wall.html">Home</a></li>
+                        <li><a href="profile.html">Profil</a></li>
                     </ul>
                 </div>
             </div><!--/breadcrumbs-->
@@ -71,17 +72,9 @@
             <div class="container content">     
                 <div class="row">
                     <!-- Begin Content -->
-                    <div class="col-md-9 margin-bottom-50">
+                    <div class="col-md-12 margin-bottom-50">
                         <!-- Checkout-Form -->
-                        <div class="tab-v1">
-                            <ul class="nav nav-tabs">
-                                <li class="active"><a href="#home-1" data-toggle="tab">Dane synchronizowane</a></li>
-                                <li><a href="#notyfy-1" data-toggle="tab">Powiadomienia</a></li>
-                            </ul>                
-                            <div class="tab-content">
-                                <!-- Sync-->
-                                <div class="tab-pane fade in active" id="home-1">
-                                    <form action="list_operators_backend.html" id="sky-form" class="sky-form">
+                       <form action="list_operators_backend.html" id="sky-form" class="sky-form">
                                         <header>Edytuj dane synchronizowane operatora partnera (12)</header>
                                         <fieldset>                  
                                             <div class="row">
@@ -211,7 +204,6 @@
                                                     </label>
                                                 </section>
                                             </div>
-
                                             <section>
                                                 <label class="label">Komentarz</label>
                                                 <label class="textarea">
@@ -224,38 +216,62 @@
                                                 <label class="checkbox"><input type="checkbox" name="checkbox" checked><i></i>Aktywuj operatora (użytkownik uzyska dostęp do Panelu Partnera)</label>
                                             </section>
                                         </fieldset>
-
-                                        <footer style="text-align: right;">
-                                            <button type="submit" data-toggle="modal" data-target="#commentApplication" class="btn-u margin-bottom-5">Złóż wniosek</button>    
-                                            <button type="button" class="btn-u btn-u-default" onclick="window.history.back();">Wróć</button>
-                                        </footer>
-                                    </form>         
-                                    <!-- End Sync -->
-                                </div>
-                                <div class="tab-pane fade" id="notyfy-1">
-                                    <form action="#" class="sky-form">
-                                        <header>Edytuj powiadomienia operatora partnera (12)</header>
-                                        <fieldset>
-                                            <section>
-                                                <div class="row">
-                                                    <div class="col col-12">
-                                                        <label class="checkbox"><input type="checkbox" name="checkbox" checked><i></i>Posty ważne</label>
-                                                        <label class="checkbox"><input type="checkbox" name="checkbox" checked><i></i>Posty normalne</label>
-                                                        <label class="checkbox"><input type="checkbox" name="checkbox" checked><i></i>Wnioski</label>
-                                                    </div>
-                                                </div>
-                                            </section>
-                                        </fieldset>
-                                        <footer style="text-align: right;">
-                                            <button type="submit" class="btn-u" onclick="">Zapisz</button>  
-                                            <button type="button" class="btn-u btn-u-default" onclick="window.history.back();">Wróć</button>
-                                        </footer>
-
-                                    </form>
-                                </div>
-                            </div>
+                                    </form>  
+                        <!-- Post -->
+                        <!-- Approve -->
+                        <div class="row sky-form">
+                            <fieldset>                  
+                                <section class="col col-md-12" style="text-align: right;">
+                                    <a href="#" data-toggle="modal" data-target="#commentApplication"  class="btn-u  btn-u-green margin-bottom-5"><i class="fa fa-chevron-down"></i> Zaakceptuj</a>   
+                                    <a href="#" data-toggle="modal" data-target="#declineDocument"  class="btn-u margin-bottom-5"><i class="fa fa fa-ban"></i> Odrzuć</a>  
+                                    <button type="button" class="btn-u btn-u-default" onclick="window.history.back();">Wróć</button>
+                            </fieldset>
                         </div>
-                        <!-- End Tabs-->
+                        <!--History Table-->
+                        <div class="row sky-form">
+                            <fieldset>                  
+                                <h2>Historia</h2>
+                                <table id="history" class="display history-summary" cellspacing="0" width="100%">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th class="col-1">Data edycji</th>
+                                            <th>Autor</th>
+                                            <th class="hidden-sm hidden-xs">Status</th>
+                                            <th>Komentarz</th>
+                                            <th>Podgląd</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td class="hidden-sm hidden-xs">2015-05-31</td>
+                                            <td class="hidden-sm hidden-xs">Jan Kowalski</td>
+                                            <td class="hidden-sm hidden-xs">Do akceptacji</td>
+                                            <td>KOkdoado dm kdaokdokda kad kaokdasok daokda o</td>
+                                            <td><a href="#" data-toggle="modal" data-target="#profilePartner" class="btn-u btn-brd btn-brd-hover btn-u-sm"><i class="fa fa-eye"></i></a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td class="hidden-sm hidden-xs">2015-06-03</td>
+                                            <td class="hidden-sm hidden-xs">Jan Benefit</td>
+                                            <td class="hidden-sm hidden-xs">Odrzucony</td>
+                                            <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris et malesuada eros, ac vehicula ligula. Quisque mauris odio, sollicitudin ac molestie sed, finibus at ipsum. Curabitur risus erat, auctor sit amet urna in, elementum convallis turpis. Integer et fermentum quam. Sed scelerisque pulvinar urna tempus tempor. Vivamus sapien velit, varius eu orci nec, facilisis commodo turpis. Curabitur ac egestas odio, quis venenatis lorem. Nulla accumsan semper ligula nec accumsan.</td>
+                                            <td><a href="#" data-toggle="modal" data-target="#profilePartner" class="btn-u btn-brd btn-brd-hover btn-u-sm"><i class="fa fa-eye"></i></a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td class="hidden-sm hidden-xs">2015-06-07</td>
+                                            <td class="hidden-sm hidden-xs">Jan Kowalski</td>
+                                            <td class="hidden-sm hidden-xs">Do akceptacji</td>
+                                            <td>t rutrum, vel commodo sapien posuere. Nunc nec eros eget mauris blandit viverra nec vitae nunc. Proin fermentum metus eget posuere commodo</td>
+                                            <td><a href="#" data-toggle="modal" data-target="#profilePartner" class="btn-u btn-brd btn-brd-hover btn-u-sm"><i class="fa fa-eye"></i></a></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </fieldset>
+                        </div>         
+
                     </div>
                     <!-- End Content -->
                     <!-- Begin Sidebar Menu -->
@@ -265,13 +281,17 @@
                 </div>          
             </div><!--/container-->     
             <!--=== End Content Part ===-->
-
         </div><!--/End Wrapepr-->
-        <div class="modal fade" id="commentApplication" tabindex="-1" role="dialog" aria-hidden="true"></div>
         <!--=== Footer Version 1 ===-->
         <div class="footer-v1" id="includedContentFooter">
         </div>     
         <!--=== End Footer Version 1 ===-->
+
+        <div class="modal fade" id="commentApplication" tabindex="-1" role="dialog" aria-hidden="true"></div>
+
+        <div class="modal fade" id="declineDocument" tabindex="-1" role="dialog" aria-hidden="true"></div>
+
+        <div class="modal fade" id="profilePartner" tabindex="-1" role="dialog" aria-hidden="true"></div>
 
         <!-- JS Global Compulsory -->           
         <script type="text/javascript" src="assets/plugins/jquery/jquery.min.js"></script>
@@ -292,20 +312,43 @@
         <script type="text/javascript" src="assets/js/plugins/masking.js"></script>
         <script type="text/javascript" src="assets/js/plugins/datepicker.js"></script>
         <script type="text/javascript" src="assets/js/plugins/validation.js"></script>
-        <script type="text/javascript" src="assets/js/forms/checkout.js"></script>
+        <script type="text/javascript" src="assets/js/forms/partner.js"></script>
+        <script type="text/javascript" language="javascript" src="assets/plugins/datatable/js/jquery.dataTables.js"></script>
         <script type="text/javascript">
-                                                jQuery(document).ready(function () {
-                                                    App.init();
-                                                    ContactForm.initContactForm();
-                                                    CheckoutForm.initCheckoutForm();
-                                                });
+                                        jQuery(document).ready(function () {
+                                            App.init();
+                                            PartnerForm.initPartnerForm();
+                                        });
+                                        $(document).ready(function () {
+                                            $('#history').DataTable({
+                                                "paging": false,
+                                                "info": false,
+                                                bFilter: false, bInfo: false,
+                                                "language": {
+                                                    "url": "assets/plugins/datatable/lang/Polish.json"
+                                                }
+                                            });
+                                        });
+                                        $(document).ready(function () {
+                                            $("form#sky-form :input").each(function () {
+                                                var input = $(this); // This is the jquery object of the input, do what you will
+                                                input.attr("disabled", true);
+                                            });
+                                            $("form#sky-form :input").each(function () {
+                                                var input = $(this); // This is the jquery object of the input, do what you will
+                                                input.attr("disabled", true);
+                                            });
+
+                                        });
+
         </script>
         <script>
             $(function () {
-                $("#includedContentHeader").load("header.html");
+                $("#includedContentHeader").load("header_backend.html");
                 $("#includedContentFooter").load("footer.html");
-                $("#includedContentSideBar").load("sidebar.html");
                 $("#commentApplication").load("comment_application.html");
+                $("#declineDocument").load("declineDocument.html");
+                $("#profilePartner").load("profile_operator_application.html");
             });
         </script> 
         <!--[if lt IE 9]>

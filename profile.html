@@ -127,18 +127,6 @@
                                 </div><!--/row-->
                             </div><!--/row-->
                         </div><!--/row-->
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="headline"><h2>Komentarz <a id="appendComment"><i id="commentArrow" class="fa fa-sort-desc"></i></a></h2></div>
-                            </div>
-                        </div><!--/row-->
-                        <div class="row">
-                            <div class="col-md-12 blog">
-                                <div id ="commentTab" class="news-v3-in">
-                                    <p>Sed placerat diam auctor eget. Mauris tellus eros, iaculis id leo quis, finibus aliquet ipsum. Duis volutpat lacus in purus bibendum, at sollicitudin eros malesuada. Sed nec diam a eros eleifend mattis. Phasellus in facilisis enim. Vestibulum sodales lacinia lectus, quis efficitur velit posuere sed.</p>
-                                </div>
-                            </div>
-                        </div><!--/row-->   
                     </div>
                     <!-- End Content -->
                     <!-- Begin Sidebar Menu -->
@@ -168,25 +156,6 @@
         <script type="text/javascript">
             jQuery(document).ready(function () {
                 App.init();
-            });
-            $(document).ready(function () {
-                $('#commentTab').slideToggle('fast', function () {
-                    // Animation complete.
-                });
-
-                $('#appendComment').click(function () {
-                    $('#commentTab').slideToggle('fast', function () {
-                        if ($('#commentArrow').hasClass('fa-sort-desc')) {
-                            $('#loader').hide().delay(2000);
-                            $('#commentArrow').removeClass('fa-sort-desc');
-                            $('#commentArrow').addClass('fa-sort-asc');
-                        } else {
-                            $('#loader').show();
-                            $('#commentArrow').removeClass('fa-sort-asc');
-                            $('#commentArrow').addClass('fa-sort-desc');
-                        }
-                    });
-                });
             });
         </script>
         <script>

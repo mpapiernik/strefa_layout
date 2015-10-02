@@ -229,9 +229,8 @@
                                     <label class="checkbox"><input type="checkbox" name="checkbox" checked><i></i>Aktywuj operatora (użytkownik uzyska dostęp do Panelu Partnera)</label>
                                 </section>
                             </fieldset>
-
-                            <footer>
-                                <button type="submit" class="btn-u" onclick="">Dodaj</button>  
+                            <footer style="text-align: right;">
+                                <button type="submit" data-toggle="modal" data-target="#commentApplication" class="btn-u margin-bottom-5">Złóż wniosek</button>    
                                 <button type="button" class="btn-u btn-u-default" onclick="window.history.back();">Wróć</button>
                             </footer>
                         </form>         
@@ -245,8 +244,7 @@
                 </div>          
             </div><!--/container-->     
             <!--=== End Content Part ===-->
-
-
+            <div class="modal fade" id="commentApplication" tabindex="-1" role="dialog" aria-hidden="true"></div>
         </div><!--/End Wrapepr-->
         <!--=== Footer Version 1 ===-->
         <div class="footer-v1" id="includedContentFooter">
@@ -285,6 +283,7 @@
                 $("#includedContentHeader").load("header.html");
                 $("#includedContentFooter").load("footer.html");
                 $("#includedContentSideBar").load("sidebar.html");
+                  $("#commentApplication").load("comment_application.html");
 
             });
         </script> 

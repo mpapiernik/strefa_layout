@@ -1,1 +1,5 @@
 /* Add here all your css styles (customizations) */
+
+td a.btn-u {
+  color: #555 !important; 
+}
