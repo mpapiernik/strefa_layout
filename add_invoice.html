@@ -132,7 +132,7 @@
                                 </section>
                                 <section>
                                     <div id="serviceTab">
-                                        <div id="loader" style="text-align: center;"><h2><img  alt="activity indicator" src="assets/ajax-loader.gif"></h2></div>
+                                        <div id="loader" style="text-align: center;"><h2><i class="fa fa-spinner fa-pulse fa-lg"></i></h2></div>
                                         <div class="input-group margin-bottom-20">
                                             <select  id="service-select" class="selectpicker input-block-level" data-live-search="true" data-size="10"  multiple title='Wybierz...' data-selected-text-format="count>3" data-width="100%">
                                                 <optgroup label="(1212) Tyger Gym - Przymorze">
@@ -255,8 +255,8 @@
 
                                         var table = $('#service').DataTable({
                                             "searching": true,
-                                            "paging": true,
-                                            "ordering": true,
+                                            "paging": false,
+                                            "ordering": false,
                                             "info": true,
                                             "language": {
                                                 "url": "assets/plugins/datatable/lang/Polish.json"
@@ -297,6 +297,7 @@
                                             var name = row.text;
                                             var i = document.createElement('i');
                                             i.className = "fa fa-close";
+                                            i.style.color = "white";
                                             var a = document.createElement('a');
                                             a.className = "btn-u btn-u-dark";
                                             a.appendChild(i);
