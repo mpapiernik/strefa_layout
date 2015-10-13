@@ -284,7 +284,7 @@
                         </div>    
                     </div>
                 </div>
-                 <div class="row">
+                <div class="row">
                     <div class="col-xs-12">
                         <div class="tag-box tag-box-v3 no-margin-bottom">
                             <strong>Komentarz: </strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis urna erat, tempor vitae elit nec, lacinia molestie nulla. Duis fermentum, lectus id aliquet dictum, augue magna placerat mi, vulputate mattis ipsum justo sed massa. Mauris blandit mollis faucibus. Donec sed tellus magna. Fusce porttitor nisi sit amet eleifend ullamcorper. Curabitur ac risus porta, blandit ipsum scelerisque, elementum lorem. Suspendisse in auctor dolor, quis suscipit turpis.
@@ -301,17 +301,7 @@
                 </div>
                 <!--End Invoice Footer-->
 
-                <div class="row">
-                    <div class="col-xs-12">
-                        <div class="tag-box tag-box-v3 no-margin-bottom " style="text-align: right;">
-                            <a href="#" data-toggle="modal" data-target="#declineDocument" id="confirmDeclineDocument" class="btn-u margin-bottom-5"><i class="fa fa fa-ban"></i> Odrzuć</a>        
-                            <a href="list_invoices_backend.html" class="btn-u btn-u-green margin-bottom-5"><i class="fa fa-chevron-down"></i> Zaakceptuj</a>     
-                        
-                        </div>    
-                    </div>
-                </div>
-
-                 <!--History Invoice Table-->
+                <!--History Invoice Table-->
                 <div class="row">
                     <div class="col-xs-12">
                         <div class="tag-box tag-box-v3 no-margin-bottom">   
@@ -323,7 +313,7 @@
                                         <th class="hidden-sm hidden-xs hidden-xs">Data edycji</th>
                                         <th>Autor</th>
                                         <th class="hidden-sm hidden-xs">Status</th>
-                                        <th>Typ i numer dokumentu</th>
+                                        <th>Komentarz</th>
                                         <th>Podgląd</th>
                                     </tr>
                                 </thead>
@@ -339,10 +329,10 @@
                                     </tr>
                                     <tr>
                                         <td>2</td>
-                                        <td class="hidden-sm hidden-xs">2015-06-03</td>
-                                        <td class="hidden-sm hidden-xs">Benefit Jan</td>
+                                        <td class="hidden-sm hidden-xs">2015-06-07</td>
+                                        <td class="hidden-sm hidden-xs">Jan Kowalski</td>
                                         <td class="hidden-sm hidden-xs">Zaakceptowana</td>
-                                        <td>Faktura VAT, 2015/FVS/25015</td>
+                                        <td>t rutrum, vel commodo sapien posuere. Nunc nec eros eget mauris blandit viverra nec vitae nunc. Proin fermentum metus eget posuere commodo</td>
                                         <td><a href="view_invoice.html"  target="_blank" class="btn-u btn-brd btn-brd-hover btn-u-sm"><i class="fa fa-eye"></i></a>
                                         </td>
                                     </tr>
@@ -354,7 +344,7 @@
             </div><!--/container-->		
             <!--=== End Content Part ===-->
         </div><!--/End Wrapepr-->
-         <div class="modal fade" id="declineDocument" tabindex="-1" role="dialog" aria-hidden="true"></div>
+        <div class="modal fade" id="declineDocument" tabindex="-1" role="dialog" aria-hidden="true"></div>
         <!--=== Footer Version 1 ===-->
         <div class="footer-v1" id="includedContentFooter">
         </div>     
@@ -372,19 +362,19 @@
         <script type="text/javascript" src="assets/js/app.js"></script>
         <script type="text/javascript" language="javascript" src="assets/plugins/datatable/js/jquery.dataTables.js"></script>
         <script type="text/javascript">
-            jQuery(document).ready(function () {
-                App.init();
-                $(document).ready(function () {
-                    $('#history').DataTable({
-                        "paging": false,
-                        "info": false,
-                        bFilter: false, bInfo: false,
-                        "language": {
-                            "url": "assets/plugins/datatable/lang/Polish.json"
-                        }
-                    });
-                });
-            });
+                                         jQuery(document).ready(function () {
+                                             App.init();
+                                             $(document).ready(function () {
+                                                 $('#history').DataTable({
+                                                     "paging": false,
+                                                     "info": false,
+                                                     bFilter: false, bInfo: false,
+                                                     "language": {
+                                                         "url": "assets/plugins/datatable/lang/Polish.json"
+                                                     }
+                                                 });
+                                             });
+                                         });
         </script>
         <script>
             $(function () {

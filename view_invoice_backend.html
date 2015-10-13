@@ -42,8 +42,6 @@
 
         <!-- DataTables -->
         <link rel="stylesheet" type="text/css" href="assets/plugins/datatable/css/jquery.dataTables.css">
-        <link rel="stylesheet" href="assets/plugins/sky-forms-pro/skyforms/css/sky-forms.css" type="text/css"/>
-
 
     </head>
 
@@ -56,7 +54,7 @@
             <!--=== Breadcrumbs ===-->
             <div class="breadcrumbs">
                 <div class="container">
-                    <h1 class="pull-left">Nota korygująca: 2015/NK/32015</h1>
+                    <h1 class="pull-left">Faktura VAT nr: 2015/FVS/25015</h1>
                     <ul class="pull-right breadcrumb">
                         <li><a href="wall.html">Home</a></li>
                         <li><a href="list_invoices.html">Faktury</a></li>
@@ -66,9 +64,8 @@
             <!--=== End Breadcrumbs ===-->
 
             <!--=== Content Part ===-->
-            <div class="container content margin-bottom-50">
+            <div class="container content  margin-bottom-50">
                 <!--Invoice Header-->
-
                 <!--Invoice Detials-->
                 <div class="row invoice-header text-center">
                     <div class="col-xs-4">
@@ -78,12 +75,12 @@
                     </div>
                     <div class="col-xs-4">
                         <div class="tag-box tag-box-v3">
-                            <h3>Nota korygująca do faktury VAT nr 2015/FVS/25015</h3>
+                            <h3>Faktura VAT</h3>
                         </div>
                     </div>
                     <div class="col-xs-4">
                         <div class="tag-box tag-box-v3">
-                            <h3>Nr: 2015/NK/32015</h3>
+                            <h3>Nr: 2015/FVS/25015</h3>
                         </div>
                     </div>
                 </div>
@@ -93,14 +90,14 @@
                 <div class="row invoice-info">
                     <div class="col-xs-6">
                         <div class="tag-box tag-box-v3">
-                            <h2>Sprzedawca:</h2>        
+                            <h2>Sprzedawca:</h2>
                             <ul class="list-unstyled">
                                 <li><strong>Nazwa: </strong>Tyger Gym S. Z O.O.</li>
-                                <li><strong>Adres: </strong>80-100 Gdańsk, Słowackiego 890</li>
+                                <li><strong>Adres: </strong>00-097 Gdańsk, Grunwaldzka 346</li>
                                 <li><strong>NIP: </strong>836-16-76-510</li>
                                 <li> 
                                     <div class="row">
-                                        <div class="col-xs-6"><strong>Telefon: </strong>058 346 34 66</div>
+                                        <div class="col-xs-6"><strong>Telefon: </strong>22 224 40 00</div>
                                         <div class="col-xs-6"><strong>FAX: </strong>22 831 79 30</div>
                                     </div>
                                 </li>
@@ -113,7 +110,7 @@
                             <ul class="list-unstyled">
                                 <li><strong>Nazwa: </strong>Benefit Systems S.A</li>
                                 <li><strong>Adres: </strong>00-097 Warszawa, Fredry 6</li>
-                                <li><strong>NIP: </strong>111-00-00-000</li>
+                                <li><strong>NIP: </strong>836-16-76-510</li>
                                 <li> 
                                     <div class="row">
                                         <div class="col-xs-6"><strong>Telefon: </strong>22 224 40 00</div>
@@ -129,55 +126,161 @@
                     <!--Invoice Detials-->
                     <div class="row invoice-info">
                         <div class="col-xs-6">
+
                             <ul class="list-unstyled">
                                 <li><strong>Data wystawienia: </strong>2015-05-08</li>
                                 <li><strong>Miejsce wystawienia: </strong>Gdańsk</li>
-                            </ul>
-                        </div>
-                        <div class="col-xs-6">
-                            <ul class="list-unstyled">
                                 <li><strong>Data dokonania usługi: </strong>2015-05-22</li>
                                 <li><strong>Termin płatności: </strong>2015-05-31</li>
+                            </ul>
+                        </div>
+
+                        <div class="col-xs-6">
+                            <ul class="list-unstyled">
+                                <li><strong>Forma płatności: </strong>przelew</li>
+                                <li><strong>Nazwa banku: </strong>mBank</li>
+                                <li><strong>Konto: </strong>85 0000 0000 0000 0000 0000 0000</li>
                             </ul>
                         </div>
                     </div>
                 </div>
                 <!--End Invoice Detials-->
-
                 <!--Invoice Table-->
-                <div class="panel panel-default margin-bottom-20 tag-box tag-box-v3">
-                    <table class="table table-bordered ">
+                <div class="panel panel-default margin-bottom-20">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Szczegóły</h3>
+                    </div>
+                    <table class="table table-striped invoice-table">
                         <thead>
-                            <tr class="summary-note">
+                            <tr>
                                 <th>#</th>
-                                <th class="col-xs-6">TREŚĆ KORYGOWANA</th>
-                                <th class="col-xs-6">TREŚĆ PRAWIDŁOWA</th>
+                                <th class="table-product">Nazwa</th>
+                                <th>Ilość</th>
+                                <th class="hidden-sm">J.m.</th>
+                                <th>Cena jedn. netto</th>
+                                <th>Wartość netto</th>
+                                <th class="hidden-sm">Stawka VAT</th>
+                                <th class="hidden-sm">Kwota VAT</th>
+                                <th>Wartość brutto</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
                                 <td>1</td>
-                                <td><strong>NIP: </strong>000-00-00-000</td>
-                                <td><strong>NIP:  </strong>111-00-00-000</td>
+                                <td class="table-product">Sauna</td>
+                                <td>252</td>
+                                <td class="hidden-sm">szt.</td>
+                                <td>12,00</td>
+                                <td>3024,00</td>
+                                <td class="hidden-sm">7%</td>
+                                <td class="hidden-sm">211,68</td>
+                                <td>3235,68</td>
                             </tr>
                             <tr>
                                 <td>2</td>
-                                <td><strong>Adres sprzedawcy: </strong>00-097 Gdańsk, Grunwaldzka 346</td>
-                                <td><strong>Adres sprzedawcy:  </strong>80-100 Gdańsk, Słowackiego 890</td>
+                                <td class="table-product">Zajęcia sportowe pracownika</td>
+                                <td>25</td>
+                                <td class="hidden-sm">szt.</td>
+                                <td>10,00</td>
+                                <td>250,00</td>
+                                <td class="hidden-sm">23%</td>
+                                <td class="hidden-sm">57,50</td>
+                                <td>307,50</td>
                             </tr>
                             <tr>
                                 <td>3</td>
-                                <td><strong>Telefon sprzedawcy: </strong>22 224 40 00</td>
-                                <td><strong>Telefon sprzedawcy: </strong>058 346 34 66</td>
+                                <td class="table-product">Zajęcia fitness</td>
+                                <td>120</td>
+                                <td class="hidden-sm">szt.</td>
+                                <td>15,00</td>
+                                <td>1800,00</td>
+                                <td class="hidden-sm">15%</td>
+                                <td class="hidden-sm">270,00</td>
+                                <td>2070,00</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td class="table-product">Zajęcia jogi</td>
+                                <td>100</td>
+                                <td class="hidden-sm">szt.</td>
+                                <td>20,00</td>
+                                <td>2000,00</td>
+                                <td class="hidden-sm">23%</td>
+                                <td class="hidden-sm">460,00</td>
+                                <td>2460,00</td>
+                            </tr>
+                            <tr class="space">
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td class="hidden-sm"></td>
+                                <td></td>
+                                <td></td>
+                                <td class="hidden-sm"></td>
+                                <td class="hidden-sm"></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="no-border"></td>
+                                <td class="no-border"></td>
+                                <td class="no-border"></td>
+                                <td class="hidden-sm no-border"></td>
+                                <td class="summary summary-text summary-row">RAZEM</td>
+                                <td class="summary-cell summary-row">7074,00</td>
+                                <td class="hidden-sm summary-row">X</td>
+                                <td class="hidden-sm summary-row">999,18</td>
+                                <td class="summary-row">8073,18</td>
+                            </tr>
+                            <tr>
+                                <td class="no-border"></td>
+                                <td class="no-border"></td>
+                                <td class="no-border"></td>
+                                <td class="hidden-sm no-border"></td>
+                                <td class="summary summary-text">W tym</td>
+                                <td class="summary-cell">3024,00</td>
+                                <td class="hidden-sm">7%</td>
+                                <td class="hidden-sm">211,68</td>
+                                <td>3235,68</td>
+                            </tr>
+                            <tr>
+                                <td class="no-border"></td>
+                                <td class="no-border"></td>
+                                <td class="no-border"></td>
+                                <td class="hidden-sm no-border"></td>
+                                <td class="no-border"></td>
+                                <td class="summary-cell">1800,00</td>
+                                <td class="hidden-sm">15%</td>
+                                <td class="hidden-sm">270,00</td>
+                                <td>2070,00</td>
+                            </tr>
+                            <tr>
+                                <td class="no-border"></td>
+                                <td class="no-border"></td>
+                                <td class="no-border"></td>
+                                <td class="hidden-sm no-border"></td>
+                                <td class="no-border"></td>
+                                <td class="summary-cell">2250,00</td>
+                                <td class="hidden-sm">23%</td>
+                                <td class="hidden-sm">517,50</td>
+                                <td>2767,50</td>
                             </tr>
                         </tbody>
+
                     </table>
                 </div>
                 <!--End Invoice Table-->
+                <!--Invoice Footer-->
+                <div class="row">
+                    <div class="col-xs-4">
+                        <div class="tag-box tag-box-v3 no-margin-bottom">
+                            <strong>Razem do zapłaty: </strong>8073,18 PLN
+                        </div>    
+                    </div>
+                </div>
                 <div class="row">
                     <div class="col-xs-12">
                         <div class="tag-box tag-box-v3 no-margin-bottom">
-                            <strong>Powód noty: </strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis urna erat, tempor vitae elit nec, lacinia molestie nulla. Duis fermentum, lectus id aliquet dictum, augue magna placerat mi, vulputate mattis ipsum justo sed massa. Mauris blandit mollis faucibus. Donec sed tellus magna. Fusce porttitor nisi sit amet eleifend ullamcorper. Curabitur ac risus porta, blandit ipsum scelerisque, elementum lorem. Suspendisse in auctor dolor, quis suscipit turpis.
+                            <strong>Słownie: </strong>osiem tysięcy sielemdziesiąt trzy i 0,18 PLN
                         </div>    
                     </div>
                 </div>
@@ -188,30 +291,38 @@
                         </div>    
                     </div>
                 </div>
-
-
-                <!--Invoice Footer-->
                 <div class="row margin-bottom-20 text-center" >
                     <div class="col-xs-6">
+                        Faktura bez podpisu odbiorcy
                     </div>
                     <div class="col-xs-6">
-                        Osoba uprawniona do wystawienia noty: Anna Nowak
+                        Wystawił(a) : Anna Nowak
                     </div>
                 </div>
                 <!--End Invoice Footer-->
+
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="tag-box tag-box-v3 no-margin-bottom " style="text-align: right;">
+                            <button type="button" class="btn-u btn-u-default" onclick="window.history.back();">Wróć</button>
+                            <a href="#" data-toggle="modal" data-target="#declineDocument" id="confirmDeclineDocument" class="btn-u margin-bottom-5"><i class="fa fa fa-ban"></i> Odrzuć</a>        
+                            <a href="list_invoices_backend.html" class="btn-u btn-u-green margin-bottom-5"><i class="fa fa-chevron-down"></i> Zaakceptuj</a>     
+                        </div>    
+                    </div>
+                </div>
+
                 <!--History Invoice Table-->
                 <div class="row">
                     <div class="col-xs-12">
                         <div class="tag-box tag-box-v3 no-margin-bottom">   
-                            <h2>Historia</h2>
+                            <h2>Historia faktury</h2>
                             <table id="history" class="display history-summary" cellspacing="0" width="100%">
                                 <thead>
                                     <tr>
                                         <th>#</th>
-                                        <th class="hidden-sm hidden-xs hidden-xs col-2">Data&nbsp;edycji</th>
+                                        <th class="hidden-sm hidden-xs hidden-xs">Data edycji</th>
                                         <th>Autor</th>
                                         <th class="hidden-sm hidden-xs">Status</th>
-                                        <th>Typ i numer dokumentu</th>
                                         <th>Komentarz</th>
                                         <th>Podgląd</th>
                                     </tr>
@@ -223,27 +334,15 @@
                                         <td class="hidden-sm hidden-xs">Jan Kowalski</td>
                                         <td class="hidden-sm hidden-xs">Do akceptacji</td>
                                         <td>Faktura VAT, 2015/FVS/25015</td>
-                                        <td>Lorem ipsum dolor sit amet, cis. La nec accumsan.</td>
                                         <td><a href="view_invoice.html"  target="_blank" class="btn-u btn-brd btn-brd-hover btn-u-sm"><i class="fa fa-eye"></i></a>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>2</td>
-                                        <td class="hidden-sm hidden-xs">2015-06-03</td>
-                                        <td class="hidden-sm hidden-xs">Jan Benefit</td>
-                                        <td class="hidden-sm hidden-xs">Zaakceptowana</td>
-                                        <td>Faktura VAT, 2015/FVS/25015</td>
-                                        <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris et malesuada eros, ac vehicula ligula. Quisque mauris odio, sollicitudin ac molestie sed, finibus at ipsum. Curabitur risus erat, auctor sit amet urna in, elementum convallis turpis. Integer et fermentum quam. Sed scelerisque pulvinar urna tempus tempor. Vivamus sapien velit, varius eu orci nec, facilisis commodo turpis. Curabitur ac egestas odio, quis venenatis lorem. Nulla accumsan semper ligula nec accumsan.</td>
-                                        <td><a href="view_invoice.html"  target="_blank" class="btn-u btn-brd btn-brd-hover btn-u-sm"><i class="fa fa-eye"></i></a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>3</td>
                                         <td class="hidden-sm hidden-xs">2015-06-07</td>
                                         <td class="hidden-sm hidden-xs">Jan Kowalski</td>
-                                        <td class="hidden-sm hidden-xs">Do akceptacji</td>
-                                        <td>Nota korygująca, 2015/NK/25015</td>
-                                        <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris et malesuada eros, ac vehicula ligula. Quisque mauris odio, sollicitudin ac molestie sed, finibus at ipsum. Curabitur risus erat, auctor sit amet urna in, elementum convallis turpis. Integer et fermentum quam. Sed scelerisque pulvinar urna tempus tempor. Vivamus sapien velit, varius eu orci nec, facilisis commodo turpis. Curabitur ac egestas odio, quis venenatis lorem. Nulla accumsan semper ligula nec accumsan.</td>
+                                        <td class="hidden-sm hidden-xs">Zaakceptowana</td>
+                                        <td>t rutrum, vel commodo sapien posuere. Nunc nec eros eget mauris blandit viverra nec vitae nunc. Proin fermentum metus eget posuere commodo</td>
                                         <td><a href="view_invoice.html"  target="_blank" class="btn-u btn-brd btn-brd-hover btn-u-sm"><i class="fa fa-eye"></i></a>
                                         </td>
                                     </tr>
@@ -252,11 +351,8 @@
                         </div>
                     </div>
                 </div>          
-
-
             </div><!--/container-->		
             <!--=== End Content Part ===-->
-
         </div><!--/End Wrapepr-->
         <div class="modal fade" id="declineDocument" tabindex="-1" role="dialog" aria-hidden="true"></div>
         <!--=== Footer Version 1 ===-->
@@ -276,23 +372,23 @@
         <script type="text/javascript" src="assets/js/app.js"></script>
         <script type="text/javascript" language="javascript" src="assets/plugins/datatable/js/jquery.dataTables.js"></script>
         <script type="text/javascript">
-            jQuery(document).ready(function () {
-                App.init();
-                $(document).ready(function () {
-                    $('#history').DataTable({
-                        "paging": false,
-                        "info": false,
-                        bFilter: false, bInfo: false,
-                        "language": {
-                            "url": "assets/plugins/datatable/lang/Polish.json"
-                        }
-                    });
-                });
-            });
+                                         jQuery(document).ready(function () {
+                                             App.init();
+                                             $(document).ready(function () {
+                                                 $('#history').DataTable({
+                                                     "paging": false,
+                                                     "info": false,
+                                                     bFilter: false, bInfo: false,
+                                                     "language": {
+                                                         "url": "assets/plugins/datatable/lang/Polish.json"
+                                                     }
+                                                 });
+                                             });
+                                         });
         </script>
         <script>
             $(function () {
-                $("#includedContentHeader").load("header.html");
+                $("#includedContentHeader").load("header_backend.html");
                 $("#includedContentFooter").load("footer.html");
                 $("#declineDocument").load("declineDocument.html");
             });
