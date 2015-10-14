@@ -395,61 +395,97 @@
                         Wystawił(a) : Anna Nowak
                     </div>
                 </div>
-                <!--End Invoice Footer-->
                 
-                <!--History Invoice Table-->
+                    <div class="row">
+                    <div class="col-xs-12">
+                        <div class="tag-box tag-box-v3 no-margin-bottom " style="text-align: right;">
+                            <button type="button" class="btn-u btn-u-default" onclick="window.history.back();">Wróć</button>
+                            <a href="#" data-toggle="modal" data-target="#declineDocument" id="confirmDeclineDocument" class="btn-u margin-bottom-5"><i class="fa fa fa-ban"></i> Odrzuć</a>        
+                            <a href="list_invoices_backend.html" class="btn-u btn-u-green margin-bottom-5"><i class="fa fa-chevron-down"></i> Zaakceptuj</a>     
+                        </div>    
+                    </div>
+                </div>
+                
+                <!--End Invoice Footer-->
+
+               <!--History Invoice Table-->
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="tag-box tag-box-v3 no-margin-bottom">
+                            <div class="headline">
+                                <h2>Historia dokumentu <a id="appendHistory"><i id="historyArrow" class="fa fa-sort-desc"></i></a> </h2>
+                            </div>
+                            <div id="historyTab">
+                                <div id="loader" style="text-align: center;"><h2><i class="fa fa-spinner fa-pulse fa-lg"></i></h2></div>
+                                <table id="history" class="display history-summary" cellspacing="0" width="100%">
+                                    <thead>
+                                        <tr>
+                                            <th class="details-control"></th>
+                                            <th></th>
+                                            <th class="hidden-sm hidden-xs hidden-xs">Data&nbsp;edycji</th>
+                                            <th>Autor</th>
+                                            <th class="hidden-sm hidden-xs">Status</th>
+                                            <th>Typ i numer dokumentu</th>
+                                            <th>Komentarz</th>
+                                            <th>Podgląd</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="details-control"></td>
+                                            <td>1</td>
+                                            <td class="hidden-sm hidden-xs">2015-06-07</td>
+                                            <td class="hidden-sm hidden-xs">Jan Kowalski</td>
+                                            <td class="hidden-sm hidden-xs">Do akceptacji</td>
+                                            <td>Faktura korygująca, 2015/FK/25015</td>
+                                            <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris et malesuada eros, ac vehicula ligula. Quisque mauris odio, sollicitudin ac molestie sed, finibus at ipsum. Curabitur risus erat, auctor sit amet urna in, elementum convallis turpis. Integer et fermentum quam. Sed scelerisque pulvinar urna tempus tempor. Vivamus sapien velit, varius eu orci nec, facilisis commodo turpis. Curabitur ac egestas odio, quis venenatis lorem. Nulla accumsan semper ligula nec accumsan.</td>
+                                            <td><a href="view_invoice_correct.html"  target="_blank" class="btn-u btn-brd btn-brd-hover btn-u-sm"><i class="fa fa-eye"></i></a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>     
+
+                <!--Linked Invoice Table-->
                 <div class="row">
                     <div class="col-xs-12">
                         <div class="tag-box tag-box-v3 no-margin-bottom">   
-                            <h2>Historia</h2>
-                            <table id="history" class="display history-summary" cellspacing="0" width="100%">
-                                <thead>
-                                    <tr>
-                                        <th>#</th>
-                                        <th class="hidden-sm hidden-xs hidden-xs col-2">Data&nbsp;edycji</th>
-                                        <th>Autor</th>
-                                        <th class="hidden-sm hidden-xs">Status</th>
-                                        <th>Typ i numer dokumentu</th>
-                                        <th>Komentarz</th>
-                                        <th>Podgląd</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>1</td>
-                                        <td class="hidden-sm hidden-xs">2015-05-31</td>
-                                        <td class="hidden-sm hidden-xs">Jan Kowalski</td>
-                                        <td class="hidden-sm hidden-xs">Do akceptacji</td>
-                                        <td>Faktura VAT, 2015/FVS/25015</td>
-                                        <td>Lorem ipsum dolor sit amet, cis. La nec accumsan.</td>
-                                        <td><a href="view_invoice.html"  target="_blank" class="btn-u btn-brd btn-brd-hover btn-u-sm"><i class="fa fa-eye"></i></a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>2</td>
-                                        <td class="hidden-sm hidden-xs">2015-06-03</td>
-                                        <td class="hidden-sm hidden-xs">Jan Benefit</td>
-                                        <td class="hidden-sm hidden-xs">Zaakceptowana</td>
-                                        <td>Faktura VAT, 2015/FVS/25015</td>
-                                        <td>Lorem ipsum dolor sit amet, cis. La nec accumsan.</td>
-                                        <td><a href="view_invoice.html"  target="_blank" class="btn-u btn-brd btn-brd-hover btn-u-sm"><i class="fa fa-eye"></i></a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>3</td>
-                                        <td class="hidden-sm hidden-xs">2015-06-07</td>
-                                        <td class="hidden-sm hidden-xs">Jan Kowalski</td>
-                                        <td class="hidden-sm hidden-xs">Do akceptacji</td>
-                                        <td>Faktura korygująca, 2015/FK/25015</td>
-                                        <td>Lorem ipsum dolor sit amet, cis. La nec accumsan.</td>
-                                        <td><a href="view_invoice.html"  target="_blank" class="btn-u btn-brd btn-brd-hover btn-u-sm"><i class="fa fa-eye"></i></a>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                            <div class="headline">
+                                <h2>Dokumenty powiązane <a id="appendLinked"><i id="linkedArrow" class="fa fa-sort-desc"></i></a> </h2>
+                            </div>
+                            <div id="linkedTab">
+                                <div id="loader2" style="text-align: center;"><h2><i class="fa fa-spinner fa-pulse fa-lg"></i></h2></div>
+                                <table id="linked" class="display history-summary" cellspacing="0" width="100%">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th class="hidden-sm hidden-xs hidden-xs">Data&nbsp;edycji</th>
+                                            <th>Autor</th>
+                                            <th>Typ i numer dokumentu</th>
+                                            <th>Komentarz</th>
+                                            <th>Podgląd</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td class="hidden-sm hidden-xs">2015-05-31</td>
+                                            <td class="hidden-sm hidden-xs">Jan Kowalski</td>
+                                            <td>Faktura VAT, 2015/FVS/25015</td>
+                                            <td>Lorem ipsum dolor sit amet, cis. La nec accumsan.</td>
+                                            <td><a href="view_invoice.html"  target="_blank" class="btn-u btn-brd btn-brd-hover btn-u-sm"><i class="fa fa-eye"></i></a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
-                </div>          
+                </div> 
+
             </div><!--/container-->		
 
         </div><!--/End Wrapepr-->
@@ -471,17 +507,101 @@
         <script type="text/javascript" src="assets/js/app.js"></script>
         <script type="text/javascript" language="javascript" src="assets/plugins/datatable/js/jquery.dataTables.js"></script>
         <script type="text/javascript">
+            /* Formatting function for row details - modify as you need */
+            function format(d) {
+                // `d` is the original data object for the row
+                return '<table cellpadding="5" cellspacing="0" border="0" style="padding-left:50px;">' +
+                        '<tr>' +
+                        '<td><a href="http://smbenefittest.blob.core.windows.net/accountdata/1040/fv_invoice/2015-09-02/1/95aa5f76141e466d515c8d709296a443.pdf">Nazwa_zalacznika_link_do_bloba.pdf</a></td>' +
+                        '</tr>' +
+                        '<tr>' +
+                        '<td><a href="http://smbenefittest.blob.core.windows.net/accountdata/1040/fv_invoice/2015-09-02/1/95aa5f76141e466d515c8d709296a443.pdf">Nazwa_zalacznika_link_do_bloba.pdf</a></td>' +
+                        '</tr>' +
+                        '<tr>' +
+                        '<td><a href="http://smbenefittest.blob.core.windows.net/accountdata/1040/fv_invoice/2015-09-02/1/95aa5f76141e466d515c8d709296a443.pdf">Nazwa_zalacznika_link_do_bloba.pdf</a></td>' +
+                        '</tr>' +
+                        '</table>';
+            }
+            ;
+
             jQuery(document).ready(function () {
                 App.init();
                 $(document).ready(function () {
-                    $('#history').DataTable({
+                    var historyTable = $('#history').DataTable({
                         "paging": false,
                         "info": false,
-                        bFilter: false, bInfo: false,
+                        bFilter: false,
+                        bInfo: false,
+                        "language": {
+                            "url": "assets/plugins/datatable/lang/Polish.json"
+                        },
+                        "order": [[2, 'asc']]
+                    });
+                    $('#linked').DataTable({
+                        "paging": false,
+                        "info": false,
+                        bFilter: false,
+                        bInfo: false,
+                        bSort: false,
                         "language": {
                             "url": "assets/plugins/datatable/lang/Polish.json"
                         }
                     });
+
+                    $('#historyTab').slideToggle('fast', function () {
+                        // Animation complete.
+                    });
+
+                    $('#appendHistory').click(function () {
+                        $('#historyTab').slideToggle('fast', function () {
+                            if ($('#historyArrow').hasClass('fa-sort-desc')) {
+                                $('#loader').hide().delay(2000);
+                                $('#historyArrow').removeClass('fa-sort-desc');
+                                $('#historyArrow').addClass('fa-sort-asc');
+                            } else {
+                                $('#loader').show();
+                                $('#historyArrow').removeClass('fa-sort-asc');
+                                $('#historyArrow').addClass('fa-sort-desc');
+                            }
+                        });
+                    });
+
+                    $('#linkedTab').slideToggle('fast', function () {
+                        // Animation complete.
+                    });
+
+                    $('#appendLinked').click(function () {
+                        $('#linkedTab').slideToggle('fast', function () {
+                            if ($('#linkedArrow').hasClass('fa-sort-desc')) {
+                                $('#loader2').hide().delay(2000);
+                                $('#linkedArrow').removeClass('fa-sort-desc');
+                                $('#linkedArrow').addClass('fa-sort-asc');
+                            } else {
+                                $('#loader2').show();
+                                $('#linkedArrow').removeClass('fa-sort-asc');
+                                $('#linkedArrow').addClass('fa-sort-desc');
+                            }
+                        });
+                    });
+
+
+
+                    $('#history tbody').on('click', 'td.details-control', function () {
+                        var tr = $(this).closest('tr');
+                        var row = historyTable.row(tr);
+
+                        if (row.child.isShown()) {
+                            // This row is already open - close it
+                            row.child.hide();
+                            tr.removeClass('shown');
+                        }
+                        else {
+                            // Open this row
+                            row.child(format(row.data())).show();
+                            tr.addClass('shown');
+                        }
+                    });
+
                 });
             });
         </script>

@@ -4,6 +4,11 @@
 
     <link rel="stylesheet" href="assets/plugins/sky-forms-pro/skyforms/css/sky-forms.css">
     <link rel="stylesheet" href="assets/plugins/sky-forms-pro/skyforms/custom/custom-sky-forms.css">
+    <link rel="stylesheet" href="assets/css/jquery.fileupload.css">
+    <link rel="stylesheet" href="assets/css/jquery.fileupload-ui.css">
+    <!-- CSS adjustments for browsers with JavaScript disabled -->
+    <noscript><link rel="stylesheet" href="assets/css/jquery.fileupload-noscript.css"></noscript>
+    <noscript><link rel="stylesheet" href="assets/css/jquery.fileupload-ui-noscript.css"></noscript>
     <!--[if lt IE 9]><link rel="stylesheet" href="assets/plugins/sky-forms-pro/skyforms/css/sky-forms-ie8.css"><![endif]-->
 
 </head>
@@ -22,6 +27,25 @@
                         <textarea rows="3" name="decline_reason" required=""></textarea>
                     </label>
                 </section>
+                <div class="input-group margin-bottom-20">
+                    <section>
+                        <label class="label">Załączniki</label>
+                        <span class="btn btn-success fileinput-button">
+                            <i class="glyphicon glyphicon-plus"></i>
+                            <span>Wybierz pliki...</span>
+                            <input type="file" name="files[]" multiple>
+                        </span>
+                        <button type="submit" class="btn btn-primary start">
+                            <i class="glyphicon glyphicon-upload"></i>
+                            <span>Start upload</span>
+                        </button>
+                        <button type="button" class="btn btn-danger delete">
+                            <i class="glyphicon glyphicon-trash"></i>
+                            <span>Usuń</span>
+                        </button>
+                        <span class="fileupload-process"></span>
+                    </section>
+                </div>
             </fieldset>
             <div class="modal-footer">
                 <button  type="submit" class="btn-u">Odrzuć</button>

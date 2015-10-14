@@ -129,3 +129,16 @@ address {
 .change-data-text {
     color: #a10f2b;
 }
+
+.current-doc {
+background: #dff0d8 !important;
+}
+
+
+td.details-control {
+    background: url('../../img/details_open.png') no-repeat center center;
+    cursor: pointer;
+}
+tr.shown td.details-control {
+    background: url('../../img/details_close.png') no-repeat center center;
+}

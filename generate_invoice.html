@@ -45,6 +45,11 @@
 
         <!-- DataTables -->
         <link rel="stylesheet" type="text/css" href="assets/plugins/datatable/css/jquery.dataTables.css">
+        <link rel="stylesheet" href="assets/css/jquery.fileupload.css">
+        <link rel="stylesheet" href="assets/css/jquery.fileupload-ui.css">
+        <!-- CSS adjustments for browsers with JavaScript disabled -->
+        <noscript><link rel="stylesheet" href="assets/css/jquery.fileupload-noscript.css"></noscript>
+        <noscript><link rel="stylesheet" href="assets/css/jquery.fileupload-ui-noscript.css"></noscript>
 
     </head>
     <body>    
@@ -127,10 +132,10 @@
                             <div class="col-xs-6">
                                 <div class="tag-box tag-box-v3" style="background-color: #f2dede;">
                                     <span>
-                                         <a class="pull-right margin-left-10">
+                                        <a class="pull-right margin-left-10">
                                             <i class="fa fa-history"></i>
                                         </a>
-                                         <a class="pull-right accordion-toggle" data-toggle="modal" data-target="#modalSeller">
+                                        <a class="pull-right accordion-toggle" data-toggle="modal" data-target="#modalSeller">
                                             <i class="fa fa-pencil"></i>
                                         </a>
                                     </span>
@@ -584,6 +589,25 @@
                                         <textarea rows="3" name="info" ></textarea>
                                     </label>
                                 </section>
+                                <div class="input-group margin-bottom-20">
+                                    <section>
+                                        <label class="label">Załączniki</label>
+                                        <span class="btn btn-success fileinput-button">
+                                            <i class="glyphicon glyphicon-plus"></i>
+                                            <span>Wybierz pliki...</span>
+                                            <input type="file" name="files[]" multiple>
+                                        </span>
+                                        <button type="submit" class="btn btn-primary start">
+                                            <i class="glyphicon glyphicon-upload"></i>
+                                            <span>Start upload</span>
+                                        </button>
+                                        <button type="button" class="btn btn-danger delete">
+                                            <i class="glyphicon glyphicon-trash"></i>
+                                            <span>Usuń</span>
+                                        </button>
+                                        <span class="fileupload-process"></span>
+                                    </section>
+                                </div>
                             </fieldset>
                             <footer>
                                 <button type="submit" class="btn-u" onclick="">Wystaw</button>  
@@ -618,7 +642,7 @@
         <script type="text/javascript" src="assets/js/app.js"></script>
         <script type="text/javascript" language="javascript" src="assets/plugins/datatable/js/jquery.dataTables.js"></script>
         <script type="text/javascript" src="assets/js/jquery.tabledit.js"></script>
-          <script src="assets/plugins/sky-forms-pro/skyforms/js/jquery.validate.min.js"></script>
+        <script src="assets/plugins/sky-forms-pro/skyforms/js/jquery.validate.min.js"></script>
         <script type="text/javascript" src="assets/js/plugins/validation.js"></script>
         <script type="text/javascript" src="assets/js/forms/invoices.js"></script>
         <script type="text/javascript">
@@ -638,63 +662,63 @@
                                             }
                                         });
                                         $('#example').Tabledit({
-                                             confirmButton: false,
-                                                deleteButton: true,
-                                                restoreButton: true,
-                                                hideIdentifier: true,
-                                                editButton: true,
-                                             buttons: {
-                                                    edit: {
-                                                        class: 'btn-u btn-brd btn-brd-hover btn-u-sm btn-u-s',
-                                                        html: '<i class="fa fa-pencil"></i>',
-                                                        action: 'edit'
-                                                    },
-                                                    delete: {
-                                                        class: 'btn-u btn-brd btn-u-dark btn-brd-hover btn-u-sm margin-left-5',
-                                                        html: '<i class="fa fa-trash"></i>',
-                                                        action: 'delete'
-                                                    },
-                                                    restore: {
-                                                        class: 'btn btn-sm btn-warning',
-                                                        html: 'Przywróć',
-                                                    },
-                                                    save: {
-                                                        class: 'btn btn-sm btn-success',
-                                                        html: 'Zapisz'
-                                                    },
-                                                    confirm: {
-                                                        class: 'btn btn-sm btn-danger',
-                                                        html: 'Potwierdź'
-                                                    }
+                                            confirmButton: false,
+                                            deleteButton: true,
+                                            restoreButton: true,
+                                            hideIdentifier: true,
+                                            editButton: true,
+                                            buttons: {
+                                                edit: {
+                                                    class: 'btn-u btn-brd btn-brd-hover btn-u-sm btn-u-s',
+                                                    html: '<i class="fa fa-pencil"></i>',
+                                                    action: 'edit'
                                                 },
+                                                delete: {
+                                                    class: 'btn-u btn-brd btn-u-dark btn-brd-hover btn-u-sm margin-left-5',
+                                                    html: '<i class="fa fa-trash"></i>',
+                                                    action: 'delete'
+                                                },
+                                                restore: {
+                                                    class: 'btn btn-sm btn-warning',
+                                                    html: 'Przywróć',
+                                                },
+                                                save: {
+                                                    class: 'btn btn-sm btn-success',
+                                                    html: 'Zapisz'
+                                                },
+                                                confirm: {
+                                                    class: 'btn btn-sm btn-danger',
+                                                    html: 'Potwierdź'
+                                                }
+                                            },
                                             columns: {
                                                 identifier: [0, '#'],
                                                 editable: [[2, 'Ilość'], [4, 'Cena jedn. netto'], [6, 'Stawka VAT']]
                                             }
                                         });
-                                    $("#sky-form-details").submit(function (event) {
-                                        var create_date = new Date($('#create_date').val());
-                                        console.log(create_date);
-                                        if (create_date) {
-                                            var create_day = create_date.getDate();
-                                            console.log(create_day);
-                                            var start_day = 1;
-                                            var end_day = 15;
-                                            if (start_day <= create_day && create_day <= end_day) {
-                                                $('#input_create_date').removeClass("state-error");
-                                                $('#note_error_create_date').text("");
-                                            }
-                                            else {
-                                                $('#input_create_date').addClass("state-error");
-                                                $('#note_error_create_date').text("Wprowadź datę z poprawnego zakresu rozliczeniowego, tj. dzień od 1 do 15");
+                                        $("#sky-form-details").submit(function (event) {
+                                            var create_date = new Date($('#create_date').val());
+                                            console.log(create_date);
+                                            if (create_date) {
+                                                var create_day = create_date.getDate();
+                                                console.log(create_day);
+                                                var start_day = 1;
+                                                var end_day = 15;
+                                                if (start_day <= create_day && create_day <= end_day) {
+                                                    $('#input_create_date').removeClass("state-error");
+                                                    $('#note_error_create_date').text("");
+                                                }
+                                                else {
+                                                    $('#input_create_date').addClass("state-error");
+                                                    $('#note_error_create_date').text("Wprowadź datę z poprawnego zakresu rozliczeniowego, tj. dzień od 1 do 15");
+                                                    event.preventDefault();
+                                                }
+                                            } else {
+                                                alert("Invalid date range entered");
                                                 event.preventDefault();
                                             }
-                                        } else {
-                                            alert("Invalid date range entered");
-                                            event.preventDefault();
-                                        }
+                                        });
                                     });
-                                });
         </script>
         <script>
             $(function () {

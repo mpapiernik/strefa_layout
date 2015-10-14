@@ -45,6 +45,11 @@
 
         <!-- DataTables -->
         <link rel="stylesheet" type="text/css" href="assets/plugins/datatable/css/jquery.dataTables.css">
+        <link rel="stylesheet" href="assets/css/jquery.fileupload.css">
+        <link rel="stylesheet" href="assets/css/jquery.fileupload-ui.css">
+        <!-- CSS adjustments for browsers with JavaScript disabled -->
+        <noscript><link rel="stylesheet" href="assets/css/jquery.fileupload-noscript.css"></noscript>
+        <noscript><link rel="stylesheet" href="assets/css/jquery.fileupload-ui-noscript.css"></noscript>
 
     </head>
     <body>    
@@ -412,53 +417,69 @@
                                         <textarea rows="3" name="commnet" ></textarea>
                                     </label>
                                 </section>
+                                <div class="input-group margin-bottom-20">
+                                    <section>
+                                        <label class="label">Załączniki</label>
+                                        <span class="btn btn-success fileinput-button">
+                                            <i class="glyphicon glyphicon-plus"></i>
+                                            <span>Wybierz pliki...</span>
+                                            <input type="file" name="files[]" multiple>
+                                        </span>
+                                        <button type="submit" class="btn btn-primary start">
+                                            <i class="glyphicon glyphicon-upload"></i>
+                                            <span>Start upload</span>
+                                        </button>
+                                        <button type="button" class="btn btn-danger delete">
+                                            <i class="glyphicon glyphicon-trash"></i>
+                                            <span>Usuń</span>
+                                        </button>
+                                        <span class="fileupload-process"></span>
+                                    </section>
+                                </div>
                             </fieldset>
-                            <footer>
-                                <button type="submit" class="btn-u" onclick="">Wystaw</button>  
+                            <footer style="text-align: right;">
                                 <button type="button" class="btn-u btn-u-default" onclick="window.history.back();">Wróć</button>
+                                <button type="submit" class="btn-u" onclick="">Wystaw</button>  
                             </footer>
                         </form>  
 
-                        <!--History Invoice Table-->
-                        <div class="row margin-top-20">
+                        <!--Linked Invoice Table-->
+                        <div class="row">
                             <div class="col-xs-12">
                                 <div class="tag-box tag-box-v3 no-margin-bottom">   
-                                    <h2>Historia faktury</h2>
-                                    <table id="history" class="display history-summary" cellspacing="0" width="100%">
-                                        <thead>
-                                            <tr>
-                                                <th>#</th>
-                                                <th class="hidden-sm hidden-xs hidden-xs">Data edycji</th>
-                                                <th>Autor</th>
-                                                <th class="hidden-sm hidden-xs">Status</th>
-                                                <th>Typ i numer dokumentu</th>
-                                                <th>Podgląd</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>1</td>
-                                                <td class="hidden-sm hidden-xs">2015-05-31</td>
-                                                <td class="hidden-sm hidden-xs">Jan Kowalski</td>
-                                                <td class="hidden-sm hidden-xs">Do akceptacji</td>
-                                                <td>Faktura VAT, 2015/FVS/25015</td>
-                                                <td><a href="view_invoice.html"  target="_blank" class="btn-u btn-brd btn-brd-hover btn-u-sm"><i class="fa fa-eye"></i></a>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>2</td>
-                                                <td class="hidden-sm hidden-xs">2015-06-03</td>
-                                                <td class="hidden-sm hidden-xs">Benefit Jan</td>
-                                                <td class="hidden-sm hidden-xs">Zaakceptowana</td>
-                                                <td>Faktura VAT, 2015/FVS/25015</td>
-                                                <td><a href="view_invoice.html"  target="_blank" class="btn-u btn-brd btn-brd-hover btn-u-sm"><i class="fa fa-eye"></i></a>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
+                                    <div class="headline">
+                                        <h2>Dokumenty powiązane <a id="appendLinked"><i id="linkedArrow" class="fa fa-sort-desc"></i></a> </h2>
+                                    </div>
+                                    <div id="linkedTab">
+                                        <div id="loader2" style="text-align: center;"><h2><i class="fa fa-spinner fa-pulse fa-lg"></i></h2></div>
+                                        <table id="linked" class="display history-summary" cellspacing="0" width="100%">
+                                            <thead>
+                                                <tr>
+                                                    <th>#</th>
+                                                    <th class="hidden-sm hidden-xs hidden-xs">Data&nbsp;edycji</th>
+                                                    <th>Autor</th>
+                                                    <th>Typ i numer dokumentu</th>
+                                                    <th>Komentarz</th>
+                                                    <th>Podgląd</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td class="hidden-sm hidden-xs">2015-05-31</td>
+                                                    <td class="hidden-sm hidden-xs">Jan Kowalski</td>
+                                                    <td>Faktura VAT, 2015/FVS/25015</td>
+                                                    <td>Lorem ipsum dolor sit amet, cis. La nec accumsan.</td>
+                                                    <td><a href="view_invoice.html"  target="_blank" class="btn-u btn-brd btn-brd-hover btn-u-sm"><i class="fa fa-eye"></i></a>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
                                 </div>
                             </div>
-                        </div>         
+                        </div>
+
 
                     </div>
                     <!-- End Content -->
@@ -490,23 +511,41 @@
         <script type="text/javascript" src="assets/js/jquery.tabledit.js"></script>
 
         <script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
-          <script src="assets/plugins/sky-forms-pro/skyforms/js/jquery.validate.min.js"></script>
-       <script type="text/javascript" src="assets/js/plugins/validation.js"></script>
+        <script src="assets/plugins/sky-forms-pro/skyforms/js/jquery.validate.min.js"></script>
+        <script type="text/javascript" src="assets/js/plugins/validation.js"></script>
         <script type="text/javascript" src="assets/js/forms/invoices.js"></script>
         <script type="text/javascript">
 
                                     jQuery(document).ready(function () {
                                         App.init();
                                         InvoiceForm.initInvoiceForm();
-                                    
                                         $(document).ready(function () {
-                                            $('#history').DataTable({
+                                            $('#linked').DataTable({
                                                 "paging": false,
                                                 "info": false,
-                                                bFilter: false, bInfo: false,
+                                                bFilter: false,
+                                                bInfo: false,
+                                                bSort: false,
                                                 "language": {
                                                     "url": "assets/plugins/datatable/lang/Polish.json"
                                                 }
+                                            });
+                                            $('#linkedTab').slideToggle('fast', function () {
+                                                // Animation complete.
+                                            });
+
+                                            $('#appendLinked').click(function () {
+                                                $('#linkedTab').slideToggle('fast', function () {
+                                                    if ($('#linkedArrow').hasClass('fa-sort-desc')) {
+                                                        $('#loader2').hide().delay(2000);
+                                                        $('#linkedArrow').removeClass('fa-sort-desc');
+                                                        $('#linkedArrow').addClass('fa-sort-asc');
+                                                    } else {
+                                                        $('#loader2').show();
+                                                        $('#linkedArrow').removeClass('fa-sort-asc');
+                                                        $('#linkedArrow').addClass('fa-sort-desc');
+                                                    }
+                                                });
                                             });
                                         });
                                         $(document).ready(function () {
@@ -526,7 +565,7 @@
                                                 hideIdentifier: true,
                                                 editButton: true,
                                                 buttons: {
-                                                     edit: {
+                                                    edit: {
                                                         class: 'btn-u btn-brd btn-brd-hover btn-u-sm btn-u-s',
                                                         html: '<i class="fa fa-pencil"></i>',
                                                         action: 'edit'
@@ -554,7 +593,7 @@
                                                     editable: [[2, 'Ilość'], [4, 'Cena jedn. netto'], [6, 'Stawka VAT']]
                                                 }
                                             });
-                                            
+
 
                                         });
                                     });
