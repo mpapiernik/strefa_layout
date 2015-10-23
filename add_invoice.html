@@ -203,9 +203,9 @@
                                     </div>
                                 </section>
                             </fieldset>
-                            <footer>
-                                <a href="generate_invoice.html" class="btn-u">Wystaw</a>  
-                                <button type="button" class="btn-u btn-u-default" onclick="window.service.back();">Wróć</button>
+                            <footer  style="text-align: right;">
+                                    <button type="button" class="btn-u btn-u-default" onclick="window.service.back();">Wróć</button>
+                                    <a href="generate_invoice.html" class="btn-u">Wystaw</a> 
                             </footer>
                         </form>         
                         <!-- Post -->
@@ -248,96 +248,96 @@
         <!-- JS DataTables -->
         <script type="text/javascript" language="javascript" src="assets/plugins/datatable/js/jquery.dataTables.js"></script>
         <script type="text/javascript">
-                                    jQuery(document).ready(function () {
-                                        App.init();
-                                    });
-                                    $(document).ready(function () {
+                                        jQuery(document).ready(function () {
+                                            App.init();
+                                        });
+                                        $(document).ready(function () {
 
-                                        var table = $('#service').DataTable({
-                                            "searching": true,
-                                            "paging": false,
-                                            "ordering": false,
-                                            "info": true,
-                                            "language": {
-                                                "url": "assets/plugins/datatable/lang/Polish.json"
-                                            }
-                                        });
-                                        refreshTable();
-                                        $('#service tbody').on('click', 'a', function (event) {
-                                            var tr = $(this).closest('tr');
-                                            if (tr.hasClass('selected')) {
-                                                tr.removeClass('selected');
-                                            }
-                                            else {
-                                                table.$('tr.selected').removeClass('selected');
-                                                tr.addClass('selected');
-                                            }
-                                            table.row('.selected').remove().draw(false);
-                                            var id = tr.data("id");
-                                            deselectValue(id);
-                                        });
-                                        $('#serviceTab').slideToggle('fast', function () {
-                                            // Animation complete.
-                                        });
-                                        $('#appendHistory').click(function () {
+                                            var table = $('#service').DataTable({
+                                                "searching": true,
+                                                "paging": false,
+                                                "ordering": false,
+                                                "info": true,
+                                                "language": {
+                                                    "url": "assets/plugins/datatable/lang/Polish.json"
+                                                }
+                                            });
+                                            refreshTable();
+                                            $('#service tbody').on('click', 'a', function (event) {
+                                                var tr = $(this).closest('tr');
+                                                if (tr.hasClass('selected')) {
+                                                    tr.removeClass('selected');
+                                                }
+                                                else {
+                                                    table.$('tr.selected').removeClass('selected');
+                                                    tr.addClass('selected');
+                                                }
+                                                table.row('.selected').remove().draw(false);
+                                                var id = tr.data("id");
+                                                deselectValue(id);
+                                            });
                                             $('#serviceTab').slideToggle('fast', function () {
+                                                // Animation complete.
+                                            });
+                                            $('#appendHistory').click(function () {
+                                                $('#serviceTab').slideToggle('fast', function () {
+                                                });
                                             });
                                         });
-                                    });
-                                    function refreshTable() {
-                                        $('#service').dataTable().fnClearTable();
-                                        var rows = $("#service-select option:selected");
-                                        var index, len = 0;
-                                        for (index = 0, len = rows.length; index < len; ++index) {
-                                            var row = rows[index];
-                                            var facility = row.parentNode;
-                                            var facility_name = facility.getAttribute('label');
-                                            var entry = row.getAttribute('data-entry');
-                                            var id = row.value;
-                                            var name = row.text;
-                                            var i = document.createElement('i');
-                                            i.className = "fa fa-close";
-                                            i.style.color = "white";
-                                            var a = document.createElement('a');
-                                            a.className = "btn-u btn-u-dark";
-                                            a.appendChild(i);
-                                            var new_row = $('#service').dataTable().fnAddData([
-                                                index + 1,
-                                                facility_name,
-                                                id + " : " + name,
-                                                entry,
-                                                a.outerHTML
-                                            ]);
-                                            var row = $('#service').dataTable().fnGetNodes(new_row);
-                                            $(row).attr('data-id', id);
-                                            var tableRowElement = $('#service').dataTable().fnGetNodes(new_row[0]); // get reference to <tr> element just added
-                                            $(tableRowElement).attr('attributeINeeded', row.AttributeProp).attr('anotherAttributeINeeded', row.AttributeProp2);
+                                        function refreshTable() {
+                                            $('#service').dataTable().fnClearTable();
+                                            var rows = $("#service-select option:selected");
+                                            var index, len = 0;
+                                            for (index = 0, len = rows.length; index < len; ++index) {
+                                                var row = rows[index];
+                                                var facility = row.parentNode;
+                                                var facility_name = facility.getAttribute('label');
+                                                var entry = row.getAttribute('data-entry');
+                                                var id = row.value;
+                                                var name = row.text;
+                                                var i = document.createElement('i');
+                                                i.className = "fa fa-close";
+                                                i.style.color = "white";
+                                                var a = document.createElement('a');
+                                                a.className = "btn-u btn-u-dark";
+                                                a.appendChild(i);
+                                                var new_row = $('#service').dataTable().fnAddData([
+                                                    index + 1,
+                                                    facility_name,
+                                                    id + " : " + name,
+                                                    entry,
+                                                    a.outerHTML
+                                                ]);
+                                                var row = $('#service').dataTable().fnGetNodes(new_row);
+                                                $(row).attr('data-id', id);
+                                                var tableRowElement = $('#service').dataTable().fnGetNodes(new_row[0]); // get reference to <tr> element just added
+                                                $(tableRowElement).attr('attributeINeeded', row.AttributeProp).attr('anotherAttributeINeeded', row.AttributeProp2);
+                                            }
                                         }
-                                    }
-                                    function deselectValue(id) {
-                                        $('#service-select').find('[value=' + id + ']').prop('selected', false);
-                                        var values = $('#service-select').val();
-                                        $('#service-select').selectpicker('deselectAll');
-                                        $('#service-select').selectpicker('val', values);
-                                        $('#service-select').selectpicker('refresh');
-                                        refreshTable();
-                                    }
-                                    function selectOptionsByEntry() {
-                                        deselectAllOptions();
-                                        var number = 0;
-                                        $('#service-select').find('[data-entry!=' + number + ']').prop('selected', true);
-                                        var values = $('#service-select').val();
-                                        $('#service-select').selectpicker('val', values);
-                                        $('#service-select').selectpicker('refresh');
-                                        refreshTable();
-                                    }
-                                    function deselectAllOptions() {
-                                        $('#service-select').prop('selected', false);
-                                        $('#service-select').selectpicker('deselectAll');
-                                        $('#service-select').selectpicker('val', '');
-                                        $('#service-select').selectpicker('refresh');
-                                        refreshTable();
-                                    }
+                                        function deselectValue(id) {
+                                            $('#service-select').find('[value=' + id + ']').prop('selected', false);
+                                            var values = $('#service-select').val();
+                                            $('#service-select').selectpicker('deselectAll');
+                                            $('#service-select').selectpicker('val', values);
+                                            $('#service-select').selectpicker('refresh');
+                                            refreshTable();
+                                        }
+                                        function selectOptionsByEntry() {
+                                            deselectAllOptions();
+                                            var number = 0;
+                                            $('#service-select').find('[data-entry!=' + number + ']').prop('selected', true);
+                                            var values = $('#service-select').val();
+                                            $('#service-select').selectpicker('val', values);
+                                            $('#service-select').selectpicker('refresh');
+                                            refreshTable();
+                                        }
+                                        function deselectAllOptions() {
+                                            $('#service-select').prop('selected', false);
+                                            $('#service-select').selectpicker('deselectAll');
+                                            $('#service-select').selectpicker('val', '');
+                                            $('#service-select').selectpicker('refresh');
+                                            refreshTable();
+                                        }
         </script>
         <script>
             $(function () {
