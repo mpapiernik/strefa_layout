@@ -41,6 +41,12 @@
 
         <!-- DataTables -->
         <link rel="stylesheet" type="text/css" href="assets/plugins/datatable/css/jquery.dataTables.css">
+        <link rel="stylesheet" type="text/css" href="assets/plugins/datatable/css/jquery.dataTables.css">
+        <link rel="stylesheet" href="assets/css/jquery.fileupload.css">
+        <link rel="stylesheet" href="assets/css/jquery.fileupload-ui.css">
+        <!-- CSS adjustments for browsers with JavaScript disabled -->
+        <noscript><link rel="stylesheet" href="assets/css/jquery.fileupload-noscript.css"></noscript>
+        <noscript><link rel="stylesheet" href="assets/css/jquery.fileupload-ui-noscript.css"></noscript>
     </head>
 
     <body>    
@@ -156,6 +162,17 @@
                                                     </label>
                                                 </section>
                                             </div>
+                                            <div class="input-group margin-bottom-20">
+                                                <section>
+                                                    <label class="label">Pieczątka</label>
+                                                    <span class="btn btn-success fileinput-button">
+                                                        <i class="glyphicon glyphicon-plus"></i>
+                                                        <span>Wybierz plik...</span>
+                                                        <input type="file" name="files[]" multiple>
+                                                    </span>
+                                                    <span class="fileupload-process"></span>
+                                                </section>
+                                            </div>
                                         </fieldset>
                                         <fieldset>
                                             <div class="alert alert-danger fade in text-center">
@@ -258,7 +275,7 @@
         <script type="text/javascript" src="assets/js/custom.js"></script>
         <!-- JS Page Level -->           
         <script type="text/javascript" src="assets/js/app.js"></script>
-                <script type="text/javascript" language="javascript" src="assets/plugins/datatable/js/jquery.dataTables.js"></script>
+        <script type="text/javascript" language="javascript" src="assets/plugins/datatable/js/jquery.dataTables.js"></script>
         <script type="text/javascript" src="assets/js/jquery.tabledit.js"></script>
         <script type="text/javascript">
                                                 jQuery(document).ready(function () {

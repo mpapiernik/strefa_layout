@@ -38,6 +38,11 @@
 
         <!-- DataTables -->
         <link rel="stylesheet" type="text/css" href="assets/plugins/datatable/css/jquery.dataTables.css">
+        <link rel="stylesheet" href="assets/css/jquery.fileupload.css">
+        <link rel="stylesheet" href="assets/css/jquery.fileupload-ui.css">
+        <!-- CSS adjustments for browsers with JavaScript disabled -->
+        <noscript><link rel="stylesheet" href="assets/css/jquery.fileupload-noscript.css"></noscript>
+        <noscript><link rel="stylesheet" href="assets/css/jquery.fileupload-ui-noscript.css"></noscript>
     </head>
 
     <body>    
@@ -168,20 +173,30 @@
                                                             <option>netto</option>
                                                             <option>brutto</option>
                                                         </select>
-                                                        <i></i>
                                                     </label>
+                                                </section>
+                                            </div>
+                                            <div class="input-group margin-bottom-20">
+                                                <section>
+                                                    <label class="label">Pieczątka</label>
+                                                    <span class="btn btn-success fileinput-button">
+                                                        <i class="glyphicon glyphicon-plus"></i>
+                                                        <span>Wybierz plik...</span>
+                                                        <input type="file" name="files[]" multiple>
+                                                    </span>
+                                                    <span class="fileupload-process"></span>
                                                 </section>
                                             </div>
                                         </fieldset>
                                         <fieldset>
                                             <div class="alert alert-danger fade in text-center">
-                                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-                                        Błędny szablon numeracji: w każdym szablonie powinien się pojawić 1 znacznik %i
-                                    </div> 
-                                    <div class="alert alert-danger fade in text-center">
-                                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-                                        Błędny szablon numeracji: znak po % musi mieć wartość jednego z tagów (R, r, m, d, i)
-                                    </div> 
+                                                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                                                Błędny szablon numeracji: w każdym szablonie powinien się pojawić 1 znacznik %i
+                                            </div> 
+                                            <div class="alert alert-danger fade in text-center">
+                                                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                                                Błędny szablon numeracji: znak po % musi mieć wartość jednego z tagów (R, r, m, d, i)
+                                            </div> 
                                             <h4>Lista szablonów numeracji</h4>
                                             <table class="table table-striped" id="numberTemplateList">
                                                 <thead>
