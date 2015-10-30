@@ -9,29 +9,17 @@ var ContactPage = function () {
 			  map = new GMaps({
 				div: '#map',
 				scrollwheel: false,				
-				lat: 40.748866,
-				lng: -73.988366
+				lat: 52.2419336,
+				lng: 21.0096498
 			  });
 			  
 			  var marker = map.addMarker({
-				lat: 40.748866,
-				lng: -73.988366,
+				lat: 52.2419336,
+				lng: 21.0096498,
 	            title: 'Company, Inc.'
 		       });
 			});
         },
-
-        //Panorama Map
-        initPanorama: function () {
-		    var panorama;
-		    $(document).ready(function(){
-		      panorama = GMaps.createPanorama({
-		        el: '#panorama',
-		        lat : 40.748866,
-		        lng : -73.988366
-		      });
-		    });
-		}        
 
     };
 }();

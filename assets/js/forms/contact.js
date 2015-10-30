@@ -14,6 +14,15 @@ var ContactForm = function () {
 	                    required: true,
                             minlength: 5
 	                },
+                        name:
+	                {
+	                    required: true
+	                },
+                         email:
+	                {
+	                    required: true,
+	                    email: true
+	                },
 	                date:
 	                {
 	                    required: true,
@@ -21,7 +30,7 @@ var ContactForm = function () {
 	                message:
 	                {
 	                    required: true,
-	                    minlength: 20
+	                    minlength: 10
 	                },
 	            },
 	                                
@@ -30,15 +39,20 @@ var ContactForm = function () {
 	            {
 	                subject:
 	                {
-	                    required: 'Please enter your subject',
+	                    required: 'Wpisz tytuł',
 	                },
-	                date:
+                        name:
 	                {
-	                    required: 'Please enter your publish date',
+	                    required: 'Wpisz imię i nazwisko'
+	                },
+                        email:
+	                {
+	                    required: 'Wpisz adres e-mail',
+	                    email: 'Wpisz poprawny adres e-mail'
 	                },
 	                message:
 	                {
-	                    required: 'Please enter your message'
+	                    required: 'Wpisz wiadomość'
 	                },
 	            },
 	                                
