@@ -1,3 +1,5 @@
+
+
 <div class="container">
     <!-- Logo -->
     <a class="logo" href="wall.html">
@@ -61,7 +63,7 @@
 
             <!-- Pages -->                        
             <li class="">
-                <a href="base.html">
+                <a href="list_articles.html">
                     Baza wiedzy
                 </a>
             </li>
@@ -115,9 +117,9 @@
                 <i class="search fa fa-search search-btn"></i>
                 <div class="search-open">
                     <div class="input-group animated fadeInDown">
-                        <input type="text" class="form-control" placeholder="Search">
+                       <input type="text" class="form-control" placeholder="Wpisz frazę ... ">
                         <span class="input-group-btn">
-                            <button class="btn-u" type="button">Go</button>
+                            <a href="search.html" class="button btn-u">Szukaj</a>
                         </span>
                     </div>
                 </div>    
@@ -126,3 +128,24 @@
         </ul>
     </div><!--/end container-->
 </div><!--/navbar-collapse-->
+
+<!-- JS Global Compulsory -->           
+<script type="text/javascript" src="assets/plugins/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="assets/plugins/jquery/jquery-migrate.min.js"></script>
+<script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script> 
+<!-- JS Implementing Plugins -->           
+<script type="text/javascript" src="assets/plugins/back-to-top.js"></script>
+<script type="text/javascript" src="assets/plugins/smoothScroll.js"></script>
+<!-- JS Customization -->
+<!-- JS Page Level -->           
+<script type="text/javascript" src="assets/js/app.js"></script>
+<script type="text/javascript">
+    jQuery(document).ready(function() {
+        App.init();
+        });
+</script>
+<!--[if lt IE 9]>
+    <script src="assets/plugins/respond.js"></script>
+    <script src="assets/plugins/html5shiv.js"></script>
+    <script src="assets/plugins/placeholder-IE-fixes.js"></script>
+<![endif]-->
