@@ -101,6 +101,7 @@
                                                 <ul class="dropdown-menu" role="menu">
                                                     <li><a href="profile_operator.html"><i class="fa fa-user"></i> Profil operatora</a></li>
                                                     <li><a href="" data-toggle="modal" data-target="#confirmBlockOperator" id="confirmBlocade"><i class="fa fa-ban"></i> Zablokuj/Aktywuj</a></li>
+                                                     <li><a href="" data-toggle="modal" data-target="#confirmResetOperator" id="confirmReset"><i class="fa fa-lock"></i> Resetuj hasło</a></li>
                                                     <li class="divider"></li>
                                                     <li><a href="edit_operator.html"><i class="fa fa-edit"></i> Wnioskuj o zmianę danych</a></li>
                                                     <li><a href="delete_operator.html"><i class="fa fa-remove"></i> Wnioskuj o usunięcie</a></li>
@@ -122,6 +123,7 @@
             </div><!--/container-->     
             <!--=== End Content Part ===-->
             <div class="modal fade" id="confirmBlockOperator" tabindex="-1" role="dialog" aria-hidden="true"></div>
+            <div class="modal fade" id="confirmResetOperator" tabindex="-1" role="dialog" aria-hidden="true"></div>
 
         </div><!--/End Wrapepr-->
         <!--=== Footer Version 1 ===-->
@@ -155,10 +157,8 @@
         </script>
         <script>
             $(function () {
-                $("#includedContentHeader").load("header.html");
-                $("#includedContentFooter").load("footer.html");
                 $("#confirmBlockOperator").load("blocade_operator.html");
-                $("#includedContentSideBar").load("sidebar.html");
+                $("#confirmResetOperator").load("reset_password_operator.html");
             });
         </script> 
         <!--[if lt IE 9]>

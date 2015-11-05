@@ -101,6 +101,8 @@
                                                 <ul class="dropdown-menu" role="menu">
                                                     <li><a href="profile_operator_backend.html"><i class="fa fa-user"></i> Profil operatora</a></li>
                                                     <li><a href="" data-toggle="modal" data-target="#confirmBlockOperator" id="confirmBlocade"><i class="fa fa-ban"></i> Zablokuj/Aktywuj</a></li>
+                                                     <li><a href="" data-toggle="modal" data-target="#confirmResetOperator" id="confirmReset"><i class="fa fa-lock"></i> Resetuj hasło</a></li>
+                                                    
                                                     <li class="divider"></li>
                                                     <li><a href="edit_operator_backend.html"><i class="fa fa-edit"></i> Edytuj</a></li>
                                                     <li><a href="delete_operator_backend.html"><i class="fa fa-remove"></i> Usuń</a></li>
@@ -147,13 +149,7 @@
                 });
             });
         </script>
-        <script>
-            $(function () {
-                $("#includedContentHeader").load("header_backend.html");
-                $("#includedContentFooter").load("footer.html");
-                $("#confirmBlockOperator").load("blocade_operator.html");
-            });
-        </script> 
+        
         <!--[if lt IE 9]>
             <script src="assets/plugins/respond.js"></script>
             <script src="assets/plugins/html5shiv.js"></script>
