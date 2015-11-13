@@ -69,6 +69,14 @@
             <div class="container content">     
                 <div class="row">
                     <div class="col-md-9 who">
+                        <div class="alert alert-success fade in alert-dismissable text-center">
+                                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                                Twoja wiadomość została wysłana!
+                        </div>
+                        <div class="alert alert-danger fade in alert-dismissable text-center">
+                                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                                System nie mógł wysłać Twojej wiadomości. Spróbuj ponownie lub skontaktuj się z administratorem.
+                        </div>
                         <div class="headline"><h2>Twój opiekun</h2></div>
                         <ul class="list-unstyled margin-bottom-30">
                             <li><i class="fa fa-user"></i>Adam Kowalski</li>
@@ -77,7 +85,7 @@
                         </ul>
                         <div class="margin-bottom-40">
                         <div class="headline"><h2>Formularz kontaktowy</h2></div>
-                        <form action="assets/php/sky-forms-pro/demo-contacts-process.php" method="post" id="sky-form3" class="sky-form contact-style margin-bottom-10">
+                        <form action="" method="post" id="sky-form3" class="sky-form contact-style margin-bottom-10">
                             <fieldset class="no-padding">
                                 <label>Imię i nazwisko <span class="color-red">*</span></label>
                                 <div class="row sky-space-20">
@@ -109,14 +117,6 @@
                                 <button type="button" class="btn-u btn-u-default" onclick="window.history.back();">Wróć</button>
                                 <button type="submit" class="btn-u margin-bottom-5">Wyślij</button>    
                             </footer>
-
-                            <div class="message">
-                                <i class="rounded-x fa fa-check"></i>
-                                <p>Twoja wiadomość została wysłana!</p>
-                                <div style="text-align: right;">
-                                    <button type="button" class="btn-u btn-u-default" onclick="window.history.back();">Wróć</button>
-                                </div>
-                            </div>
                         </form>
                         </div>
 
