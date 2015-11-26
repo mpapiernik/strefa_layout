@@ -63,9 +63,9 @@
                 <div class="row">
                     <!-- Begin Content -->
                     <div class="col-md-12 margin-bottom-50">
-                         <div class="margin-bottom-20">
+                        <div class="margin-bottom-20">
                             <div class="btn-group">
-                                    <a href="add_file.html" class="button btn-u pull-right"><i class="fa fa-plus fa-fw"></i>Dodaj plik</a>         
+                                <a href="add_file.html" class="button btn-u pull-right"><i class="fa fa-plus fa-fw"></i>Dodaj plik</a>         
                             </div>
                             <!-- End Single button -->                    
                         </div>
@@ -76,11 +76,12 @@
                                     <tr>
                                         <th>#</th>
                                         <th>Nazwa</th>
-                                        <th>Data&nbsp;uwtorzenia</th>
+                                        <th>Data&nbsp;utworzenia</th>
                                         <th>Edytor</th>
                                         <th>Data&nbsp;edycji</th>
                                         <th>Opis</th>
-                                        <th>Link</th>
+                                        <th>Opublikowany</th>
+                                        <th>Pobierz</th>
                                         <th>Akcja</th>
                                     </tr>
                                 </thead>
@@ -88,14 +89,15 @@
                                     <tr>
                                         <td>1</td>
                                         <td>Nowa_karta_benefitsport.jpg</td>
-                                        
+
                                         <td class="hidden-sm hidden-xs">2015-06-07</td>
-                                        
+
                                         <td class="hidden-sm hidden-xs">Jan Kowalski</td>
-                                         <td class="hidden-sm hidden-xs">2015-06-07</td>
+                                        <td class="hidden-sm hidden-xs">2015-06-07</td>
                                         <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris et malesuada eros, ac vehicula ligula. Quisque mauris odio, sollicitudin ac molestie sed, finibus at ipsum. Curabitur risus erat, auctor sit amet urna in, elementum convallis turpis. Integer et fermentum quam. Sed scelerisque pulvinar urna tempus tempor. Vivamus sapien velit, varius eu orci nec, facilisis commodo turpis. Curabitur ac egestas odio, quis venenatis lorem. Nulla accumsan semper ligula nec accumsan.</td>
+                                        <td>Tak</td>
                                         <td>
-                                            <a href="https://smbenefittest.blob.core.windows.net/public/Nowa_karta_benefitsport.jpg" class="btn-u btn-brd btn-brd-hover btn-u-s"><i class="fa fa-link"></i></a>
+                                           <a class="btn-u btn-brd btn-brd-hover btn-u-s" href="http://wiki.unify.com/images/d/d3/Test.pdf" download><i class="fa fa-download"></i></a>
                                         </td>
                                         <td>
                                             <div class="btn-group">
@@ -104,22 +106,25 @@
                                                     <span class="sr-only">Toggle Dropdown</span>                            
                                                 </button>
                                                 <ul class="dropdown-menu" role="menu">
-                                                    <li><a href="#"><i class="fa fa-download"></i> Pobierz</a></li>
-                                                    <li><a href="#"><i class="fa fa-edit"></i> Edytuj</a></li>
-                                                    <li><a href="#"><i class="fa fa-trash"></i> Usuń</a></li>
+                                                    <li><a href="edit_file.html"><i class="fa fa-edit"></i> Edytuj</a></li>
+                                                    <li><a href="#"><i class="fa fa-link"></i> Skopiuj link</a></li>
+                                                    <li>
+                                                        <a href="#" data-toggle="modal" data-target="#publishModal" id="confirmPublish"><i class="fa fa-ban"></i> Ukryj</a>
+                                                    </li>
+                                                    <li><a href="#" data-toggle="modal" data-target="#deleteModal"><i class="fa fa-trash"></i> Usuń</a></li>
                                                 </ul>
                                             </div>
                                         </td>
-                                    </tr>
                                     <tr>
                                         <td>2</td>
                                         <td>Logo.png</td>
                                         <td class="hidden-sm hidden-xs">2015-06-07</td>
                                         <td class="hidden-sm hidden-xs">Jan Kowalski</td>
-                                         <td class="hidden-sm hidden-xs">2015-06-07</td>
+                                        <td class="hidden-sm hidden-xs">2015-06-07</td>
                                         <td>Lorem ipsum dolor sitmper ligula nec accumsan.</td>
-                                         <td>
-                                            <a href="https://smbenefittest.blob.core.windows.net/public/Nowa_karta_benefitsport.jpg" class="btn-u btn-brd btn-brd-hover btn-u-s"><i class="fa fa-link"></i></a>
+                                        <td>Nie</td>
+                                        <td>
+                                           <a class="btn-u btn-brd btn-brd-hover btn-u-s" href="http://wiki.unify.com/images/d/d3/Test.pdf" download><i class="fa fa-download"></i></a>
                                         </td>
                                         <td>
                                             <div class="btn-group">
@@ -128,9 +133,12 @@
                                                     <span class="sr-only">Toggle Dropdown</span>                            
                                                 </button>
                                                 <ul class="dropdown-menu" role="menu">
-                                                    <li><a href="#"><i class="fa fa-download"></i> Pobierz</a></li>
-                                                    <li><a href="#"><i class="fa fa-edit"></i> Edytuj</a></li>
-                                                    <li><a href="#"><i class="fa fa-trash"></i> Usuń</a></li>
+                                                    <li><a href="edit_file.html"><i class="fa fa-edit"></i> Edytuj</a></li>
+                                                    <li><a href="#"><i class="fa fa-link"></i> Skopiuj link</a></li>
+                                                    <li>
+                                                        <a href="#" data-toggle="modal" data-target="#publishModal" id="confirmPublish"><i class="fa fa-ban"></i> Ukryj</a>
+                                                    </li>
+                                                    <li><a href="#" data-toggle="modal" data-target="#deleteModal"><i class="fa fa-trash"></i> Usuń</a></li>
                                                 </ul>
                                             </div>
                                         </td>
@@ -140,10 +148,11 @@
                                         <td>Regulamin.pdf</td>
                                         <td class="hidden-sm hidden-xs">2015-06-07</td>
                                         <td class="hidden-sm hidden-xs">Jan Kowalski</td>
-                                         <td class="hidden-sm hidden-xs">2015-06-07</td>
+                                        <td class="hidden-sm hidden-xs">2015-06-07</td>
                                         <td>Lorem ipsum dolor sit amet, consectetur adipiscing eelementum convallis t sapien velit, varius eu orci nec, facilisis commodo turpis. Curabitur ac egestas odio, quis venenatis lorem. Nulla accumsan semper ligula nec accumsan.</td>
-                                         <td>
-                                            <a href="https://smbenefittest.blob.core.windows.net/public/Nowa_karta_benefitsport.jpg" class="btn-u btn-brd btn-brd-hover btn-u-s"><i class="fa fa-link"></i></a>
+                                        <td>Tak</td> 
+                                        <td>
+                                           <a class="btn-u btn-brd btn-brd-hover btn-u-s" href="http://wiki.unify.com/images/d/d3/Test.pdf" download><i class="fa fa-download"></i></a>
                                         </td>
                                         <td>
                                             <div class="btn-group">
@@ -152,9 +161,12 @@
                                                     <span class="sr-only">Toggle Dropdown</span>                            
                                                 </button>
                                                 <ul class="dropdown-menu" role="menu">
-                                                    <li><a href="#"><i class="fa fa-download"></i> Pobierz</a></li>
-                                                    <li><a href="#"><i class="fa fa-edit"></i> Edytuj</a></li>
-                                                    <li><a href="#"><i class="fa fa-trash"></i> Usuń</a></li>
+                                                    <li><a href="edit_file.html"><i class="fa fa-edit"></i> Edytuj</a></li>
+                                                    <li><a href="#"><i class="fa fa-link"></i> Skopiuj link</a></li>
+                                                    <li>
+                                                        <a href="#" data-toggle="modal" data-target="#publishModal" id="confirmPublish"><i class="fa fa-ban"></i> Ukryj</a>
+                                                    </li>
+                                                    <li><a href="#" data-toggle="modal" data-target="#deleteModal"><i class="fa fa-trash"></i> Usuń</a></li>
                                                 </ul>
                                             </div>
                                         </td>
@@ -168,6 +180,8 @@
                 </div>          
             </div><!--/container-->     
             <!--=== End Content Part ===-->
+            <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true"></div>
+            <div class="modal fade" id="publishModal" tabindex="-1" role="dialog" aria-labelledby="publishModalLabel" aria-hidden="true"></div>
         </div><!--/End Wrapepr-->
         <!--=== Footer Version 1 ===-->
         <div class="footer-v1" id="includedContentFooter">
@@ -195,6 +209,7 @@
                             "url": "assets/plugins/datatable/lang/Polish.json"
                         }
                     });
+                    $('.dropdown-toggle').dropdown();
                 });
             });
         </script>
@@ -202,6 +217,8 @@
             $(function () {
                 $("#includedContentHeader").load("header_backend.html");
                 $("#includedContentFooter").load("footer.html");
+                $("#deleteModal").load("delete_file.html");
+                $("#publishModal").load("publish_file.html");
             });
         </script> 
         <!--[if lt IE 9]>
