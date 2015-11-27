@@ -1,0 +1,33 @@
+<!-- Modal -->
+
+<div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+            <button aria-hidden="true" data-dismiss="modal" class="close" type="button">×</button>
+            <h4 id="myModalPublish" class="modal-title">Usuń artykuł</h4>
+        </div>
+        <div class="modal-body">
+            <div class="cbp_tmlabel">
+                <p>Czy na pewno chcesz usunąć artykuł?
+                </p>
+                <p>
+                    Tej operacji nie można cofnąć!
+                </p>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn-u btn-u-default" onclick=" $('#confirmPublishModal').modal('hide')">Anuluj</button>
+             <button id="confirmButton" type="button" class="btn-u">Usuń</button>
+        </div>
+    </div>
+</div>
+<!-- End Modal -->
+
+
+<script type="text/javascript">
+    jQuery(document).ready(function () {
+        $('#confirmButton').click(function () {
+            $('#deleteModal').modal('hide');
+        });
+    });
+</script>

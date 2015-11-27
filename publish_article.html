@@ -1,0 +1,30 @@
+<!-- Modal -->
+
+<div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+            <button aria-hidden="true" data-dismiss="modal" class="close" type="button">×</button>
+            <h4 id="myModalPublish" class="modal-title">Ukryj/Publikuj artykuł</h4>
+        </div>
+        <div class="modal-body">
+            <div class="cbp_tmlabel">
+                Czy na pewno chcesz ukryj/opublikować ten artykuł z/w systemu/systemie? 
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn-u btn-u-default" onclick=" $('#publishModal').modal('hide')">Anuluj</button>
+             <button id="publishButton" type="button" class="btn-u">Ukryj/Publikuj</button>
+        
+        </div>
+
+    </div>
+</div>
+<!-- End Modal -->
+
+<script type="text/javascript">
+    jQuery(document).ready(function () {
+        $('#publishButton').click(function () {
+            $('#publishModal').modal('hide');
+        });
+    });
+</script>
