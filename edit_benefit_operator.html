@@ -59,6 +59,12 @@
         <script type="text/javascript" src="assets/js/bootstrap-multiselect.js"></script>
         <script type="text/javascript" src="assets/js/bootstrap-multiselect-collapsible-groups.js"></script>
 
+        <link rel="stylesheet" href="assets/css/jquery.fileupload.css">
+        <link rel="stylesheet" href="assets/css/jquery.fileupload-ui.css">
+        <!-- CSS adjustments for browsers with JavaScript disabled -->
+        <noscript><link rel="stylesheet" href="assets/css/jquery.fileupload-noscript.css"></noscript>
+        <noscript><link rel="stylesheet" href="assets/css/jquery.fileupload-ui-noscript.css"></noscript>
+
     </head>
 
     <body>    
@@ -87,7 +93,7 @@
                     <div class="col-md-8 col-md-offset-2 margin-bottom-50">
                         <!-- Checkout-Form -->
                         <form action="list_benefit_operators.html" id="sky-form" class="sky-form">
-                            <header>Edytuj dane operatora Beneditu (1)</header>
+                            <header>Edytuj dane operatora Benefitu </header>
                             <fieldset>                  
                                 <div class="row">
                                     <section class="col col-6">
@@ -144,23 +150,37 @@
                                         </label>
                                     </section>
                                 </div>
+                            </fieldset>
+                            <fieldset>
                                 <div class="row">
-
-                                    <section class="col col-6">
-                                        <label class="label">Hasło</label>
-                                        <label class="input">
-                                            <i class="icon-prepend fa fa-lock"></i>
-                                            <input type="password" name="password" id="password">
-                                        </label>
-                                    </section>
-
-                                    <section class="col col-6">
-                                        <label class="label">Powtórz hasło</label>
-                                        <label class="input">
-                                            <i class="icon-prepend fa fa-lock"></i>
-                                            <input type="password" name="passwordConfirm">
-                                        </label>
-                                    </section>
+                                    <div class="lightBoxGallery col-sm-3 ">
+                                        <img src="assets/img/default-avatar.png" alt="logo" class="pull-right img-responsive">
+                                    </div>
+                                    <div class="col-sm-9">
+                                        <div class="form-group">
+                                            <label>Zdjęcie operatora</label>
+                                            <p> 
+                                                Akceptowane rozszerzania plików: png, jpg, jpeg, bmp.
+                                                </br>
+                                                Maksymalny rozmiar plików 5MB.
+                                            </p>
+                                             <div class="input-group margin-bottom-20">
+                                        <section>
+                                            <span class="btn btn-success fileinput-button">
+                                                <i class="glyphicon glyphicon-plus"></i>
+                                                <span>Wybierz zdjęcie...</span>
+                                                <input type="file" name="files[]">
+                                            </span>
+                                            <button type="button" class="btn btn-danger delete">
+                                                <i class="glyphicon glyphicon-trash"></i>
+                                                <span>Usuń</span>
+                                            </button>
+                                            <span class="fileupload-process"></span>
+                                        </section>
+                                    </div>
+                                        </div>
+                                    </div>
+                                   
                                 </div>
                             </fieldset>
                             <fieldset>
@@ -172,26 +192,6 @@
                                 </section>
                             </fieldset>
                             <fieldset>
-
-                                <section>
-                                    <label class="label"> Partnerzy opiekuna </label>
-                                    <script type="text/javascript">
-                                        $(document).ready(function () {
-                                            $('#example-filter-placeholder2').multiselect({
-                                                enableFiltering: true,
-                                                filterPlaceholder: 'Wybierz partnera...'
-                                            });
-                                        });
-                                    </script>
-
-                                    <select id="example-filter-placeholder2" multiple="multiple" style="width:100%">
-                                        <option selected> (1212) Tyger Gym </option>
-                                        <option> (12313) Calypso spółka akcyjna</option>
-                                        <option selected> (1232) Fit Active</option>
-                                        <option> (1232) Fit</option>
-                                    </select>
-                                </section>
-
                                 <section>
                                     <div class="margin-bottom-20">
                                         <div class="btn-group">
