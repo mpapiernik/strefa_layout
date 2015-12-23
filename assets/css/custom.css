@@ -7,3 +7,91 @@ td a.btn-u {
 .bootstrap-datetimepicker-widget tr:hover {
     background-color: #808080;
 }
+
+/*--------------------------------------------------
+    [8. Header - Fixed]
+----------------------------------------------------*/
+
+/*Header*/
+.header-fixed .header {
+	height: auto;
+}
+
+.header-fixed .header.header-sticky {
+	margin-top: 0;
+	transition: all 0.2s ease-in-out;
+}
+
+.header-fixed .header.header-fixed-shrink {
+	top: 0;
+	left: 0;
+	width: 100%;
+	/*height: 95px;*/
+	z-index: 999;
+	position: fixed;
+	margin-top: -35px;
+	border-bottom: none;
+	box-shadow: 0 0 3px #bbb;
+	background: rgba(255,255,255, 0.96);
+	transition: all 0.3s ease-in-out;
+}
+
+@media (max-width: 991px) {
+	/*Header*/
+	.header-fixed .header,
+	.header-fixed .header.header-fixed-shrink {
+		height: inherit;
+		position: relative;
+	}
+}
+
+@media (min-width: 992px) {
+	/*Container*/
+	.header-fixed .header.header-fixed-shrink > .container {
+		margin-bottom: -46px;
+	}
+
+	/*Logo*/
+	.header-fixed .header.header-fixed-shrink .logo img {
+		max-width: 105px;
+		margin: 45px 0 -4px;
+	}
+
+	/*Navbar Nav*/
+	.header-fixed .header.header-fixed-shrink .navbar-nav > li > a {
+		padding-top: 19px;
+		padding-bottom: 19px;
+	}
+
+	.header-fixed .header.header-fixed-shrink .navbar-nav > li > a:hover,
+	.header-fixed .header.header-fixed-shrink .navbar-nav > .active > a {
+		border-bottom: none;
+	}
+
+	/*Dropdown*/
+	.header-fixed .header.header-fixed-shrink .dropdown > a:after {
+		top: 20px;
+	}
+
+	/*Search*/
+	.header-fixed .header.header-fixed-shrink .nav > li > .search {
+		color: #777;
+		padding: 20px 0 22px;
+		background: inherit;
+		border-bottom: none;
+	}
+
+	.header-fixed .header.header-fixed-shrink .nav .search-open {
+		top: 60px;
+	}
+}
+
+
+/*--------------------------------------------------
+    [9. Header - Fixed Boxed]
+----------------------------------------------------*/
+
+.boxed-layout.header-fixed .header.header-sticky {
+	left: inherit;
+	width: inherit;
+}
