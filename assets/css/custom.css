@@ -3,3 +3,7 @@
 td a.btn-u {
   color: #555 !important; 
 }
+
+.bootstrap-datetimepicker-widget tr:hover {
+    background-color: #808080;
+}
