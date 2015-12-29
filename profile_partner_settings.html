@@ -1,0 +1,284 @@
+<!DOCTYPE html> 
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->  
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->  
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->  
+    <head>
+        <title>Panel Partnera Benefit Systems</title>
+
+        <!-- Meta -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <!-- Favicon -->
+        <link rel="shortcut icon" href="favicon.ico">
+
+        <!-- Web Fonts -->
+        <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:400,300,600&amp;subset=cyrillic,latin">
+
+        <!-- CSS Global Compulsory -->
+        <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+
+        <!-- CSS Header and Footer -->
+        <link rel="stylesheet" href="assets/css/headers/header-default.css">
+        <link rel="stylesheet" href="assets/css/footers/footer-v1.css">
+
+        <!-- CSS Implementing Plugins -->
+        <link rel="stylesheet" href="assets/plugins/animate.css">
+        <link rel="stylesheet" href="assets/plugins/line-icons/line-icons.css">
+        <link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.min.css">
+
+        <link rel="stylesheet" href="assets/plugins/sky-forms-pro/skyforms/css/sky-forms.css">
+        <link rel="stylesheet" href="assets/plugins/sky-forms-pro/skyforms/custom/custom-sky-forms.css">
+
+        <!-- CSS Customization -->
+        <link rel="stylesheet" href="assets/css/theme-colors/dark-red.css">
+
+        <!-- DataTables -->
+        <link rel="stylesheet" type="text/css" href="assets/plugins/datatable/css/jquery.dataTables.css">
+        <link rel="stylesheet" href="assets/css/jquery.fileupload.css">
+        <link rel="stylesheet" href="assets/css/jquery.fileupload-ui.css">
+        <!-- CSS adjustments for browsers with JavaScript disabled -->
+        <noscript><link rel="stylesheet" href="assets/css/jquery.fileupload-noscript.css"></noscript>
+        <noscript><link rel="stylesheet" href="assets/css/jquery.fileupload-ui-noscript.css"></noscript>
+    </head>
+
+    <body>    
+        <div class="wrapper">
+            <!--=== Header ===-->    
+            <div class="header" id="includedContentHeader">
+            </div>
+            <!--=== End Header ===--> 
+            <!--=== Breadcrumbs ===-->
+            <div class="breadcrumbs">
+                <div class="container">
+                    <h1 class="pull-left">Ustawienia partnera Calypso Spółka Akcyjna</h1>
+                    <ul class="pull-right breadcrumb">
+                        <li><a href="index_backend.html">Home</a></li>
+                        <li><a href="list_partners.html">Lista partnerów</a></li>
+                        <li><a href="profile_partner_settings.html">Ustawienia partnera</a></li>
+                    </ul>
+                </div>
+            </div><!--/breadcrumbs-->
+            <!--=== End Breadcrumbs ===-->
+
+            <!--=== Content Part ===-->
+            <div class="container content">     
+                <div class="row">
+                    <!-- Begin Content -->
+                    <div class="col-md-12 margin-bottom-50">
+                        <div class="row">
+                            <div class="col-md-12 blog">
+                                <div id ="settingsTab" class="news-v3-in">
+                                    <form action="" id="sky-form" class="sky-form">
+                                        <fieldset>
+                                            <h4>Dostęp do modułu dokumentów kosztowych</h4>
+                                            <section>
+                                                <label class="checkbox"><input id="publicCheckbox" type="checkbox" name="public" onclick="showPartnerDiv()"><i></i>Wyłącz dostęp</label>
+                                            </section>
+                                            <section>
+                                                <label class="label">Przyczyna wstrzymania dostępu do modułu dokumentów kosztowych</label>
+                                                <label class="textarea">
+                                                    <i class="icon-append fa fa-comment"></i>
+                                                    <textarea rows="6" name="message" id="message"></textarea>
+                                                </label>
+                                            </section>
+                                        </fieldset>
+                                        <fieldset>
+                                            <div class="margin-bottom-20">
+                                                <div class="btn-group">
+                                                    <button type="button" class="btn-u"><i class="fa fa-refresh fa-fw"></i>Synchronizuj dane partnera</button>
+                                                </div>
+                                                <!-- End Single button -->                    
+                                            </div>
+                                            <div class="row">
+                                                <section class="col col-3">
+                                                    <label class="label">Sposób rozliczania</label>
+                                                    <label class="select">
+                                                        <select name="service_desc">
+                                                            <option value="1" selected=""></option>
+                                                            <option>netto</option>
+                                                            <option>brutto</option>
+                                                        </select>
+                                                    </label>
+                                                </section>
+                                            </div>
+                                            <div class="input-group margin-bottom-20">
+                                                <section>
+                                                    <label class="label">Pieczątka</label>
+                                                    <span class="btn btn-success fileinput-button">
+                                                        <i class="glyphicon glyphicon-plus"></i>
+                                                        <span>Wybierz plik...</span>
+                                                        <input type="file" name="files[]" multiple>
+                                                    </span>
+                                                    <span class="fileupload-process"></span>
+                                                </section>
+                                            </div>
+                                        </fieldset>
+                                        <fieldset>
+                                            <div class="alert alert-danger fade in text-center">
+                                                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                                                Błędny szablon numeracji: w każdym szablonie powinien się pojawić 1 znacznik %i
+                                            </div> 
+                                            <div class="alert alert-danger fade in text-center">
+                                                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                                                Błędny szablon numeracji: znak po % musi mieć wartość jednego z tagów (R, r, m, d, i)
+                                            </div> 
+                                            <h4>Lista szablonów numeracji</h4>
+                                            <table class="table table-striped" id="numberTemplateList">
+                                                <thead>
+                                                    <tr>
+                                                        <th class="col-1">#</th>
+                                                        <th class="col-2">Rodzaj&nbsp;dokumentu</th>
+                                                        <th class="col-4">Szablon</th>
+                                                        <th>Kolejny&nbsp;numer</th>
+                                                        <th class="col-4">Wartosć&nbsp;systemowa</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>1</td>
+                                                        <td>Faktura VAT</td>
+                                                        <td>FAKTURA /%R/%m/%i</td>
+                                                        <td>23</td>
+                                                        <td>FAKTURA /%R/%m/%i</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2</td>
+                                                        <td>Rachunek</td>
+                                                        <td></td>
+                                                        <td>1</td>
+                                                        <td>RACHUNEK /%R/%m/%i</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>3</td>
+                                                        <td>Nota korygująca</td>
+                                                        <td>NOTA KORYGUJACA /%R/%m/%i</td>
+                                                        <td>2</td>
+                                                        <td>NOTA /%R/%m/%d/%i</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>4</td>
+                                                        <td>Korekta faktury</td>
+                                                        <td></td>
+                                                        <td>1</td>
+                                                        <td>FAKTURA KORYGUJĄCA /%R/%m/%i</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </fieldset>
+                                        <fieldset>
+                                            <div class="row">
+                                                <section class="col col-12">
+                                                    <!-- Unordered Lists -->
+                                                    <div class="headline"><h5>Legenda - tagi numeracji</h5></div>
+                                                    <ul>
+                                                        <li>%R - aktualny rok, zapis czterocyfrowy (np.: 2015)</li>
+                                                        <li>%r - aktualny rok, zapis dwucyfrowy (np.: 07)</li>
+                                                        <li>%m - aktualny miesiąc, zapis dwu cyfrowy (np.: 07)</li>
+                                                        <li>%d - aktualny dzień, zapis dwu cyfrowy (np.: 01)</li>
+                                                        <li>%i - kolejny numer (wartość zgodnie z ustawieniem)</li>
+                                                    </ul>
+                                                </section>
+                                            </div>
+                                        </fieldset>
+                                        <footer style="text-align: right;">
+                                            <button type="button" class="btn-u btn-u-default" onclick="window.history.back();">Wróć</button>
+                                            <button type="submit" class="btn-u margin-bottom-5">Zapisz</button>    
+                                        </footer>
+                                    </form>        
+                                </div>
+                            </div>
+                        </div><!--/row-->   
+                    </div>
+                    <!-- End Content -->
+                </div>          
+            </div><!--/container-->     
+            <!--=== End Content Part ===-->
+            <div class="modal fade" id="confirmBlockOperator" tabindex="-1" role="dialog" aria-hidden="true"></div>
+
+        </div><!--/End Wrapepr-->
+        <!--=== Footer Version 1 ===-->
+        <div class="footer-v1" id="includedContentFooter">
+        </div>     
+        <!--=== End Footer Version 1 ===-->
+        <!-- JS Global Compulsory -->           
+        <script type="text/javascript" src="assets/plugins/jquery/jquery.min.js"></script>
+        <script type="text/javascript" src="assets/plugins/jquery/jquery-migrate.min.js"></script>
+        <script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+        <!-- JS Implementing Plugins -->
+        <script type="text/javascript" src="assets/plugins/back-to-top.js"></script>
+        <script type="text/javascript" src="assets/plugins/smoothScroll.js"></script>
+        <!-- JS Customization -->
+        <script type="text/javascript" src="assets/js/custom.js"></script>
+        <!-- JS Page Level -->           
+        <script type="text/javascript" src="assets/js/app.js"></script>
+        <!-- JS DataTables -->
+        <script type="text/javascript" language="javascript" src="assets/plugins/datatable/js/jquery.dataTables.js"></script>
+        <script type="text/javascript" src="assets/js/jquery.tabledit.js"></script>
+        <script type="text/javascript">
+                                                jQuery(document).ready(function () {
+                                                    App.init();
+                                                    $(document).ready(function () {
+                                                        $('#numberTemplateList').DataTable({
+                                                            "searching": false,
+                                                            "paging": false,
+                                                            "ordering": false,
+                                                            "info": false,
+                                                            "language": {
+                                                                "url": "assets/plugins/datatable/lang/Polish.json"
+                                                            }
+                                                        });
+                                                        $('#numberTemplateList').Tabledit({
+                                                            confirmButton: false,
+                                                            deleteButton: false,
+                                                            restoreButton: true,
+                                                            editButton: true,
+                                                            buttons: {
+                                                                edit: {
+                                                                    class: 'btn-u btn-brd btn-brd-hover btn-u-sm btn-u-s',
+                                                                    html: '<i class="fa fa-pencil"></i>',
+                                                                    action: 'edit'
+                                                                },
+                                                                delete: {
+                                                                    class: 'btn-u btn-brd btn-u-dark btn-brd-hover btn-u-sm margin-left-5',
+                                                                    html: '<i class="fa fa-trash"></i>',
+                                                                    action: 'delete'
+                                                                },
+                                                                restore: {
+                                                                    class: 'btn btn-sm btn-warning',
+                                                                    html: 'Przywróć',
+                                                                },
+                                                                save: {
+                                                                    class: 'btn btn-sm btn-success',
+                                                                    html: 'Zapisz'
+                                                                },
+                                                                confirm: {
+                                                                    class: 'btn btn-sm btn-danger',
+                                                                    html: 'Potwierdź'
+                                                                }
+                                                            },
+                                                            columns: {
+                                                                identifier: [0, '#'],
+                                                                editable: [[2, ''], [3, '']]
+                                                            }
+                                                        });
+                                                    });
+                                                });
+        </script>
+        <script>
+            $(function () {
+                $("#includedContentHeader").load("header_backend.html");
+                $("#includedContentFooter").load("footer.html");
+            });
+        </script> 
+        <!--[if lt IE 9]>
+            <script src="assets/plugins/respond.js"></script>
+            <script src="assets/plugins/html5shiv.js"></script>
+            <script src="assets/plugins/placeholder-IE-fixes.js"></script>
+        <![endif]-->
+
+    </body>
+</html> 

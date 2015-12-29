@@ -57,7 +57,8 @@
                     <h1 class="pull-left">Profil partnera Calypso Spółka Akcyjna</h1>
                     <ul class="pull-right breadcrumb">
                         <li><a href="index_backend.html">Home</a></li>
-                        <li><a href="list_partners.html">Partnerzy</a></li>
+                        <li><a href="list_partners.html">Lista partnerów</a></li>
+                        <li><a href="profile_partner.html">Szczegóły ogólne partnera</a></li>
                     </ul>
                 </div>
             </div><!--/breadcrumbs-->
@@ -72,12 +73,6 @@
                         <div class="row">
                             <!-- Horizontal Description -->
                             <div class="col-md-12">
-                                <div class="">
-                                    <div class="btn-group">
-                                        <a href="edit_partner.html" class="button btn-u "><i class="fa fa-pencil fa-fw"></i>Edytuj partnera</a>  
-                                    </div>
-                                </div>
-                                <hr>
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="headline"><h2>Calypso <i class="fa fa-question-circle app-tooltip-header" data-toggle="tooltip" data-placement="bottom" title="Wniosek o edycje"></i></h2></div>
@@ -148,121 +143,6 @@
                                 </div>
                             </div>
                         </div><!--/row-->
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="headline"><h2>Ustawienia <a id="appendSettings"><i id="settingsArrow" class="fa fa-sort-desc"></i></a></h2></div>
-                            </div>
-                        </div><!--/row-->
-                        <div class="row">
-                            <div class="col-md-12 blog">
-                                <div id ="settingsTab" class="news-v3-in">
-                                    <form action="" id="sky-form" class="sky-form">
-                                        <fieldset>
-                                            <div class="margin-bottom-20">
-                                                <div class="btn-group">
-                                                    <button type="button" class="btn-u"><i class="fa fa-refresh fa-fw"></i>Synchronizuj dane partnera</button>
-                                                </div>
-                                                <!-- End Single button -->                    
-                                            </div>
-                                            <div class="row">
-                                                <section class="col col-3">
-                                                    <label class="label">Sposób rozliczania</label>
-                                                    <label class="select">
-                                                        <select name="service_desc">
-                                                            <option value="1" selected=""></option>
-                                                            <option>netto</option>
-                                                            <option>brutto</option>
-                                                        </select>
-                                                    </label>
-                                                </section>
-                                            </div>
-                                            <div class="input-group margin-bottom-20">
-                                                <section>
-                                                    <label class="label">Pieczątka</label>
-                                                    <span class="btn btn-success fileinput-button">
-                                                        <i class="glyphicon glyphicon-plus"></i>
-                                                        <span>Wybierz plik...</span>
-                                                        <input type="file" name="files[]" multiple>
-                                                    </span>
-                                                    <span class="fileupload-process"></span>
-                                                </section>
-                                            </div>
-                                        </fieldset>
-                                        <fieldset>
-                                            <div class="alert alert-danger fade in text-center">
-                                                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-                                                Błędny szablon numeracji: w każdym szablonie powinien się pojawić 1 znacznik %i
-                                            </div> 
-                                            <div class="alert alert-danger fade in text-center">
-                                                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-                                                Błędny szablon numeracji: znak po % musi mieć wartość jednego z tagów (R, r, m, d, i)
-                                            </div> 
-                                            <h4>Lista szablonów numeracji</h4>
-                                            <table class="table table-striped" id="numberTemplateList">
-                                                <thead>
-                                                    <tr>
-                                                        <th class="col-1">#</th>
-                                                        <th class="col-2">Rodzaj&nbsp;dokumentu</th>
-                                                        <th class="col-4">Szablon</th>
-                                                        <th>Kolejny&nbsp;numer</th>
-                                                        <th class="col-4">Wartosć&nbsp;systemowa</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <td>1</td>
-                                                        <td>Faktura VAT</td>
-                                                        <td>FAKTURA /%R/%m/%i</td>
-                                                        <td>23</td>
-                                                        <td>FAKTURA /%R/%m/%i</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>2</td>
-                                                        <td>Rachunek</td>
-                                                        <td></td>
-                                                        <td>1</td>
-                                                        <td>RACHUNEK /%R/%m/%i</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>3</td>
-                                                        <td>Nota korygująca</td>
-                                                        <td>NOTA KORYGUJACA /%R/%m/%i</td>
-                                                        <td>2</td>
-                                                        <td>NOTA /%R/%m/%d/%i</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>4</td>
-                                                        <td>Korekta faktury</td>
-                                                        <td></td>
-                                                        <td>1</td>
-                                                        <td>FAKTURA KORYGUJĄCA /%R/%m/%i</td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </fieldset>
-                                        <fieldset>
-                                            <div class="row">
-                                                <section class="col col-12">
-                                                    <!-- Unordered Lists -->
-                                                    <div class="headline"><h5>Legenda - tagi numeracji</h5></div>
-                                                    <ul>
-                                                        <li>%R - aktualny rok, zapis czterocyfrowy (np.: 2015)</li>
-                                                        <li>%r - aktualny rok, zapis dwucyfrowy (np.: 07)</li>
-                                                        <li>%m - aktualny miesiąc, zapis dwu cyfrowy (np.: 07)</li>
-                                                        <li>%d - aktualny dzień, zapis dwu cyfrowy (np.: 01)</li>
-                                                        <li>%i - kolejny numer (wartość zgodnie z ustawieniem)</li>
-                                                    </ul>
-                                                </section>
-                                            </div>
-                                        </fieldset>
-                                        <footer style="text-align: right;">
-                                            <button type="button" class="btn-u btn-u-default" onclick="window.history.back();">Wróć</button>
-                                            <button type="submit" class="btn-u margin-bottom-5">Zapisz</button>    
-                                        </footer>
-                                    </form>        
-                                </div>
-                            </div>
-                        </div><!--/row-->   
                     </div>
                     <!-- End Content -->
                 </div>          
