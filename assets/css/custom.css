@@ -95,3 +95,21 @@ td a.btn-u {
 	left: inherit;
 	width: inherit;
 }
+
+@media (max-width: 1200px) {
+	/*Logo*/
+	.logo img {
+		max-width: 105px;
+		margin: 45px 0 -4px;
+	}
+        
+}
+
+@media (max-width: 992px) {
+	/*Logo*/
+	.logo img {
+		max-width: 175px;
+		margin: 45px 0 -4px;
+	}
+        
+}
