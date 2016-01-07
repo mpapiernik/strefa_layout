@@ -70,9 +70,9 @@
             </div>
             <!--=== End Header ===--> 
             <!--=== Breadcrumbs ===-->
-           <div class="breadcrumbs">
+            <div class="breadcrumbs">
                 <div class="container">
-                    <h1 class="pull-left">Nowa grupa Partnerów</h1>
+                    <h1 class="pull-left">Szczegóły grupy Partnerów</h1>
                     <ul class="pull-right breadcrumb">
                         <li><a href="wall.html">Home</a></li>
                         <li><a href="list_partners.html">Partnerzy</a></li>
@@ -94,7 +94,7 @@
                                     <label class="label">Nazwa</label>
                                     <label class="input">
                                         <i class="icon-append fa fa-tag"></i>
-                                        <input type="text" name="subject" id="subject">
+                                        <input type="text" name="subject" id="subject" disabled="" value="Grupa Calypso i Tyger">
                                     </label>
                                 </section>
                             </fieldset>
@@ -102,12 +102,12 @@
                                 <section>
                                     <div id="partnerState">
                                         <label class="label">Lista partnerów</label>
-                                        <select multiple="multiple" size="10" name="duallistbox_demo1[]" id="duallistbox">
+                                        <select multiple="multiple" size="10" name="duallistbox_demo1[]"  id="duallistbox">
                                             <option value="option1">Option 1</option>
-                                            <option value="option2">Option 2</option>
+                                            <option value="option2" selected="selected">Option 2</option>
                                             <option value="option4">Option 4</option>
-                                            <option value="option5">Option 5</option>
-                                            <option value="option6">Option 6</option>
+                                            <option value="option5" selected="selected">Option 5</option>
+                                            <option value="option6" selected="selected">Option 6</option>
                                             <option value="option7">Option 7</option>
                                             <option value="option8">Option 8</option>
                                             <option value="option9">Option 9</option>
@@ -115,13 +115,18 @@
                                         </select>
                                         <script>
                                             var demo1 = $('select[name="duallistbox_demo1[]"]').bootstrapDualListbox();
+                                            $('select[name="duallistbox_demo1[]_helper1"]').prop('disabled', true);
+                                            $('select[name="duallistbox_demo1[]_helper2"]').prop('disabled', true);
+                                            $('select[name="duallistbox_demo1[]"]').parent().find('.moveall').prop('disabled', true);
+                                            $('select[name="duallistbox_demo1[]"]').parent().find('.move').prop('disabled', true);
+                                            $('select[name="duallistbox_demo1[]"]').parent().find('.removeall').prop('disabled', true);
+                                            $('select[name="duallistbox_demo1[]"]').parent().find('.remove').prop('disabled', true);
                                         </script>
                                     </div>
                                 </section>
                             </fieldset>
                             <footer style="text-align: right;">
                                 <button type="button" class="btn-u btn-u-default" onclick="window.history.back();">Wróć</button>
-                                <a href="list_partners_group.html" class="btn-u">Dodaj</a>  
                             </footer>
                         </form>         
                         <!-- Post -->
@@ -170,22 +175,21 @@
         <script type="text/javascript" src="assets/js/site.js"></script>
         <script type="text/javascript">
                                     jQuery(document).ready(function () {
-                                         App.init();
+                                        App.init();
                                         ContactForm.initContactForm();
                                         Masking.initMasking();
                                         Datepicker.initDatepicker();
                                         Validation.initValidation();
                                         FancyBox.initFancybox();
-                                     
+
                                     });
         </script>
         <script>
             $(function () {
                 $("#includedContentHeader").load("header_backend.html");
                 $("#includedContentFooter").load("footer.html");
-                $("#duallistbox").bootstrapDualListbox({
-                       showFilterInputs: true
-                });
+              
+               
             });
         </script> 
         <!--[if lt IE 9]>
