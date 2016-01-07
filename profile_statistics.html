@@ -136,6 +136,9 @@
                                                         </span>
                                                     </div>
                                                 </section>
+                                                 <section class="col col-12 pull-right">
+                                                        <a href="#" class="btn-u"> Ustaw</a> 
+                                                    </section>
                                             </div>
                                         </fieldset>
                                         <fieldset>
@@ -186,6 +189,9 @@
                                                             </span>
                                                         </div>
                                                     </section>
+                                                     <section class="col col-12 pull-right">
+                                                        <a href="#" class="btn-u"> Ustaw</a> 
+                                                    </section>
                                                 </div>
                                             </section>
                                         </fieldset>
@@ -203,7 +209,7 @@
                                                                 <tr>
                                                                     <td class="summary summary-text summary-row">ŁĄCZNIE</td>
                                                                     <td class="summary-cell summary-row">325</td>
-                                                                    <td class="hidden-sm summary-row"></td>
+                                                                    <td class="summary-row"></td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td class="summary summary-text">W tym</td>
@@ -269,10 +275,15 @@
                                                             </span>
                                                         </div>
                                                     </section>
+                                                     <section class="col col-12 pull-right">
+                                                        <a href="#" class="btn-u"> Ustaw</a> 
+                                                    </section>
                                                 </div>
                                             </section>
                                         </fieldset>
                                         <footer style="text-align: right;">
+                                            <a href="#" class="btn-u"> <i class="fa fa-plus fa-file-excel-o"></i> Eksportuj CSV</a> 
+                                            <a href="#" class="btn-u btn-u-dark"> <i class="fa fa-plus fa-file-pdf-o"></i> Eksportuj PDF </a> 
                                             <button type="button" class="btn-u btn-u-default" onclick="window.history.back();">Wróć</button>
                                         </footer>
                                     </form>        
@@ -442,8 +453,10 @@
 
             // Revealing module pattern to store some global data that will be shared between different functions.
             var d3CalendarGlobals = function () {
-                var calendarWidth = 1078,
-                        calendarHeight = 640,
+                var skyFormWidth = $("#chartMonthly").parent().width();
+                
+                var calendarWidth = skyFormWidth,
+                        calendarHeight = 0.6 * skyFormWidth,
                         gridXTranslation = 10,
                         gridYTranslation = 40,
                         cellColorForCurrentMonth = '#cccccc',
