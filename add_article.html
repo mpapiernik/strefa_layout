@@ -55,11 +55,19 @@
         <link rel="stylesheet" href="assets/plugins/cube-portfolio/cubeportfolio/css/cubeportfolio.min.css">    
         <link rel="stylesheet" href="assets/plugins/cube-portfolio/cubeportfolio/custom/custom-cubeportfolio.css">
         <link rel="stylesheet" href="assets/plugins/fancybox/source/jquery.fancybox.css">   
+        <link rel="stylesheet" href="assets/plugins/sky-forms-pro/skyforms/css/sky-forms.css">
+        <link rel="stylesheet" href="assets/plugins/sky-forms-pro/skyforms/custom/custom-sky-forms.css">
+        <link rel="stylesheet" href="assets/css/jquery.fileupload.css">
+        <link rel="stylesheet" href="assets/css/jquery.fileupload-ui.css">
+        <!-- CSS adjustments for browsers with JavaScript disabled -->
+        <noscript><link rel="stylesheet" href="assets/css/jquery.fileupload-noscript.css"></noscript>
+        <noscript><link rel="stylesheet" href="assets/css/jquery.fileupload-ui-noscript.css"></noscript>
 
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
         <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/prettify/r298/run_prettify.min.js"></script>
         <script src="assets/js/jquery.bootstrap-duallistbox.js"></script>
+        <link rel="stylesheet" href="assets/plugins/bootstrap-tagsinput-latest/dist/bootstrap-tagsinput.css">
 
     </head>
 
@@ -72,10 +80,10 @@
             <!--=== Breadcrumbs ===-->
             <div class="breadcrumbs">
                 <div class="container">
-                    <h1 class="pull-left">Nowy post</h1>
+                    <h1 class="pull-left">Nowy artykuł</h1>
                     <ul class="pull-right breadcrumb">
-                        <li><a href="index_backend.html">Home</a></li>
-                        <li><a href="list_posts.html">Posty</a></li>
+                        <li><a href="wall.html">Home</a></li>
+                        <li><a href="list_articles_backend.html">Artykuły</a></li>
                     </ul>
                 </div>
             </div><!--/breadcrumbs-->
@@ -87,25 +95,31 @@
                     <!-- Begin Content -->
                     <div class="col-md-8 col-md-offset-2 margin-bottom-50">
                         <!-- Post -->
-                        <form action="assets/php/demo-contacts-process.php" method="post" id="sky-form3" class="sky-form">
-                            <header>Dodaj nowy post</header>
-
+                        <form action="" method="post" id="sky-form3" class="sky-form">
                             <fieldset>                  
                                 <section>
                                     <label class="label">Tytuł</label>
                                     <label class="input">
-                                        <i class="icon-append fa fa-tag"></i>
-                                        <input type="text" name="subject" id="subject">
+                                        <i class="icon-append fa fa-file-text"></i>
+                                        <input type="text" name="subject" id="subject" required="">
                                     </label>
                                 </section>
 
                                 <section>
-                                    <label class="label">Treść posta</label>
+                                    <label class="label">Krótki opis</label>
                                     <label class="textarea">
                                         <i class="icon-append fa fa-comment"></i>
-                                        <textarea rows="6" name="message" id="message"></textarea>
+                                        <textarea rows="3" name="description" id="message"></textarea>
                                     </label>
                                 </section>
+
+                                <section>
+                                    <label class="label">Treść</label>
+
+                                    //** Miejsce na CKEditor **//
+
+                                </section>
+
                             </fieldset>
                             <fieldset>      
                                 <div class="row" >
@@ -115,13 +129,13 @@
                                             <section class="col col-6">
                                                 <label class="input">
                                                     <i class="icon-append fa fa-calendar"></i>
-                                                    <input type="text" name="date" id="start">
+                                                    <input type="text" name="date" id="start" required="">
                                                 </label>
                                             </section>
                                             <section class="col col-6">
                                                 <label class="input">
                                                     <i class="icon-append fa fa-clock-o"></i>
-                                                    <input type="text" autocomplete="on" id="startTime">
+                                                    <input type="text" autocomplete="on" id="startTime" required="">
                                                     <script>
                                                         $(function () {
                                                             $('#startTime').timepicker({'step': 15});
@@ -159,62 +173,74 @@
                             </fieldset>
                             <fieldset>    
                                 <section>
-                                    <label class="checkbox"><input id="publicCheckbox" type="checkbox" name="public" onclick="showPartnerDiv()"><i></i>Publiczny</label>
-                                </section>
-                                <section>
-                                    <div id="partnerState">
-                                        <label class="label">Lista partnerów</label>
-                                        <select multiple="multiple" size="10" name="duallistbox_demo1[]" id="duallistbox">
-                                            <option value="option1">Option 1</option>
-                                            <option value="option2">Option 2</option>
-                                            <option id="groupB" value="option3">Grupa B</option>
-                                            <option value="option4">Option 4</option>
-                                            <option value="option5">Option 5</option>
-                                            <option value="option6" selected="selected">Option 6</option>
-                                            <option value="option7">Option 7</option>
-                                            <option value="option8">Option 8</option>
-                                            <option value="option9">Option 9</option>
-                                            <option value="option0">Option 10</option>
-                                        </select>
-
-                                        <script>
-                                            var demo1 = $('select[name="duallistbox_demo1[]"]').bootstrapDualListbox();
-                                            
-                                        </script>
+                                    <label class="label">Galeria</label>
+                                    <div class="input-group margin-bottom-20">
+                                        <section>
+                                            <span class="btn btn-success fileinput-button state-success" id="fileButton">
+                                                <i class="glyphicon glyphicon-plus"></i>
+                                                <span>Wybierz pliki</span>
+                                                <input type="file" id="appbundle_invoice_confirm_files" multiple="" name="appbundle_invoice_confirm[files][]">
+                                            </span>                                
+                                        </section>
                                     </div>
+                                    <table role="presentation" id="attachments_presentation" class="table table-striped">
+                                        <tbody class="files">
+                                            <tr class="template-upload fade in">
+                                                <td class="t-align-l">
+                                                    <p class="name">Test (1).png</p>
+                                                    <strong class="error text-danger"></strong>
+                                                </td>
+                                                <td class="">
+                                                    <label class="input">
+                                                        <input type="text" name="title" placeholder="Wpisz tytuł obrazka">
+                                                    </label>
+                                                </td>
+                                                <td class="t-align-r" style="text-align: right;">                
+                                                    <button class="btn btn-warning cancel">
+                                                        <i class="glyphicon glyphicon-ban-circle"></i>
+                                                        <span>Anuluj</span>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <tr class="template-upload fade in">
+                                                <td class="t-align-l">
+                                                    <p class="name">Test (1) jhcfkhdk dfjhsk sfjk kk k l k hdfsh jk jk jk j kj kjkj j kj kj k jk k j fjkf.jpeg</p>
+                                                    <strong class="error text-danger"></strong>
+                                                </td> 
+                                                <td class="">
+                                                    <label class="input">
+                                                        <input type="text" name="title" placeholder="Wpisz tytuł obrazka">
+                                                    </label>
+                                                </td>
+                                                <td class="t-align-r" style="text-align: right;">                
+                                                    <button class="btn btn-warning cancel">
+                                                        <i class="glyphicon glyphicon-ban-circle"></i>
+                                                        <span>Anuluj</span>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
                                 </section>
+                            </fieldset>
+                            <fieldset>
                                 <section>
-                                    <label class="label">Ogranicz widoczność posta do roli (hierarchicznie)</label>
-                                    <label class="select">
-                                        <select name="role">
-                                            <option value="1">Operator partnera + Operator FK + Administrator</option>
-                                            <option value="2">Operator FK + Administrator</option>
-                                            <option value="3">Administrator</option>
-                                        </select>
-                                        <i></i>
-                                    </label>
-                                </section>
-
-                                <section>
-                                    <label class="label">Link do źródła</label>
+                                    <label class="label">Tagi</label>
                                     <label class="input">
                                         <i class="icon-append fa fa-tag"></i>
-                                        <input type="text" name="link" id="link">
+                                        <input type="text" name="tags" required="">
                                     </label>
                                 </section>
-
                                 <section>
-                                    <label class="checkbox"><input type="checkbox" name="new_window"><i></i>Otwórz link w osobnej karcie</label>
+                                    <label class="checkbox"><input type="checkbox" name="new_window"><i></i>Oznacz jako BEFIT</label>
                                 </section>
-
                                 <section>
-                                    <label class="checkbox"><input type="checkbox" name="important"><i></i>Oznacz post jako ważny</label>
+                                    <label class="checkbox"><input type="checkbox" name="new_window"><i></i>Publikuj artykuł w aktualnościach</label>
                                 </section>
-
                             </fieldset>
                             <footer style="text-align: right;">
                                 <button type="button" class="btn-u btn-u-default" onclick="window.history.back();">Wróć</button>
-                                <a href="index_backend.html" class="btn-u">Dodaj</a>  
+                                <a href="list_articles_backend.html" class="btn-u">Dodaj</a>  
                             </footer>
                         </form>         
                         <!-- Post -->
@@ -261,6 +287,10 @@
         <script type="text/javascript" src="assets/js/app.js"></script>
         <script type="text/javascript" src="assets/js/plugins/fancy-box.js"></script>
         <script type="text/javascript" src="assets/js/site.js"></script>
+        <script src="assets/plugins/bootstrap-tagsinput-latest/dist/bootstrap-tagsinput.min.js"></script>
+        <script src="assets/plugins/bootstrap-tagsinput-latest/examples/assets/app.js"></script>
+        <script src="assets/plugins/bootstrap-tagsinput-latest/examples/assets/app_bs3.js"></script>
+
         <script type="text/javascript">
                                     jQuery(document).ready(function () {
                                         App.init();
@@ -269,12 +299,6 @@
                                         Datepicker.initDatepicker();
                                         Validation.initValidation();
                                         FancyBox.initFancybox();
-
-                                        $('#publicCheckbox').click(function () {
-                                            $('#partnerState').slideToggle('fast', function () {
-                                                // Animation complete.
-                                            });
-                                        });
                                     });
         </script>
         <script>
@@ -288,6 +312,17 @@
             <script src="assets/plugins/html5shiv.js"></script>
             <script src="assets/plugins/placeholder-IE-fixes.js"></script>
         <![endif]-->
+        <script type="text/javascript">
+            jQuery(document).ready(function () {
+                $('#attachments_presentation').slideToggle('fast', function () {
+                });
+                $('#appbundle_invoice_confirm_files').change(function () {
+                    $('#attachments_presentation').slideToggle('fast', function () {
+                        // Animation complete.
+                    });
+                });
+            });
+        </script>
 
     </body>
 </html> 
