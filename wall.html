@@ -38,9 +38,9 @@
 
         <!-- CSS Customization -->
         <link rel="stylesheet" href="assets/css/theme-colors/dark-red.css">
-        
-         <!-- CSS Customization -->
-         <link rel="stylesheet" href="assets/css/custom.css">
+
+        <!-- CSS Customization -->
+        <link rel="stylesheet" href="assets/css/custom.css">
     </head>
 
     <body class="header-fixed">    
@@ -70,11 +70,10 @@
                                 <div class="bg-light text-center">
                                     <h3>Ilość wizyt z danego dnia
                                         <br>
-                                        
+
                                         <br>
                                         <small>do maksymalnej ilości wizyt w ostatnich 30 dni</small>
                                     </h3>
-                                   <h5>Dane aktualne na godz. 12:00</h5>
                                     <div id="chart" class="text-center" ></div>
                                 </div>
                             </div>
@@ -84,7 +83,6 @@
                                         <br>
                                         <small>do maksymalnej ilości wizyt w ostatnich 12 miesiącach</small>
                                     </h3> 
-                                    <h5>Dane aktualne na godz. 12:00</h5>
                                     <div id="chart2" class="text-center" ></div>
                                 </div>
                             </div>
@@ -225,8 +223,8 @@
                 });
                 $("#myModal").load("post_modal.html");
 
-                var chartData = 724;
-                var maxchartData = 830;
+                var chartData = 300;
+                var maxchartData = 1200;
                 var chartDataThreshold = [0.25 * maxchartData, 0.5 * maxchartData, 0.75 * maxchartData, maxchartData];
 
                 var chart = c3.generate({
@@ -244,7 +242,6 @@
                             },
                             show: true // to turn off the min/max labels.
                         },
-                        expand: true,
                         unit: '',
                         min: 0, // 0 is default, //can handle negative min e.g. vacuum / voltage / current flow / rate of change
                         max: maxchartData // 100 is default
@@ -252,7 +249,9 @@
                     },
                     color: {
                         pattern: ['#FF0000', '#F97600', '#F6C600', '#60B044'], // the three color levels for the percentage values.
-                        threshold: chartDataThreshold
+                        threshold: {
+                                    values: chartDataThreshold
+                                }
                     },
                     size: {
                         height: 150,
@@ -260,8 +259,8 @@
                     }
                 });
 
-                var chartData2 = 3240;
-                var maxchartData2 = 11023;
+                var chartData2 = 2;
+                var maxchartData2 = 80;
                 var chartData2Threshold = [0.25 * maxchartData2, 0.5 * maxchartData2, 0.75 * maxchartData2, maxchartData2];
                 var chart2 = c3.generate({
                     bindto: '#chart2',
@@ -280,7 +279,7 @@
                         },
                         unit: '',
                         min: 0, // 0 is default, //can handle negative min e.g. vacuum / voltage / current flow / rate of change
-                        max: 11023 // 100 is default
+                        max: maxchartData2 // 100 is default
 
                     },
                     color: {

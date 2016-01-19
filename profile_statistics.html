@@ -48,13 +48,13 @@
 
         <!-- Load c3.css -->
         <link href="assets/css/c3/c3.css" rel="stylesheet" type="text/css">
-        
-        
+
+
         <!-- CSS Page Style -->    
         <link rel="stylesheet" href="assets/css/pages/page_invoice.css">
 
-        
-         <!-- DataTables -->
+
+        <!-- DataTables -->
         <link rel="stylesheet" type="text/css" href="assets/plugins/datatable/css/jquery.dataTables.css">
 
         <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.9/css/jquery.dataTables.min.css">
@@ -136,9 +136,11 @@
                                                         </span>
                                                     </div>
                                                 </section>
-                                                 <section class="col col-12 pull-right">
-                                                        <a href="#" class="btn-u"> Ustaw</a> 
-                                                    </section>
+                                                <section class="col col-12 pull-right">
+                                                       <a href="#" class="btn-u btn-u-default"> <i class="fa fa-plus fa-file-excel-o"></i> Eksportuj CSV</a> 
+                                                        <a href="#" class="btn-u btn-u-dark"> <i class="fa fa-plus fa-file-pdf-o"></i> Eksportuj PNG </a> 
+                                                    <a href="#" class="btn-u"> Ustaw</a> 
+                                                </section>
                                             </div>
                                         </fieldset>
                                         <fieldset>
@@ -189,7 +191,9 @@
                                                             </span>
                                                         </div>
                                                     </section>
-                                                     <section class="col col-12 pull-right">
+                                                    <section class="col col-12 pull-right">
+                                                        <a href="#" class="btn-u btn-u-default"> <i class="fa fa-plus fa-file-excel-o"></i> Eksportuj CSV</a> 
+                                                        <a href="#" class="btn-u btn-u-dark"> <i class="fa fa-plus fa-file-pdf-o"></i> Eksportuj PNG </a> 
                                                         <a href="#" class="btn-u"> Ustaw</a> 
                                                     </section>
                                                 </div>
@@ -203,7 +207,7 @@
                                             <section>
                                                 <div id="chartMonthly"></div>
                                                 <div class="row">
-                                                     <section class="col col-6 pull-right">
+                                                    <section class="col col-6 pull-right">
                                                         <table class="table table-striped invoice-table">
                                                             <tbody >
                                                                 <tr>
@@ -275,17 +279,14 @@
                                                             </span>
                                                         </div>
                                                     </section>
-                                                     <section class="col col-12 pull-right">
+                                                    <section class="col col-12 pull-right">
+                                                           <a href="#" class="btn-u btn-u-default"> <i class="fa fa-plus fa-file-excel-o"></i> Eksportuj CSV</a> 
+                                                        <a href="#" class="btn-u btn-u-dark"> <i class="fa fa-plus fa-file-pdf-o"></i> Eksportuj PNG </a> 
                                                         <a href="#" class="btn-u"> Ustaw</a> 
                                                     </section>
                                                 </div>
                                             </section>
                                         </fieldset>
-                                        <footer style="text-align: right;">
-                                            <a href="#" class="btn-u"> <i class="fa fa-plus fa-file-excel-o"></i> Eksportuj CSV</a> 
-                                            <a href="#" class="btn-u btn-u-dark"> <i class="fa fa-plus fa-file-pdf-o"></i> Eksportuj PDF </a> 
-                                            <button type="button" class="btn-u btn-u-default" onclick="window.history.back();">Wróć</button>
-                                        </footer>
                                     </form>        
                                 </div>
                             </div>
@@ -330,11 +331,11 @@
         <script type="text/javascript" src="https://cdn.jsdelivr.net/bootstrap.datetimepicker/4.17.37/js/bootstrap-datetimepicker.min.js"></script>
 
         <script type="text/javascript">
-                                                jQuery(document).ready(function () {
-                                                    App.init();
+                                                                    jQuery(document).ready(function () {
+                                                                        App.init();
 
 
-                                                });</script>
+                                                                    });</script>
         <script>
             $(function () {
                 $("#includedContentHeader").load("header.html");
@@ -454,7 +455,7 @@
             // Revealing module pattern to store some global data that will be shared between different functions.
             var d3CalendarGlobals = function () {
                 var skyFormWidth = $("#chartMonthly").parent().width();
-                
+
                 var calendarWidth = skyFormWidth,
                         calendarHeight = 0.6 * skyFormWidth,
                         gridXTranslation = 10,
