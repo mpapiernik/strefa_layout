@@ -130,7 +130,6 @@ td a.btn-u {
 
 .reg-block {
     width: 380px;
-    padding: 30px 30px 20px 30px;
     margin: 140px auto 10px auto !important;
     background: #fff;
 
@@ -141,7 +140,7 @@ td a.btn-u {
 }
 
 .reg-block-bottom {
-    max-width: 380px;
+    max-width: 340px;
     margin: auto;
     text-align: center;
     color: #fff;
@@ -152,8 +151,8 @@ td a.btn-u {
 
 
     .reg-block {
-        width: 380px;
-        padding: 20px 30px 10px 30px;
+        width: 320px;
+        padding: 10px !important;
         background: transparent;
         border-top: none !important;
     }
