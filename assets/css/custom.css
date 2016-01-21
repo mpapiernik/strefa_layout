@@ -124,25 +124,33 @@ td a.btn-u {
 ----------------------------------------------------*/
 
 .reg-logo  {
-        margin-top: 40px;
-        text-align: center;
-    }
+    margin-top: 40px;
+    text-align: center;
+}
 
 .reg-block {
     width: 380px;
     padding: 30px 30px 20px 30px;
     margin: 140px auto 10px auto !important;
     background: #fff;
-    
+
 }
 
 .reg-block a{ 
-             text-decoration: underline;
-    }
+    text-decoration: underline;
+}
+
+.reg-block-bottom {
+    max-width: 380px;
+    margin: auto;
+    text-align: center;
+    color: #fff;
+    padding: 0px 30px 20px 30px;
+}
 
 @media (max-width: 480px) {
-    
-    
+
+
     .reg-block {
         width: 380px;
         padding: 20px 30px 10px 30px;
@@ -150,10 +158,10 @@ td a.btn-u {
         border-top: none !important;
     }
     .reg-block a{ 
-             color: #fff;
+        color: #fff;
     }
-    
-    
+
+
     .reg-block-header {
         border-bottom: none;
         margin-bottom:  10px;
