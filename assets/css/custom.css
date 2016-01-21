@@ -166,7 +166,7 @@ td a.btn-u {
         margin-bottom:  10px;
     }
 
-    .reg-block-header > h1, h2, h3, h4, h5, h6 {
+    .reg-block-header h3{
         color: #fff;
     }
 
@@ -174,5 +174,97 @@ td a.btn-u {
         background: #fff;
     }
 
+
+}
+
+/*--------------------------------------------------
+                  [New wall page]
+----------------------------------------------------*/
+
+.img-post {
+    margin: -10px -20px;
+
+}
+.timeline-v2 > li .cbp_tmlabel h2 {
+    margin-top: 0px; 
+    font-size: 20px; 
+    padding: 0 0 5px; 
+    margin-bottom: 10px; 
+    text-transform: uppercase;
+    border-bottom: 1px solid #ddd; 
+}
+
+.post-readed {
+    text-align: left;
+}
+
+.post-open {
+    text-align: right;
+    border: 2px solid transparent;
+}
+
+.btn-brand-outline {
+    color: #A9121D;
+    background-color: transparent;
+    border: 2px solid transparent;
+    border-color: #A9121D;
+}
+
+
+.post-img-responsive {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    padding: 0 0 10px; 
+}
+
+@media (max-width: 550px) { 
+    .post-img-responsive {
+    display: none;
+    }
+
+}
+
+/*Tags v2
+------------------------------------*/
+.tags-v2 li {
+    padding: 7px 0 7px 4px;
+}
+
+.tags-v2 li a {
+
+    color: #fff;
+    background: #A9121D;
+    border-color: #A9121D;
+    font-size: 13px;
+    padding: 5px 10px;
+    border: solid 2px #A9121D;
+}
+
+.tags-v2 li a:hover {
+    color: #A9121D;
+    background: #fff;
+    border-color: #A9121D;
+    text-decoration: none;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;    
+}
+
+.font-small {
+    font-size: 11px;
+}
+
+@media (max-width: 550px) { 
+    
+.logo .a {
+     text-align: left;
+}
+
+.logo img {
+    max-width: 175px; 
+    margin: 45px 0 -4px; 
+}
 
 }

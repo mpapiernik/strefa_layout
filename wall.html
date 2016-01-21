@@ -32,6 +32,7 @@
 
         <!-- CSS Page Style -->    
         <link rel="stylesheet" href="assets/css/pages/shortcode_timeline2.css">
+        <link rel="stylesheet" href="assets/css/pages/shortcode_timeline1.css">
 
         <!-- Load c3.css -->
         <link href="assets/css/c3/c3.css" rel="stylesheet" type="text/css">
@@ -52,9 +53,20 @@
             <!--=== Breadcrumbs ===-->
             <div class="breadcrumbs">
                 <div class="container">
+                    
                     <h1 class="pull-left">Aktualności</h1>
-                    <ul class="pull-right breadcrumb">
-                    </ul>
+                    <div class="search-open pull-right col-sm-3">
+                        <div class="input-group inline-group">
+                            <input type="text" class="form-control" placeholder="Wyszukaj ... ">
+                            <span class="input-group-btn">
+                                
+                                <a href="search.html" class="button btn-u"><i class="fa fa-search"></i></a>
+                            </span>
+                                
+                        </div>
+                          
+                     
+                    </div>
                 </div>
             </div><!--/breadcrumbs-->
             <!--=== End Breadcrumbs ===-->
@@ -73,6 +85,8 @@
 
                                         <br>
                                         <small>do maksymalnej ilości wizyt w ostatnich 30 dni</small>
+                                        <br>
+                                        <span class="font-small">(poglądowa łączna liczba wizyt nieuwzględniająca danych w trybie offline)</span>
                                     </h3>
                                     <div id="chart" class="text-center" ></div>
                                 </div>
@@ -82,6 +96,8 @@
                                     <h3>Ilość wizyt w bieżącym okresie rozliczeniowym
                                         <br>
                                         <small>do maksymalnej ilości wizyt w ostatnich 12 miesiącach</small>
+                                        <br>
+                                        <span class="font-small">(poglądowa łączna liczba wizyt nieuwzględniająca danych w trybie offline)</span>
                                     </h3> 
                                     <div id="chart2" class="text-center" ></div>
                                 </div>
@@ -94,17 +110,27 @@
                                     <span>January</span>
                                 </time>
                                 <i class="cbp_tmicon rounded-x hidden-xs"></i>
-                                <div class="cbp_tmlabel" style="background: #F5B9B9;">
-                                    <h2>Post ważny</h2>
+                                <div class="cbp_tmlabel">
+                                    <div class="timeline-heading">
+                                        <img class="post-img-responsive" src="assets/img/img1.jpg" alt="">
+                                    </div>
+                                    <h2><i class="fa fa-exclamation-circle fa-lg fa-color"></i>Post ważny</h2>
                                     <div class="row">
                                         <div class="col-md-12">    
                                             <p>Winter purslane courgette pumpkin quandong komatsuna fennel green bean cucumber watercress. Pea sprouts wattle seed rutabaga okra yarrow cress avocado grape.</p> 
                                             <p>Cabbage lentil cucumber chickpea sorrel gram garbanzo plantain lotus root bok choy squash cress potato.
-                                                <strong><a>Zobacz więcej</a></strong>
                                             </p>
-                                            <div>
-                                                <button type="button" class="btn-u" onclick="" style="
-                                                        float: right;">Przeczytałem</button>
+                                            <div class="row">
+                                                <div class="col-md-6"> 
+                                                    <a href="" class="fa-color" > (oznacz jako przeczytany) </a>
+                                                </div>
+                                                <div class="col-md-6"> 
+                                                    <div class= "btn-group pull-right">
+
+                                                        <button type="button" class="btn-u post-open margin-right-5" onclick="">Otwórz link</button>
+                                                        <button type="button" class="btn-u btn-brand-outline" onclick="">Czytaj więcej</button>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>        
@@ -112,59 +138,52 @@
                             </li>
                             <li>
                                 <time class="cbp_tmtime" datetime="">
-
-                                    <span>31/05/15 13:40</span>
-                                    <span>
-                                        <a href="" data-toggle="modal" data-target="#myModal" >Edytowany</a>
-                                    </span>
-                                    <span>May</span> 
+                                    <span>4/1/08 18:65</span>
                                 </time>
-
                                 <i class="cbp_tmicon rounded-x hidden-xs"></i>
                                 <div class="cbp_tmlabel">
-                                    <h2>Post Edytowany - Zobacz historie</h2>
-                                    <p>Habba siaba dandelion maize lentil collard greens radish arugula sweet pepper water spinach kombu courgette lettuce. Celery coriander bitterleaf epazote radicchio shallot winter purslane collard greens spring onion squash lentil. Artichoke salad bamboo shoot black-eyed pea brussels sprout garlic kohlrabi.
-                                        <strong><a>Zobacz więcej</a></strong>
-                                    </p>
-                                </div>
-                            </li>
-                            <li>
-                                <time class="cbp_tmtime" datetime=""><span>18/7/13</span> <span>June</span></time>
-                                <i class="cbp_tmicon rounded-x hidden-xs"></i>
-                                <div class="cbp_tmlabel">
-                                    <h2>Unify in recent years</h2>
-                                    <p>Caulie dandelion maize lentil collard greens radish arugula sweet pepper water spinach kombu courgette lettuce. Celery coriander bitterleaf epazote radicchio shallot winter purslane collard greens spring onion squash lentil. Artichoke salad bamboo shoot black-eyed pea brussels sprout garlic kohlrabi.</p>
-                                    <p>Bitterleaf celery coriander epazote radicchio shallot winter purslane collard greens spring onion squash lentil. Artichoke salad bamboo shoot black-eyed pea brussels sprout.</p>
-
-                                    <div class="margin-bottom-20"></div>
-
+                                    <h2>życzenia noworoczne</h2>
                                     <div class="row">
-                                        <div class="col-md-4 col-xs-6">
-                                            <img class="img-responsive md-margin-bottom-10" src="assets/img/img2.jpg" alt="">
+                                        <div class="col-md-12">    
+                                            <p>Winter purslane courgette pumpkin quandong komatsuna fennel green bean cucumber watercress. Pea sprouts wattle seed rutabaga okra yarrow cress avocado grape.</p> 
+                                            <p>Cabbage lentil cucumber chickpea sorrel gram garbanzo plantain lotus root bok choy squash cress potato.
+                                            </p>
+                                            <div class="row">
+                                                <div class="col-md-6"> 
+                                                </div>
+                                                <div class="col-md-6"> 
+                                                    <div class= "btn-group pull-right">
+                                                        <button type="button" class="btn-u btn-brand-outline" onclick="">Czytaj więcej</button>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="col-md-4 col-xs-6">
-                                            <img class="img-responsive md-margin-bottom-10" src="assets/img/img4.jpg" alt="">
-                                        </div>
-                                        <div class="col-md-4 col-xs-6">
-                                            <img class="img-responsive md-margin-bottom-10" src="assets/img/img3.jpg" alt="">
-                                        </div>
-                                    </div>
+                                    </div>        
                                 </div>
                             </li>
+
+
                             <li>
-                                <time class="cbp_tmtime" datetime=""><span>28/6/12</span> <span>May</span></time>
+                                <time class="cbp_tmtime" datetime="">
+                                    <span>4/1/08 18:65</span>
+                                </time>
                                 <i class="cbp_tmicon rounded-x hidden-xs"></i>
                                 <div class="cbp_tmlabel">
-                                    <h2>Difficulties</h2>
-                                    <p>Parsley amaranth tigernut silver beet maize fennel spinach. Ricebean black-eyed pea maize scallion green bean spinach cabbage jícama bell pepper carrot onion corn plantain garbanzo. Sierra leone bologi komatsuna celery peanut swiss chard silver beet squash dandelion maize chicory burdock tatsoi dulse radish wakame beetroot.</p>
-                                </div>
-                            </li>
-                            <li>
-                                <time class="cbp_tmtime" datetime=""><span>2/4/11</span> <span>April</span></time>
-                                <i class="cbp_tmicon rounded-x hidden-xs"></i>
-                                <div class="cbp_tmlabel">
-                                    <h2>Back to the past</h2>
-                                    <p>Peanut gourd nori welsh onion rock melon mustard jícama. Desert raisin amaranth kombu aubergine kale seakale brussels sprout pea. Black-eyed pea celtuce bamboo shoot salad kohlrabi leek squash prairie turnip catsear rock melon chard taro broccoli turnip greens. Fennel quandong potato watercress ricebean swiss chard garbanzo. Endive daikon brussels sprout lotus root silver beet epazote melon shallot.</p>
+                                    <h2>Zmiana w regulaminie</h2>
+                                    <div class="row">
+                                        <div class="col-md-12">    
+                                            <p>Peanut gourd nori welsh onion rock melon mustard jícama. Desert raisin amaranth kombu aubergine kale seakale brussels sprout pea. Black-eyed pea celtuce bamboo shoot salad kohlrabi leek squash prairie turnip catsear rock melon chard taro broccoli turnip greens. Fennel quandong potato watercress ricebean swiss chard garbanzo. Endive daikon brussels sprout lotus root silver beet epazote melon shallot.</p>
+                                            <div class="row">
+                                                <div class="col-md-6"> 
+                                                </div>
+                                                <div class="col-md-6"> 
+                                                    <div class= "btn-group pull-right">
+                                                        <button type="button" class="btn-u post-open margin-right-5" onclick="">Otwórz link</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>        
                                 </div>
                             </li>
                         </ul>
@@ -223,8 +242,8 @@
                 });
                 $("#myModal").load("post_modal.html");
 
-                var chartData = 300;
-                var maxchartData = 1200;
+                var chartData = 30;
+                var maxchartData = 120;
                 var chartDataThreshold = [0.25 * maxchartData, 0.5 * maxchartData, 0.75 * maxchartData, maxchartData];
 
                 var chart = c3.generate({
@@ -250,8 +269,8 @@
                     color: {
                         pattern: ['#FF0000', '#F97600', '#F6C600', '#60B044'], // the three color levels for the percentage values.
                         threshold: {
-                                    values: chartDataThreshold
-                                }
+                            values: chartDataThreshold
+                        }
                     },
                     size: {
                         height: 150,
@@ -259,8 +278,8 @@
                     }
                 });
 
-                var chartData2 = 2;
-                var maxchartData2 = 80;
+                var chartData2 = 1089;
+                var maxchartData2 = 1200;
                 var chartData2Threshold = [0.25 * maxchartData2, 0.5 * maxchartData2, 0.75 * maxchartData2, maxchartData2];
                 var chart2 = c3.generate({
                     bindto: '#chart2',
