@@ -1,7 +1,7 @@
 /* Add here all your css styles (customizations) */
 
 td a.btn-u {
-  color: #555 !important; 
+    color: #555 !important; 
 }
 
 .bootstrap-datetimepicker-widget tr:hover {
@@ -14,76 +14,76 @@ td a.btn-u {
 
 /*Header*/
 .header-fixed .header {
-	height: auto;
+    height: auto;
 }
 
 .header-fixed .header.header-sticky {
-	margin-top: 0;
-	transition: all 0.2s ease-in-out;
+    margin-top: 0;
+    transition: all 0.2s ease-in-out;
 }
 
 .header-fixed .header.header-fixed-shrink {
-	top: 0;
-	left: 0;
-	width: 100%;
-	/*height: 95px;*/
-	z-index: 999;
-	position: fixed;
-	margin-top: -35px;
-	border-bottom: none;
-	box-shadow: 0 0 3px #bbb;
-	background: rgba(255,255,255, 0.96);
-	transition: all 0.3s ease-in-out;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /*height: 95px;*/
+    z-index: 999;
+    position: fixed;
+    margin-top: -35px;
+    border-bottom: none;
+    box-shadow: 0 0 3px #bbb;
+    background: rgba(255,255,255, 0.96);
+    transition: all 0.3s ease-in-out;
 }
 
 @media (max-width: 991px) {
-	/*Header*/
-	.header-fixed .header,
-	.header-fixed .header.header-fixed-shrink {
-		height: inherit;
-		position: relative;
-	}
+    /*Header*/
+    .header-fixed .header,
+    .header-fixed .header.header-fixed-shrink {
+        height: inherit;
+        position: relative;
+    }
 }
 
 @media (min-width: 992px) {
-	/*Container*/
-	.header-fixed .header.header-fixed-shrink > .container {
-		margin-bottom: -46px;
-	}
+    /*Container*/
+    .header-fixed .header.header-fixed-shrink > .container {
+        margin-bottom: -46px;
+    }
 
-	/*Logo*/
-	.header-fixed .header.header-fixed-shrink .logo img {
-		max-width: 105px;
-		margin: 45px 0 -4px;
-	}
+    /*Logo*/
+    .header-fixed .header.header-fixed-shrink .logo img {
+        max-width: 105px;
+        margin: 45px 0 -4px;
+    }
 
-	/*Navbar Nav*/
-	.header-fixed .header.header-fixed-shrink .navbar-nav > li > a {
-		padding-top: 19px;
-		padding-bottom: 19px;
-	}
+    /*Navbar Nav*/
+    .header-fixed .header.header-fixed-shrink .navbar-nav > li > a {
+        padding-top: 19px;
+        padding-bottom: 19px;
+    }
 
-	.header-fixed .header.header-fixed-shrink .navbar-nav > li > a:hover,
-	.header-fixed .header.header-fixed-shrink .navbar-nav > .active > a {
-		border-bottom: none;
-	}
+    .header-fixed .header.header-fixed-shrink .navbar-nav > li > a:hover,
+    .header-fixed .header.header-fixed-shrink .navbar-nav > .active > a {
+        border-bottom: none;
+    }
 
-	/*Dropdown*/
-	.header-fixed .header.header-fixed-shrink .dropdown > a:after {
-		top: 20px;
-	}
+    /*Dropdown*/
+    .header-fixed .header.header-fixed-shrink .dropdown > a:after {
+        top: 20px;
+    }
 
-	/*Search*/
-	.header-fixed .header.header-fixed-shrink .nav > li > .search {
-		color: #777;
-		padding: 20px 0 22px;
-		background: inherit;
-		border-bottom: none;
-	}
+    /*Search*/
+    .header-fixed .header.header-fixed-shrink .nav > li > .search {
+        color: #777;
+        padding: 20px 0 22px;
+        background: inherit;
+        border-bottom: none;
+    }
 
-	.header-fixed .header.header-fixed-shrink .nav .search-open {
-		top: 60px;
-	}
+    .header-fixed .header.header-fixed-shrink .nav .search-open {
+        top: 60px;
+    }
 }
 
 
@@ -92,29 +92,80 @@ td a.btn-u {
 ----------------------------------------------------*/
 
 .boxed-layout.header-fixed .header.header-sticky {
-	left: inherit;
-	width: inherit;
+    left: inherit;
+    width: inherit;
 }
 
 @media (max-width: 1200px) {
-	/*Logo*/
-	.logo img {
-		max-width: 105px;
-		margin: 45px 0 -4px;
-	}
-        
+    /*Logo*/
+    .logo img {
+        max-width: 105px;
+        margin: 45px 0 -4px;
+    }
+
 }
 
 @media (max-width: 992px) {
-	/*Logo*/
-	.logo img {
-		max-width: 175px;
-		margin: 45px 0 -4px;
-	}
-        
+    /*Logo*/
+    .logo img {
+        max-width: 175px;
+        margin: 45px 0 -4px;
+    }
+
 }
 
 .img-article img{
     max-width: 100%;
     height: 305px !important;
+}
+
+/*--------------------------------------------------
+                  [New logo page]
+----------------------------------------------------*/
+
+.reg-logo  {
+        margin-top: 40px;
+        text-align: center;
+    }
+
+.reg-block {
+    width: 380px;
+    padding: 30px 30px 20px 30px;
+    margin: 140px auto 10px auto !important;
+    background: #fff;
+    
+}
+
+.reg-block a{ 
+             text-decoration: underline;
+    }
+
+@media (max-width: 480px) {
+    
+    
+    .reg-block {
+        width: 380px;
+        padding: 20px 30px 10px 30px;
+        background: transparent;
+        border-top: none !important;
+    }
+    .reg-block a{ 
+             color: #fff;
+    }
+    
+    
+    .reg-block-header {
+        border-bottom: none;
+        margin-bottom:  10px;
+    }
+
+    .reg-block-header > h1, h2, h3, h4, h5, h6 {
+        color: #fff;
+    }
+
+    .input-group{
+        background: #fff;
+    }
+
+
 }
