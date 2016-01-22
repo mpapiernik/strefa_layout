@@ -60,6 +60,25 @@
                     <!-- Begin Content -->
                     
                     <div class="col-md-12 margin-bottom-50">
+                        <div class="alert alert-danger fade in text-center">
+                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                            System nie znalazł szczegółów dla podanego numeru NIP lub nazwy Partnera. Wpisz ponownie szukaną frażę lub skontaktuj się z administratorem.
+                        </div> 
+                        <div class="row">
+                            <!--Button Addons-->
+                            <div class="col-md-6">
+                                <label>NIP lub nazwa Partnera:</label>
+                                <div class="input-group inline-group">
+                                    <input type="text" class="form-control" placeholder="Wyszukaj ... ">
+                                    <span class="input-group-btn">
+                                        <a href="search.html" class="button btn-u"><i class="fa fa-search"></i></a>
+                                    </span>
+
+                                </div>
+                            </div>
+                            <!--End Button Addons-->
+                        </div>
+                        <hr>
                         <div>
                             <table id="operatorsList" class="display" cellspacing="0" width="100%" style="text-align: left">
                                 <thead>
@@ -68,6 +87,7 @@
                                         <th class="hidden-sm hidden-xs">Data złożenia wniosku</th>
                                         <th class="hidden-sm hidden-xs">Rodzaj wniosku</th>
                                         <th class="hidden-sm hidden-xs">Typ operacji</th>
+                                         <th class="hidden-sm hidden-xs">Partner</th>
                                         <th class="hidden-sm hidden-xs">Autor</th>
                                         <th class="hidden-sm hidden-xs">Status</th>
                                         <th>Akcja</th>
@@ -79,6 +99,7 @@
                                         <td class="hidden-sm hidden-xs">15-07-2015, 10:00:18</td>
                                         <td>Obiekt</td>
                                         <td>Edycja</td>
+                                        <td class="hidden-sm hidden-xs">Calypso Spółka Akcyjna</td>
                                         <td>Adam Kowalski</td>
                                         <td class="hidden-sm hidden-xs">Zatwierdzony</td>
                                         <td><a href="edit_facility_application.html" target="_blank" class="btn-u btn-brd btn-brd-hover btn-u-sm"><i class="fa fa-eye"></i></a>
@@ -89,6 +110,7 @@
                                         <td class="hidden-sm hidden-xs">15-07-2015, 14:00:18</td>
                                         <td>Partner</td>
                                         <td>Edycja</td>
+                                        <td class="hidden-sm hidden-xs">Calypso Spółka Akcyjna</td>
                                         <td>Adam Kowalski</td>
                                         <td class="hidden-sm hidden-xs">Do akceptacji</td>
                                         <td><a href="edit_partner_application.html" target="_blank" class="btn-u btn-brd btn-brd-hover btn-u-sm"><i class="fa fa-eye"></i></a>
@@ -99,16 +121,18 @@
                                         <td class="hidden-sm hidden-xs">15-07-2015, 14:00:18</td>
                                         <td>Usługa</td>
                                         <td>Edycja</td>
+                                        <td class="hidden-sm hidden-xs">Calypso Spółka Akcyjna</td>
                                         <td>Adam Kowalski</td>
                                         <td class="hidden-sm hidden-xs">Do akceptacji</td>
                                         <td><a href="edit_service_application.html" target="_blank" class="btn-u btn-brd btn-brd-hover btn-u-sm"><i class="fa fa-eye"></i></a>
                                         </td>
                                     </tr>
-                                     <tr>
+                                       <tr style="background-color: #f2dede;">
                                         <td>4</td>
                                         <td class="hidden-sm hidden-xs">15-07-2015, 14:00:18</td>
                                         <td>Operator partnera</td>
                                         <td>Edycja</td>
+                                        <td class="hidden-sm hidden-xs"><i class="fa fa-exclamation-triangle"></i>Tyger</td>
                                         <td>Adam Kowalski</td>
                                         <td class="hidden-sm hidden-xs">Do akceptacji</td>
                                         <td><a href="edit_operator_application.html" target="_blank" class="btn-u btn-brd btn-brd-hover btn-u-sm"><i class="fa fa-eye"></i></a>

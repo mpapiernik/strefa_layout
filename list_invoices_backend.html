@@ -64,6 +64,25 @@
                 <div class="row">
                     <!-- Begin Content -->
                     <div class="col-md-12 margin-bottom-50">
+                         <div class="alert alert-danger fade in text-center">
+                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                            System nie znalazł szczegółów dla podanego numeru NIP lub nazwy Partnera. Wpisz ponownie szukaną frażę lub skontaktuj się z administratorem.
+                        </div> 
+                        <div class="row">
+                            <!--Button Addons-->
+                            <div class="col-md-6">
+                                <label>NIP lub nazwa Partnera:</label>
+                                <div class="input-group inline-group">
+                                    <input type="text" class="form-control" placeholder="Wyszukaj ... ">
+                                    <span class="input-group-btn">
+                                        <a href="search.html" class="button btn-u"><i class="fa fa-search"></i></a>
+                                    </span>
+
+                                </div>
+                            </div>
+                            <!--End Button Addons-->
+                        </div>
+                        <hr>
                         <div>
                             <table id="facilityList" class="display" cellspacing="0" width="100%" style="text-align: left">
                                 <thead>
@@ -121,14 +140,14 @@
                                             </div>
                                         </td>
                                     </tr>
-                                    <tr>
+                                    <tr style="background-color: #f2dede;">
                                         <td>3</td>
                                         <td><a href="view_invoice_correct_backend.html">Faktura korygująca, 2015/FVK/15</a></td>
                                         <td>29818,62</td>
                                         <td class="hidden-sm hidden-xs">2015-05-31</td>
                                         <td class="hidden-sm hidden-xs">Do&nbsp;akceptacji</td>
                                         <td class="hidden-sm hidden-xs">2015-05-22, 2015-05-08</td>
-                                        <td class="hidden-sm hidden-xs">Tyger Gym S. z o.o., 80-097 Gdańsk, Grunwaldzka 346</td>
+                                        <td class="hidden-sm hidden-xs"><i class="fa fa-exclamation-triangle"></i>Calypso Sp z o.o., 80-097 Warszawa, Plan Europejski 2</td>
                                         <td>
                                             <div class="btn-group">
                                                 <button type="button" class="btn-u btn-brd btn-u-default btn-brd-hover btn-u-sm btn-u-split-default dropdown-toggle" data-toggle="dropdown">

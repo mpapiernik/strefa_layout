@@ -60,8 +60,26 @@
             <div class="container content">     
                 <div class="row">
                     <!-- Begin Content -->
-
                     <div class="col-md-12 margin-bottom-50">
+                        <div class="alert alert-danger fade in text-center">
+                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                            System nie znalazł szczegółów dla podanego numeru NIP lub nazwy Partnera. Wpisz ponownie szukaną frażę lub skontaktuj się z administratorem.
+                        </div> 
+                        <div class="row">
+                            <!--Button Addons-->
+                            <div class="col-md-6">
+                                <label>NIP lub nazwa Partnera:</label>
+                                <div class="input-group inline-group">
+                                    <input type="text" class="form-control" placeholder="Wyszukaj ... ">
+                                    <span class="input-group-btn">
+                                        <a href="search.html" class="button btn-u"><i class="fa fa-search"></i></a>
+                                    </span>
+
+                                </div>
+                            </div>
+                            <!--End Button Addons-->
+                        </div>
+                        <hr>
                         <div>
                             <table id="operatorsList" class="display" cellspacing="0" width="100%" style="text-align: left">
                                 <thead>
@@ -80,6 +98,29 @@
                                     <tr>
                                         <td>1</td>
                                         <td><a href="profile_partner.html">Calypso Spółka Akcyjna</a></td>
+                                        <td class="hidden-sm hidden-xs">calypso@calypso.pl</td>
+                                        <td class="hidden-sm hidden-xs">505-505-505</td>
+                                        <td class="hidden-sm hidden-xs">Aktywny</td>
+                                        <td class="hidden-sm hidden-xs">Tak</td>
+                                        <td class="hidden-sm hidden-xs"><a href="profile_benefit_operator.html">Jacek Benefitowski</a></td>
+                                        <td>
+                                            <div class="btn-group">
+                                                <button type="button" class="btn-u btn-brd btn-u-default btn-brd-hover btn-u-sm btn-u-split-default dropdown-toggle" data-toggle="dropdown">
+                                                    <i class="fa fa fa-cog"></i>
+                                                    <span class="sr-only">Toggle Dropdown</span>                            
+                                                </button>
+                                                <ul class="dropdown-menu" role="menu">
+                                                    <li><a href="profile_partner.html"><i class="fa fa-user"></i> Informacje ogólne partnera</a></li>
+                                                    <li><a href="profile_partner_settings.html"><i class="fa fa-wrench"></i> Ustawienia partnera</a></li>
+                                                    <li><a href="list_operators_backend.html"><i class="fa fa-users"></i> Lista operatorów</a></li>
+                                                    <li><a href="facility_backend.html"><i class="fa fa-home"></i> Obiekty</a></li>
+                                                </ul>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr style="background-color: #f2dede;">
+                                        <td>2</td>
+                                        <td><a href="profile_partner.html"> <i class="fa fa-exclamation-triangle"></i> Nie mój partner</a></td>
                                         <td class="hidden-sm hidden-xs">calypso@calypso.pl</td>
                                         <td class="hidden-sm hidden-xs">505-505-505</td>
                                         <td class="hidden-sm hidden-xs">Aktywny</td>
