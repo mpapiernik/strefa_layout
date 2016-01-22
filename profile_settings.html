@@ -32,7 +32,7 @@
 
         <!-- CSS Page Style -->    
         <link rel="stylesheet" href="assets/css/pages/shortcode_timeline2.css">
-        
+
         <link rel="stylesheet" href="assets/css/headers/header-v4.css">
 
         <!-- CSS Customization -->
@@ -78,7 +78,7 @@
                         <div class="row">
                             <div class="col-md-12 blog">
                                 <div class="news-v3-in">
-                                    
+
                                     <form action="" id="sky-form" class="sky-form">
                                         <fieldset>
                                             <div class="row">
@@ -94,17 +94,34 @@
                                                     </label>
                                                 </section>
                                             </div>
+                                        </fieldset>
+                                        <fieldset>
                                             <div class="input-group margin-bottom-20">
                                                 <section>
                                                     <label class="label">Pieczątka</label>
-                                                    <span class="btn btn-success fileinput-button">
-                                                        <i class="glyphicon glyphicon-plus"></i>
-                                                        <span>Wybierz plik...</span>
-                                                        <input type="file" name="files[]" multiple>
-                                                    </span>
-                                                    <span class="fileupload-process"></span>
+                                                    <span class="btn btn-u fileinput-button state-success" id="fileButton">
+                                                        <i class="fa fa-plus"></i>
+                                                        <span>Wybierz plik </span>
+                                                        <input type="file" id="appbundle_invoice_confirm_files" name="appbundle_invoice_confirm[files][]">
+                                                    </span>                                
                                                 </section>
                                             </div>
+                                            <table role="presentation"  class="table table-striped">
+                                                <tbody class="files"><tr class="template-upload fade in">
+                                                        <td class="t-align-l">
+                                                            <p class="name">Test (1).pdf</p>
+                                                            <strong class="error text-danger"></strong>
+                                                        </td>            
+                                                        <td class="t-align-r" style="text-align: right;">                
+
+                                                            <button class="btn-u btn-u-dark cancel">
+                                                                <i class="fa fa-trash"></i>
+                                                                <span>Usuń</span>
+                                                            </button>
+
+                                                        </td>
+                                                </tbody>
+                                            </table>
                                         </fieldset>
                                         <fieldset>
                                             <div class="alert alert-danger fade in text-center">

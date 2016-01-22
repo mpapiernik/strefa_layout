@@ -55,6 +55,12 @@
         <script src="//cdnjs.cloudflare.com/ajax/libs/prettify/r298/run_prettify.min.js"></script>
         <script src="assets/js/jquery.bootstrap-duallistbox.js"></script>
         <link rel="stylesheet" type="text/css" href="assets/css/jquery.timepicker.css" />
+        
+          <link rel="stylesheet" href="assets/css/jquery.fileupload.css">
+        <link rel="stylesheet" href="assets/css/jquery.fileupload-ui.css">
+        <!-- CSS adjustments for browsers with JavaScript disabled -->
+        <noscript><link rel="stylesheet" href="assets/css/jquery.fileupload-noscript.css"></noscript>
+        <noscript><link rel="stylesheet" href="assets/css/jquery.fileupload-ui-noscript.css"></noscript>
 
     </head>
 
@@ -216,6 +222,47 @@
                                     <label class="checkbox"><input type="checkbox" name="important" checked="checked"><i></i>Oznacz post jako ważny</label>
                                 </section>
 
+                            </fieldset>
+                             <fieldset>    
+                                <section>
+                                    <label class="label">Zdjęcie</label>
+                                    <div class="input-group margin-bottom-20">
+                                        <section>
+                                            <span class="btn btn-u fileinput-button state-success" id="fileButton">
+                                                <i class="fa fa-plus"></i>
+                                                <span>Wybierz plik</span>
+                                                <input type="file" id="appbundle_invoice_confirm_files" name="appbundle_invoice_confirm[files][]">
+                                            </span>                                
+                                        </section>
+                                    </div>
+                                </section>
+                                <section id="attachments_presentation">
+                                    <div class="img-article margin-bottom-20">
+                                        <div class="carousel slide carousel-v1 " id="myCarousel">
+                                            <div class="carousel-inner img-center ">
+                                                <div class="item active">
+                                                    <img class="post-img-responsive" src="assets/img/img1.jpg" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <table role="presentation"  class="table table-striped">
+                                        <tbody class="files"><tr class="template-upload fade in">
+                                                <td class="t-align-l">
+                                                    <p class="name">Test (1).pdf</p>
+                                                    <strong class="error text-danger"></strong>
+                                                </td>            
+                                                <td class="t-align-r" style="text-align: right;">                
+
+                                                    <button class="btn-u btn-u-dark cancel">
+                                                        <i class="fa fa-trash"></i>
+                                                        <span>Usuń</span>
+                                                    </button>
+
+                                                </td>
+                                        </tbody>
+                                    </table>
+                                </section>                              
                             </fieldset>
                             <footer style="text-align: right;">
                                 <button type="button" class="btn-u btn-u-default" onclick="window.history.back();">Wróć</button>

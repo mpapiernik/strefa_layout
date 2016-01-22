@@ -56,6 +56,12 @@
         <link rel="stylesheet" href="assets/plugins/cube-portfolio/cubeportfolio/custom/custom-cubeportfolio.css">
         <link rel="stylesheet" href="assets/plugins/fancybox/source/jquery.fancybox.css">   
 
+        <link rel="stylesheet" href="assets/css/jquery.fileupload.css">
+        <link rel="stylesheet" href="assets/css/jquery.fileupload-ui.css">
+        <!-- CSS adjustments for browsers with JavaScript disabled -->
+        <noscript><link rel="stylesheet" href="assets/css/jquery.fileupload-noscript.css"></noscript>
+        <noscript><link rel="stylesheet" href="assets/css/jquery.fileupload-ui-noscript.css"></noscript>
+
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
         <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/prettify/r298/run_prettify.min.js"></script>
@@ -179,7 +185,7 @@
 
                                         <script>
                                             var demo1 = $('select[name="duallistbox_demo1[]"]').bootstrapDualListbox();
-                                            
+
                                         </script>
                                     </div>
                                 </section>
@@ -211,6 +217,56 @@
                                     <label class="checkbox"><input type="checkbox" name="important"><i></i>Oznacz post jako ważny</label>
                                 </section>
 
+                            </fieldset>
+                            <fieldset>    
+                                <section>
+                                    <label class="label">Zdjęcie</label>
+                                    <div class="input-group">
+                                        <section>
+                                            <span class="btn btn-u fileinput-button state-success" id="fileButton">
+                                                <i class="fa fa-plus"></i>
+                                                <span>Wybierz plik </span>
+                                                <input type="file" id="appbundle_invoice_confirm_files" name="appbundle_invoice_confirm[files][]">
+                                            </span>                                
+                                        </section>
+                                    </div>
+                                    <p> 
+                                        Format: png, jpg, jpeg, bmp.
+                                        </br>
+                                        Wymiar: 650px na 250px
+                                    </p>
+                                </section>
+                                <section id="attachments_presentation">
+                                    <div class="alert alert-danger fade in text-center">
+                                                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                                                Błąd. Wybrany plik jest nieprawidłowy.
+                                            </div> 
+                                    <div class="img-article margin-bottom-20">
+                                        <div class="carousel slide carousel-v1 " id="myCarousel">
+                                            <div class="carousel-inner img-center ">
+                                                <div class="item active">
+                                                    <img class="post-img-responsive" src="assets/img/img1.jpg" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <table role="presentation"  class="table table-striped">
+                                        <tbody class="files"><tr class="template-upload fade in">
+                                                <td class="t-align-l">
+                                                    <p class="name">Test (1).pdf</p>
+                                                    <strong class="error text-danger"></strong>
+                                                </td>            
+                                                <td class="t-align-r" style="text-align: right;">                
+
+                                                    <button class="btn-u btn-u-dark cancel">
+                                                        <i class="fa fa-trash"></i>
+                                                        <span>Usuń</span>
+                                                    </button>
+
+                                                </td>
+                                        </tbody>
+                                    </table>
+                                </section>                              
                             </fieldset>
                             <footer style="text-align: right;">
                                 <button type="button" class="btn-u btn-u-default" onclick="window.history.back();">Wróć</button>
@@ -288,6 +344,18 @@
             <script src="assets/plugins/html5shiv.js"></script>
             <script src="assets/plugins/placeholder-IE-fixes.js"></script>
         <![endif]-->
+
+        <script type="text/javascript">
+            jQuery(document).ready(function () {
+                $('#attachments_presentation').slideToggle('fast', function () {
+                });
+                $('#appbundle_invoice_confirm_files').change(function () {
+                    $('#attachments_presentation').slideToggle('fast', function () {
+                        // Animation complete.
+                    });
+                });
+            });
+        </script>
 
     </body>
 </html> 

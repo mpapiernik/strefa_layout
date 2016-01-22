@@ -220,7 +220,7 @@ td a.btn-u {
 
 @media (max-width: 550px) { 
     .post-img-responsive {
-    display: none;
+        display: none;
     }
 
 }
@@ -257,14 +257,68 @@ td a.btn-u {
 }
 
 @media (max-width: 550px) { 
-    
-.logo .a {
-     text-align: left;
+
+    .logo .a {
+        text-align: left;
+    }
+
+    .logo img {
+        max-width: 175px; 
+        margin: 45px 0 -4px; 
+    }
+
 }
 
-.logo img {
-    max-width: 175px; 
-    margin: 45px 0 -4px; 
+.spinner {
+    width: 80px;
+}
+.spinner input {
+    text-align: right;
+    width: 40px;
+}
+.input-group-btn-vertical {
+    position: relative;
+    white-space: nowrap;
+    width: 1%;
+    vertical-align: middle;
+    display: table-cell;
+}
+.input-group-btn-vertical > .btn {
+    display: block;
+    float: none;
+    width: 40px;
+    max-width: 100%;
+    padding: 8px;
+    margin-left: -1px;
+    position: relative;
+    border-radius: 0;
+    color: #fff;
+    background: #A9121D;
+    border-color: #A9121D;
+    font-size: 16px;
+}
+.input-group-btn-vertical > .btn:first-child {
+    border-top-right-radius: 0px;
+}
+.input-group-btn-vertical > .btn:last-child {
+    margin-top: -2px;
+    border-bottom-right-radius: 0px;
+}
+.input-group-btn-vertical i{
+    position: absolute;
+    top: 0;
+    left:15px
 }
 
+.dataTables_wrapper .dataTables_paginate .paginate_button.current, .dataTables_wrapper .dataTables_paginate .paginate_button.current:hover {
+    color: #fff !important;
+    background: #A9121D;
+    border-color: #A9121D;
+    font-size: 13px;
+    padding: 5px 10px;
+    border: solid 2px #A9121D;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.current, .dataTables_wrapper .dataTables_paginate .paginate_button.current:hover {
+  background: #b61332;
 }
