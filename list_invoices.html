@@ -73,115 +73,178 @@
                             <!-- End Single button -->                    
                         </div>
                         <hr>
-                        <div>
-                            <div class="row">
-                                <div class="btn-group col-sm-9">
-                                    <div class="input-group spinner">
-                                        <input type="text" class="form-control" value="10">
-                                        <div class="input-group-btn-vertical text-center">
-                                            <button class="btn btn-default" type="button"><i class="fa fa-angle-up"></i></button>
-                                            <button class="btn btn-default" type="button"><i class="fa fa-angle-down"></i></button>
+                        <!-- Tab v1 -->                
+                        <div class="tab-v1">
+                            <ul class="nav nav-tabs">
+                                <li class="active"><a href="#sp" data-toggle="tab">Dokumenty lokalne</a></li>
+                                <li><a href="#eod" data-toggle="tab">Dokumenty EOD</a></li>
+                            </ul>                
+                            <div class="tab-content">
+                                <div class="tab-pane fade in active" id="sp">
+                                    <div class="margin-top-20">
+                                        <div class="row">
+                                            <div class="btn-group col-sm-9">
+                                                <div class="input-group spinner">
+                                                    <input type="text" class="form-control" value="10">
+                                                    <div class="input-group-btn-vertical text-center">
+                                                        <button class="btn btn-default" type="button"><i class="fa fa-angle-up"></i></button>
+                                                        <button class="btn btn-default" type="button"><i class="fa fa-angle-down"></i></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="search-open pull-right col-sm-3">
+                                                <div class="input-group inline-group">
+                                                    <input type="text" class="form-control" placeholder="Wyszukaj ... ">
+                                                    <span class="input-group-btn">
+                                                        <a href="" class="button btn-u"><i class="fa fa-search"></i></a>
+                                                    </span>
+                                                </div>
+                                            </div>
                                         </div>
+                                        <table id="spList" class="display" cellspacing="0" width="100%" style="text-align: left">
+                                            <thead>
+                                                <tr>
+                                                    <th>#</th>
+                                                    <th>Typ i numer dokumentu</th>
+                                                    <th>Kwota do płatności</th>
+                                                    <th class="hidden-sm hidden-xs hidden-xs">Termin płatności</th>
+                                                    <th class="hidden-sm hidden-xs">Status</th>
+                                                    <th class="hidden-sm hidden-xs">Data sprzedaży, wystawienia</th>
+                                                    <th>Akcja</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td><a href="view_invoice_backend.html">Faktura VAT, 2015/FVS/25015</a></td>
+                                                    <td>3024,00</td>
+                                                    <td class="hidden-sm hidden-xs">2015-05-31</td>
+                                                    <td class="hidden-sm hidden-xs">Zaakceptowana</td>
+                                                    <td class="hidden-sm hidden-xs">2015-05-22, 2015-05-08</td>
+                                                    <td>
+                                                        <div class="btn-group">
+                                                            <button type="button" class="btn-u btn-brd btn-u-default btn-brd-hover btn-u-sm btn-u-split-default dropdown-toggle" data-toggle="dropdown">
+                                                                <i class="fa fa fa-cog"></i>
+                                                                <span class="sr-only">Toggle Dropdown</span>                            
+                                                            </button>
+                                                            <ul class="dropdown-menu" role="menu">
+                                                                <li><a href="view_invoice.html"><i class="fa fa-eye"></i> Szczegóły</a></li>
+                                                                <li><a href="#"><i class="fa fa-edit"></i> Edytuj</a></li>
+                                                                <li><a href="#"><i class="fa fa-file-pdf-o"></i> Podgląd PDF</a></li>
+                                                                <li class="divider"></li>
+                                                                <li><a href="generate_invoice_correct.html"><i class="fa fa-file-excel-o"></i> Wystaw korektę</a> </li>
+                                                                <li><a href="generate_note.html"><i class="fa fa-pencil-square-o"></i> Wystaw notę</a> </li> 
+                                                            </ul>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2</td>
+                                                    <td><a href="view_note_backend.html">Nota korygująca, 2015/NK/32015</a></td>
+                                                    <td>-</td>
+                                                    <td class="hidden-sm hidden-xs">2015-05-31</td>
+                                                    <td class="hidden-sm hidden-xs">Do&nbsp;akceptacji</td>
+                                                    <td class="hidden-sm hidden-xs">2015-05-31, 2015-05-10</td>
+                                                    <td>
+                                                        <div class="btn-group">
+                                                            <button type="button" class="btn-u btn-brd btn-u-default btn-brd-hover btn-u-sm btn-u-split-default dropdown-toggle" data-toggle="dropdown">
+                                                                <i class="fa fa fa-cog"></i>
+                                                                <span class="sr-only">Toggle Dropdown</span>                            
+                                                            </button>
+                                                            <ul class="dropdown-menu" role="menu">
+                                                                <li><a href="view_invoice.html"><i class="fa fa-eye"></i> Szczegóły</a></li>
+                                                                <li><a href="#"><i class="fa fa-edit"></i> Edytuj</a></li>
+                                                                <li><a href="#"><i class="fa fa-file-pdf-o"></i> Podgląd PDF</a></li>
+                                                                <li class="divider"></li>
+                                                                <li><a href="generate_invoice_correct.html"><i class="fa fa-file-excel-o"></i> Wystaw korektę</a> </li>
+                                                                <li><a href="generate_note.html"><i class="fa fa-pencil-square-o"></i> Wystaw notę</a> </li> 
+                                                            </ul>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr style="">
+                                                    <td>3</td>
+                                                    <td><a href="view_invoice_correct_backend.html">Faktura korygująca, 2015/FVK/15</a></td>
+                                                    <td>29818,62</td>
+                                                    <td class="hidden-sm hidden-xs">2015-05-31</td>
+                                                    <td class="hidden-sm hidden-xs">Do&nbsp;akceptacji</td>
+                                                    <td class="hidden-sm hidden-xs">2015-05-22, 2015-05-08</td>
+                                                    <td>
+                                                        <div class="btn-group">
+                                                            <button type="button" class="btn-u btn-brd btn-u-default btn-brd-hover btn-u-sm btn-u-split-default dropdown-toggle" data-toggle="dropdown">
+                                                                <i class="fa fa fa-cog"></i>
+                                                                <span class="sr-only">Toggle Dropdown</span>                            
+                                                            </button>
+                                                            <ul class="dropdown-menu" role="menu">
+                                                                <li><a href="view_invoice.html"><i class="fa fa-eye"></i> Szczegóły</a></li>
+                                                                <li><a href="#"><i class="fa fa-edit"></i> Edytuj</a></li>
+                                                                <li><a href="#"><i class="fa fa-file-pdf-o"></i> Podgląd PDF</a></li>
+                                                                <li class="divider"></li>
+                                                                <li><a href="generate_invoice_correct.html"><i class="fa fa-file-excel-o"></i> Wystaw korektę</a> </li>
+                                                                <li><a href="generate_note.html"><i class="fa fa-pencil-square-o"></i> Wystaw notę</a> </li> 
+                                                            </ul>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
                                     </div>
                                 </div>
-
-                                <div class="search-open pull-right col-sm-3">
-                                    <div class="input-group inline-group">
-                                        <input type="text" class="form-control" placeholder="Wyszukaj ... ">
-                                        <span class="input-group-btn">
-                                            <a href="" class="button btn-u"><i class="fa fa-search"></i></a>
-                                        </span>
+                                <div class="tab-pane fade in" id="eod">
+                                    <div class="margin-top-20">
+                                        <div class="row">
+                                            <div class="btn-group col-sm-9">
+                                                <div class="input-group spinner">
+                                                    <input type="text" class="form-control" value="10">
+                                                    <div class="input-group-btn-vertical text-center">
+                                                        <button class="btn btn-default" type="button"><i class="fa fa-angle-up"></i></button>
+                                                        <button class="btn btn-default" type="button"><i class="fa fa-angle-down"></i></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <table id="eodList" class="display" cellspacing="0" width="100%" style="text-align: left">
+                                            <thead>
+                                                <tr>
+                                                    <th>#</th>
+                                                    <th>Typ, numer dokumentu</th>
+                                                    <th>Kwota do płatności</th>
+                                                    <th class="hidden-sm hidden-xs hidden-xs">Termin płatności</th>
+                                                    <th class="hidden-sm hidden-xs">Status</th>
+                                                    <th class="hidden-sm hidden-xs">Data sprzedaży</th>
+                                                    <th class="hidden-sm hidden-xs">Data wystawienia</th>
+                                                    <th>Akcja</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td><a href="">FVS, 2015/FVS/25015</a></td>
+                                                    <td>3024,00</td>
+                                                    <td class="hidden-sm hidden-xs">2015-05-31</td>
+                                                    <td class="hidden-sm hidden-xs">Zaksięgowana</td>
+                                                    <td class="hidden-sm hidden-xs">2015-05-22</td>
+                                                    <td class="hidden-sm hidden-xs">2015-05-08</td>
+                                                    <td>
+                                                        <div class="btn-group">
+                                                            <button type="button" class="btn-u btn-brd btn-u-default btn-brd-hover btn-u-sm btn-u-split-default dropdown-toggle" data-toggle="dropdown">
+                                                                <i class="fa fa fa-cog"></i>
+                                                                <span class="sr-only">Toggle Dropdown</span>                            
+                                                            </button>
+                                                            <ul class="dropdown-menu" role="menu">
+                                                                <li><a href="view_invoice_backend.html"><i class="fa fa-eye"></i> Szczegóły</a></li>
+                                                                <li><a href="#"><i class="fa fa-file-pdf-o"></i> Pobierz PDF</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
                                     </div>
                                 </div>
                             </div>
-                            <table id="facilityList" class="display" cellspacing="0" width="100%" style="text-align: left">
-                                <thead>
-                                    <tr>
-                                        <th>#</th>
-                                        <th>Typ i numer dokumentu</th>
-                                        <th>Kwota do płatności</th>
-                                        <th class="hidden-sm hidden-xs hidden-xs">Termin płatności</th>
-                                        <th class="hidden-sm hidden-xs">Status</th>
-                                        <th class="hidden-sm hidden-xs">Data sprzedaży, wystawienia</th>
-                                        <th>Akcja</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>1</td>
-                                        <td><a href="view_invoice.html">Faktura VAT, 2015/FVS/25015</a></td>
-                                        <td>3024,00</td>
-                                        <td class="hidden-sm hidden-xs">2015-05-31</td>
-                                        <td class="hidden-sm hidden-xs">Zaakceptowana</td>
-                                        <td class="hidden-sm hidden-xs">2015-05-22, 2015-05-08</td>
-                                        <td>
-                                            <div class="btn-group">
-                                                <button type="button" class="btn-u btn-brd btn-u-default btn-brd-hover btn-u-sm btn-u-split-default dropdown-toggle" data-toggle="dropdown">
-                                                    <i class="fa fa fa-cog"></i>
-                                                    <span class="sr-only">Toggle Dropdown</span>                            
-                                                </button>
-                                                <ul class="dropdown-menu" role="menu">
-                                                    <li><a href="view_invoice.html"><i class="fa fa-eye"></i> Szczegóły</a></li>
-                                                    <li><a href="#"><i class="fa fa-edit"></i> Edytuj</a></li>
-                                                    <li><a href="#"><i class="fa fa-file-pdf-o"></i> Podgląd PDF</a></li>
-                                                    <li class="divider"></li>
-                                                    <li><a href="generate_invoice_correct.html"><i class="fa fa-file-excel-o"></i> Wystaw korektę</a> </li>
-                                                    <li><a href="generate_note.html"><i class="fa fa-pencil-square-o"></i> Wystaw notę</a> </li> 
-                                                </ul>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>2</td>
-                                        <td><a href="view_note.html">Nota korygująca, 2015/NK/32015</a></td>
-                                        <td>-</td>
-                                        <td class="hidden-sm hidden-xs">2015-05-31</td>
-                                        <td class="hidden-sm hidden-xs">Do&nbsp;akceptacji</td>
-                                        <td class="hidden-sm hidden-xs">2015-05-31, 2015-05-10</td>
-                                        <td>
-                                            <div class="btn-group">
-                                                <button type="button" class="btn-u btn-brd btn-u-default btn-brd-hover btn-u-sm btn-u-split-default dropdown-toggle" data-toggle="dropdown">
-                                                    <i class="fa fa fa-cog"></i>
-                                                    <span class="sr-only">Toggle Dropdown</span>                            
-                                                </button>
-                                                <ul class="dropdown-menu" role="menu">
-                                                    <li><a href="view_note.html"><i class="fa fa-eye"></i> Szczegóły</a></li>
-                                                    <li><a href="#"><i class="fa fa-edit"></i> Edytuj</a></li>
-                                                    <li><a href="#"><i class="fa fa-file-pdf-o"></i> Podgląd PDF</a></li>
-                                                    <li class="divider"></li>
-                                                    <li><a href="generate_invoice_correct.html"><i class="fa fa-file-excel-o"></i> Wystaw korektę</a> </li>
-                                                </ul>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>3</td>
-                                        <td><a href="view_invoice_correct.html">Faktura korygująca, 2015/FVK/15</a></td>
-                                        <td>29818,62</td>
-                                        <td class="hidden-sm hidden-xs">2015-05-31</td>
-                                        <td class="hidden-sm hidden-xs">Do&nbsp;akceptacji</td>
-                                        <td class="hidden-sm hidden-xs">2015-05-22, 2015-05-08</td>
-                                        <td>
-                                            <div class="btn-group">
-                                                <button type="button" class="btn-u btn-brd btn-u-default btn-brd-hover btn-u-sm btn-u-split-default dropdown-toggle" data-toggle="dropdown">
-                                                    <i class="fa fa fa-cog"></i>
-                                                    <span class="sr-only">Toggle Dropdown</span>                            
-                                                </button>
-                                                <ul class="dropdown-menu" role="menu">
-                                                    <li><a href="view_invoice_correct.html"><i class="fa fa-eye"></i> Szczegóły</a></li>
-                                                    <li><a href="#"><i class="fa fa-edit"></i> Edytuj</a></li>
-                                                    <li><a href="#"><i class="fa fa-file-pdf-o"></i> Podgląd PDF</a></li>
-                                                    <li class="divider"></li>
-                                                    <li><a href="generate_invoice_correct.html"><i class="fa fa-file-excel-o"></i> Wystaw korektę</a> </li>
-                                                    <li><a href="generate_note.html"><i class="fa fa-pencil-square-o"></i> Wystaw notę</a> </li> 
-                                                </ul>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
                         </div>
-
                     </div>
                     <!-- End Content -->
                     <!-- Begin Sidebar Menu -->
@@ -214,14 +277,28 @@
             jQuery(document).ready(function () {
                 App.init();
                 $(document).ready(function () {
-                    $('#facilityList').DataTable({
+                    $('#spList').DataTable({
                         "language": {
                             "url": "assets/plugins/datatable/lang/Polish.json"
                         },
                         searching: false,
                         lengthChange: false
                     });
+                    $('#eodList').DataTable({
+                        "language": {
+                            "url": "assets/plugins/datatable/lang/Polish.json"
+                        },
+                        searching: false,
+                        lengthChange: false,
+                        "aoColumnDefs": [
+                            {'bSortable': false, 'aTargets': [0, 1, 2, 3, 4, 7]}
+                        ]
+                    });
                 });
+                 setTimeout(function () {
+                    $('.dropdown-toggle').dropdown();
+                }, 2000);
+                
             });
         </script>
         <script>
