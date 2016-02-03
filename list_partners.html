@@ -32,6 +32,8 @@
 
         <!-- CSS Customization -->
         <link rel="stylesheet" href="assets/css/theme-colors/dark-red.css">
+        
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/css/bootstrap-select.min.css" />
 
         <!-- DataTables -->
         <link rel="stylesheet" type="text/css" href="assets/plugins/datatable/css/jquery.dataTables.css">
@@ -61,26 +63,23 @@
                 <div class="row">
                     <!-- Begin Content -->
                     <div class="col-md-12 margin-bottom-50">
-                        <div class="alert alert-danger fade in text-center">
-                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-                            System nie znalazł szczegółów dla podanego numeru NIP lub nazwy Partnera. Wpisz ponownie szukaną frażę lub skontaktuj się z administratorem.
-                        </div> 
                         <div class="row">
                             <!--Button Addons-->
                             <div class="col-md-6">
-                                <label>NIP lub nazwa Partnera:</label>
-                                <div class="input-group inline-group">
-                                    <input type="text" class="form-control" placeholder="Wyszukaj ... ">
+                                <label>Wybierz partnera</label>
+                                <small>(wpisz NIP lub nazwę)</small>
+                                <div class="input-group">
+                                    <select  id="service-select" class="selectpicker input-block-level" multiple data-selected-text-format="count>1" data-live-search="true"  title='Wybierz...' data-width="100%">
+                                        <option  data-hidden="true"></option>	
+                                        <option value="1">19292929210 - Tyger Gym</option>	
+                                        <option value="2" >19292929215 - FitProfit</option>	
+                                        <option value="3" data-icon="fa fa-exclamation-triangle">12345678910 - Calypso</option>	
+                                    </select>
                                     <span class="input-group-btn">
-                                        <a href="search.html" class="button btn-u"><i class="fa fa-search"></i></a>
+                                        <button class="btn-u"  tabindex="-1"  type="button"><span class="fa fa-search" aria-hidden="true"></span></button>
                                     </span>
-                                     <span class="input-group-btn">
-                                                            <button class="btn-u btn-u-dark margin-left-5"  tabindex="-1"  type="button" onclick=""><span class="fa fa-users" aria-hidden="true"></span> Tylko moi Partnerzy</button>
-                                                        </span>
-
                                 </div>
                             </div>
-                            <!--End Button Addons-->
                         </div>
                         <hr>
                         <div>
@@ -173,6 +172,8 @@
         <script type="text/javascript" src="assets/js/app.js"></script>
         <!-- JS DataTables -->
         <script type="text/javascript" language="javascript" src="assets/plugins/datatable/js/jquery.dataTables.js"></script>
+        
+        <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/js/bootstrap-select.min.js"></script>
         <script type="text/javascript">
             jQuery(document).ready(function () {
                 App.init();
@@ -189,6 +190,9 @@
             $(function () {
                 $("#includedContentHeader").load("header_backend.html");
                 $("#includedContentFooter").load("footer.html");
+                 setTimeout(function () {
+                    $('.dropdown-toggle').dropdown();
+                }, 2000);
             });
         </script> 
         <!--[if lt IE 9]>
