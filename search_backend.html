@@ -48,63 +48,47 @@
                 <div class="container">
 
                     <h1 class="pull-left">Wyniki wyszukiwania</h1>
-                    <ul class="pull-right breadcrumb">
-                        <li><a href="list_posts.html">Home</a></li>
-                        <li><a href="#">Wyniki wyszukiwania</a></li>
-                    </ul>
+                    <div class="search-open pull-right col-sm-3">
+                        <div class="input-group inline-group">
+                            <input type="text" class="form-control" placeholder="Wyszukaj ... ">
+                            <span class="input-group-btn">
+                                <a href="search.html" class="button btn-u"><i class="fa fa-search"></i></a>
+                            </span>
+
+                        </div>
+                    </div>
                 </div>
             </div><!--/breadcrumbs-->
             <!--=== End Breadcrumbs ===-->
 
-            <!--=== Search Block Version 2 ===-->
-            <div class="search-block-v2">
-                <div class="container">
-                    <div class="col-md-6 col-md-offset-3">
-                        <h2>Szukaj ponownie</h2>
-                        <div class="input-group">
-                            <input type="text" class="form-control" placeholder="Wpisz frazę ...">
-                            <span class="input-group-btn">
-                                <button class="btn-u " type="button"><i class="fa fa-search"></i></button>
-                            </span>
-                        </div>
-                    </div>
-                </div>    
-            </div><!--/container-->     
-            <!--=== End Search Block Version 2 ===-->
-
-            <!--=== Search Results ===-->
-            <div class="container s-results margin-bottom-50">
+              <!--=== Search Results ===-->
+            <div class="container content margin-bottom-50">
                 <div class="row">
-                    <div class="col-md-12">
-                        <span class="results-number">Znalezione wyniki - 284</span>
+                    <div class="col-md-12 s-results">
+                        <span class="results-number">Znalezione wyniki: 284 | dla frazy: Ben</span>
                         <!-- Begin Inner Results -->
                         <div class="inner-results">
-                            <h3><a href="#">Tytuł posta</a></h3>
-                            <ul class="list-inline up-ul">
-                                <li><a href="#">Tag1</a></li>
-                                <li><a href="#">Tag2</a></li>
-                                <li><a href="#">Tag3</a></li>
-                            </ul>
+                            <h3><i class=" fa fa-comment"></i>Tytuł posta</h3>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ut orci urna. Morbi blandit enim eget risus posuere dapibus. Vestibulum velit nisi, tempus in placerat non, auctor eu purus. Morbi suscipit porta libero, ac tempus tellus consectetur non. Praesent eget consectetur nunc. Aliquam erat volutpat. Suspendisse ultrices eros eros, consectetur facilisis urna posuere id.</p>
                             <ul class="list-inline down-ul">
-                                <li>3 years ago - Anthon Brandley</li>
-                                <li><a href="#">Wall</a></li>
+                                <li>30.09.2015 - Anthon Brandley</li>
+                                <li><a href="wall.html">Aktualności</a></li>
                             </ul>    
                         </div>
                         <!-- Begin Inner Results -->
                         <hr>
                         <!-- Begin Inner Results -->
                         <div class="inner-results">
-                            <h3><a href="#">Artykuł - Introduction to Web Design</a></h3>
+                            <h3><a href="blog_item_1.html"><i class="fa fa-file-text"></i> Artykuł - Introduction to Web Design</a></h3>
                             <ul class="list-inline up-ul">
                                 <li><a href="#">Tag1</a></li>
                                 <li><a href="#">Javascript</a></li>
                                 <li><a href="#">PHP</a></li>
                             </ul>
-                              <img src="assets/img/testimonials/img1.jpg" alt="">
+                            <img src="assets/img/testimonials/img1.jpg" alt="">
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ut orci urna. Morbi blandit enim eget risus posuere dapibus. Vestibulum velit nisi, tempus in placerat non, auctor eu purus. Morbi suscipit porta libero, ac tempus tellus consectetur non. Praesent eget consectetur nunc. Aliquam erat volutpat. Suspendisse ultrices eros eros, consectetur facilisis urna posuere id.</p>
                             <ul class="list-inline down-ul">
-                                <li>2 years ago - Bucky Roberts</li>
+                                <li>30.09.2015 - Bucky Roberts</li>
                                 <li><a href="#">Lista artykułów</a></li>
                             </ul>   
                         </div>
@@ -114,14 +98,15 @@
 
                         <!-- Begin Inner Results -->
                         <div class="inner-results">
-                            <h3><a href="#">Plik do pobrania1</a></h3>
+                            <h3><i class="fa fa-download"></i>Plik do pobrania1</h3>
                             <ul class="list-inline up-ul">
+                                <li><a href="http://wiki.unify.com/images/d/d3/Test.pdf" download>test.pdf</a></li>
                             </ul>
                             <div class="overflow-h">
                                 <div class="overflow-a">
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ut orci urna. Morbi blandit enim eget risus posuere dapibus. Vestibulum velit nisi, tempus in placerat non, auctor eu purus. Morbi suscipit porta libero, ac tempus tellus consectetur non. Praesent eget consectetur nunc. Aliquam erat volutpat. Suspendisse ultrices eros eros, consectetur facilisis urna posuere id.</p>
                                     <ul class="list-inline down-ul">
-                                        <li>11 months ago - Anonim</li>
+                                        <li>30.09.2015 - Anonim</li>
                                         <li><a href="#">Pliki do pobrania</a></li>
                                     </ul>
                                 </div>       
@@ -133,12 +118,12 @@
 
                         <!-- Begin Inner Results -->
                         <div class="inner-results">
-                            <h3><a href="#">Web Design - Website Design Tutorials, Articles</a></h3>
+                            <h3><a href="#blog_item_2.html"><i class="fa fa-file-text"></i> Web Design - Website Design Tutorials, Articles</a></h3>
                             <ul class="list-inline up-ul">
                             </ul>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ut orci urna. Morbi blandit enim eget risus posuere dapibus. Vestibulum velit nisi, tempus in placerat non, auctor eu purus. Morbi suscipit porta libero, ac tempus tellus consectetur non. Praesent eget consectetur nunc. Aliquam erat volutpat. Suspendisse ultrices eros eros, consectetur facilisis urna posuere id.</p>
                             <ul class="list-inline down-ul">
-                                <li>30.10.2015 - Alice Emilsson</li>
+                                <li>30.09.2015 - Alice Emilsson</li>
                                 <li><a href="#">Lista artykułów</a></li>
                             </ul>
                         </div>
@@ -158,7 +143,8 @@
                                 <li><a href="#">»</a></li>
                             </ul>                                                            
                         </div>
-                    </div><!--/col-md-12-->
+                    </div><!--/col-md-10-->
+                   
                 </div>        
             </div><!--/container-->     
             <!--=== End Search Results ===-->
