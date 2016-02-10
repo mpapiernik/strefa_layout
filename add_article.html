@@ -174,7 +174,7 @@
                             <fieldset>    
                                 <section>
                                     <label class="label">Galeria</label>
-                                    <div class="input-group margin-bottom-20">
+                                    <div class="input-group">
                                         <section>
                                             <span class="btn btn-u fileinput-button state-success" id="fileButton">
                                                 <i class="fa fa-plus"></i>
@@ -182,7 +182,16 @@
                                                 <input type="file" id="appbundle_invoice_confirm_files" name="appbundle_invoice_confirm[files][]">
                                             </span>                            
                                         </section>
+                                         <p> 
+                                        Format: png, jpg, jpeg, bmp.
+                                        </br>
+                                        Wymiar: 850px na 305px
+                                    </p>
                                     </div>
+                                     <div class="alert alert-danger fade in text-center">
+                                                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                                                Błąd. Wybrany plik jest nieprawidłowy.
+                                            </div> 
                                     <table role="presentation" id="attachments_presentation" class="table table-striped">
                                         <tbody class="files">
                                             <tr class="template-upload fade in">
@@ -190,17 +199,22 @@
                                                     <p class="name">Test (1).png</p>
                                                     <strong class="error text-danger"></strong>
                                                 </td>
-                                                <td class="col-6">
+                                                <td class="col-4">
                                                     <label class="input">
                                                         <input type="text" name="title" placeholder="Wpisz tytuł obrazka">
                                                     </label>
                                                 </td>
-                                                <td class="t-align-r col-2" style="text-align: right;">                
-                                                    <button class="btn-u btn-u-dark cancel">
-                                                        <i class="fa fa-trash"></i>
-                                                        <span>Usuń</span>
-                                                    </button>
-                                                </td>
+                                                <td class="t-align-r col-4" style="text-align: right;">
+                                                            <a href="#" class="margin-right-5">
+                                                                <button type="button" class="btn btn-u">
+                                                                    <i class="fa fa-download"></i>
+                                                                    <span>Pobierz</span>
+                                                                </button></a>
+                                                            <button class="btn btn-u btn-u-dark cancel stamp-delete-link" type="button">
+                                                                <i class="fa fa-trash"></i>
+                                                                <span>Usuń</span>
+                                                            </button>
+                                                        </td>
                                             </tr>
                                             <tr class="template-upload fade in">
                                                 <td class="t-align-l">
@@ -212,12 +226,17 @@
                                                         <input type="text" name="title" placeholder="Wpisz tytuł obrazka">
                                                     </label>
                                                 </td>
-                                                <td class="t-align-r" style="text-align: right;">                
-                                                    <button class="btn-u btn-u-dark cancel">
-                                                        <i class="fa fa-trash"></i>
-                                                        <span>Usuń</span>
-                                                    </button>
-                                                </td>
+                                                <td class="t-align-r col-4" style="text-align: right;">
+                                                            <a href="#" class="margin-right-5">
+                                                                <button type="button" class="btn btn-u">
+                                                                    <i class="fa fa-download"></i>
+                                                                    <span>Pobierz</span>
+                                                                </button></a>
+                                                            <button class="btn btn-u btn-u-dark cancel stamp-delete-link" type="button">
+                                                                <i class="fa fa-trash"></i>
+                                                                <span>Usuń</span>
+                                                            </button>
+                                                        </td>
                                             </tr>
                                         </tbody>
                                     </table>
