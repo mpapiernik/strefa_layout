@@ -67,6 +67,8 @@
         <script src="//cdnjs.cloudflare.com/ajax/libs/prettify/r298/run_prettify.min.js"></script>
         <script src="assets/js/jquery.bootstrap-duallistbox.js"></script>
 
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/css/bootstrap-select.min.css" />
+
     </head>
 
     <body>    
@@ -163,32 +165,59 @@
                                     </section>
                                 </div>
                             </fieldset>
+                            <fieldset>      
+                                <section>
+                                    <label class="checkbox"><input id="publicCheckbox" type="checkbox" name="public"><i></i>Publiczny</label>
+                                </section>
+                                <div class="row" id="partnerState">
+                                    <hr>
+                                    <section class="col col-5">
+                                        <div class="row">
+                                            <section class="col col-12">
+                                                <label class="label">Wybierz partnerów</label>
+                                                <select  id="service-select-partner" class="selectpicker input-block-level" data-live-search="true" data-size="10"  multiple title='Wybierz...' data-selected-text-format="count>1" data-width="280px">
+                                                </select>
+                                            </section>
+                                        </div>
+                                        <div class="row">
+                                            <section class="col col-12">
+                                                <label class="label">Wybierz grupy partnerów</label>
+                                                <select  id="service-select-group" class="selectpicker input-block-level" data-live-search="true" data-size="10"  multiple title='Wybierz...' data-selected-text-format="count>1" data-width="280px">
+                                                    <option value="330" data-entry="0">Grupa A</option>	
+                                                    <option value="332" data-entry="0">Grupa B</option>	
+                                                    <option value="332" data-entry="0">Grupa Tyger Gym i Calypso</option>	
+                                                </select>
+                                            </section>
+                                        </div>
+                                    </section>
+                                    <section class="col col-2">
+                                        <div class="row">
+                                            <button type="button" class="btn btn-default col-md-8 col-md-offset-2" data-type="atr" style="margin-bottom: 10px;">
+                                                <span class="glyphicon glyphicon-list"></span> <span class="glyphicon glyphicon-chevron-right"></span>
+                                            </button>
+                                            <button type="button" class="btn btn-default col-md-8 col-md-offset-2" data-type="str" style="margin-bottom: 20px;">
+                                                <span class="glyphicon glyphicon-chevron-right"></span>
+                                            </button>
+                                            <button type="button" class="btn btn-default col-md-8 col-md-offset-2" data-type="stl" style="margin-bottom: 10px;">
+                                                <span class="glyphicon glyphicon-chevron-left"></span>
+                                            </button>       
+                                            <button type="button" class="btn btn-default col-md-8 col-md-offset-2" data-type="atl" style="margin-bottom: 10px;">
+                                                <span class="glyphicon glyphicon-chevron-left"></span> <span class="glyphicon glyphicon-list"></span>
+                                            </button>
+                                        </div>
+                                    </section>
+                                    <section class="col col-5">
+                                        <div class="row">
+                                            <section class="col col-12">
+                                                <label class="label">Wybrani partnerzy</label>
+                                                <select class="selected form-control" style="height: 120px; width: 270px;" multiple="" name="">
+                                                </select>
+                                            </section>
+                                        </div>
+                                    </section>
+                                </div>
+                            </fieldset>
                             <fieldset>    
-                                <section>
-                                    <label class="checkbox"><input id="publicCheckbox" type="checkbox" name="public" onclick="showPartnerDiv()"><i></i>Publiczny</label>
-                                </section>
-                                <section>
-                                    <div id="partnerState">
-                                        <label class="label">Lista partnerów</label>
-                                        <select multiple="multiple" size="10" name="duallistbox_demo1[]" id="duallistbox">
-                                            <option value="option1">Option 1</option>
-                                            <option value="option2">Option 2</option>
-                                            <option id="groupB" value="option3">Grupa B</option>
-                                            <option value="option4">Option 4</option>
-                                            <option value="option5">Option 5</option>
-                                            <option value="option6" selected="selected">Option 6</option>
-                                            <option value="option7">Option 7</option>
-                                            <option value="option8">Option 8</option>
-                                            <option value="option9">Option 9</option>
-                                            <option value="option0">Option 10</option>
-                                        </select>
-
-                                        <script>
-                                            var demo1 = $('select[name="duallistbox_demo1[]"]').bootstrapDualListbox();
-
-                                        </script>
-                                    </div>
-                                </section>
                                 <section>
                                     <label class="label">Ogranicz widoczność posta do roli (hierarchicznie)</label>
                                     <label class="select">
@@ -200,7 +229,6 @@
                                         <i></i>
                                     </label>
                                 </section>
-
                                 <section>
                                     <label class="label">Link do źródła</label>
                                     <label class="input">
@@ -320,6 +348,7 @@
         <script type="text/javascript" src="assets/js/app.js"></script>
         <script type="text/javascript" src="assets/js/plugins/fancy-box.js"></script>
         <script type="text/javascript" src="assets/js/site.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/js/bootstrap-select.min.js"></script>
         <script type="text/javascript">
                                     jQuery(document).ready(function () {
                                         App.init();
