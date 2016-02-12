@@ -25,19 +25,9 @@
         <link rel="stylesheet" href="assets/css/headers/header-default.css">
         <link rel="stylesheet" href="assets/css/footers/footer-v1.css">
 
-        <!-- CSS Implementing Plugins -->
-        <link rel="stylesheet" href="assets/plugins/animate.css">
-        <link rel="stylesheet" href="assets/plugins/line-icons/line-icons.css">
-        <link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.min.css">
-
-        <!-- CSS Page Style -->    
-        <link rel="stylesheet" href="assets/css/pages/shortcode_timeline2.css">
-
         <!-- CSS Customization -->
         <link rel="stylesheet" href="assets/css/theme-colors/dark-red.css">
 
-        <!-- DataTables -->
-        <link rel="stylesheet" type="text/css" href="assets/plugins/datatable/css/jquery.dataTables.css">
 
         <!-- CSS Implementing Plugins -->
         <link rel="stylesheet" href="assets/plugins/animate.css">
@@ -47,27 +37,9 @@
         <link rel="stylesheet" href="assets/plugins/sky-forms-pro/skyforms/custom/custom-sky-forms.css">
         <!--[if lt IE 9]><link rel="stylesheet" href="assets/plugins/sky-forms-pro/skyforms/css/sky-forms-ie8.css"><![endif]-->
 
-        <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.css">
-        <link rel="stylesheet" type="text/css" href="assets/css/bootstrap-duallistbox.css">
-
         <link rel="stylesheet" type="text/css" href="assets/css/jquery.timepicker.css" />
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/css/bootstrap-select.min.css" />
 
-        <link rel="stylesheet" href="assets/plugins/cube-portfolio/cubeportfolio/css/cubeportfolio.min.css">    
-        <link rel="stylesheet" href="assets/plugins/cube-portfolio/cubeportfolio/custom/custom-cubeportfolio.css">
-        <link rel="stylesheet" href="assets/plugins/fancybox/source/jquery.fancybox.css">   
-        <link rel="stylesheet" href="assets/plugins/sky-forms-pro/skyforms/css/sky-forms.css">
-        <link rel="stylesheet" href="assets/plugins/sky-forms-pro/skyforms/custom/custom-sky-forms.css">
-        <link rel="stylesheet" href="assets/css/jquery.fileupload.css">
-        <link rel="stylesheet" href="assets/css/jquery.fileupload-ui.css">
-        <!-- CSS adjustments for browsers with JavaScript disabled -->
-        <noscript><link rel="stylesheet" href="assets/css/jquery.fileupload-noscript.css"></noscript>
-        <noscript><link rel="stylesheet" href="assets/css/jquery.fileupload-ui-noscript.css"></noscript>
-
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
-        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-        <script src="//cdnjs.cloudflare.com/ajax/libs/prettify/r298/run_prettify.min.js"></script>
-        <script src="assets/js/jquery.bootstrap-duallistbox.js"></script>
-        <link rel="stylesheet" href="assets/plugins/bootstrap-tagsinput-latest/dist/bootstrap-tagsinput.css">
 
     </head>
 
@@ -80,7 +52,7 @@
             <!--=== Breadcrumbs ===-->
             <div class="breadcrumbs">
                 <div class="container">
-                    <h1 class="pull-left">Nowa ankieta</h1>
+                    <h1 class="pull-left">Nowy parametr</h1>
                     <ul class="pull-right breadcrumb">
                         <li><a href="wall.html">Home</a></li>
                         <li><a href="">Baza wiedzy</a></li>
@@ -99,20 +71,68 @@
                         <form action="" method="post" id="sky-form3" class="sky-form">
                             <fieldset>                  
                                 <section>
-                                    <label class="label">Tytuł</label>
+                                    <label class="label">Etykieta</label>
                                     <label class="input">
                                         <i class="icon-append fa fa-file-text"></i>
-                                        <input type="text" name="subject" id="subject" required="">
+                                        <input type="text" name="label" id="subject" required="">
                                     </label>
                                 </section>
 
                                 <section>
-                                    <label class="label">Treść</label>
-
-                                    //** Miejsce na CKEditor **//
-
+                                    <label class="label">Typ pytania</label>
+                                    <label class="select">
+                                        <select name="type" onchange="operatorBSSlide(this.value)">
+                                            <option value="1" selected>Data</option>
+                                            <option value="2">Operator</option>
+                                            <option value="3" >Miejsce</option>
+                                        </select>
+                                        <i></i>
+                                    </label>
                                 </section>
-
+                            </fieldset>
+                            <fieldset>                  
+                                <section id="dateState" class="activeState">
+                                    <label class="label">Data i czas</label>
+                                    <div class="row">
+                                        <section class="col col-6">
+                                            <label class="input">
+                                                <i class="icon-append fa fa-calendar"></i>
+                                                <input type="text" name="date" id="start">
+                                            </label>
+                                        </section>
+                                        <section class="col col-6">
+                                            <label class="input">
+                                                <i class="icon-append fa fa-clock-o"></i>
+                                                <input type="text" autocomplete="on" id="startTime">
+                                            </label>
+                                        </section>
+                                    </div>
+                                </section>
+                                <section id="operatorBSState">
+                                    <label class="label">Wybierz Operatora Benefit</label>
+                                    <div class="input-group">
+                                        <select  id="service-select" class="selectpicker input-block-level" data-live-search="true" title='Wybierz...' data-selected-text-format="count>1" data-width="100%">
+                                            <option value="" data-entry="0">Tomasz Tomaszewski</option>	
+                                            <option value="" data-entry="0">Adam Adamowski</option>	
+                                            <option value="" data-entry="0">Jacek Cygan</option>	
+                                        </select>
+                                        <span class="input-group-btn">
+                                            <button class="btn-u btn-u-dark margin-left-5"  tabindex="-1"  type="button"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Odznacz</button>
+                                        </span>
+                                    </div>
+                                </section>
+                                <section id="placeState">
+                                    <label class="label">Miejsce</label>
+                                    <label class="input">
+                                        <i class="icon-append fa fa-file-text"></i>
+                                        <input type="text" name="label" id="place" required="">
+                                    </label>
+                                </section>
+                            </fieldset>
+                            <fieldset>
+                                <section>
+                                    <label class="checkbox"><input type="checkbox" name="req"><i></i>Parametr będzie kryterium wyszukiwania</label>
+                                </section>
                             </fieldset>
                             <footer style="text-align: right;">
                                 <button type="button" class="btn-u btn-u-default" onclick="window.history.back();">Wróć</button>
@@ -156,31 +176,59 @@
         <script type="text/javascript" src="assets/js/plugins/datepicker.js"></script>
         <script type="text/javascript" src="assets/js/plugins/validation.js"></script>
         <script type="text/javascript" src="assets/js/jquery.timepicker.js"></script>
-        <script type="text/javascript" src="assets/plugins/fancybox/source/jquery.fancybox.pack.js"></script>
-        <!-- JS Customization -->
-        <script type="text/javascript" src="assets/js/custom.js"></script>
-        <!-- JS Page Level -->           
-        <script type="text/javascript" src="assets/js/app.js"></script>
-        <script type="text/javascript" src="assets/js/plugins/fancy-box.js"></script>
-        <script type="text/javascript" src="assets/js/site.js"></script>
-        <script src="assets/plugins/bootstrap-tagsinput-latest/dist/bootstrap-tagsinput.min.js"></script>
-        <script src="assets/plugins/bootstrap-tagsinput-latest/examples/assets/app.js"></script>
-        <script src="assets/plugins/bootstrap-tagsinput-latest/examples/assets/app_bs3.js"></script>
+
+        <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/js/bootstrap-select.min.js"></script>
 
         <script type="text/javascript">
                                     jQuery(document).ready(function () {
                                         App.init();
                                         ContactForm.initContactForm();
-                                        Masking.initMasking();
                                         Datepicker.initDatepicker();
-                                        Validation.initValidation();
-                                        FancyBox.initFancybox();
                                     });
+                                    function operatorBSSlide(number) {
+                                        alert('The option with value ' + number);
+                                        if (number == 1) {
+                                            $('#dateState').slideToggle('fast', function () {
+                                                $('.activeState').slideToggle('fast', function () {
+                                                    $(this).removeClass("activeState");
+                                                });
+                                                $('#dateState').addClass("activeState");
+                                            });
+                                        }
+                                        else if (number == 2) {
+                                            $('#operatorBSState').slideToggle('fast', function () {
+                                                $('.activeState').slideToggle('fast', function () {
+                                                    $(this).removeClass("activeState");
+                                                });
+                                                $('#operatorBSState').addClass("activeState");
+                                            });
+                                        }
+                                        else if (number == 3) {
+                                            $('#placeState').slideToggle('fast', function () {
+                                                $('.activeState').slideToggle('fast', function () {
+                                                    $(this).removeClass("activeState");
+                                                });
+                                                $('#placeState').addClass("activeState");
+                                            });
+                                        }
+                                    }
+                                    ;
         </script>
         <script>
             $(function () {
                 $("#includedContentHeader").load("header_backend.html");
                 $("#includedContentFooter").load("footer.html");
+                $('#operatorBSState').slideToggle('fast', function () {
+                    // Animation complete.
+                });
+                $('#placeState').slideToggle('fast', function () {
+                    // Animation complete.
+                });
+                setTimeout(function () {
+                    $('.dropdown-toggle').dropdown();
+                }, 2000);
+
+
             });
         </script> 
         <!--[if lt IE 9]>
@@ -190,13 +238,7 @@
         <![endif]-->
         <script type="text/javascript">
             jQuery(document).ready(function () {
-                $('#attachments_presentation').slideToggle('fast', function () {
-                });
-                $('#appbundle_invoice_confirm_files').change(function () {
-                    $('#attachments_presentation').slideToggle('fast', function () {
-                        // Animation complete.
-                    });
-                });
+
             });
         </script>
 

@@ -1,0 +1,46 @@
+<!-- Modal -->
+
+<head>
+
+    <link rel="stylesheet" href="assets/plugins/sky-forms-pro/skyforms/css/sky-forms.css">
+    <link rel="stylesheet" href="assets/plugins/sky-forms-pro/skyforms/custom/custom-sky-forms.css">
+    <link rel="stylesheet" href="assets/css/jquery.fileupload.css">
+    <link rel="stylesheet" href="assets/css/jquery.fileupload-ui.css">
+    <!-- CSS adjustments for browsers with JavaScript disabled -->
+    <noscript><link rel="stylesheet" href="assets/css/jquery.fileupload-noscript.css"></noscript>
+    <noscript><link rel="stylesheet" href="assets/css/jquery.fileupload-ui-noscript.css"></noscript>
+    <!--[if lt IE 9]><link rel="stylesheet" href="assets/plugins/sky-forms-pro/skyforms/css/sky-forms-ie8.css"><![endif]-->
+
+</head>
+
+<div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+            <button aria-hidden="true" data-dismiss="modal" class="close" type="button">×</button>
+            <h4 id="modalNumberLabel" class="modal-title">  Potwierdź usunięcie </h4>
+        </div>
+        <form action="#" id="sky-form-number" class="sky-form">
+            <fieldset>
+                <section>
+                    <label class="label">Komentarz</label>
+                    <label class="textarea">
+                        <textarea rows="3" name="decline_reason" required=""></textarea>
+                    </label>
+                </section>
+            </fieldset>
+            <div class="modal-footer">
+                <button data-dismiss="modal" class="btn-u btn-u-default" type="button">Wróć</button>
+                <button  type="submit" class="btn-u">Zapisz</button>
+            </div>
+        </form>
+    </div>
+</div>
+<!-- End Modal -->
+
+<script type="text/javascript">
+    jQuery(document).ready(function () {
+        $('#decline').click(function () {
+            $('#removeSurvey').modal('hide');
+        });
+    });
+</script>

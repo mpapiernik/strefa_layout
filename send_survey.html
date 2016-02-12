@@ -1,0 +1,297 @@
+<!DOCTYPE html> 
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->  
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->  
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->  
+    <head>
+        <title>Panel Benefit Systems</title>
+
+        <!-- Meta -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <!-- Favicon -->
+        <link rel="shortcut icon" href="favicon.ico">
+
+        <!-- Web Fonts -->
+        <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:400,300,600&amp;subset=cyrillic,latin">
+
+        <!-- CSS Global Compulsory -->
+        <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+
+        <!-- CSS Header and Footer -->
+        <link rel="stylesheet" href="assets/css/headers/header-default.css">
+        <link rel="stylesheet" href="assets/css/footers/footer-v1.css">
+
+        <!-- CSS Customization -->
+        <link rel="stylesheet" href="assets/css/theme-colors/dark-red.css">
+
+
+        <!-- CSS Implementing Plugins -->
+        <link rel="stylesheet" href="assets/plugins/animate.css">
+        <link rel="stylesheet" href="assets/plugins/line-icons/line-icons.css">
+        <link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="assets/plugins/sky-forms-pro/skyforms/css/sky-forms.css">
+        <link rel="stylesheet" href="assets/plugins/sky-forms-pro/skyforms/custom/custom-sky-forms.css">
+        <!--[if lt IE 9]><link rel="stylesheet" href="assets/plugins/sky-forms-pro/skyforms/css/sky-forms-ie8.css"><![endif]-->
+
+        <link rel="stylesheet" type="text/css" href="assets/css/jquery.timepicker.css" />
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/css/bootstrap-select.min.css" />
+
+
+    </head>
+
+    <body>    
+        <div class="wrapper">
+            <!--=== Header ===-->    
+            <div class="header" id="includedContentHeader">
+            </div>
+            <!--=== End Header ===--> 
+            <!--=== Breadcrumbs ===-->
+            <div class="breadcrumbs">
+                <div class="container">
+                    <h1 class="pull-left">Wyślij ankietę</h1>
+                    <ul class="pull-right breadcrumb">
+                        <li><a href="wall.html">Home</a></li>
+                        <li><a href="">Baza wiedzy</a></li>
+                        <li><a href="#">Ankiety</a></li>
+                    </ul>
+                </div>
+            </div><!--/breadcrumbs-->
+            <!--=== End Breadcrumbs ===-->
+
+            <!--=== Content Part ===-->
+            <div class="container content">     
+                <div class="row">
+                    <!-- Begin Content -->
+                    <div class="col-md-8 col-md-offset-2 margin-bottom-50">
+                        <!-- Post -->
+                        <form action="" method="post" id="sky-form3" class="sky-form">
+                            <fieldset>
+                                <section id="radios">
+                                    <label class="label">Wybierz odbiorców</label>
+                                    <label class="radio"><input type="radio" name="radio" checked=""><i class="rounded-x"></i>Wybierz partnerów</label>
+                                    <label class="radio"><input type="radio" name="radio"><i class="rounded-x"></i>Wybierz operatorów</label>
+                                </section>
+                            </fieldset>
+                            <fieldset id="partnersState">      
+                                <div class="row">
+                                    <section class="col col-5">
+                                        <div class="row">
+                                            <section class="col col-12">
+                                                <label class="label">Wybierz partnerów</label>
+                                                <select  id="service-select-partner" class="selectpicker input-block-level" data-live-search="true" data-size="10"  multiple title='Wybierz...' data-selected-text-format="count>1" data-width="280px">
+                                                </select>
+                                            </section>
+                                        </div>
+                                        <div class="row">
+                                            <section class="col col-12">
+                                                <label class="label">Wybierz grupy partnerów</label>
+                                                <select  id="service-select-group" class="selectpicker input-block-level" data-live-search="true" data-size="10"  multiple title='Wybierz...' data-selected-text-format="count>1" data-width="280px">
+                                                    <option value="330" data-entry="0">Grupa A</option>	
+                                                    <option value="332" data-entry="0">Grupa B</option>	
+                                                    <option value="332" data-entry="0">Grupa Tyger Gym i Calypso</option>	
+                                                </select>
+                                            </section>
+                                        </div>
+                                    </section>
+                                    <section class="col col-2">
+                                        <div class="row">
+                                            <button type="button" class="btn btn-default col-md-8 col-md-offset-2" data-type="atr" style="margin-bottom: 10px;">
+                                                <span class="glyphicon glyphicon-list"></span> <span class="glyphicon glyphicon-chevron-right"></span>
+                                            </button>
+                                            <button type="button" class="btn btn-default col-md-8 col-md-offset-2" data-type="str" style="margin-bottom: 20px;">
+                                                <span class="glyphicon glyphicon-chevron-right"></span>
+                                            </button>
+                                            <button type="button" class="btn btn-default col-md-8 col-md-offset-2" data-type="stl" style="margin-bottom: 10px;">
+                                                <span class="glyphicon glyphicon-chevron-left"></span>
+                                            </button>       
+                                            <button type="button" class="btn btn-default col-md-8 col-md-offset-2" data-type="atl" style="margin-bottom: 10px;">
+                                                <span class="glyphicon glyphicon-chevron-left"></span> <span class="glyphicon glyphicon-list"></span>
+                                            </button>
+                                        </div>
+                                    </section>
+                                    <section class="col col-5">
+                                        <div class="row">
+                                            <section class="col col-12">
+                                                <label class="label">Wybrani partnerzy</label>
+                                                <select class="selected form-control" style="height: 120px; width: 270px;" multiple="" name="">
+                                                </select>
+                                            </section>
+                                        </div>
+                                    </section>
+                                </div>
+                                <hr>
+                                <section>
+                                    <label class="label">Ogranicz odbiorców do roli (hierarchicznie)</label>
+                                    <label class="select">
+                                        <select name="role">
+                                            <option value="1">Operator partnera + Operator FK + Administrator</option>
+                                            <option value="2">Operator FK + Administrator</option>
+                                            <option value="3">Administrator</option>
+                                        </select>
+                                        <i></i>
+                                    </label>
+                                </section>
+                            </fieldset>
+                            <fieldset id="operatorsState">    
+                                <div class="row">
+                                    <!--Button Addons-->
+                                    <div class="col-md-6">
+                                        <label>Wybierz partnera</label>
+                                        <small>(wpisz NIP lub nazwę)</small>
+                                        <div class="input-group">
+                                            <select  id="partner-select" class="selectpicker input-block-level" data-live-search="true"  title='Wybierz...' data-width="100%">
+                                            </select>
+                                            <span class="input-group-btn">
+                                                <button id="setPartners" class="btn-u margin-left-5"  tabindex="-1"  type="button"><span class="fa fa-chevron-down" aria-hidden="true"></span> Ustaw</button>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr>
+
+                                <div class="row" id="operatorsSelect">
+                                    <section class="col col-5">
+                                        <div class="row">
+                                            <section class="col col-12">
+                                                <label class="label">Wybierz Operatorów</label>
+                                                <select  id="operator-select" class="selectpicker input-block-level" data-live-search="true" data-size="10"  multiple title='Wybierz...' data-selected-text-format="count>1" data-width="280px">
+                                                    <option  data-hidden="true"></option>	
+                                                    <option value="" data-entry="0">Tomasz Tomaszewski - Administrator</option>	
+                                                    <option value="" data-entry="0">Adam Adamowski - Operator FK</option>	
+                                                    <option value="" data-entry="0">Jacek Cygan - Operator</option>	
+                                                    <option value="" data-entry="0">Tomasz Jankowski - Operator</option>	
+                                                    <option value="" data-entry="0">Adam Pawłowski - Operator</option>	
+                                                    <option value="" data-entry="0">Jacek Cygański - Operator</option>	
+                                                </select>
+                                            </section>
+                                        </div>
+                                    </section>
+                                    <section class="col col-2">
+                                        <div class="row">
+                                            <button type="button" class="btn btn-default col-md-8 col-md-offset-2" data-type="atr" style="margin-bottom: 10px;">
+                                                <span class="glyphicon glyphicon-list"></span> <span class="glyphicon glyphicon-chevron-right"></span>
+                                            </button>
+                                            <button type="button" class="btn btn-default col-md-8 col-md-offset-2" data-type="str" style="margin-bottom: 20px;">
+                                                <span class="glyphicon glyphicon-chevron-right"></span>
+                                            </button>
+                                            <button type="button" class="btn btn-default col-md-8 col-md-offset-2" data-type="stl" style="margin-bottom: 10px;">
+                                                <span class="glyphicon glyphicon-chevron-left"></span>
+                                            </button>       
+                                            <button type="button" class="btn btn-default col-md-8 col-md-offset-2" data-type="atl" style="margin-bottom: 10px;">
+                                                <span class="glyphicon glyphicon-chevron-left"></span> <span class="glyphicon glyphicon-list"></span>
+                                            </button>
+                                        </div>
+                                    </section>
+                                    <section class="col col-5">
+                                        <div class="row">
+                                            <section class="col col-12">
+                                                <label class="label">Wybrani operatorzy</label>
+                                                <select class="selected form-control" style="height: 120px; width: 270px;" multiple="" name="">
+                                                </select>
+                                            </section>
+                                        </div>
+                                    </section>
+                                </div>
+                            </fieldset>
+                            <footer style="text-align: right;">
+                                <button type="button" class="btn-u btn-u-default" onclick="window.history.back();">Wróć</button>
+                                <a href="view_survey_backend.html" class="btn-u">Zapisz</a>  
+                            </footer>
+                        </form>         
+                        <!-- Post -->
+                    </div>
+                    <!-- End Content -->
+                    <!-- Begin Sidebar Menu -->
+                    <div class="col-md-3" id="includedContentSideBar">
+                    </div>
+                    <!-- End Sidebar Menu -->
+                </div>          
+            </div><!--/container-->     
+            <!--=== End Content Part ===-->
+
+        </div><!--/End Wrapepr-->
+        <!--=== Footer Version 1 ===-->
+        <div class="footer-v1" id="includedContentFooter">
+        </div>     
+        <!--=== End Footer Version 1 ===-->
+
+        <!-- JS Global Compulsory -->           
+        <script type="text/javascript" src="assets/plugins/jquery/jquery.min.js"></script>
+        <script type="text/javascript" src="assets/plugins/jquery/jquery-migrate.min.js"></script>
+        <script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+        <!-- JS Implementing Plugins -->
+        <script type="text/javascript" src="assets/plugins/back-to-top.js"></script>
+        <script type="text/javascript" src="assets/plugins/smoothScroll.js"></script>
+        <script src="assets/plugins/sky-forms-pro/skyforms/js/jquery.validate.min.js"></script>
+        <script src="assets/plugins/sky-forms-pro/skyforms/js/jquery.maskedinput.min.js"></script>
+        <script src="assets/plugins/sky-forms-pro/skyforms/js/jquery-ui.min.js"></script>
+        <script src="assets/plugins/sky-forms-pro/skyforms/js/jquery.form.min.js"></script>
+        <!-- JS Customization -->
+        <script type="text/javascript" src="assets/js/custom.js"></script>
+        <!-- JS Page Level -->           
+        <script type="text/javascript" src="assets/js/app.js"></script>
+        <script type="text/javascript" src="assets/js/forms/contact.js"></script>
+        <script type="text/javascript" src="assets/js/plugins/masking.js"></script>
+        <script type="text/javascript" src="assets/js/plugins/datepicker.js"></script>
+        <script type="text/javascript" src="assets/js/plugins/validation.js"></script>
+        <script type="text/javascript" src="assets/js/jquery.timepicker.js"></script>
+
+        <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/js/bootstrap-select.min.js"></script>
+
+        <script type="text/javascript">
+                                    jQuery(document).ready(function () {
+                                        App.init();
+                                        ContactForm.initContactForm();
+                                        Datepicker.initDatepicker();
+                                    });
+        </script>
+        <script>
+            $(function () {
+                $("#includedContentHeader").load("header_backend.html");
+                $("#includedContentFooter").load("footer.html");
+
+                setTimeout(function () {
+                    $('.dropdown-toggle').dropdown();
+                }, 2000);
+
+
+                $('#operatorsState').slideToggle('fast', function () {
+                });
+                $('#operatorsSelect').slideToggle('fast', function () {
+                        // Animation complete.
+                    });
+
+            });
+        </script> 
+        <!--[if lt IE 9]>
+            <script src="assets/plugins/respond.js"></script>
+            <script src="assets/plugins/html5shiv.js"></script>
+            <script src="assets/plugins/placeholder-IE-fixes.js"></script>
+        <![endif]-->
+        <script type="text/javascript">
+            jQuery(document).ready(function () {
+
+                $('#radios input').on('change', function () {
+                    $('#operatorsState').slideToggle('fast', function () {
+                    });
+                    $('#partnersState').slideToggle('fast', function () {
+                    });
+                });
+
+                operatorsSelect
+
+                $('#setPartners').click(function () {
+                    $('#operatorsSelect').slideToggle('fast', function () {
+                        // Animation complete.
+                    });
+                });
+
+            });
+        </script>
+
+    </body>
+</html> 
