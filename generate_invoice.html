@@ -73,7 +73,7 @@
             <div class="container content">     
                 <div class="row">
                     <!-- Begin Content -->
-                    <div class="col-md-9 margin-bottom-50">
+                    <div class="col-md-12 margin-bottom-50">
                         <!--Invoice Detials-->
                         <div class="row invoice-header text-center">
                             <div class="col-xs-4">
@@ -445,6 +445,7 @@
                                         <tr>
                                             <th>#</th>
                                             <th class="table-product">Obiekt&nbspId - Usługa</th>
+                                            <th>PKWiU</th>
                                             <th>Ilość</th>
                                             <th class="hidden-sm">J.m.</th>
                                             <th>Cena jedn. netto</th>
@@ -458,6 +459,7 @@
                                         <tr>
                                             <td>1</td>
                                             <td class="table-product"> 321 - Sauna</td>
+                                            <td></td>
                                             <td>252</td>
                                             <td class="hidden-sm">szt.</td>
                                             <td>12,00</td>
@@ -469,6 +471,7 @@
                                         <tr>
                                             <td>2</td>
                                             <td class="table-product">321 - Zajęcia sportowe pracownika</td>
+                                            <td> 93.13.10.0 </td>
                                             <td>25</td>
                                             <td class="hidden-sm">szt.</td>
                                             <td>10,00</td>
@@ -480,6 +483,7 @@
                                         <tr>
                                             <td>3</td>
                                             <td class="table-product">322 - Zajęcia fitness</td>
+                                            <td> 93.13.10.0 </td>
                                             <td>120</td>
                                             <td class="hidden-sm">szt.</td>
                                             <td>15,00</td>
@@ -491,6 +495,7 @@
                                         <tr>
                                             <td>4</td>
                                             <td class="table-product">322 - Zajęcia jogi</td>
+                                            <td>100.32.3</td>
                                             <td>100</td>
                                             <td class="hidden-sm">szt.</td>
                                             <td>20,00</td>
@@ -617,10 +622,7 @@
                         <!-- Post -->
                     </div>
                     <!-- End Content -->
-                    <!-- Begin Sidebar Menu -->
-                    <div class="col-md-3" id="includedContentSideBar">
-                    </div>
-                    <!-- End Sidebar Menu -->
+                
                 </div>          
             </div><!--/container-->     
             <!--=== End Content Part ===-->
@@ -693,7 +695,7 @@
                                             },
                                             columns: {
                                                 identifier: [0, '#'],
-                                                editable: [[2, 'Ilość'], [4, 'Cena jedn. netto'], [6, 'Stawka VAT']]
+                                                editable: [[2, 'PKWiU'], [3, 'Ilość'], [5, 'Cena jedn. netto'], [7, 'Stawka VAT']]
                                             }
                                         });
                                         $("#sky-form-details").submit(function (event) {

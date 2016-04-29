@@ -40,7 +40,7 @@ var Validation = function () {
 	                range:
 	                {
 	                    required: true,
-	                    rangelength: [5, 10]
+	                    rangelength: [0, 10]
 	                },
 	                digits:
 	                {
@@ -65,7 +65,7 @@ var Validation = function () {
 	                rangeVal:
 	                {
 	                    required: true,
-	                    range: [5, 100]
+	                    range: [0, 100]
 	                }
 	            },
 	                                
@@ -118,7 +118,8 @@ var Validation = function () {
 	                },
 	                rangeVal:
 	                {
-	                    required: 'Please enter some value'
+	                    required: 'Wprowadź wartość',
+                            range: jQuery.validator.format("Wprowadź wartość pomiędzy {0} i {1}") 
 	                }
 	            },                  
 	            
