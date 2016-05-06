@@ -87,12 +87,32 @@
                                                 <section class="col col-3">
                                                     <label class="label">Sposób rozliczania</label>
                                                     <label class="select">
-                                                        <select name="service_desc">
-                                                            <option value="1" selected=""></option>
-                                                            <option>netto</option>
-                                                            <option>brutto</option>
+                                                        <select id="docTypes">
+                                                            <option value="0">Faktura VAT</option>
+                                                            <option value="1">Rachunek</option>
+                                                            <option value="2">Faktura bez VAT</option>
                                                         </select>
                                                         <i></i>
+                                                    </label>
+                                                </section>
+                                            </div>
+                                            <div id="vatReasonDiv">
+                                                <section>
+                                                    <label class="label">Zwolenianie ze stawki VAT</label>
+                                                    <label class="select">
+                                                        <select id="vat_reason">
+                                                            <option value="art. 43 ust. 1 ustawy o VAT oraz przepisy wykonawcze do ustawy VAT „Zwolnienie z podatku od towarów i usług na podstawie art. 43 ust. 1 pkt 2-41 Ustawy z 11 marca 2004r.">Przedmiotowe - art. 43 ust. 1 ustawy o VAT oraz przepisy wykonawcze do ustawy VAT „Zwolnienie z podatku od towarów i usług</option>
+                                                            <option value="art. 113 ustawy o VAT „SPRZEDAWCA ZWOLNIONY PODMIOTOWO Z PODATKU OD TOWARÓW I USŁUG [dostawa towarów lub świadczenie usług, zwolnione na podstawie art. 113 ust. 1 (albo ust. 9) ustawy z dnia 11 marca 2004r. o podatku od towarów i usług (Dz. U. z 2011r. Nr 177. Poz. 1054. z późn. Zm)]
+                                                        ">Podmiotowe - art. 113 ustawy o VAT „SPRZEDAWCA ZWOLNIONY PODMIOTOWO Z PODATKU OD TOWARÓW I USŁUG </option>
+                                                        </select>
+                                                        <i></i>
+                                                    </label>
+                                                </section>
+                                                <section>
+                                                    <label class="label">Powód</label>
+                                                    <label class="textarea state-disabled">
+                                                        <i class="icon-append fa fa-comment"></i>
+                                                        <textarea id="vat_reason_text" rows="6" name="message" readonly=""></textarea>
                                                     </label>
                                                 </section>
                                             </div>
@@ -143,9 +163,10 @@
                                                     <tr>
                                                         <th class="col-1">#</th>
                                                         <th class="col-2">Rodzaj&nbsp;dokumentu</th>
-                                                        <th class="col-4">Szablon</th>
+                                                        <th class="col-3">Szablon</th>
                                                         <th>Kolejny&nbsp;numer</th>
-                                                        <th class="col-4">Wartosć&nbsp;systemowa</th>
+                                                        <th class="col-3">Wartosć&nbsp;systemowa</th>
+                                                        <th class="col-2 dt-head-center">Aktywny</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
@@ -154,28 +175,32 @@
                                                         <td>Faktura VAT</td>
                                                         <td>FAKTURA /%R/%m/%i</td>
                                                         <td>23</td>
-                                                        <td>FAKTURA /%R/%m/%i</td>
+                                                        <td>%i</td>
+                                                        <td class=" dt-body-center"><input type="checkbox"></td>
                                                     </tr>
                                                     <tr>
                                                         <td>2</td>
                                                         <td>Rachunek</td>
                                                         <td></td>
                                                         <td>1</td>
-                                                        <td>RACHUNEK /%R/%m/%i</td>
+                                                        <td>%i</td>
+                                                        <td class=" dt-body-center"><input type="checkbox"></td>
                                                     </tr>
                                                     <tr>
                                                         <td>3</td>
-                                                        <td>Nota korygująca</td>
-                                                        <td>NOTA KORYGUJACA /%R/%m/%i</td>
-                                                        <td>2</td>
-                                                        <td>NOTA /%R/%m/%d/%i</td>
+                                                        <td>Faktura bez VAT</td>
+                                                        <td>FbV/%R/%m/%i</td>
+                                                        <td>23</td>
+                                                        <td>%i</td>
+                                                        <td class=" dt-body-center"><input type="checkbox"></td>
                                                     </tr>
                                                     <tr>
                                                         <td>4</td>
                                                         <td>Korekta faktury</td>
                                                         <td></td>
                                                         <td>1</td>
-                                                        <td>FAKTURA KORYGUJĄCA /%R/%m/%i</td>
+                                                        <td>%i</td>
+                                                        <td class=" dt-body-center"><input type="checkbox"></td>
                                                     </tr>
                                                 </tbody>
                                             </table>
@@ -232,65 +257,72 @@
         <script type="text/javascript" language="javascript" src="assets/plugins/datatable/js/jquery.dataTables.js"></script>
         <script type="text/javascript" src="assets/js/jquery.tabledit.js"></script>
         <script type="text/javascript">
-                                                jQuery(document).ready(function () {
+                                                 jQuery(document).ready(function () {
                                                     App.init();
-                                                    $(document).ready(function () {
-                                                        $('#numberTemplateList').DataTable({
-                                                            "searching": false,
-                                                            "paging": false,
-                                                            "ordering": false,
-                                                            "info": false,
-                                                            "language": {
-                                                                "url": "assets/plugins/datatable/lang/Polish.json"
-                                                            }
-                                                        });
-                                                        $('#numberTemplateList').Tabledit({
-                                                            confirmButton: false,
-                                                            deleteButton: false,
-                                                            restoreButton: true,
-                                                            editButton: true,
-                                                            buttons: {
-                                                                edit: {
-                                                                    class: 'btn-u btn-brd btn-brd-hover btn-u-sm btn-u-s',
-                                                                    html: '<i class="fa fa-pencil"></i>',
-                                                                    action: 'edit'
-                                                                },
-                                                                delete: {
-                                                                    class: 'btn-u btn-brd btn-u-dark btn-brd-hover btn-u-sm margin-left-5',
-                                                                    html: '<i class="fa fa-trash"></i>',
-                                                                    action: 'delete'
-                                                                },
-                                                                restore: {
-                                                                    class: 'btn btn-sm btn-warning',
-                                                                    html: 'Przywróć',
-                                                                },
-                                                                save: {
-                                                                    class: 'btn btn-sm btn-success',
-                                                                    html: 'Zapisz'
-                                                                },
-                                                                confirm: {
-                                                                    class: 'btn btn-sm btn-danger',
-                                                                    html: 'Potwierdź'
-                                                                }
-                                                            },
-                                                            columns: {
-                                                                identifier: [0, '#'],
-                                                                editable: [[2, ''], [3, '']]
-                                                            }
-                                                        });
-                                                    });
-                                                    $(document).ready(function () {
-                                                        $('#appendSettings').click(function () {
-                                                            $('#settingsTab').slideToggle('fast', function () {
-                                                                if ($('#settingsArrow').hasClass('fa-sort-desc')) {
-                                                                    $('#settingsArrow').removeClass('fa-sort-desc');
-                                                                    $('#settingsArrow').addClass('fa-sort-asc');
-                                                                } else {
-                                                                    $('#settingsArrow').removeClass('fa-sort-asc');
-                                                                    $('#settingsArrow').addClass('fa-sort-desc');
-                                                                }
+                                                    $('#vatReasonDiv').hide();
+
+                                                    $('#docTypes').change(function () {
+
+                                                        if ($(this).val() == "2") {
+                                                            $('#vatReasonDiv').slideToggle('fast', function () {
+                                                                // Animation complete.
                                                             });
+                                                        }
+                                                        else {
+                                                            $('#vatReasonDiv').hide();
+                                                        }
+                                                    });
+                                                    
+                                                    $('#vat_reason').change(function () {
+                                                        var str = "";
+                                                        $( "#vat_reason option:selected" ).each(function() {
+                                                          str += $( this ).val() + " ";
                                                         });
+                                                        $( "#vat_reason_text" ).text( str );
+                                                    });
+
+                                                    $('#numberTemplateList').DataTable({
+                                                        "searching": false,
+                                                        "paging": false,
+                                                        "ordering": false,
+                                                        "info": false,
+                                                        "language": {
+                                                            "url": "assets/plugins/datatable/lang/Polish.json"
+                                                        }
+                                                    });
+                                                    $('#numberTemplateList').Tabledit({
+                                                        confirmButton: false,
+                                                        deleteButton: false,
+                                                        restoreButton: true,
+                                                        editButton: true,
+                                                        buttons: {
+                                                            edit: {
+                                                                class: 'btn-u btn-brd btn-brd-hover btn-u-sm btn-u-s',
+                                                                html: '<i class="fa fa-pencil"></i>',
+                                                                action: 'edit'
+                                                            },
+                                                            delete: {
+                                                                class: 'btn-u btn-brd btn-u-dark btn-brd-hover btn-u-sm margin-left-5',
+                                                                html: '<i class="fa fa-trash"></i>',
+                                                                action: 'delete'
+                                                            },
+                                                            restore: {
+                                                                class: 'btn btn-sm btn-warning',
+                                                                html: 'Przywróć',
+                                                            },
+                                                            save: {
+                                                                class: 'btn btn-sm btn-success',
+                                                                html: 'Zapisz'
+                                                            },
+                                                            confirm: {
+                                                                class: 'btn btn-sm btn-danger',
+                                                                html: 'Potwierdź'
+                                                            }
+                                                        },
+                                                        columns: {
+                                                            identifier: [0, '#'],
+                                                            editable: [[2, ''], [3, '']]
+                                                        }
                                                     });
                                                 });
         </script>
