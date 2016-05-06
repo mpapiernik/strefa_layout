@@ -30,8 +30,14 @@
         <link rel="stylesheet" href="assets/plugins/line-icons/line-icons.css">
         <link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.min.css">
 
+        <!-- CSS Page Style -->    
+        <link rel="stylesheet" href="assets/css/pages/shortcode_timeline2.css">
+
         <!-- CSS Customization -->
         <link rel="stylesheet" href="assets/css/theme-colors/dark-red.css">
+
+        <!-- DataTables -->
+        <link rel="stylesheet" type="text/css" href="assets/plugins/datatable/css/jquery.dataTables.css">
 
         <!-- CSS Implementing Plugins -->
         <link rel="stylesheet" href="assets/plugins/animate.css">
@@ -41,29 +47,27 @@
         <link rel="stylesheet" href="assets/plugins/sky-forms-pro/skyforms/custom/custom-sky-forms.css">
         <!--[if lt IE 9]><link rel="stylesheet" href="assets/plugins/sky-forms-pro/skyforms/css/sky-forms-ie8.css"><![endif]-->
 
-
         <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.css">
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
-        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-        <script src="//cdnjs.cloudflare.com/ajax/libs/prettify/r298/run_prettify.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="assets/css/bootstrap-duallistbox.css">
 
-        <!-- Multiselect -->
-        <link rel="stylesheet" href="assets/css/bootstrap-example.css" type="text/css">
-        <link rel="stylesheet" href="assets/css/prettify.css" type="text/css">
+        <link rel="stylesheet" type="text/css" href="assets/css/jquery.timepicker.css" />
 
-        <script type="text/javascript" src="assets/js/jquery-2.1.3.min.js"></script>
-        <script type="text/javascript" src="assets/js/bootstrap-3.3.2.min.js"></script>
-        <script type="text/javascript" src="assets/js/prettify.js"></script>
-
-        <link rel="stylesheet" href="dist/css/bootstrap-multiselect.css" type="text/css">
-        <script type="text/javascript" src="assets/js/bootstrap-multiselect.js"></script>
-        <script type="text/javascript" src="assets/js/bootstrap-multiselect-collapsible-groups.js"></script>
+        <link rel="stylesheet" href="assets/plugins/cube-portfolio/cubeportfolio/css/cubeportfolio.min.css">    
+        <link rel="stylesheet" href="assets/plugins/cube-portfolio/cubeportfolio/custom/custom-cubeportfolio.css">
+        <link rel="stylesheet" href="assets/plugins/fancybox/source/jquery.fancybox.css">   
 
         <link rel="stylesheet" href="assets/css/jquery.fileupload.css">
         <link rel="stylesheet" href="assets/css/jquery.fileupload-ui.css">
         <!-- CSS adjustments for browsers with JavaScript disabled -->
         <noscript><link rel="stylesheet" href="assets/css/jquery.fileupload-noscript.css"></noscript>
         <noscript><link rel="stylesheet" href="assets/css/jquery.fileupload-ui-noscript.css"></noscript>
+
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/prettify/r298/run_prettify.min.js"></script>
+        <script src="assets/js/jquery.bootstrap-duallistbox.js"></script>
+
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/css/bootstrap-select.min.css" />
 
     </head>
 
@@ -164,23 +168,23 @@
                                                 </br>
                                                 Maksymalny rozmiar plików 5MB.
                                             </p>
-                                             <div class="input-group margin-bottom-20">
-                                        <section>
-                                            <span class="btn btn-success fileinput-button">
-                                                <i class="glyphicon glyphicon-plus"></i>
-                                                <span>Wybierz zdjęcie...</span>
-                                                <input type="file" name="files[]">
-                                            </span>
-                                            <button type="button" class="btn btn-danger delete">
-                                                <i class="glyphicon glyphicon-trash"></i>
-                                                <span>Usuń</span>
-                                            </button>
-                                            <span class="fileupload-process"></span>
-                                        </section>
-                                    </div>
+                                            <div class="input-group margin-bottom-20">
+                                                <section>
+                                                    <span class="btn btn-success fileinput-button">
+                                                        <i class="glyphicon glyphicon-plus"></i>
+                                                        <span>Wybierz zdjęcie...</span>
+                                                        <input type="file" name="files[]">
+                                                    </span>
+                                                    <button type="button" class="btn btn-danger delete">
+                                                        <i class="glyphicon glyphicon-trash"></i>
+                                                        <span>Usuń</span>
+                                                    </button>
+                                                    <span class="fileupload-process"></span>
+                                                </section>
+                                            </div>
                                         </div>
                                     </div>
-                                   
+
                                 </div>
                             </fieldset>
                             <fieldset>
@@ -206,9 +210,50 @@
                                     <label class="checkbox"><input type="checkbox" name="checkbox" checked><i></i>Aktywuj operatora (użytkownik uzyska dostęp do Panelu Benefit)</label>
                                 </section>
                             </fieldset>
+                            <fieldset>      
+                                <h3>Zastępstwa</h3>
+                                 <section>
+                                    <div class="margin-bottom-20">
+                                        <div class="btn-group">
+                                            <a href="" class="btn-u btn-u-dark pull-right"><i class="fa fa-trash fa-fw"></i>Usuń zastępstwo</a>         
+                                        </div>
+                                    </div>
+                                </section>
+                                    <div class="row" >
+                                        <section class="col col-6">
+                                            <div class="row">
+                                                <section class="col col-6">
+                                                    <label class="label">Data rozpoczęcia </label>
+                                                    <label class="input">
+                                                        <i class="icon-append fa fa-calendar"></i>
+                                                        <input type="text" name="date" id="start">
+                                                    </label>
+                                                </section>
+                                                <section class="col col-6">
+                                                    <label class="label">Data zakończenia </label>
+                                                    <label class="input">
+                                                        <i class="icon-append fa fa-calendar"></i>
+                                                        <input type="text" name="date" id="finish">
+                                                    </label>
+                                                </section>
+                                            </div>
+                                        </section>
+                                        <section class="col col-6">
+                                            <label class="label">Zastępca </label>
+                                            <div class="input-group" style="width: 100%;">
+                                                <select  class="selectpicker show-tick"   data-live-search="true"  title='Wybierz...' data-width="100%">
+                                                    <option  data-hidden="true"></option>	
+                                                    <option value="1">Tadeusz Zieliński</option>	
+                                                    <option value="2" disabled data-subtext="2016-05-10 - 2016-05-14 (nieobecny)" >Magdalena Kwidzińska</option>	
+                                                    <option value="3" disabled data-subtext="2016-05-01 - 2016-05-10 (nieobecny)" >Adam Rutkowki</option>	
+                                                </select>
+                                            </div>
+                                        </section>
+                                    </div>
+                            </fieldset>
                             <footer style="text-align: right;">
                                 <button type="button" class="btn-u btn-u-default" onclick="window.history.back();">Wróć</button>
-                                <button type="submit" class="btn-u" onclick="">Edytuj</button>  
+                                <button type="submit" class="btn-u" onclick="">Zapisz</button>  
                             </footer>
                         </form>         
                         <!-- Post -->
@@ -246,17 +291,53 @@
         <script type="text/javascript" src="assets/js/plugins/datepicker.js"></script>
         <script type="text/javascript" src="assets/js/plugins/validation.js"></script>
         <script type="text/javascript" src="assets/js/forms/checkout.js"></script>
+
+        <script type="text/javascript" src="assets/plugins/jquery/jquery.min.js"></script>
+        <script type="text/javascript" src="assets/plugins/jquery/jquery-migrate.min.js"></script>
+        <script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+        <!-- JS Implementing Plugins -->
+        <script type="text/javascript" src="assets/plugins/back-to-top.js"></script>
+        <script type="text/javascript" src="assets/plugins/smoothScroll.js"></script>
+        <script src="assets/plugins/sky-forms-pro/skyforms/js/jquery.validate.min.js"></script>
+        <script src="assets/plugins/sky-forms-pro/skyforms/js/jquery.maskedinput.min.js"></script>
+        <script src="assets/plugins/sky-forms-pro/skyforms/js/jquery-ui.min.js"></script>
+        <script src="assets/plugins/sky-forms-pro/skyforms/js/jquery.form.min.js"></script>
+        <!-- JS Customization -->
+        <script type="text/javascript" src="assets/js/custom.js"></script>
+        <!-- JS Page Level -->           
+        <script type="text/javascript" src="assets/js/app.js"></script>
+        <script type="text/javascript" src="assets/js/forms/contact.js"></script>
+        <script type="text/javascript" src="assets/js/plugins/masking.js"></script>
+        <script type="text/javascript" src="assets/js/plugins/datepicker.js"></script>
+        <script type="text/javascript" src="assets/js/plugins/validation.js"></script>
+        <script type="text/javascript" src="assets/js/jquery.timepicker.js"></script>
+        <script type="text/javascript" src="assets/plugins/fancybox/source/jquery.fancybox.pack.js"></script>
+        <!-- JS Customization -->
+        <script type="text/javascript" src="assets/js/custom.js"></script>
+        <!-- JS Page Level -->           
+        <script type="text/javascript" src="assets/js/app.js"></script>
+        <script type="text/javascript" src="assets/js/plugins/fancy-box.js"></script>
+        <script type="text/javascript" src="assets/js/site.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/js/bootstrap-select.min.js"></script>
         <script type="text/javascript">
                                     jQuery(document).ready(function () {
                                         App.init();
-                                        ContactForm.initContactForm();
                                         CheckoutForm.initCheckoutForm();
+                                        ContactForm.initContactForm();
+                                        Masking.initMasking();
+                                        Datepicker.initDatepicker();
+                                        Validation.initValidation();
+                                        FancyBox.initFancybox();
+
                                     });
         </script>
         <script>
             $(function () {
                 $("#includedContentHeader").load("header_backend.html");
                 $("#includedContentFooter").load("footer.html");
+                setTimeout(function () {
+                    $('.dropdown-toggle').dropdown();
+                }, 1000);
             });
         </script>
         <!--[if lt IE 9]>

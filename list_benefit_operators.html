@@ -154,6 +154,9 @@
                 $("#includedContentHeader").load("header_backend.html");
                 $("#includedContentFooter").load("footer.html");
                 $("#confirmBlockOperator").load("blocade_operator.html");
+                setTimeout(function () {
+                    $('.dropdown-toggle').dropdown();
+                }, 1000);
             });
         </script> 
         <!--[if lt IE 9]>

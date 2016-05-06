@@ -1680,3 +1680,12 @@ img.img-mouse {
 .t-align-r { text-align: right; }
 .t-align-c { text-align: center; }
 .font-small { font-size: 11px;}
+
+.blog-photostream-mini li img {
+  width: 39px;
+  height: auto;
+}
+
+.panel-supervisor {
+    background: #f7f7f7;
+}
