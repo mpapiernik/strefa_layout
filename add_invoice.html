@@ -83,8 +83,8 @@
                                 <div class="row">
                                     <section class="col col-3">
                                         <label class="label">Sposób rozliczania</label>
-                                        <label class="select">
-                                            <select id="docTypes">
+                                        <label class="select state-disabled">
+                                            <select id="docTypes" disabled="">
                                                 <option value="0">Faktura VAT</option>
                                                 <option value="1">Rachunek</option>
                                                 <option value="2" selected="">Faktura bez VAT</option>
@@ -96,8 +96,8 @@
                                 <div id="vatReasonDiv">
                                     <section>
                                         <label class="label">Zwolenianie ze stawki VAT</label>
-                                        <label class="select">
-                                            <select id="vat_reason">
+                                        <label class="select state-disabled ">
+                                            <select id="vat_reason" disabled>
                                                 <option value="art. 43 ust. 1 ustawy o VAT oraz przepisy wykonawcze do ustawy VAT „Zwolnienie z podatku od towarów i usług na podstawie art. 43 ust. 1 pkt 2-41 Ustawy z 11 marca 2004r.">Przedmiotowe - art. 43 ust. 1 ustawy o VAT oraz przepisy wykonawcze do ustawy VAT „Zwolnienie z podatku od towarów i usług</option>
                                                 <option value="art. 113 ustawy o VAT „SPRZEDAWCA ZWOLNIONY PODMIOTOWO Z PODATKU OD TOWARÓW I USŁUG [dostawa towarów lub świadczenie usług, zwolnione na podstawie art. 113 ust. 1 (albo ust. 9) ustawy z dnia 11 marca 2004r. o podatku od towarów i usług (Dz. U. z 2011r. Nr 177. Poz. 1054. z późn. Zm)]
                                                         ">Podmiotowe - art. 113 ustawy o VAT „SPRZEDAWCA ZWOLNIONY PODMIOTOWO Z PODATKU OD TOWARÓW I USŁUG </option>
@@ -107,9 +107,9 @@
                                     </section>
                                     <section>
                                         <label class="label">Powód</label>
-                                        <label class="textarea state-disabled">
+                                        <label class="textarea state-disabled ">
                                             <i class="icon-append fa fa-comment"></i>
-                                            <textarea id="vat_reason_text" rows="6" name="message" readonly=""></textarea>
+                                            <textarea id="vat_reason_text" rows="6" name="message" disabled readonly=""></textarea>
                                         </label>
                                     </section>
                                 </div>
