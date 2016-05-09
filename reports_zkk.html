@@ -1,0 +1,193 @@
+<!DOCTYPE html> 
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->  
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->  
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->  
+    <head>
+        <title>Panel Benefit Systems</title>
+
+        <!-- Meta -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <!-- Favicon -->
+        <link rel="shortcut icon" href="favicon.ico">
+
+        <!-- Web Fonts -->
+        <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:400,300,600&amp;subset=cyrillic,latin">
+
+        <!-- CSS Global Compulsory -->
+        <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+
+        <!-- CSS Header and Footer -->
+        <link rel="stylesheet" href="assets/css/headers/header-default.css">
+        <link rel="stylesheet" href="assets/css/footers/footer-v1.css">
+
+        <!-- CSS Customization -->
+        <link rel="stylesheet" href="assets/css/theme-colors/dark-red.css">
+
+
+        <!-- CSS Implementing Plugins -->
+        <link rel="stylesheet" href="assets/plugins/animate.css">
+        <link rel="stylesheet" href="assets/plugins/line-icons/line-icons.css">
+        <link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="assets/plugins/sky-forms-pro/skyforms/css/sky-forms.css">
+        <link rel="stylesheet" href="assets/plugins/sky-forms-pro/skyforms/custom/custom-sky-forms.css">
+        <!--[if lt IE 9]><link rel="stylesheet" href="assets/plugins/sky-forms-pro/skyforms/css/sky-forms-ie8.css"><![endif]-->
+
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/css/bootstrap-select.min.css" />
+
+
+    </head>
+
+    <body>    
+        <div class="wrapper">
+            <!--=== Header ===-->    
+            <div class="header" id="includedContentHeader">
+            </div>
+            <!--=== End Header ===--> 
+            <!--=== Breadcrumbs ===-->
+            <div class="breadcrumbs">
+                <div class="container">
+                    <h1 class="pull-left">Moduł raportowania ZKK</h1>
+                    <ul class="pull-right breadcrumb">
+                        <li><a href="wall.html">Home</a></li>
+                        <li><a href="">Ustawienia</a></li>
+                        <li><a href="#">Moduł raportowania ZKK</a></li>
+                    </ul>
+                </div>
+            </div><!--/breadcrumbs-->
+            <!--=== End Breadcrumbs ===-->
+
+            <!--=== Content Part ===-->
+            <div class="container content">     
+                <div class="row">
+                    <!-- Begin Content -->
+                    <div class="col-md-8 col-md-offset-2 margin-bottom-50">
+                        <!-- Post -->
+                        <form action="" method="post" id="sky-form3" class="sky-form">
+                            <fieldset>           
+                                <h3>Parametry raportu</h3>
+                                <label class="label">Okres wypełnień</label>
+                                <section class="row">
+                                    <section class="col col-6">
+                                        <label class="label">Od</label>
+                                        <div class="input-group">
+                                            <i class="icon-append fa fa-calendar"></i>
+                                            <input type="text" name="date" id="start" class="form-control">
+                                            <span class="input-group-btn">
+                                                <button class="btn-u btn-u-dark margin-left-5"  tabindex="-1"  type="button"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
+                                            </span>
+                                        </div>
+                                    </section>
+                                    <section class="col col-6">
+                                        <label class="label">Od</label>
+                                        <div class="input-group">
+                                            <i class="icon-append fa fa-calendar"></i>
+                                            <input type="text" name="date" id="finish" class="form-control">
+                                            <span class="input-group-btn">
+                                                <button class="btn-u btn-u-dark margin-left-5"  tabindex="-1"  type="button"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
+                                            </span>
+                                        </div>
+                                    </section>
+                                </section>
+                            </fieldset>
+                            <fieldset>
+                                 <label class="label">Opiekun rozliczeniowy</label>
+                                <section>
+                                    <label class="checkbox"><input id="publicCheckbox" type="checkbox" name="public"><i></i>Wszyscy</label>
+                                </section>
+                                 <section id="partnerState">
+                                    <label class="label">Wybrany opiekun</label>
+                                    <div class="input-group">
+                                        <select  id="service-select" class="selectpicker input-block-level" data-live-search="true" title='Wybierz...' data-selected-text-format="count>1" data-width="100%">
+                                            <option value="" data-entry="0">Tomasz Tomaszewski</option>	
+                                            <option value="" data-entry="0">Adam Adamowski</option>	
+                                            <option value="" data-entry="0">Jacek Cygan</option>	
+                                        </select>
+                                        <span class="input-group-btn">
+                                            <button class="btn-u btn-u-dark margin-left-5"  tabindex="-1"  type="button"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
+                                        </span>
+                                    </div>
+                                </section>
+                            </fieldset>
+                            <footer style="text-align: right;">
+                                <button type="button" class="btn-u btn-u-default" onclick="window.history.back();">Wróć</button>
+                                <a href="#" class="btn-u"> <i class="fa fa-file-code-o"></i> Eksportuj CSV</a> 
+                                <a href="#" class="btn-u"> <i class="fa fa-file-excel-o"></i> Eksportuj XLS</a> 
+                            </footer>
+                        </form>         
+                        <!-- Post -->
+                    </div>
+                    <!-- End Content -->
+                    <!-- Begin Sidebar Menu -->
+                    <div class="col-md-3" id="includedContentSideBar">
+                    </div>
+                    <!-- End Sidebar Menu -->
+                </div>          
+            </div><!--/container-->     
+            <!--=== End Content Part ===-->
+
+        </div><!--/End Wrapepr-->
+        <!--=== Footer Version 1 ===-->
+        <div class="footer-v1" id="includedContentFooter">
+        </div>     
+        <!--=== End Footer Version 1 ===-->
+
+        <!-- JS Global Compulsory -->           
+        <script type="text/javascript" src="assets/plugins/jquery/jquery.min.js"></script>
+        <script type="text/javascript" src="assets/plugins/jquery/jquery-migrate.min.js"></script>
+        <script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+        <!-- JS Implementing Plugins -->
+        <script type="text/javascript" src="assets/plugins/back-to-top.js"></script>
+        <script type="text/javascript" src="assets/plugins/smoothScroll.js"></script>
+        <script src="assets/plugins/sky-forms-pro/skyforms/js/jquery.validate.min.js"></script>
+        <script src="assets/plugins/sky-forms-pro/skyforms/js/jquery.maskedinput.min.js"></script>
+        <script src="assets/plugins/sky-forms-pro/skyforms/js/jquery-ui.min.js"></script>
+        <script src="assets/plugins/sky-forms-pro/skyforms/js/jquery.form.min.js"></script>
+        <!-- JS Customization -->
+        <script type="text/javascript" src="assets/js/custom.js"></script>
+        <!-- JS Page Level -->           
+        <script type="text/javascript" src="assets/js/app.js"></script>
+        <script type="text/javascript" src="assets/js/forms/contact.js"></script>
+        <script type="text/javascript" src="assets/js/plugins/masking.js"></script>
+        <script type="text/javascript" src="assets/js/plugins/datepicker.js"></script>
+        <script type="text/javascript" src="assets/js/plugins/validation.js"></script>
+        <script type="text/javascript" src="assets/js/jquery.timepicker.js"></script>
+
+        <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/js/bootstrap-select.min.js"></script>
+
+        <script type="text/javascript">
+                                    jQuery(document).ready(function () {
+                                        App.init();
+                                        ContactForm.initContactForm();
+                                        Datepicker.initDatepicker();
+                                    });
+        </script>
+        <script>
+            $(function () {
+                $("#includedContentHeader").load("header_backend.html");
+                $("#includedContentFooter").load("footer.html");
+                $('#publicCheckbox').click(function () {
+                    $('#partnerState').slideToggle('fast', function () {
+                        // Animation complete.
+                    });
+                });
+                
+                  setTimeout(function () {
+                    $('.dropdown-toggle').dropdown();
+                }, 2000);
+
+
+            });
+        </script> 
+        <!--[if lt IE 9]>
+            <script src="assets/plugins/respond.js"></script>
+            <script src="assets/plugins/html5shiv.js"></script>
+            <script src="assets/plugins/placeholder-IE-fixes.js"></script>
+        <![endif]-->
+
+    </body>
+</html> 

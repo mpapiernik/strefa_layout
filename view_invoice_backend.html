@@ -54,7 +54,7 @@
             <!--=== Breadcrumbs ===-->
             <div class="breadcrumbs">
                 <div class="container">
-                    <h1 class="pull-left">Faktura VAT nr: 2015/FVS/25015</h1>
+                    <h1 class="pull-left">Faktura VAT nr: 2015/FVS/25015 - status: Podjęty <i class="fa fa-question-circle app-tooltip-header" data-toggle="tooltip" data-placement="bottom" title="Status dokumentu: Podjęty - przez OR: Jan Kowalski"></i></h1>
                     <ul class="pull-right breadcrumb">
                         <li><a href="wall.html">Home</a></li>
                         <li><a href="list_invoices.html">Faktury</a></li>
@@ -146,7 +146,7 @@
                 </div>
                 <!--End Invoice Detials-->
                 <!--Invoice Table-->
-                    <div class="panel panel-default margin-bottom-20">
+                <div class="panel panel-default margin-bottom-20">
                     <div class="panel-heading">
                         <h3 class="panel-title">Szczegóły</h3>
                     </div>
@@ -297,7 +297,15 @@
                 <div class="row">
                     <div class="col-xs-12">
                         <div class="tag-box tag-box-v3 no-margin-bottom">
-                            <strong>Komentarz: </strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis urna erat, tempor vitae elit nec, lacinia molestie nulla. Duis fermentum, lectus id aliquet dictum, augue magna placerat mi, vulputate mattis ipsum justo sed massa. Mauris blandit mollis faucibus. Donec sed tellus magna. Fusce porttitor nisi sit amet eleifend ullamcorper. Curabitur ac risus porta, blandit ipsum scelerisque, elementum lorem. Suspendisse in auctor dolor, quis suscipit turpis.
+                            <strong>Powód zwolnienia ze stawki VAT: </strong>
+                            art. 43 ust. 1 ustawy o VAT oraz przepisy wykonawcze do ustawy VAT „Zwolnienie z podatku od towarów i usług na podstawie art. 43 ust. 1 pkt 2-41 Ustawy z 11 marca 2004r.
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="tag-box tag-box-v3 no-margin-bottom">
+                            <strong>Uwagi: </strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis urna erat, tempor vitae elit nec, lacinia molestie nulla. Duis fermentum, lectus id aliquet dictum, augue magna placerat mi, vulputate mattis ipsum justo sed massa. Mauris blandit mollis faucibus. Donec sed tellus magna. Fusce porttitor nisi sit amet eleifend ullamcorper. Curabitur ac risus porta, blandit ipsum scelerisque, elementum lorem. Suspendisse in auctor dolor, quis suscipit turpis.
                         </div>    
                     </div>
                 </div>
@@ -317,11 +325,12 @@
                             <button type="button" class="btn-u btn-u-default" onclick="window.history.back();">Wróć</button>
                             <a href="#" data-toggle="modal" data-target="#declineDocument" id="confirmDeclineDocument" class="btn-u margin-bottom-5"><i class="fa fa fa-ban"></i> Odrzuć</a>        
                             <a href="list_invoices_backend.html" class="btn-u btn-u-green margin-bottom-5"><i class="fa fa-chevron-down"></i> Zaakceptuj</a>     
+                            <a href="#" data-toggle="modal" data-target="#registerAction" id="confirmRegisterAction" class="btn-u btn-u-dark margin-bottom-5"><i class="fa fa-pencil"></i> Zarejestruj akcję ZKK</a>     
                         </div>    
                     </div>
                 </div>
 
-              <!--History Invoice Table-->
+                <!--History Invoice Table-->
                 <div class="row">
                     <div class="col-xs-12">
                         <div class="tag-box tag-box-v3 no-margin-bottom">
@@ -339,7 +348,9 @@
                                             <th>Autor</th>
                                             <th class="hidden-sm hidden-xs">Status</th>
                                             <th>Typ i numer dokumentu</th>
+                                            <th>Strona</th>
                                             <th>Komentarz</th>
+                                            <th>Akcja ZKK</th>
                                             <th>Podgląd</th>
                                         </tr>
                                     </thead>
@@ -351,7 +362,61 @@
                                             <td class="hidden-sm hidden-xs">Jan Kowalski</td>
                                             <td class="hidden-sm hidden-xs">Do akceptacji</td>
                                             <td>Faktura VAT, 2015/FVS/25015</td>
-                                            <td>fafk ja fkja fjkj </td>
+                                            <td>Partner</td>
+                                            <td>Skontaktowałem się z moim Opiekunem Partnerem i wystawilem dokument.</td>
+                                            <td>Nie </td>
+                                            <td><a href="view_invoice.html"  target="_blank" class="btn-u btn-brd btn-brd-hover btn-u-sm"><i class="fa fa-eye"></i></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class=""></td>
+                                            <td>2</td>
+                                            <td class="hidden-sm hidden-xs">2015-05-31</td>
+                                            <td class="hidden-sm hidden-xs">Jan Kowalski</td>
+                                            <td class="hidden-sm hidden-xs">Podjęty</td>
+                                            <td>Faktura VAT, 2015/FVS/25015</td>
+                                            <td>BS</td>
+                                            <td></td>
+                                            <td>Nie </td>
+                                            <td><a href="view_invoice.html"  target="_blank" class="btn-u btn-brd btn-brd-hover btn-u-sm"><i class="fa fa-eye"></i></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class=""></td>
+                                            <td>3</td>
+                                            <td class="hidden-sm hidden-xs">2015-05-31</td>
+                                            <td class="hidden-sm hidden-xs">Jan Kowalski</td>
+                                            <td class="hidden-sm hidden-xs">Do akceptacji</td>
+                                            <td>Faktura VAT, 2015/FVS/25015</td>
+                                            <td>BS</td>
+                                            <td>Skontaktowałem się z Partnerem w wcelu wyjąsnienia nieścisłości.</td>
+                                            <td>Tak </td>
+                                            <td><a href="view_invoice.html"  target="_blank" class="btn-u btn-brd btn-brd-hover btn-u-sm"><i class="fa fa-eye"></i></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class=""></td>
+                                            <td>4</td>
+                                            <td class="hidden-sm hidden-xs">2015-05-31</td>
+                                            <td class="hidden-sm hidden-xs">Jan Kowalski</td>
+                                            <td class="hidden-sm hidden-xs">Do akceptacji</td>
+                                            <td>Faktura VAT, 2015/FVS/25015</td>
+                                            <td>BS</td>
+                                            <td>Przesłalem wyciąg z terminali z różnicami.</td>
+                                            <td>Tak </td>
+                                            <td><a href="view_invoice.html"  target="_blank" class="btn-u btn-brd btn-brd-hover btn-u-sm"><i class="fa fa-eye"></i></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="details-control"></td>
+                                            <td>5</td>
+                                            <td class="hidden-sm hidden-xs">2015-06-07</td>
+                                            <td class="hidden-sm hidden-xs">Jan Kowalski</td>
+                                            <td class="hidden-sm hidden-xs">Zaakceptowana</td>
+                                            <td>Faktura VAT, 2015/FVS/25015</td>
+                                            <td>BS</td>
+                                            <td></td>
+                                            <td>Nie </td>
                                             <td><a href="view_invoice.html"  target="_blank" class="btn-u btn-brd btn-brd-hover btn-u-sm"><i class="fa fa-eye"></i></a>
                                             </td>
                                         </tr>
@@ -420,6 +485,24 @@
             <!--=== End Content Part ===-->
         </div><!--/End Wrapepr-->
         <div class="modal fade" id="declineDocument" tabindex="-1" role="dialog" aria-hidden="true"></div>
+        <div class="modal fade" id="registerAction" tabindex="-1" role="dialog" aria-hidden="true"></div>
+        <div class="modal fade" id="takeAction" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button aria-hidden="true" data-dismiss="modal" class="close" type="button">×</button>
+                        <h4 id="modalNumberLabel" class="modal-title">  Czy chcesz podjąć zadanie? </h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="cbp_tmlabel text-center" >
+                            <a class="btn-u margin-bottom-5" data-dismiss="modal"><i class="fa fa fa-times"></i> Nie</a>        
+                            <a class="btn-u btn-u-green margin-bottom-5" data-dismiss="modal"><i class="fa fa-chevron-down"></i> Tak</a>    
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
         <!--=== Footer Version 1 ===-->
         <div class="footer-v1" id="includedContentFooter">
         </div>     
@@ -436,112 +519,116 @@
         <!-- JS Page Level -->           
         <script type="text/javascript" src="assets/js/app.js"></script>
         <script type="text/javascript" language="javascript" src="assets/plugins/datatable/js/jquery.dataTables.js"></script>
-         <script type="text/javascript">
-            /* Formatting function for row details - modify as you need */
-            function format(d) {
-                // `d` is the original data object for the row
-                return '<table cellpadding="5" cellspacing="0" border="0" style="padding-left:50px;">' +
-                        '<tr>' +
-                        '<td><a href="http://smbenefittest.blob.core.windows.net/accountdata/1040/fv_invoice/2015-09-02/1/95aa5f76141e466d515c8d709296a443.pdf">Nazwa_zalacznika_link_do_bloba.pdf</a></td>' +
-                        '</tr>' +
-                        '<tr>' +
-                        '<td><a href="http://smbenefittest.blob.core.windows.net/accountdata/1040/fv_invoice/2015-09-02/1/95aa5f76141e466d515c8d709296a443.pdf">Nazwa_zalacznika_link_do_bloba.pdf</a></td>' +
-                        '</tr>' +
-                        '<tr>' +
-                        '<td><a href="http://smbenefittest.blob.core.windows.net/accountdata/1040/fv_invoice/2015-09-02/1/95aa5f76141e466d515c8d709296a443.pdf">Nazwa_zalacznika_link_do_bloba.pdf</a></td>' +
-                        '</tr>' +
-                        '</table>';
-            }
-            ;
+        <script type="text/javascript">
+                                /* Formatting function for row details - modify as you need */
+                                function format(d) {
+                                    // `d` is the original data object for the row
+                                    return '<table cellpadding="5" cellspacing="0" border="0" style="padding-left:50px;">' +
+                                            '<tr>' +
+                                            '<td><a href="http://smbenefittest.blob.core.windows.net/accountdata/1040/fv_invoice/2015-09-02/1/95aa5f76141e466d515c8d709296a443.pdf">Nazwa_zalacznika_link_do_bloba.pdf</a></td>' +
+                                            '</tr>' +
+                                            '<tr>' +
+                                            '<td><a href="http://smbenefittest.blob.core.windows.net/accountdata/1040/fv_invoice/2015-09-02/1/95aa5f76141e466d515c8d709296a443.pdf">Nazwa_zalacznika_link_do_bloba.pdf</a></td>' +
+                                            '</tr>' +
+                                            '<tr>' +
+                                            '<td><a href="http://smbenefittest.blob.core.windows.net/accountdata/1040/fv_invoice/2015-09-02/1/95aa5f76141e466d515c8d709296a443.pdf">Nazwa_zalacznika_link_do_bloba.pdf</a></td>' +
+                                            '</tr>' +
+                                            '</table>';
+                                }
+                                ;
 
-            jQuery(document).ready(function () {
-                App.init();
-                $(document).ready(function () {
-                    var historyTable = $('#history').DataTable({
-                        "paging": false,
-                        "info": false,
-                        bFilter: false,
-                        bInfo: false,
-                        "language": {
-                            "url": "assets/plugins/datatable/lang/Polish.json"
-                        },
-                        "order": [[2, 'asc']]
-                    });
-                    $('#linked').DataTable({
-                        "paging": false,
-                        "info": false,
-                        bFilter: false,
-                        bInfo: false,
-                        bSort: false,
-                        "language": {
-                            "url": "assets/plugins/datatable/lang/Polish.json"
-                        }
-                    });
+                                jQuery(document).ready(function () {
+                                    App.init();
+                                    $(document).ready(function () {
+                                        var historyTable = $('#history').DataTable({
+                                            "paging": false,
+                                            "info": false,
+                                            bFilter: false,
+                                            bInfo: false,
+                                            "language": {
+                                                "url": "assets/plugins/datatable/lang/Polish.json"
+                                            },
+                                            "order": [[2, 'asc']]
+                                        });
+                                        $('#linked').DataTable({
+                                            "paging": false,
+                                            "info": false,
+                                            bFilter: false,
+                                            bInfo: false,
+                                            bSort: false,
+                                            "language": {
+                                                "url": "assets/plugins/datatable/lang/Polish.json"
+                                            }
+                                        });
 
-                    $('#historyTab').slideToggle('fast', function () {
-                     // Animation complete.
-                     });
+                                        $('#historyTab').slideToggle('fast', function () {
+                                            // Animation complete.
+                                        });
 
-                    $('#appendHistory').click(function () {
-                        $('#historyTab').slideToggle('fast', function () {
-                            if ($('#historyArrow').hasClass('fa-sort-desc')) {
-                                $('#loader').hide().delay(2000);
-                                $('#historyArrow').removeClass('fa-sort-desc');
-                                $('#historyArrow').addClass('fa-sort-asc');
-                            } else {
-                                $('#loader').show();
-                                $('#historyArrow').removeClass('fa-sort-asc');
-                                $('#historyArrow').addClass('fa-sort-desc');
-                            }
-                        });
-                    });
+                                        $('#appendHistory').click(function () {
+                                            $('#historyTab').slideToggle('fast', function () {
+                                                if ($('#historyArrow').hasClass('fa-sort-desc')) {
+                                                    $('#loader').hide().delay(2000);
+                                                    $('#historyArrow').removeClass('fa-sort-desc');
+                                                    $('#historyArrow').addClass('fa-sort-asc');
+                                                } else {
+                                                    $('#loader').show();
+                                                    $('#historyArrow').removeClass('fa-sort-asc');
+                                                    $('#historyArrow').addClass('fa-sort-desc');
+                                                }
+                                            });
+                                        });
 
-                    $('#linkedTab').slideToggle('fast', function () {
-                        // Animation complete.
-                    });
+                                        $('#linkedTab').slideToggle('fast', function () {
+                                            // Animation complete.
+                                        });
 
-                    $('#appendLinked').click(function () {
-                        $('#linkedTab').slideToggle('fast', function () {
-                            if ($('#linkedArrow').hasClass('fa-sort-desc')) {
-                                $('#loader2').hide().delay(2000);
-                                $('#linkedArrow').removeClass('fa-sort-desc');
-                                $('#linkedArrow').addClass('fa-sort-asc');
-                            } else {
-                                $('#loader2').show();
-                                $('#linkedArrow').removeClass('fa-sort-asc');
-                                $('#linkedArrow').addClass('fa-sort-desc');
-                            }
-                        });
-                    });
+                                        $('#appendLinked').click(function () {
+                                            $('#linkedTab').slideToggle('fast', function () {
+                                                if ($('#linkedArrow').hasClass('fa-sort-desc')) {
+                                                    $('#loader2').hide().delay(2000);
+                                                    $('#linkedArrow').removeClass('fa-sort-desc');
+                                                    $('#linkedArrow').addClass('fa-sort-asc');
+                                                } else {
+                                                    $('#loader2').show();
+                                                    $('#linkedArrow').removeClass('fa-sort-asc');
+                                                    $('#linkedArrow').addClass('fa-sort-desc');
+                                                }
+                                            });
+                                        });
 
 
 
-                    $('#history tbody').on('click', 'td.details-control', function () {
-                        var tr = $(this).closest('tr');
-                        var row = historyTable.row(tr);
+                                        $('#history tbody').on('click', 'td.details-control', function () {
+                                            var tr = $(this).closest('tr');
+                                            var row = historyTable.row(tr);
 
-                        if (row.child.isShown()) {
-                            // This row is already open - close it
-                            row.child.hide();
-                            tr.removeClass('shown');
-                        }
-                        else {
-                            // Open this row
-                            row.child(format(row.data())).show();
-                            tr.addClass('shown');
-                        }
-                    });
+                                            if (row.child.isShown()) {
+                                                // This row is already open - close it
+                                                row.child.hide();
+                                                tr.removeClass('shown');
+                                            }
+                                            else {
+                                                // Open this row
+                                                row.child(format(row.data())).show();
+                                                tr.addClass('shown');
+                                            }
+                                        });
 
-                });
-            });
+                                    });
+                                });
         </script>
         <script>
             $(function () {
                 $("#includedContentHeader").load("header_backend.html");
                 $("#includedContentFooter").load("footer.html");
                 $("#declineDocument").load("declineDocument.html");
+                $("#registerAction").load("register_ZKK_action.html");
+                $('#takeAction').modal('show');
+                $('[data-toggle="tooltip"]').tooltip();
             });
         </script> 
+
         <!--[if lt IE 9]>
             <script src="assets/plugins/respond.js"></script>
             <script src="assets/plugins/html5shiv.js"></script>
