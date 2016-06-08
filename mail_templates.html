@@ -38,6 +38,9 @@
 
         <!-- DataTables -->
         <link rel="stylesheet" type="text/css" href="assets/plugins/datatable/css/jquery.dataTables.css">
+
+        <!-- CSS Customization -->
+        <link rel="stylesheet" href="assets/css/custom.css">
     </head>
 
     <body>    
@@ -64,6 +67,26 @@
                     <!-- Begin Content -->
                     <div class="col-md-12 margin-bottom-50">
                         <div>
+                            <div class="row">
+                                <div class="btn-group col-sm-9">
+                                    <div class="input-group spinner">
+                                        <input type="text" class="form-control" value="10">
+                                        <div class="input-group-btn-vertical text-center">
+                                            <button class="btn btn-default" type="button"><i class="fa fa-angle-up"></i></button>
+                                            <button class="btn btn-default" type="button"><i class="fa fa-angle-down"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="search-open pull-right col-sm-3">
+                                    <div class="input-group inline-group">
+                                        <input type="text" class="form-control" placeholder="Wyszukaj ... ">
+                                        <span class="input-group-btn">
+                                            <a href="" class="button btn-u"><i class="fa fa-search"></i></a>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
                             <table id="facilityList" class="display" cellspacing="0" width="100%" style="text-align: left">
                                 <thead>
                                     <tr>
@@ -85,7 +108,16 @@
                                         <td>2015-07-11 12:32</td>
                                         <td>Tak</td>
                                         <td>
-                                            <a href="edit_mail_template.html" class="btn-u btn-brd btn-brd-hover btn-u-sm"><i class="fa fa-pencil"></i></a>
+                                            <div class="btn-group">
+                                                <button type="button" class="btn-u btn-brd color-red btn-brd-hover btn-u-sm dropdown-toggle bars" data-toggle="dropdown">
+                                                    <i class="fa fa fa-bars"></i>
+                                                    <span class="sr-only">Toggle Dropdown</span>                            
+                                                </button>
+                                                <ul class="dropdown-menu" role="menu">
+                                                    <li> <a href="edit_mail_template.html"><i class="fa fa-edit"></i> Edytuj</a></li>
+
+                                                </ul>
+                                            </div>
                                         </td>
                                     </tr>
                                     <tr>
@@ -96,7 +128,16 @@
                                         <td>2015-07-11 12:32</td>
                                         <td>Tak</td>
                                         <td>
-                                            <a href="edit_mail_template.html" class="btn-u btn-brd btn-brd-hover btn-u-sm"><i class="fa fa-pencil"></i></a>
+                                            <div class="btn-group">
+                                                <button type="button" class="btn-u btn-brd color-red btn-brd-hover btn-u-sm dropdown-toggle bars" data-toggle="dropdown">
+                                                    <i class="fa fa fa-bars"></i>
+                                                    <span class="sr-only">Toggle Dropdown</span>                            
+                                                </button>
+                                                <ul class="dropdown-menu" role="menu">
+                                                    <li> <a href="edit_mail_template.html"><i class="fa fa-edit"></i> Edytuj</a></li>
+
+                                                </ul>
+                                            </div>
                                         </td>
                                     </tr>
                                     <tr>
@@ -107,7 +148,16 @@
                                         <td>2015-07-11 12:32</td>
                                         <td>Tak</td>
                                         <td>
-                                            <a href="edit_mail_template.html" class="btn-u btn-brd btn-brd-hover btn-u-sm"><i class="fa fa-pencil"></i></a>
+                                            <div class="btn-group">
+                                                <button type="button" class="btn-u btn-brd color-red btn-brd-hover btn-u-sm dropdown-toggle bars" data-toggle="dropdown">
+                                                    <i class="fa fa fa-bars"></i>
+                                                    <span class="sr-only">Toggle Dropdown</span>                            
+                                                </button>
+                                                <ul class="dropdown-menu" role="menu">
+                                                    <li> <a href="edit_mail_template.html"><i class="fa fa-edit"></i> Edytuj</a></li>
+
+                                                </ul>
+                                            </div>
                                         </td>
                                     </tr>
                                 </tbody>
@@ -144,9 +194,12 @@
                     $('#facilityList').DataTable({
                         "language": {
                             "url": "assets/plugins/datatable/lang/Polish.json"
-                        }
-                        
+                        },
+                        searching: false,
+                        lengthChange: false
+
                     });
+                    $('.dropdown-toggle').dropdown();
                 });
             });
         </script>

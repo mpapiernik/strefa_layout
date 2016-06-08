@@ -38,6 +38,9 @@
 
         <!-- DataTables -->
         <link rel="stylesheet" type="text/css" href="assets/plugins/datatable/css/jquery.dataTables.css">
+        
+              <!-- CSS Customization -->
+        <link rel="stylesheet" href="assets/css/custom.css">
     </head>
 
     <body>    
@@ -70,7 +73,7 @@
                                         <th>#</th>
                                         <th>Nazwa</th>
                                         <th>Adres</th>
-                                        <th>Pobierz</th>
+                                        <th>Więcej</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -79,7 +82,15 @@
                                         <td>SP_2015_06_29.log</td>
                                         <td>https://smbenefittest.blob.core.windows.net/logs/SP_2015_06_29.log</td>
                                         <td>
-                                            <a href="https://smbenefittest.blob.core.windows.net/logs/SP_2015_06_29.log" class="btn-u btn-brd btn-brd-hover btn-u-sm"><i class="fa fa-download"></i></a>
+                                            <div class="btn-group">
+                                                <button type="button" class="btn-u btn-brd color-red btn-brd-hover btn-u-sm dropdown-toggle bars" data-toggle="dropdown">
+                                                    <i class="fa fa fa-bars"></i>
+                                                    <span class="sr-only">Toggle Dropdown</span>                            
+                                                </button>
+                                                <ul class="dropdown-menu" role="menu">
+                                                    <li>   <a href="https://smbenefittest.blob.core.windows.net/logs/SP_2015_06_30.log"><i class="fa fa-download"></i> Pobierz</a></li>
+                                                </ul>
+                                            </div>
                                         </td>
                                     </tr>
                                     <tr>
@@ -87,15 +98,31 @@
                                         <td>SP_2015_06_30.log</td>
                                         <td>https://smbenefittest.blob.core.windows.net/logs/SP_2015_06_30.log</td>
                                         <td>
-                                            <a href="https://smbenefittest.blob.core.windows.net/logs/SP_2015_06_30.log" class="btn-u btn-brd btn-brd-hover btn-u-sm"><i class="fa fa-download"></i></a>
+                                            <div class="btn-group">
+                                                <button type="button" class="btn-u btn-brd color-red btn-brd-hover btn-u-sm dropdown-toggle bars" data-toggle="dropdown">
+                                                    <i class="fa fa fa-bars"></i>
+                                                    <span class="sr-only">Toggle Dropdown</span>                            
+                                                </button>
+                                                <ul class="dropdown-menu" role="menu">
+                                                    <li>   <a href="https://smbenefittest.blob.core.windows.net/logs/SP_2015_06_30.log"><i class="fa fa-download"></i> Pobierz</a></li>
+                                                </ul>
+                                            </div>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>3</td>
                                         <td>SP_2015_07_02.log</td>
                                         <td>https://smbenefittest.blob.core.windows.net/logs/SP_2015_07_02.log</td>
-                                        <td>
-                                            <a href="https://smbenefittest.blob.core.windows.net/logs/SP_2015_07_02.log" class="btn-u btn-brd btn-brd-hover btn-u-sm"><i class="fa fa-download"></i></a>
+                                         <td>
+                                            <div class="btn-group">
+                                                <button type="button" class="btn-u btn-brd color-red btn-brd-hover btn-u-sm dropdown-toggle bars" data-toggle="dropdown">
+                                                    <i class="fa fa fa-bars"></i>
+                                                    <span class="sr-only">Toggle Dropdown</span>                            
+                                                </button>
+                                                <ul class="dropdown-menu" role="menu">
+                                                    <li>   <a href="https://smbenefittest.blob.core.windows.net/logs/SP_2015_06_30.log"><i class="fa fa-download"></i> Pobierz</a></li>
+                                                </ul>
+                                            </div>
                                         </td>
                                     </tr>
                                 </tbody>
@@ -141,6 +168,9 @@
             $(function () {
                 $("#includedContentHeader").load("header_backend.html");
                 $("#includedContentFooter").load("footer.html");
+                  setTimeout(function () {
+                    $('.dropdown-toggle').dropdown();
+                }, 1000);
             });
         </script> 
         <!--[if lt IE 9]>

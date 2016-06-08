@@ -58,7 +58,7 @@
             <div class="container content">     
                 <div class="row">
                     <!-- Begin Content -->
-                    
+
                     <div class="col-md-12 margin-bottom-50">
                         <div class="alert alert-danger fade in text-center">
                             <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
@@ -87,10 +87,10 @@
                                         <th class="hidden-sm hidden-xs">Data złożenia wniosku</th>
                                         <th class="hidden-sm hidden-xs">Rodzaj wniosku</th>
                                         <th class="hidden-sm hidden-xs">Typ operacji</th>
-                                         <th class="hidden-sm hidden-xs">Partner</th>
+                                        <th class="hidden-sm hidden-xs">Partner</th>
                                         <th class="hidden-sm hidden-xs">Autor</th>
                                         <th class="hidden-sm hidden-xs">Status</th>
-                                        <th>Akcja</th>
+                                        <th>Więcej</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -102,7 +102,16 @@
                                         <td class="hidden-sm hidden-xs">Calypso Spółka Akcyjna</td>
                                         <td>Adam Kowalski</td>
                                         <td class="hidden-sm hidden-xs">Zatwierdzony</td>
-                                        <td><a href="edit_facility_application.html" target="_blank" class="btn-u btn-brd btn-brd-hover btn-u-sm"><i class="fa fa-eye"></i></a>
+                                        <td>
+                                            <div class="btn-group">
+                                                <button type="button" class="btn-u btn-brd color-red btn-brd-hover btn-u-sm dropdown-toggle bars" data-toggle="dropdown">
+                                                    <i class="fa fa fa-bars"></i>
+                                                    <span class="sr-only">Toggle Dropdown</span>                            
+                                                </button>
+                                                <ul class="dropdown-menu" role="menu">
+                                                    <li><a href="edit_facility_application.html"><i class="fa fa-eye"></i> Zobacz szczegóły</a></li>
+                                                </ul>
+                                            </div>
                                         </td>
                                     </tr>
                                     <tr>
@@ -113,10 +122,19 @@
                                         <td class="hidden-sm hidden-xs">Calypso Spółka Akcyjna</td>
                                         <td>Adam Kowalski</td>
                                         <td class="hidden-sm hidden-xs">Do akceptacji</td>
-                                        <td><a href="edit_partner_application.html" target="_blank" class="btn-u btn-brd btn-brd-hover btn-u-sm"><i class="fa fa-eye"></i></a>
+                                        <td>
+                                            <div class="btn-group">
+                                                <button type="button" class="btn-u btn-brd color-red btn-brd-hover btn-u-sm dropdown-toggle bars" data-toggle="dropdown">
+                                                    <i class="fa fa fa-bars"></i>
+                                                    <span class="sr-only">Toggle Dropdown</span>                            
+                                                </button>
+                                                <ul class="dropdown-menu" role="menu">
+                                                    <li><a href="edit_facility_application.html"><i class="fa fa-eye"></i> Zobacz szczegóły</a></li>
+                                                </ul>
+                                            </div>
                                         </td>
                                     </tr>
-                                       <tr>
+                                    <tr>
                                         <td>3</td>
                                         <td class="hidden-sm hidden-xs">15-07-2015, 14:00:18</td>
                                         <td>Usługa</td>
@@ -124,10 +142,19 @@
                                         <td class="hidden-sm hidden-xs">Calypso Spółka Akcyjna</td>
                                         <td>Adam Kowalski</td>
                                         <td class="hidden-sm hidden-xs">Do akceptacji</td>
-                                        <td><a href="edit_service_application.html" target="_blank" class="btn-u btn-brd btn-brd-hover btn-u-sm"><i class="fa fa-eye"></i></a>
+                                        <td>
+                                            <div class="btn-group">
+                                                <button type="button" class="btn-u btn-brd color-red btn-brd-hover btn-u-sm dropdown-toggle bars" data-toggle="dropdown">
+                                                    <i class="fa fa fa-bars"></i>
+                                                    <span class="sr-only">Toggle Dropdown</span>                            
+                                                </button>
+                                                <ul class="dropdown-menu" role="menu">
+                                                    <li><a href="edit_facility_application.html"><i class="fa fa-eye"></i> Zobacz szczegóły</a></li>
+                                                </ul>
+                                            </div>
                                         </td>
                                     </tr>
-                                       <tr style="background-color: #f2dede;">
+                                    <tr style="background-color: #f2dede;">
                                         <td>4</td>
                                         <td class="hidden-sm hidden-xs">15-07-2015, 14:00:18</td>
                                         <td>Operator partnera</td>
@@ -135,7 +162,16 @@
                                         <td class="hidden-sm hidden-xs"><i class="fa fa-exclamation-triangle"></i>Tyger</td>
                                         <td>Adam Kowalski</td>
                                         <td class="hidden-sm hidden-xs">Do akceptacji</td>
-                                        <td><a href="edit_operator_application.html" target="_blank" class="btn-u btn-brd btn-brd-hover btn-u-sm"><i class="fa fa-eye"></i></a>
+                                        <td>
+                                            <div class="btn-group">
+                                                <button type="button" class="btn-u btn-brd color-red btn-brd-hover btn-u-sm dropdown-toggle bars" data-toggle="dropdown">
+                                                    <i class="fa fa fa-bars"></i>
+                                                    <span class="sr-only">Toggle Dropdown</span>                            
+                                                </button>
+                                                <ul class="dropdown-menu" role="menu">
+                                                    <li><a href="edit_facility_application.html"><i class="fa fa-eye"></i> Zobacz szczegóły</a></li>
+                                                </ul>
+                                            </div>
                                         </td>
                                     </tr>
                                 </tbody>
@@ -181,6 +217,9 @@
             $(function () {
                 $("#includedContentHeader").load("header_backend.html");
                 $("#includedContentFooter").load("footer.html");
+                setTimeout(function () {
+                    $('.dropdown-toggle').dropdown();
+                }, 1000);
             });
         </script> 
         <!--[if lt IE 9]>

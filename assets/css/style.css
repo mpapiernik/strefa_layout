@@ -1673,7 +1673,7 @@ img.img-mouse {
 
 
 .input-block-level {
- input[type=text] { width: 100%; box-sizing: border-box; height: 28px; }
+    input[type=text] { width: 100%; box-sizing: border-box; height: 28px; }
 }
 
 .t-align-l { text-align: left; }
@@ -1682,10 +1682,19 @@ img.img-mouse {
 .font-small { font-size: 11px;}
 
 .blog-photostream-mini li img {
-  width: 39px;
-  height: auto;
+    width: 39px;
+    height: auto;
 }
 
 .panel-supervisor {
     background: #f7f7f7;
+}
+
+
+.bars  {
+   color: #a10f2b !important;
+   
+}
+.bars[aria-expanded="true"]  {
+   color: #fff !important;
 }
