@@ -66,7 +66,7 @@
                         <li><a href="#">Profil</a></li>
                     </ul>
                     <h1 class="pull-left">Ustawienia profilu </h1>
-                    <h1 class="pull-left">{nazwa partnera nazwa partnera nazwa partnera nazwa partnera v v nazwa partneranazwa partnera } </h1>
+                    <h1 class="pull-left"> {nazwa partnera} </h1>
 
                 </div>
             </div><!--/breadcrumbs-->
@@ -78,19 +78,19 @@
                     <!-- Begin Content -->
                     <div class="col-md-9 margin-bottom-50">
                         <div class="row">
-                            <div class="col-md-12 blog">
-                                <div class="news-v3-in">
-
-                                    <form action="" id="sky-form" class="sky-form">
+                            <div class="col-md-12">
+                                <div class="news-v3-in margin-bottom-20">
+                                    <form class="sky-form">
+                                        <header>Zmień sposób rozliczania (złóż wniosek)</header>
                                         <fieldset>
                                             <div class="row">
-                                                <section class="col col-3">
+                                                <section class="col col-6">
                                                     <label class="label">Sposób rozliczania</label>
                                                     <label class="select">
                                                         <select id="docTypes">
                                                             <option value="0">Faktura VAT</option>
                                                             <option value="1">Rachunek</option>
-                                                            <option value="2">Faktura bez VAT</option>
+                                                            <option value="2">Faktura bez VAT (zwolnienie podmiotowe)</option>
                                                         </select>
                                                         <i></i>
                                                     </label>
@@ -98,25 +98,82 @@
                                             </div>
                                             <div id="vatReasonDiv">
                                                 <section>
-                                                    <label class="label">Zwolenianie ze stawki VAT</label>
-                                                    <label class="select">
-                                                        <select id="vat_reason">
-                                                            <option value="art. 43 ust. 1 ustawy o VAT oraz przepisy wykonawcze do ustawy VAT „Zwolnienie z podatku od towarów i usług na podstawie art. 43 ust. 1 pkt 2-41 Ustawy z 11 marca 2004r.">Przedmiotowe - art. 43 ust. 1 ustawy o VAT oraz przepisy wykonawcze do ustawy VAT „Zwolnienie z podatku od towarów i usług</option>
-                                                            <option value="art. 113 ustawy o VAT „SPRZEDAWCA ZWOLNIONY PODMIOTOWO Z PODATKU OD TOWARÓW I USŁUG [dostawa towarów lub świadczenie usług, zwolnione na podstawie art. 113 ust. 1 (albo ust. 9) ustawy z dnia 11 marca 2004r. o podatku od towarów i usług (Dz. U. z 2011r. Nr 177. Poz. 1054. z późn. Zm)]
-                                                        ">Podmiotowe - art. 113 ustawy o VAT „SPRZEDAWCA ZWOLNIONY PODMIOTOWO Z PODATKU OD TOWARÓW I USŁUG </option>
-                                                        </select>
-                                                        <i></i>
-                                                    </label>
-                                                </section>
-                                                <section>
-                                                    <label class="label">Powód</label>
-                                                    <label class="textarea state-disabled">
+                                                    <label class="label">Powód zwolenienia z VAT</label>
+                                                    <label class="textarea">
                                                         <i class="icon-append fa fa-comment"></i>
-                                                        <textarea id="vat_reason_text" rows="6" name="message" readonly=""></textarea>
+                                                        <textarea id="vat_reason_text" rows="6" name="message">art. 113 ustawy o VAT „SPRZEDAWCA ZWOLNIONY PODMIOTOWO Z PODATKU OD TOWARÓW I USŁUG [dostawa towarów lub świadczenie usług, zwolnione na podstawie art. 113 ust. 1 (albo ust. 9) ustawy z dnia 11 marca 2004r. o podatku od towarów i usług (Dz. U. z 2011r. Nr 177. Poz. 1054. z późn. Zm)]
+                                                        </textarea>
                                                     </label>
                                                 </section>
                                             </div>
                                         </fieldset>
+                                        <fieldset style="background:#f5f5f5;" >
+                                            <h3 class="panel-title" style="margin-top: -20px;">Dodatkowe informacje obiegu wniosku dla Opiekuna (niewidoczne w szczegółach partnera)</h3>
+                                        </fieldset>
+                                        <fieldset>
+                                            <section>
+                                                <label class="label" for="appbundle_invoice_confirm_status_comment">Komentarz</label>
+                                                <label class="textarea">
+                                                    <textarea id="appbundle_invoice_confirm_status_comment" name="appbundle_invoice_confirm[status_comment]" rows="3"></textarea>
+                                                </label>
+                                            </section>
+                                            <div class="input-group margin-bottom-20">
+                                                <section>
+                                                    <label class="label" for="appbundle_invoice_confirm_files">Załączniki</label>
+                                                    <span class="btn btn-u fileinput-button state-success">
+                                                        <i class="glyphicon glyphicon-plus"></i>
+                                                        <span>Wybierz pliki...</span>
+                                                        <input type="file" id="appbundle_invoice_confirm_files" name="appbundle_invoice_confirm[files][]" multiple="multiple">
+                                                    </span>                                
+
+                                                </section>
+                                            </div>
+                                            <table role="presentation" id="attachments_presentation" class="table table-striped"><tbody class="files" data-toggle="modal-gallery" data-target="#modal-gallery"><tr class="template-upload fade in">
+                                                        <td class="t-align-l">
+                                                            <p class="name">H_1.vsdx</p>
+                                                            <strong class="error text-danger">File type not allowed</strong>
+                                                        </td>            
+                                                        <td class="t-align-r">                
+
+                                                            <button class="btn btn-u btn-u-dark cancel">
+                                                                <i class="glyphicon glyphicon-ban-circle"></i>
+                                                                <span>Anuluj</span>
+                                                            </button>
+
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="template-upload fade in">
+                                                        <td class="t-align-l">
+                                                            <p class="name">H_4.jpg</p>
+                                                            <strong class="error text-danger"></strong>
+                                                        </td>            
+                                                        <td class="t-align-r">                
+
+                                                            <button class="btn btn-u btn-u-dark cancel">
+                                                                <i class="glyphicon glyphicon-ban-circle"></i>
+                                                                <span>Anuluj</span>
+                                                            </button>
+
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </fieldset>
+                                        <footer style="text-align: right;">
+                                            <button type="button" class="btn-u btn-u-default" onclick="window.history.back();">Wróć</button>
+                                            <button type="submit" class="btn-u margin-bottom-5">Złóż wniosek</button>    
+                                        </footer>
+                                    </form>         
+
+
+
+                                </div>
+
+
+
+                                <div class="news-v3-in">
+
+                                    <form action="" id="sky-form" class="sky-form">
                                         <fieldset>
                                             <div class="input-group margin-bottom-20">
                                                 <section>
@@ -163,44 +220,64 @@
                                                     <tr>
                                                         <th class="col-1">#</th>
                                                         <th class="col-2">Rodzaj&nbsp;dokumentu</th>
-                                                        <th class="col-3">Szablon</th>
-                                                        <th>Kolejny&nbsp;numer</th>
-                                                        <th class="col-3">Wartosć&nbsp;systemowa</th>
-                                                        <th class="col-2 dt-head-center">Aktywny</th>
+                                                        <th class="col-2">Szablon</th>
+                                                        <th class="col-1">Kolejny numer</th>
+                                                        <th class="col-2">Wartość</th>
+                                                        <th class="col-1 dt-head-center">Aktywny</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
                                                     <tr>
                                                         <td>1</td>
                                                         <td>Faktura VAT</td>
-                                                        <td>FAKTURA /%R/%m/%i</td>
-                                                        <td>23</td>
-                                                        <td>%i</td>
-                                                        <td class=" dt-body-center"><input type="checkbox"></td>
+                                                        <td>Dokument FV/%R/%m/%i</td>
+                                                        <td>21</td>
+                                                        <td>Dokument FV/2016/06/21</td>
+                                                        <td class=" dt-body-center">
+                                                            <select>
+                                                                <option value="0">TAK</option>
+                                                                <option value="1" selected >NIE</option>
+                                                            </select>
+                                                        </td>
                                                     </tr>
                                                     <tr>
                                                         <td>2</td>
                                                         <td>Rachunek</td>
-                                                        <td></td>
-                                                        <td>1</td>
-                                                        <td>%i</td>
-                                                        <td class=" dt-body-center"><input type="checkbox"></td>
+                                                        <td>Rach/%R/%m/%i</td>
+                                                        <td>23</td>
+                                                        <td>Rach/2016/06/23</td>
+                                                        <td class=" dt-body-center">
+                                                            <select>
+                                                                <option value="0" selected>TAK</option>
+                                                                <option value="1"  >NIE</option>
+                                                            </select>
+                                                        </td>
                                                     </tr>
                                                     <tr>
                                                         <td>3</td>
-                                                        <td>Faktura bez VAT</td>
-                                                        <td>FbV/%R/%m/%i</td>
-                                                        <td>23</td>
-                                                        <td>%i</td>
-                                                        <td class=" dt-body-center"><input type="checkbox"></td>
+                                                        <td>Faktura bez VAT (zwolnienie podmiotowe)</td>
+                                                        <td>Dokument FbV/%R/%m/%i</td>
+                                                        <td>8</td>
+                                                        <td>Dokument FbV/2016/06/8</td>
+                                                        <td class=" dt-body-center">
+                                                            <select>
+                                                                <option value="0">TAK</option>
+                                                                <option value="1" selected >NIE</option>
+                                                            </select>
+                                                        </td>
                                                     </tr>
                                                     <tr>
                                                         <td>4</td>
                                                         <td>Korekta faktury</td>
-                                                        <td></td>
-                                                        <td>1</td>
-                                                        <td>%i</td>
-                                                        <td class=" dt-body-center"><input type="checkbox"></td>
+                                                        <td>Dokument KFV/%R/%m/%i</td>
+                                                        <td>23</td>
+                                                        <td>Dokument FFV/2016/06/23</td>
+                                                        <td class=" dt-body-center">
+                                                            <select>
+                                                                <option value="0">TAK</option>
+                                                                <option value="1" selected >NIE</option>
+                                                            </select>
+                                                        </td>
                                                     </tr>
                                                 </tbody>
                                             </table>
@@ -257,7 +334,7 @@
         <script type="text/javascript" language="javascript" src="assets/plugins/datatable/js/jquery.dataTables.js"></script>
         <script type="text/javascript" src="assets/js/jquery.tabledit.js"></script>
         <script type="text/javascript">
-                                                 jQuery(document).ready(function () {
+                                                jQuery(document).ready(function () {
                                                     App.init();
                                                     $('#vatReasonDiv').hide();
 
@@ -272,13 +349,13 @@
                                                             $('#vatReasonDiv').hide();
                                                         }
                                                     });
-                                                    
+
                                                     $('#vat_reason').change(function () {
                                                         var str = "";
-                                                        $( "#vat_reason option:selected" ).each(function() {
-                                                          str += $( this ).val() + " ";
+                                                        $("#vat_reason option:selected").each(function () {
+                                                            str += $(this).val() + " ";
                                                         });
-                                                        $( "#vat_reason_text" ).text( str );
+                                                        $("#vat_reason_text").text(str);
                                                     });
 
                                                     $('#numberTemplateList').DataTable({

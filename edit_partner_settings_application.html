@@ -1,0 +1,351 @@
+<!DOCTYPE html> 
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->  
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->  
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->  
+    <head>
+        <title>Panel Benefit Systems</title>
+
+        <!-- Meta -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <!-- Favicon -->
+        <link rel="shortcut icon" href="favicon.ico">
+
+        <!-- Web Fonts -->
+        <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:400,300,600&amp;subset=cyrillic,latin">
+
+        <!-- CSS Global Compulsory -->
+        <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+
+        <!-- CSS Header and Footer -->
+        <link rel="stylesheet" href="assets/css/headers/header-default.css">
+        <link rel="stylesheet" href="assets/css/footers/footer-v1.css">
+
+        <!-- CSS Implementing Plugins -->
+        <link rel="stylesheet" href="assets/plugins/animate.css">
+        <link rel="stylesheet" href="assets/plugins/line-icons/line-icons.css">
+        <link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.min.css">
+
+        <!-- CSS Customization -->
+        <link rel="stylesheet" href="assets/css/theme-colors/dark-red.css">
+
+        <!-- CSS Implementing Plugins -->
+        <link rel="stylesheet" href="assets/plugins/animate.css">
+        <link rel="stylesheet" href="assets/plugins/line-icons/line-icons.css">
+        <link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="assets/plugins/sky-forms-pro/skyforms/css/sky-forms.css">
+        <link rel="stylesheet" href="assets/plugins/sky-forms-pro/skyforms/custom/custom-sky-forms.css">
+        <!--[if lt IE 9]><link rel="stylesheet" href="assets/plugins/sky-forms-pro/skyforms/css/sky-forms-ie8.css"><![endif]-->
+
+        <link rel="stylesheet" type="text/css" href="assets/plugins/datatable/css/jquery.dataTables.css">
+
+        <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.css">
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/prettify/r298/run_prettify.min.js"></script>
+
+    </head>
+
+    <body>    
+        <div class="wrapper">
+            <!--=== Header ===-->    
+            <div class="header" id="includedContentHeader">
+            </div>
+            <!--=== End Header ===--> 
+            <!--=== Breadcrumbs ===-->
+            <div class="breadcrumbs">
+                <div class="container">
+                    <h1 class="pull-left"></h1>
+                    <ul class="pull-right breadcrumb">
+                        <li><a href="wall.html">Home</a></li>
+                        <li><a href="list_applications.html">Lista wniosków</a></li>
+                    </ul>
+                </div>
+            </div><!--/breadcrumbs-->
+            <!--=== End Breadcrumbs ===-->
+
+            <!--=== Content Part ===-->
+            <div class="container content">     
+                <div class="row">
+                    <!-- Begin Content -->
+                    <div class="col-md-12 margin-bottom-50">
+                        <!-- Checkout-Form -->
+                        <form action="" id="sky-form" class="sky-form">
+                            <header>Wniosek</header>
+                            <fieldset> 
+                                <h4>Dane podstawowe wniosku</h4>
+                                <div class="row">
+                                    <section class="col col-md-4">
+                                        <label class="label">Data złożenia wniosku</label>
+                                        <label class="input">
+                                            <input type="text" name="name" value="15-07-2015, 10:00:18">
+                                        </label>
+                                    </section>
+                                    <section class="col col-md-4">
+                                        <label class="label">Autor</label>
+                                        <label class="input">
+                                            <input type="text" name="name" value="Adam Kowalski">
+                                        </label>
+                                    </section>
+                                    <section class="col col-md-2">
+                                        <label class="label">Rodzaj</label>
+                                        <label class="input">
+                                            <input type="text" name="name" value="Rozliczenie Partnera">
+                                        </label>
+                                    </section>
+                                    <section class="col col-md-2">
+                                        <label class="label">Typ operacji</label>
+                                        <label class="input">
+                                            <input type="text" name="name" value="Edycja">
+                                        </label>
+                                    </section>
+                                </div>
+                                <div class="row">
+                                    <section class="col col-md-4">
+                                        <label class="label">Data zatwierdzenia</label>
+                                        <label class="input">
+                                            <input type="text" name="name" value="15-07-2015, 10:00:18">
+                                        </label>
+                                    </section>
+                                    <section class="col col-md-4">
+                                        <label class="label">Zatwierdzający</label>
+                                        <label class="input">
+                                            <input type="text" name="name" value="Adam Nowak">
+                                        </label>
+                                    </section>
+                                </div>
+                                <div class="row">
+                                    <section class="col col-md-12">
+                                        <label class="label">Komentarz</label>
+                                        <label class="textarea" id="comment">
+                                            <textarea rows="3" name=""></textarea>
+                                        </label>
+                                    </section>
+                                </div>
+                            </fieldset>
+
+                            <fieldset>
+                                <div class="row">
+                                    <section class="col col-6">
+                                        <label class="label">Sposób rozliczania</label>
+                                        <label class="select">
+                                            <select id="docTypes">
+                                                <option value="0">Faktura VAT</option>
+                                                <option value="1">Rachunek</option>
+                                                <option value="2" selected>Faktura bez VAT (zwolnienie podmiotowe)</option>
+                                            </select>
+                                            <i></i>
+                                        </label>
+                                    </section>
+                                </div>
+                                <div id="vatReasonDiv">
+                                    <section>
+                                        <label class="label">Powód zwolenienia z VAT</label>
+                                        <label class="textarea">
+                                            <i class="icon-append fa fa-comment"></i>
+                                            <textarea id="vat_reason_text" rows="6" name="message">art. 113 ustawy o VAT „SPRZEDAWCA ZWOLNIONY PODMIOTOWO Z PODATKU OD TOWARÓW I USŁUG [dostawa towarów lub świadczenie usług, zwolnione na podstawie art. 113 ust. 1 (albo ust. 9) ustawy z dnia 11 marca 2004r. o podatku od towarów i usług (Dz. U. z 2011r. Nr 177. Poz. 1054. z późn. Zm)]
+                                            </textarea>
+                                        </label>
+                                    </section>
+                                </div>
+                            </fieldset>
+                        </form>   
+
+                        <form class="sky-form">
+                            <fieldset style="background:#f5f5f5;" >
+                                <h3 class="panel-title" style="margin-top: -20px;">Dodatkowe informacje dla Partnera (niewidoczne w profilu partnera)</h3>
+                            </fieldset>
+                            <fieldset>
+                                <section>
+                                    <label class="label" for="appbundle_invoice_confirm_status_comment">Komentarz dla Partnera, który nie będzie widoczny w proflu partnera</label>
+                                    <label class="textarea">
+                                        <textarea id="appbundle_invoice_confirm_status_comment" name="appbundle_invoice_confirm[status_comment]" rows="3"></textarea>
+                                    </label>
+                                </section>
+                                <div class="input-group margin-bottom-20">
+                                    <section>
+                                        <label class="label" for="appbundle_invoice_confirm_files">Załączniki</label>
+                                        <span class="btn btn-u fileinput-button state-success">
+                                            <i class="glyphicon glyphicon-plus"></i>
+                                            <span>Wybierz pliki...</span>
+                                            <input type="file" id="appbundle_invoice_confirm_files" name="appbundle_invoice_confirm[files][]" multiple="multiple">
+                                        </span>                                
+
+                                    </section>
+                                </div>
+                                <table role="presentation" id="attachments_presentation" class="table table-striped"><tbody class="files" data-toggle="modal-gallery" data-target="#modal-gallery"><tr class="template-upload fade in">
+                                            <td class="t-align-l">
+                                                <p class="name">H_1.vsdx</p>
+                                                <strong class="error text-danger">File type not allowed</strong>
+                                            </td>            
+                                            <td class="t-align-r">                
+
+                                                <button class="btn btn-u btn-u-dark cancel">
+                                                    <i class="glyphicon glyphicon-ban-circle"></i>
+                                                    <span>Anuluj</span>
+                                                </button>
+
+                                            </td>
+                                        </tr>
+                                        <tr class="template-upload fade in">
+                                            <td class="t-align-l">
+                                                <p class="name">H_4.jpg</p>
+                                                <strong class="error text-danger"></strong>
+                                            </td>            
+                                            <td class="t-align-r">                
+
+                                                <button class="btn btn-u btn-u-dark cancel">
+                                                    <i class="glyphicon glyphicon-ban-circle"></i>
+                                                    <span>Anuluj</span>
+                                                </button>
+
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </fieldset>
+                            <footer style="text-align: right;">
+                                <button type="button" class="btn-u btn-u-default" onclick="window.history.back();">Wróć</button>
+                                <a href="" class="btn-u margin-bottom-5"><i class="fa fa-ban"></i> Odrzuć</a>        
+                                <a href="" class="btn-u btn-u-green margin-bottom-5"><i class="fa fa-chevron-down"></i> Zaakceptuj</a>     
+                            </footer>
+                        </form>      
+
+                        <!-- Post -->
+                        <!-- Approve -->
+                        <!--History Table-->
+                        <div class="row sky-form">
+                            <fieldset>                  
+                                <h2>Historia</h2>
+                                <table id="history" class="display history-summary" cellspacing="0" width="100%">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th class="col-1">Data edycji</th>
+                                            <th>Autor</th>
+                                            <th class="hidden-sm hidden-xs">Status</th>
+                                            <th>Komentarz</th>
+                                            <th>Podgląd</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td class="hidden-sm hidden-xs">2015-05-31</td>
+                                            <td class="hidden-sm hidden-xs">Jan Kowalski</td>
+                                            <td class="hidden-sm hidden-xs">Do akceptacji</td>
+                                            <td>KOkdoado dm kdaokdokda kad kaokdasok daokda o</td>
+                                            <td><a href="#" data-toggle="modal" data-target="#profileSettingsPartner" class="btn-u btn-brd btn-brd-hover btn-u-sm"><i class="fa fa-eye"></i></a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td class="hidden-sm hidden-xs">2015-06-03</td>
+                                            <td class="hidden-sm hidden-xs">Jan Benefit</td>
+                                            <td class="hidden-sm hidden-xs">Odrzucony</td>
+                                            <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris et malesuada eros, ac vehicula ligula. Quisque mauris odio, sollicitudin ac molestie sed, finibus at ipsum. Curabitur risus erat, auctor sit amet urna in, elementum convallis turpis. Integer et fermentum quam. Sed scelerisque pulvinar urna tempus tempor. Vivamus sapien velit, varius eu orci nec, facilisis commodo turpis. Curabitur ac egestas odio, quis venenatis lorem. Nulla accumsan semper ligula nec accumsan.</td>
+                                            <td><a href="#" data-toggle="modal" data-target="#profileSettingsPartner" class="btn-u btn-brd btn-brd-hover btn-u-sm"><i class="fa fa-eye"></i></a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td class="hidden-sm hidden-xs">2015-06-07</td>
+                                            <td class="hidden-sm hidden-xs">Jan Kowalski</td>
+                                            <td class="hidden-sm hidden-xs">Do akceptacji</td>
+                                            <td>t rutrum, vel commodo sapien posuere. Nunc nec eros eget mauris blandit viverra nec vitae nunc. Proin fermentum metus eget posuere commodo</td>
+                                            <td><a href="#" data-toggle="modal" data-target="#profileSettingsPartner" class="btn-u btn-brd btn-brd-hover btn-u-sm"><i class="fa fa-eye"></i></a></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </fieldset>
+                        </div>         
+
+                    </div>
+                    <!-- End Content -->
+                    <!-- Begin Sidebar Menu -->
+                    <div class="col-md-3" id="includedContentSideBar">
+                    </div>
+                    <!-- End Sidebar Menu -->
+                </div>          
+            </div><!--/container-->     
+            <!--=== End Content Part ===-->
+        </div><!--/End Wrapepr-->
+        <!--=== Footer Version 1 ===-->
+        <div class="footer-v1" id="includedContentFooter">
+        </div>     
+        <!--=== End Footer Version 1 ===-->
+
+        <div class="modal fade" id="commentApplication" tabindex="-1" role="dialog" aria-hidden="true"></div>
+
+        <div class="modal fade" id="declineDocument" tabindex="-1" role="dialog" aria-hidden="true"></div>
+
+        <div class="modal fade" id="profileSettingsPartner" tabindex="-1" role="dialog" aria-hidden="true"></div>
+
+        <!-- JS Global Compulsory -->           
+        <script type="text/javascript" src="assets/plugins/jquery/jquery.min.js"></script>
+        <script type="text/javascript" src="assets/plugins/jquery/jquery-migrate.min.js"></script>
+        <script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+        <!-- JS Implementing Plugins -->
+        <script type="text/javascript" src="assets/plugins/back-to-top.js"></script>
+        <script type="text/javascript" src="assets/plugins/smoothScroll.js"></script>
+        <script src="assets/plugins/sky-forms-pro/skyforms/js/jquery.validate.min.js"></script>
+        <script src="assets/plugins/sky-forms-pro/skyforms/js/jquery.maskedinput.min.js"></script>
+        <script src="assets/plugins/sky-forms-pro/skyforms/js/jquery-ui.min.js"></script>
+        <script src="assets/plugins/sky-forms-pro/skyforms/js/jquery.form.min.js"></script>
+        <!-- JS Customization -->
+        <script type="text/javascript" src="assets/js/custom.js"></script>
+        <!-- JS Page Level -->           
+        <script type="text/javascript" src="assets/js/app.js"></script>
+        <script type="text/javascript" src="assets/js/forms/contact.js"></script>
+        <script type="text/javascript" src="assets/js/plugins/masking.js"></script>
+        <script type="text/javascript" src="assets/js/plugins/datepicker.js"></script>
+        <script type="text/javascript" src="assets/js/plugins/validation.js"></script>
+        <script type="text/javascript" src="assets/js/forms/partner.js"></script>
+        <script type="text/javascript" language="javascript" src="assets/plugins/datatable/js/jquery.dataTables.js"></script>
+        <script type="text/javascript">
+                                    jQuery(document).ready(function () {
+                                        App.init();
+                                        PartnerForm.initPartnerForm();
+                                    });
+                                    $(document).ready(function () {
+                                        $('#history').DataTable({
+                                            "paging": false,
+                                            "info": false,
+                                            bFilter: false, bInfo: false,
+                                            "language": {
+                                                "url": "assets/plugins/datatable/lang/Polish.json"
+                                            }
+                                        });
+                                    });
+                                    $(document).ready(function () {
+                                        $("form#sky-form :input").each(function () {
+                                            var input = $(this); // This is the jquery object of the input, do what you will
+                                            input.attr("disabled", true);
+                                        });
+                                        $("form#sky-form :input").each(function () {
+                                            var input = $(this); // This is the jquery object of the input, do what you will
+                                            input.attr("disabled", true);
+                                        });
+
+                                    });
+
+        </script>
+        <script>
+            $(function () {
+                $("#includedContentHeader").load("header_backend.html");
+                $("#includedContentFooter").load("footer.html");
+                $("#commentApplication").load("comment_application.html");
+                $("#declineDocument").load("declineDocument.html");
+                $("#profileSettingsPartner").load("profile_settings_partner_history.html");
+            });
+        </script> 
+        <!--[if lt IE 9]>
+            <script src="assets/plugins/respond.js"></script>
+            <script src="assets/plugins/html5shiv.js"></script>
+            <script src="assets/plugins/placeholder-IE-fixes.js"></script>
+        <![endif]-->
+
+    </body>
+</html> 

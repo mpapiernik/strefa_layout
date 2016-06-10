@@ -82,7 +82,7 @@
                                             </div>
                                         </fieldset>
                                         <fieldset>
-                                            <h4>Dostęp do modułu dokumentów kosztowych</h4>
+                                            <h4>Dostęp do modułu dokumentów rozliczeniowych</h4>
                                             <div class="row">
                                                 <section class="col col-3">
                                                     <label class="label">Data rozpoczęcia fakturowania</label>
@@ -96,7 +96,7 @@
                                                 <label class="checkbox"><input id="publicCheckbox" type="checkbox" name="public" onclick="showPartnerDiv()"><i></i>Wyłącz dostęp</label>
                                             </section>
                                             <section>
-                                                <label class="label">Przyczyna wstrzymania dostępu do modułu dokumentów kosztowych</label>
+                                                <label class="label">Przyczyna wstrzymania dostępu do modułu dokumentów rozliczeniowych</label>
                                                 <label class="textarea">
                                                     <i class="icon-append fa fa-comment"></i>
                                                     <textarea rows="6" name="message" id="message"></textarea>
@@ -105,13 +105,13 @@
                                         </fieldset>
                                         <fieldset>
                                             <div class="row">
-                                                <section class="col col-3">
+                                                <section class="col col-6">
                                                     <label class="label">Sposób rozliczania</label>
                                                     <label class="select">
                                                         <select id="docTypes">
                                                             <option value="0">Faktura VAT</option>
                                                             <option value="1">Rachunek</option>
-                                                            <option value="2">Faktura bez VAT</option>
+                                                            <option value="2">Faktura bez VAT (zwolnienie podmiotowe)</option>
                                                         </select>
                                                         <i></i>
                                                     </label>
@@ -119,21 +119,11 @@
                                             </div>
                                             <div id="vatReasonDiv">
                                                 <section>
-                                                    <label class="label">Zwolenianie ze stawki VAT</label>
-                                                    <label class="select">
-                                                        <select id="vat_reason">
-                                                            <option value="art. 43 ust. 1 ustawy o VAT oraz przepisy wykonawcze do ustawy VAT „Zwolnienie z podatku od towarów i usług na podstawie art. 43 ust. 1 pkt 2-41 Ustawy z 11 marca 2004r.">Przedmiotowe - art. 43 ust. 1 ustawy o VAT oraz przepisy wykonawcze do ustawy VAT „Zwolnienie z podatku od towarów i usług</option>
-                                                            <option value="art. 113 ustawy o VAT „SPRZEDAWCA ZWOLNIONY PODMIOTOWO Z PODATKU OD TOWARÓW I USŁUG [dostawa towarów lub świadczenie usług, zwolnione na podstawie art. 113 ust. 1 (albo ust. 9) ustawy z dnia 11 marca 2004r. o podatku od towarów i usług (Dz. U. z 2011r. Nr 177. Poz. 1054. z późn. Zm)]
-                                                        ">Podmiotowe - art. 113 ustawy o VAT „SPRZEDAWCA ZWOLNIONY PODMIOTOWO Z PODATKU OD TOWARÓW I USŁUG </option>
-                                                        </select>
-                                                        <i></i>
-                                                    </label>
-                                                </section>
-                                                <section>
-                                                    <label class="label">Powód</label>
-                                                    <label class="textarea state-disabled">
+                                                    <label class="label">Powód zwolenienia z VAT</label>
+                                                    <label class="textarea">
                                                         <i class="icon-append fa fa-comment"></i>
-                                                        <textarea id="vat_reason_text" rows="6" name="message" readonly=""></textarea>
+                                                        <textarea id="vat_reason_text" rows="6" name="message">art. 113 ustawy o VAT „SPRZEDAWCA ZWOLNIONY PODMIOTOWO Z PODATKU OD TOWARÓW I USŁUG [dostawa towarów lub świadczenie usług, zwolnione na podstawie art. 113 ust. 1 (albo ust. 9) ustawy z dnia 11 marca 2004r. o podatku od towarów i usług (Dz. U. z 2011r. Nr 177. Poz. 1054. z późn. Zm)]
+                                                        </textarea>
                                                     </label>
                                                 </section>
                                             </div>
@@ -184,44 +174,64 @@
                                                     <tr>
                                                         <th class="col-1">#</th>
                                                         <th class="col-2">Rodzaj&nbsp;dokumentu</th>
-                                                        <th class="col-3">Szablon</th>
-                                                        <th>Kolejny&nbsp;numer</th>
-                                                        <th class="col-3">Wartosć&nbsp;systemowa</th>
-                                                        <th class="col-2 dt-head-center">Aktywny</th>
+                                                        <th class="col-2">Szablon</th>
+                                                        <th class="col-1">Kolejny numer</th>
+                                                        <th class="col-2">Wartość</th>
+                                                        <th class="col-1 dt-head-center">Aktywny</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
                                                     <tr>
                                                         <td>1</td>
                                                         <td>Faktura VAT</td>
-                                                        <td>FAKTURA /%R/%m/%i</td>
-                                                        <td>23</td>
-                                                        <td>%i</td>
-                                                        <td class=" dt-body-center"><input type="checkbox"></td>
+                                                        <td>Dokument FV/%R/%m/%i</td>
+                                                        <td>21</td>
+                                                        <td>Dokument FV/2016/06/21</td>
+                                                        <td class=" dt-body-center">
+                                                            <select>
+                                                                <option value="0">TAK</option>
+                                                                <option value="1" selected >NIE</option>
+                                                            </select>
+                                                        </td>
                                                     </tr>
                                                     <tr>
                                                         <td>2</td>
                                                         <td>Rachunek</td>
-                                                        <td></td>
-                                                        <td>1</td>
-                                                        <td>%i</td>
-                                                        <td class=" dt-body-center"><input type="checkbox"></td>
+                                                        <td>Rach/%R/%m/%i</td>
+                                                        <td>23</td>
+                                                        <td>Rach/2016/06/23</td>
+                                                        <td class=" dt-body-center">
+                                                            <select>
+                                                                <option value="0" selected>TAK</option>
+                                                                <option value="1"  >NIE</option>
+                                                            </select>
+                                                        </td>
                                                     </tr>
                                                     <tr>
                                                         <td>3</td>
-                                                        <td>Faktura bez VAT</td>
-                                                        <td>FbV/%R/%m/%i</td>
-                                                        <td>23</td>
-                                                        <td>%i</td>
-                                                        <td class=" dt-body-center"><input type="checkbox"></td>
+                                                        <td>Faktura bez VAT (zwolnienie podmiotowe)</td>
+                                                        <td>Dokument FbV/%R/%m/%i</td>
+                                                        <td>8</td>
+                                                        <td>Dokument FbV/2016/06/8</td>
+                                                        <td class=" dt-body-center">
+                                                            <select>
+                                                                <option value="0">TAK</option>
+                                                                <option value="1" selected >NIE</option>
+                                                            </select>
+                                                        </td>
                                                     </tr>
                                                     <tr>
                                                         <td>4</td>
                                                         <td>Korekta faktury</td>
-                                                        <td></td>
-                                                        <td>1</td>
-                                                        <td>%i</td>
-                                                        <td class=" dt-body-center"><input type="checkbox"></td>
+                                                        <td>Dokument KFV/%R/%m/%i</td>
+                                                        <td>23</td>
+                                                        <td>Dokument FFV/2016/06/23</td>
+                                                        <td class=" dt-body-center">
+                                                            <select>
+                                                                <option value="0">TAK</option>
+                                                                <option value="1" selected >NIE</option>
+                                                            </select>
+                                                        </td>
                                                     </tr>
                                                 </tbody>
                                             </table>
@@ -291,14 +301,6 @@
                                                         else {
                                                             $('#vatReasonDiv').hide();
                                                         }
-                                                    });
-                                                    
-                                                    $('#vat_reason').change(function () {
-                                                        var str = "";
-                                                        $( "#vat_reason option:selected" ).each(function() {
-                                                          str += $( this ).val() + " ";
-                                                        });
-                                                        $( "#vat_reason_text" ).text( str );
                                                     });
 
                                                     $('#numberTemplateList').DataTable({

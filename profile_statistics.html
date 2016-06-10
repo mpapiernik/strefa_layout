@@ -87,14 +87,13 @@
                     <div class="col-md-12 margin-bottom-50">
                         <div class="row">
                             <div class="col-md-12 blog">
-                                <div class="news-v3-in">
+                                <div class="news-v3-in  margin-bottom-30">
                                     <form action="" id="sky-form" class="sky-form">
                                         <fieldset>
                                             <h4>Wykres dzienny
                                                 <br>
                                                 <small>ilośc wizyt z dokładnością do godziny</small>
                                             </h4>
-                                            <div id="chartDaily"></div>
                                             <h5>Parametry</h5>
                                             <div class="row">
                                                 <section class="col col-4">
@@ -137,19 +136,24 @@
                                                     </div>
                                                 </section>
                                                 <section class="col col-12 pull-right">
-                                                       <a href="#" class="btn-u btn-u-default"> <i class="fa fa-plus fa-file-excel-o"></i> Eksportuj CSV</a> 
-                                                        <a href="#" class="btn-u btn-u-dark"> <i class="fa fa-plus fa-file-pdf-o"></i> Eksportuj PNG </a> 
+                                                    <a href="#" class="btn-u btn-u-default"> <i class="fa fa-plus fa-file-excel-o"></i> Eksportuj CSV</a> 
+                                                    <a href="#" class="btn-u btn-u-dark"> <i class="fa fa-plus fa-file-pdf-o"></i> Eksportuj PNG </a> 
                                                     <a href="#" class="btn-u"> Ustaw</a> 
                                                 </section>
                                             </div>
+                                            <div id="chartDaily"></div>
+
                                         </fieldset>
+                                    </form> 
+                                </div>
+                                <div class="news-v3-in  margin-bottom-30">
+                                    <form class="sky-form">
                                         <fieldset>
                                             <h4>Wykres tygodniowy
                                                 <br>
                                                 <small>ilośc wizyt z dokładnością do dnia tygodnia</small>
                                             </h4>
                                             <section>
-                                                <div id="chartWeekly"></div>
                                                 <h5>Parametry</h5>
                                                 <div class="row">
                                                     <section class="col col-4">
@@ -197,44 +201,19 @@
                                                         <a href="#" class="btn-u"> Ustaw</a> 
                                                     </section>
                                                 </div>
+                                                <div id="chartWeekly"></div>
                                             </section>
                                         </fieldset>
+                                    </form>
+                                </div>
+                                <div class="news-v3-in  margin-bottom-30">
+                                    <form class="sky-form">
                                         <fieldset>
                                             <h4>Wykres miesięczny
                                                 <br>
                                                 <small>ilośc wizyt z dokładnością dnia miesiąca</small>
                                             </h4>
                                             <section>
-                                                <div id="chartMonthly"></div>
-                                                <div class="row">
-                                                    <section class="col col-6 pull-right">
-                                                        <table class="table table-striped invoice-table">
-                                                            <tbody >
-                                                                <tr>
-                                                                    <td class="summary summary-text summary-row">ŁĄCZNIE</td>
-                                                                    <td class="summary-cell summary-row">325</td>
-                                                                    <td class="summary-row"></td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td class="summary summary-text">W tym</td>
-                                                                    <td class="summary">basen</td>
-                                                                    <td class="summary">120</td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td class="no-border"></td>
-                                                                    <td class=" summary summary-cell">siłownia</td>
-                                                                    <td class="summary">100</td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td class="no-border"></td>
-                                                                    <td class=" summary summary-cell">fitness</td>
-                                                                    <td class="summary">105</td>
-                                                                </tr>
-                                                            </tbody>
-                                                        </table>
-                                                    </section>
-                                                </div>
-
                                                 <h5>Parametry</h5>
                                                 <div class="row">
                                                     <section class="col col-4">
@@ -280,14 +259,44 @@
                                                         </div>
                                                     </section>
                                                     <section class="col col-12 pull-right">
-                                                           <a href="#" class="btn-u btn-u-default"> <i class="fa fa-plus fa-file-excel-o"></i> Eksportuj CSV</a> 
+                                                        <a href="#" class="btn-u btn-u-default"> <i class="fa fa-plus fa-file-excel-o"></i> Eksportuj CSV</a> 
                                                         <a href="#" class="btn-u btn-u-dark"> <i class="fa fa-plus fa-file-pdf-o"></i> Eksportuj PNG </a> 
                                                         <a href="#" class="btn-u"> Ustaw</a> 
                                                     </section>
                                                 </div>
+
+                                                <div id="chartMonthly"></div>
+                                                <div class="row">
+                                                    <section class="col col-6 pull-right">
+                                                        <table class="table table-striped invoice-table">
+                                                            <tbody >
+                                                                <tr>
+                                                                    <td class="summary summary-text summary-row">ŁĄCZNIE</td>
+                                                                    <td class="summary-cell summary-row">325</td>
+                                                                    <td class="summary-row"></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="summary summary-text">W tym</td>
+                                                                    <td class="summary">basen</td>
+                                                                    <td class="summary">120</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="no-border"></td>
+                                                                    <td class=" summary summary-cell">siłownia</td>
+                                                                    <td class="summary">100</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="no-border"></td>
+                                                                    <td class=" summary summary-cell">fitness</td>
+                                                                    <td class="summary">105</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </section>
+                                                </div>
                                             </section>
                                         </fieldset>
-                                    </form>        
+                                    </form>
                                 </div>
                             </div>
                         </div><!--/row-->   
@@ -379,8 +388,8 @@
                     grid: {
                         y: {
                             lines: [{value: 0}],
-                             inverted: false
-                           
+                            inverted: false
+
                         }
                     }
                 });
@@ -448,8 +457,8 @@
                 setTimeout(function () {
                     $('.dropdown-toggle').dropdown();
                 }, 2000);
-                
-             
+
+
             });
         </script> 
 

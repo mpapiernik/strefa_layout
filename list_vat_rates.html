@@ -35,6 +35,10 @@
 
         <!-- DataTables -->
         <link rel="stylesheet" type="text/css" href="assets/plugins/datatable/css/jquery.dataTables.css">
+
+
+        <!-- CSS Customization -->
+        <link rel="stylesheet" href="assets/css/custom.css">
     </head>
 
     <body>    
@@ -46,11 +50,11 @@
             <!--=== Breadcrumbs ===-->
             <div class="breadcrumbs">
                 <div class="container">
-                    <h1 class="pull-left">Podstawy zwolnienia ze stawki VAT</h1>
+                    <h1 class="pull-left">Lista stawek VAT</h1>
                     <ul class="pull-right breadcrumb">
                         <li><a href="index_backend.html">Home</a></li>
                         <li><a href="index_backend.html">Ustawienia</a></li>
-                        <li><a href="list_vat_reasons.html">Podstawy zwolnienia ze stawki VAT</a></li>
+                        <li><a href="list_vat_reasons.html">Lista stawek VAT</a></li>
                     </ul>
                 </div>
             </div><!--/breadcrumbs-->
@@ -64,60 +68,78 @@
                     <div class="col-md-12 margin-bottom-50">
                         <div class="margin-bottom-20">
                             <div class="btn-group">
-                                <a href="add_vat_reason.html" class="button btn-u pull-right"><i class="fa fa-plus fa-fw"></i>Dodaj podstawę zwolnienia</a>         
+                                <a href="add_vat_rate.html" class="button btn-u pull-right"><i class="fa fa-plus fa-fw"></i>Dodaj stawkę VAT</a>         
                             </div>
                             <!-- End Single button -->                    
                         </div>
                         <hr>
                         <div>
+                            <div class="row">
+                                <div class="btn-group col-sm-9">
+                                    <div class="input-group spinner">
+                                        <input type="text" class="form-control" value="10">
+                                        <div class="input-group-btn-vertical text-center">
+                                            <button class="btn btn-default" type="button"><i class="fa fa-angle-up"></i></button>
+                                            <button class="btn btn-default" type="button"><i class="fa fa-angle-down"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="search-open pull-right col-sm-3">
+                                    <div class="input-group inline-group">
+                                        <input type="text" class="form-control" placeholder="Wyszukaj ... ">
+                                        <span class="input-group-btn">
+                                            <a href="" class="button btn-u"><i class="fa fa-search"></i></a>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
                             <table id="operatorsList" class="display" cellspacing="0" width="100%" style="text-align: left">
                                 <thead>
                                     <tr>
                                         <th>#</th>
-                                        <th>Podstawa</th>
-                                        <th>Rodzaj</th>
+                                        <th>Wartość [%]</th>
+                                        <th>Obowiązuje od</th>
+                                        <th>Obowiązuje do</th>
+                                        <th>Systemowa</th>
                                         <th>Więcej</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
                                         <td>1</td>
-                                        <td>przedmiotowe</td>
-                                        <td>
-                                            art. 43 ust. 1 ustawy o VAT oraz przepisy wykonawcze do ustawy VAT „Zwolnienie z podatku od towarów i
-                                            usług na podstawie art. 43 ust. 1 pkt 2-41 Ustawy z 11 marca 2004r.
-                                        </td>
+                                        <td>0</td>
+                                        <td>2013-01-01</td>
+                                        <td>2015-07-01</td>
+                                        <td>TAK</td>
                                         <td>
                                             <div class="btn-group">
-                                               <button type="button" class="btn-u btn-brd color-red btn-brd-hover btn-u-sm dropdown-toggle bars" data-toggle="dropdown">
+                                                <button type="button" class="btn-u btn-brd color-red btn-brd-hover btn-u-sm dropdown-toggle bars" data-toggle="dropdown">
                                                     <i class="fa fa fa-bars"></i>
                                                     <span class="sr-only">Toggle Dropdown</span>                            
                                                 </button>
                                                 <ul class="dropdown-menu" role="menu">
-                                                    <li><a href="edit_vat_reason.html"><i class="fa fa-edit"></i> Edytuj</a></li>
+                                                    <li><a href="edit_vat_rate.html"><i class="fa fa-edit"></i> Edytuj</a></li>
                                                     <li><a data-toggle="modal" data-target="#confirmDelete"><i class="fa fa-trash"></i> Usuń</a></li>
-                                                    
+
                                                 </ul>
                                             </div>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>2</td>
-                                        <td>podmiotowe</td>
-                                        <td>
-                                            art. 113 ustawy o VAT „SPRZEDAWCA ZWOLNIONY PODMIOTOWO Z PODATKU OD TOWARÓW I USŁUG [dostawa towarów lub świadczenie usług, zwolnione na
-                                            podstawie art. 113 ust. 1 (albo ust. 9) ustawy z dnia 11 marca 2004r. o podatku od towarów i usług (Dz. U. z 2011r. Nr 177. Poz. 1054. z późn. Zm)]
-                                        </td>
+                                        <td>23</td>
+                                        <td>2015-01-01</td>
+                                        <td>2015-07-01</td>
+                                        <td>NIE</td>
                                         <td>
                                             <div class="btn-group">
-                                               <button type="button" class="btn-u btn-brd color-red btn-brd-hover btn-u-sm dropdown-toggle bars" data-toggle="dropdown">
+                                                <button type="button" class="btn-u btn-brd color-red btn-brd-hover btn-u-sm dropdown-toggle bars" data-toggle="dropdown">
                                                     <i class="fa fa fa-bars"></i>
                                                     <span class="sr-only">Toggle Dropdown</span>                            
                                                 </button>
                                                 <ul class="dropdown-menu" role="menu">
-                                                    <li><a href="edit_vat_reason.html"><i class="fa fa-edit"></i> Edytuj</a></li>
-                                                    <li><a data-toggle="modal" data-target="#confirmDelete"><i class="fa fa-trash"></i> Usuń</a></li>
-                                                    
+                                                    <li><a href="edit_vat_rate.html"><i class="fa fa-edit"></i> Edytuj</a></li>
                                                 </ul>
                                             </div>
                                         </td>
@@ -158,7 +180,9 @@
                     $('#operatorsList').DataTable({
                         "language": {
                             "url": "assets/plugins/datatable/lang/Polish.json"
-                        }
+                        },
+                        searching: false,
+                        lengthChange: false
                     });
                 });
             });
@@ -167,8 +191,8 @@
             $(function () {
                 $("#includedContentHeader").load("header_backend.html");
                 $("#includedContentFooter").load("footer.html");
-                 $("#confirmDelete").load("delete_vat_reason.html");
-                 setTimeout(function () {
+                $("#confirmDelete").load("delete_vat_rate.html");
+                setTimeout(function () {
                     $('.dropdown-toggle').dropdown();
                 }, 2000);
             });

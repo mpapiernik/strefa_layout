@@ -1,0 +1,59 @@
+<!-- Modal -->
+<div class="modal-dialog modal-lg">
+    <div class="modal-content">
+        <div class="modal-header">
+            <button aria-hidden="true" data-dismiss="modal" class="close" type="button">×</button>
+            <h4 id="modalNumberLabel" class="modal-title">  Podgląd elementu wnioskowanego </h4>
+        </div>
+        <form action="#" id="sky-form-number" class="sky-form">
+            <fieldset>
+                <section>
+                    <!-- Application Content -->
+                    <div class="row">
+                        <!-- Horizontal Description -->
+                        <div class="col-md-12">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="headline"><h2>Calypso</h2></div>
+                                    <dl class="dl-horizontal">
+                                        <dt>Rodzaj dokumentu</dt>
+                                        <dd>Faktura bez VAT (zwolnienie podmiotowe)</dd>
+                                        <dt>Powód zwolenienia z VAT</dt>
+                                        <dd>art. 113 ustawy o VAT „SPRZEDAWCA ZWOLNIONY PODMIOTOWO Z PODATKU OD TOWARÓW I USŁUG [dostawa towarów lub świadczenie usług, zwolnione na podstawie art. 113 ust. 1 (albo ust. 9) ustawy z dnia 11 marca 2004r. o podatku od towarów i usług (Dz. U. z 2011r. Nr 177. Poz. 1054. z późn. Zm)]
+                                            </dd>
+                                    </dl>
+                                </div>
+                            </div><!--/row-->
+                        </div>
+                    </div><!--/row-->
+                </section>
+            </fieldset>
+            <div class="modal-footer">
+                <button data-dismiss="modal" class="btn-u btn-u-default" type="button">Wróć</button>
+            </div>
+        </form>
+    </div>
+</div>
+<!-- End Modal -->
+
+<script type="text/javascript">
+    jQuery(document).ready(function () {
+        $('#commentTab').slideToggle('fast', function () {
+            // Animation complete.
+        });
+
+        $('#appendComment').click(function () {
+            $('#commentTab').slideToggle('fast', function () {
+                if ($('#commentArrow').hasClass('fa-sort-desc')) {
+                    $('#loader').hide().delay(2000);
+                    $('#commentArrow').removeClass('fa-sort-desc');
+                    $('#commentArrow').addClass('fa-sort-asc');
+                } else {
+                    $('#loader').show();
+                    $('#commentArrow').removeClass('fa-sort-asc');
+                    $('#commentArrow').addClass('fa-sort-desc');
+                }
+            });
+        });
+    });
+</script>

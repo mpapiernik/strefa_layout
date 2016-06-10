@@ -61,7 +61,7 @@
             <!--=== Breadcrumbs ===-->
             <div class="breadcrumbs">
                 <div class="container">
-                    <h1 class="pull-left">Wystaw dokument kosztowy</h1>
+                    <h1 class="pull-left">Propozycja rozliczenia na Fakturze</h1>
                     <ul class="pull-right breadcrumb">
                         <li><a href="wall.html">Home</a></li>
                         <li><a href="list_invoices.html">Faktury</a></li>
@@ -144,14 +144,6 @@
                             </div>
                             <div class="col-xs-6">
                                 <div class="tag-box tag-box-v3">
-                                    <span>
-                                        <a class="pull-right margin-left-10">
-                                            <i class="fa fa-history"></i>
-                                        </a>
-                                        <a class="pull-right accordion-toggle" data-toggle="modal" data-target="#modalBuyer">
-                                            <i class="fa fa-edit"></i>
-                                        </a>
-                                    </span>    
                                     <h2>Nabywca: </h2>    
                                     <ul class="list-unstyled">
                                         <li><strong>Nazwa: </strong>Benefit Systems S.A</li>
@@ -441,7 +433,7 @@
                                             <td>12,00</td>
                                             <td>3024,00</td>
                                             <td class="hidden-sm">ZW</td>
-                                            <td class="hidden-sm">ZW</td>
+                                            <td class="hidden-sm">0,00</td>
                                             <td>3024,00</td>
                                         </tr>
                                         <tr>
@@ -453,7 +445,7 @@
                                             <td>10,00</td>
                                             <td>250,00</td>
                                             <td class="hidden-sm">ZW</td>
-                                            <td class="hidden-sm">ZW</td>
+                                            <td class="hidden-sm">0,00</td>
                                             <td>250,00</td>
                                         </tr>
                                         <tr>
@@ -465,7 +457,7 @@
                                             <td>15,00</td>
                                             <td>1800,00</td>
                                             <td class="hidden-sm">ZW</td>
-                                            <td class="hidden-sm">ZW</td>
+                                            <td class="hidden-sm">0,00</td>
                                             <td>1800,00</td>
                                         </tr>
                                         <tr>
@@ -477,7 +469,7 @@
                                             <td>20,00</td>
                                             <td>2000,00</td>
                                             <td class="hidden-sm">ZW</td>
-                                            <td class="hidden-sm">ZW</td>
+                                            <td class="hidden-sm">0,00</td>
                                             <td>2000,00</td>
                                         </tr>
                                     </tbody>
@@ -520,7 +512,7 @@
                                             <td class="summary summary-text">W tym</td>
                                             <td class="summary-cell">27216,00</td>
                                             <td class="hidden-sm">ZW</td>
-                                            <td class="hidden-sm">ZW</td>
+                                            <td class="hidden-sm">0,00</td>
                                             <td class="summary-border-right">27216,00</td>
                                         </tr>
                                         <tr>
@@ -531,7 +523,7 @@
                                             <td class="no-border"></td>
                                             <td class="summary-cell">1800,00</td>
                                             <td class="hidden-sm">ZW</td>
-                                            <td class="hidden-sm">ZW</td>
+                                            <td class="hidden-sm">0,00</td>
                                             <td class="summary-border-right">1800,00</td>
                                         </tr>
                                         <tr>
@@ -542,7 +534,7 @@
                                             <td class="no-border"></td>
                                             <td class="summary-cell summary-border-bottom">2250,00</td>
                                             <td class="hidden-sm summary-border-bottom">ZW</td>
-                                            <td class="hidden-sm summary-border-bottom">ZW</td>
+                                            <td class="hidden-sm summary-border-bottom">0,00</td>
                                             <td class="summary-border-right summary-border-bottom">2250,00</td>
                                         </tr>
                                     </tbody>
@@ -565,7 +557,7 @@
                             </fieldset>
                             <fieldset>
                                 <section>
-                                    <label class="label">Powód zwolnienia ze stawki VAT</label>
+                                    <label class="label">Powód zwolnienia z VAT dla pozycji ze stawką „ZW”</label>
                                     <label class="textarea">
                                         <textarea rows="3" name="info" >art. 43 ust. 1 ustawy o VAT oraz przepisy wykonawcze do ustawy VAT „Zwolnienie z podatku od towarów i usług na podstawie art. 43 ust. 1 pkt 2-41 Ustawy z 11 marca 2004r.</textarea>
                                     </label>
@@ -584,14 +576,14 @@
                             </fieldset>
                             <fieldset>
                                 <section>
-                                    <label class="label" for="appbundle_invoice_confirm_status_comment">Komentarz</label>
+                                    <label class="label" for="appbundle_invoice_confirm_status_comment">Komentarz dla Opiekuna rozliczeniowego, który nie będzie widoczny na dokumencie rozliczeniowym (opcjonalnie)</label>
                                     <label class="textarea">
                                         <textarea id="appbundle_invoice_confirm_status_comment" name="appbundle_invoice_confirm[status_comment]" rows="3"></textarea>
                                     </label>
                                 </section>
                                 <div class="input-group margin-bottom-20">
                                     <section>
-                                        <label class="label" for="appbundle_invoice_confirm_files">Załączniki</label>
+                                        <label class="label" for="appbundle_invoice_confirm_files">Załączniki (np. raport awaryjny itp.)</label>
                                         <span class="btn btn-u fileinput-button state-success">
                                             <i class="glyphicon glyphicon-plus"></i>
                                             <span>Wybierz pliki...</span>
@@ -713,7 +705,7 @@
                                             },
                                             columns: {
                                                 identifier: [0, '#'],
-                                                editable: [[1, 'Usługa (Obiekt)'], [2, 'PKWiU'], [3, 'Ilość'], [5, 'Cena jedn. netto']]
+                                                editable: [[1, 'Usługa (Obiekt)'], [2, 'PKWiU'], [3, 'Ilość'], [5, 'Cena jedn. netto'], [7, '']]
                                             }
                                         });
                                         $("#sky-form-details").submit(function (event) {

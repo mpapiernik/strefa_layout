@@ -17,27 +17,17 @@
     <div class="modal-content">
         <div class="modal-header">
             <button aria-hidden="true" data-dismiss="modal" class="close" type="button">×</button>
-            <h4 id="modalNumberLabel" class="modal-title">  Potwierdź odrzucenie/akceptacje </h4>
+            <h4 id="modalNumberLabel" class="modal-title">  Potwierdź weryfikację raportu </h4>
         </div>
         <form action="#" id="sky-form-number" class="sky-form">
             <fieldset>
-                <section>
-                    <label class="label">Komentarz dla Partnera, który nie będzie widoczny na dokumencie rozliczeniowym (opcjonalnie)</label>
-                    <label class="textarea">
-                        <textarea rows="3" name="decline_reason" required=""></textarea>
-                    </label>
-                </section>
-                <div class="input-group margin-bottom-20">
-                    <section>
-                        <label class="label" for="appbundle_invoice_confirm_files">Załączniki</label>
-                        <span class="btn btn-u fileinput-button state-success">
-                            <i class="glyphicon glyphicon-plus"></i>
-                            <span>Wybierz pliki...</span>
-                            <input type="file" id="appbundle_invoice_confirm_files" name="appbundle_invoice_confirm[files][]" multiple="multiple">
-                        </span>                                
-
-                    </section>
-                </div>
+                <p>
+                  Czy potwierdzasz akcję weryfikacja raportu? 
+                </p>
+                <p>
+                  Spowoduje to zmianę statusu dokumentu na - Weryfikacja raportu.
+                </p>
+               
             </fieldset>
             <div class="modal-footer">
                 <button data-dismiss="modal" class="btn-u btn-u-default" type="button">Wróć</button>
