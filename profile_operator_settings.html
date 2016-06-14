@@ -145,8 +145,39 @@
                                         <h2 class="heading-md">Zarzadzaj ustawieniami bezpieczeństwa</h2>
                                         <br>
                                         <form class="sky-form" id="sky-form4" action="#">
+                                            <p>
+                                            <h5 class=""><b>Wymagania silnego hasła:</b></h5>
+                                            <ul>
+                                                <li>
+                                                    Co najmniej 8 znaków
+                                                </li>
+                                                <li>
+                                                    Co najmniej jedna mała litera 
+                                                </li>
+                                                <li>
+                                                    Co najmniej jedna wielka litera 
+                                                </li>
+                                                <li>
+                                                    Co najmniej jedna cyfra
+                                                </li>
+                                                <li>
+                                                    Hasło różne od ostatniego
+                                                </li>
+                                            </ul>
+                                            </p>
+                                            <hr>
                                             <dl class="dl-horizontal">
-                                                <dt>Wpisz hasło</dt>
+                                                <dt>Aktualne hasło</dt>
+                                                <dd>
+                                                    <section>
+                                                        <label class="input">
+                                                            <i class="icon-append fa fa-lock"></i>
+                                                            <input type="password" id="password" name="password" placeholder="Aktualne hasło">
+                                                            <b class="tooltip tooltip-bottom-right">Uzupełnij pole</b>
+                                                        </label>
+                                                    </section>
+                                                </dd>
+                                                <dt>Nowe hasło</dt>
                                                 <dd>
                                                     <section>
                                                         <label class="input">
@@ -156,7 +187,7 @@
                                                         </label>
                                                     </section>
                                                 </dd>
-                                                <dt>Potwierdź hasło</dt>
+                                                <dt>Wpisz ponownie nowe hasło</dt>
                                                 <dd>
                                                     <section>
                                                         <label class="input">
@@ -167,7 +198,7 @@
                                                     </section>
                                                 </dd>    
                                             </dl>
-                                             <hr> 
+                                            <hr> 
                                         </form>    
                                         <footer style="text-align: right;">
                                             <button type="button" class="btn-u btn-u-default" onclick="window.history.back();">Anuluj</button>
