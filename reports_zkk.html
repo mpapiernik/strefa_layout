@@ -70,7 +70,19 @@
                         <form action="" method="post" id="sky-form3" class="sky-form">
                             <fieldset>           
                                 <h3>Parametry raportu</h3>
-                                <label class="label">Okres przekazania dokumentów do akceptacji</label>
+                                <div class="row">
+                                    <section class="col col-6">
+                                        <label class="label">Rodzaj raportu</label>
+                                        <label class="select">
+                                            <select id="docTypes">
+                                                <option value="0">Raport podjętych działań - sumaryczny</option>
+                                                <option value="1">Raport podjętych działań - szczegółowy</option>
+                                                <option value="2">Raport niepodjętych działań - szczegółowy</option>
+                                            </select>
+                                            <i></i>
+                                        </label>
+                                    </section>
+                                </div>
                                 <section class="row">
                                     <section class="col col-6">
                                         <label class="label">Od</label>
@@ -95,11 +107,11 @@
                                 </section>
                             </fieldset>
                             <fieldset>
-                                 <label class="label">Opiekun rozliczeniowy</label>
+                                <label class="label">Opiekun rozliczeniowy</label>
                                 <section>
                                     <label class="checkbox"><input id="publicCheckbox" type="checkbox" name="public"><i></i>Wszyscy</label>
                                 </section>
-                                 <section id="partnerState">
+                                <section id="partnerState">
                                     <label class="label">Wybrany opiekun</label>
                                     <div class="input-group">
                                         <select  id="service-select" class="selectpicker input-block-level" data-live-search="true" title='Wybierz...' data-selected-text-format="count>1" data-width="100%">
@@ -175,8 +187,8 @@
                         // Animation complete.
                     });
                 });
-                
-                  setTimeout(function () {
+
+                setTimeout(function () {
                     $('.dropdown-toggle').dropdown();
                 }, 2000);
 
