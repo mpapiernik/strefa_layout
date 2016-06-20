@@ -60,7 +60,7 @@ var PartnerForm = function () {
 	            {
                         name:
 	                {
-	                    required: 'Wprowadź nazwę partnera'
+	                    required: 'Wprowadź nazwę Partnera'
 	                },
 	                email:
 	                {

@@ -146,7 +146,7 @@
                                         <label class="label">Rola</label>
                                         <label class="select">
                                             <select name="role">
-                                                <option value="1">Opiekun partnera</option>
+                                                <option value="1">Opiekun Partnera</option>
                                                 <option value="2">Redaktor</option>
                                                 <option value="3">Administrator</option>
                                             </select>
@@ -200,7 +200,7 @@
                                 <section>
                                     <div class="margin-bottom-20">
                                         <div class="btn-group">
-                                            <a href="list_partners.html" class="btn-u pull-right"><i class="fa fa-list fa-fw"></i>Lista partnerów operatora</a>         
+                                            <a href="list_partners.html" class="btn-u pull-right"><i class="fa fa-list fa-fw"></i>Lista Partnerów operatora</a>         
                                         </div>
                                         <!-- End Single button -->                    
                                     </div>
@@ -228,14 +228,14 @@
                                                 <label class="label">Data rozpoczęcia </label>
                                                 <label class="input">
                                                     <i class="icon-append fa fa-calendar"></i>
-                                                    <input type="text" name="date" id="start">
+                                                    <input type="text" name="date" id="date">
                                                 </label>
                                             </section>
                                             <section class="col col-6">
                                                 <label class="label">Data zakończenia </label>
                                                 <label class="input">
                                                     <i class="icon-append fa fa-calendar"></i>
-                                                    <input type="text" name="date" id="finish">
+                                                    <input type="text" name="date" id="date2">
                                                 </label>
                                             </section>
                                         </div>
@@ -246,8 +246,8 @@
                                             <select  class="selectpicker show-tick"   data-live-search="true"  title='Wybierz...' data-width="100%">
                                                 <option  data-hidden="true"></option>	
                                                 <option value="1">Tadeusz Zieliński</option>	
-                                                <option value="2" disabled data-subtext="2016-05-10 - 2016-05-14 (nieobecny)" >Magdalena Kwidzińska</option>	
-                                                <option value="3" disabled data-subtext="2016-05-01 - 2016-05-10 (nieobecny)" >Adam Rutkowki</option>	
+                                                <option value="2" disabled data-subtext="10.12.2016 - 12.12.2016 (nieobecny)" >Magdalena Kwidzińska</option>	
+                                                <option value="3" disabled data-subtext="12.04.2015 - 12.12.2016 (nieobecny)" >Adam Rutkowki</option>	
                                             </select>
                                         </div>
                                     </section>
@@ -270,30 +270,9 @@
             <!--=== End Content Part ===-->
         </div><!--/End Wrapepr-->
         <!--=== Footer Version 1 ===-->
-        <div class="footer-v1" id="includedContentFooter">
-        </div>     
         <!--=== End Footer Version 1 ===-->
 
-        <!-- JS Global Compulsory -->           
-        <script type="text/javascript" src="assets/plugins/jquery/jquery-migrate.min.js"></script>
-        <script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
-        <!-- JS Implementing Plugins -->
-        <script type="text/javascript" src="assets/plugins/back-to-top.js"></script>
-        <script type="text/javascript" src="assets/plugins/smoothScroll.js"></script>
-        <script src="assets/plugins/sky-forms-pro/skyforms/js/jquery.validate.min.js"></script>
-        <script src="assets/plugins/sky-forms-pro/skyforms/js/jquery.maskedinput.min.js"></script>
-        <script src="assets/plugins/sky-forms-pro/skyforms/js/jquery-ui.min.js"></script>
-        <script src="assets/plugins/sky-forms-pro/skyforms/js/jquery.form.min.js"></script>
-        <!-- JS Customization -->
-        <script type="text/javascript" src="assets/js/custom.js"></script>
-        <!-- JS Page Level -->           
-        <script type="text/javascript" src="assets/js/app.js"></script>
-        <script type="text/javascript" src="assets/js/forms/contact.js"></script>
-        <script type="text/javascript" src="assets/js/plugins/masking.js"></script>
-        <script type="text/javascript" src="assets/js/plugins/datepicker.js"></script>
-        <script type="text/javascript" src="assets/js/plugins/validation.js"></script>
-        <script type="text/javascript" src="assets/js/forms/checkout.js"></script>
-
+          <!-- JS Global Compulsory -->           
         <script type="text/javascript" src="assets/plugins/jquery/jquery.min.js"></script>
         <script type="text/javascript" src="assets/plugins/jquery/jquery-migrate.min.js"></script>
         <script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
@@ -324,13 +303,17 @@
         <script type="text/javascript">
                                     jQuery(document).ready(function () {
                                         App.init();
-                                        CheckoutForm.initCheckoutForm();
                                         ContactForm.initContactForm();
                                         Masking.initMasking();
                                         Datepicker.initDatepicker();
                                         Validation.initValidation();
                                         FancyBox.initFancybox();
 
+                                        $('#publicCheckbox').click(function () {
+                                            $('#partnerState').slideToggle('fast', function () {
+                                                // Animation complete.
+                                            });
+                                        });
                                     });
         </script>
         <script>
