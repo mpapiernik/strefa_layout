@@ -40,6 +40,9 @@
         <link rel="stylesheet" href="assets/plugins/sky-forms-pro/skyforms/css/sky-forms.css">
         <link rel="stylesheet" href="assets/plugins/sky-forms-pro/skyforms/custom/custom-sky-forms.css">
         <!--[if lt IE 9]><link rel="stylesheet" href="assets/plugins/sky-forms-pro/skyforms/css/sky-forms-ie8.css"><![endif]-->
+        
+               <link rel="stylesheet" href="assets/css/jquery.fileupload.css">
+        <link rel="stylesheet" href="assets/css/jquery.fileupload-ui.css">
 
 
         <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.css">
@@ -75,14 +78,14 @@
                         <!-- Checkout-Form -->
                         <div class="tab-v1">
                             <ul class="nav nav-tabs">
-                                <li class="active"><a href="#home-1" data-toggle="tab">Dane synchronizowane</a></li>
+                                  <li class="active"><a href="#home-1" data-toggle="tab">Dane zgłoszone do współpracy</a></li>
                                 <li><a href="#notyfy-1" data-toggle="tab">Powiadomienia</a></li>
                             </ul>                
                             <div class="tab-content">
                                 <!-- Sync-->
                                 <div class="tab-pane fade in active" id="home-1">
                                     <form action="list_operators_backend.html" id="sky-form" class="sky-form">
-                                        <header>Edytuj dane synchronizowane operatora Partnera (12)</header>
+                                        <header>Zmień dane operatora Partnera (12)  - złóż wniosek</header>
                                         <fieldset>                  
                                             <div class="row">
                                                 <section class="col col-6">
@@ -225,9 +228,58 @@
                                             </section>
                                         </fieldset>
 
+                                         <fieldset>
+                                            <section>
+                                                <label class="label">Dodatkowe informacje dla Opiekuna (opcjonalne)</label>
+                                                <label class="textarea">
+                                                    <textarea id="appbundle_invoice_confirm_status_comment" name="appbundle_invoice_confirm[status_comment]" rows="3"></textarea>
+                                                </label>
+                                            </section>
+                                            <div class="input-group margin-bottom-20">
+                                                <section>
+                                                    <label class="label" for="appbundle_invoice_confirm_files">Załączniki (max 20MB)</label>
+                                                    <span class="btn btn-u fileinput-button state-success">
+                                                        <i class="glyphicon glyphicon-plus"></i>
+                                                        <span>Wybierz pliki...</span>
+                                                        <input type="file" id="appbundle_invoice_confirm_files" name="appbundle_invoice_confirm[files][]" multiple="multiple">
+                                                    </span>                                
+
+                                                </section>
+                                            </div>
+                                            <table role="presentation" id="attachments_presentation" class="table table-striped"><tbody class="files" data-toggle="modal-gallery" data-target="#modal-gallery"><tr class="template-upload fade in">
+                                                        <td class="t-align-l">
+                                                            <p class="name">H_1.vsdx</p>
+                                                            <strong class="error text-danger">File type not allowed</strong>
+                                                        </td>            
+                                                        <td class="t-align-r">                
+
+                                                            <button class="btn btn-u btn-u-dark cancel">
+                                                                <i class="glyphicon glyphicon-ban-circle"></i>
+                                                                <span>Anuluj</span>
+                                                            </button>
+
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="template-upload fade in">
+                                                        <td class="t-align-l">
+                                                            <p class="name">H_4.jpg</p>
+                                                            <strong class="error text-danger"></strong>
+                                                        </td>            
+                                                        <td class="t-align-r">                
+
+                                                            <button class="btn btn-u btn-u-dark cancel">
+                                                                <i class="glyphicon glyphicon-ban-circle"></i>
+                                                                <span>Anuluj</span>
+                                                            </button>
+
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </fieldset>
                                         <footer style="text-align: right;">
                                             <button type="button" class="btn-u btn-u-default" onclick="window.history.back();">Wróć</button>
-                                            <button type="submit" data-toggle="modal" data-target="#commentApplication" class="btn-u margin-bottom-5">Złóż wniosek</button>    
+                                            <button type="submit" class="btn-u margin-bottom-5">Złóż wniosek</button>    
                                         </footer>
                                     </form>         
                                     <!-- End Sync -->

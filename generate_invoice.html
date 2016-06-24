@@ -75,6 +75,11 @@
                     <!-- Begin Content -->
                     <div class="col-md-12 margin-bottom-50">
                         <!--Invoice Detials-->
+                        <div class="alert alert-warning fade in text-center">
+                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                            W związku ze zmianą parametrów propozycji dokumentu rozliczeniowego, prosimy o określenie powodów zmian w komentarzu dla Opiekuna rozliczeniowego. 
+                        </div> 
+
                         <div class="row invoice-header text-center">
                             <div class="col-xs-4">
                                 <div class="tag-box tag-box-v3">
@@ -571,18 +576,16 @@
                                     </label>
                                 </section>
                             </fieldset>
-                            <fieldset style="background:#f5f5f5;" >
-                            </fieldset>
                             <fieldset>
                                 <section>
-                                    <label class="label" for="appbundle_invoice_confirm_status_comment">Komentarz dla Opiekuna rozliczeniowego, który nie będzie widoczny na dokumencie rozliczeniowym (opcjonalnie)</label>
+                                    <label class="label" for="appbundle_invoice_confirm_status_comment">Komentarz dla Opiekuna rozliczeniowego, który nie będzie widoczny na dokumencie rozliczeniowym (opcjonalne w przypadku, gdy nie są nanoszone zmiany na propozycji)</label>
                                     <label class="textarea">
                                         <textarea id="appbundle_invoice_confirm_status_comment" name="appbundle_invoice_confirm[status_comment]" rows="3"></textarea>
                                     </label>
                                 </section>
                                 <div class="input-group margin-bottom-20">
                                     <section>
-                                        <label class="label" for="appbundle_invoice_confirm_files">Załączniki (np. raport awaryjny itp.)</label>
+                                        <label class="label" for="appbundle_invoice_confirm_files">Załączniki (max 20MB, np. raport awaryjny itp.)</label>
                                         <span class="btn btn-u fileinput-button state-success">
                                             <i class="glyphicon glyphicon-plus"></i>
                                             <span>Wybierz pliki...</span>

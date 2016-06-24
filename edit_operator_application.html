@@ -75,60 +75,30 @@
                     <div class="col-md-12 margin-bottom-50">
                         <!-- Checkout-Form -->
                         <form action="list_operators_backend.html" id="sky-form" class="sky-form">
-                            <header>Wniosek</header>
+                          <header>Wniosek</header>
                             <fieldset> 
                                 <h4>Dane podstawowe wniosku</h4>
                                 <div class="row">
-                                    <section class="col col-md-4">
-                                        <label class="label">Data złożenia wniosku</label>
-                                        <label class="input">
-                                            <input type="text" name="name" value="15-07-2015, 10:00:18">
-                                        </label>
-                                    </section>
-                                    <section class="col col-md-4">
-                                        <label class="label">Autor</label>
-                                        <label class="input">
-                                            <input type="text" name="name" value="Adam Kowalski">
-                                        </label>
-                                    </section>
-                                    <section class="col col-md-2">
-                                        <label class="label">Rodzaj</label>
-                                        <label class="input">
-                                            <input type="text" name="name" value="Obiekt">
-                                        </label>
-                                    </section>
-                                    <section class="col col-md-2">
-                                        <label class="label">Typ operacji</label>
-                                        <label class="input">
-                                            <input type="text" name="name" value="Edycja">
-                                        </label>
-                                    </section>
-                                </div>
-                                <div class="row">
-                                    <section class="col col-md-2">
-                                        <label class="label">Data zatwierdzenia</label>
-                                        <label class="input">
-                                            <input type="text" name="name" value="15-07-2015, 10:00:18">
-                                        </label>
-                                    </section>
-                                    <section class="col col-md-4">
-                                        <label class="label">Zatwierdzający</label>
-                                        <label class="input">
-                                            <input type="text" name="name" value="Adam Nowak">
-                                        </label>
-                                    </section>
-                                </div>
-                                <div class="row">
-                                    <section class="col col-md-12">
-                                        <label class="label">Komentarz</label>
-                                        <label class="textarea" id="comment">
-                                            <textarea rows="3" name=""></textarea>
-                                        </label>
-                                    </section>
+                                <dl class="dl-horizontal">
+                                    <dt>Data złożenia wniosku</dt>
+                                    <dd>15.07.2015, 10:00:18</dd>
+                                    <dt>Autor</dt>
+                                    <dd>Adam Kowalski</dd>
+                                    <dt>Rodzaj</dt>
+                                    <dd>Operator Partnera</dd>
+                                    <dt>Typ operacji</dt>
+                                    <dd>Edycja</dd>
+                                    <dt>Data zatwierdzenia</dt>
+                                    <dd>15.07.2015, 10:00:18"</dd>
+                                    <dt>Zatwierdzający</dt>
+                                    <dd>Adam Nowak</dd>
+                                     <dt style="width:200px; margin-left:-40px">Komentarz wnioskującego</dt>
+                                    <dd>Lorem lorem lorem lorem lorem relorereer erjhdf khfjkh gjkh jhjkd jhgjkh h jfg j jhgd k</dd>
+                                </dl>
                                 </div>
                             </fieldset>
                             <fieldset>
-                                <h4>Dane wnioskowane</h4>               
+                                <h4>Podglad wniosku złożonego przez Partnera</h4>            
                                 <div class="row">
                                     <section class="col col-6">
                                         <label class="label">Imię</label>
@@ -263,24 +233,68 @@
                                     </label>
                                 </section>
                             </fieldset>
-                            <fieldset>
-                                <section>
-                                    <label class="checkbox"><input type="checkbox" name="checkbox" checked><i></i>Aktywuj operatora (użytkownik uzyska dostęp do Panelu Partnera)</label>
-                                </section>
-                            </fieldset>
                         </form>  
                         <!-- Post -->
                         <!-- Approve -->
-                        <div class="row sky-form">
-                             <fieldset>                  
-                                <section class="col col-md-12" style="text-align: right;">
-                                    <button type="button" class="btn-u btn-u-default" onclick="window.history.back();">Wróć</button>
-                                    <button type="button" class="btn-u btn-u-dark" onclick=""><i class="fa fa fa-print"></i> Drukuj</button>
-                                    <a href="#" data-toggle="modal" data-target="#declineDocument"  class="btn-u margin-bottom-5"><i class="fa fa fa-ban"></i> Odrzuć</a>  
-                                    <a href="#" data-toggle="modal" data-target="#declineDocument"  class="btn-u  btn-u-green margin-bottom-5"><i class="fa fa-chevron-down"></i> Zaakceptuj</a>   
+                      
+                          <form class="sky-form">
+                            <fieldset>
+                                <section>
+                                    <label class="label" for="appbundle_invoice_confirm_status_comment">Dodatkowe informacje dla Partnera</label>
+                                    <label class="textarea">
+                                        <textarea id="appbundle_invoice_confirm_status_comment" name="appbundle_invoice_confirm[status_comment]" rows="3"></textarea>
+                                    </label>
                                 </section>
+                                <div class="input-group margin-bottom-20">
+                                    <section>
+                                        <label class="label" for="appbundle_invoice_confirm_files">Załączniki (max 20MB)</label>
+                                        <span class="btn btn-u fileinput-button state-success">
+                                            <i class="glyphicon glyphicon-plus"></i>
+                                            <span>Wybierz pliki...</span>
+                                            <input type="file" id="appbundle_invoice_confirm_files" name="appbundle_invoice_confirm[files][]" multiple="multiple">
+                                        </span>                                
+
+                                    </section>
+                                </div>
+                                <table role="presentation" id="attachments_presentation" class="table table-striped"><tbody class="files" data-toggle="modal-gallery" data-target="#modal-gallery"><tr class="template-upload fade in">
+                                            <td class="t-align-l">
+                                                <p class="name">H_1.vsdx</p>
+                                                <strong class="error text-danger">File type not allowed</strong>
+                                            </td>            
+                                            <td class="t-align-r">                
+
+                                                <button class="btn btn-u btn-u-dark cancel">
+                                                    <i class="glyphicon glyphicon-ban-circle"></i>
+                                                    <span>Anuluj</span>
+                                                </button>
+
+                                            </td>
+                                        </tr>
+                                        <tr class="template-upload fade in">
+                                            <td class="t-align-l">
+                                                <p class="name">H_4.jpg</p>
+                                                <strong class="error text-danger"></strong>
+                                            </td>            
+                                            <td class="t-align-r">                
+
+                                                <button class="btn btn-u btn-u-dark cancel">
+                                                    <i class="glyphicon glyphicon-ban-circle"></i>
+                                                    <span>Anuluj</span>
+                                                </button>
+
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </fieldset>
-                        </div>
+                            <footer style="text-align: right;">
+                                <button type="button" class="btn-u btn-u-default" onclick="window.history.back();">Wróć</button>
+                                <a href="" class="btn-u margin-bottom-5"><i class="fa fa-ban"></i> Odrzuć</a>        
+                                <a href="" class="btn-u btn-u-green margin-bottom-5"><i class="fa fa-chevron-down"></i> Zaakceptuj</a>     
+                            </footer>
+                        </form>     
+                        
+                        
                         <!--History Table-->
                         <div class="row sky-form">
                             <fieldset>                  
