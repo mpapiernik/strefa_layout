@@ -166,7 +166,6 @@
                             <!--Invoice Detials-->
                             <div class="row invoice-info">
                                 <div class="col-xs-6">
-
                                     <ul class="list-unstyled">
                                         <li><strong>Data wystawienia: </strong>2015-05-08</li>
                                         <li><strong>Miejsce wystawienia: </strong>Gdańsk</li>
@@ -174,7 +173,6 @@
                                         <li><strong>Termin płatności: </strong>2015-05-31</li>
                                     </ul>
                                 </div>
-
                                 <div class="col-xs-6">
                                     <ul class="list-unstyled">
                                         <li><strong>Forma płatności: </strong>przelew</li>
@@ -190,6 +188,13 @@
                         <div class="panel panel-default margin-bottom-20">
                             <div class="panel-heading">
                                 <h3 class="panel-title">PRZED KOREKTĄ</h3>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <div class="tag-box no-margin-bottom">
+                                        <strong>Numer pierwszego korygowanego dokumentu: </strong>2015/FVS/25015
+                                    </div>    
+                                </div>
                             </div>
                             <table class="table table-striped invoice-table">
                                 <thead>
@@ -264,6 +269,17 @@
                         <form action="list_invoices.html" id="sky-form" class="sky-form">
                             <fieldset>
                                 <h4>Po korekcie</h4>
+                            </fieldset>
+                            <fieldset>
+                                <div class="row">
+                                    <section class="col col-6">
+                                        <label class="label">Numer pierwszego korygowanego dokumentu</label>
+                                        <label class="input">
+                                            <i class="icon-prepend fa fa-file"></i>
+                                            <input type="text" name="number">
+                                        </label>
+                                    </section>
+                                </div>
                                 <table class="table table-striped invoice-table" id="example">
                                     <thead>
                                         <tr>
@@ -411,7 +427,6 @@
                                     </div>
                                 </div>
                             </fieldset>
-
                             <fieldset>
                                 <section>
                                     <label class="label">Powód korekty</label>
@@ -422,74 +437,57 @@
                             </fieldset>
                             <fieldset>
                                 <section>
-                                    <label class="label">Komentarz</label>
+                                    <label class="label" for="appbundle_invoice_confirm_status_comment">Komentarz dla Opiekuna rozliczeniowego, który nie będzie widoczny na dokumencie rozliczeniowym</label>
                                     <label class="textarea">
-                                        <textarea rows="3" name="commnet" ></textarea>
+                                        <textarea id="appbundle_invoice_confirm_status_comment" name="appbundle_invoice_confirm[status_comment]" rows="3"></textarea>
                                     </label>
                                 </section>
                                 <div class="input-group margin-bottom-20">
                                     <section>
-                                        <label class="label">Załączniki (max 20MB)</label>
-                                        <span class="btn btn-success fileinput-button">
+                                        <label class="label" for="appbundle_invoice_confirm_files">Załączniki (max 20MB, np. raport awaryjny itp.)</label>
+                                        <span class="btn btn-u fileinput-button state-success">
                                             <i class="glyphicon glyphicon-plus"></i>
                                             <span>Wybierz pliki...</span>
-                                            <input type="file" name="files[]" multiple>
-                                        </span>
-                                        <button type="submit" class="btn btn-primary start">
-                                            <i class="glyphicon glyphicon-upload"></i>
-                                            <span>Start upload</span>
-                                        </button>
-                                        <button type="button" class="btn btn-danger delete">
-                                            <i class="glyphicon glyphicon-trash"></i>
-                                            <span>Usuń</span>
-                                        </button>
-                                        <span class="fileupload-process"></span>
+                                            <input type="file" id="appbundle_invoice_confirm_files" name="appbundle_invoice_confirm[files][]" multiple="multiple">
+                                        </span>                                
+
                                     </section>
                                 </div>
+                                <table role="presentation" id="attachments_presentation" class="table table-striped"><tbody class="files" data-toggle="modal-gallery" data-target="#modal-gallery"><tr class="template-upload fade in">
+                                            <td class="t-align-l">
+                                                <p class="name">H_1.vsdx</p>
+                                                <strong class="error text-danger">File type not allowed</strong>
+                                            </td>            
+                                            <td class="t-align-r">                
+
+                                                <button class="btn btn-u btn-u-dark cancel">
+                                                    <i class="glyphicon glyphicon-ban-circle"></i>
+                                                    <span>Anuluj</span>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        <tr class="template-upload fade in">
+                                            <td class="t-align-l">
+                                                <p class="name">H_4.jpg</p>
+                                                <strong class="error text-danger"></strong>
+                                            </td>            
+                                            <td class="t-align-r">                
+
+                                                <button class="btn btn-u btn-u-dark cancel">
+                                                    <i class="glyphicon glyphicon-ban-circle"></i>
+                                                    <span>Anuluj</span>
+                                                </button>
+
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </fieldset>
                             <footer style="text-align: right;">
                                 <button type="button" class="btn-u btn-u-default" onclick="window.history.back();">Wróć</button>
                                 <button type="submit" class="btn-u" onclick="">Wystaw</button>  
                             </footer>
                         </form>  
-
-                        <!--Linked Invoice Table-->
-                        <div class="row">
-                            <div class="col-xs-12">
-                                <div class="tag-box tag-box-v3 no-margin-bottom">   
-                                    <div class="headline">
-                                        <h2>Dokumenty powiązane <a id="appendLinked"><i id="linkedArrow" class="fa fa-sort-desc"></i></a> </h2>
-                                    </div>
-                                    <div id="linkedTab">
-                                        <div id="loader2" style="text-align: center;"><h2><i class="fa fa-spinner fa-pulse fa-lg"></i></h2></div>
-                                        <table id="linked" class="display history-summary" cellspacing="0" width="100%">
-                                            <thead>
-                                                <tr>
-                                                    <th>#</th>
-                                                    <th class="hidden-sm hidden-xs hidden-xs">Data&nbsp;edycji</th>
-                                                    <th>Autor</th>
-                                                    <th>Typ i numer dokumentu</th>
-                                                    <th>Komentarz</th>
-                                                    <th>Podgląd</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td>1</td>
-                                                    <td class="hidden-sm hidden-xs">2015-05-31</td>
-                                                    <td class="hidden-sm hidden-xs">Jan Kowalski</td>
-                                                    <td>Faktura VAT, 2015/FVS/25015</td>
-                                                    <td>Lorem ipsum dolor sit amet, cis. La nec accumsan.</td>
-                                                    <td><a href="view_invoice.html"  target="_blank" class="btn-u btn-brd btn-brd-hover btn-u-sm"><i class="fa fa-eye"></i></a>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
 
                     </div>
                     <!-- End Content -->
