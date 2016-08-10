@@ -97,7 +97,7 @@
                                                 </section>
                                             </div>
                                         </fieldset>
-                                         <fieldset>
+                                        <fieldset>
                                             <div class="row">
                                                 <section class="col col-6">
                                                     <label class="label">Sposób rozliczania</label>
@@ -170,262 +170,317 @@
 
                                 </div>
 
-
-
-                                <div class="news-v3-in  margin-bottom-20">
-
-                                    <form action="" id="sky-form" class="sky-form">
-                                        <header>Załaduj skan pieczątki</header>
-                                        <fieldset>
-                                            <div class="input-group margin-bottom-20">
-                                                <section>
-                                                    <span class="btn btn-u fileinput-button state-success" id="fileButton">
-                                                        <i class="fa fa-plus"></i>
-                                                        <span>Wybierz plik </span>
-                                                        <input type="file" id="appbundle_invoice_confirm_files" name="appbundle_invoice_confirm[files][]">
-                                                    </span>                                
-                                                </section>
-                                            </div>
-                                            <table role="presentation"  class="table table-striped">
-                                                <tbody class="files"><tr class="template-upload fade in">
-                                                        <td class="t-align-l">
-                                                            <p class="name">Test (1).pdf</p>
-                                                            <strong class="error text-danger"></strong>
-                                                        </td>            
-                                                        <td class="t-align-r" style="text-align: right;">
-                                                            <a href="#" class="margin-right-5">
-                                                                <button type="button" class="btn btn-u">
-                                                                    <i class="fa fa-download"></i>
-                                                                    <span>Pobierz</span>
-                                                                </button></a>
-                                                            <button class="btn btn-u btn-u-dark cancel stamp-delete-link" type="button">
-                                                                <i class="fa fa-trash"></i>
-                                                                <span>Usuń</span>
-                                                            </button>
-                                                        </td>
-                                                </tbody>
-                                            </table>
-                                        </fieldset>
-                                        <footer style="text-align: right;">
-                                            <button type="button" class="btn-u btn-u-default" onclick="window.history.back();">Wróć</button>
-                                            <button type="submit" class="btn-u margin-bottom-5">Zapisz</button>    
-                                        </footer>
-                                    </form>         
-                                </div>
-
-                                <div class="news-v3-in">
-                                    <form action="" class="sky-form">
-                                        <header>Ustaw automatyczną numerację dokumentów rozliczeniowych</header>
-                                        <fieldset>
-                                            <div class="alert alert-danger fade in text-center">
-                                                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-                                                Błędny szablon numeracji: w każdym szablonie powinien się pojawić 1 znacznik %i
-                                            </div> 
-                                            <div class="alert alert-danger fade in text-center">
-                                                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-                                                Błędny szablon numeracji: znak po % musi mieć wartość jednego z tagów (R, r, m, d, i)
-                                            </div> 
-                                            <table class="table table-striped" id="numberTemplateList">
-                                                <thead>
-                                                    <tr>
-                                                        <th class="col-1">#</th>
-                                                        <th class="col-2">Rodzaj&nbsp;dokumentu</th>
-                                                        <th class="col-2">Szablon</th>
-                                                        <th class="col-1">Kolejny numer</th>
-                                                        <th class="col-2">Wartość</th>
-                                                        <th class="col-1 dt-head-center">Aktywny</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <td>1</td>
-                                                        <td>Faktura VAT</td>
-                                                        <td>Dokument FV/%R/%m/%i</td>
-                                                        <td>21</td>
-                                                        <td>Dokument FV/2016/06/21</td>
-                                                        <td class=" dt-body-center">
-                                                            <select>
-                                                                <option value="0">TAK</option>
-                                                                <option value="1" selected >NIE</option>
-                                                            </select>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>2</td>
-                                                        <td>Rachunek</td>
-                                                        <td>Rach/%R/%m/%i</td>
-                                                        <td>23</td>
-                                                        <td>Rach/2016/06/23</td>
-                                                        <td class=" dt-body-center">
-                                                            <select>
-                                                                <option value="0" selected>TAK</option>
-                                                                <option value="1"  >NIE</option>
-                                                            </select>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>3</td>
-                                                        <td>Faktura bez VAT (zwolnienie podmiotowe)</td>
-                                                        <td>Dokument FbV/%R/%m/%i</td>
-                                                        <td>8</td>
-                                                        <td>Dokument FbV/2016/06/8</td>
-                                                        <td class=" dt-body-center">
-                                                            <select>
-                                                                <option value="0">TAK</option>
-                                                                <option value="1" selected >NIE</option>
-                                                            </select>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>4</td>
-                                                        <td>Korekta faktury</td>
-                                                        <td>Dokument KFV/%R/%m/%i</td>
-                                                        <td>23</td>
-                                                        <td>Dokument FFV/2016/06/23</td>
-                                                        <td class=" dt-body-center">
-                                                            <select>
-                                                                <option value="0">TAK</option>
-                                                                <option value="1" selected >NIE</option>
-                                                            </select>
-                                                        </td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </fieldset>
-                                        <fieldset>
-                                            <div class="row">
-                                                <section class="col col-12">
-                                                    <!-- Unordered Lists -->
-                                                    <div class="headline"><h5>Legenda - tagi numeracji</h5></div>
-                                                    <ul>
-                                                        <li>%R - aktualny rok, zapis czterocyfrowy (np.: 2015)</li>
-                                                        <li>%r - aktualny rok, zapis dwucyfrowy (np.: 07)</li>
-                                                        <li>%m - aktualny miesiąc, zapis dwu cyfrowy (np.: 07)</li>
-                                                        <li>%d - aktualny dzień, zapis dwu cyfrowy (np.: 01)</li>
-                                                        <li>%i - kolejny numer (wartość zgodnie z ustawieniem)</li>
-                                                    </ul>
-                                                </section>
-                                            </div>
-                                        </fieldset>
-                                        <footer style="text-align: right;">
-                                            <button type="button" class="btn-u btn-u-default" onclick="window.history.back();">Wróć</button>
-                                            <button type="submit" class="btn-u margin-bottom-5">Zapisz</button>    
-                                        </footer>
-                                    </form>        
-                                </div>
                             </div>
-                        </div><!--/row-->   
-                    </div>
-                    <!-- End Content -->
-                    <!-- Begin Sidebar Menu -->
-                    <div class="col-md-3" id="includedContentSideBar">
-                    </div>
-                    <!-- End Sidebar Menu -->
-                </div>          
-            </div><!--/container-->     
-            <!--=== End Content Part ===-->
 
-        </div><!--/End Wrapepr-->
-        <!--=== Footer Version 1 ===-->
-        <div class="footer-v1" id="includedContentFooter">
-        </div>     
-        <!--=== End Footer Version 1 ===-->
-        <!-- JS Global Compulsory -->           
-        <script type="text/javascript" src="assets/plugins/jquery/jquery.min.js"></script>
-        <script type="text/javascript" src="assets/plugins/jquery/jquery-migrate.min.js"></script>
-        <script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
-        <!-- JS Implementing Plugins -->
-        <script type="text/javascript" src="assets/plugins/back-to-top.js"></script>
-        <script type="text/javascript" src="assets/plugins/smoothScroll.js"></script>
-        <!-- JS Customization -->
-        <script type="text/javascript" src="assets/js/custom.js"></script>
-        <!-- JS Page Level -->           
-        <script type="text/javascript" src="assets/js/app.js"></script>
-        <script type="text/javascript" language="javascript" src="assets/plugins/datatable/js/jquery.dataTables.js"></script>
-        <script type="text/javascript" src="assets/js/jquery.tabledit.js"></script>
-        <script type="text/javascript">
-                                                jQuery(document).ready(function () {
-                                                    App.init();
-                                                    $('#vatReasonDiv').hide();
 
-                                                    $('#docTypes').change(function () {
 
-                                                        if ($(this).val() == "2") {
-                                                            $('#vatReasonDiv').slideToggle('fast', function () {
-                                                                // Animation complete.
-                                                            });
-                                                        }
-                                                        else {
-                                                            $('#vatReasonDiv').hide();
-                                                        }
-                                                    });
+                            <div class="news-v3-in  margin-bottom-20">
 
-                                                    $('#vat_reason').change(function () {
-                                                        var str = "";
-                                                        $("#vat_reason option:selected").each(function () {
-                                                            str += $(this).val() + " ";
+                                <form action="" id="sky-form" class="sky-form">
+                                    <header>Załaduj skan pieczątki</header>
+                                    <fieldset>
+                                        <div class="input-group margin-bottom-20">
+                                            <section>
+                                                <span class="btn btn-u fileinput-button state-success" id="fileButton">
+                                                    <i class="fa fa-plus"></i>
+                                                    <span>Wybierz plik </span>
+                                                    <input type="file" id="appbundle_invoice_confirm_files" name="appbundle_invoice_confirm[files][]">
+                                                </span> 
+                                            </section>
+                                            <p>
+                                                Format: png, jpg, jpeg, bmp.
+                                                <br>
+                                                Max rozmiar: 20MB
+                                            </p>
+                                        </div>
+                                        <table role="presentation"  class="table table-striped">
+                                            <tbody class="files"><tr class="template-upload fade in">
+                                                    <td class="t-align-l">
+                                                        <p class="name">Test (1).pdf</p>
+                                                        <strong class="error text-danger"></strong>
+                                                    </td>            
+                                                    <td class="t-align-r" style="text-align: right;">
+                                                        <a href="#" class="margin-right-5">
+                                                            <button type="button" class="btn btn-u">
+                                                                <i class="fa fa-download"></i>
+                                                                <span>Pobierz</span>
+                                                            </button></a>
+                                                        <button class="btn btn-u btn-u-dark cancel stamp-delete-link" type="button">
+                                                            <i class="fa fa-trash"></i>
+                                                            <span>Usuń</span>
+                                                        </button>
+                                                    </td>
+                                            </tbody>
+                                        </table>
+                                    </fieldset>
+                                    <footer style="text-align: right;">
+                                        <button type="button" class="btn-u btn-u-default" onclick="window.history.back();">Wróć</button>
+                                        <button type="submit" class="btn-u margin-bottom-5">Zapisz</button>    
+                                    </footer>
+                                </form>         
+                            </div>
+
+
+
+                            <div class="news-v3-in  margin-bottom-20">
+
+                                <form action="" id="sky-form" class="sky-form">
+                                    <header>Załaduj logo</header>
+                                    <fieldset>
+                                        <div class="input-group margin-bottom-20">
+                                            <section>
+                                                <span class="btn btn-u fileinput-button state-success" id="fileButton">
+                                                    <i class="fa fa-plus"></i>
+                                                    <span>Wybierz plik </span>
+                                                    <input type="file" id="appbundle_invoice_confirm_files" name="appbundle_invoice_confirm[files][]">
+                                                </span>  
+                                            </section>
+                                            <p>
+                                                Format: png, jpg, jpeg, bmp.
+                                                <br>
+                                                Max rozmiar: 20MB
+                                            </p>
+                                        </div>
+                                        <table role="presentation"  class="table table-striped">
+                                            <tbody class="files"><tr class="template-upload fade in">
+                                                    <td class="t-align-l">
+                                                        <p class="name">Logo.png</p>
+                                                        <strong class="error text-danger"></strong>
+                                                    </td>            
+                                                    <td class="t-align-r" style="text-align: right;">
+                                                        <a href="#" class="margin-right-5">
+                                                            <button type="button" class="btn btn-u">
+                                                                <i class="fa fa-download"></i>
+                                                                <span>Pobierz</span>
+                                                            </button></a>
+                                                        <button class="btn btn-u btn-u-dark cancel stamp-delete-link" type="button">
+                                                            <i class="fa fa-trash"></i>
+                                                            <span>Usuń</span>
+                                                        </button>
+                                                    </td>
+                                            </tbody>
+                                        </table>
+                                    </fieldset>
+                                    <footer style="text-align: right;">
+                                        <button type="button" class="btn-u btn-u-default" onclick="window.history.back();">Wróć</button>
+                                        <button type="submit" class="btn-u margin-bottom-5">Zapisz</button>    
+                                    </footer>
+                                </form>         
+                            </div>
+
+                            <div class="news-v3-in">
+                                <form action="" class="sky-form">
+                                    <header>Ustaw automatyczną numerację dokumentów rozliczeniowych</header>
+                                    <fieldset>
+                                        <div class="alert alert-danger fade in text-center">
+                                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                                            Błędny szablon numeracji: w każdym szablonie powinien się pojawić 1 znacznik %i
+                                        </div> 
+                                        <div class="alert alert-danger fade in text-center">
+                                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                                            Błędny szablon numeracji: znak po % musi mieć wartość jednego z tagów (R, r, m, d, i)
+                                        </div> 
+                                        <table class="table table-striped" id="numberTemplateList">
+                                            <thead>
+                                                <tr>
+                                                    <th class="col-1">#</th>
+                                                    <th class="col-2">Rodzaj&nbsp;dokumentu</th>
+                                                    <th class="col-2">Szablon</th>
+                                                    <th class="col-1">Kolejny numer</th>
+                                                    <th class="col-2">Wartość</th>
+                                                    <th class="col-1 dt-head-center">Aktywny</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>Faktura VAT</td>
+                                                    <td>Dokument FV/%R/%m/%i</td>
+                                                    <td>21</td>
+                                                    <td>Dokument FV/2016/06/21</td>
+                                                    <td class=" dt-body-center">
+                                                        <select>
+                                                            <option value="0">TAK</option>
+                                                            <option value="1" selected >NIE</option>
+                                                        </select>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2</td>
+                                                    <td>Rachunek</td>
+                                                    <td>Rach/%R/%m/%i</td>
+                                                    <td>23</td>
+                                                    <td>Rach/2016/06/23</td>
+                                                    <td class=" dt-body-center">
+                                                        <select>
+                                                            <option value="0" selected>TAK</option>
+                                                            <option value="1"  >NIE</option>
+                                                        </select>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>3</td>
+                                                    <td>Faktura bez VAT (zwolnienie podmiotowe)</td>
+                                                    <td>Dokument FbV/%R/%m/%i</td>
+                                                    <td>8</td>
+                                                    <td>Dokument FbV/2016/06/8</td>
+                                                    <td class=" dt-body-center">
+                                                        <select>
+                                                            <option value="0">TAK</option>
+                                                            <option value="1" selected >NIE</option>
+                                                        </select>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>4</td>
+                                                    <td>Korekta faktury</td>
+                                                    <td>Dokument KFV/%R/%m/%i</td>
+                                                    <td>23</td>
+                                                    <td>Dokument FFV/2016/06/23</td>
+                                                    <td class=" dt-body-center">
+                                                        <select>
+                                                            <option value="0">TAK</option>
+                                                            <option value="1" selected >NIE</option>
+                                                        </select>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </fieldset>
+                                    <fieldset>
+                                        <div class="row">
+                                            <section class="col col-12">
+                                                <!-- Unordered Lists -->
+                                                <div class="headline"><h5>Legenda - tagi numeracji</h5></div>
+                                                <ul>
+                                                    <li>%R - aktualny rok, zapis czterocyfrowy (np.: 2015)</li>
+                                                    <li>%r - aktualny rok, zapis dwucyfrowy (np.: 07)</li>
+                                                    <li>%m - aktualny miesiąc, zapis dwu cyfrowy (np.: 07)</li>
+                                                    <li>%d - aktualny dzień, zapis dwu cyfrowy (np.: 01)</li>
+                                                    <li>%i - kolejny numer (wartość zgodnie z ustawieniem)</li>
+                                                </ul>
+                                            </section>
+                                        </div>
+                                    </fieldset>
+                                    <footer style="text-align: right;">
+                                        <button type="button" class="btn-u btn-u-default" onclick="window.history.back();">Wróć</button>
+                                        <button type="submit" class="btn-u margin-bottom-5">Zapisz</button>    
+                                    </footer>
+                                </form>        
+                            </div>
+                        </div>
+                    </div><!--/row-->   
+                </div>
+                <!-- End Content -->
+                <!-- Begin Sidebar Menu -->
+                <div class="col-md-3" id="includedContentSideBar">
+                </div>
+                <!-- End Sidebar Menu -->
+            </div>          
+        </div><!--/container-->     
+        <!--=== End Content Part ===-->
+
+    </div><!--/End Wrapepr-->
+    <!--=== Footer Version 1 ===-->
+    <div class="footer-v1" id="includedContentFooter">
+    </div>     
+    <!--=== End Footer Version 1 ===-->
+    <!-- JS Global Compulsory -->           
+    <script type="text/javascript" src="assets/plugins/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/jquery/jquery-migrate.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <!-- JS Implementing Plugins -->
+    <script type="text/javascript" src="assets/plugins/back-to-top.js"></script>
+    <script type="text/javascript" src="assets/plugins/smoothScroll.js"></script>
+    <!-- JS Customization -->
+    <script type="text/javascript" src="assets/js/custom.js"></script>
+    <!-- JS Page Level -->           
+    <script type="text/javascript" src="assets/js/app.js"></script>
+    <script type="text/javascript" language="javascript" src="assets/plugins/datatable/js/jquery.dataTables.js"></script>
+    <script type="text/javascript" src="assets/js/jquery.tabledit.js"></script>
+    <script type="text/javascript">
+                                            jQuery(document).ready(function () {
+                                                App.init();
+                                                $('#vatReasonDiv').hide();
+
+                                                $('#docTypes').change(function () {
+
+                                                    if ($(this).val() == "2") {
+                                                        $('#vatReasonDiv').slideToggle('fast', function () {
+                                                            // Animation complete.
                                                         });
-                                                        $("#vat_reason_text").text(str);
-                                                    });
-
-                                                    $('#numberTemplateList').DataTable({
-                                                        "searching": false,
-                                                        "paging": false,
-                                                        "ordering": false,
-                                                        "info": false,
-                                                        "language": {
-                                                            "url": "assets/plugins/datatable/lang/Polish.json"
-                                                        }
-                                                    });
-                                                    $('#numberTemplateList').Tabledit({
-                                                        confirmButton: false,
-                                                        deleteButton: false,
-                                                        restoreButton: true,
-                                                        editButton: true,
-                                                        buttons: {
-                                                            edit: {
-                                                                class: 'btn-u btn-brd btn-brd-hover btn-u-sm btn-u-s',
-                                                                html: '<i class="fa fa-edit"></i>',
-                                                                action: 'edit'
-                                                            },
-                                                            delete: {
-                                                                class: 'btn-u btn-brd btn-u-dark btn-brd-hover btn-u-sm margin-left-5',
-                                                                html: '<i class="fa fa-trash"></i>',
-                                                                action: 'delete'
-                                                            },
-                                                            restore: {
-                                                                class: 'btn btn-sm btn-warning',
-                                                                html: 'Przywróć',
-                                                            },
-                                                            save: {
-                                                                class: 'btn btn-sm btn-success',
-                                                                html: 'Zapisz'
-                                                            },
-                                                            confirm: {
-                                                                class: 'btn btn-sm btn-danger',
-                                                                html: 'Potwierdź'
-                                                            }
-                                                        },
-                                                        columns: {
-                                                            identifier: [0, '#'],
-                                                            editable: [[2, ''], [3, '']]
-                                                        }
-                                                    });
+                                                    }
+                                                    else {
+                                                        $('#vatReasonDiv').hide();
+                                                    }
                                                 });
-        </script>
-        <script>
-            $(function () {
-                $("#includedContentSideBar").load("sidebar.html");
-                $("#includedContentHeader").load("header.html");
-                $("#includedContentFooter").load("footer.html");
-                $('[data-toggle="tooltip"]').tooltip();
-            });
-        </script> 
-        <!--[if lt IE 9]>
-            <script src="assets/plugins/respond.js"></script>
-            <script src="assets/plugins/html5shiv.js"></script>
-            <script src="assets/plugins/placeholder-IE-fixes.js"></script>
-        <![endif]-->
 
-    </body>
+                                                $('#vat_reason').change(function () {
+                                                    var str = "";
+                                                    $("#vat_reason option:selected").each(function () {
+                                                        str += $(this).val() + " ";
+                                                    });
+                                                    $("#vat_reason_text").text(str);
+                                                });
+
+                                                $('#numberTemplateList').DataTable({
+                                                    "searching": false,
+                                                    "paging": false,
+                                                    "ordering": false,
+                                                    "info": false,
+                                                    "language": {
+                                                        "url": "assets/plugins/datatable/lang/Polish.json"
+                                                    }
+                                                });
+                                                $('#numberTemplateList').Tabledit({
+                                                    confirmButton: false,
+                                                    deleteButton: false,
+                                                    restoreButton: true,
+                                                    editButton: true,
+                                                    buttons: {
+                                                        edit: {
+                                                            class: 'btn-u btn-brd btn-brd-hover btn-u-sm btn-u-s',
+                                                            html: '<i class="fa fa-edit"></i>',
+                                                            action: 'edit'
+                                                        },
+                                                        delete: {
+                                                            class: 'btn-u btn-brd btn-u-dark btn-brd-hover btn-u-sm margin-left-5',
+                                                            html: '<i class="fa fa-trash"></i>',
+                                                            action: 'delete'
+                                                        },
+                                                        restore: {
+                                                            class: 'btn btn-sm btn-warning',
+                                                            html: 'Przywróć',
+                                                        },
+                                                        save: {
+                                                            class: 'btn btn-sm btn-success',
+                                                            html: 'Zapisz'
+                                                        },
+                                                        confirm: {
+                                                            class: 'btn btn-sm btn-danger',
+                                                            html: 'Potwierdź'
+                                                        }
+                                                    },
+                                                    columns: {
+                                                        identifier: [0, '#'],
+                                                        editable: [[2, ''], [3, '']]
+                                                    }
+                                                });
+                                            });
+    </script>
+    <script>
+        $(function () {
+            $("#includedContentSideBar").load("sidebar.html");
+            $("#includedContentHeader").load("header.html");
+            $("#includedContentFooter").load("footer.html");
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+    </script> 
+    <!--[if lt IE 9]>
+        <script src="assets/plugins/respond.js"></script>
+        <script src="assets/plugins/html5shiv.js"></script>
+        <script src="assets/plugins/placeholder-IE-fixes.js"></script>
+    <![endif]-->
+
+</body>
 </html> 
