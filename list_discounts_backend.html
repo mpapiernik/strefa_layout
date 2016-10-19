@@ -1,0 +1,305 @@
+<!DOCTYPE html> 
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->  
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->  
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->  
+    <head>
+        <title>Panelu Partnera Benefit Systems</title>
+
+        <!-- Meta -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <!-- Favicon -->
+        <link rel="shortcut icon" href="favicon.ico">
+
+        <!-- Web Fonts -->
+        <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:400,300,600&amp;subset=cyrillic,latin">
+
+        <!-- CSS Global Compulsory -->
+        <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+
+        <!-- CSS Header and Footer -->
+        <link rel="stylesheet" href="assets/css/headers/header-default.css">
+        <link rel="stylesheet" href="assets/css/footers/footer-v1.css">
+
+        <!-- CSS Implementing Plugins -->
+        <link rel="stylesheet" href="assets/plugins/animate.css">
+        <link rel="stylesheet" href="assets/plugins/line-icons/line-icons.css">
+        <link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.min.css">
+
+        <!-- CSS Customization -->
+        <link rel="stylesheet" href="assets/css/theme-colors/dark-red.css">
+
+        <!-- DataTables -->
+        <link rel="stylesheet" type="text/css" href="assets/plugins/datatable/css/jquery.dataTables.css">
+
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/css/bootstrap-select.min.css" />
+
+
+        <link rel="stylesheet" href="assets/plugins/sky-forms-pro/skyforms/css/sky-forms.css">
+        <link rel="stylesheet" href="assets/plugins/sky-forms-pro/skyforms/custom/custom-sky-forms.css">
+
+        <link rel="stylesheet" type="text/css"  href="assets/plugins/bootstrap-datepicker-1.6.1-dist/css/bootstrap-datepicker.css"/>
+
+        <!-- CSS Customization -->
+        <link rel="stylesheet" href="assets/css/custom.css">
+    </head>
+    <body>    
+        <div class="wrapper">
+            <!--=== Header ===-->    
+            <div class="header" id="includedContentHeader">
+            </div>
+            <!--=== End Header ===--> 
+            <!--=== Breadcrumbs ===-->
+            <div class="breadcrumbs">
+                <div class="container">
+                    <h1 class="pull-left">Pozycje rabatów</h1>
+                    <ul class="pull-right breadcrumb">
+                        <li><a href="list_discounts_backend.html">Rabaty</a></li>
+                        <li><a href="list_discount_categories.html">Pozyje rabatów</a></li>
+                    </ul>
+                </div>
+            </div><!--/breadcrumbs-->
+            <!--=== End Breadcrumbs ===-->
+
+            <!--=== Content Part ===-->
+            <div class="container content">     
+                <div class="row">
+                    <!-- Begin Content -->
+
+                    <div class="col-md-12 margin-bottom-50">
+                        <div class="margin-bottom-20">
+                            <div class="btn-group">
+                                <a href="edit_discount.html" class="button btn-u pull-right"><i class="fa fa-plus fa-fw"></i>Dodaj rabat</a>
+                            </div>
+                            <!-- End Single button -->                    
+                        </div>
+                        <hr>
+
+                        <div class="row">
+                            <div class="col-md-5">
+                                <label>Nazwa</label>
+                                <input type="text" class="form-control" placeholder="Wyszukaj ... ">
+                            </div>
+                            <div class="col-md-3">
+                                <label>Kategoria</label>
+                                <div class="input-group" style="width:100%">
+                                    <select class="selectpicker input-block-level" data-live-search="true" multiple="" data-selected-text-format="count>2" title='Filtruj...' data-width="100%">
+                                        <option  data-hidden="true"></option>
+                                        <option value="1">Sala Fitness</option>
+                                        <option value="2">Siłownia</option>
+                                        <option value="3" selected>Sprzęt Cardio</option>
+                                        <option value="4">Sumplementy i Odżywki</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <label>Data obowiązywania</label>
+                                <div class="input-group inline-group input-daterange input-group">
+                                    <input type="text" class="form-control" name="start" placeholder="od"/>
+                                    <span class="input-group-addon">-</span>
+                                    <input type="text" class="form-control" name="end" placeholder="do"/>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+
+                        <div>
+                            <div class="row">
+                                <div class="btn-group col-sm-9">
+                                    <div class="input-group spinner">
+                                        <input type="text" class="form-control" value="10">
+                                        <div class="input-group-btn-vertical text-center">
+                                            <button class="btn btn-default" type="button"><i class="fa fa-angle-up"></i></button>
+                                            <button class="btn btn-default" type="button"><i class="fa fa-angle-down"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="search-open pull-right col-sm-3">
+                                    <div class="input-group inline-group">
+                                        <input type="text" class="form-control" placeholder="Wyszukaj ... ">
+                                        <span class="input-group-btn">
+                                            <a href="" class="button btn-u"><i class="fa fa-search"></i></a>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <table id="discountsList" class="display" cellspacing="0" width="100%" style="text-align: left">
+                                    <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Nazwa</th>
+                                        <th>Kategoria</th>
+                                        <th>Pocżatkowa data&nbsp;obowiązywania</th>
+                                        <th>Końcowa data&nbsp;obowiązywania</th>
+                                        <th>Opublikowany</th>
+                                        <th>Więcej</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>T7xi Bieżnia klubowa Matrix</td>
+                                        <td class="hidden-sm hidden-xs">Sprzęt Cardio</td>
+                                        <td class="hidden-sm hidden-xs">2016-09-12</td>
+                                        <td class="hidden-sm hidden-xs">2016-12-07</td>
+                                        <td>Tak</td>
+                                        <td>
+                                            <div class="btn-group">
+                                                <button type="button" class="btn-u btn-brd color-red btn-brd-hover btn-u-sm dropdown-toggle bars" data-toggle="dropdown">
+                                                    <i class="fa fa fa-bars"></i>
+                                                    <span class="sr-only">Toggle Dropdown</span>
+                                                </button>
+                                                <ul class="dropdown-menu" role="menu">
+
+                                                    <li><a href="edit_discount.html"><i class="fa fa-edit"></i> Edytuj</a></li>
+                                                    <li><a href="#"><i class="fa fa-eye"></i> Podgląd w Strefie</a></li>
+                                                    <li>
+                                                        <a href="#" data-toggle="modal" data-target="#publishModal"><i class="fa fa-ban"></i> Ukryj</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#" data-toggle="modal" data-target="#publishModal"><i class="fa fa-trash"></i> Usuń</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>S7xi Stepper klubowy Matrix</td>
+                                        <td class="hidden-sm hidden-xs">Sprzęt Cardio</td>
+                                        <td class="hidden-sm hidden-xs">2016-11-12</td>
+                                        <td class="hidden-sm hidden-xs">2016-12-07</td>
+                                        <td>Tak</td>
+                                        <td>
+                                            <div class="btn-group">
+                                                <button type="button" class="btn-u btn-brd color-red btn-brd-hover btn-u-sm dropdown-toggle bars" data-toggle="dropdown">
+                                                    <i class="fa fa fa-bars"></i>
+                                                    <span class="sr-only">Toggle Dropdown</span>
+                                                </button>
+                                                <ul class="dropdown-menu" role="menu">
+
+                                                    <li><a href="edit_discount.html"><i class="fa fa-edit"></i> Edytuj</a></li>
+                                                    <li><a href="#"><i class="fa fa-eye"></i> Podgląd w Strefie</a></li>
+                                                    <li>
+                                                        <a href="#" data-toggle="modal" data-target="#publishModal" id="confirmPublish"><i class="fa fa-ban"></i> Ukryj</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#" data-toggle="modal" data-target="#publishModal"><i class="fa fa-trash"></i> Usuń</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>S5x Stepper klubowy Matrix</td>
+                                        <td class="hidden-sm hidden-xs">Sprzęt Cardio</td>
+                                        <td class="hidden-sm hidden-xs">2016-10-02</td>
+                                        <td class="hidden-sm hidden-xs">2016-10-07</td>
+                                        <td>NIe</td>
+                                        <td>
+                                            <div class="btn-group">
+                                                <button type="button" class="btn-u btn-brd color-red btn-brd-hover btn-u-sm dropdown-toggle bars" data-toggle="dropdown">
+                                                    <i class="fa fa fa-bars"></i>
+                                                    <span class="sr-only">Toggle Dropdown</span>
+                                                </button>
+                                                <ul class="dropdown-menu" role="menu">
+
+                                                    <li><a href="edit_discount.html"><i class="fa fa-edit"></i> Edytuj</a></li>
+                                                    <li><a href="#"><i class="fa fa-eye"></i> Podgląd w Strefie</a></li>
+                                                    <li>
+                                                        <a href="#" data-toggle="modal" data-target="#publishModal" ><i class="fa fa-ban"></i> Ukryj</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#" data-toggle="modal" data-target="#publishModal"><i class="fa fa-trash"></i> Usuń</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- End Content -->
+                </div>          
+            </div><!--/container-->     
+            <!--=== End Content Part ===-->
+            <div class="modal fade" id="confirmDelete" tabindex="-1" role="dialog" aria-hidden="true"></div>
+
+        </div><!--/End Wrapepr-->
+        <!--=== Footer Version 1 ===-->
+        <div class="footer-v1" id="includedContentFooter">
+        </div>     
+        <!--=== End Footer Version 1 ===-->
+        <!-- JS Global Compulsory -->           
+        <script type="text/javascript" src="assets/plugins/jquery/jquery.min.js"></script>
+        <script type="text/javascript" src="assets/plugins/jquery/jquery-migrate.min.js"></script>
+        <script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+        <!-- JS Implementing Plugins -->
+        <script type="text/javascript" src="assets/plugins/back-to-top.js"></script>
+        <script type="text/javascript" src="assets/plugins/smoothScroll.js"></script>
+        <!-- JS Customization -->
+        <script type="text/javascript" src="assets/js/custom.js"></script>
+        <!-- JS Page Level -->           
+        <script type="text/javascript" src="assets/js/app.js"></script>
+        <!-- JS DataTables -->
+        <script type="text/javascript" language="javascript" src="assets/plugins/datatable/js/jquery.dataTables.js"></script>
+
+        <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/js/bootstrap-select.min.js"></script>
+
+        <script src="assets/plugins/sky-forms-pro/skyforms/js/jquery-ui.min.js"></script>
+        <script src="assets/plugins/sky-forms-pro/skyforms/js/jquery.form.min.js"></script>
+
+        <script src="https://cdn.jsdelivr.net/momentjs/2.10.6/moment.min.js"></script>
+        <script type="text/javascript" src="assets/plugins/bootstrap-datepicker-1.6.1-dist/js/bootstrap-datepicker.min.js"></script>
+        <script type="text/javascript" src="assets/plugins/bootstrap-datepicker-1.6.1-dist/locales/bootstrap-datepicker.pl.min"></script>
+
+        <script type="text/javascript">
+            jQuery(document).ready(function () {
+                App.init();
+
+                $('.input-daterange').datepicker({
+                    format: "dd-mm-yyyy",
+                    language: "pl",
+                    multidateSeparator: "-"
+                });
+
+                $(document).ready(function () {
+
+                    $('#discountsList').DataTable({
+                        "language": {
+                            "url": "assets/plugins/datatable/lang/Polish.json"
+                        },
+                        searching: false,
+                        lengthChange: false
+                    });
+                });
+            });
+        </script>
+        <script>
+            $(function () {
+                $("#includedContentHeader").load("header_backend.html");
+                $("#includedContentFooter").load("footer.html");
+                $("#confirmDelete").load("delete_vat_rate.html");
+                setTimeout(function () {
+                    $('.dropdown-toggle').dropdown();
+                }, 2000);
+            });
+        </script> 
+        <!--[if lt IE 9]>
+            <script src="assets/plugins/respond.js"></script>
+            <script src="assets/plugins/html5shiv.js"></script>
+            <script src="assets/plugins/placeholder-IE-fixes.js"></script>
+        <![endif]-->
+
+    </body>
+</html> 
