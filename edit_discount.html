@@ -76,6 +76,11 @@
     <link href="assets/css/plugins/dropzone/dropzone.css" rel="stylesheet">
     <link href="assets/css/plugins/cropbox/jquery.cropbox.css" rel="stylesheet">
 
+
+    <link rel="stylesheet" type="text/css"
+          href="assets/plugins/bootstrap-datepicker-1.6.1-dist/css/bootstrap-datepicker.css"/>
+
+
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/prettify/r298/run_prettify.min.js"></script>
@@ -117,6 +122,11 @@
     <script type="text/javascript"
             src="//cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.6/jquery.mousewheel.js"></script>
     <script type="text/javascript" src="assets/js/plugins/cropbox/jquery.cropbox.js"></script>
+
+    <script type="text/javascript"
+            src="assets/plugins/bootstrap-datepicker-1.6.1-dist/js/bootstrap-datepicker.min.js"></script>
+    <script type="text/javascript"
+            src="assets/plugins/bootstrap-datepicker-1.6.1-dist/locales/bootstrap-datepicker.pl.min"></script>
 
 </head>
 
@@ -293,24 +303,103 @@
                 </form>
 
                 <div class="sky-form">
+                    <!--<fieldset>-->
+                    <!--<section>-->
+                    <!--<label class="label">Oferty</label>-->
+
+                    <!--Wersja 1-->
+                    <!--<p>Przesuń element, aby określić jego kolejność.</p>-->
+                    <!--<p>-->
+                    <!--Format: PDF-->
+                    <!--<br>-->
+                    <!--Maksymalny rozmiar: 20MB-->
+                    <!--</p>-->
+                    <!--&lt;!&ndash; Post &ndash;&gt;-->
+                    <!--<form id="my-awesome-dropzone" class="dropzone" action="#">-->
+                    <!--<div class="dropzone-previews"></div>-->
+                    <!--&lt;!&ndash;  <button type="submit" class="btn-u pull-right">Wgraj pliki</button> &ndash;&gt;-->
+                    <!--</form>-->
+
+
+                    <!--Wersja 2-->
+                    <!--</section>-->
+                    <!--<section>-->
+                    <!--</section>-->
+                    <!--</fieldset>-->
+
                     <fieldset>
                         <section>
                             <label class="label">Oferty</label>
-                            <p>Przesuń element, aby określić jego kolejność.</p>
-                            <p>
+
+                            <div class="input-group margin-bottom-20">
+                                <section>
+                                           <span class="btn btn-u fileinput-button state-success" id="fileButton">
+                                                        <i class="fa fa-plus"></i>
+                                                        <span>Wybierz pliki </span>
+                                                        <input type="file" id="appbundle_invoice_confirm_files"
+                                                               name="appbundle_invoice_confirm[files][]">
+                                                    </span>
+                                </section>
                                 Format: PDF
                                 <br>
                                 Maksymalny rozmiar: 20MB
-                            </p>
-                            <!-- Post -->
-                            <form id="my-awesome-dropzone" class="dropzone" action="#">
-                                <div class="dropzone-previews"></div>
-                                <!--  <button type="submit" class="btn-u pull-right">Wgraj pliki</button> -->
-                            </form>
-                        </section>
-                        <section>
+                                <p>Wybierz pliki i określ ich daty obowiązywania.</p>
+                            </div>
+                            <table role="presentation" id="attachments_presentation" class="table table-striped">
+                                <tbody class="files">
+                                <tr class="template-upload fade in">
+                                    <td class="t-align-l col-4">
+                                        <p class="name">Test (1).png</p>
+                                        <strong class="error text-danger"></strong>
+                                    </td>
+                                    <td class="col-md-4">
+                                        <div class="input-group inline-group input-daterange input-group">
+                                            <input type="text" class="form-control" name="start" placeholder="od"
+                                                   value="12-10-2016"/>
+                                            <span class="input-group-addon">-</span>
+                                            <input type="text" class="form-control" name="end" placeholder="do"
+                                                   value="20-10-2016"/>
+                                        </div>
+                                    </td>
+                                    <td class="col-4 t-align-r" style="text-align: right;">
+                                        <button type="button" class="btn btn-u">
+                                            <i class="fa fa-download"></i>
+                                            <span>Pobierz</span>
+                                        </button>
+                                        <button class="btn btn-u btn-u-dark cancel stamp-delete-link" type="button">
+                                            <i class="fa fa-trash"></i>
+                                            <span>Usuń</span>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr class="template-upload fade in">
+                                    <td class="t-align-l col-4">
+                                        <p class="name">Test_(1)_jhcfkhdkyuuuuuuuuuu uuuuuufjkf.jpeg</p>
+                                        <strong class="error text-danger"></strong>
+                                    </td>
+                                    <td class="col-md-4">
+                                        <div class="input-group inline-group input-daterange input-group">
+                                            <input type="text" class="form-control" name="start" placeholder="od"/>
+                                            <span class="input-group-addon">-</span>
+                                            <input type="text" class="form-control" name="end" placeholder="do"/>
+                                        </div>
+                                    </td>
+                                    <td class="col-4 t-align-r" style="text-align: right;">
+                                        <button type="button" class="btn btn-u">
+                                            <i class="fa fa-download"></i>
+                                            <span>Pobierz</span>
+                                        </button>
+                                        <button class="btn btn-u btn-u-dark cancel stamp-delete-link" type="button">
+                                            <i class="fa fa-trash"></i>
+                                            <span>Usuń</span>
+                                        </button>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
                         </section>
                     </fieldset>
+
                     <footer style="text-align: right;">
                         <button type="button" class="btn-u btn-u-default" onclick="window.history.back();">Wróć</button>
                         <a href="list_discounts.html" target="_blank" class="btn-u btn-u-dark">Podgląd</a>
@@ -344,6 +433,13 @@
         Validation.initValidation();
         FancyBox.initFancybox();
     });
+
+    $('.input-daterange').datepicker({
+        format: "dd-mm-yyyy",
+        language: "pl",
+        multidateSeparator: "-"
+    });
+
 </script>
 <script>
     $(function () {
