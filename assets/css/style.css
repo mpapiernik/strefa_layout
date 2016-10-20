@@ -1718,3 +1718,11 @@ li.sortable-placeholder {
     border: 1px dashed #CCC;
     background: none;
 }
+
+.wall-chart a {
+    text-decoration: none;
+}
+
+.wall-chart .c3-tooltip td {
+    color: #555;
+}
