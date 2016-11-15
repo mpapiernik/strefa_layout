@@ -69,6 +69,9 @@
 
         <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/css/bootstrap-select.min.css" />
 
+
+        <link href="assets/css/plugins/cropbox/jquery.cropbox.css" rel="stylesheet">
+
     </head>
 
     <body>    
@@ -260,59 +263,71 @@
                                 </section>
 
                             </fieldset>
-                            <fieldset>    
+
+                            <fieldset>
                                 <section>
-                                    <label class="label">Zdjęcie</label>
+                                    <label class="label">Grafika tytułowa</label>
                                     <div class="input-group">
                                         <section>
                                             <span class="btn btn-u fileinput-button state-success" id="fileButton">
                                                 <i class="fa fa-plus"></i>
                                                 <span>Wybierz plik </span>
-                                                <input type="file" id="appbundle_invoice_confirm_files" name="appbundle_invoice_confirm[files][]">
-                                            </span>                                
+                                                <input type="file" id="appbundle_invoice_confirm_files"
+                                                       name="appbundle_invoice_confirm[files][]">
+                                            </span>
                                         </section>
                                     </div>
-                                    <p> 
+                                    <p>
                                         Format: png, jpg, jpeg, bmp.
                                         </br>
                                         Wymiar: 650px na 250px
                                     </p>
                                 </section>
-                                <section id="attachments_presentation">
+                                <section>
                                     <div class="alert alert-danger fade in text-center">
                                         <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
                                         Błąd. Wybrany plik jest nieprawidłowy.
-                                    </div> 
-                                    <div class="img-article margin-bottom-20">
+                                    </div>
+                                    <p>Przesuwając obszar zdjęcia wybierz jego optymalne kadrowanie.</p>
+                                    <div class="img-article margin-bottom-20 text-center">
                                         <div class="carousel slide carousel-v1 " id="myCarousel">
                                             <div class="carousel-inner img-center ">
                                                 <div class="item active">
-                                                    <img class="post-img-responsive" src="assets/img/img1.jpg" alt="">
+                                                    <img class="cropimage" alt="" src="assets/img/strefa_partnera_login_BG.jpg"
+                                                         cropwidth="650"
+                                                         cropheight="250"/>
+                                                    <div class="download">
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <table role="presentation"  class="table table-striped">
-                                        <tbody class="files"><tr class="template-upload fade in">
+                                        <table role="presentation" class="table table-striped">
+                                            <tbody class="files">
+                                            <tr class="template-upload fade in">
                                                 <td class="t-align-l">
-                                                    <p class="name">Test (1).pdf</p>
+                                                    <p class="name">Test (1).img</p>
                                                     <strong class="error text-danger"></strong>
-                                                </td>            
+                                                </td>
                                                 <td class="t-align-r" style="text-align: right;">
-                                                    <a href="#" class="margin-right-5">
+                                                    <a href="#" class="margin-right-5" download="crop.png">
                                                         <button type="button" class="btn btn-u">
                                                             <i class="fa fa-download"></i>
                                                             <span>Pobierz</span>
-                                                        </button></a>
+                                                        </button>
+                                                    </a>
                                                     <button class="btn btn-u btn-u-dark cancel stamp-delete-link" type="button">
                                                         <i class="fa fa-trash"></i>
                                                         <span>Usuń</span>
                                                     </button>
                                                 </td>
-                                        </tbody>
-                                    </table>
-                                </section>                              
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </section>
                             </fieldset>
+
+
+
                             <footer style="text-align: right;">
                                 <button type="button" class="btn-u btn-u-default" onclick="window.history.back();">Wróć</button>
                                 <a href="index_backend.html" class="btn-u">Dodaj</a>  
@@ -356,6 +371,13 @@
         <script type="text/javascript" src="assets/js/plugins/validation.js"></script>
         <script type="text/javascript" src="assets/js/jquery.timepicker.js"></script>
         <script type="text/javascript" src="assets/plugins/fancybox/source/jquery.fancybox.pack.js"></script>
+
+        <!-- CROPBOX -->
+        <script type="text/javascript"
+                src="//cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.6/jquery.mousewheel.js"></script>
+        <script type="text/javascript" src="assets/js/plugins/cropbox/jquery.cropbox.js"></script>
+
+
         <!-- JS Customization -->
         <script type="text/javascript" src="assets/js/custom.js"></script>
         <!-- JS Page Level -->           
@@ -384,7 +406,38 @@
                 $("#includedContentHeader").load("header_backend.html");
                 $("#includedContentFooter").load("footer.html");
             });
-        </script> 
+        </script>
+
+
+        <script type="text/javascript" defer>
+            $(function () {
+                $('.cropimage').each(function () {
+                    var image = $(this),
+                            cropwidth = image.attr('cropwidth'),
+                            cropheight = image.attr('cropheight'),
+                            results = image.next('.results'),
+                            x = $('.cropX', results),
+                            y = $('.cropY', results),
+                            w = $('.cropW', results),
+                            h = $('.cropH', results),
+                            download = results.next('.download').find('a');
+
+                    image.cropbox({width: cropwidth, height: cropheight, showControls: 'auto'})
+                            .on('cropbox', function (event, results, img) {
+                                download.attr('href', img.getDataURL());
+                            });
+                });
+
+                $('#select').on('change', function () {
+                    var size = parseInt(this.value);
+                    $('.cropimage').each(function () {
+                        $(this).cropbox({width: size, height: size})
+                    });
+                });
+
+            });
+        </script>
+
         <!--[if lt IE 9]>
             <script src="assets/plugins/respond.js"></script>
             <script src="assets/plugins/html5shiv.js"></script>
