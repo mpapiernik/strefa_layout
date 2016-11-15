@@ -135,7 +135,7 @@
                                 Format: png, jpg, jpeg, bmp.
                             </p>
                         </section>
-                        <section id="attachments_presentation">
+                        <section>
                             <div class="alert alert-danger fade in text-center">
                                 <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
                                 Błąd. Wybrany plik jest nieprawidłowy.
@@ -147,7 +147,7 @@
                                         <div class="item active">
                                             <img class="cropimage" alt="" src="assets/img/strefa_partnera_login_BG.jpg"
                                                  cropwidth="850"
-                                                 cropheight="305"/>
+                                                 cropheight="495"/>
                                             <div class="download">
                                             </div>
                                         </div>
@@ -270,22 +270,94 @@
                                 aktualnościach</label>
                         </section>
                     </fieldset>
-
                     <fieldset>
                         <div class="row">
                             <section class="col col-3">
-                                <label class="toggle">Galeria<input type="checkbox" name="checkbox-toggle" checked=""><i class="no-rounded"></i></label>
-                                <label class="toggle">Załączniki<input type="checkbox" name="checkbox-toggle" checked=""><i class="no-rounded"></i></label>
+                                <label class="toggle">Załączniki<input type="checkbox" id="files_switch" name="checkbox-toggle" checked=""><i class="no-rounded"></i></label>
+                                <label class="toggle">Galeria<input type="checkbox" id="gallery_switch" name="checkbox-toggle" checked=""><i class="no-rounded"></i></label>
                             </section>
                         </div>
                     </fieldset>
+                    <fieldset id="files">
+                        <div class="row">
+                            <section>
+                                <label class="label">Pliki</label>
+                                <div class="input-group margin-bottom-20">
+                                    <section>
+                                           <span class="btn btn-u fileinput-button state-success" id="fileButton_2">
+                                                        <i class="fa fa-plus"></i>
+                                                        <span>Wybierz pliki </span>
+                                                        <input type="file" id="appbundle_invoice_confirm_files_2"
+                                                               name="appbundle_invoice_confirm[files][]">
+                                                    </span>
+                                    </section>
+                                    <br>
+                                    Maksymalny rozmiar: 20MB
+                                </div>
+                                <table role="presentation" id="attachments_presentation" class="table table-striped">
+                                    <tbody class="files">
+                                    <tr class="template-upload fade in">
+                                        <td class="t-align-l col-8">
+                                            <p class="name">Test (1).png</p>
+                                            <strong class="error text-danger"></strong>
+                                        </td>
+                                        <td class="col-4 t-align-r" style="text-align: right;">
+                                            <button type="button" class="btn btn-u">
+                                                <i class="fa fa-download"></i>
+                                                <span>Pobierz</span>
+                                            </button>
+                                            <button class="btn btn-u btn-u-dark cancel stamp-delete-link" type="button">
+                                                <i class="fa fa-trash"></i>
+                                                <span>Usuń</span>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr class="template-upload fade in">
+                                        <td class="t-align-l col-8">
+                                            <p class="name">Test_(1)_jhcfkhdkyuuuuuuuuuu uuuuuufjkf.jpeg</p>
+                                            <strong class="error text-danger"></strong>
+                                        </td>
+                                        <td class="col-4 t-align-r" style="text-align: right;">
+                                            <button type="button" class="btn btn-u">
+                                                <i class="fa fa-download"></i>
+                                                <span>Pobierz</span>
+                                            </button>
+                                            <button class="btn btn-u btn-u-dark cancel stamp-delete-link" type="button">
+                                                <i class="fa fa-trash"></i>
+                                                <span>Usuń</span>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
 
+                            </section>
+                        </div>
+                    </fieldset>
+                </form>
+
+                <div class="sky-form">
+                    <fieldset id="gallery">
+                        <section>
+                            <label class="label">Galeria</label>
+
+                            <p>Przesuń element, aby określić jego kolejność.</p>
+                            <!-- Post -->
+                            <form id="my-awesome-dropzone" class="dropzone" action="#">
+                                <div class="dropzone-previews"></div>
+                                <!--  <button type="submit" class="btn-u pull-right">Wgraj pliki</button> -->
+                            </form>
+                        </section>
+                        <section>
+                        </section>
+                    </fieldset>
                     <footer style="text-align: right;">
                         <button type="button" class="btn-u btn-u-default" onclick="window.history.back();">Wróć</button>
-                        <a href="list_articles_backend.html" class="btn-u">Dodaj</a>
+                        <a href="about_discounts.html" target="_blank"  class=" btn-u btn-u-dark">Podgląd</a>
+                        <a href="list_discounts_backend.html" class="btn-u">Zapisz</a>
                     </footer>
-                </form>
                 <!-- Post -->
+                </div>
             </div>
             <!-- End Content -->
             <!-- Begin Sidebar Menu -->
@@ -457,6 +529,21 @@
                 // Animation complete.
             });
         });
+
+
+        $('#files_switch').change(function () {
+            $('#files').slideToggle('fast', function () {
+                // Animation complete.
+            });
+        });
+
+
+        $('#gallery_switch').change(function () {
+            $('#gallery').slideToggle('fast', function () {
+                // Animation complete.
+            });
+        });
+
     });
 </script>
 
