@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<!--[if IE 8]>
+<html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]>
+<html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en"> <!--<![endif]-->
+<head>
+    <title>Panelu Partnera Benefit Systems</title>
+
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="favicon.ico">
+
+    <!-- Web Fonts -->
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:400,300,600&amp;subset=cyrillic,latin">
+
+    <!-- CSS Global Compulsory -->
+    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- CSS Header and Footer -->
+    <link rel="stylesheet" href="assets/css/headers/header-default.css">
+    <link rel="stylesheet" href="assets/css/footers/footer-v1.css">
+
+    <!-- CSS Implementing Plugins -->
+    <link rel="stylesheet" href="assets/plugins/animate.css">
+    <link rel="stylesheet" href="assets/plugins/line-icons/line-icons.css">
+    <link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.min.css">
+
+    <!-- CSS Page Style -->
+    <link rel="stylesheet" href="assets/css/pages/shortcode_timeline2.css">
+
+    <link rel="stylesheet" href="assets/css/headers/header-v4.css">
+
+    <!-- CSS Customization -->
+    <link rel="stylesheet" href="assets/css/theme-colors/dark-red.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
+
+    <link rel="stylesheet" href="assets/plugins/sky-forms-pro/skyforms/css/sky-forms.css">
+    <link rel="stylesheet" href="assets/plugins/sky-forms-pro/skyforms/custom/custom-sky-forms.css">
+
+    <link rel="stylesheet" type="text/css"
+          href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/css/bootstrap-datetimepicker.css"/>
+
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/css/bootstrap-select.min.css"/>
+
+    <!-- Load c3.css -->
+    <link href="assets/css/c3/c3.css" rel="stylesheet" type="text/css">
+
+
+    <!-- CSS Page Style -->
+    <link rel="stylesheet" href="assets/css/pages/page_invoice.css">
+
+
+    <!-- DataTables -->
+    <link rel="stylesheet" type="text/css" href="assets/plugins/datatable/css/jquery.dataTables.css">
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.9/css/jquery.dataTables.min.css">
+
+
+</head>
+
+<body>
+<div class="wrapper">
+    <!--=== Header ===-->
+    <div class="header" id="includedContentHeader">
+    </div>
+    <!--=== End Header ===-->
+    <!--=== Breadcrumbs ===-->
+    <div class="breadcrumbs">
+        <div class="container">
+            <h1 class="pull-left">Statystyki wykorzystania Strefy Partnera</h1>
+            <ul class="pull-right breadcrumb">
+                <li><a href="wall.html">Home</a></li>
+                <li><a href="#">Profil</a></li>
+            </ul>
+        </div>
+    </div><!--/breadcrumbs-->
+    <!--=== End Breadcrumbs ===-->
+
+    <!--=== Content Part ===-->
+    <div class="container content">
+        <div class="row">
+            <!-- Begin Content -->
+            <div class="col-md-12 margin-bottom-50">
+                <div class="row">
+                    <div class="col-md-12 blog">
+
+                        <div class="news-v3-in  margin-bottom-30">
+                            <form action="" id="sky-form" class="sky-form">
+                                <fieldset>
+                                    <h5>Parametry</h5>
+                                    <div class="row">
+                                        <section class="col col-4">
+                                            <label class="label">Data od</label>
+                                            <label class="input">
+                                                <i class="icon-append fa fa-calendar"></i>
+                                                <input type="text" name="date" id="dateFrom" value="23/12/2015">
+                                            </label>
+                                        </section>
+                                        <section class="col col-4">
+                                            <label class="label">Data do</label>
+                                            <label class="input">
+                                                <i class="icon-append fa fa-calendar"></i>
+                                                <input type="text" name="date" id="dateTo" value="23/12/2015">
+                                            </label>
+                                        </section>
+                                        <section class="col col-12">
+                                            <label class="label">Cechy</label>
+                                            <div class="input-group margin-bottom-20">
+                                                <select id="service-select" class="selectpicker input-block-level"
+                                                        data-live-search="true" data-size="10" multiple
+                                                        title='Wybierz...' data-selected-text-format="count>1"
+                                                        data-width="100%">
+                                                    <option value="330" data-entry="0">Liczba logowań użytkowników partnera
+                                                    </option>
+                                                    <option value="332" data-entry="0" selected>Ilość wejść w funkcjonalność statystyk partnera
+                                                    </option>
+                                                    <option value="332" data-entry="0" selected>Liczba wejść w listę artykułów
+                                                    </option>
+                                                </select>
+                                                <span class="input-group-btn">
+                                                            <button class="btn-u btn-u-dark margin-left-5" tabindex="-1"
+                                                                    type="button" onclick="deselectAllOptions()"><span
+                                                                    class="glyphicon glyphicon-remove"
+                                                                    aria-hidden="true"></span> Odznacz wszystko</button>
+                                                        </span>
+                                            </div>
+                                        </section>
+                                        <section class="col col-12 pull-right">
+                                            <a href="#" class="btn-u"> Ustaw</a>
+                                        </section>
+                                    </div>
+                                </fieldset>
+                            </form>
+                        </div>
+                        <div class="news-v3-in  margin-bottom-30">
+                            <form action="" class="sky-form">
+                                <fieldset name="chartDaily">
+                                    <h4>Wykres miesięczny
+                                        <br>
+                                        <small>Wartości wskaźników z dokładnościa do miesiąca</small>
+                                    </h4>
+                                    <section>
+                                        <div id="chartDaily"></div>
+
+                                    </section>
+
+                                    <section class="col col-6 pull-right">
+                                        <table class="table table-striped invoice-table">
+                                            <tbody>
+                                            <tr>
+                                                <td class="summary summary-text summary-row">Wskaźnik</td>
+                                                <td class="summary-cell summary-row">Wartość</td>
+
+                                            </tr>
+                                            <tr>
+                                                <td class="summary">Liczba logowań użytkowników partnera</td>
+                                                <td class="summary">120</td>
+                                            </tr>
+                                            <tr>
+                                                <td class=" summary summary-cell">Ilość wejść w funkcjonalność statystyk partnera</td>
+                                                <td class="summary">100</td>
+                                            </tr>
+                                            <tr>
+                                                <td class=" summary summary-cell">Liczba wejść w listę artykułów</td>
+                                                <td class="summary">105</td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                        <div class="row">
+                                            <section class="col col-12 pull-right">
+                                                <a href="#" class="btn-u btn-u-default"> <i
+                                                        class="fa fa-plus fa-file-excel-o"></i> Eksportuj Excel</a>
+                                                <a href="#" class="btn-u btn-u-dark"> <i
+                                                        class="fa fa-plus fa-file-pdf-o"></i> Eksportuj PNG </a>
+                                            </section>
+                                        </div>
+                                    </section>
+
+                                </fieldset>
+                            </form>
+                        </div>
+
+
+                    </div>
+                </div><!--/row-->
+            </div>
+            <!-- End Content -->
+            <!-- Begin Sidebar Menu -->
+            <div class="col-md-3" id="includedContentSideBar">
+            </div>
+            <!-- End Sidebar Menu -->
+        </div>
+    </div><!--/container-->
+    <!--=== End Content Part ===-->
+
+</div><!--/End Wrapepr-->
+<!--=== Footer Version 1 ===-->
+<div class="footer-v1" id="includedContentFooter">
+</div>
+<!--=== End Footer Version 1 ===-->
+<!-- JS Global Compulsory -->
+<script type="text/javascript" src="assets/plugins/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="assets/plugins/jquery/jquery-migrate.min.js"></script>
+<script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+<!-- JS Implementing Plugins -->
+<script type="text/javascript" src="assets/plugins/back-to-top.js"></script>
+<script type="text/javascript" src="assets/plugins/smoothScroll.js"></script>
+<!-- JS Customization -->
+<script type="text/javascript" src="assets/js/custom.js"></script>
+<!-- JS Page Level -->
+<script type="text/javascript" src="assets/js/app.js"></script>
+
+
+<script type="text/javascript" src="assets/js/plugins/validation.js"></script>
+<script type="text/javascript" src="assets/js/jquery.timepicker.js"></script>
+
+<!-- Load d3.js and c3.js -->
+<script src="assets/js/plugins/d3/d3.min.js" charset="utf-8"></script>
+<script src="assets/js/plugins/c3/c3.min.js"></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/js/bootstrap-select.min.js"></script>
+<script src="https://cdn.jsdelivr.net/momentjs/2.10.6/moment.min.js"></script>
+<script type="text/javascript"
+        src="https://cdn.jsdelivr.net/bootstrap.datetimepicker/4.17.37/js/bootstrap-datetimepicker.min.js"></script>
+
+<script type="text/javascript">
+    jQuery(document).ready(function () {
+        App.init();
+
+
+    });</script>
+<script>
+    $(function () {
+        $("#includedContentHeader").load("header.html");
+        $("#includedContentFooter").load("footer.html");
+        var chartDaily = c3.generate({
+            bindto: '#chartDaily',
+            data: {
+                x: 'x',
+                xFormat: '%Y',
+                columns: [
+                    ['x', 1, 2, 3, 4, 5],
+                    ['Liczba logowań użytkowników partnera', 30, 200, 400, 650, 250],
+                    ['Ilość wejść w funkcjonalność statystyk partnera', 130, 100, 100, 200, 150, 50],
+                    ['iczba wejść w listę artykułów', 230, 200, 200, 300, 250, 250]
+                ],
+                type: 'bar',
+                labels: true,
+                groups: [
+                    ['x']
+                ]
+            },
+            axis: {
+                rotated: false,
+                x: {
+                    label: {
+                        text: 'Miesiąc',
+                        position: 'outer-middle'
+
+                    },
+                    tick: {
+                        format: function (x) {
+                            monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+                            return monthNames[x-1];
+                        }
+                    }
+                },
+                y: {
+                    label: 'Wartość wskaźnika'
+                }
+            },
+            grid: {
+                y: {
+                    lines: [{value: 0}],
+                    inverted: false
+
+                }
+            }
+        });
+
+
+
+        $("#date").datetimepicker({
+            format: 'MM-DD-YYYY'
+        });
+
+
+
+
+
+
+        setTimeout(function () {
+            $('.dropdown-toggle').dropdown();
+        }, 2000);
+
+
+    });
+</script>
+
+
+
+<!--[if lt IE 9]>
+<script src="assets/plugins/respond.js"></script>
+<script src="assets/plugins/html5shiv.js"></script>
+<script src="assets/plugins/placeholder-IE-fixes.js"></script>
+<![endif]-->
+
+</body>
+</html> 
