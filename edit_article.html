@@ -197,13 +197,13 @@
                         <div class="row margin-bottom-40">
                             <section>
                                 <div class="col col-4">
-                                    <label class="radio"><input type="radio" name="radio" checked=""><i class="rounded-x"></i>Publikacja natychmiastowa</label>
-                                    <label class="radio"><input type="radio" name="radio"><i class="rounded-x"></i>Publikacja opóźniona</label>
+                                    <label class="radio"><input type="radio" name="radio" id="publish_now"><i class="rounded-x"></i>Publikacja natychmiastowa</label>
+                                    <label class="radio"><input type="radio" name="radio" id="publish_late" checked=""><i class="rounded-x"></i>Publikacja opóźniona</label>
                                 </div>
                             </section>
                         </div>
                         <br>
-                        <div class="row">
+                        <div class="row" id="publish_date">
                             <section class="col col-6">
                                 <label class="label">Data i czas publikacji</label>
                                 <div class="row">
@@ -251,7 +251,12 @@
                                     </section>
                                 </div>
                             </section>
+
                         </div>
+                        <section>
+                            <label class="checkbox"><input type="checkbox" name="draft"><i></i>Oznacz jako
+                                draft</label>
+                        </section>
                     </fieldset>
                     <fieldset>
                         <section>
@@ -539,6 +544,17 @@
 
         $('#gallery_switch').change(function () {
             $('#gallery').slideToggle('fast', function () {
+                // Animation complete.
+            });
+        });
+
+        $('#publish_now').change(function () {
+            $('#publish_date').slideToggle('fast', function () {
+                // Animation complete.
+            });
+        });
+        $('#publish_late').change(function () {
+            $('#publish_date').slideToggle('fast', function () {
                 // Animation complete.
             });
         });
