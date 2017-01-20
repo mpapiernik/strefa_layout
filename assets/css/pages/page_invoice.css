@@ -60,7 +60,7 @@ address {
 }
 
 .invoice-table tbody td, th{
-    text-align: right;
+    text-align: left;
 
 }
 

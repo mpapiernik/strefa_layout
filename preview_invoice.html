@@ -75,7 +75,7 @@
                 <div class="container">
                     <ul class="pull-right breadcrumb">
                         <li><a href="list_invoices.html">Faktury</a></li>
-                        <li><a href="list_invoices.html">Wyslij nowy dokument</a></li>
+                        <li><a href="list_invoices.html">Propozycja rozliczenia</a></li>
                     </ul>
                 </div>
             </div><!--/breadcrumbs-->
@@ -86,25 +86,9 @@
                     <!-- Begin Content -->
                     <div class="col-md-9 margin-bottom-50">
                         <!-- Post -->
-                        <form action="" method="post" id="sky-form3" class="sky-form">
+                        <form action="assets/php/demo-contacts-process.php" method="post" id="sky-form3" class="sky-form">
                             <header>Wyslij nowy dokument rozliczeniowy</header>
                             <fieldset>
-                                <div class="row">
-                                    <section class="col col-6">
-                                        <label class="label">Rodzaj dokumentu rozliczeniowego
-                                        </label>
-                                        <label class="select">
-                                            <select id="docTypes" >
-                                                <option value="0" selected disabled>Wybierz</option>
-                                                <option value="1">Faktura</option>
-                                                <option value="2">Rachunek</option>
-                                                <option value="3">Korekta faktury</option>
-                                                <option value="4">Korekta rachunku</option>
-                                            </select>
-                                            <i></i>
-                                        </label>
-                                    </section>
-                                </div>
                                 <div class="row">
                                       <section class="col col-6">
                                         <label class="label">Okres rozliczeniowy</label>
@@ -117,21 +101,6 @@
                                             </select>
                                             <i></i>
                                         </label>
-                                    </section>
-                                </div>
-                            </fieldset>
-                            <fieldset>
-                                <div class="row">
-                                    <section class="col col-lg-12 col-sm-12 col-md-12">
-                                        <label class="label">Nr konta i adres oddziału</label>
-                                        <label class="select">
-                                        <select name="bank_account">
-                                            <option value="0" selected disabled>Wybierz</option>
-                                            <option value="1">85 0000 0000 0000 0000 0000 0000, Warszawa 22-009, ul. Warszawska 1</option>
-                                            <option value="2">85 0000 0000 0000 0000 0000 0000, Gdańsk 90-322, ul. Gdańska 32</option>
-                                        </select>
-                                        <i></i>
-                                    </label>
                                     </section>
                                 </div>
                             </fieldset>
@@ -159,48 +128,47 @@
                             </fieldset>
                             <fieldset>
                                 <section>
-                                    <label class="checkbox"><input id="appendHistory" type="checkbox"><i></i>Wybierz poszczególne usługi</label>
+                                    <label class="checkbox"><input id="sellectAllServices" type="checkbox" name="checkbox" checked=""><i></i>Zaznacz/odznacz wszystkie usługi</label>
                                 </section>
                                 <section>
                                     <div id="serviceTab">
-                                        <div id="loader" style="text-align: center;"><h2><i class="fa fa-spinner fa-pulse fa-lg"></i></h2></div>
                                         <div class="input-group margin-bottom-20">
                                             <select  id="service-select" class="selectpicker input-block-level" data-live-search="true" data-size="10"  multiple title='Wybierz...' data-selected-text-format="count>3" data-width="100%">
                                                 <optgroup label="(1212) Tyger Gym - Przymorze">
-                                                    <option value="330" data-entry="0">joga</option>	
-                                                    <option value="332" data-entry="0">basen</option>	
-                                                    <option value="333" data-entry="0">aqua aerobik</option>	
+                                                    <option value="330" data-entry="0" >joga</option>
+                                                    <option value="332" data-entry="0" >basen</option>
+                                                    <option value="333" data-entry="0" >aqua aerobik</option>
                                                     <option value="334" data-entry="2" selected>siłownia</option>	
-                                                    <option value="335" data-entry="0">sauna</option>	
-                                                    <option value="338" data-entry="0">pilates</option>	
-                                                    <option value="341" data-entry="0">sztuki walki</option>	
+                                                    <option value="335" data-entry="0">sauna</option>
+                                                    <option value="338" data-entry="0" >pilates</option>
+                                                    <option value="341" data-entry="0" >sztuki walki</option>
                                                     <option value="342" data-entry="2" selected>jacuzzi</option>	
-                                                    <option value="343" data-entry="0">spinning</option>	
-                                                    <option value="345" data-entry="0">pływalnia letnia</option>	
-                                                    <option value="347" data-entry="1" selected>ścianka wspinaczkowa </option>	
+                                                    <option value="343" data-entry="0">spinning</option>
+                                                    <option value="345" data-entry="0" >pływalnia letnia</option>
+                                                    <option value="347" data-entry="1" >ścianka wspinaczkowa </option>
                                                     <option value="348" data-entry="1" selected>squash</option>	
                                                     <option value="351" data-entry="2" selected>grota solna</option>	
                                                 </optgroup>
                                                 <optgroup label="(1213) Tyger Gym - Rental park">
-                                                    <option value="352" data-entry="1" selected>łaźnia parowa</option>	
-                                                    <option value="353" data-entry="2" selected>zajęcia fitness</option>	
-                                                    <option value="356" data-entry="1" selected>rolletic</option>	
-                                                    <option value="360" data-entry="1" selected>taniec</option>	
-                                                    <option value="366" data-entry="2" selected>wejście open</option>	
-                                                    <option value="367" data-entry="1" selected>lodowisko</option>	
-                                                    <option value="369" data-entry="2" selected>snooker</option>	
+                                                    <option value="352" data-entry="1" >łaźnia parowa</option>
+                                                    <option value="353" data-entry="2" >zajęcia fitness</option>
+                                                    <option value="356" data-entry="1" >rolletic</option>
+                                                    <option value="360" data-entry="1" >taniec</option>
+                                                    <option value="366" data-entry="2" >wejście open</option>
+                                                    <option value="367" data-entry="1" >lodowisko</option>
+                                                    <option value="369" data-entry="2" >snooker</option>
                                                     <option value="370" data-entry="2" selected>bilard</option>	
                                                 </optgroup>
                                                 <optgroup label="(1215) Tyger Gym - Oliwa">
                                                     <option value="371" data-entry="0">Dwie usługi</option>	
-                                                    <option value="372" data-entry="2" selected>zajęcia 60 minut</option>	
-                                                    <option value="373" data-entry="1" selected>zajęcia 90 minut</option>	
-                                                    <option value="374" data-entry="2" selected>zajęcia indywidualne</option>	
+                                                    <option value="372" data-entry="2" >zajęcia 60 minut</option>
+                                                    <option value="373" data-entry="1" >zajęcia 90 minut</option>
+                                                    <option value="374" data-entry="2" >zajęcia indywidualne</option>
                                                     <option value="375" data-entry="0">zajęcia grupowe</option>	
-                                                    <option value="376" data-entry="2" selected>aqua aerobik dla kobiet w ciąży</option>	
-                                                    <option value="377" data-entry="1" selected>dzieci</option>	
-                                                    <option value="378" data-entry="2" selected>wejście z dopłatą</option>	
-                                                    <option value="379" data-entry="1" selected>aktywne 9 miesięcy</option>	
+                                                    <option value="376" data-entry="2" >aqua aerobik dla kobiet w ciąży</option>
+                                                    <option value="377" data-entry="1" >dzieci</option>
+                                                    <option value="378" data-entry="2" >wejście z dopłatą</option>
+                                                    <option value="379" data-entry="1" >aktywne 9 miesięcy</option>
                                                     <option value="380" data-entry="1" selected>basen 90 minut</option>	
                                                     <option value="381" data-entry="0">Siłownia+Fitness+Sauna</option>	
                                                     <option value="382" data-entry="0">Siłownia+Joga+Sauna</option>	
@@ -208,12 +176,6 @@
                                             </select>
                                             <span class="input-group-btn">
                                                 <button class="btn-u" type="button" tabindex="-1" onclick="refreshTable()"><span class="glyphicon glyphicon-refresh" aria-hidden="true"></span></button>
-                                            </span>
-                                        </div>
-                                        <div class="margin-bottom-20">
-                                            <span class="input-group-btn">
-                                                <button class="btn-u" type="button" onclick="selectOptionsByEntry()"><span class="glyphicon glyphicon-saved" aria-hidden="true"></span> Zaznacz wszystkie usługi z wykorzystaniem</button>
-                                                <button class="btn-u btn-u-dark margin-left-5" type="button" onclick="deselectAllOptions()"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Odznacz wszystko</button>
                                             </span>
                                         </div>
                                         <div>
@@ -233,50 +195,93 @@
                                         </div>
                                     </div>
                                 </section>
-                            </fieldset>
-                            <fieldset>
                                 <div class="row">
-                                    <section class="col col-6">
-                                        <label class="label">Wpisz numer dokumentu
-                                        </label>
-                                        <label class="input">
-                                            <input class="input">
-                                        </label>
-                                    </section>
-                                </div>
-                                <div class="row">
-                                    <section class="col col-6">
-                                        <label class="label">Wpisz datę wystawienia
-                                        </label>
-                                        <label class="input">
-                                            <input class="input">
-                                        </label>
-                                    </section>
-                                    <section class="col col-6">
-                                        <label class="label">Wpisz datę sprzedaży
-                                        </label>
-                                        <label class="input">
-                                            <input class="input">
-                                        </label>
-                                    </section>
-                                </div>
-                            </fieldset>
-                            <fieldset>
-                                <div class="row">
-                                    <section class="col col-md-12 col-lg-12">
-                                         <h5>Wpisz kwotę netto i brutto</h5>
-                                            <span class="btn btn-u fileinput-button state-success" id="addRow">
-                                                <i class="fa fa-plus"></i>
-                                                <span>Dodaj stawkę</span>
+                                    <section class="col col-12 pull-right">
+                                            <span class="btn btn-u fileinput-button state-success">
+                                                <i class="fa fa-refresh"></i>
+                                                <span> Przelicz</span>
                                             </span>
                                     </section>
                                 </div>
-                                <section class="col col-md-12 col-lg-12">
-                                    <table class="table table-striped invoice-table" id="example">
+                            </fieldset>
+                            <fieldset>
+                                <div class="row">
+                                    <section class="col col-12">
+                                        <table class="table table-striped invoice-table" id="example">
+                                            <thead>
+                                            <tr>
+                                                <th>#</th>
+                                                <th class="table-product">Usługa (Obiekt)</th>
+                                                <th>Ilość wejść</th>
+                                                <th class="hidden-sm">J.m.</th>
+                                                <th>Cena jedn. netto</th>
+                                                <th>Wartość netto</th>
+                                                <th class="hidden-sm">Stawka VAT</th>
+                                                <th class="hidden-sm">Kwota VAT</th>
+                                                <th>Wartość brutto</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            <tr>
+                                                <td>1</td>
+                                                <td class="table-product">Sauna (Tyger Gym - Przymorze)</td>
+                                                <td>252</td>
+                                                <td class="hidden-sm">szt.</td>
+                                                <td>12,00</td>
+                                                <td>3024,00</td>
+                                                <td class="hidden-sm">ZW</td>
+                                                <td class="hidden-sm">0,00</td>
+                                                <td>3024,00</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2</td>
+                                                <td class="table-product">Zajęcia sportowe pracownika (Tyger Gym - Przymorze)</td>
+                                                <td>25</td>
+                                                <td class="hidden-sm">szt.</td>
+                                                <td>10,00</td>
+                                                <td>250,00</td>
+                                                <td class="hidden-sm">ZW</td>
+                                                <td class="hidden-sm">0,00</td>
+                                                <td>250,00</td>
+                                            </tr>
+                                            <tr>
+                                                <td>3</td>
+                                                <td class="table-product">Zajęcia fitness (Tyger Gym - Manhattan)</td>
+                                                <td>120</td>
+                                                <td class="hidden-sm">szt.</td>
+                                                <td>15,00</td>
+                                                <td>1800,00</td>
+                                                <td class="hidden-sm">ZW</td>
+                                                <td class="hidden-sm">0,00</td>
+                                                <td>1800,00</td>
+                                            </tr>
+                                            <tr>
+                                                <td>4</td>
+                                                <td class="table-product">Zajęcia jogi (Tyger Gym - Manhattan)</td>
+                                                <td>100</td>
+                                                <td class="hidden-sm">szt.</td>
+                                                <td>20,00</td>
+                                                <td>2000,00</td>
+                                                <td class="hidden-sm">ZW</td>
+                                                <td class="hidden-sm">0,00</td>
+                                                <td>2000,00</td>
+                                            </tr>
+                                            </tbody>
+
+                                        </table>
+                                    </section>
+                                </div>
+                            </fieldset>
+                            <fieldset>
+                                <h4>Podsumowanie</h4>
+                                <table class="table table-striped invoice-table">
                                     <thead>
                                     <tr>
-                                        <th>#</th>
-                                        <th></th>
+                                        <th>&nbsp;</th>
+                                        <th class="table-product">&nbsp;</th>
+                                        <th>&nbsp;</th>
+                                        <th class="hidden-sm">&nbsp;</th>
+                                        <th>&nbsp;</th>
                                         <th>Wartość netto</th>
                                         <th class="hidden-sm">Stawka VAT</th>
                                         <th class="hidden-sm">Kwota VAT</th>
@@ -285,132 +290,69 @@
                                     </thead>
                                     <tbody>
                                     <tr>
-                                        <td>1</td>
-                                        <td></td>
-                                        <td>3024,00</td>
+                                        <td class="no-border">&nbsp;</td>
+                                        <td class="no-border">&nbsp;</td>
+                                        <td class="no-border">&nbsp;</td>
+                                        <td class="hidden-sm no-border">&nbsp;</td>
+                                        <td class="summary summary-text summary-row">RAZEM</td>
+                                        <td class="summary-cell summary-row">31666,00</td>
+                                        <td class="hidden-sm summary-row">X</td>
+                                        <td class="hidden-sm summary-row">X</td>
+                                        <td class="summary-row summary-border-right">31666,00</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="no-border"></td>
+                                        <td class="no-border"></td>
+                                        <td class="no-border"></td>
+                                        <td class="hidden-sm no-border"></td>
+                                        <td class="summary summary-text">W tym</td>
+                                        <td class="summary-cell">27216,00</td>
                                         <td class="hidden-sm">ZW</td>
                                         <td class="hidden-sm">0,00</td>
-                                        <td>3024,00</td>
+                                        <td class="summary-border-right">27216,00</td>
                                     </tr>
                                     <tr>
-                                        <td>2</td>
-                                        <td></td>
-                                        <td>1800,00</td>
-                                        <td class="hidden-sm">1%</td>
-                                        <td class="hidden-sm">18,00</td>
-                                        <td>1818,00</td>
+                                        <td class="no-border"></td>
+                                        <td class="no-border"></td>
+                                        <td class="no-border"></td>
+                                        <td class="hidden-sm no-border"></td>
+                                        <td class="no-border"></td>
+                                        <td class="summary-cell">1800,00</td>
+                                        <td class="hidden-sm">ZW</td>
+                                        <td class="hidden-sm">0,00</td>
+                                        <td class="summary-border-right">1800,00</td>
                                     </tr>
                                     <tr>
-                                        <td>3</td>
-                                        <td></td>
-                                        <td>250,00</td>
-                                        <td class="hidden-sm">8%</td>
-                                        <td class="hidden-sm">12,00</td>
-                                        <td>262,00</td>
-                                    </tr>
-                                    <tr>
-                                        <td>4</td>
-                                        <td></td>
-                                        <td>2000,00</td>
-                                        <td class="hidden-sm">23%</td>
-                                        <td class="hidden-sm">453,00</td>
-                                        <td>2453,00</td>
-                                    </tr>
-                                    <tr>
-                                        <td>5</td>
-                                        <td><b>SUMA</b></td>
-                                        <td>4500,00</td>
-                                        <td class="hidden-sm">X</td>
-                                        <td class="hidden-sm">1953,00</td>
-                                        <td>6453,00</td>
+                                        <td class="no-border"></td>
+                                        <td class="no-border"></td>
+                                        <td class="no-border"></td>
+                                        <td class="hidden-sm no-border"></td>
+                                        <td class="no-border"></td>
+                                        <td class="summary-cell summary-border-bottom">2250,00</td>
+                                        <td class="hidden-sm summary-border-bottom">ZW</td>
+                                        <td class="hidden-sm summary-border-bottom">0,00</td>
+                                        <td class="summary-border-right summary-border-bottom">2250,00</td>
                                     </tr>
                                     </tbody>
 
                                 </table>
-                                </section>
                                 <div class="row">
-                                    <section class="col col-12 pull-right">
-                                            <span class="btn btn-u fileinput-button state-success">
-                                                <i class="fa fa-check"></i>
-                                                <span>Zweryfikuj poprawność</span>
-                                            </span>
-                                    </section>
-                                </div>
-
-                                <div class="row">
-                                    <div class="alert alert-success fade in">
-                                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-                                        <h4>Dane zgodne z naszą bazą!</h4>
+                                    <div class="col-xs-4">
+                                        <div class="tag-box tag-box-v3 no-margin-bottom">
+                                            <strong>Razem do zapłaty: </strong>8073,18 PLN
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="alert alert-danger fade in">
-                                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-                                        <h4>Dane niezgodne z naszą bazą!</h4>
-                                        Według nas kwota netto = X, kwota brutto = Y  (szczegóły w „<strong><a class="" href="preview_invoice.html">Propozycja rozliczenia</a></strong>”).
-                                        <br>
-                                        Dla pewności zweryfikuj raport z terminala i/lub nie zapomnij załączyć raportu awaryjnego.
-
-                                        <p class="margin-top-20">
-                                            <a class="btn btn-u" href="preview_invoice.html">Propozycja rozliczenia</a>
-                                        </p>
+                                    <div class="col-xs-12">
+                                        <div class="tag-box tag-box-v3 no-margin-bottom">
+                                            <strong>Słownie: </strong>osiem tysięcy sielemdziesiąt trzy i 0,18 PLN
+                                        </div>
                                     </div>
                                 </div>
-                            </fieldset>
-                            <fieldset>
-                                <div class="input-group margin-bottom-20">
-                                    <section>
-                                        <span class="btn btn-u fileinput-button state-success" id="fileButton">
-                                            <i class="fa fa-plus"></i>
-                                            <span>Wybierz dokument rozliczeniowy z dysku</span>
-                                            <input type="file" id="appbundle_invoice_confirm_files" name="appbundle_invoice_confirm[files][]">
-                                        </span>
-                                    </section>
-                                </div>
-
-                            </fieldset>
-                            <fieldset>
-                                <div class="input-group margin-bottom-20">
-                                    <section>
-                                                <span class="btn btn-u fileinput-button state-success" id="fileButton2">
-                                                    <i class="fa fa-plus"></i>
-                                                    <span>Wybierz raport awaryjny</span>
-                                                    <input type="file" id="appbundle_invoice_confirm_files2" name="appbundle_invoice_confirm[files][]">
-                                                </span>
-                                    </section>
-                                </div>
-                                <table role="presentation"  class="table table-striped">
-                                    <tbody class="files"><tr class="template-upload fade in">
-                                        <td class="t-align-l">
-                                            <p class="name">Test (1).pdf</p>
-                                            <strong class="error text-danger"></strong>
-                                        </td>
-                                        <td class="t-align-r" style="text-align: right;">
-                                            <a href="#" class="margin-right-5">
-                                                <button type="button" class="btn btn-u">
-                                                    <i class="fa fa-download"></i>
-                                                    <span>Pobierz</span>
-                                                </button></a>
-                                            <button class="btn btn-u btn-u-dark cancel stamp-delete-link" type="button">
-                                                <i class="fa fa-trash"></i>
-                                                <span>Usuń</span>
-                                            </button>
-                                        </td>
-                                    </tbody>
-                                </table>
-                            </fieldset>
-                            <fieldset>
-                                <section>
-                                    <label class="label">Komentarz dla opiekuna rozliczeniowego (opcjonalne)
-                                    </label>
-                                    <label class="textarea">
-                                        <textarea rows="3" name="message" id="message"></textarea>
-                                    </label>
-                                </section>
                             </fieldset>
                             <footer  style="text-align: right;">
                                 <button type="button" class="btn-u btn-u-default" onclick="window.service.back();">Wróć</button>
-                                <a href="generate_invoice.html" class="btn-u">Wyślij</a>
                             </footer>
                         </form>         
                         <!-- Post -->
@@ -451,106 +393,11 @@
         <script type="text/javascript" src="assets/js/forms/checkout.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/js/bootstrap-select.min.js"></script>
         <!-- JS DataTables -->
-        <script type="text/javascript" src="assets/js/app.js"></script>
         <script type="text/javascript" language="javascript" src="assets/plugins/datatable/js/jquery.dataTables.js"></script>
-        <script type="text/javascript" src="assets/js/jquery.tabledit.js"></script>
-        <script src="assets/plugins/sky-forms-pro/skyforms/js/jquery.validate.min.js"></script>
-        <script type="text/javascript" src="assets/js/plugins/validation.js"></script>
-        <script type="text/javascript" src="assets/js/forms/invoices.js"></script>
         <script type="text/javascript">
                                     jQuery(document).ready(function () {
                                         App.init();
                                     });
-
-
-                                    $(document).ready(function () {
-                                        var t =  $('#example').DataTable({
-                                            "searching": false,
-                                            "paging": false,
-                                            "ordering": false,
-                                            "info": false,
-                                            "language": {
-                                                "url": "assets/plugins/datatable/lang/Polish.json"
-                                            }
-                                        });
-                                        $('#example').Tabledit({
-                                            confirmButton: false,
-                                            deleteButton: true,
-                                            restoreButton: true,
-                                            hideIdentifier: true,
-                                            editButton: true,
-                                            buttons: {
-                                                edit: {
-                                                    class: 'btn-u btn-brd btn-brd-hover btn-u-sm btn-u-s',
-                                                    html: '<i class="fa fa-edit"></i>',
-                                                    action: 'edit'
-                                                },
-                                                delete: {
-                                                    class: 'btn-u btn-brd btn-u-dark btn-brd-hover btn-u-sm margin-left-5',
-                                                    html: '<i class="fa fa-history"></i>',
-                                                    action: 'edit'
-                                                },
-                                                restore: {
-                                                    class: 'btn btn-sm btn-warning',
-                                                    html: 'Przywróć',
-                                                },
-                                                save: {
-                                                    class: 'btn btn-sm btn-success',
-                                                    html: 'Zapisz'
-                                                },
-                                                confirm: {
-                                                    class: 'btn btn-sm btn-danger',
-                                                    html: 'Potwierdź'
-                                                }
-                                            },
-                                            columns: {
-                                                identifier: [0, '#'],
-                                                editable: [ [2, ''], [3, ''], [4, ''], [5, '']]
-                                            }
-                                        });
-                                        $("#sky-form-details").submit(function (event) {
-                                            var create_date = new Date($('#create_date').val());
-                                            console.log(create_date);
-                                            if (create_date) {
-                                                var create_day = create_date.getDate();
-                                                console.log(create_day);
-                                                var start_day = 1;
-                                                var end_day = 15;
-                                                if (start_day <= create_day && create_day <= end_day) {
-                                                    $('#input_create_date').removeClass("state-error");
-                                                    $('#note_error_create_date').text("");
-                                                }
-                                                else {
-                                                    $('#input_create_date').addClass("state-error");
-                                                    $('#note_error_create_date').text("Wprowadź datę z poprawnego zakresu rozliczeniowego, tj. dzień od 1 do 15");
-                                                    event.preventDefault();
-                                                }
-                                            } else {
-                                                alert("Invalid date range entered");
-                                                event.preventDefault();
-                                            }
-                                        });
-
-                                        $('#addRow').on( 'click', function () {
-                                            var row = [
-                                                ' ',
-                                                "<input class=\"tabledit-input form-control input-sm\"  type=\"text\">",
-                                                "<input class=\"tabledit-input form-control input-sm\"  type=\"text\">",
-                                                "<input class=\"tabledit-input form-control input-sm\"  type=\"text\">",
-                                                "<input class=\"tabledit-input form-control input-sm\"  type=\"text\">",
-                                                "<div class=\"tabledit-toolbar btn-toolbar\" style=\"text-align: left;\"> <div class=\"btn-group btn-group-sm\" style=\"float: none;\"><button type=\"button\" class=\"tabledit-edit-button btn-u btn-brd btn-brd-hover btn-u-sm btn-u-s\" style=\"float: none;\"><i class=\"fa fa-edit\"></i></button><button type=\"button\" class=\"tabledit-delete-button btn-u btn-brd btn-u-dark btn-brd-hover btn-u-sm margin-left-5\" style=\"float: none;\"><i class=\"fa fa-history\"></i></button></div><button type=\"button\" class=\"tabledit-save-button btn btn-sm btn-success\" style=\"display: none; float: none;\">Zapisz</button> <button type=\"button\" class=\"tabledit-confirm-button btn btn-sm btn-danger\" style=\"display: none; float: none;\">Potwierdź</button> </div>"
-                                            ];
-
-
-                                            t.row.add(row).draw( false );
-
-                                            t.order([1, 'asc']).draw();
-                                            t.order([0, 'asc']).draw();
-                                        } );
-
-
-                                    });
-
                                     $(document).ready(function () {
 
                                         var table = $('#service').DataTable({
@@ -575,13 +422,6 @@
                                             table.row('.selected').remove().draw(false);
                                             var id = tr.data("id");
                                             deselectValue(id);
-                                        });
-                                        $('#serviceTab').slideToggle('fast', function () {
-                                            // Animation complete.
-                                        });
-                                        $('#appendHistory').click(function () {
-                                            $('#serviceTab').slideToggle('fast', function () {
-                                            });
                                         });
                                     });
                                     function refreshTable() {
@@ -650,6 +490,10 @@
                                                     this.checked = false; //deselect all checkboxes with class "checkbox1"                       
                                                 });
                                             }
+                                        });
+
+                                        $('#sellectAllServices').click(function (event) {  //on click
+                                            deselectAllOptions();
                                         });
 
                                     });
