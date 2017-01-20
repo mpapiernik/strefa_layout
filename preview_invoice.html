@@ -132,7 +132,7 @@
                                 </section>
                                 <section>
                                     <div id="serviceTab">
-                                        <div class="input-group margin-bottom-20">
+                                        <div class="input-group margin-bottom-20" style="width: 100%">
                                             <select  id="service-select" class="selectpicker input-block-level" data-live-search="true" data-size="10"  multiple title='Wybierz...' data-selected-text-format="count>3" data-width="100%">
                                                 <optgroup label="(1212) Tyger Gym - Przymorze">
                                                     <option value="330" data-entry="0" >joga</option>
@@ -174,9 +174,6 @@
                                                     <option value="382" data-entry="0">Siłownia+Joga+Sauna</option>	
                                                 </optgroup>
                                             </select>
-                                            <span class="input-group-btn">
-                                                <button class="btn-u" type="button" tabindex="-1" onclick="refreshTable()"><span class="glyphicon glyphicon-refresh" aria-hidden="true"></span></button>
-                                            </span>
                                         </div>
                                         <div>
                                             <table id="service" class="display margin-top-20" cellspacing="0" width="100%">
@@ -195,16 +192,16 @@
                                         </div>
                                     </div>
                                 </section>
+                            </fieldset>
+                            <fieldset>
                                 <div class="row">
-                                    <section class="col col-12 pull-right">
+                                    <section class="col col-12 pull-left">
                                             <span class="btn btn-u fileinput-button state-success">
                                                 <i class="fa fa-refresh"></i>
-                                                <span> Przelicz</span>
+                                                <span> Przelicz dane rzoliczeniowe</span>
                                             </span>
                                     </section>
                                 </div>
-                            </fieldset>
-                            <fieldset>
                                 <div class="row">
                                     <section class="col col-12">
                                         <table class="table table-striped invoice-table" id="example">
