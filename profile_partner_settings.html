@@ -84,24 +84,39 @@
                                         <fieldset>
                                             <h4>Dostęp do modułu rozliczeniowego</h4>
                                             <div class="row">
-                                                <section class="col col-3">
-                                                    <label class="label">Data rozpoczęcia fakturowania</label>
-                                                    <label class="input">
-                                                        <i class="icon-append fa fa-calendar"></i>
-                                                        <input type="text" name="date" id="start">
+                                                <section class="col col-6">
+                                                    <label class="label">Rodzaj dostępu</label>
+                                                    <label class="select">
+                                                        <select id="AccesType">
+                                                            <option value="0">Brak dostępu</option>
+                                                            <option value="1">Wystawianie dokumentów w Strefie Partnera</option>
+                                                            <option value="2">Upload gotowych dokumentów</option>
+                                                        </select>
+                                                        <i></i>
                                                     </label>
                                                 </section>
                                             </div>
-                                            <section>
-                                                <label class="checkbox"><input id="publicCheckbox" type="checkbox" name="public" onclick="showPartnerDiv()"><i></i>Wyłącz dostęp</label>
-                                            </section>
-                                            <section>
-                                                <label class="label">Przyczyna wstrzymania dostępu do modułu rozliczeniowego</label>
-                                                <label class="textarea">
-                                                    <i class="icon-append fa fa-comment"></i>
-                                                    <textarea rows="6" name="message" id="message"></textarea>
-                                                </label>
-                                            </section>
+                                            <div id="invoiceSettingsDiv">
+                                                <div class="row">
+                                                    <section class="col col-3">
+                                                        <label class="label">Data rozpoczęcia fakturowania</label>
+                                                        <label class="input">
+                                                            <i class="icon-append fa fa-calendar"></i>
+                                                            <input type="text" name="date" id="start">
+                                                        </label>
+                                                    </section>
+                                                </div>
+                                                <section>
+                                                    <label class="checkbox"><input id="publicCheckbox" type="checkbox" name="public" onclick="showPartnerDiv()"><i></i>Wyłącz dostęp</label>
+                                                </section>
+                                                <section>
+                                                    <label class="label">Przyczyna wstrzymania dostępu do modułu rozliczeniowego</label>
+                                                    <label class="textarea">
+                                                        <i class="icon-append fa fa-comment"></i>
+                                                        <textarea rows="6" name="message" id="message"></textarea>
+                                                    </label>
+                                                </section>
+                                            </div>
                                         </fieldset>
                                         <footer style="text-align: right;">
                                             <button type="button" class="btn-u btn-u-default" onclick="window.history.back();">Wróć</button>
@@ -339,6 +354,17 @@
                                                 jQuery(document).ready(function () {
                                                     App.init();
                                                     $('#vatReasonDiv').hide();
+                                                    $('#invoiceSettingsDiv').hide();
+
+                                                    $('#AccesType').change(function () {
+
+                                                        if ($(this).val() != "0") {
+                                                            $('#invoiceSettingsDiv').show();
+                                                        }
+                                                        else {
+                                                            $('#invoiceSettingsDiv').hide();
+                                                        }
+                                                    });
 
                                                     $('#docTypes').change(function () {
 

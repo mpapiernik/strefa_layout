@@ -1,0 +1,517 @@
+<!DOCTYPE html> 
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->  
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->  
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->  
+    <head>
+        <title>Panel Benefit Systems</title>
+
+        <!-- Meta -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <!-- Favicon -->
+        <link rel="shortcut icon" href="favicon.ico">
+
+        <!-- Web Fonts -->
+        <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:400,300,600&amp;subset=cyrillic,latin">
+
+        <!-- CSS Global Compulsory -->
+        <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+
+        <!-- CSS Header and Footer -->
+        <link rel="stylesheet" href="assets/css/headers/header-default.css">
+        <link rel="stylesheet" href="assets/css/footers/footer-v1.css">
+
+        <!-- CSS Implementing Plugins -->
+        <link rel="stylesheet" href="assets/plugins/animate.css">
+        <link rel="stylesheet" href="assets/plugins/line-icons/line-icons.css">
+        <link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.min.css">
+
+        <!-- CSS Customization -->
+        <link rel="stylesheet" href="assets/css/theme-colors/dark-red.css">
+
+        <!-- CSS Implementing Plugins -->
+        <link rel="stylesheet" href="assets/plugins/animate.css">
+        <link rel="stylesheet" href="assets/plugins/line-icons/line-icons.css">
+        <link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="assets/plugins/sky-forms-pro/skyforms/css/sky-forms.css">
+        <link rel="stylesheet" href="assets/plugins/sky-forms-pro/skyforms/custom/custom-sky-forms.css">
+        <!--[if lt IE 9]><link rel="stylesheet" href="assets/plugins/sky-forms-pro/skyforms/css/sky-forms-ie8.css"><![endif]-->
+
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/prettify/r298/run_prettify.min.js"></script>
+
+        <!-- Multiselect -->
+        <script type="text/javascript" src="assets/js/jquery-2.1.3.min.js"></script>
+        <script type="text/javascript" src="assets/js/bootstrap-3.3.2.min.js"></script>
+        <script type="text/javascript" src="assets/js/bootstrap-multiselect.js"></script>
+        <!-- DataTables -->
+        <link rel="stylesheet" type="text/css" href="assets/plugins/datatable/css/jquery.dataTables.css">
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/css/bootstrap-select.min.css" />
+
+        <link rel="stylesheet" href="assets/css/jquery.fileupload.css">
+        <link rel="stylesheet" href="assets/css/jquery.fileupload-ui.css">
+        <!-- CSS adjustments for browsers with JavaScript disabled -->
+        <noscript><link rel="stylesheet" href="assets/css/jquery.fileupload-noscript.css"></noscript>
+        <noscript><link rel="stylesheet" href="assets/css/jquery.fileupload-ui-noscript.css"></noscript>
+
+        <!-- CSS Page Style -->
+        <link rel="stylesheet" href="assets/css/pages/page_invoice.css">
+    </head>
+
+
+    <body>    
+        <div class="wrapper">
+            <!--=== Header ===-->    
+            <div class="header" id="includedContentHeader">
+            </div>
+            <!--=== End Header ===--> 
+            <!--=== Breadcrumbs ===-->
+            <div class="breadcrumbs">
+                <div class="container">
+                    <ul class="pull-right breadcrumb">
+                        <li><a href="list_invoices.html">Faktury</a></li>
+                        <li><a href="list_invoices.html">Propozycja rozliczenia</a></li>
+                    </ul>
+                </div>
+            </div><!--/breadcrumbs-->
+            <!--=== End Breadcrumbs ===-->
+            <!--=== Content Part ===-->
+            <div class="container content">     
+                <div class="row">
+                    <!-- Begin Content -->
+                    <div class="col-md-9 margin-bottom-50">
+                        <!-- Post -->
+                        <form action="assets/php/demo-contacts-process.php" method="post" id="sky-form3" class="sky-form">
+                            <header>Propozycja rozliczenia</header>
+                            <fieldset>
+                                <div class="row">
+                                      <section class="col col-6">
+                                        <label class="label">Okres rozliczeniowy</label>
+                                        <label class="select">
+                                            <select name="period">
+                                                <option value="0" selected>1-09-2016 - 30-09-2016</option>
+                                                <option value="1">1-08-2016 - 31-08-2016</option>
+                                                <option value="2">1-07-2016 - 31-07-2016</option>
+                                                <option value="3">1-06-2016 - 30-06-2016</option>
+                                            </select>
+                                            <i></i>
+                                        </label>
+                                    </section>
+                                </div>
+                            </fieldset>
+                            <fieldset>
+                                <section>
+                                    <label class="label"> Obiekty </label>
+                                    <div class="row">
+                                        <div class="col col-12">
+                                            <label class="checkbox"><input id="selectAll" type="checkbox" name="checkbox" checked=""><i></i>Zaznacz/odznacz wszystkie obiekty</label>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="row">
+                                        <div class="col col-6">
+                                            <label class="checkbox"><input class="check1" type="checkbox" name="checkbox" checked=""><i></i>(1212) Tyger Gym - Przymorze</label>
+                                            <label class="checkbox"><input class="check1" type="checkbox" name="checkbox" checked=""><i></i>(1213) Tyger Gym - Rental park</label>
+                                            <label class="checkbox"><input class="check1" type="checkbox" name="checkbox" checked=""><i></i>(1215) Tyger Gym - Oliwa</label>
+                                        </div>
+                                        <div class="col col-6">
+                                            <label class="checkbox"><input class="check1" type="checkbox" name="checkbox" checked=""><i></i>(1214) Tyger Gym - Manhattan</label>
+                                            <label class="checkbox"><input class="check1" type="checkbox" name="checkbox" checked=""><i></i>(1215) Tyger Gym - Rumia</label>
+                                        </div>
+                                    </div>
+                                </section>
+                            </fieldset>
+                            <fieldset>
+                                <section>
+                                    <label class="checkbox"><input id="sellectAllServices" type="checkbox" name="checkbox" checked=""><i></i>Zaznacz/odznacz wszystkie usługi</label>
+                                </section>
+                                <section>
+                                    <div id="serviceTab">
+                                        <div class="input-group margin-bottom-20" style="width: 100%">
+                                            <select  id="service-select" class="selectpicker input-block-level" data-live-search="true" data-size="10"  multiple title='Wybierz...' data-selected-text-format="count>3" data-width="100%">
+                                                <optgroup label="(1212) Tyger Gym - Przymorze">
+                                                    <option value="330" data-entry="0" >joga</option>
+                                                    <option value="332" data-entry="0" >basen</option>
+                                                    <option value="333" data-entry="0" >aqua aerobik</option>
+                                                    <option value="334" data-entry="2" selected>siłownia</option>	
+                                                    <option value="335" data-entry="0">sauna</option>
+                                                    <option value="338" data-entry="0" >pilates</option>
+                                                    <option value="341" data-entry="0" >sztuki walki</option>
+                                                    <option value="342" data-entry="2" selected>jacuzzi</option>	
+                                                    <option value="343" data-entry="0">spinning</option>
+                                                    <option value="345" data-entry="0" >pływalnia letnia</option>
+                                                    <option value="347" data-entry="1" >ścianka wspinaczkowa </option>
+                                                    <option value="348" data-entry="1" selected>squash</option>	
+                                                    <option value="351" data-entry="2" selected>grota solna</option>	
+                                                </optgroup>
+                                                <optgroup label="(1213) Tyger Gym - Rental park">
+                                                    <option value="352" data-entry="1" >łaźnia parowa</option>
+                                                    <option value="353" data-entry="2" >zajęcia fitness</option>
+                                                    <option value="356" data-entry="1" >rolletic</option>
+                                                    <option value="360" data-entry="1" >taniec</option>
+                                                    <option value="366" data-entry="2" >wejście open</option>
+                                                    <option value="367" data-entry="1" >lodowisko</option>
+                                                    <option value="369" data-entry="2" >snooker</option>
+                                                    <option value="370" data-entry="2" selected>bilard</option>	
+                                                </optgroup>
+                                                <optgroup label="(1215) Tyger Gym - Oliwa">
+                                                    <option value="371" data-entry="0">Dwie usługi</option>	
+                                                    <option value="372" data-entry="2" >zajęcia 60 minut</option>
+                                                    <option value="373" data-entry="1" >zajęcia 90 minut</option>
+                                                    <option value="374" data-entry="2" >zajęcia indywidualne</option>
+                                                    <option value="375" data-entry="0">zajęcia grupowe</option>	
+                                                    <option value="376" data-entry="2" >aqua aerobik dla kobiet w ciąży</option>
+                                                    <option value="377" data-entry="1" >dzieci</option>
+                                                    <option value="378" data-entry="2" >wejście z dopłatą</option>
+                                                    <option value="379" data-entry="1" >aktywne 9 miesięcy</option>
+                                                    <option value="380" data-entry="1" selected>basen 90 minut</option>	
+                                                    <option value="381" data-entry="0">Siłownia+Fitness+Sauna</option>	
+                                                    <option value="382" data-entry="0">Siłownia+Joga+Sauna</option>	
+                                                </optgroup>
+                                            </select>
+                                        </div>
+                                        <div>
+                                            <table id="service" class="display margin-top-20" cellspacing="0" width="100%">
+                                                <thead>
+                                                    <tr>
+                                                        <th class=" col-1">#</th>
+                                                        <th class="hidden-sm hidden-xs hidden-xs">Obiekt</th>
+                                                        <th class=" ">Usługa</th>
+                                                        <th class="col-1">Wykorzystanie</th>
+                                                        <th class="col-1">Usuń</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </section>
+                            </fieldset>
+                            <fieldset>
+                                <div class="row">
+                                    <section class="col col-12 pull-left">
+                                            <span class="btn btn-u fileinput-button state-success">
+                                                <i class="fa fa-refresh"></i>
+                                                <span> Przelicz dane rzoliczeniowe</span>
+                                            </span>
+                                    </section>
+                                </div>
+                                <div class="row">
+                                    <section class="col col-12">
+                                        <table class="table table-striped invoice-table" id="example">
+                                            <thead>
+                                            <tr>
+                                                <th>#</th>
+                                                <th class="table-product">Usługa (Obiekt)</th>
+                                                <th>Ilość wejść</th>
+                                                <th class="hidden-sm">J.m.</th>
+                                                <th>Cena jedn. netto</th>
+                                                <th>Wartość netto</th>
+                                                <th class="hidden-sm">Stawka VAT</th>
+                                                <th class="hidden-sm">Kwota VAT</th>
+                                                <th>Wartość brutto</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            <tr>
+                                                <td>1</td>
+                                                <td class="table-product">Sauna (Tyger Gym - Przymorze)</td>
+                                                <td>252</td>
+                                                <td class="hidden-sm">szt.</td>
+                                                <td>12,00</td>
+                                                <td>3024,00</td>
+                                                <td class="hidden-sm">ZW</td>
+                                                <td class="hidden-sm">0,00</td>
+                                                <td>3024,00</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2</td>
+                                                <td class="table-product">Zajęcia sportowe pracownika (Tyger Gym - Przymorze)</td>
+                                                <td>25</td>
+                                                <td class="hidden-sm">szt.</td>
+                                                <td>10,00</td>
+                                                <td>250,00</td>
+                                                <td class="hidden-sm">ZW</td>
+                                                <td class="hidden-sm">0,00</td>
+                                                <td>250,00</td>
+                                            </tr>
+                                            <tr>
+                                                <td>3</td>
+                                                <td class="table-product">Zajęcia fitness (Tyger Gym - Manhattan)</td>
+                                                <td>120</td>
+                                                <td class="hidden-sm">szt.</td>
+                                                <td>15,00</td>
+                                                <td>1800,00</td>
+                                                <td class="hidden-sm">ZW</td>
+                                                <td class="hidden-sm">0,00</td>
+                                                <td>1800,00</td>
+                                            </tr>
+                                            <tr>
+                                                <td>4</td>
+                                                <td class="table-product">Zajęcia jogi (Tyger Gym - Manhattan)</td>
+                                                <td>100</td>
+                                                <td class="hidden-sm">szt.</td>
+                                                <td>20,00</td>
+                                                <td>2000,00</td>
+                                                <td class="hidden-sm">ZW</td>
+                                                <td class="hidden-sm">0,00</td>
+                                                <td>2000,00</td>
+                                            </tr>
+                                            </tbody>
+
+                                        </table>
+                                    </section>
+                                </div>
+                            </fieldset>
+                            <fieldset>
+                                <h4>Podsumowanie</h4>
+                                <table class="table table-striped invoice-table">
+                                    <thead>
+                                    <tr>
+                                        <th>&nbsp;</th>
+                                        <th class="table-product">&nbsp;</th>
+                                        <th>&nbsp;</th>
+                                        <th class="hidden-sm">&nbsp;</th>
+                                        <th>&nbsp;</th>
+                                        <th>Wartość netto</th>
+                                        <th class="hidden-sm">Stawka VAT</th>
+                                        <th class="hidden-sm">Kwota VAT</th>
+                                        <th>Wartość brutto</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td class="no-border">&nbsp;</td>
+                                        <td class="no-border">&nbsp;</td>
+                                        <td class="no-border">&nbsp;</td>
+                                        <td class="hidden-sm no-border">&nbsp;</td>
+                                        <td class="summary summary-text summary-row">RAZEM</td>
+                                        <td class="summary-cell summary-row">31666,00</td>
+                                        <td class="hidden-sm summary-row">X</td>
+                                        <td class="hidden-sm summary-row">X</td>
+                                        <td class="summary-row summary-border-right">31666,00</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="no-border"></td>
+                                        <td class="no-border"></td>
+                                        <td class="no-border"></td>
+                                        <td class="hidden-sm no-border"></td>
+                                        <td class="summary summary-text">W tym</td>
+                                        <td class="summary-cell">27216,00</td>
+                                        <td class="hidden-sm">ZW</td>
+                                        <td class="hidden-sm">0,00</td>
+                                        <td class="summary-border-right">27216,00</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="no-border"></td>
+                                        <td class="no-border"></td>
+                                        <td class="no-border"></td>
+                                        <td class="hidden-sm no-border"></td>
+                                        <td class="no-border"></td>
+                                        <td class="summary-cell">1800,00</td>
+                                        <td class="hidden-sm">ZW</td>
+                                        <td class="hidden-sm">0,00</td>
+                                        <td class="summary-border-right">1800,00</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="no-border"></td>
+                                        <td class="no-border"></td>
+                                        <td class="no-border"></td>
+                                        <td class="hidden-sm no-border"></td>
+                                        <td class="no-border"></td>
+                                        <td class="summary-cell summary-border-bottom">2250,00</td>
+                                        <td class="hidden-sm summary-border-bottom">ZW</td>
+                                        <td class="hidden-sm summary-border-bottom">0,00</td>
+                                        <td class="summary-border-right summary-border-bottom">2250,00</td>
+                                    </tr>
+                                    </tbody>
+
+                                </table>
+                                <div class="row">
+                                    <div class="col-xs-4">
+                                        <div class="tag-box tag-box-v3 no-margin-bottom">
+                                            <strong>Razem do zapłaty: </strong>8073,18 PLN
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <div class="tag-box tag-box-v3 no-margin-bottom">
+                                            <strong>Słownie: </strong>osiem tysięcy sielemdziesiąt trzy i 0,18 PLN
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <footer  style="text-align: right;">
+                                <button type="button" class="btn-u btn-u-default" onclick="window.service.back();">Wróć</button>
+                            </footer>
+                        </form>         
+                        <!-- Post -->
+                    </div>
+                    <!-- End Content -->
+                    <!-- Begin Sidebar Menu -->
+                    <div class="col-md-3" id="includedContentSideBar">
+                    </div>
+                    <!-- End Sidebar Menu -->
+                </div>          
+            </div><!--/container-->     
+            <!--=== End Content Part ===-->
+
+        </div><!--/End Wrapepr-->
+        <!--=== Footer Version 1 ===-->
+        <div class="footer-v1" id="includedContentFooter">
+        </div>     
+        <!--=== End Footer Version 1 ===-->
+
+        <!-- JS Global Compulsory -->           
+        <script type="text/javascript" src="assets/plugins/jquery/jquery-migrate.min.js"></script>
+        <script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+        <!-- JS Implementing Plugins -->
+        <script type="text/javascript" src="assets/plugins/back-to-top.js"></script>
+        <script type="text/javascript" src="assets/plugins/smoothScroll.js"></script>
+        <script src="assets/plugins/sky-forms-pro/skyforms/js/jquery.validate.min.js"></script>
+        <script src="assets/plugins/sky-forms-pro/skyforms/js/jquery.maskedinput.min.js"></script>
+        <script src="assets/plugins/sky-forms-pro/skyforms/js/jquery-ui.min.js"></script>
+        <script src="assets/plugins/sky-forms-pro/skyforms/js/jquery.form.min.js"></script>
+        <!-- JS Customization -->
+        <script type="text/javascript" src="assets/js/custom.js"></script>
+        <!-- JS Page Level -->           
+        <script type="text/javascript" src="assets/js/app.js"></script>
+        <script type="text/javascript" src="assets/js/forms/contact.js"></script>
+        <script type="text/javascript" src="assets/js/plugins/masking.js"></script>
+        <script type="text/javascript" src="assets/js/plugins/datepicker.js"></script>
+        <script type="text/javascript" src="assets/js/plugins/validation.js"></script>
+        <script type="text/javascript" src="assets/js/forms/checkout.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/js/bootstrap-select.min.js"></script>
+        <!-- JS DataTables -->
+        <script type="text/javascript" language="javascript" src="assets/plugins/datatable/js/jquery.dataTables.js"></script>
+        <script type="text/javascript">
+                                    jQuery(document).ready(function () {
+                                        App.init();
+                                    });
+                                    $(document).ready(function () {
+
+                                        var table = $('#service').DataTable({
+                                            "searching": false,
+                                            "paging": false,
+                                            "ordering": false,
+                                            "info": true,
+                                            "language": {
+                                                "url": "assets/plugins/datatable/lang/Polish.json"
+                                            }
+                                        });
+                                        refreshTable();
+                                        $('#service tbody').on('click', 'a', function (event) {
+                                            var tr = $(this).closest('tr');
+                                            if (tr.hasClass('selected')) {
+                                                tr.removeClass('selected');
+                                            }
+                                            else {
+                                                table.$('tr.selected').removeClass('selected');
+                                                tr.addClass('selected');
+                                            }
+                                            table.row('.selected').remove().draw(false);
+                                            var id = tr.data("id");
+                                            deselectValue(id);
+                                        });
+                                    });
+                                    function refreshTable() {
+                                        $('#service').dataTable().fnClearTable();
+                                        var rows = $("#service-select option:selected");
+                                        var index, len = 0;
+                                        for (index = 0, len = rows.length; index < len; ++index) {
+                                            var row = rows[index];
+                                            var facility = row.parentNode;
+                                            var facility_name = facility.getAttribute('label');
+                                            var entry = row.getAttribute('data-entry');
+                                            var id = row.value;
+                                            var name = row.text;
+                                            var i = document.createElement('i');
+                                            i.className = "fa fa-close";
+                                            i.style.color = "white";
+                                            var a = document.createElement('a');
+                                            a.className = "btn-u btn-u-dark";
+                                            a.appendChild(i);
+                                            var new_row = $('#service').dataTable().fnAddData([
+                                                index + 1,
+                                                facility_name,
+                                                id + " : " + name,
+                                                entry,
+                                                a.outerHTML
+                                            ]);
+                                            var row = $('#service').dataTable().fnGetNodes(new_row);
+                                            $(row).attr('data-id', id);
+                                            var tableRowElement = $('#service').dataTable().fnGetNodes(new_row[0]); // get reference to <tr> element just added
+                                            $(tableRowElement).attr('attributeINeeded', row.AttributeProp).attr('anotherAttributeINeeded', row.AttributeProp2);
+                                        }
+                                    }
+                                    function deselectValue(id) {
+                                        $('#service-select').find('[value=' + id + ']').prop('selected', false);
+                                        var values = $('#service-select').val();
+                                        $('#service-select').selectpicker('deselectAll');
+                                        $('#service-select').selectpicker('val', values);
+                                        $('#service-select').selectpicker('refresh');
+                                        refreshTable();
+                                    }
+                                    function selectOptionsByEntry() {
+                                        deselectAllOptions();
+                                        var number = 0;
+                                        $('#service-select').find('[data-entry!=' + number + ']').prop('selected', true);
+                                        var values = $('#service-select').val();
+                                        $('#service-select').selectpicker('val', values);
+                                        $('#service-select').selectpicker('refresh');
+                                        refreshTable();
+                                    }
+                                    function deselectAllOptions() {
+                                        $('#service-select').prop('selected', false);
+                                        $('#service-select').selectpicker('deselectAll');
+                                        $('#service-select').selectpicker('val', '');
+                                        $('#service-select').selectpicker('refresh');
+                                        refreshTable();
+                                    }
+
+                                    $(document).ready(function () {
+                                        $('#selectAll').click(function (event) {  //on click 
+                                            if (this.checked) { // check select status
+                                                $('.check1').each(function () { //loop through each checkbox
+                                                    this.checked = true;  //select all checkboxes with class "checkbox1"               
+                                                });
+                                            } else {
+                                                $('.check1').each(function () { //loop through each checkbox
+                                                    this.checked = false; //deselect all checkboxes with class "checkbox1"                       
+                                                });
+                                            }
+                                        });
+
+                                        $('#sellectAllServices').click(function (event) {  //on click
+                                            deselectAllOptions();
+                                        });
+
+                                    });
+
+        </script>
+        <script>
+            $(function () {
+                $("#includedContentHeader").load("header.html");
+                $("#includedContentFooter").load("footer.html");
+                $("#includedContentSideBar").load("sidebar.html");
+                
+                 setTimeout(function () {
+                    $('.dropdown-toggle').dropdown();
+                }, 2000);
+            });
+        </script> 
+        <!--[if lt IE 9]>
+            <script src="assets/plugins/respond.js"></script>
+            <script src="assets/plugins/html5shiv.js"></script>
+            <script src="assets/plugins/placeholder-IE-fixes.js"></script>
+        <![endif]-->
+
+    </body>
+</html> 
