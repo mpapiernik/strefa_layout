@@ -72,13 +72,10 @@
     </noscript>
 
 
-
     <link href="assets/css/plugins/dropzone/basic.css" rel="stylesheet">
     <link href="assets/css/plugins/dropzone/dropzone.css" rel="stylesheet">
 
     <link href="assets/css/plugins/cropbox/jquery.cropbox.css" rel="stylesheet">
-
-
 
 
 </head>
@@ -107,7 +104,7 @@
             <!-- Begin Content -->
             <div class="col-md-10 col-md-offset-1 margin-bottom-50">
                 <!-- Post -->
-                <form action="" method="post" id="sky-form3" class="sky-form">
+                <form action="/" method="post" id="sky-form3" class="sky-form" enctype="multipart/form-data">
                     <fieldset>
                         <section>
                             <label class="label">Tytuł</label>
@@ -197,8 +194,10 @@
                         <div class="row margin-bottom-40">
                             <section>
                                 <div class="col col-4">
-                                    <label class="radio"><input type="radio" name="radio" id="publish_now"><i class="rounded-x"></i>Publikacja natychmiastowa</label>
-                                    <label class="radio"><input type="radio" name="radio" id="publish_late" checked=""><i class="rounded-x"></i>Publikacja opóźniona</label>
+                                    <label class="radio"><input type="radio" name="radio" id="publish_now"><i
+                                            class="rounded-x"></i>Publikacja natychmiastowa</label>
+                                    <label class="radio"><input type="radio" name="radio" id="publish_late"
+                                                                checked=""><i class="rounded-x"></i>Publikacja opóźniona</label>
                                 </div>
                             </section>
                         </div>
@@ -278,8 +277,12 @@
                     <fieldset>
                         <div class="row">
                             <section class="col col-3">
-                                <label class="toggle">Załączniki<input type="checkbox" id="files_switch" name="checkbox-toggle" checked=""><i class="no-rounded"></i></label>
-                                <label class="toggle">Galeria<input type="checkbox" id="gallery_switch" name="checkbox-toggle" checked=""><i class="no-rounded"></i></label>
+                                <label class="toggle">Załączniki<input type="checkbox" id="files_switch"
+                                                                       name="checkbox-toggle" checked=""><i
+                                        class="no-rounded"></i></label>
+                                <label class="toggle">Galeria<input type="checkbox" id="gallery_switch"
+                                                                    name="checkbox-toggle" checked=""><i
+                                        class="no-rounded"></i></label>
                             </section>
                         </div>
                     </fieldset>
@@ -293,7 +296,7 @@
                                                         <i class="fa fa-plus"></i>
                                                         <span>Wybierz pliki </span>
                                                         <input type="file" id="appbundle_invoice_confirm_files_2"
-                                                               name="appbundle_invoice_confirm[files][]">
+                                                               name="appbundle_invoice_confirm[files][]" multiple>
                                                     </span>
                                     </section>
                                     <br>
@@ -338,30 +341,29 @@
                             </section>
                         </div>
                     </fieldset>
+
+                    <div class="sky-form">
+                        <fieldset id="gallery">
+                            <section>
+                                <label class="label">Galeria</label>
+
+                                <p>Przesuń element, aby określić jego kolejność.</p>
+                                <!-- Post -->
+                                <div class="dropzone">
+                                    <div class="dropzone-previews"></div>
+                                    <!--  <button type="submit" class="btn-u pull-right">Wgraj pliki</button> -->
+                                </div>
+                            </section>
+                        </fieldset>
+                        <footer style="text-align: right;">
+                            <button type="button" class="btn-u btn-u-default" onclick="window.history.back();">Wróć
+                            </button>
+                            <a href="blog_item_1.html" target="_blank" class=" btn-u btn-u-dark">Podgląd</a>
+                            <button type="button" id="submit-all"> Zapisz</button>
+                        </footer>
+                        <!-- Post -->
+                    </div>
                 </form>
-
-                <div class="sky-form">
-                    <fieldset id="gallery">
-                        <section>
-                            <label class="label">Galeria</label>
-
-                            <p>Przesuń element, aby określić jego kolejność.</p>
-                            <!-- Post -->
-                            <form id="my-awesome-dropzone" class="dropzone" action="#">
-                                <div class="dropzone-previews"></div>
-                                <!--  <button type="submit" class="btn-u pull-right">Wgraj pliki</button> -->
-                            </form>
-                        </section>
-                        <section>
-                        </section>
-                    </fieldset>
-                    <footer style="text-align: right;">
-                        <button type="button" class="btn-u btn-u-default" onclick="window.history.back();">Wróć</button>
-                        <a href="blog_item_1.html" target="_blank"  class=" btn-u btn-u-dark">Podgląd</a>
-                        <a href="list_articles_backend.html" class="btn-u">Zapisz</a>
-                    </footer>
-                <!-- Post -->
-                </div>
             </div>
             <!-- End Content -->
             <!-- Begin Sidebar Menu -->
@@ -441,52 +443,85 @@
 </script>
 
 <script type="text/javascript">
-    Dropzone.options.myAwesomeDropzone = {
-        // Prevents Dropzone from uploading dropped files immediately
-        autoProcessQueue: false,
-        maxFiles: 20,
-        init: function () {
-            var submitButton = document.querySelector("#submit-all")
-            myDropzone = this;
-            submitButton.addEventListener("click", function () {
-                myDropzone.processQueue();  // Tell Dropzone to process all queued files.
-            });
-            // to handle the added file event
-            this.on("addedfile", function (file) {
-                var removeButton = Dropzone.createElement("<button> Remove file </button>");
-                // Capture the Dropzone instance as closure.
-                var _this = this;
-
-                // Listen to the click event
-                removeButton.addEventListener("click", function (e) {
-                    // Make sure the button click doesn't submit the form:
+    jQuery(document).ready(function () {
+        Dropzone.autoDiscover = false;
+        var dropzone = $(".dropzone").dropzone({
+            // Prevents Dropzone from uploading dropped files immediately
+            autoProcessQueue: false,
+            maxFiles: 20,
+            maxFilesize: 10,
+            parallelUploads: 20,
+            addRemoveLinks: true,
+            url: "/",
+            uploadMultiple: true,
+            dictRemoveFile: "Usuń",
+            acceptedFiles: "image/*",
+            dictFileTooBig: "Plik jest zbyt duży",
+            init: function () {
+                var submitButton = $("#submit-all");
+                myDropzone = this;
+                console.log(myDropzone);
+                submitButton.on('click', function (e) {
                     e.preventDefault();
-                    e.stopPropagation();
-
-                    // Remove the file preview.
-                    _this.removeFile(file);
-                    // If you want to the delete the file on the server as well,
-                    // you can do the AJAX request here.
+                    myDropzone.processQueue();  // Tell Dropzone to process all queued files.
+                    return false;
                 });
-                file.previewElement.appendChild(removeButton);
-            });
-            this.on("maxfilesexceeded", function (file) {
-                this.removeFile(file);
-            });
-        }
-    };
-</script>
+                this.on('maxfilesexceeded', function (file) {
+                    console.log('fdssfd')
+                });
 
-<script>
-    $(function () {
+                this.on('sendingmultiple', function (data, xhr, formData) {
+                    var input = $("input");
+                    for (var i = 0; i < input.length; i++) {
+                        formData.append(input[i].name, $(input[i]).val());
+                    }
+
+                });
+            }
+        });
+
         $(".dropzone").sortable({
             items: '.dz-preview',
             cursor: 'move',
             opacity: 0.5,
             containment: '.dropzone',
             distance: 10,
-            tolerance: 'pointer'
-        });
+            tolerance: 'pointer',
+            stop: function () {
+                var queue = Dropzone.instances[0].files;
+                newQueue = [];
+                $('.dropzone .dz-preview .dz-details .dz-filename [data-dz-name]').each(function (count, el) {
+                    var name = el.innerHTML;
+                    queue.forEach(function (file) {
+                        console.log(file);
+                        console.log(name);
+                        if (file.name === name) {
+                            newQueue.push(file);
+                        }
+                    });
+                });
+
+                Dropzone.instances[0].files = newQueue;
+
+            }
+        })
+
+        function validateFileSize() {
+            if (!this.files) {
+                return true;
+            }
+            for(var i = 0; i < this.files.length; i++) {
+                var sizeInMB = Math.ceil(this.files[i].size/1024/1024);
+                if (sizeInMB > 1) {
+                    $("#appbundle_invoice_confirm_files_2").replaceWith($("#appbundle_invoice_confirm_files_2").clone(true, true));
+                    $("#appbundle_invoice_confirm_files_2").on('change', validateFileSize);
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        $("#appbundle_invoice_confirm_files_2").on('change', validateFileSize);
     });
 </script>
 
@@ -494,19 +529,19 @@
     $(function () {
         $('.cropimage').each(function () {
             var image = $(this),
-                    cropwidth = image.attr('cropwidth'),
-                    cropheight = image.attr('cropheight'),
-                    results = image.next('.results'),
-                    x = $('.cropX', results),
-                    y = $('.cropY', results),
-                    w = $('.cropW', results),
-                    h = $('.cropH', results),
-                    download = results.next('.download').find('a');
+                cropwidth = image.attr('cropwidth'),
+                cropheight = image.attr('cropheight'),
+                results = image.next('.results'),
+                x = $('.cropX', results),
+                y = $('.cropY', results),
+                w = $('.cropW', results),
+                h = $('.cropH', results),
+                download = results.next('.download').find('a');
 
             image.cropbox({width: cropwidth, height: cropheight, showControls: 'auto'})
-                    .on('cropbox', function (event, results, img) {
-                        download.attr('href', img.getDataURL());
-                    });
+                .on('cropbox', function (event, results, img) {
+                    download.attr('href', img.getDataURL());
+                });
         });
 
         $('#select').on('change', function () {

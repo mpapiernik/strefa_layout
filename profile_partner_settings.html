@@ -351,6 +351,15 @@
                                                             $('#vatReasonDiv').hide();
                                                         }
                                                     });
+                                                    $('#AccesType').change(function () {
+
+                                                        if ($(this).val() != "0") {
+                                                            $('#invoiceSettingsDiv').show();
+                                                        }
+                                                        else {
+                                                            $('#invoiceSettingsDiv').hide();
+                                                        }
+                                                    });
 
                                                     $('#numberTemplateList').DataTable({
                                                         "searching": false,
