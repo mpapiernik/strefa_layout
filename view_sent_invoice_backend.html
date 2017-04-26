@@ -148,62 +148,91 @@
                                 </div>
                             </fieldset>
                             <fieldset>
-                                    <table class="table table-striped invoice-table" id="example">
-                                        <thead>
-                                        <tr>
-                                            <th>#</th>
-                                            <th></th>
-                                            <th>Wartość netto</th>
-                                            <th class="hidden-sm">Stawka VAT</th>
-                                            <th class="hidden-sm">Kwota VAT</th>
-                                            <th>Wartość brutto</th>
-                                        </tr>
-                                        </thead>
-                                        <tbody>
-                                        <tr>
-                                            <td>1</td>
-                                            <td></td>
-                                            <td>3024,00</td>
-                                            <td class="hidden-sm">ZW</td>
-                                            <td class="hidden-sm">0,00</td>
-                                            <td>3024,00</td>
-                                        </tr>
-                                        <tr>
-                                            <td>2</td>
-                                            <td></td>
-                                            <td>1800,00</td>
-                                            <td class="hidden-sm">1%</td>
-                                            <td class="hidden-sm">18,00</td>
-                                            <td>1818,00</td>
-                                        </tr>
-                                        <tr>
-                                            <td>3</td>
-                                            <td></td>
-                                            <td>250,00</td>
-                                            <td class="hidden-sm">8%</td>
-                                            <td class="hidden-sm">12,00</td>
-                                            <td>262,00</td>
-                                        </tr>
-                                        <tr>
-                                            <td>4</td>
-                                            <td></td>
-                                            <td>2000,00</td>
-                                            <td class="hidden-sm">23%</td>
-                                            <td class="hidden-sm">453,00</td>
-                                            <td>2453,00</td>
-                                        </tr>
-                                        <tr>
-                                            <td>5</td>
-                                            <td><b>SUMA</b></td>
-                                            <td>4500,00</td>
-                                            <td class="hidden-sm">X</td>
-                                            <td class="hidden-sm">1953,00</td>
-                                            <td>6453,00</td>
-                                        </tr>
-                                        </tbody>
+                                <table class="table table-striped invoice-table" id="costTable1">
+                                    <thead>
+                                    <tr>
+                                        <th>Stawka</th>
+                                        <th>8%</th>
+                                        <th>23%</th>
+                                        <th>ZW</th>
+                                        <th>SUMA</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <th>Netto</th>
+                                        <td><input name='netto[]' class="input" style="width: 80px" type="number"></td>
+                                        <td><input name='netto[]' class="input" style="width: 80px" type="number"></td>
+                                        <td><input name='netto[]' class="input" style="width: 80px" type="number"></td>
+                                        <td><input name='sumNetto' class="input" disabled="disabled" style="width: 80px" type="number"></td>
+                                    </tr>
+                                    <tr>
+                                        <th>Vat</th>
+                                        <td><input name='vat[]' class="input" disabled="disabled" style="width: 80px" type="number"></td>
+                                        <td><input name='vat[]' class="input" disabled="disabled" style="width: 80px" type="number"></td>
+                                        <td><input name='vat[]' class="input" disabled="disabled" style="width: 80px" type="number"></td>
+                                        <td><input name='sumVat' class="input" disabled="disabled" style="width: 80px" type="number"></td>
+                                    </tr>
+                                    <tr>
+                                        <th>Brutto</th>
+                                        <td><input name='brutto[]' class="input" disabled="disabled" style="width: 80px" type="number"></td>
+                                        <td><input name='brutto[]' class="input" disabled="disabled" style="width: 80px" type="number"></td>
+                                        <td><input name='brutto[]' class="input" disabled="disabled" style="width: 80px" type="number"></td>
+                                        <td><input name='sumBrutto' class="input" disabled="disabled" style="width: 80px" type="number"></td>
+                                    </tr>
+                                    </tbody>
 
-                                    </table>
+                                </table>
                             </fieldset>
+
+                            <fieldset>
+                                <table class="table table-striped invoice-table" id="costTable2">
+                                    <thead>
+                                    <tr>
+                                        <th>Stawka</th>
+                                        <th>8%</th>
+                                        <th>23%</th>
+                                        <th>ZW</th>
+                                        <th>SUMA</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <th>Netto</th>
+                                        <td><input name='netto[]' class="input" style="width: 80px" type="number"></td>
+                                        <td><input name='netto[]' class="input" style="width: 80px" type="number"></td>
+                                        <td><input name='netto[]' class="input" style="width: 80px" type="number"></td>
+                                        <td><input name='sumNetto' class="input" disabled="disabled" style="width: 80px" type="number"></td>
+                                    </tr>
+                                    <tr>
+                                        <th>Vat</th>
+                                        <td><input name='vat[]' class="input" disabled="disabled" style="width: 80px" type="number"></td>
+                                        <td><input name='vat[]' class="input" disabled="disabled" style="width: 80px" type="number"></td>
+                                        <td><input name='vat[]' class="input" disabled="disabled" style="width: 80px" type="number"></td>
+                                        <td><input name='sumVat' class="input" disabled="disabled" style="width: 80px" type="number"></td>
+                                    </tr>
+                                    <tr>
+                                        <th>Brutto</th>
+                                        <td><input name='brutto[]' class="input" disabled="disabled" style="width: 80px" type="number"></td>
+                                        <td><input name='brutto[]' class="input" disabled="disabled" style="width: 80px" type="number"></td>
+                                        <td><input name='brutto[]' class="input" disabled="disabled" style="width: 80px" type="number"></td>
+                                        <td><input name='sumBrutto' class="input" disabled="disabled" style="width: 80px; display: none" type="number"></td>
+                                    </tr>
+                                    </tbody>
+
+                                </table>
+                                <div class="row">
+                                    <section class="col col-6">
+                                        <label class="label">Kwota brutto dokumentu
+                                        </label>
+                                        <label class="input has-error">
+                                            <input class="input" type='number' id="sumBruttoExternal">
+                                            <span id="sumBruttoExternalError" class="help-block" style="display: none">Podana kwota nie zgadza się z wyliczeniami</span>
+                                        </label>
+                                    </section>
+                                </div>
+                            </fieldset>
+
                             <fieldset>
                                 <div class="row">
                                     <div class="col col-md-12 col-lg-12">
@@ -465,50 +494,7 @@
             jQuery(document).ready(function () {
                 App.init();
 
-                $('#example').DataTable({
-                    "searching": false,
-                    "paging": false,
-                    "ordering": false,
-                    "info": false,
-                    "language": {
-                        "url": "assets/plugins/datatable/lang/Polish.json"
-                    }
-                });
-                $('#example').Tabledit({
-                    confirmButton: false,
-                    deleteButton: true,
-                    restoreButton: true,
-                    hideIdentifier: true,
-                    editButton: true,
-                    buttons: {
-                        edit: {
-                            class: 'btn-u btn-brd btn-brd-hover btn-u-sm btn-u-s',
-                            html: '<i class="fa fa-edit"></i>',
-                            action: 'edit'
-                        },
-                        delete: {
-                            class: 'btn-u btn-brd btn-u-dark btn-brd-hover btn-u-sm margin-left-5',
-                            html: '<i class="fa fa-history"></i>',
-                            action: 'edit'
-                        },
-                        restore: {
-                            class: 'btn btn-sm btn-warning',
-                            html: 'Przywróć',
-                        },
-                        save: {
-                            class: 'btn btn-sm btn-success',
-                            html: 'Zapisz'
-                        },
-                        confirm: {
-                            class: 'btn btn-sm btn-danger',
-                            html: 'Potwierdź'
-                        }
-                    },
-                    columns: {
-                        identifier: [0, '#'],
-                        editable: [ [2, ''], [3, ''], [4, ''], [5, '']]
-                    }
-                });
+
                 $("#sky-form-details").submit(function (event) {
                     var create_date = new Date($('#create_date').val());
                     console.log(create_date);
@@ -607,6 +593,84 @@
                     }
                 });
 
+                function editRowCostTable(table, i) {
+                    var netto = $(table+" [name='netto[]']").eq(i),
+                        nettoValue = parseFloat(netto.val().replace(",", ".")),
+                        vat = $(table+" [name='vat[]']").eq(i),
+                        vatValue = parseFloat(nettoValue * 0.08),
+                        brutto = $(table+" [name='brutto[]']").eq(i),
+                        bruttoValue = parseFloat(nettoValue + vatValue),
+                        sumNetto = $(table+" [name='sumNetto']"),
+                        sumVat = $(table+" [name='sumVat']"),
+                        sumBrutto = $(table+" [name='sumBrutto']");
+
+                        vat.val(vatValue.toFixed(2));
+                        brutto.val(bruttoValue.toFixed(2));
+
+                        var sumNettoVal = 0;
+                        for (var k = 0; k < $(table+" [name='netto[]']").length; k++) {
+                            var tmpValue = parseFloat($(table+" [name='netto[]']").eq(k).val().replace(",", "."));
+                            if (tmpValue > 0) {
+                                sumNettoVal += tmpValue;
+                            }
+                        }
+                        sumNetto.val(sumNettoVal.toFixed(2));
+
+                        var sumVatVal = parseFloat(0);
+                        for (var k = 0; k < $(table+" [name='vat[]']").length; k++) {
+                            var tmpValue = parseFloat($(table+" [name='vat[]']").eq(k).val().replace(",", "."));
+                            if (tmpValue > 0) {
+                                sumVatVal += tmpValue;
+                            }
+                        }
+                        sumVat.val(sumVatVal.toFixed(2))
+
+                        var sumBruttoVal = parseFloat(0);
+                        for (var k = 0; k < $(table+" [name='brutto[]']").length; k++) {
+                            var tmpValue = parseFloat($(table+" [name='brutto[]']").eq(k).val().replace(",", "."));
+                            if (tmpValue > 0) {
+                                sumBruttoVal += tmpValue;
+                            }
+                        }
+                        sumBrutto.val(sumBruttoVal.toFixed(2))
+
+                }
+
+                $("#costTable1 [name='netto[]']").eq(0).on('change', function() {
+                    editRowCostTable("#costTable1", 0);
+                })
+                $("#costTable1 [name='netto[]']").eq(1).on('change', function() {
+                    editRowCostTable("#costTable1", 1);
+                })
+                $("#costTable1 [name='netto[]']").eq(2).on('change', function() {
+                    editRowCostTable("#costTable1", 2);
+                })
+
+
+                $("#costTable2 [name='netto[]']").eq(0).on('change', function() {
+                    editRowCostTable("#costTable2", 0);
+                })
+                $("#costTable2 [name='netto[]']").eq(1).on('change', function() {
+                    editRowCostTable("#costTable2", 1);
+                })
+                $("#costTable2 [name='netto[]']").eq(2).on('change', function() {
+                    editRowCostTable("#costTable2", 2);
+                })
+
+                $("#sumBruttoExternal").on('change', function() {
+                    var field = $(this);
+                    $("#sumBruttoExternalError").hide();
+                    if (parseFloat(field.val().replace(",", ".")) > 0) {
+                        $("#costTable2 [name='sumBrutto']").show();
+                        if (field.val() != $("#costTable2 [name='sumBrutto']").val()) {
+                            $("#sumBruttoExternalError").show();
+                        }
+                    } else {
+                        console.log('dsa');
+                        $("#costTable2 [name='sumBrutto']").hide();
+                    }
+                })
+
                 });
 
 </script>
@@ -617,7 +681,7 @@
                 $("#declineDocument").load("declineDocument.html");
                 $("#verifyDocument").load("verifyDocument.html");
                 $("#registerAction").load("register_ZKK_action.html");
-                $('#takeAction').modal('show');
+//                $('#takeAction').modal('show');
                 $('[data-toggle="tooltip"]').tooltip();
             });
         </script> 
