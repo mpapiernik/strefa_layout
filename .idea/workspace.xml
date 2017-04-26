@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="23f5777b-19af-44d0-9816-0433b4192482" name="Default" comment="Discounts module.&#10;">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view_sent_invoice_backend.html" afterPath="$PROJECT_DIR$/view_sent_invoice_backend.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -53,8 +54,8 @@
       <file leaf-file-name="view_sent_invoice_backend.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/view_sent_invoice_backend.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="261">
-              <caret line="656" column="55" lean-forward="true" selection-start-line="656" selection-start-column="55" selection-end-line="656" selection-end-column="55" />
+            <state relative-caret-position="428">
+              <caret line="684" column="27" lean-forward="false" selection-start-line="684" selection-start-column="27" selection-end-line="684" selection-end-column="27" />
               <folding>
                 <element signature="n#style#0;n#input#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#fieldset#3;n#form#0;n#div#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#input#0;n#td#1;n#tr#0;n#tbody#0;n#table#0;n#fieldset#3;n#form#0;n#div#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -261,12 +262,12 @@
       <workItem from="1488179243525" duration="1304000" />
       <workItem from="1493189275177" duration="359000" />
       <workItem from="1493189756696" duration="454000" />
-      <workItem from="1493190222989" duration="4264000" />
+      <workItem from="1493190222989" duration="4487000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14227000" />
+    <option name="totallyTimeSpent" value="14450000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1035" extended-state="6" />
@@ -701,8 +702,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/view_sent_invoice_backend.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="656" column="55" lean-forward="true" selection-start-line="656" selection-start-column="55" selection-end-line="656" selection-end-column="55" />
+        <state relative-caret-position="428">
+          <caret line="684" column="27" lean-forward="false" selection-start-line="684" selection-start-column="27" selection-end-line="684" selection-end-column="27" />
           <folding>
             <element signature="n#style#0;n#input#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#fieldset#3;n#form#0;n#div#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#input#0;n#td#1;n#tr#0;n#tbody#0;n#table#0;n#fieldset#3;n#form#0;n#div#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
