@@ -1,0 +1,289 @@
+<!DOCTYPE html> 
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->  
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->  
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->  
+    <head>
+        <title>Panelu Partnera Benefit Systems</title>
+
+        <!-- Meta -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <!-- Favicon -->
+        <link rel="shortcut icon" href="favicon.ico">
+
+        <!-- Web Fonts -->
+        <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:400,300,600&amp;subset=cyrillic,latin">
+
+        <!-- CSS Global Compulsory -->
+        <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+
+        <!-- CSS Header and Footer -->
+        <link rel="stylesheet" href="assets/css/headers/header-default.css">
+        <link rel="stylesheet" href="assets/css/footers/footer-v1.css">
+
+        <!-- CSS Implementing Plugins -->
+        <link rel="stylesheet" href="assets/plugins/animate.css">
+        <link rel="stylesheet" href="assets/plugins/line-icons/line-icons.css">
+        <link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="assets/plugins/fancybox/source/jquery.fancybox.css">
+
+        <!-- CSS Page Style -->    
+        <link rel="stylesheet" href="assets/css/pages/shortcode_timeline2.css">
+
+        <link rel="stylesheet" href="assets/css/headers/header-v4.css">
+
+        <!-- CSS Customization -->
+        <link rel="stylesheet" href="assets/css/theme-colors/dark-red.css">
+
+        <link rel="stylesheet" href="assets/plugins/sky-forms-pro/skyforms/css/sky-forms.css">
+        <link rel="stylesheet" href="assets/plugins/sky-forms-pro/skyforms/custom/custom-sky-forms.css">
+
+        <!-- DataTables -->
+        <link rel="stylesheet" type="text/css" href="assets/plugins/datatable/css/jquery.dataTables.css">
+        <link rel="stylesheet" type="text/css" href="assets/plugins/datatable/css/jquery.dataTables.css">
+        <link rel="stylesheet" href="assets/css/jquery.fileupload.css">
+        <link rel="stylesheet" href="assets/css/jquery.fileupload-ui.css">
+        <!-- CSS adjustments for browsers with JavaScript disabled -->
+        <noscript><link rel="stylesheet" href="assets/css/jquery.fileupload-noscript.css"></noscript>
+        <noscript><link rel="stylesheet" href="assets/css/jquery.fileupload-ui-noscript.css"></noscript>
+
+    </head>
+
+    <body>    
+        <div class="wrapper">
+            <!--=== Header ===-->    
+            <div class="header" id="includedContentHeader">
+            </div>
+            <!--=== End Header ===--> 
+            <!--=== Breadcrumbs ===-->
+            <div class="breadcrumbs">
+                <div class="container">
+                    <ul class="pull-right breadcrumb">
+                        <li><a href="wall.html">Home</a></li>
+                        <li><a href="list_accident_report.html">Lista zgłoszeń awarii terminali</a></li>
+                    </ul>
+                    <h1 class="pull-left">Zgłoszenie awarii terminala </h1>
+
+                </div>
+            </div><!--/breadcrumbs-->
+            <!--=== End Breadcrumbs ===-->
+
+            <!--=== Content Part ===-->
+            <div class="container content">     
+                <div class="row">
+                    <!-- Begin Content -->
+                    <div class="col-md-9 margin-bottom-50">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="news-v3-in margin-bottom-20">
+                                    <form class="sky-form">
+                                        <fieldset>
+                                            <div class="row">
+                                                <section class="col col-6">
+                                                    <label class="label">Wybierz obiekt</label>
+                                                    <label class="select">
+                                                        <select id="docTypes" >
+                                                            <option></option>
+                                                            <option value="0">(1212) Tyger Gym - Przymorze</option>
+                                                            <option value="1">(1213) Tyger Gym - Rental park</option>
+                                                            <option value="2">(1215) Tyger Gym - Oliwa</option>
+                                                            <option value="3">(1214) Tyger Gym - Manhattan</option>
+                                                            <option value="4">(1215) Tyger Gym - Rumia</option>
+
+                                                        </select>
+                                                        <i></i>
+                                                    </label>
+                                                </section>
+                                            </div>
+                                        </fieldset>
+                                        <fieldset>
+                                            <div class="row">
+                                                <section class="col col-6">
+                                                    <label class="label">Wybierz terminal</label>
+                                                    <label id="tid1" class="checkbox"><input  class="check1" type="radio" name="checkbox" ><i></i>TID: 001200 SN: 1234567</label>
+                                                    <label id="tid2" class="checkbox"><input class="check1" type="radio" name="checkbox" ><i></i>TID: 001200 SN: 1234567</label>
+                                                    <label class="checkbox"><input class="check1" type="radio" name="checkbox"><i></i>TID: 001200 SN: 1234567</label>
+                                                    <label class="checkbox"><input class="check1" type="radio" name="checkbox"><i></i>TID: 001200 SN: 1234567</label>
+                                                    <label class="checkbox"><input class="check1" type="radio" name="checkbox"><i></i>TID: 001200 SN: 1234567</label>
+                                                </section>
+                                                <section class="col col-6">
+                                                    <label class="label">Gdzie znajdę numery terminali?</label>
+                                                    <a  id="term1" href="assets/img/terminal1.png" rel="gallery" class="fancybox img-hover-v1" title="SN: 1234567">
+                                                        <span><img class="img-responsive" src="assets/img/terminal1.png" alt=""></span>
+                                                    </a>
+                                                    <a style="display:none;" id="term2" href="assets/img/terminal2.png" rel="gallery" class="fancybox img-hover-v1" title="Image 1">
+                                                        <span><img class="img-responsive" src="assets/img/terminal2.png" alt=""></span>
+                                                    </a>
+                                                </section>
+                                            </div>
+                                        </fieldset>
+                                        <fieldset>
+                                            <section>
+                                                <label class="label">Czy terminal sie uruchamia?</label>
+                                                <div class="inline-group">
+                                                <label class="checkbox"><input class="check1" type="radio" name="checkbox1"><i></i>TAK</label>
+                                                <label class="checkbox"><input class="check1" type="radio" name="checkbox1"><i></i>NIE</label>
+                                                </div>
+                                            </section>
+                                            <section>
+                                                <label class="label">Czy terminal rejestruje wizyty?</label>
+                                                <div class="inline-group">
+                                                    <label class="checkbox"><input class="check1" type="radio" name="checkbox2"><i></i>TAK</label>
+                                                    <label class="checkbox"><input class="check1" type="radio" name="checkbox2"><i></i>NIE</label>
+                                                </div>
+                                            </section>
+                                            <section>
+                                                <label class="label">Czy terminal sie uruchamia?</label>
+                                                <div class="inline-group">
+                                                    <label class="checkbox"><input class="check1" type="radio" name="checkbox3"><i></i>TAK</label>
+                                                    <label class="checkbox"><input class="check1" type="radio" name="checkbox3"><i></i>NIE</label>
+                                                </div>
+                                            </section>
+
+                                            <section>
+                                                <label class="label">Komunikat widoczny na terminalu:</label>
+                                                <label class="select" >
+                                                    <select id="komunikaty" onchange=" console.log($('#komunikaty').val());if($('#komunikaty').val() == 4) $('#komunikat').show(); else $('#komunikat').hide();">
+                                                        <option></option>
+                                                        <option value="0">Komunikat 1</option>
+                                                        <option value="1">Komunikat 2</option>
+                                                        <option value="2">Komunikat 3</option>
+                                                        <option value="3">Komunikat 4</option>
+                                                        <option value="4">INNY</option>
+                                                    </select>
+                                                    <i></i>
+                                                    </label>
+                                                <label class="input">
+                                                    <input id="komunikat" type="text" style="display:none;"/>
+                                                </label>
+                                            </section>
+                                            <section>
+                                                <label class="label">Wpisz komenatrz dla serwisanta (wymagane)</label>
+                                                <label class="textarea">
+                                                    <textarea id="appbundle_invoice_confirm_status_comment" name="appbundle_invoice_confirm[status_comment]" rows="3"></textarea>
+                                                </label>
+                                            </section>
+                                        </fieldset>
+                                        <fieldset>
+                                            <div class="row">
+                                                <section class="col col-6">
+                                                    <label  class="label">Wpisz dane kontaktowe</label>
+                                                    <label class="input"> Imię i nazwisko
+                                                        <input id="imie" type="text" />
+                                                    </label>
+                                                    <label class="input"> Nr. telefonu
+                                                        <input id="tel" type="text" />
+                                                    </label>
+                                                    <label class="input"> Godziny przy terminalu
+                                                        <input  type="text" />
+                                                    </label>
+                                                </section>
+                                                <section class="col col-6">
+                                                    <label class="label">Moje dane kontaktowe</label>
+                                                    <label class="input"> Imię i nazwisko
+                                                        <input id="imietmp" type="text" value="Marcin Banaszek" disabled="disabled"/>
+                                                    </label>
+                                                    <label class="input"> Nr. telefonu
+                                                        <input id="teltmp" type="text" value="608430258" disabled="disabled"/>
+                                                    </label>
+                                                    <button type="button" class="btn-u margin-bottom-5" onclick="$('#imie').val($('#imietmp').val());$('#tel').val($('#teltmp').val());">Skopiuj moje dane</button>
+                                                </section>
+
+                                        </fieldset>
+                                        <footer style="text-align: right;">
+                                            <button type="button" class="btn-u btn-u-default" onclick="window.history.back();">Wróć</button>
+                                            <button type="submit" class="btn-u margin-bottom-5">Zgłoś awarię</button>
+                                        </footer>
+                                    </form>         
+
+
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                <!-- End Content -->
+                <!-- Begin Sidebar Menu -->
+                <div class="col-md-3" id="includedContentSideBar">
+                </div>
+                <!-- End Sidebar Menu -->
+                </div><!--/row-->
+            </div>          
+        </div><!--/container-->     
+        <!--=== End Content Part ===-->
+
+    </div><!--/End Wrapepr-->
+    <!--=== Footer Version 1 ===-->
+    <div class="footer-v1" id="includedContentFooter">
+    </div>     
+    <!--=== End Footer Version 1 ===-->
+    <!-- JS Global Compulsory -->           
+    <script type="text/javascript" src="assets/plugins/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/jquery/jquery-migrate.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <!-- JS Implementing Plugins -->
+    <script type="text/javascript" src="assets/plugins/back-to-top.js"></script>
+    <script type="text/javascript" src="assets/plugins/smoothScroll.js"></script>
+    <script type="text/javascript" src="assets/plugins/fancybox/source/jquery.fancybox.js"></script>
+
+    <!-- JS Customization -->
+    <script type="text/javascript" src="assets/js/custom.js"></script>
+    <!-- JS Page Level -->           
+    <script type="text/javascript" src="assets/js/app.js"></script>
+    <script type="text/javascript" language="javascript" src="assets/plugins/datatable/js/jquery.dataTables.js"></script>
+    <script type="text/javascript" src="assets/js/jquery.tabledit.js"></script>
+    <script type="text/javascript" src="assets/js/plugins/fancy-box.js"></script>
+    <script type="text/javascript">
+                                            jQuery(document).ready(function () {
+                                                App.init();
+                                                $('#vatReasonDiv').hide();
+
+                                                $('#docTypes').change(function () {
+
+                                                    if ($(this).val() == "2") {
+                                                        $('#vatReasonDiv').slideToggle('fast', function () {
+                                                            // Animation complete.
+                                                        });
+                                                    }
+                                                    else {
+                                                        $('#vatReasonDiv').hide();
+                                                    }
+                                                });
+
+                                                $('#vat_reason').change(function () {
+                                                    var str = "";
+                                                    $("#vat_reason option:selected").each(function () {
+                                                        str += $(this).val() + " ";
+                                                    });
+                                                    $("#vat_reason_text").text(str);
+                                                });
+
+
+                                                FancyBox.initFancybox();
+                                                $('#tid1').mouseenter(function(){$('#term2').hide();$('#term1').show();});
+                                                $('#tid2').mouseenter(function(){$('#term1').hide();$('#term2').show();});
+                                            });
+    </script>
+    <script>
+        $(function () {
+            $("#includedContentSideBar").load("sidebar.html");
+            $("#includedContentHeader").load("header.html");
+            $("#includedContentFooter").load("footer.html");
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+    </script> 
+    <!--[if lt IE 9]>
+        <script src="assets/plugins/respond.js"></script>
+        <script src="assets/plugins/html5shiv.js"></script>
+        <script src="assets/plugins/placeholder-IE-fixes.js"></script>
+    <![endif]-->
+
+</body>
+</html> 

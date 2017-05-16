@@ -3,7 +3,7 @@
 <!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->  
 <!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->  
     <head>
-        <title>Panel Benefit Systems</title>
+        <title>Panelu Partnera Benefit Systems</title>
 
         <!-- Meta -->
         <meta charset="utf-8">
@@ -30,9 +30,6 @@
         <link rel="stylesheet" href="assets/plugins/line-icons/line-icons.css">
         <link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.min.css">
 
-        <!-- CSS Page Style -->    
-        <link rel="stylesheet" href="assets/css/pages/shortcode_timeline2.css">
-
         <!-- CSS Customization -->
         <link rel="stylesheet" href="assets/css/theme-colors/dark-red.css">
 
@@ -49,82 +46,58 @@
             <!--=== Breadcrumbs ===-->
             <div class="breadcrumbs">
                 <div class="container">
-                    <h1 class="pull-left">Lista plików do pobrania</h1>
+                    <h1 class="pull-left">Lista zgłoszeń awarii terminali</h1>
                     <ul class="pull-right breadcrumb">
                         <li><a href="wall.html">Home</a></li>
-                        <li><a href="list_download_files.html">Pliki do pobrania</a></li>
                     </ul>
                 </div>
             </div><!--/breadcrumbs-->
             <!--=== End Breadcrumbs ===-->
 
             <!--=== Content Part ===-->
-            <div class="container content">
+            <div class="container content">     
                 <div class="row">
                     <!-- Begin Content -->
-                    <div class="col-md-12 margin-bottom-50">
-                        <div class="margin-bottom-20">
-                            <div class="btn-group">
-                                <a href="add_article.html" class="button btn-u pull-right"><i class="fa fa-plus fa-fw"></i>Dodaj artykuł</a>         
-                            </div>
-                            <!-- End Single button -->                    
-                        </div>
-                        <hr>
-                        <div>
-                            <table id="facilityList" class="display" cellspacing="0" width="100%" style="text-align: left">
+
+                            <table id="operatorsList" class="display" cellspacing="0" width="100%" style="text-align: left">
                                 <thead>
                                     <tr>
-                                        <th>#</th>
-                                        <th>Tytuł</th>
-                                        <th>Data&nbsp;utworzenia</th>
-                                        <th>Edytor</th>
-                                        <th>Data&nbsp;edycji</th>
-                                        <th>Tagi</th>
-                                        <th>Opublikowany</th>
-                                        <th>Draft</th>
+                                        <th>Data zgłoszenia awarii</th>
+                                        <th class="hidden-sm hidden-xs">Numer wniosku</th>
+                                        <th class="hidden-sm hidden-xs">Obiekt</th>
+                                        <th class="hidden-sm hidden-xs">Terminal</th>
+                                        <th class="hidden-sm hidden-xs">Zgłaszający</th>
+                                        <th class="hidden-sm hidden-xs">Status</th>
                                         <th>Więcej</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td>1</td>
-                                        <td>Od listopada nowa karta benefitsport</td>
-                                        <td class="hidden-sm hidden-xs">2015-06-07</td>
-                                          <td class="hidden-sm hidden-xs"><a href="profile_benefit_operator.html">Jacek Benefitowski</a></td>
-                                        <td class="hidden-sm hidden-xs">2015-06-07</td>
-                                        <td>
-                                          dsa,dsa,das,das
-                                        </td>
-                                        <td>Tak</td>
-                                        <td>Nie</td>
+                                        <td>15-07-2015, 14:00:18</td>
+                                        <td class="hidden-sm hidden-xs"><a href="add_accident_report.html">123</a></td>
+                                        <td>(1212) Tyger Gym - Przymorze</td>
+                                        <td>TID: 001200 SN: 1234567</td>
+                                        <td>Adam Kowalski</td>
+                                        <td class="hidden-sm hidden-xs">Nowy</td>
                                         <td>
                                             <div class="btn-group">
-                                               <button type="button" class="btn-u btn-brd color-red btn-brd-hover btn-u-sm dropdown-toggle bars" data-toggle="dropdown">
+                                                <button type="button" class="btn-u btn-brd color-red btn-brd-hover btn-u-sm dropdown-toggle bars" data-toggle="dropdown">
                                                     <i class="fa fa fa-bars"></i>
                                                     <span class="sr-only">Toggle Dropdown</span>                            
                                                 </button>
                                                 <ul class="dropdown-menu" role="menu">
-                                                    <li><a href="#"><i class="fa fa-mail-forward"></i> Powiadom w aktualnościach</a></li>
-                                                    <li><a href="#"><i class="fa fa-link"></i> Kopiuj link do artykułu</a></li>
-                                                    <li><a href="edit_article.html"><i class="fa fa-edit"></i> Edytuj</a></li>
-                                                    <li>
-                                                        <a href="#" data-toggle="modal" data-target="#publishModal" id="confirmPublish"><i class="fa fa-ban"></i> Ukryj</a>
-                                                    </li>
+                                                    <li><a href="add_accident_report.html"><i class="fa fa-eye"></i> Zobacz szczegóły</a></li>
                                                 </ul>
                                             </div>
                                         </td>
                                     </tr>
-                                    <tr>
-                                        <td>2</td>
-                                        <td>Od listopada nowa karta benefitsport</td>
-                                        <td class="hidden-sm hidden-xs">2015-06-07</td>
-                                        <td class="hidden-sm hidden-xs"><a href="profile_benefit_operator.html">Jacek Benefitowski</a></td>
-                                        <td class="hidden-sm hidden-xs">2015-06-07</td>
-                                        <td>
-                                            dsa,dsa,das,das
-                                        </td>
-                                        <td>Nie</td>
-                                        <td>Tak</td>
+                                    <tr style="background-color: #f2dede;">
+                                        <td>15-05-2015, 13:00:18</td>
+                                        <td class="hidden-sm hidden-xs"><a href="add_accident_report.html">123</a></td>
+                                        <td>(1212) Tyger Gym - Przymorze</td>
+                                        <td>TID: 001201 SN: 1234567</td>
+                                        <td>Adam Kalisz</td>
+                                        <td class="hidden-sm hidden-xs">Zamknięty</td>
                                         <td>
                                             <div class="btn-group">
                                                 <button type="button" class="btn-u btn-brd color-red btn-brd-hover btn-u-sm dropdown-toggle bars" data-toggle="dropdown">
@@ -132,12 +105,7 @@
                                                     <span class="sr-only">Toggle Dropdown</span>
                                                 </button>
                                                 <ul class="dropdown-menu" role="menu">
-                                                    <li><a href="#"><i class="fa fa-mail-forward"></i> Powiadom w aktualnościach</a></li>
-                                                    <li><a href="#"><i class="fa fa-link"></i> Kopiuj link do artykułu</a></li>
-                                                    <li><a href="edit_article.html"><i class="fa fa-edit"></i> Edytuj</a></li>
-                                                    <li>
-                                                        <a href="#" data-toggle="modal" data-target="#publishModal" id=""><i class="fa fa-check"></i> Opublikuj</a>
-                                                    </li>
+                                                    <li><a href="add_accident_report.html"><i class="fa fa-eye"></i> Zobacz szczegóły</a></li>
                                                 </ul>
                                             </div>
                                         </td>
@@ -145,14 +113,12 @@
                                 </tbody>
                             </table>
                         </div>
-
                     </div>
                     <!-- End Content -->
-                </div>
-            </div><!--/container-->
+                </div>          
+            </div><!--/container-->     
             <!--=== End Content Part ===-->
-            <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true"></div>
-            <div class="modal fade" id="publishModal" tabindex="-1" role="dialog" aria-labelledby="publishModalLabel" aria-hidden="true"></div>
+            <div class="modal fade" id="confirmBlockOperator" tabindex="-1" role="dialog" aria-hidden="true"></div>
         </div><!--/End Wrapepr-->
         <!--=== Footer Version 1 ===-->
         <div class="footer-v1" id="includedContentFooter">
@@ -175,12 +141,11 @@
             jQuery(document).ready(function () {
                 App.init();
                 $(document).ready(function () {
-                    $('#facilityList').DataTable({
+                    $('#operatorsList').DataTable({
                         "language": {
                             "url": "assets/plugins/datatable/lang/Polish.json"
                         }
                     });
-                    $('.dropdown-toggle').dropdown();
                 });
             });
         </script>
@@ -188,8 +153,9 @@
             $(function () {
                 $("#includedContentHeader").load("header_backend.html");
                 $("#includedContentFooter").load("footer.html");
-                $("#deleteModal").load("delete_article.html");
-                $("#publishModal").load("publish_article.html");
+                setTimeout(function () {
+                    $('.dropdown-toggle').dropdown();
+                }, 1000);
             });
         </script> 
         <!--[if lt IE 9]>

@@ -38,6 +38,8 @@
 
         <!-- DataTables -->
         <link rel="stylesheet" type="text/css" href="assets/plugins/datatable/css/jquery.dataTables.css">
+		<link rel="stylesheet" type="text/css" href="assets/plugins/datatable/css/rowReorder.dataTables.min.css">
+		
     </head>
 
     <body>    
@@ -137,7 +139,7 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td>3</td>
+                                        <td>333</td>
                                         <td>Regulamin.pdf</td>
                                         <td class="hidden-sm hidden-xs">2015-06-07</td>
                                         <td class="hidden-sm hidden-xs"><a href="profile_benefit_operator.html">Jacek Benefitowski</a></td>
@@ -191,15 +193,38 @@
         <script type="text/javascript" src="assets/js/app.js"></script>
         <!-- JS DataTables -->
         <script type="text/javascript" language="javascript" src="assets/plugins/datatable/js/jquery.dataTables.js"></script>
+		<script type="text/javascript" language="javascript" src="assets/plugins/datatable/js/dataTables.rowReorder.min.js"></script>
+		
         <script type="text/javascript">
             jQuery(document).ready(function () {
                 App.init();
                 $(document).ready(function () {
-                    $('#facilityList').DataTable({
-                        "language": {
+                    table = $('#facilityList').DataTable({
+                        rowReorder: true,
+                        select: true,
+						"language": {
                             "url": "assets/plugins/datatable/lang/Polish.json"
-                        }
+                        },
+                        columns: [
+                            { className: 'reorder' },
+                            {  },
+                            { },
+                            { },
+                            {},
+                            {},
+                            {},
+                            {}
+                        ],
+                        columnDefs: [
+                            { orderable: true, targets: [ 1,2,3,4,5,6,7 ] }
+                        ]
                     });
+                    table.on( 'row-reorder', function ( e, diff, edit ) {
+                        for ( var i=0, ien=diff.length ; i<ien ; i++ ) {
+                            console.log(diff[i].oldPosition + ' ' + diff[i].newPosition);
+                            console.log(diff[i].node);
+                        }
+                    } );
                     $('.dropdown-toggle').dropdown();
                 });
             });

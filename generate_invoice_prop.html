@@ -1,0 +1,416 @@
+<!DOCTYPE html> 
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->  
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->  
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->  
+    <head>
+        <title>Panelu Partnera Benefit Systems</title>
+
+        <!-- Meta -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <!-- Favicon -->
+        <link rel="shortcut icon" href="favicon.ico">
+
+        <!-- Web Fonts -->
+        <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:400,300,600&amp;subset=cyrillic,latin">
+
+        <!-- CSS Global Compulsory -->
+        <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+
+        <!-- CSS Header and Footer -->
+        <link rel="stylesheet" href="assets/css/headers/header-default.css">
+        <link rel="stylesheet" href="assets/css/footers/footer-v1.css">
+
+        <!-- CSS Implementing Plugins -->
+        <link rel="stylesheet" href="assets/plugins/animate.css">
+        <link rel="stylesheet" href="assets/plugins/line-icons/line-icons.css">
+        <link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="assets/plugins/sky-forms-pro/skyforms/css/sky-forms.css">
+        <link rel="stylesheet" href="assets/plugins/sky-forms-pro/skyforms/custom/custom-sky-forms.css">
+        <!--[if lt IE 9]><link rel="stylesheet" href="assets/plugins/sky-forms-pro/skyforms/css/sky-forms-ie8.css"><![endif]-->
+
+        <!-- CSS Page Style -->    
+        <link rel="stylesheet" href="assets/css/pages/shortcode_timeline2.css">
+
+        <!-- CSS Customization -->
+        <link rel="stylesheet" href="assets/css/theme-colors/dark-red.css">
+
+
+        <!-- CSS Page Style -->    
+        <link rel="stylesheet" href="assets/css/pages/page_invoice.css">
+
+        <!-- DataTables -->
+        <link rel="stylesheet" type="text/css" href="assets/plugins/datatable/css/jquery.dataTables.css">
+        <link rel="stylesheet" href="assets/css/jquery.fileupload.css">
+        <link rel="stylesheet" href="assets/css/jquery.fileupload-ui.css">
+        <!-- CSS adjustments for browsers with JavaScript disabled -->
+        <noscript><link rel="stylesheet" href="assets/css/jquery.fileupload-noscript.css"></noscript>
+        <noscript><link rel="stylesheet" href="assets/css/jquery.fileupload-ui-noscript.css"></noscript>
+
+    </head>
+    <body>    
+        <div class="wrapper">
+            <!--=== Header ===-->    
+            <div class="header" id="includedContentHeader">
+            </div>
+            <!--=== End Header ===--> 
+            <!--=== Breadcrumbs ===-->
+            <div class="breadcrumbs">
+                <div class="container">
+                    <h1 class="pull-left">Propozycja rozliczenia na Fakturze</h1>
+                    <ul class="pull-right breadcrumb">
+                        <li><a href="wall.html">Home</a></li>
+                        <li><a href="list_invoices.html">Faktury</a></li>
+                    </ul>
+                </div>
+            </div><!--/breadcrumbs-->
+            <!--=== End Breadcrumbs ===-->
+            <!--=== Content Part ===-->
+            <div class="container content">     
+                <div class="row">
+                    <!-- Begin Content -->
+                    <div class="col-md-12 margin-bottom-50">
+
+
+
+                        <!-- Modal Detailss-->
+                        <div class="modal fade" id="modalDetails" tabindex="-1" role="dialog" aria-labelledby="modalDetailsLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-lg">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button aria-hidden="true" data-dismiss="modal" class="close" type="button">×</button>
+                                        <h4 id="modalDetailsLabel" class="modal-title"> Napisz szczegóły dokumentu</h4>
+                                    </div>
+                                    <form action="#" id="sky-form-details" class="sky-form">
+                                        <fieldset>
+                                            <div class="row">
+                                                <section class="col col-6">
+                                                    <label class="label">Data wystawienia</label>
+                                                    <label class="input" id="input_create_date">
+                                                        <i class="icon-prepend fa fa-calendar"></i>
+                                                        <input type="text" name="date" id="create_date" value="2015-05-16">
+                                                    </label>
+                                                    <div class="note note-error state-error" id="note_error_create_date"></div>
+                                                </section>
+                                                <section class="col col-6">
+                                                    <label class="label">Miasto wystawienia</label>
+                                                    <label class="input">
+                                                        <i class="icon-prepend fa fa-university"></i>
+                                                        <input type="text" name="create_city">
+                                                    </label>
+                                                </section>
+                                            </div>
+                                            <div class="row">
+                                                <section class="col col-6">
+                                                    <label class="label">Data dokonania usługi</label>
+                                                    <label class="input">
+                                                        <i class="icon-prepend fa fa-calendar"></i>
+                                                        <input type="text" name="date" id="sell_date" disabled>
+                                                    </label>
+                                                </section>
+                                                <section class="col col-6">
+                                                    <label class="label">Termin płatności</label>
+                                                    <label class="input">
+                                                        <i class="icon-prepend fa fa-calendar"></i>
+                                                        <input type="text" name="payment_date" disabled>
+                                                    </label>
+                                                </section>
+                                            </div>
+                                            <div class="row">
+                                                <section class="col col-3">
+                                                    <label class="label">Forma płatności</label>
+                                                    <label class="select">
+                                                        <select name="payment_type">
+                                                            <option value="0" selected>przelew</option>
+                                                            <option value="1">gotówka</option>
+                                                        </select>
+                                                        <i></i>
+                                                    </label>
+                                                </section>
+                                            </div>
+                                        </fieldset>
+                                        <div class="modal-footer">
+                                            <button data-dismiss="modal" class="btn-u btn-u-default" type="button">Wróć</button>
+                                            <button  type="submit" class="btn-u">Potwierdź zmiany</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Modal Details-->
+
+                        <!-- Checkout-Form -->
+                        <form action="list_invoices.html" id="sky-form" class="sky-form">
+                            <fieldset>
+                                <h4>Lista usług</h4>
+                                <table class="table table-striped invoice-table" id="example">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th class="table-product">Usługa (Obiekt)</th>
+                                            <th>PKWiU</th>
+                                            <th>Ilość</th>
+                                            <th class="hidden-sm">J.m.</th>
+                                            <th>Cena jedn. netto</th>
+                                            <th>Wartość netto</th>
+                                            <th class="hidden-sm">Stawka VAT</th>
+                                            <th class="hidden-sm">Kwota VAT</th>
+                                            <th>Wartość brutto</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td class="table-product">Sauna (Tyger Gym - Przymorze)</td>
+                                            <td></td>
+                                            <td>252</td>
+                                            <td class="hidden-sm">szt.</td>
+                                            <td>12,00</td>
+                                            <td>3024,00</td>
+                                            <td class="hidden-sm">ZW</td>
+                                            <td class="hidden-sm">0,00</td>
+                                            <td>3024,00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td class="table-product">Zajęcia sportowe pracownika (Tyger Gym - Przymorze)</td>
+                                            <td> 93.13.10.0 </td>
+                                            <td>25</td>
+                                            <td class="hidden-sm">szt.</td>
+                                            <td>10,00</td>
+                                            <td>250,00</td>
+                                            <td class="hidden-sm">ZW</td>
+                                            <td class="hidden-sm">0,00</td>
+                                            <td>250,00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td class="table-product">Zajęcia fitness (Tyger Gym - Manhattan)</td>
+                                            <td> 93.13.10.0 </td>
+                                            <td>120</td>
+                                            <td class="hidden-sm">szt.</td>
+                                            <td>15,00</td>
+                                            <td>1800,00</td>
+                                            <td class="hidden-sm">ZW</td>
+                                            <td class="hidden-sm">0,00</td>
+                                            <td>1800,00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>4</td>
+                                            <td class="table-product">Zajęcia jogi (Tyger Gym - Manhattan)</td>
+                                            <td>100.32.3</td>
+                                            <td>100</td>
+                                            <td class="hidden-sm">szt.</td>
+                                            <td>20,00</td>
+                                            <td>2000,00</td>
+                                            <td class="hidden-sm">ZW</td>
+                                            <td class="hidden-sm">0,00</td>
+                                            <td>2000,00</td>
+                                        </tr>
+                                    </tbody>
+
+                                </table>
+                            </fieldset>
+                            <fieldset>
+                                <h4>Podsumowanie</h4>
+                                <table class="table table-striped invoice-table">
+                                    <thead>
+                                        <tr>
+                                            <th>&nbsp;</th>
+                                            <th class="table-product">&nbsp;</th>
+                                            <th>&nbsp;</th>
+                                            <th class="hidden-sm">&nbsp;</th>
+                                            <th>&nbsp;</th>
+                                            <th>Wartość netto</th>
+                                            <th class="hidden-sm">Stawka VAT</th>
+                                            <th class="hidden-sm">Kwota VAT</th>
+                                            <th>Wartość brutto</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="no-border">&nbsp;</td>
+                                            <td class="no-border">&nbsp;</td>
+                                            <td class="no-border">&nbsp;</td>
+                                            <td class="hidden-sm no-border">&nbsp;</td>
+                                            <td class="summary summary-text summary-row">RAZEM</td>
+                                            <td class="summary-cell summary-row">31666,00</td>
+                                            <td class="hidden-sm summary-row">X</td>
+                                            <td class="hidden-sm summary-row">X</td>
+                                            <td class="summary-row summary-border-right">31666,00</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="no-border"></td>
+                                            <td class="no-border"></td>
+                                            <td class="no-border"></td>
+                                            <td class="hidden-sm no-border"></td>
+                                            <td class="summary summary-text">W tym</td>
+                                            <td class="summary-cell">27216,00</td>
+                                            <td class="hidden-sm">ZW</td>
+                                            <td class="hidden-sm">0,00</td>
+                                            <td class="summary-border-right">27216,00</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="no-border"></td>
+                                            <td class="no-border"></td>
+                                            <td class="no-border"></td>
+                                            <td class="hidden-sm no-border"></td>
+                                            <td class="no-border"></td>
+                                            <td class="summary-cell">1800,00</td>
+                                            <td class="hidden-sm">ZW</td>
+                                            <td class="hidden-sm">0,00</td>
+                                            <td class="summary-border-right">1800,00</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="no-border"></td>
+                                            <td class="no-border"></td>
+                                            <td class="no-border"></td>
+                                            <td class="hidden-sm no-border"></td>
+                                            <td class="no-border"></td>
+                                            <td class="summary-cell summary-border-bottom">2250,00</td>
+                                            <td class="hidden-sm summary-border-bottom">ZW</td>
+                                            <td class="hidden-sm summary-border-bottom">0,00</td>
+                                            <td class="summary-border-right summary-border-bottom">2250,00</td>
+                                        </tr>
+                                    </tbody>
+
+                                </table>
+                                <div class="row">
+                                    <div class="col-xs-4">
+                                        <div class="tag-box tag-box-v3 no-margin-bottom">
+                                            <strong>Razem do zapłaty: </strong>8073,18 PLN
+                                        </div>    
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <div class="tag-box tag-box-v3 no-margin-bottom">
+                                            <strong>Słownie: </strong>osiem tysięcy sielemdziesiąt trzy i 0,18 PLN
+                                        </div>    
+                                    </div>
+                                </div>
+                            </fieldset>
+
+                        </form>         
+                        <!-- Post -->
+                    </div>
+                    <!-- End Content -->
+
+                </div>          
+            </div><!--/container-->     
+            <!--=== End Content Part ===-->
+        </div><!--/End Wrapepr-->
+        <!--=== Footer Version 1 ===-->
+        <div class="footer-v1" id="includedContentFooter">
+        </div>     
+        <!--=== End Footer Version 1 ===-->
+        <!-- JS Global Compulsory -->           
+        <script type="text/javascript" src="assets/plugins/jquery/jquery.min.js"></script>
+        <script type="text/javascript" src="assets/plugins/jquery/jquery-migrate.min.js"></script>
+        <script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+        <!-- JS Implementing Plugins -->
+        <script type="text/javascript" src="assets/plugins/back-to-top.js"></script>
+        <script type="text/javascript" src="assets/plugins/smoothScroll.js"></script>
+        <!-- JS Customization -->
+        <script type="text/javascript" src="assets/js/custom.js"></script>
+        <!-- JS Page Level -->           
+        <script type="text/javascript" src="assets/js/app.js"></script>
+        <script type="text/javascript" language="javascript" src="assets/plugins/datatable/js/jquery.dataTables.js"></script>
+        <script type="text/javascript" src="assets/js/jquery.tabledit.js"></script>
+        <script src="assets/plugins/sky-forms-pro/skyforms/js/jquery.validate.min.js"></script>
+        <script type="text/javascript" src="assets/js/plugins/validation.js"></script>
+        <script type="text/javascript" src="assets/js/forms/invoices.js"></script>
+        <script type="text/javascript">
+
+                                    jQuery(document).ready(function () {
+                                        App.init();
+                                        InvoiceForm.initInvoiceForm();
+                                    });
+                                    $(document).ready(function () {
+                                        $('#example').DataTable({
+                                            "searching": false,
+                                            "paging": false,
+                                            "ordering": false,
+                                            "info": false,
+                                            "language": {
+                                                "url": "assets/plugins/datatable/lang/Polish.json"
+                                            }
+                                        });
+                                        $('#example').Tabledit({
+                                            confirmButton: false,
+                                            deleteButton: true,
+                                            restoreButton: true,
+                                            hideIdentifier: true,
+                                            editButton: true,
+                                            buttons: {
+                                                edit: {
+                                                    class: 'btn-u btn-brd btn-brd-hover btn-u-sm btn-u-s',
+                                                    html: '<i class="fa fa-edit"></i>',
+                                                    action: 'edit'
+                                                },
+                                                delete: {
+                                                    class: 'btn-u btn-brd btn-u-dark btn-brd-hover btn-u-sm margin-left-5',
+                                                    html: '<i class="fa fa-history"></i>',
+                                                    action: 'edit'
+                                                },
+                                                restore: {
+                                                    class: 'btn btn-sm btn-warning',
+                                                    html: 'Przywróć',
+                                                },
+                                                save: {
+                                                    class: 'btn btn-sm btn-success',
+                                                    html: 'Zapisz'
+                                                },
+                                                confirm: {
+                                                    class: 'btn btn-sm btn-danger',
+                                                    html: 'Potwierdź'
+                                                }
+                                            },
+                                            columns: {
+                                                identifier: [0, '#'],
+                                                editable: [[1, 'Usługa (Obiekt)'], [2, 'PKWiU'], [3, 'Ilość'], [5, 'Cena jedn. netto'], [7, '']]
+                                            }
+                                        });
+                                        $("#sky-form-details").submit(function (event) {
+                                            var create_date = new Date($('#create_date').val());
+                                            console.log(create_date);
+                                            if (create_date) {
+                                                var create_day = create_date.getDate();
+                                                console.log(create_day);
+                                                var start_day = 1;
+                                                var end_day = 15;
+                                                if (start_day <= create_day && create_day <= end_day) {
+                                                    $('#input_create_date').removeClass("state-error");
+                                                    $('#note_error_create_date').text("");
+                                                }
+                                                else {
+                                                    $('#input_create_date').addClass("state-error");
+                                                    $('#note_error_create_date').text("Wprowadź datę z poprawnego zakresu rozliczeniowego, tj. dzień od 1 do 15");
+                                                    event.preventDefault();
+                                                }
+                                            } else {
+                                                alert("Invalid date range entered");
+                                                event.preventDefault();
+                                            }
+                                        });
+                                    });
+        </script>
+        <script>
+            $(function () {
+                $("#includedContentHeader").load("header.html");
+                $("#includedContentFooter").load("footer.html");
+                $("#includedContentSideBar").load("sidebar.html");
+            });
+        </script> 
+        <!--[if lt IE 9]>
+            <script src="assets/plugins/respond.js"></script>
+            <script src="assets/plugins/html5shiv.js"></script>
+            <script src="assets/plugins/placeholder-IE-fixes.js"></script>
+        <![endif]-->
+
+    </body>
+</html> 

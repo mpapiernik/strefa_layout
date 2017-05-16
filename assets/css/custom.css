@@ -322,3 +322,13 @@ td a.btn-u {
 .dataTables_wrapper .dataTables_paginate .paginate_button.current, .dataTables_wrapper .dataTables_paginate .paginate_button.current:hover {
   background: #b61332;
 }
+/** dodany napiś rozliń i zwiń do strzałek **/
+
+i.fa-sort-desc:after {
+    content:"(rozwiń)";
+    font-size: 13px;
+}
+i.fa-sort-asc:after {
+    content:"(zwiń)";
+    font-size: 13px;
+}

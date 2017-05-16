@@ -35,7 +35,7 @@
 
         <!-- CSS Customization -->
         <link rel="stylesheet" href="assets/css/theme-colors/dark-red.css">
-
+        <link rel="stylesheet" href="assets/css/custom.css">
 
         <!-- CSS Page Style -->    
         <link rel="stylesheet" href="assets/css/pages/page_invoice.css">
@@ -65,6 +65,158 @@
 
             <!--=== Content Part ===-->
             <div class="container content  margin-bottom-50">
+
+                <!--History Invoice Table-->
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="tag-box tag-box-v3 no-margin-bottom">
+                            <div class="headline">
+                                <h2>Historia dokumentu i komentarze <a id="appendHistory"><i id="historyArrow" class="fa fa-sort-desc"></i></a> </h2>
+                            </div>
+                            <div id="historyTab">
+                                <div id="loader" style="text-align: center;"><h2><i class="fa fa-spinner fa-pulse fa-lg"></i></h2></div>
+                                <table id="history" class="display history-summary" cellspacing="0" width="100%">
+                                    <thead>
+                                    <tr>
+                                        <th class="details-control"></th>
+                                        <th></th>
+                                        <th class="hidden-sm hidden-xs hidden-xs">Data&nbsp;edycji</th>
+                                        <th>Autor</th>
+                                        <th class="hidden-sm hidden-xs">Status</th>
+                                        <th>Typ i numer dokumentu</th>
+                                        <th>Strona</th>
+                                        <th>Komentarz</th>
+                                        <th>Więcej ZKK</th>
+                                        <th>Podgląd</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td class="details-control"></td>
+                                        <td>1</td>
+                                        <td class="hidden-sm hidden-xs">2015-05-31</td>
+                                        <td class="hidden-sm hidden-xs">Jan Kowalski</td>
+                                        <td class="hidden-sm hidden-xs">Do akceptacji</td>
+                                        <td>Faktura VAT, 2015/FVS/25015</td>
+                                        <td>Partner</td>
+                                        <td>Skontaktowałem się z moim Opiekunem Partnerem i wystawilem dokument.</td>
+                                        <td>Nie </td>
+                                        <td><a href="view_invoice.html"  target="_blank" class="btn-u btn-brd btn-brd-hover btn-u-sm"><i class="fa fa-eye"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class=""></td>
+                                        <td>2</td>
+                                        <td class="hidden-sm hidden-xs">2015-05-31</td>
+                                        <td class="hidden-sm hidden-xs">Jan Kowalski</td>
+                                        <td class="hidden-sm hidden-xs">Podjęty</td>
+                                        <td>Faktura VAT, 2015/FVS/25015</td>
+                                        <td>BS</td>
+                                        <td></td>
+                                        <td>Nie </td>
+                                        <td><a href="view_invoice.html"  target="_blank" class="btn-u btn-brd btn-brd-hover btn-u-sm"><i class="fa fa-eye"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class=""></td>
+                                        <td>3</td>
+                                        <td class="hidden-sm hidden-xs">2015-05-31</td>
+                                        <td class="hidden-sm hidden-xs">Jan Kowalski</td>
+                                        <td class="hidden-sm hidden-xs">Do akceptacji</td>
+                                        <td>Faktura VAT, 2015/FVS/25015</td>
+                                        <td>BS</td>
+                                        <td>Skontaktowałem się z Partnerem w wcelu wyjąsnienia nieścisłości.</td>
+                                        <td>Tak </td>
+                                        <td><a href="view_invoice.html"  target="_blank" class="btn-u btn-brd btn-brd-hover btn-u-sm"><i class="fa fa-eye"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class=""></td>
+                                        <td>4</td>
+                                        <td class="hidden-sm hidden-xs">2015-05-31</td>
+                                        <td class="hidden-sm hidden-xs">Jan Kowalski</td>
+                                        <td class="hidden-sm hidden-xs">Do akceptacji</td>
+                                        <td>Faktura VAT, 2015/FVS/25015</td>
+                                        <td>BS</td>
+                                        <td>Przesłalem wyciąg z terminali z różnicami.</td>
+                                        <td>Tak </td>
+                                        <td><a href="view_invoice.html"  target="_blank" class="btn-u btn-brd btn-brd-hover btn-u-sm"><i class="fa fa-eye"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="details-control"></td>
+                                        <td>5</td>
+                                        <td class="hidden-sm hidden-xs">2015-06-07</td>
+                                        <td class="hidden-sm hidden-xs">Jan Kowalski</td>
+                                        <td class="hidden-sm hidden-xs">Zaakceptowana</td>
+                                        <td>Faktura VAT, 2015/FVS/25015</td>
+                                        <td>BS</td>
+                                        <td></td>
+                                        <td>Nie </td>
+                                        <td><a href="view_invoice.html"  target="_blank" class="btn-u btn-brd btn-brd-hover btn-u-sm"><i class="fa fa-eye"></i></a>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Linked Invoice Table-->
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="tag-box tag-box-v3 no-margin-bottom">
+                            <div class="headline">
+                                <h2>Dokumenty powiązane <a id="appendLinked"><i id="linkedArrow" class="fa fa-sort-desc"></i></a> </h2>
+                            </div>
+                            <div id="linkedTab">
+                                <div id="loader2" style="text-align: center;"><h2><i class="fa fa-spinner fa-pulse fa-lg"></i></h2></div>
+                                <table id="linked" class="display history-summary" cellspacing="0" width="100%">
+                                    <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th class="hidden-sm hidden-xs hidden-xs">Data&nbsp;edycji</th>
+                                        <th>Autor</th>
+                                        <th>Typ i numer dokumentu</th>
+                                        <th>Komentarz</th>
+                                        <th>Podgląd</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr class="current-doc">
+                                        <td>1</td>
+                                        <td class="hidden-sm hidden-xs">2015-05-31</td>
+                                        <td class="hidden-sm hidden-xs">Jan Kowalski</td>
+                                        <td>Faktura VAT, 2015/FVS/25015</td>
+                                        <td>Lorem ipsum dolor sit amet, cis. La nec accumsan.</td>
+                                        <td><a href="view_invoice.html"  target="_blank" class="btn-u btn-brd btn-brd-hover btn-u-sm"><i class="fa fa-eye"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td class="hidden-sm hidden-xs">2015-06-07</td>
+                                        <td class="hidden-sm hidden-xs">Jan Kowalski</td>
+                                        <td>Faktura korygująca, 2015/FK/25015</td>
+                                        <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris et malesuada eros, ac vehicula ligula. Quisque mauris odio, sollicitudin ac molestie sed, finibus at ipsum. Curabitur risus erat, auctor sit amet urna in, elementum convallis turpis. Integer et fermentum quam. Sed scelerisque pulvinar urna tempus tempor. Vivamus sapien velit, varius eu orci nec, facilisis commodo turpis. Curabitur ac egestas odio, quis venenatis lorem. Nulla accumsan semper ligula nec accumsan.</td>
+                                        <td><a href="view_invoice_correct.html"  target="_blank" class="btn-u btn-brd btn-brd-hover btn-u-sm"><i class="fa fa-eye"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td class="hidden-sm hidden-xs">2015-06-07</td>
+                                        <td class="hidden-sm hidden-xs">Jan Kowalski</td>
+                                        <td>Nota korygująca, 2015/NK/25015</td>
+                                        <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris et malesuada eros, ac vehicula ligula. Quisque mauris odio, sollicitudin ac molestie sed, finibus at ipsum. Curabitur risus erat, auctor sit amet urna in, elementum convallis turpis. Integer et fermentum quam. Sed scelerisque pulvinar urna tempus tempor. Vivamus sapien velit, varius eu orci nec, facilisis commodo turpis. Curabitur ac egestas odio, quis venenatis lorem. Nulla accumsan semper ligula nec accumsan.</td>
+                                        <td><a href="view_note.html"  target="_blank" class="btn-u btn-brd btn-brd-hover btn-u-sm"><i class="fa fa-eye"></i></a>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <!--Invoice Header-->
                 <!--Invoice Detials-->
                 <div class="row invoice-header text-center">
@@ -382,157 +534,7 @@
                     </div>
                 </div>
 
-                <!--History Invoice Table-->
-                <div class="row">
-                    <div class="col-xs-12">
-                        <div class="tag-box tag-box-v3 no-margin-bottom">
-                            <div class="headline">
-                                <h2>Historia dokumentu <a id="appendHistory"><i id="historyArrow" class="fa fa-sort-desc"></i></a> </h2>
-                            </div>
-                            <div id="historyTab">
-                                <div id="loader" style="text-align: center;"><h2><i class="fa fa-spinner fa-pulse fa-lg"></i></h2></div>
-                                <table id="history" class="display history-summary" cellspacing="0" width="100%">
-                                    <thead>
-                                        <tr>
-                                            <th class="details-control"></th>
-                                            <th></th>
-                                            <th class="hidden-sm hidden-xs hidden-xs">Data&nbsp;edycji</th>
-                                            <th>Autor</th>
-                                            <th class="hidden-sm hidden-xs">Status</th>
-                                            <th>Typ i numer dokumentu</th>
-                                            <th>Strona</th>
-                                            <th>Komentarz</th>
-                                            <th>Więcej ZKK</th>
-                                            <th>Podgląd</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td class="details-control"></td>
-                                            <td>1</td>
-                                            <td class="hidden-sm hidden-xs">2015-05-31</td>
-                                            <td class="hidden-sm hidden-xs">Jan Kowalski</td>
-                                            <td class="hidden-sm hidden-xs">Do akceptacji</td>
-                                            <td>Faktura VAT, 2015/FVS/25015</td>
-                                            <td>Partner</td>
-                                            <td>Skontaktowałem się z moim Opiekunem Partnerem i wystawilem dokument.</td>
-                                            <td>Nie </td>
-                                            <td><a href="view_invoice.html"  target="_blank" class="btn-u btn-brd btn-brd-hover btn-u-sm"><i class="fa fa-eye"></i></a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class=""></td>
-                                            <td>2</td>
-                                            <td class="hidden-sm hidden-xs">2015-05-31</td>
-                                            <td class="hidden-sm hidden-xs">Jan Kowalski</td>
-                                            <td class="hidden-sm hidden-xs">Podjęty</td>
-                                            <td>Faktura VAT, 2015/FVS/25015</td>
-                                            <td>BS</td>
-                                            <td></td>
-                                            <td>Nie </td>
-                                            <td><a href="view_invoice.html"  target="_blank" class="btn-u btn-brd btn-brd-hover btn-u-sm"><i class="fa fa-eye"></i></a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class=""></td>
-                                            <td>3</td>
-                                            <td class="hidden-sm hidden-xs">2015-05-31</td>
-                                            <td class="hidden-sm hidden-xs">Jan Kowalski</td>
-                                            <td class="hidden-sm hidden-xs">Do akceptacji</td>
-                                            <td>Faktura VAT, 2015/FVS/25015</td>
-                                            <td>BS</td>
-                                            <td>Skontaktowałem się z Partnerem w wcelu wyjąsnienia nieścisłości.</td>
-                                            <td>Tak </td>
-                                            <td><a href="view_invoice.html"  target="_blank" class="btn-u btn-brd btn-brd-hover btn-u-sm"><i class="fa fa-eye"></i></a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class=""></td>
-                                            <td>4</td>
-                                            <td class="hidden-sm hidden-xs">2015-05-31</td>
-                                            <td class="hidden-sm hidden-xs">Jan Kowalski</td>
-                                            <td class="hidden-sm hidden-xs">Do akceptacji</td>
-                                            <td>Faktura VAT, 2015/FVS/25015</td>
-                                            <td>BS</td>
-                                            <td>Przesłalem wyciąg z terminali z różnicami.</td>
-                                            <td>Tak </td>
-                                            <td><a href="view_invoice.html"  target="_blank" class="btn-u btn-brd btn-brd-hover btn-u-sm"><i class="fa fa-eye"></i></a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="details-control"></td>
-                                            <td>5</td>
-                                            <td class="hidden-sm hidden-xs">2015-06-07</td>
-                                            <td class="hidden-sm hidden-xs">Jan Kowalski</td>
-                                            <td class="hidden-sm hidden-xs">Zaakceptowana</td>
-                                            <td>Faktura VAT, 2015/FVS/25015</td>
-                                            <td>BS</td>
-                                            <td></td>
-                                            <td>Nie </td>
-                                            <td><a href="view_invoice.html"  target="_blank" class="btn-u btn-brd btn-brd-hover btn-u-sm"><i class="fa fa-eye"></i></a>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                </div>     
 
-                <!--Linked Invoice Table-->
-                <div class="row">
-                    <div class="col-xs-12">
-                        <div class="tag-box tag-box-v3 no-margin-bottom">   
-                            <div class="headline">
-                                <h2>Dokumenty powiązane <a id="appendLinked"><i id="linkedArrow" class="fa fa-sort-desc"></i></a> </h2>
-                            </div>
-                            <div id="linkedTab">
-                                <div id="loader2" style="text-align: center;"><h2><i class="fa fa-spinner fa-pulse fa-lg"></i></h2></div>
-                                <table id="linked" class="display history-summary" cellspacing="0" width="100%">
-                                    <thead>
-                                        <tr>
-                                            <th>#</th>
-                                            <th class="hidden-sm hidden-xs hidden-xs">Data&nbsp;edycji</th>
-                                            <th>Autor</th>
-                                            <th>Typ i numer dokumentu</th>
-                                            <th>Komentarz</th>
-                                            <th>Podgląd</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr class="current-doc">
-                                            <td>1</td>
-                                            <td class="hidden-sm hidden-xs">2015-05-31</td>
-                                            <td class="hidden-sm hidden-xs">Jan Kowalski</td>
-                                            <td>Faktura VAT, 2015/FVS/25015</td>
-                                            <td>Lorem ipsum dolor sit amet, cis. La nec accumsan.</td>
-                                            <td><a href="view_invoice.html"  target="_blank" class="btn-u btn-brd btn-brd-hover btn-u-sm"><i class="fa fa-eye"></i></a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>2</td>
-                                            <td class="hidden-sm hidden-xs">2015-06-07</td>
-                                            <td class="hidden-sm hidden-xs">Jan Kowalski</td>
-                                            <td>Faktura korygująca, 2015/FK/25015</td>
-                                            <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris et malesuada eros, ac vehicula ligula. Quisque mauris odio, sollicitudin ac molestie sed, finibus at ipsum. Curabitur risus erat, auctor sit amet urna in, elementum convallis turpis. Integer et fermentum quam. Sed scelerisque pulvinar urna tempus tempor. Vivamus sapien velit, varius eu orci nec, facilisis commodo turpis. Curabitur ac egestas odio, quis venenatis lorem. Nulla accumsan semper ligula nec accumsan.</td>
-                                            <td><a href="view_invoice_correct.html"  target="_blank" class="btn-u btn-brd btn-brd-hover btn-u-sm"><i class="fa fa-eye"></i></a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>3</td>
-                                            <td class="hidden-sm hidden-xs">2015-06-07</td>
-                                            <td class="hidden-sm hidden-xs">Jan Kowalski</td>
-                                            <td>Nota korygująca, 2015/NK/25015</td>
-                                            <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris et malesuada eros, ac vehicula ligula. Quisque mauris odio, sollicitudin ac molestie sed, finibus at ipsum. Curabitur risus erat, auctor sit amet urna in, elementum convallis turpis. Integer et fermentum quam. Sed scelerisque pulvinar urna tempus tempor. Vivamus sapien velit, varius eu orci nec, facilisis commodo turpis. Curabitur ac egestas odio, quis venenatis lorem. Nulla accumsan semper ligula nec accumsan.</td>
-                                            <td><a href="view_note.html"  target="_blank" class="btn-u btn-brd btn-brd-hover btn-u-sm"><i class="fa fa-eye"></i></a>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                </div>      
             </div><!--/container-->		
             <!--=== End Content Part ===-->
         </div><!--/End Wrapepr-->
