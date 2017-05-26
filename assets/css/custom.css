@@ -332,3 +332,59 @@ i.fa-sort-asc:after {
     content:"(zwiń)";
     font-size: 13px;
 }
+
+
+i.style-switcher-btn {
+    right: 0;
+    top: 37px;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+    z-index: 555555;
+    position: fixed;
+    padding: 9px 10px;
+    background: #ffcd00;
+    border-radius: 3px 0 0 3px !important;
+}
+
+i.style-switcher-btn:hover {
+    background: #fab811;
+}
+
+i.style-switcher-btn-option {
+    top: 38px;
+    background: #9097a0;
+}
+
+i.style-switcher-btn-option:hover {
+    background: #707985;
+}
+
+.style-switcher-heading {
+    text-align: center;
+}
+
+.style-swticher-body {
+    color: #fff;
+    background: #f7f7f7;
+    line-height: 1.4;
+    clear: both;
+    position: relative;
+    border-radius: 0px;
+}
+
+
+.style-switcher {
+    border: 1px solid #ddd;
+}
+
+
+.header .logo img {
+    margin: 20px -200px;
+}
+
+@media (min-width: 992px) {
+    .header-fixed .header.header-fixed-shrink .logo img {
+        display: none;
+    }
+}
