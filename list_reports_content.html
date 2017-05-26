@@ -1,0 +1,93 @@
+
+
+                    <!-- Begin Content -->
+                    <div class="row">
+                        <div class="btn-group col-sm-9">
+                            <div class="input-group spinner">
+                                <input type="text" class="form-control" value="10">
+                                <div class="input-group-btn-vertical text-center">
+                                    <button class="btn btn-default" type="button"><i class="fa fa-angle-up"></i></button>
+                                    <button class="btn btn-default" type="button"><i class="fa fa-angle-down"></i></button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="search-open pull-right col-sm-3">
+                            <div class="input-group inline-group">
+                                <input type="text" class="form-control" placeholder="Wyszukaj ... ">
+                                <span class="input-group-btn">
+                                            <a href="" class="button btn-u"><i class="fa fa-search"></i></a>
+                                        </span>
+                            </div>
+                        </div>
+                    </div>
+
+                            <table id="operatorsList" class="display" cellspacing="0" width="100%" style="text-align: left">
+                                <thead>
+                                    <tr>
+                                        <th>Data wysłania raportu</th>
+                                        <th class="hidden-sm hidden-xs">Typ raportu</th>
+                                        <th class="hidden-sm hidden-xs">Obiekt</th>
+                                        <th class="hidden-sm hidden-xs">Komentarz</th>
+                                        <th>Więcej</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><a href="add_report.html">15-07-2015, 14:00:18</a></td>
+                                        <td class="hidden-sm hidden-xs">Raport awaryjny</td>
+                                        <td class="hidden-sm hidden-xs">(1212) Tyger Gym - Przymorze</td>
+                                        <td class="hidden-sm hidden-xs">Lorem, ipsum, lorem lorem, lorem, ipsum</td>
+                                        <td>
+                                            <div class="btn-group">
+                                                <button type="button" class="btn-u btn-brd color-red btn-brd-hover btn-u-sm dropdown-toggle bars" data-toggle="dropdown">
+                                                    <i class="fa fa fa-bars"></i>
+                                                    <span class="sr-only">Toggle Dropdown</span>                            
+                                                </button>
+                                                <ul class="dropdown-menu" role="menu">
+                                                    <li><a href="add_report.html"><i class="fa fa-eye"></i> Zobacz szczegóły</a></li>
+                                                    <li><a href=""><i class="fa fa-file-zip-o"></i> Pobierz</a></li>
+                                                </ul>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="add_report.html">15-07-2015, 23:00:18</a></td>
+                                        <td class="hidden-sm hidden-xs">Paragon z terminala</td>
+                                        <td class="hidden-sm hidden-xs">(1212) Tyger Gym - Przymorze</td>
+                                        <td class="hidden-sm hidden-xs">-</td>
+                                        <td>
+                                            <div class="btn-group">
+                                                <button type="button" class="btn-u btn-brd color-red btn-brd-hover btn-u-sm dropdown-toggle bars" data-toggle="dropdown">
+                                                    <i class="fa fa fa-bars"></i>
+                                                    <span class="sr-only">Toggle Dropdown</span>
+                                                </button>
+                                                <ul class="dropdown-menu" role="menu">
+                                                    <li><a href="add_report.html"><i class="fa fa-eye"></i> Zobacz szczegóły</a></li>
+                                                    <li><a href=""><i class="fa fa-file-zip-o"></i> Pobierz</a></li>
+                                                </ul>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                    <!-- End Content -->
+                    <script type="text/javascript" language="javascript" src="assets/plugins/datatable/js/jquery.dataTables.js"></script>
+
+                    <script type="text/javascript">
+                        jQuery(document).ready(function () {
+                            App.init();
+                            StyleSwitcher.initStyleSwitcher();
+
+                            $(document).ready(function () {
+                                $('#operatorsList').DataTable({
+                                    "language": {
+                                        "url": "assets/plugins/datatable/lang/Polish.json"
+                                    },
+                                    searching: false,
+                                    lengthChange: false
+                                });
+                            });
+                        });
+                    </script>

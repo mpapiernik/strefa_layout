@@ -51,6 +51,8 @@
         <noscript><link rel="stylesheet" href="assets/css/jquery.fileupload-noscript.css"></noscript>
         <noscript><link rel="stylesheet" href="assets/css/jquery.fileupload-ui-noscript.css"></noscript>
 
+        <!-- CSS Customization -->
+        <link rel="stylesheet" href="assets/css/custom.css">
     </head>
     <body>    
         <div class="wrapper">
@@ -606,55 +608,93 @@
                                         <textarea rows="3" name="info" ></textarea>
                                     </label>
                                 </section>
-                            </fieldset>
-                            <fieldset>
                                 <section>
                                     <label class="label" for="appbundle_invoice_confirm_status_comment">Komentarz dla Opiekuna rozliczeniowego, który nie będzie widoczny na dokumencie rozliczeniowym (opcjonalne w przypadku, gdy nie są nanoszone zmiany na propozycji)</label>
                                     <label class="textarea">
                                         <textarea id="appbundle_invoice_confirm_status_comment" name="appbundle_invoice_confirm[status_comment]" rows="3"></textarea>
                                     </label>
                                 </section>
-                                <div class="input-group margin-bottom-20">
-                                    <section>
-                                        <label class="label" for="appbundle_invoice_confirm_files">Załączniki (max 20MB, np. raport awaryjny itp.)</label>
-                                        <span class="btn btn-u fileinput-button state-success">
+                            </fieldset>
+                            <fieldset>
+                                <h4>Raporty awaryjne</h4>
+
+                                <section>
+
+                                    <div class="margin-bottom-20">
+
+                                       <span class="btn btn-u fileinput-button state-success">
                                             <i class="glyphicon glyphicon-plus"></i>
-                                            <span>Wybierz pliki...</span>
+                                            <span>Dodaj raport awaryjny</span>
                                             <input type="file" id="appbundle_invoice_confirm_files" name="appbundle_invoice_confirm[files][]" multiple="multiple">
-                                        </span>                                
+                                        </span>
+                                    </div>
+                                    <hr>
 
-                                    </section>
-                                </div>
-                                <table role="presentation" id="attachments_presentation" class="table table-striped"><tbody class="files" data-toggle="modal-gallery" data-target="#modal-gallery"><tr class="template-upload fade in">
-                                            <td class="t-align-l">
-                                                <p class="name">H_1.vsdx</p>
-                                                <strong class="error text-danger">File type not allowed</strong>
-                                            </td>            
-                                            <td class="t-align-r">                
+                                    <div class="row">
+                                        <div class="btn-group col-sm-9">
+                                            <div class="input-group spinner">
+                                                <input type="text" class="form-control" value="10">
+                                                <div class="input-group-btn-vertical text-center">
+                                                    <button class="btn btn-default" type="button"><i class="fa fa-angle-up"></i></button>
+                                                    <button class="btn btn-default" type="button"><i class="fa fa-angle-down"></i></button>
+                                                </div>
+                                            </div>
+                                        </div>
 
-                                                <button class="btn btn-u btn-u-dark cancel">
-                                                    <i class="glyphicon glyphicon-ban-circle"></i>
-                                                    <span>Anuluj</span>
-                                                </button>
+                                    </div>
 
+                                    <table id="operatorsList" class="display" cellspacing="0" width="100%" style="text-align: left">
+                                        <thead>
+                                        <tr>
+                                            <th>Data wysłania raportu</th>
+                                            <th class="hidden-sm hidden-xs">Typ raportu</th>
+                                            <th class="hidden-sm hidden-xs">Obiekt</th>
+                                            <th class="hidden-sm hidden-xs">Komentarz</th>
+                                            <th>Więcej</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td><a href="add_report.html">15-07-2015, 14:00:18</a></td>
+                                            <td class="hidden-sm hidden-xs">Raport awaryjny</td>
+                                            <td class="hidden-sm hidden-xs">(1212) Tyger Gym - Przymorze</td>
+                                            <td class="hidden-sm hidden-xs">Lorem, ipsum, lorem lorem, lorem, ipsum</td>
+                                            <td>
+                                                <div class="btn-group">
+                                                    <button type="button" class="btn-u btn-brd color-red btn-brd-hover btn-u-sm dropdown-toggle bars" data-toggle="dropdown">
+                                                        <i class="fa fa fa-bars"></i>
+                                                        <span class="sr-only">Toggle Dropdown</span>
+                                                    </button>
+                                                    <ul class="dropdown-menu" role="menu">
+                                                        <li><a href="add_report.html"><i class="fa fa-eye"></i> Zobacz szczegóły</a></li>
+                                                        <li><a href=""><i class="fa fa-file-zip-o"></i> Pobierz</a></li>
+                                                    </ul>
+                                                </div>
                                             </td>
                                         </tr>
-                                        <tr class="template-upload fade in">
-                                            <td class="t-align-l">
-                                                <p class="name">H_4.jpg</p>
-                                                <strong class="error text-danger"></strong>
-                                            </td>            
-                                            <td class="t-align-r">                
-
-                                                <button class="btn btn-u btn-u-dark cancel">
-                                                    <i class="glyphicon glyphicon-ban-circle"></i>
-                                                    <span>Anuluj</span>
-                                                </button>
-
+                                        <tr>
+                                            <td><a href="add_report.html">15-07-2015, 23:00:18</a></td>
+                                            <td class="hidden-sm hidden-xs">Paragon z terminala</td>
+                                            <td class="hidden-sm hidden-xs">(1212) Tyger Gym - Przymorze</td>
+                                            <td class="hidden-sm hidden-xs">-</td>
+                                            <td>
+                                                <div class="btn-group">
+                                                    <button type="button" class="btn-u btn-brd color-red btn-brd-hover btn-u-sm dropdown-toggle bars" data-toggle="dropdown">
+                                                        <i class="fa fa fa-bars"></i>
+                                                        <span class="sr-only">Toggle Dropdown</span>
+                                                    </button>
+                                                    <ul class="dropdown-menu" role="menu">
+                                                        <li><a href="add_report.html"><i class="fa fa-eye"></i> Zobacz szczegóły</a></li>
+                                                        <li><a href=""><i class="fa fa-file-zip-o"></i> Pobierz</a></li>
+                                                    </ul>
+                                                </div>
                                             </td>
                                         </tr>
-                                    </tbody>
-                                </table>
+                                        </tbody>
+                                    </table>
+
+
+                                </section>
                             </fieldset>
 
                             <footer style="text-align: right;">
@@ -681,8 +721,7 @@
         <!-- JS Implementing Plugins -->
         <script type="text/javascript" src="assets/plugins/back-to-top.js"></script>
         <script type="text/javascript" src="assets/plugins/smoothScroll.js"></script>
-        <!-- JS Customization -->
-        <script type="text/javascript" src="assets/js/custom.js"></script>
+
         <!-- JS Page Level -->           
         <script type="text/javascript" src="assets/js/app.js"></script>
         <script type="text/javascript" language="javascript" src="assets/plugins/datatable/js/jquery.dataTables.js"></script>
@@ -690,6 +729,9 @@
         <script src="assets/plugins/sky-forms-pro/skyforms/js/jquery.validate.min.js"></script>
         <script type="text/javascript" src="assets/js/plugins/validation.js"></script>
         <script type="text/javascript" src="assets/js/forms/invoices.js"></script>
+
+        <!-- JS Customization -->
+        <script type="text/javascript" src="assets/js/custom.js"></script>
         <script type="text/javascript">
 
                                     jQuery(document).ready(function () {
@@ -697,6 +739,15 @@
                                         InvoiceForm.initInvoiceForm();
                                     });
                                     $(document).ready(function () {
+
+                                        $('#operatorsList').DataTable({
+                                            "language": {
+                                                "url": "assets/plugins/datatable/lang/Polish.json"
+                                            },
+                                            searching: false,
+                                            lengthChange: false
+                                        });
+
                                         $('#example').DataTable({
                                             "searching": false,
                                             "paging": false,
@@ -770,6 +821,10 @@
                 $("#includedContentHeader").load("header.html");
                 $("#includedContentFooter").load("footer.html");
                 $("#includedContentSideBar").load("sidebar.html");
+                setTimeout(function () {
+                    $('.dropdown-toggle').dropdown();
+                }, 1000);
+
             });
         </script> 
         <!--[if lt IE 9]>

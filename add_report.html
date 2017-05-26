@@ -99,131 +99,8 @@
                     <div class="col-md-12">
                         <div class="news-v3-in margin-bottom-20">
                             <form class="sky-form">
-                                <fieldset class="margin-bottom-20">
-                                    <div class="row">
-                                        <!--Button Addons-->
-                                        <div class="col-md-6">
-                                            <label class="label">Wybierz obiekt <span class="color-red">*</span></label>
-                                            <div class="input-group">
-                                                <select id="service-select" class="selectpicker input-block-level"
-                                                        data-selected-text-format="count>1"
-                                                        data-live-search="true" title='Wybierz...' data-width="100%">
-                                                    <option data-hidden="true"></option>
-                                                    <option value="0">(1212) Tyger Gym - Przymorze</option>
-                                                    <option value="1">(1213) Tyger Gym - Rental park</option>
-                                                    <option value="2">(1215) Tyger Gym - Oliwa</option>
-                                                    <option value="3">(1214) Tyger Gym - Manhattan</option>
-                                                    <option value="4">(1215) Tyger Gym - Rumia</option>
-                                                </select>
-                                                <span class="input-group-btn">
-                                                    <button class="btn-u" tabindex="-1" type="button">
-                                                        <span class="fa fa-search" aria-hidden="true"></span>
-                                                    </button>
-                                                </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </fieldset>
-                                <fieldset>
-                                    <div class="row">
-                                        <section class="col col-6">
-                                            <label class="label">Typ raportu
-                                                <span class="color-red">*</span>
-                                            </label>
-                                            <label class="select">
-                                                <select name="types" id="types" onchange=" console.log($('#types').val());if($('#types').val() == 1) $('#comment').show(); else $('#comment').hide();">
-                                            <option disabled="disabled" selected="">Wybierz...</option>
-                                                    <option value="1" id="report_emergency">Raport awaryjny</option>
-                                                    <option value="2">Raport uprosczony</option>
-                                                    <option value="3" >Paragon z terminala</option>
-                                                </select>
-                                                <i></i>
-                                            </label>
-                                        </section>
-                                    </div>
-                                    <div class="row">
-                                        <section class="col col-6">
-                                            <label class="label">Okres rozliczeniowy
-                                                <span class="color-red">*</span>
-                                            </label>
-                                            <label class="select">
-                                                <select name="country">
-                                                    <option disabled="disabled" selected="">Wybierz...</option>
-                                                    <optgroup label="2017">
-                                                        <option value="0">1-04-2017 - 30-04-2017</option>
-                                                        <option value="1">1-03-2017 - 31-03-2017</option>
-                                                        <option value="2">1-02-2017 - 28-02-2017</option>
-                                                        <option value="3">1-01-2017 - 31-01-2017</option>
-                                                    </optgroup>
-                                                    <optgroup label="2016">
-                                                        <option value="0">1-12-2016 - 31-12-2016</option>
-                                                        <option value="1">1-11-2016 - 30-11-2016</option>
-                                                    </optgroup>
-
-                                                </select>
-                                                <i></i>
-                                            </label>
-                                        </section>
-                                    </div>
-                                </fieldset>
-                                <fieldset id="comment" style="display:none;" >
-                                    <section>
-                                        <label class="label">Komentarz<span class="color-red">*</span></label>
-                                        <small>Poprosimy o uzasadnienie użycia raportu awaryjnego (max. 180 znaków)</small>
-
-                                        <label class="textarea">
-                                            <textarea id="appbundle_invoice_confirm_status_comment"
-                                                      name="appbundle_invoice_confirm[status_comment]"
-                                                      rows="3"></textarea>
-
-                                        </label>
-                                    </section>
-                                </fieldset>
-                                <fieldset>
-
-                                    <div class="input-group margin-bottom-20">
-                                        <section>
-                                            <label class="label" for="appbundle_invoice_confirm_files">Załączniki (max 20MB, np. raport awaryjny itp.)</label>
-                                            <span class="btn btn-u fileinput-button state-success">
-                                            <i class="glyphicon glyphicon-plus"></i>
-                                            <span>Wybierz pliki...</span>
-                                            <input type="file" id="appbundle_invoice_confirm_files" name="appbundle_invoice_confirm[files][]" multiple="multiple">
-                                        </span>
-
-                                        </section>
-                                    </div>
-                                    <table role="presentation" id="attachments_presentation" class="table table-striped"><tbody class="files" data-toggle="modal-gallery" data-target="#modal-gallery"><tr class="template-upload fade in">
-                                        <td class="t-align-l">
-                                            <p class="name">H_1.vsdx</p>
-                                            <strong class="error text-danger">File type not allowed</strong>
-                                        </td>
-                                        <td class="t-align-r">
-
-                                            <button class="btn btn-u btn-u-dark cancel">
-                                                <i class="glyphicon glyphicon-ban-circle"></i>
-                                                <span>Anuluj</span>
-                                            </button>
-
-                                        </td>
-                                    </tr>
-                                    <tr class="template-upload fade in">
-                                        <td class="t-align-l">
-                                            <p class="name">H_4.jpg</p>
-                                            <strong class="error text-danger"></strong>
-                                        </td>
-                                        <td class="t-align-r">
-
-                                            <button class="btn btn-u btn-u-dark cancel">
-                                                <i class="glyphicon glyphicon-ban-circle"></i>
-                                                <span>Anuluj</span>
-                                            </button>
-
-                                        </td>
-                                    </tr>
-                                    </tbody>
-                                    </table>
-                                </fieldset>
-
+                                <div class="report-content" id="includedReportContent">
+                                </div>
                                 <footer style="text-align: right;">
                                     <button type="button" class="btn-u btn-u-default" onclick="window.history.back();">
                                         Wróć
@@ -304,7 +181,6 @@
 <script type="text/javascript" language="javascript" src="assets/plugins/datatable/js/jquery.dataTables.js"></script>
 <script type="text/javascript" src="assets/js/jquery.tabledit.js"></script>
 <script type="text/javascript" src="assets/js/plugins/fancy-box.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/js/bootstrap-select.min.js"></script>
 
 <!-- JS Customization -->
 <script type="text/javascript" src="assets/js/custom.js"></script>
@@ -313,6 +189,7 @@
         App.init();
         StyleSwitcher.initStyleSwitcher();
         FancyBox.initFancybox();
+        $("#includedReportContent").load("add_report_content.html");
         $('#tid1').click(function () {
             $('#term2').hide();
             $('#term1').show();
@@ -328,6 +205,7 @@
         $("#includedContentSideBar").load("sidebar.html");
         $("#includedContentHeader").load("header.html");
         $("#includedContentFooter").load("footer.html");
+
         $('[data-toggle="tooltip"]').tooltip();
         setTimeout(function () {
             $('.dropdown-toggle').dropdown();

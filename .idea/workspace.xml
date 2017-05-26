@@ -2,26 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="23f5777b-19af-44d0-9816-0433b4192482" name="Default" comment="Discounts module.&#10;">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/add_communique.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/add_report.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/add_terminal.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/delete_terminal.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/edit_communique.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/edit_terminal.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/list_reports.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/list_terminal_errors.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/list_terminals.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/add_report_content.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/list_reports_content.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/add_accident_report.html" afterPath="$PROJECT_DIR$/add_accident_report.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/css/custom.css" afterPath="$PROJECT_DIR$/assets/css/custom.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/edit_hello_post.html" afterPath="$PROJECT_DIR$/edit_hello_post.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/header.html" afterPath="$PROJECT_DIR$/header.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/header_backend.html" afterPath="$PROJECT_DIR$/header_backend.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/add_report.html" afterPath="$PROJECT_DIR$/add_report.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generate_invoice.html" afterPath="$PROJECT_DIR$/generate_invoice.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/list_accident_report.html" afterPath="$PROJECT_DIR$/list_accident_report.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/list_invoices.html" afterPath="$PROJECT_DIR$/list_invoices.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/list_partners.html" afterPath="$PROJECT_DIR$/list_partners.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wall.html" afterPath="$PROJECT_DIR$/wall.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/list_reports.html" afterPath="$PROJECT_DIR$/list_reports.html" />
     </list>
     <ignored path=".idea/dataSources.local.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -70,25 +58,15 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="257">
-      <file leaf-file-name="edit_hello_post.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/edit_hello_post.html">
+      <file leaf-file-name="generate_invoice.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/generate_invoice.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="312">
-              <caret line="88" column="75" selection-start-line="88" selection-start-column="75" selection-end-line="88" selection-end-column="75" />
+            <state relative-caret-position="448">
+              <caret line="621" column="0" selection-start-line="621" selection-start-column="0" selection-end-line="621" selection-end-column="0" />
               <folding>
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#td#1;n#tr#0;n#tbody#0;n#table#0;n#section#1;n#fieldset#1;n#form#0;n#div#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#div#1;n#section#0;n#fieldset#5;n#form#0;n#div#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#table#0;n#section#0;n#fieldset#5;n#form#0;n#div#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="header.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/header.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="544">
-              <caret line="83" column="50" selection-start-line="83" selection-start-column="50" selection-end-line="83" selection-end-column="50" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -96,33 +74,9 @@
       <file leaf-file-name="list_reports.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/list_reports.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="62" column="0" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
+            <state relative-caret-position="440">
+              <caret line="149" column="25" selection-start-line="147" selection-start-column="14" selection-end-line="149" selection-end-column="25" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="add_report.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/add_report.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="214" column="0" selection-start-line="214" selection-start-column="0" selection-end-line="214" selection-end-column="0" />
-              <folding>
-                <element signature="n#style#0;n#fieldset#2;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="generate_invoice.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/generate_invoice.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
-              <caret line="657" column="39" selection-start-line="609" selection-start-column="27" selection-end-line="657" selection-end-column="39" />
-              <folding>
-                <element signature="n#fieldset#5;n#form#0;n#div#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -144,10 +98,8 @@
         <option value="$PROJECT_DIR$/view_sent_invoice_backend.html" />
         <option value="$PROJECT_DIR$/assets/css/plugins/style-switcher.css" />
         <option value="$PROJECT_DIR$/add_accident_report.html" />
-        <option value="$PROJECT_DIR$/list_accident_report.html" />
         <option value="$PROJECT_DIR$/list_invoices.html" />
         <option value="$PROJECT_DIR$/wall.html" />
-        <option value="$PROJECT_DIR$/list_partners.html" />
         <option value="$PROJECT_DIR$/delete_terminal.html" />
         <option value="$PROJECT_DIR$/list_terminals.html" />
         <option value="$PROJECT_DIR$/list_terminal_errors.html" />
@@ -159,8 +111,13 @@
         <option value="$PROJECT_DIR$/edit_hello_post.html" />
         <option value="$PROJECT_DIR$/assets/css/custom.css" />
         <option value="$PROJECT_DIR$/header.html" />
-        <option value="$PROJECT_DIR$/list_reports.html" />
+        <option value="$PROJECT_DIR$/list_accident_report.html" />
+        <option value="$PROJECT_DIR$/list_partners.html" />
+        <option value="$PROJECT_DIR$/add_report_content.html" />
         <option value="$PROJECT_DIR$/add_report.html" />
+        <option value="$PROJECT_DIR$/list_reports.html" />
+        <option value="$PROJECT_DIR$/list_reports_content.html" />
+        <option value="$PROJECT_DIR$/generate_invoice.html" />
       </list>
     </option>
   </component>
@@ -219,38 +176,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="strefa-partnera-layout" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="strefa-partnera-layout" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="strefa-partnera-layout" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="strefa-partnera-layout" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="strefa-partnera-layout" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -360,12 +285,12 @@
       <workItem from="1493189756696" duration="454000" />
       <workItem from="1493190222989" duration="4487000" />
       <workItem from="1495630263133" duration="1917000" />
-      <workItem from="1495721923121" duration="21734000" />
+      <workItem from="1495721923121" duration="26082000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="38101000" />
+    <option name="totallyTimeSpent" value="42449000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -470,12 +395,6 @@
     </option>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../dev_StrefaPartneraBenefitSystem/web/img/spritemap.png" />
-    <entry file="file://$PROJECT_DIR$/assets/css/plugins/images/sprite-skin-simple.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dropzone.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="850">
@@ -628,14 +547,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/list_partners.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="154" column="88" selection-start-line="154" selection-start-column="88" selection-end-line="154" selection-end-column="88" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/contact.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
@@ -665,17 +576,6 @@
         <state relative-caret-position="238">
           <caret line="14" column="20" selection-start-line="0" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/list_accident_report.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="176" column="24" selection-start-line="176" selection-start-column="24" selection-end-line="176" selection-end-column="24" />
-          <folding>
-            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#3;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -714,14 +614,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/list_terminal_errors.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
-          <caret line="56" column="22" selection-start-line="56" selection-start-column="22" selection-end-line="56" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/edit_communique.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -754,14 +646,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/list_terminals.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="332">
-          <caret line="58" column="22" selection-start-line="51" selection-start-column="16" selection-end-line="58" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/header_ozfk.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -774,14 +658,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="406">
           <caret line="377" column="27" selection-start-line="377" selection-start-column="27" selection-end-line="377" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/list_reports.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="62" column="0" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -815,14 +691,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/header.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="83" column="50" selection-start-line="83" selection-start-column="50" selection-end-line="83" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/add_accident_report.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="481">
@@ -834,22 +702,90 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/generate_invoice.html">
+    <entry file="file://$PROJECT_DIR$/list_accident_report.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="657" column="39" selection-start-line="609" selection-start-column="27" selection-end-line="657" selection-end-column="39" />
+        <state relative-caret-position="253">
+          <caret line="77" column="83" selection-start-line="77" selection-start-column="83" selection-end-line="77" selection-end-column="83" />
           <folding>
-            <element signature="n#fieldset#5;n#form#0;n#div#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#3;n#body#0;n#html#0;n#!!top" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/list_partners.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="145" column="162" selection-start-line="145" selection-start-column="162" selection-end-line="145" selection-end-column="162" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/list_terminal_errors.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="321">
+          <caret line="70" column="67" selection-start-line="70" selection-start-column="67" selection-end-line="70" selection-end-column="67" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/list_terminals.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-977">
+          <caret line="68" column="24" selection-start-line="68" selection-start-column="24" selection-end-line="74" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/add_report_content.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="82" selection-start-line="10" selection-start-column="82" selection-end-line="10" selection-end-column="82" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/add_report.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="214" column="0" selection-start-line="214" selection-start-column="0" selection-end-line="214" selection-end-column="0" />
+        <state relative-caret-position="474">
+          <caret line="102" column="38" selection-start-line="101" selection-start-column="29" selection-end-line="102" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/list_reports_content.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="73" column="22" selection-start-line="3" selection-start-column="16" selection-end-line="73" selection-end-column="22" />
           <folding>
-            <element signature="n#style#0;n#fieldset#2;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#div#0;n#!!top" expanded="false" />
+            <element signature="n#table#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/header.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1037">
+          <caret line="83" column="50" selection-start-line="83" selection-start-column="50" selection-end-line="83" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/list_reports.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="149" column="25" selection-start-line="147" selection-start-column="14" selection-end-line="149" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/generate_invoice.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="448">
+          <caret line="621" column="0" selection-start-line="621" selection-start-column="0" selection-end-line="621" selection-end-column="0" />
+          <folding>
+            <element signature="n#div#1;n#section#0;n#fieldset#5;n#form#0;n#div#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#table#0;n#section#0;n#fieldset#5;n#form#0;n#div#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>

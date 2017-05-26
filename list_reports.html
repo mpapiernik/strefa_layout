@@ -64,82 +64,15 @@
             <!--=== Content Part ===-->
             <div class="container content">     
                 <div class="row">
-                    <!-- Begin Content -->
-                    <div class="row">
-                        <div class="btn-group col-sm-9">
-                            <div class="input-group spinner">
-                                <input type="text" class="form-control" value="10">
-                                <div class="input-group-btn-vertical text-center">
-                                    <button class="btn btn-default" type="button"><i class="fa fa-angle-up"></i></button>
-                                    <button class="btn btn-default" type="button"><i class="fa fa-angle-down"></i></button>
-                                </div>
-                            </div>
+                    <div class="margin-bottom-20">
+                        <div class="btn-group">
+                            <a href="add_report.html" class="button btn-u pull-right"><i class="fa fa-plus fa-fw"></i>Wyślij raport</a>
                         </div>
-
-                        <div class="search-open pull-right col-sm-3">
-                            <div class="input-group inline-group">
-                                <input type="text" class="form-control" placeholder="Wyszukaj ... ">
-                                <span class="input-group-btn">
-                                            <a href="" class="button btn-u"><i class="fa fa-search"></i></a>
-                                        </span>
-                            </div>
-                        </div>
+                        <!-- End Single button -->
                     </div>
-
-                            <table id="operatorsList" class="display" cellspacing="0" width="100%" style="text-align: left">
-                                <thead>
-                                    <tr>
-                                        <th>Data zgłoszenia awarii</th>
-                                        <th>Numer wniosku</th>
-                                        <th class="hidden-sm hidden-xs">Obiekt</th>
-                                        <th class="hidden-sm hidden-xs">Terminal</th>
-                                        <th class="hidden-sm hidden-xs">Zgłaszający</th>
-                                        <th class="hidden-sm hidden-xs">Status</th>
-                                        <th>Więcej</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>15-07-2015, 14:00:18</td>
-                                        <td><a href="add_accident_report.html">123</a></td>
-                                        <td class="hidden-sm hidden-xs">(1212) Tyger Gym - Przymorze</td>
-                                        <td class="hidden-sm hidden-xs">TID: 001200 SN: 1234567</td>
-                                        <td class="hidden-sm hidden-xs">Adam Kowalski</td>
-                                        <td class="hidden-sm hidden-xs">Nowy</td>
-                                        <td>
-                                            <div class="btn-group">
-                                                <button type="button" class="btn-u btn-brd color-red btn-brd-hover btn-u-sm dropdown-toggle bars" data-toggle="dropdown">
-                                                    <i class="fa fa fa-bars"></i>
-                                                    <span class="sr-only">Toggle Dropdown</span>                            
-                                                </button>
-                                                <ul class="dropdown-menu" role="menu">
-                                                    <li><a href="add_accident_report.html"><i class="fa fa-eye"></i> Zobacz szczegóły</a></li>
-                                                </ul>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>15-05-2015, 13:00:18</td>
-                                        <td><a href="add_accident_report.html">123</a></td>
-                                        <td class="hidden-sm hidden-xs">(1212) Tyger Gym - Przymorze</td>
-                                        <td class="hidden-sm hidden-xs">TID: 001201 SN: 1234567</td>
-                                        <td class="hidden-sm hidden-xs">Adam Kalisz</td>
-                                        <td class="hidden-sm hidden-xs">Zamknięty</td>
-                                        <td>
-                                            <div class="btn-group">
-                                                <button type="button" class="btn-u btn-brd color-red btn-brd-hover btn-u-sm dropdown-toggle bars" data-toggle="dropdown">
-                                                    <i class="fa fa fa-bars"></i>
-                                                    <span class="sr-only">Toggle Dropdown</span>
-                                                </button>
-                                                <ul class="dropdown-menu" role="menu">
-                                                    <li><a href="add_accident_report.html"><i class="fa fa-eye"></i> Zobacz szczegóły</a></li>
-                                                </ul>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
+                    <hr>
+                    <!-- Begin Content -->
+                    <div class="report-list-content" id="includedReportListContent">
                     </div>
                     <!-- End Content -->
                 </div>          
@@ -205,26 +138,18 @@
             jQuery(document).ready(function () {
                 App.init();
                 StyleSwitcher.initStyleSwitcher();
-                $(document).ready(function () {
-                    $('#operatorsList').DataTable({
-                        "language": {
-                            "url": "assets/plugins/datatable/lang/Polish.json"
-                        },
-                        searching: false,
-                        lengthChange: false
-                    });
-                });
             });
         </script>
         <script>
             $(function () {
-                $("#includedContentHeader").load("header.html");
                 $("#includedContentFooter").load("footer.html");
+                $("#includedContentHeader").load("header.html");
+                $("#includedReportListContent").load("list_reports_content.html");
                 setTimeout(function () {
                     $('.dropdown-toggle').dropdown();
                 }, 1000);
             });
-        </script> 
+        </script>
         <!--[if lt IE 9]>
             <script src="assets/plugins/respond.js"></script>
             <script src="assets/plugins/html5shiv.js"></script>

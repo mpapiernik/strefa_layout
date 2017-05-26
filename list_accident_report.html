@@ -62,8 +62,15 @@
             <!--=== End Breadcrumbs ===-->
 
             <!--=== Content Part ===-->
-            <div class="container content">     
+            <div class="container content">
                 <div class="row">
+                <div class="margin-bottom-20">
+                    <div class="btn-group">
+                        <a href="add_accident_report.html" class="button btn-u pull-right"><i class="fa fa-plus fa-fw"></i>Wyślij zgłoszenie</a>
+                    </div>
+                    <!-- End Single button -->
+                </div>
+                <hr>
                     <!-- Begin Content -->
                     <div class="row">
                         <div class="btn-group col-sm-9">
@@ -218,7 +225,7 @@
         </script>
         <script>
             $(function () {
-                $("#includedContentHeader").load("header_backend.html");
+                $("#includedContentHeader").load("header.html");
                 $("#includedContentFooter").load("footer.html");
                 setTimeout(function () {
                     $('.dropdown-toggle').dropdown();
