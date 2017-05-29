@@ -622,10 +622,9 @@
 
                                     <div class="margin-bottom-20">
 
-                                       <span class="btn btn-u fileinput-button state-success">
+                                       <span id="confirmReportModal" class="btn btn-u fileinput-button state-success" data-toggle="modal" data-target="#addReportModal">
                                             <i class="glyphicon glyphicon-plus"></i>
                                             <span>Dodaj raport awaryjny</span>
-                                            <input type="file" id="appbundle_invoice_confirm_files" name="appbundle_invoice_confirm[files][]" multiple="multiple">
                                         </span>
                                     </div>
                                     <hr>
@@ -709,6 +708,7 @@
                 </div>          
             </div><!--/container-->     
             <!--=== End Content Part ===-->
+            <div class="modal fade" id="addReportModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"></div>
         </div><!--/End Wrapepr-->
         <!--=== Footer Version 1 ===-->
         <div class="footer-v1" id="includedContentFooter">
@@ -821,6 +821,9 @@
                 $("#includedContentHeader").load("header.html");
                 $("#includedContentFooter").load("footer.html");
                 $("#includedContentSideBar").load("sidebar.html");
+                $("#addReportModal").load("add_report_modal.html", function () {
+
+                });
                 setTimeout(function () {
                     $('.dropdown-toggle').dropdown();
                 }, 1000);
