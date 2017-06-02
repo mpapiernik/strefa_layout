@@ -84,7 +84,7 @@
                 <li><a href="wall.html">Home</a></li>
                 <li><a href="list_accident_report.html">Lista zgłoszeń awarii terminali</a></li>
             </ul>
-            <h1 class="pull-left">Zgłoszenie awarii terminala </h1>
+            <h1 class="pull-left"> Zgłoszenie awarii terminala nr: 123 - status: Wysłany</h1>
 
         </div>
     </div><!--/breadcrumbs-->
@@ -105,21 +105,16 @@
                                         <div class="col-md-6">
                                             <label class="label">Wybierz obiekt <span class="color-red">*</span></label>
                                             <div class="input-group">
-                                                <select id="service-select" class="selectpicker input-block-level"
+                                                <select id="service-select" class="selectpicker input-block-level state-disabled"
                                                         data-selected-text-format="count>1"
-                                                        data-live-search="true" title='Wybierz...' data-width="100%">
+                                                        data-live-search="true" title='Wybierz...' data-width="100%" disabled>
                                                     <option data-hidden="true"></option>
                                                     <option value="0">(1212) Tyger Gym - Przymorze</option>
-                                                    <option value="1">(1213) Tyger Gym - Rental park</option>
+                                                    <option value="1" selected>(1213) Tyger Gym - Rental park</option>
                                                     <option value="2">(1215) Tyger Gym - Oliwa</option>
                                                     <option value="3">(1214) Tyger Gym - Manhattan</option>
                                                     <option value="4">(1215) Tyger Gym - Rumia</option>
                                                 </select>
-                                                <span class="input-group-btn">
-                                                    <button class="btn-u" tabindex="-1" type="button">
-                                                        <span class="fa fa-search" aria-hidden="true"></span>
-                                                    </button>
-                                                </span>
                                             </div>
                                         </div>
                                     </div>
@@ -128,24 +123,20 @@
                                     <div class="row">
                                         <section class="col col-6">
                                             <label class="label">Wybierz terminal <span class="color-red">*</span></label>
-                                            <label class="radio" id="tid1"><input type="radio" name="radio"><i class="rounded-x"></i>TID: 001200 SN: 1234567 </label>
-                                            <label class="radio" id="tid2"><input type="radio" name="radio"><i class="rounded-x"></i>TID: 001200 SN: 1234567 </label>
-                                            <label class="radio" id="tid3"><input type="radio" name="radio"><i class="rounded-x"></i>TID: 001200 SN: 1234567 </label>
-                                            <label class="radio" id="tid4"><input type="radio" name="radio"><i class="rounded-x"></i>TID: 001200 SN: 1234567 </label>
-                                            <label class="radio" id="tid5"><input type="radio" name="radio"><i class="rounded-x"></i>TID: 001200 SN: 1234567 </label>
-                                            <label class="radio" id="tid6"><input type="radio" name="radio"><i class="rounded-x"></i>TID: 001200 SN: 1234567 </label>
+                                            <label class="radio" id="tid1"><input type="radio" name="radio" checked disabled class="state-disabled"><i class="rounded-x"></i>TID: 001200 SN: 1234567 </label>
+                                            <label class="radio" id="tid2"><input type="radio" name="radio" disabled class="state-disabled"><i class="rounded-x"></i>TID: 001200 SN: 1234567 </label>
+                                            <label class="radio" id="tid3"><input type="radio" name="radio" disabled class="state-disabled"><i class="rounded-x"></i>TID: 001200 SN: 1234567 </label>
+                                            <label class="radio" id="tid4"><input type="radio" name="radio" disabled class="state-disabled"><i class="rounded-x"></i>TID: 001200 SN: 1234567 </label>
+                                            <label class="radio" id="tid5"><input type="radio" name="radio" disabled class="state-disabled"><i class="rounded-x"></i>TID: 001200 SN: 1234567 </label>
+                                            <label class="radio" id="tid6"><input type="radio" name="radio" disabled class="state-disabled"><i class="rounded-x"></i>TID: 001200 SN: 1234567 </label>
 
                                         </section>
                                         <section class="col col-6">
-                                            <label class="label">Gdzie znajdę numery terminali?</label>
-                                            <a id="term1" href="assets/img/terminal1.png" rel="gallery"
+                                            <a href="assets/img/terminal1.png" rel="gallery"
                                                class="fancybox img-hover-v1" title="SN: 1234567">
                                                 <span><img class="img-responsive" src="assets/img/terminal1.png" alt=""></span>
                                             </a>
-                                            <a style="display:none;" id="term2" href="assets/img/terminal2.png"
-                                               rel="gallery" class="fancybox img-hover-v1" title="Image 1">
-                                                <span><img class="img-responsive" src="assets/img/terminal2.png" alt=""></span>
-                                            </a>
+
                                         </section>
                                     </div>
                                 </fieldset>
@@ -153,22 +144,22 @@
                                     <section>
                                         <label class="label">Czy terminal sie uruchamia? <span class="color-red">*</span></label>
                                         <div class="inline-group">
-                                            <label class="radio"><input class="radio1" type="radio" name="radio1"><i class="rounded-x"></i>TAK</label>
-                                            <label class="radio"><input class="radio1" type="radio" name="radio1"><i class="rounded-x"></i>NIE</label>
+                                            <label class="radio"><input class="radio1" type="radio" name="radio1" checked disabled class="state-disabled"><i class="rounded-x"></i>TAK</label>
+                                            <label class="radio"><input class="radio1" type="radio" name="radio1"  disabled class="state-disabled"><i class="rounded-x"></i>NIE</label>
                                         </div>
                                     </section>
                                     <section>
                                         <label class="label">Czy terminal rejestruje wizyty? <span class="color-red">*</span></label>
                                         <div class="inline-group">
-                                            <label class="radio"><input class="radio1" type="radio" name="radio2"><i class="rounded-x"></i>TAK</label>
-                                            <label class="radio"><input class="radio1" type="radio" name="radio2"><i class="rounded-x"></i>NIE</label>
+                                            <label class="radio"><input class="radio1" type="radio" name="radio2" checked disabled class="state-disabled"><i class="rounded-x"></i>TAK</label>
+                                            <label class="radio"><input class="radio1" type="radio" name="radio2"  disabled class="state-disabled"><i class="rounded-x"></i>NIE</label>
                                         </div>
                                     </section>
                                     <section>
                                         <label class="label">Czy terminal sie uruchamia? <span class="color-red">*</span></label>
                                         <div class="inline-group">
-                                            <label class="radio"><input class="radio1" type="radio" name="radio3"><i class="rounded-x"></i>TAK</label>
-                                            <label class="radio"><input class="radio1" type="radio" name="radio3"><i class="rounded-x"></i>NIE</label>
+                                            <label class="radio"><input class="radio1" type="radio" name="radio3" checked disabled class="state-disabled"><i class="rounded-x"></i>TAK</label>
+                                            <label class="radio"><input class="radio1" type="radio" name="radio3" disabled class="state-disabled"><i class="rounded-x"></i>NIE</label>
                                         </div>
                                     </section>
                                 </fieldset>
@@ -176,10 +167,10 @@
                                     <section>
                                         <label class="label">Komunikat widoczny na terminalu <span class="color-red">*</span></label>
                                         <label class="select">
-                                            <select id="komunikaty"
+                                            <select id="komunikaty" disabled class="state-disabled" readonly="">
                                                     onchange=" console.log($('#komunikaty').val());if($('#komunikaty').val() == 4) $('#komunikat').show(); else $('#komunikat').hide();">
                                                 <option>Wybierz...</option>
-                                                <option value="0">Komunikat 1</option>
+                                                <option value="0" selected>Komunikat 1</option>
                                                 <option value="1">Komunikat 2</option>
                                                 <option value="2">Komunikat 3</option>
                                                 <option value="3">Komunikat 4</option>
@@ -198,7 +189,8 @@
                                         <label class="textarea">
                                             <textarea id="appbundle_invoice_confirm_status_comment"
                                                       name="appbundle_invoice_confirm[status_comment]"
-                                                      rows="3"></textarea>
+                                                      class="form-control"  disabled="disabled" readonly="readonly">fdjkds fd kdsfkjdsf dfjkd jkdf  kjfs
+                                            </textarea>
 
                                         </label>
                                     </section>
@@ -206,35 +198,8 @@
                                 <fieldset>
                                     <div class="row">
                                         <section class="col col-6">
-                                            <label class="label">Wpisz dane osoby do kontaktu</label>
-                                            <label>Imię i nazwisko <span class="color-red">*</span></label>
-                                            <div class="row sky-space-20">
-                                                <div class="col-xs-12">
-                                                    <div>
-                                                        <input type="text" name="imie" id="imie"class="form-control">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <label>Nr telefonu <span class="color-red">*</span></label>
-                                            <div class="row sky-space-20">
-                                                <div class="col-xs-12">
-                                                    <div>
-                                                        <input type="text" name="tel" id="tel"class="form-control">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <label>Godziny pracy przy terminalu <span class="color-red">*</span></label>
-                                            <div class="row sky-space-20">
-                                                <div class="col-xs-12">
-                                                    <div>
-                                                        <input type="text" name="hours" id="hours"class="form-control">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </section>
-                                        <section class="col col-6">
                                             <label class="label ">Twoje dane kontaktowe</label>
-                                            <label>Imię i nazwisko</label>
+                                            <label>Imię i nazwisko<span class="color-red"> *</span></label>
                                             <div class="row sky-space-20">
                                                 <div class="col-xs-12">
                                                     <div>
@@ -243,30 +208,67 @@
                                                 </div>
                                             </div>
 
-                                            <label>Nr telefonu</label>
+                                            <label>Nr telefonu<span class="color-red"> *</span></label>
                                             <div class="row sky-space-20">
                                                 <div class="col-xs-12">
                                                     <div>
-                                                        <input type="text" name="tel" value="505050505" id="teltmp"class="form-control"  disabled="disabled" readonly="readonly">
+                                                        <input type="text" name="tel" value="505050505" id="teltmp" class="form-control"  disabled="disabled" readonly="readonly">
                                                     </div>
                                                 </div>
                                             </div>
-
-
-                                            <label class="input">
-                                                <button type="button" class="btn-u margin-bottom-5"
-                                                        onclick="$('#imie').val($('#imietmp').val());$('#tel').val($('#teltmp').val());">
-                                                    Skopiuj swoje dane do formularza
-                                                </button>
-                                            </label>
+                                            <label>Godziny pracy przy terminalu <span class="color-red">*</span></label>
+                                            <div class="row sky-space-20">
+                                                <div class="col-xs-12">
+                                                    <div>
+                                                        <input type="text" name="hours" id="hours" class="form-control"  disabled="disabled" readonly="readonly" value="21-23">
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </section>
+
                                     </div>
                                 </fieldset>
+                                <!--History Table-->
+                                <div class="row sky-form">
+                                    <fieldset>
+                                        <h2>Historia</h2>
+                                        <table id="history" class="display history-summary" cellspacing="0" width="100%">
+                                            <thead>
+                                            <tr>
+                                                <th class="col-1">#</th>
+                                                <th class="col-2">Data edycji</th>
+                                                <th class="col-2 hidden-sm hidden-xs">Status</th>
+                                                <th>Komentarz</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            <tr>
+                                                <td>1</td>
+                                                <td class="hidden-sm hidden-xs">2015-05-31</td>
+                                                <td class="hidden-sm hidden-xs">Do akceptacji</td>
+                                                <td>KOkdoado dm kdaokdokda kad kaokdasok daokda o</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2</td>
+                                                <td class="hidden-sm hidden-xs">2015-06-03</td>
+                                                <td class="hidden-sm hidden-xs">Odrzucony</td>
+                                                <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris et malesuada eros, ac vehicula ligula. Quisque mauris odio, sollicitudin ac molestie sed, finibus at ipsum. Curabitur risus erat, auctor sit amet urna in, elementum convallis turpis. Integer et fermentum quam. Sed scelerisque pulvinar urna tempus tempor. Vivamus sapien velit, varius eu orci nec, facilisis commodo turpis. Curabitur ac egestas odio, quis venenatis lorem. Nulla accumsan semper ligula nec accumsan.</td>
+                                            </tr>
+                                            <tr>
+                                                <td>3</td>
+                                                <td class="hidden-sm hidden-xs">2015-06-07</td>
+                                                <td class="hidden-sm hidden-xs">Do akceptacji</td>
+                                                <td>t rutrum, vel commodo sapien posuere. Nunc nec eros eget mauris blandit viverra nec vitae nunc. Proin fermentum metus eget posuere commodo</td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </fieldset>
+                                </div>
+
                                 <footer style="text-align: right;">
                                     <button type="button" class="btn-u btn-u-default" onclick="window.history.back();">
                                         Wróć
                                     </button>
-                                    <button type="submit" class="btn-u margin-bottom-5">Zgłoś awarię</button>
                                 </footer>
                             </form>
 
@@ -350,38 +352,17 @@
     jQuery(document).ready(function () {
         App.init();
         StyleSwitcher.initStyleSwitcher();
-        $('#vatReasonDiv').hide();
-
-        $('#docTypes').change(function () {
-
-            if ($(this).val() == "2") {
-                $('#vatReasonDiv').slideToggle('fast', function () {
-                    // Animation complete.
-                });
-            }
-            else {
-                $('#vatReasonDiv').hide();
-            }
-        });
-
-        $('#vat_reason').change(function () {
-            var str = "";
-            $("#vat_reason option:selected").each(function () {
-                str += $(this).val() + " ";
+        $(document).ready(function () {
+            $('#history').DataTable({
+                "paging": false,
+                "info": false,
+                bFilter: false, bInfo: false,
+                "language": {
+                    "url": "assets/plugins/datatable/lang/Polish.json"
+                }
             });
-            $("#vat_reason_text").text(str);
         });
-
-
         FancyBox.initFancybox();
-        $('#tid1').click(function () {
-            $('#term2').hide();
-            $('#term1').show();
-        });
-        $('#tid2').click(function () {
-            $('#term1').hide();
-            $('#term2').show();
-        });
     });
 </script>
 <script>

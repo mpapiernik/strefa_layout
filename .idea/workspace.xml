@@ -2,18 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="23f5777b-19af-44d0-9816-0433b4192482" name="Default" comment="Discounts module.&#10;">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/add_article_category.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/edit_article_category.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/list_article_category.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dictionaries/m_kwidzinska.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/generate_invoice_preview.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/remove_article_category.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view_accident_report.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/add_article.html" afterPath="$PROJECT_DIR$/add_article.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/add_accident_report.html" afterPath="$PROJECT_DIR$/add_accident_report.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/add_invoice_prop.html" afterPath="$PROJECT_DIR$/add_invoice_prop.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/edit_article.html" afterPath="$PROJECT_DIR$/edit_article.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/header_backend.html" afterPath="$PROJECT_DIR$/header_backend.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/preview_invoice.html" afterPath="$PROJECT_DIR$/preview_invoice.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/profile_operator_settings.html" afterPath="$PROJECT_DIR$/profile_operator_settings.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/send_invoice.html" afterPath="$PROJECT_DIR$/send_invoice.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generate_invoice.html" afterPath="$PROJECT_DIR$/generate_invoice.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generate_invoice_correct.html" afterPath="$PROJECT_DIR$/generate_invoice_correct.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/list_accident_report.html" afterPath="$PROJECT_DIR$/list_accident_report.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/list_article_category.html" afterPath="$PROJECT_DIR$/list_article_category.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/list_invoices_backend.html" afterPath="$PROJECT_DIR$/list_invoices_backend.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/list_partners.html" afterPath="$PROJECT_DIR$/list_partners.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view_invoice.html" afterPath="$PROJECT_DIR$/view_invoice.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view_invoice_backend.html" afterPath="$PROJECT_DIR$/view_invoice_backend.html" />
     </list>
     <ignored path=".idea/dataSources.local.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -62,103 +65,149 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="257">
-      <file leaf-file-name="preview_invoice.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/preview_invoice.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="86" column="49" lean-forward="false" selection-start-line="86" selection-start-column="49" selection-end-line="86" selection-end-column="49" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="add_invoice.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/add_invoice.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="601">
-              <caret line="124" column="47" lean-forward="false" selection-start-line="101" selection-start-column="38" selection-end-line="124" selection-end-column="47" />
+            <state relative-caret-position="278">
+              <caret line="321" column="43" lean-forward="true" selection-start-line="318" selection-start-column="36" selection-end-line="321" selection-end-column="43" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="add_invoice_prop.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/add_invoice_prop.html">
+      <file leaf-file-name="remove_article_category.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/remove_article_category.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="261">
-              <caret line="103" column="101" lean-forward="true" selection-start-line="103" selection-start-column="101" selection-end-line="103" selection-end-column="101" />
+            <state relative-caret-position="442">
+              <caret line="86" column="85" lean-forward="true" selection-start-line="85" selection-start-column="128" selection-end-line="86" selection-end-column="85" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="list_invoices_backend.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/list_invoices_backend.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="258" column="69" lean-forward="true" selection-start-line="258" selection-start-column="69" selection-end-line="258" selection-end-column="69" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="view_invoice_backend.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/view_invoice_backend.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-3105">
+              <caret line="178" column="36" lean-forward="true" selection-start-line="178" selection-start-column="36" selection-end-line="178" selection-end-column="36" />
               <folding>
-                <element signature="n#style#0;n#footer#0;n#form#0;n#div#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="e#3938#3944#0" expanded="true" />
+                <element signature="e#10313#10319#0" expanded="true" />
+                <marker date="1496404784739" expanded="true" signature="38919:38937" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="list_article_category.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/list_article_category.html">
+      <file leaf-file-name="generate_invoice_correct.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/generate_invoice_correct.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="74" column="45" lean-forward="true" selection-start-line="74" selection-start-column="45" selection-end-line="74" selection-end-column="45" />
-              <folding />
+            <state relative-caret-position="462">
+              <caret line="985" column="18" lean-forward="true" selection-start-line="985" selection-start-column="18" selection-end-line="985" selection-end-column="18" />
+              <folding>
+                <element signature="n#div#3;n#div#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#div#5;n#div#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#div#6;n#div#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#div#7;n#div#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#fieldset#0;n#div#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#table#0;n#section#1;n#fieldset#1;n#form#0;n#div#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#table#0;n#section#3;n#fieldset#1;n#form#0;n#div#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="e#51114#54097#0" expanded="false" />
+                <element signature="e#54251#54488#0" expanded="false" />
+                <element signature="e#57094#58039#0" expanded="false" />
+                <marker date="1496410801488" expanded="true" signature="56074:56105" ph="..." />
+                <marker date="1496410801488" expanded="true" signature="56156:56173" ph="..." />
+                <marker date="1496410801488" expanded="true" signature="56239:56251" ph="..." />
+                <marker date="1496410801488" expanded="true" signature="56396:56408" ph="..." />
+                <marker date="1496410801488" expanded="true" signature="56593:56620" ph="..." />
+                <marker date="1496410801488" expanded="true" signature="56766:56793" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index_backend.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index_backend.html">
+      <file leaf-file-name="add_accident_report.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/add_accident_report.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-104">
-              <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="546">
+              <caret line="257" column="135" lean-forward="false" selection-start-line="257" selection-start-column="65" selection-end-line="257" selection-end-column="135" />
+              <folding>
+                <element signature="n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="add_article_category.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/add_article_category.html">
+      <file leaf-file-name="generate_invoice.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/generate_invoice.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="69" column="38" lean-forward="false" selection-start-line="69" selection-start-column="38" selection-end-line="69" selection-end-column="64" />
-              <folding />
+            <state relative-caret-position="210">
+              <caret line="53" column="2" lean-forward="false" selection-start-line="53" selection-start-column="2" selection-end-line="54" selection-end-column="60" />
+              <folding>
+                <element signature="n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="edit_article_category.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/edit_article_category.html">
+      <file leaf-file-name="generate_note.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/generate_note.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="561">
-              <caret line="90" column="45" lean-forward="true" selection-start-line="90" selection-start-column="45" selection-end-line="90" selection-end-column="45" />
-              <folding />
+            <state relative-caret-position="346">
+              <caret line="703" column="39" lean-forward="true" selection-start-line="627" selection-start-column="34" selection-end-line="703" selection-end-column="39" />
+              <folding>
+                <element signature="n#div#3;n#div#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#div#4;n#div#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#div#5;n#div#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#div#6;n#div#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#div#7;n#div#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#form#0;n#div#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="e#42088#42581#0" expanded="false" />
+                <element signature="e#42650#44492#0" expanded="false" />
+                <element signature="e#44615#44734#0" expanded="false" />
+                <element signature="e#44845#46190#0" expanded="false" />
+                <element signature="e#46280#47897#0" expanded="false" />
+                <marker date="1475478843488" expanded="true" signature="45065:45096" ph="..." />
+                <marker date="1475478843488" expanded="true" signature="45147:45164" ph="..." />
+                <marker date="1475478843488" expanded="true" signature="45266:45278" ph="..." />
+                <marker date="1475478843488" expanded="true" signature="45459:45471" ph="..." />
+                <marker date="1475478843488" expanded="true" signature="45728:45755" ph="..." />
+                <marker date="1475478843488" expanded="true" signature="45973:46000" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="edit_article.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/edit_article.html">
+      <file leaf-file-name="view_invoice.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/view_invoice.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="544">
-              <caret line="125" column="76" lean-forward="true" selection-start-line="123" selection-start-column="75" selection-end-line="125" selection-end-column="76" />
-              <folding />
+            <state relative-caret-position="383">
+              <caret line="583" column="47" lean-forward="true" selection-start-line="583" selection-start-column="15" selection-end-line="583" selection-end-column="47" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <marker date="1496395348790" expanded="true" signature="27544:27562" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="add_article.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="add_article.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/add_article.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="104" column="44" lean-forward="true" selection-start-line="104" selection-start-column="44" selection-end-line="104" selection-end-column="44" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="edit_discount.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/edit_discount.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="561">
-              <caret line="177" column="34" lean-forward="true" selection-start-line="166" selection-start-column="23" selection-end-line="177" selection-end-column="34" />
+            <state relative-caret-position="540">
+              <caret line="117" column="42" lean-forward="true" selection-start-line="106" selection-start-column="30" selection-end-line="117" selection-end-column="42" />
               <folding />
             </state>
           </provider>
@@ -168,11 +217,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>tabledi</find>
-      <find>dowie</find>
-      <find>confirm</find>
-      <find>confirmModal</find>
-      <find>myModal</find>
       <find>dodaj rapor</find>
       <find>notatka</find>
       <find>dodaj</find>
@@ -184,12 +228,30 @@
       <find>linkedTab</find>
       <find>podejmuj</find>
       <find>powód odrz</find>
-      <find>historia</find>
       <find>load</find>
       <find>okres</find>
+      <find>moje dane</find>
+      <find>historia</find>
+      <find>wniosek</find>
+      <find>powód</find>
+      <find>co najmn</find>
+      <find>edit</find>
+      <find>takeAction</find>
+      <find>status</find>
+      <find>Numer pierwszego korygowanego dokumentu</find>
+      <find>custom</find>
+      <find>Zmiany</find>
+      <find>sprzedawca</find>
+      <find>add_correct_possition</find>
+      <find>n1</find>
+      <find>korekta</find>
+      <find>wyślij pon</find>
+      <find>appendHistory</find>
     </findStrings>
     <replaceStrings>
       <replace>edit_agreement</replace>
+      <replace>Zmiany</replace>
+      <replace>Zapisz</replace>
     </replaceStrings>
     <dirStrings>
       <dir>D:\Projects\strefa-partnera-layout</dir>
@@ -203,7 +265,6 @@
       <list>
         <option value="$PROJECT_DIR$/view_sent_invoice_backend.html" />
         <option value="$PROJECT_DIR$/assets/css/plugins/style-switcher.css" />
-        <option value="$PROJECT_DIR$/add_accident_report.html" />
         <option value="$PROJECT_DIR$/list_invoices.html" />
         <option value="$PROJECT_DIR$/wall.html" />
         <option value="$PROJECT_DIR$/delete_terminal.html" />
@@ -214,12 +275,9 @@
         <option value="$PROJECT_DIR$/add_communique.html" />
         <option value="$PROJECT_DIR$/assets/css/custom.css" />
         <option value="$PROJECT_DIR$/header.html" />
-        <option value="$PROJECT_DIR$/list_accident_report.html" />
-        <option value="$PROJECT_DIR$/list_partners.html" />
         <option value="$PROJECT_DIR$/add_report_content.html" />
         <option value="$PROJECT_DIR$/list_reports.html" />
         <option value="$PROJECT_DIR$/list_reports_content.html" />
-        <option value="$PROJECT_DIR$/generate_invoice.html" />
         <option value="$PROJECT_DIR$/add_report.html" />
         <option value="$PROJECT_DIR$/add_report_modal.html" />
         <option value="$PROJECT_DIR$/generate_invoice_prop.html" />
@@ -228,17 +286,28 @@
         <option value="$PROJECT_DIR$/edit_agreement.html" />
         <option value="$PROJECT_DIR$/add_agreement.html" />
         <option value="$PROJECT_DIR$/profile_operator_settings.html" />
-        <option value="$PROJECT_DIR$/view_invoice.html" />
         <option value="$PROJECT_DIR$/send_invoice.html" />
         <option value="$PROJECT_DIR$/preview_invoice.html" />
-        <option value="$PROJECT_DIR$/add_invoice_prop.html" />
         <option value="$PROJECT_DIR$/list_terminal_errors.html" />
-        <option value="$PROJECT_DIR$/list_article_category.html" />
         <option value="$PROJECT_DIR$/header_backend.html" />
         <option value="$PROJECT_DIR$/add_article_category.html" />
         <option value="$PROJECT_DIR$/edit_article_category.html" />
         <option value="$PROJECT_DIR$/edit_article.html" />
         <option value="$PROJECT_DIR$/add_article.html" />
+        <option value="$PROJECT_DIR$/add_post.html" />
+        <option value="$PROJECT_DIR$/add_accident_report.html" />
+        <option value="$PROJECT_DIR$/add_invoice_prop.html" />
+        <option value="$PROJECT_DIR$/list_accident_report.html" />
+        <option value="$PROJECT_DIR$/view_accident_report.html" />
+        <option value="$PROJECT_DIR$/view_invoice.html" />
+        <option value="$PROJECT_DIR$/generate_invoice.html" />
+        <option value="$PROJECT_DIR$/list_partners.html" />
+        <option value="$PROJECT_DIR$/generate_invoice_preview.html" />
+        <option value="$PROJECT_DIR$/list_article_category.html" />
+        <option value="$PROJECT_DIR$/remove_article_category.html" />
+        <option value="$PROJECT_DIR$/list_invoices_backend.html" />
+        <option value="$PROJECT_DIR$/view_invoice_backend.html" />
+        <option value="$PROJECT_DIR$/generate_invoice_correct.html" />
       </list>
     </option>
   </component>
@@ -270,7 +339,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -286,6 +354,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -293,7 +362,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="liveEdit" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
-    <property name="SearchEverywhereHistoryKey" value="terminal&#9;FILE&#9;file://D:/Projects/strefa-partnera-layout/list_terminal_errors.html&#10;modal&#9;FILE&#9;file://D:/Projects/strefa-partnera-layout/post_modal.html&#10;modal-backdrop&#9;null&#9;null" />
+    <property name="SearchEverywhereHistoryKey" value="add_a&#9;FILE&#9;file://D:/Projects/strefa-partnera-layout/add_accident_report.html&#10;gene&#9;FILE&#9;file://D:/Projects/strefa-partnera-layout/generate_invoice.html&#10;generat&#9;FILE&#9;file://D:/Projects/strefa-partnera-layout/generate_note.html&#10;view_in&#9;FILE&#9;file://D:/Projects/strefa-partnera-layout/view_invoice_backend.html&#10;list_inv&#9;FILE&#9;file://D:/Projects/strefa-partnera-layout/list_invoices_backend.html&#10;list_arti&#9;FILE&#9;file://D:/Projects/strefa-partnera-layout/list_article_category.html&#10;view_i&#9;FILE&#9;file://D:/Projects/strefa-partnera-layout/view_invoice.html&#10;genera&#9;FILE&#9;file://D:/Projects/strefa-partnera-layout/generate_invoice.html&#10;vie_invoi&#9;FILE&#9;file://D:/Projects/strefa-partnera-layout/preview_invoice.html&#10;add&#9;FILE&#9;file://D:/Projects/strefa-partnera-layout/add_accident_report.html&#10;add_invoice&#9;FILE&#9;file://D:/Projects/strefa-partnera-layout/add_invoice_prop.html&#10;terminal&#9;FILE&#9;file://D:/Projects/strefa-partnera-layout/list_terminal_errors.html&#10;modal&#9;FILE&#9;file://D:/Projects/strefa-partnera-layout/post_modal.html&#10;modal-backdrop&#9;null&#9;null" />
     <property name="js.eslint.eslintPackage" value="" />
   </component>
   <component name="RecentsManager">
@@ -405,15 +474,16 @@
       <workItem from="1493190222989" duration="4487000" />
       <workItem from="1495630263133" duration="1917000" />
       <workItem from="1495721923121" duration="26209000" />
-      <workItem from="1496046194176" duration="8140000" />
+      <workItem from="1496046194176" duration="8827000" />
+      <workItem from="1496388111047" duration="18389000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="50716000" />
+    <option name="totallyTimeSpent" value="69792000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1912" y="-8" width="1616" height="876" extended-state="0" />
+    <frame x="1912" y="-8" width="1616" height="876" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.175" sideWeight="0.57969433" order="4" side_tool="false" content_ui="combo" />
@@ -467,7 +537,7 @@
       <window_info id="Code Review" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.175" sideWeight="0.57969433" order="4" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27154046" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27154046" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Copy/Paste" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
     </layout-to-restore>
@@ -515,68 +585,10 @@
     </option>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/contact.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="98" column="31" lean-forward="false" selection-start-line="98" selection-start-column="31" selection-end-line="105" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/list_survey.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="74" column="95" lean-forward="false" selection-start-line="74" selection-start-column="95" selection-end-line="74" selection-end-column="123" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/delete_vat_rate.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="34" lean-forward="false" selection-start-line="18" selection-start-column="34" selection-end-line="18" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/delete_file.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="20" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/delete_terminal.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="18" lean-forward="false" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/list_download_files.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-538">
-          <caret line="175" column="141" lean-forward="false" selection-start-line="175" selection-start-column="11" selection-end-line="175" selection-end-column="141" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/edit_terminal.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="102" column="85" lean-forward="false" selection-start-line="102" selection-start-column="85" selection-end-line="102" selection-end-column="85" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/edit_communique.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="57" column="24" lean-forward="false" selection-start-line="57" selection-start-column="24" selection-end-line="57" selection-end-column="109" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/add_communique.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="338">
           <caret line="65" column="33" lean-forward="false" selection-start-line="65" selection-start-column="33" selection-end-line="65" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -609,24 +621,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/list_accident_report.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="77" column="83" lean-forward="false" selection-start-line="77" selection-start-column="83" selection-end-line="77" selection-end-column="83" />
-          <folding>
-            <element signature="n#div#3;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/list_partners.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="145" column="162" lean-forward="false" selection-start-line="145" selection-start-column="162" selection-end-line="145" selection-end-column="162" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/list_reports_content.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -645,7 +639,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="89" lean-forward="false" selection-start-line="9" selection-start-column="89" selection-end-line="9" selection-end-column="89" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -659,22 +652,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/add_accident_report.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="498">
-          <caret line="273" column="30" lean-forward="true" selection-start-line="273" selection-start-column="30" selection-end-line="273" selection-end-column="30" />
-          <folding>
-            <element signature="n#style#0;n#input#0;n#label#2;n#section#0;n#fieldset#3;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/register_ZKK_action.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="612">
           <caret line="36" column="6" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -682,15 +663,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="36" lean-forward="true" selection-start-line="7" selection-start-column="36" selection-end-line="7" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/generate_invoice.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="828" column="25" lean-forward="true" selection-start-line="826" selection-start-column="15" selection-end-line="828" selection-end-column="25" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -698,7 +670,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
           <caret line="23" column="87" lean-forward="true" selection-start-line="23" selection-start-column="87" selection-end-line="23" selection-end-column="87" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -714,7 +685,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="185">
           <caret line="116" column="22" lean-forward="true" selection-start-line="116" selection-start-column="22" selection-end-line="116" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -722,9 +692,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
           <caret line="303" column="0" lean-forward="true" selection-start-line="303" selection-start-column="0" selection-end-line="303" selection-end-column="0" />
-          <folding>
-            <element signature="n#style#0;n#footer#0;n#form#0;n#div#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -743,7 +710,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="57" column="25" lean-forward="true" selection-start-line="53" selection-start-column="19" selection-end-line="57" selection-end-column="25" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -751,7 +717,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="476">
           <caret line="133" column="39" lean-forward="true" selection-start-line="133" selection-start-column="39" selection-end-line="133" selection-end-column="39" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -759,7 +724,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="663">
           <caret line="102" column="42" lean-forward="true" selection-start-line="102" selection-start-column="42" selection-end-line="102" selection-end-column="42" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -767,7 +731,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="354">
           <caret line="187" column="30" lean-forward="true" selection-start-line="187" selection-start-column="30" selection-end-line="187" selection-end-column="30" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -775,7 +738,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="602">
           <caret line="58" column="25" lean-forward="true" selection-start-line="58" selection-start-column="25" selection-end-line="58" selection-end-column="25" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -787,35 +749,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/view_invoice_backend.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="82" column="103" lean-forward="true" selection-start-line="82" selection-start-column="103" selection-end-line="82" selection-end-column="103" />
-          <folding>
-            <marker date="1495630245475" expanded="true" signature="35024:35042" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view_invoice.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="78" column="94" lean-forward="true" selection-start-line="78" selection-start-column="94" selection-end-line="78" selection-end-column="94" />
-          <folding>
-            <element signature="n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <marker date="1496060606428" expanded="true" signature="27544:27562" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/profile_operator_settings.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="326">
           <caret line="237" column="114" lean-forward="false" selection-start-line="237" selection-start-column="114" selection-end-line="237" selection-end-column="114" />
-          <folding>
-            <element signature="n#style#0;n#footer#0;n#div#3;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#div#0;n#div#3;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -823,7 +760,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="38" column="27" lean-forward="true" selection-start-line="38" selection-start-column="27" selection-end-line="38" selection-end-column="27" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -842,51 +778,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/preview_invoice.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="86" column="49" lean-forward="false" selection-start-line="86" selection-start-column="49" selection-end-line="86" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/add_invoice.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="601">
-          <caret line="124" column="47" lean-forward="false" selection-start-line="101" selection-start-column="38" selection-end-line="124" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/list_terminal_errors.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="46" column="38" lean-forward="true" selection-start-line="46" selection-start-column="38" selection-end-line="46" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/add_invoice_prop.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="103" column="101" lean-forward="true" selection-start-line="103" selection-start-column="101" selection-end-line="103" selection-end-column="101" />
-          <folding>
-            <element signature="n#style#0;n#footer#0;n#form#0;n#div#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/list_article_category.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="74" column="45" lean-forward="true" selection-start-line="74" selection-start-column="45" selection-end-line="74" selection-end-column="45" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/add_article_category.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
+        <state relative-caret-position="1173">
           <caret line="69" column="38" lean-forward="false" selection-start-line="69" selection-start-column="38" selection-end-line="69" selection-end-column="64" />
           <folding />
         </state>
@@ -896,47 +797,246 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="97" column="30" lean-forward="true" selection-start-line="97" selection-start-column="30" selection-end-line="97" selection-end-column="30" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index_backend.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-104">
-          <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+        <state relative-caret-position="374">
+          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/edit_article_category.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="90" column="45" lean-forward="true" selection-start-line="90" selection-start-column="45" selection-end-line="90" selection-end-column="45" />
+        <state relative-caret-position="1530">
+          <caret line="90" column="45" lean-forward="false" selection-start-line="90" selection-start-column="45" selection-end-line="90" selection-end-column="45" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/edit_discount.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="177" column="34" lean-forward="true" selection-start-line="166" selection-start-column="23" selection-end-line="177" selection-end-column="34" />
+        <state relative-caret-position="3009">
+          <caret line="177" column="34" lean-forward="false" selection-start-line="166" selection-start-column="23" selection-end-line="177" selection-end-column="34" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/edit_article.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="125" column="76" lean-forward="true" selection-start-line="123" selection-start-column="75" selection-end-line="125" selection-end-column="76" />
+        <state relative-caret-position="2125">
+          <caret line="125" column="76" lean-forward="false" selection-start-line="123" selection-start-column="75" selection-end-line="125" selection-end-column="76" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/add_post.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="409" column="64" lean-forward="true" selection-start-line="409" selection-start-column="64" selection-end-line="409" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/add_invoice_prop.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="483">
+          <caret line="87" column="63" lean-forward="true" selection-start-line="87" selection-start-column="63" selection-end-line="87" selection-end-column="63" />
+          <folding>
+            <element signature="n#style#0;n#footer#0;n#form#0;n#div#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/list_accident_report.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="134" column="44" lean-forward="true" selection-start-line="134" selection-start-column="44" selection-end-line="134" selection-end-column="44" />
+          <folding>
+            <element signature="n#div#3;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/edit_partner_application.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="158">
+          <caret line="77" column="52" lean-forward="true" selection-start-line="77" selection-start-column="26" selection-end-line="77" selection-end-column="52" />
+          <folding>
+            <element signature="n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view_accident_report.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="215">
+          <caret line="238" column="82" lean-forward="true" selection-start-line="238" selection-start-column="82" selection-end-line="238" selection-end-column="82" />
+          <folding>
+            <element signature="n#style#0;n#input#0;n#label#2;n#section#0;n#fieldset#3;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/preview_invoice.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="244">
+          <caret line="90" column="38" lean-forward="true" selection-start-line="90" selection-start-column="38" selection-end-line="90" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/list_partners.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="346">
+          <caret line="171" column="133" lean-forward="false" selection-start-line="171" selection-start-column="133" selection-end-line="171" selection-end-column="133" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/generate_invoice_preview.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="149" column="99" lean-forward="true" selection-start-line="149" selection-start-column="99" selection-end-line="149" selection-end-column="99" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/list_article_category.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="455">
+          <caret line="133" column="45" lean-forward="true" selection-start-line="133" selection-start-column="45" selection-end-line="133" selection-end-column="45" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/add_article.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="104" column="44" lean-forward="true" selection-start-line="104" selection-start-column="44" selection-end-line="104" selection-end-column="44" />
+        <state relative-caret-position="540">
+          <caret line="117" column="42" lean-forward="true" selection-start-line="106" selection-start-column="30" selection-end-line="117" selection-end-column="42" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view_invoice.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="383">
+          <caret line="583" column="47" lean-forward="true" selection-start-line="583" selection-start-column="15" selection-end-line="583" selection-end-column="47" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <marker date="1496395348790" expanded="true" signature="27544:27562" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/remove_article_category.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="86" column="85" lean-forward="true" selection-start-line="85" selection-start-column="128" selection-end-line="86" selection-end-column="85" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/list_invoices_backend.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="258" column="69" lean-forward="true" selection-start-line="258" selection-start-column="69" selection-end-line="258" selection-end-column="69" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/generate_invoice.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="53" column="2" lean-forward="false" selection-start-line="53" selection-start-column="2" selection-end-line="54" selection-end-column="60" />
+          <folding>
+            <element signature="n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/generate_note.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="346">
+          <caret line="703" column="39" lean-forward="true" selection-start-line="627" selection-start-column="34" selection-end-line="703" selection-end-column="39" />
+          <folding>
+            <element signature="n#div#3;n#div#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#4;n#div#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#5;n#div#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#6;n#div#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#7;n#div#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#form#0;n#div#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="e#42088#42581#0" expanded="false" />
+            <element signature="e#42650#44492#0" expanded="false" />
+            <element signature="e#44615#44734#0" expanded="false" />
+            <element signature="e#44845#46190#0" expanded="false" />
+            <element signature="e#46280#47897#0" expanded="false" />
+            <marker date="1475478843488" expanded="true" signature="45065:45096" ph="..." />
+            <marker date="1475478843488" expanded="true" signature="45147:45164" ph="..." />
+            <marker date="1475478843488" expanded="true" signature="45266:45278" ph="..." />
+            <marker date="1475478843488" expanded="true" signature="45459:45471" ph="..." />
+            <marker date="1475478843488" expanded="true" signature="45728:45755" ph="..." />
+            <marker date="1475478843488" expanded="true" signature="45973:46000" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/add_accident_report.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="546">
+          <caret line="257" column="135" lean-forward="false" selection-start-line="257" selection-start-column="65" selection-end-line="257" selection-end-column="135" />
+          <folding>
+            <element signature="n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view_invoice_backend.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3105">
+          <caret line="178" column="36" lean-forward="true" selection-start-line="178" selection-start-column="36" selection-end-line="178" selection-end-column="36" />
+          <folding>
+            <element signature="n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="e#3938#3944#0" expanded="true" />
+            <element signature="e#10313#10319#0" expanded="true" />
+            <marker date="1496404784739" expanded="true" signature="38919:38937" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/add_invoice.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="278">
+          <caret line="321" column="43" lean-forward="true" selection-start-line="318" selection-start-column="36" selection-end-line="321" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/generate_invoice_correct.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="985" column="18" lean-forward="true" selection-start-line="985" selection-start-column="18" selection-end-line="985" selection-end-column="18" />
+          <folding>
+            <element signature="n#div#3;n#div#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#5;n#div#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#6;n#div#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#7;n#div#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#fieldset#0;n#div#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#table#0;n#section#1;n#fieldset#1;n#form#0;n#div#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#table#0;n#section#3;n#fieldset#1;n#form#0;n#div#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="e#51114#54097#0" expanded="false" />
+            <element signature="e#54251#54488#0" expanded="false" />
+            <element signature="e#57094#58039#0" expanded="false" />
+            <marker date="1496410801488" expanded="true" signature="56074:56105" ph="..." />
+            <marker date="1496410801488" expanded="true" signature="56156:56173" ph="..." />
+            <marker date="1496410801488" expanded="true" signature="56239:56251" ph="..." />
+            <marker date="1496410801488" expanded="true" signature="56396:56408" ph="..." />
+            <marker date="1496410801488" expanded="true" signature="56593:56620" ph="..." />
+            <marker date="1496410801488" expanded="true" signature="56766:56793" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>

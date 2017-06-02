@@ -163,6 +163,76 @@
                     </div>
                 </div>
 
+                <!--History Invoice Table-->
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="tag-box tag-box-v3 no-margin-bottom">
+                            <div class="headline">
+                                <h2>Historia statusów EOD - status: Bląd komunikacji EOD <a id="appendEODHistory"><i id="historyEODArrow" class="fa fa-sort-desc"></i></a> </h2>
+                            </div>
+                            <div id="historyEODTab">
+                                <table id="historyEOD" class="display history-summary" cellspacing="0" width="100%">
+                                    <thead>
+
+                                    <tr>
+                                        <th>#</th>
+                                        <th class="hidden-sm hidden-xs hidden-xs">Data&nbsp;edycji</th>
+                                        <th class="hidden-sm hidden-xs">Status EOD</th>
+                                        <th>Komuniakt EOD</th>
+                                        <th>Więcej</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+
+                                        <td>3</td>
+                                        <td class="hidden-sm hidden-xs">2015-06-01 00:21</td>
+                                        <td class="hidden-sm hidden-xs">Bląd komunikacji EOD</td>
+                                        <td>-</td>
+                                        <td><a href=""  target="_blank" class="btn-u btn-brd btn-brd-hover btn-u-sm"><i class="fa fa-send"></i> Wyślij ponownie do EOD</a>
+
+                                        </td>
+                                    </tr>
+                                    <tr>
+
+                                        <td>3</td>
+                                        <td class="hidden-sm hidden-xs">2015-06-01 00:21</td>
+                                        <td class="hidden-sm hidden-xs">Wysłany do EOD</td>
+                                        <td>-</td>
+                                        <td>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td class="hidden-sm hidden-xs">2015-05-31 23:59</td>
+                                        <td class="hidden-sm hidden-xs">Odrzucony przez EOD</td>
+                                        <td>Erroor: 4x000f kjfcodfiojcojicdojoidc</td>
+                                        <td>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td class="hidden-sm hidden-xs">2015-05-31 23:23</td>
+                                        <td class="hidden-sm hidden-xs">Wysłany do EOD</td>
+                                        <td>-</td>
+                                        <td>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td class="hidden-sm hidden-xs">2015-05-31 20:21</td>
+                                        <td class="hidden-sm hidden-xs">Do wysłania</td>
+                                        <td>-</td>
+                                        <td>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <!--Linked Invoice Table-->
                 <div class="row">
                     <div class="col-xs-12">
@@ -607,6 +677,17 @@
                                                 },
                                                 "order": [[2, 'asc']]
                                             });
+
+                                            var historyEODTab = $('#historyEOD').DataTable({
+                                                "paging": false,
+                                                "info": false,
+                                                bFilter: false,
+                                                bInfo: false,
+                                                "language": {
+                                                    "url": "assets/plugins/datatable/lang/Polish.json"
+                                                },
+                                                "order": [[2, 'asc']]
+                                            });
                                             $('#linked').DataTable({
                                                 "paging": false,
                                                 "info": false,
@@ -621,6 +702,25 @@
                                             $('#historyTab').slideToggle('fast', function () {
                                                 // Animation complete.
                                             });
+
+                                            $('#historyEODTab').slideToggle('fast', function () {
+                                                // Animation complete.
+                                            });
+
+                                            $('#appendEODHistory').click(function () {
+                                                $('#historyEODTab').slideToggle('fast', function () {
+                                                    if ($('#historyEODArrow').hasClass('fa-sort-desc')) {
+                                                        $('#loader').hide().delay(2000);
+                                                        $('#historyEODArrow').removeClass('fa-sort-desc');
+                                                        $('#historyEODArrow').addClass('fa-sort-asc');
+                                                    } else {
+                                                        $('#loader').show();
+                                                        $('#historyEODArrow').removeClass('fa-sort-asc');
+                                                        $('#historyEODArrow').addClass('fa-sort-desc');
+                                                    }
+                                                });
+                                            });
+
 
                                             $('#appendHistory').click(function () {
                                                 $('#historyTab').slideToggle('fast', function () {

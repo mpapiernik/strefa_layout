@@ -109,7 +109,7 @@
                                                 <label>Numer dokumentu</label>
                                                 <input type="text" class="form-control" placeholder="Wyszukaj ... ">
                                             </div>
-                                            <div class="col-md-3">
+                                            <div class="col-md-2">
                                                 <label>Typ</label>
                                                 <div class="input-group" style="width:100%">
                                                     <select class="selectpicker input-block-level" data-live-search="true" multiple="" data-selected-text-format="count>0" title='Filtruj...' data-width="100%">
@@ -123,16 +123,29 @@
                                                     </select>
                                                 </div>
                                             </div>
-                                            <div class="col-md-3">
+                                            <div class="col-md-2">
                                                 <label>Status</label>
                                                 <div class="input-group" style="width:100%">
-                                                    <select class="selectpicker input-block-level" data-live-search="true" multiple="" data-selected-text-format="count>1" title='Filtruj...' data-width="100%">
+                                                    <select class="selectpicker input-block-level" data-live-search="true" multiple="" data-selected-text-format="count>0" title='Filtruj...' data-width="100%">
                                                         <option  data-hidden="true"></option>	
                                                         <option value="1">Do akceptacji</option>	
                                                         <option value="2">Podjęta</option>	
                                                         <option value="3">Weryfikacja raportów</option>	
                                                         <option value="4">Zaakceptowana</option>	
                                                         <option value="5">Odrzucona</option>	
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <label>Status EOD</label>
+                                                <div class="input-group" style="width:100%">
+                                                    <select class="selectpicker input-block-level" data-live-search="true" multiple="" data-selected-text-format="count>0" title='Filtruj...' data-width="100%">
+                                                        <option  data-hidden="true"></option>
+                                                        <option value="1">Do wysłania</option>
+                                                        <option value="2">Wysłany do EOD</option>
+                                                        <option value="3">Potwierdzony przez EOD</option>
+                                                        <option value="4">Błąd komuniakcji EOD</option>
+                                                        <option value="5">Odrzucony przez EOD</option>
                                                     </select>
                                                 </div>
                                             </div>
@@ -174,6 +187,7 @@
                                                     <th class="hidden-sm hidden-xs hidden-xs">Termin płatności
                                                     </th>
                                                     <th class="hidden-sm hidden-xs">Status</th>
+                                                    <th class="hidden-sm hidden-xs">Status EOD</th>
                                                     <th class="hidden-sm hidden-xs">Data sprzedaży</th>
                                                     <th class="hidden-sm hidden-xs">Data wystawienia</th>
                                                     <th class="hidden-sm hidden-xs">Partner</th>
@@ -187,6 +201,7 @@
                                                     <td>3024,00</td>
                                                     <td class="hidden-sm hidden-xs">2015-05-31</td>
                                                     <td class="hidden-sm hidden-xs">Zaakceptowana</td>
+                                                    <td class="hidden-sm hidden-xs">Potwierdzony przez EOD</td>
                                                     <td class="hidden-sm hidden-xs">2015-05-22</td>
                                                     <td class="hidden-sm hidden-xs">2015-05-08</td>
                                                     <td class="hidden-sm hidden-xs">Tyger Gym S. z o.o., 80-097 Gdańsk, Grunwaldzka 346</td>
@@ -209,6 +224,7 @@
                                                     <td>-</td>
                                                     <td class="hidden-sm hidden-xs">2015-05-31</td>
                                                     <td class="hidden-sm hidden-xs">Do&nbsp;akceptacji</td>
+                                                    <td class="hidden-sm hidden-xs">-</td>
                                                     <td class="hidden-sm hidden-xs">2015-05-31</td>
                                                     <td class="hidden-sm hidden-xs">2015-05-10</td>
                                                     <td class="hidden-sm hidden-xs">Tyger Gym S. z o.o., 80-097 Gdańsk, Grunwaldzka 346</td>
@@ -231,6 +247,7 @@
                                                     <td>29818,62</td>
                                                     <td class="hidden-sm hidden-xs">2015-05-31</td>
                                                     <td class="hidden-sm hidden-xs">Do&nbsp;akceptacji</td>
+                                                    <td class="hidden-sm hidden-xs">-</td>
                                                     <td class="hidden-sm hidden-xs">2015-05-22</td>
                                                     <td class="hidden-sm hidden-xs">2015-05-08</td>
                                                     <td class="hidden-sm hidden-xs"><i class="fa fa-exclamation-triangle"></i>Calypso Sp z o.o., 80-097 Warszawa, Plan Europejski 2</td>
