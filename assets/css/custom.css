@@ -380,11 +380,17 @@ i.style-switcher-btn-option:hover {
 
 
 .header .logo img {
-    margin: 20px -200px;
+    margin: 10px 0px 30px -20px;
 }
+
 
 @media (min-width: 992px) {
     .header-fixed .header.header-fixed-shrink .logo img {
-        display: none;
+        margin: 45px -25px -2px;
     }
+}
+
+.attachments_presentation {
+    padding: 20px 0px;
+    margin-bottom: 20px;
 }
