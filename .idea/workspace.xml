@@ -4,26 +4,7 @@
     <bookmark url="file://$PROJECT_DIR$/program_modal.html" line="5" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="23f5777b-19af-44d0-9816-0433b4192482" name="Default" comment="Discounts module.&#10;">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/program_modal.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/programs_BMEP.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/programs_BS_breakfasts.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/programs_conferences_entries.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/programs_list_of_equipments.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/programs_magazines_befit.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/programs_marketing_coworking.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/programs_multisport_academy.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/programs_music_in_a_club.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/programs_rentals.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/terms_of_use.html" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/list_discounts.html" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/css/custom.css" afterPath="$PROJECT_DIR$/assets/css/custom.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/edit_about_discounts.html" afterPath="$PROJECT_DIR$/edit_about_discounts.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/edit_discount.html" afterPath="$PROJECT_DIR$/edit_discount.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/header.html" afterPath="$PROJECT_DIR$/header.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/about_discounts.html" afterPath="$PROJECT_DIR$/about_programs.html" />
-    </list>
+    <list default="true" id="23f5777b-19af-44d0-9816-0433b4192482" name="Default" comment="Discounts module.&#10;" />
     <ignored path=".idea/dataSources.local.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -407,12 +388,12 @@
       <workItem from="1513000475879" duration="3983000" />
       <workItem from="1513081212153" duration="13598000" />
       <workItem from="1513160237226" duration="7044000" />
-      <workItem from="1513235890309" duration="1855000" />
+      <workItem from="1513235890309" duration="2213000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="97172000" />
+    <option name="totallyTimeSpent" value="97530000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
