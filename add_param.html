@@ -85,6 +85,7 @@
                                             <option value="1" selected>Data</option>
                                             <option value="2">Operator</option>
                                             <option value="3" >Miejsce</option>
+                                            <option value="4">Zaakaceptowana zgoda</option>
                                         </select>
                                         <i></i>
                                     </label>
@@ -127,6 +128,18 @@
                                         <i class="icon-append fa fa-file-text"></i>
                                         <input type="text" name="label" id="place" required="">
                                     </label>
+                                </section>
+                                <section id="agreementState">
+                                    <label class="label">Wybierz zgodę, którą zaakceptował Użytkownikt</label>
+                                    <div class="input-group">
+                                        <select  id="" class="selectpicker input-block-level" data-live-search="true" title='Wybierz...' data-selected-text-format="count>1" data-width="100%">
+                                            <option value="" data-entry="0">Zgoda na otrzymywanie prenumeraty magazynu BE-FIT</option>
+                                            <option value="" data-entry="0">Zgoda na regulamin korzystanie z Programów Wsparcia</option>
+                                        </select>
+                                        <span class="input-group-btn">
+                                            <button class="btn-u btn-u-dark margin-left-5"  tabindex="-1"  type="button"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Odznacz</button>
+                                        </span>
+                                    </div>
                                 </section>
                             </fieldset>
                             <fieldset>
@@ -211,6 +224,17 @@
                                                 $('#placeState').addClass("activeState");
                                             });
                                         }
+                                        else if (number == 4) {
+                                            $('#agreementState').slideToggle('fast', function () {
+                                                $('.activeState').slideToggle('fast', function () {
+                                                    $(this).removeClass("activeState");
+                                                });
+                                                $('#agreementState').addClass("activeState");
+                                            });
+                                        }
+
+
+
                                     }
                                     ;
         </script>
@@ -219,6 +243,9 @@
                 $("#includedContentHeader").load("header_backend.html");
                 $("#includedContentFooter").load("footer.html");
                 $('#operatorBSState').slideToggle('fast', function () {
+                    // Animation complete.
+                });
+                $('#agreementState').slideToggle('fast', function () {
                     // Animation complete.
                 });
                 $('#placeState').slideToggle('fast', function () {

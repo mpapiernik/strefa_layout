@@ -51,11 +51,11 @@
             <!--=== Breadcrumbs ===-->
             <div class="breadcrumbs">
                 <div class="container">
-                    <h1 class="pull-left">Dodaj kategorię artykułów</h1>
+                    <h1 class="pull-left">Dodaj dostawcę</h1>
                     <ul class="pull-right breadcrumb">
                         <li><a href="index_backend.html">Home</a></li>
                         <li><a href="index_backend.html">Ustawienia</a></li>
-                        <li><a href="list_terminal_errors.html">Dodaj kategorię</a></li>
+                        <li><a href="list_suppliers.html">Słownik dostawców</a></li>
                     </ul>
                 </div>
             </div><!--/breadcrumbs-->
@@ -67,15 +67,21 @@
                     <!-- Begin Content -->
                     <div class="col-md-8 col-md-offset-2 margin-bottom-50">
                         <!-- Post -->
-                        <form action="list_article_category.html" method="post" id="sky-form1" class="sky-form">
+                        <form action="list_suppliers.html" method="post" id="sky-form1" class="sky-form">
                             <fieldset>
                                     <section>
-                                        <label class="label">Nazwa kategorii</label>
+                                        <label class="label">Nazwa</label>
                                           <label class="input">
                                             <i class="icon-append fa fa-file-text"></i>
                                         <input type="text">
                                           </label>
                                     </section>
+                                <section>
+                                    <label class="label">E-maile handlowców BS (kolejne e-maile należy oddzielać średnikiem)</label>
+                                    <label class="textarea">
+                                        <textarea rows="3" name="description" id="mails"></textarea>
+                                    </label>
+                                </section>
                             </fieldset>
                             <footer style="text-align: right;">
                                 <button type="button" class="btn-u btn-u-default" onclick="window.history.back();">Wróć</button>

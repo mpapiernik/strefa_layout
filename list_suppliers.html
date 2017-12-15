@@ -3,7 +3,7 @@
 <!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->  
 <!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->  
     <head>
-        <title>Panel Benefit Systems</title>
+        <title>Panelu Partnera Benefit Systems</title>
 
         <!-- Meta -->
         <meta charset="utf-8">
@@ -30,16 +30,15 @@
         <link rel="stylesheet" href="assets/plugins/line-icons/line-icons.css">
         <link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.min.css">
 
-        <!-- CSS Page Style -->    
-        <link rel="stylesheet" href="assets/css/pages/shortcode_timeline2.css">
-
         <!-- CSS Customization -->
         <link rel="stylesheet" href="assets/css/theme-colors/dark-red.css">
 
         <!-- DataTables -->
         <link rel="stylesheet" type="text/css" href="assets/plugins/datatable/css/jquery.dataTables.css">
-    </head>
 
+        <!-- CSS Customization -->
+        <link rel="stylesheet" href="assets/css/custom.css">
+    </head>
     <body>    
         <div class="wrapper">
             <!--=== Header ===-->    
@@ -49,96 +48,90 @@
             <!--=== Breadcrumbs ===-->
             <div class="breadcrumbs">
                 <div class="container">
-                    <h1 class="pull-left">Lista artykułów</h1>
+                    <h1 class="pull-left">Słownik dostawców</h1>
                     <ul class="pull-right breadcrumb">
-                        <li>Home</li>
-                        <li>Baza wiedzy</li>
-                        <li><a href="list_articles_backend.html">Lista artykułów</a></li>
+                        <li><a href="index_backend.html">Home</a></li>
+                        <li><a href="index_backend.html">Ustawienia</a></li>
+                        <li><a href="list_categories.html">Słownik dostawców</a></li>
                     </ul>
                 </div>
             </div><!--/breadcrumbs-->
             <!--=== End Breadcrumbs ===-->
 
             <!--=== Content Part ===-->
-            <div class="container content">
+            <div class="container content">     
                 <div class="row">
                     <!-- Begin Content -->
+
                     <div class="col-md-12 margin-bottom-50">
                         <div class="margin-bottom-20">
                             <div class="btn-group">
-                                <a href="add_article.html" class="button btn-u pull-right"><i class="fa fa-plus fa-fw"></i>Dodaj artykuł</a>         
+                                <a href="add_supplier.html" class="button btn-u pull-right"><i class="fa fa-plus fa-fw"></i>Dodaj dostawcę</a>
                             </div>
                             <!-- End Single button -->                    
                         </div>
                         <hr>
                         <div>
-                            <table id="facilityList" class="display" cellspacing="0" width="100%" style="text-align: left">
+                            <div class="row">
+                                <div class="btn-group col-sm-9">
+                                    <div class="input-group spinner">
+                                        <input type="text" class="form-control" value="10">
+                                        <div class="input-group-btn-vertical text-center">
+                                            <button class="btn btn-default" type="button"><i class="fa fa-angle-up"></i></button>
+                                            <button class="btn btn-default" type="button"><i class="fa fa-angle-down"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="search-open pull-right col-sm-3">
+                                    <div class="input-group inline-group">
+                                        <input type="text" class="form-control" placeholder="Wyszukaj ... ">
+                                        <span class="input-group-btn">
+                                            <a href="" class="button btn-u"><i class="fa fa-search"></i></a>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <table id="operatorsList" class="display" cellspacing="0" width="100%" style="text-align: left">
                                 <thead>
                                     <tr>
                                         <th>#</th>
-                                        <th>Tytuł</th>
-                                        <th>Data&nbsp;utworzenia</th>
-                                        <th>Edytor</th>
-                                        <th>Data&nbsp;edycji</th>
-                                        <th>Tagi</th>
-                                        <th>Opublikowany</th>
-                                        <th>Draft</th>
-                                        <th>Więcej</th>
+                                        <th>Nazwa</th>
+                                        <th>E-maile handlowców BS</th>
+                                        <th class="t-ali">Więcej</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
                                         <td>1</td>
-                                        <td>Od listopada nowa karta benefitsport</td>
-                                        <td class="hidden-sm hidden-xs">2015-06-07</td>
-                                          <td class="hidden-sm hidden-xs"><a href="profile_benefit_operator.html">Jacek Benefitowski</a></td>
-                                        <td class="hidden-sm hidden-xs">2015-06-07</td>
+                                        <td>Technology Gym</td>
+                                        <td>adam.nowak@benefitsystems.com; rafal.adamski@benefitsystems.com;</td>
                                         <td>
-                                          dsa,dsa,das,das
-                                        </td>
-                                        <td>Tak</td>
-                                        <td>Nie</td>
-                                        <td>
-                                            <div class="btn-group">
-                                               <button type="button" class="btn-u btn-brd color-red btn-brd-hover btn-u-sm dropdown-toggle bars" data-toggle="dropdown">
+                                            <div class="btn-group pull-right">
+                                                <button type="button" class="btn-u btn-brd color-red btn-brd-hover btn-u-sm dropdown-toggle bars" data-toggle="dropdown">
                                                     <i class="fa fa fa-bars"></i>
                                                     <span class="sr-only">Toggle Dropdown</span>                            
                                                 </button>
                                                 <ul class="dropdown-menu" role="menu">
-                                                    <li><a href="#"><i class="fa fa-mail-forward"></i> Powiadom w aktualnościach</a></li>
-                                                    <li><a href="#"><i class="fa fa-link"></i> Kopiuj link do artykułu</a></li>
-                                                    <li><a href="edit_article.html"><i class="fa fa-edit"></i> Edytuj</a></li>
-                                                    <li>
-                                                        <a href="#" data-toggle="modal" data-target="#publishModal" id="confirmPublish"><i class="fa fa-ban"></i> Ukryj</a>
-                                                    </li>
+                                                    <li><a href="edit_supplier.html"><i class="fa fa-edit"></i> Edytuj</a></li>
+                                                    <li><a href=""><i class="fa fa-trash"></i> Usuń</a></li>
                                                 </ul>
                                             </div>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>2</td>
-                                        <td>Od listopada nowa karta benefitsport</td>
-                                        <td class="hidden-sm hidden-xs">2015-06-07</td>
-                                        <td class="hidden-sm hidden-xs"><a href="profile_benefit_operator.html">Jacek Benefitowski</a></td>
-                                        <td class="hidden-sm hidden-xs">2015-06-07</td>
+                                        <td>Matrix</td>
+                                        <td>jan.kowalski@benefitsystems.com;</td>
                                         <td>
-                                            dsa,dsa,das,das
-                                        </td>
-                                        <td>Nie</td>
-                                        <td>Tak</td>
-                                        <td>
-                                            <div class="btn-group">
+                                            <div class="btn-group pull-right">
                                                 <button type="button" class="btn-u btn-brd color-red btn-brd-hover btn-u-sm dropdown-toggle bars" data-toggle="dropdown">
                                                     <i class="fa fa fa-bars"></i>
                                                     <span class="sr-only">Toggle Dropdown</span>
                                                 </button>
                                                 <ul class="dropdown-menu" role="menu">
-                                                    <li><a href="#"><i class="fa fa-mail-forward"></i> Powiadom w aktualnościach</a></li>
-                                                    <li><a href="#"><i class="fa fa-link"></i> Kopiuj link do artykułu</a></li>
-                                                    <li><a href="edit_article.html"><i class="fa fa-edit"></i> Edytuj</a></li>
-                                                    <li>
-                                                        <a href="#" data-toggle="modal" data-target="#publishModal" id=""><i class="fa fa-check"></i> Opublikuj</a>
-                                                    </li>
+                                                    <li><a href="edit_supplier.html"><i class="fa fa-edit"></i> Edytuj</a></li>
+                                                    <li><a href=""><i class="fa fa-trash"></i> Usuń</a></li>
                                                 </ul>
                                             </div>
                                         </td>
@@ -149,11 +142,11 @@
 
                     </div>
                     <!-- End Content -->
-                </div>
-            </div><!--/container-->
+                </div>          
+            </div><!--/container-->     
             <!--=== End Content Part ===-->
-            <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true"></div>
-            <div class="modal fade" id="publishModal" tabindex="-1" role="dialog" aria-labelledby="publishModalLabel" aria-hidden="true"></div>
+            <div class="modal fade" id="confirmDelete" tabindex="-1" role="dialog" aria-hidden="true"></div>
+
         </div><!--/End Wrapepr-->
         <!--=== Footer Version 1 ===-->
         <div class="footer-v1" id="includedContentFooter">
@@ -176,12 +169,13 @@
             jQuery(document).ready(function () {
                 App.init();
                 $(document).ready(function () {
-                    $('#facilityList').DataTable({
+                    $('#operatorsList').DataTable({
                         "language": {
                             "url": "assets/plugins/datatable/lang/Polish.json"
-                        }
+                        },
+                        searching: false,
+                        lengthChange: false
                     });
-                    $('.dropdown-toggle').dropdown();
                 });
             });
         </script>
@@ -189,8 +183,10 @@
             $(function () {
                 $("#includedContentHeader").load("header_backend.html");
                 $("#includedContentFooter").load("footer.html");
-                $("#deleteModal").load("delete_article.html");
-                $("#publishModal").load("publish_article.html");
+                $("#confirmDelete").load("delete_vat_rate.html");
+                setTimeout(function () {
+                    $('.dropdown-toggle').dropdown();
+                }, 2000);
             });
         </script> 
         <!--[if lt IE 9]>

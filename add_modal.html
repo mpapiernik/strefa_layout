@@ -1,0 +1,189 @@
+<!DOCTYPE html> 
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->  
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->  
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->  
+    <head>
+        <title>Panel Benefit Systems</title>
+
+        <!-- Meta -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <!-- Favicon -->
+        <link rel="shortcut icon" href="favicon.ico">
+
+        <!-- Web Fonts -->
+        <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:400,300,600&amp;subset=cyrillic,latin">
+
+        <!-- CSS Global Compulsory -->
+        <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+
+        <!-- CSS Header and Footer -->
+        <link rel="stylesheet" href="assets/css/headers/header-default.css">
+        <link rel="stylesheet" href="assets/css/footers/footer-v1.css">
+
+        <!-- CSS Implementing Plugins -->
+        <link rel="stylesheet" href="assets/plugins/animate.css">
+        <link rel="stylesheet" href="assets/plugins/line-icons/line-icons.css">
+        <link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.min.css">
+
+        <!-- CSS Page Style -->    
+        <link rel="stylesheet" href="assets/css/pages/shortcode_timeline2.css">
+
+        <!-- CSS Customization -->
+        <link rel="stylesheet" href="assets/css/theme-colors/dark-red.css">
+
+        <!-- DataTables -->
+        <link rel="stylesheet" type="text/css" href="assets/plugins/datatable/css/jquery.dataTables.css">
+
+        <!-- CSS Implementing Plugins -->
+        <link rel="stylesheet" href="assets/plugins/animate.css">
+        <link rel="stylesheet" href="assets/plugins/line-icons/line-icons.css">
+        <link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="assets/plugins/sky-forms-pro/skyforms/css/sky-forms.css">
+        <link rel="stylesheet" href="assets/plugins/sky-forms-pro/skyforms/custom/custom-sky-forms.css">
+        <!--[if lt IE 9]><link rel="stylesheet" href="assets/plugins/sky-forms-pro/skyforms/css/sky-forms-ie8.css"><![endif]-->
+
+
+        <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/bootstrap-duallistbox.css">
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/prettify/r298/run_prettify.min.js"></script>
+        <script src="assets/js/jquery.bootstrap-duallistbox.js"></script>
+
+
+
+    </head>
+
+    <body>    
+        <div class="wrapper">
+            <!--=== Header ===-->    
+            <div class="header" id="includedContentHeader">
+            </div>
+            <!--=== End Header ===--> 
+            <!--=== Breadcrumbs ===-->
+            <div class="breadcrumbs">
+                <div class="container">
+                    <h1 class="pull-left">Dodaj szablon okna pop-up</h1>
+                    <ul class="pull-right breadcrumb">
+                        <li><a href="index_backend.html">Home</a></li>
+                        <li>Ustawienia</li>
+                        <li><a href="list_modals.html">Słownik szablonów okien pop-up</a></li>
+                    </ul>
+                </div>
+            </div><!--/breadcrumbs-->
+            <!--=== End Breadcrumbs ===-->
+
+            <!--=== Content Part ===-->
+            <div class="container content">     
+                <div class="row">
+                    <!-- Begin Content -->
+                    <div class="col-md-8 col-md-offset-2 margin-bottom-50">
+                        <!-- Post -->
+                        <form action="assets/php/demo-contacts-process.php" method="post" id="sky-form3" class="sky-form">
+                            <fieldset>                  
+                                <section>
+                                    <label class="label">Tytuł</label>
+                                    <label class="input">
+                                        <i class="icon-append fa fa-tag"></i>
+                                        <input type="text" name="name" id="name" value="">
+                                    </label>
+                                </section>
+                            </fieldset>
+                            <fieldset>
+                                <section>
+                                    <label class="label">Treść</label>
+                                    <div class="well">
+                                        <ul><b>Dostępne tagi:</b>
+                                            <li>{{ zgody:rodzaj1 }} - wyświetli zdefiniowaną w słowniku listę treści zgód - wskazanego rodzaju</li>
+                                            <li>{{ zgody[key] }} - wyświetli zdefiniowaną w słowniku treść zgody - o wskazanym kluczu</li>
+                                            <li>{{ partnerzy }} - wyświetli HTML pola partnerzy z modułu rabatów</li>
+                                            <li>{{ partnerzyDymek|przykładowy tekst }} - Wyświetli treść pola partnerzy z modułu rabatów jako dymek</li>
+                                        </ul>
+                                    </div>
+
+                                    //** Miejsce na CKEditor **//
+                                    <label class="textarea state-success">
+                                        <textarea rows="10" name="description" id="message" class="valid"></textarea>
+                                    </label>
+                                </section>
+                            </fieldset>
+                            <footer style="text-align: right;">
+                                <button type="button" class="btn-u btn-u-default" onclick="window.history.back();">Wróć</button>
+                                <a href="index_backend.html" class="btn-u">Zapisz</a>
+                            </footer>
+                        </form>         
+                        <!-- Post -->
+                    </div>
+                    <!-- End Content -->
+                    <!-- Begin Sidebar Menu -->
+                    <div class="col-md-3" id="includedContentSideBar">
+                    </div>
+                    <!-- End Sidebar Menu -->
+                </div>          
+            </div><!--/container-->     
+            <!--=== End Content Part ===-->
+        </div><!--/End Wrapepr-->
+
+        <!--=== Footer Version 1 ===-->
+        <div class="footer-v1" id="includedContentFooter">
+        </div>     
+        <!--=== End Footer Version 1 ===-->
+
+        <!-- JS Global Compulsory -->           
+        <script type="text/javascript" src="assets/plugins/jquery/jquery.min.js"></script>
+        <script type="text/javascript" src="assets/plugins/jquery/jquery-migrate.min.js"></script>
+        <script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+        <!-- JS Implementing Plugins -->
+        <script type="text/javascript" src="assets/plugins/back-to-top.js"></script>
+        <script type="text/javascript" src="assets/plugins/smoothScroll.js"></script>
+        <script src="assets/plugins/sky-forms-pro/skyforms/js/jquery.validate.min.js"></script>
+        <script src="assets/plugins/sky-forms-pro/skyforms/js/jquery.maskedinput.min.js"></script>
+        <script src="assets/plugins/sky-forms-pro/skyforms/js/jquery-ui.min.js"></script>
+        <script src="assets/plugins/sky-forms-pro/skyforms/js/jquery.form.min.js"></script>
+        <!-- JS Customization -->
+        <script type="text/javascript" src="assets/js/custom.js"></script>
+        <!-- JS Page Level -->           
+        <script type="text/javascript" src="assets/js/app.js"></script>
+        <script type="text/javascript" src="assets/js/forms/contact.js"></script>
+        <script type="text/javascript" src="assets/js/plugins/masking.js"></script>
+        <script type="text/javascript" src="assets/js/plugins/datepicker.js"></script>
+        <script type="text/javascript" src="assets/js/plugins/validation.js"></script>
+        <script type="text/javascript">
+                                    jQuery(document).ready(function () {
+                                        App.init();
+                                        ContactForm.initContactForm();
+                                        Masking.initMasking();
+                                        Datepicker.initDatepicker();
+                                        Validation.initValidation();
+
+                                        $('#publicCheckbox').click(function () {
+                                            $('#partnerState').slideToggle('fast', function () {
+                                                // Animation complete.
+                                            });
+                                        });
+                                    });
+        </script>
+        <script>
+            $(function () {
+                $("#includedContentHeader").load("header_backend.html");
+                $("#includedContentFooter").load("footer.html");
+
+            });
+
+
+
+
+        </script> 
+        <!--[if lt IE 9]>
+            <script src="assets/plugins/respond.js"></script>
+            <script src="assets/plugins/html5shiv.js"></script>
+            <script src="assets/plugins/placeholder-IE-fixes.js"></script>
+        <![endif]-->
+
+    </body>
+</html> 

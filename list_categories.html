@@ -36,14 +36,6 @@
         <!-- DataTables -->
         <link rel="stylesheet" type="text/css" href="assets/plugins/datatable/css/jquery.dataTables.css">
 
-        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/css/bootstrap-select.min.css" />
-
-
-        <link rel="stylesheet" href="assets/plugins/sky-forms-pro/skyforms/css/sky-forms.css">
-        <link rel="stylesheet" href="assets/plugins/sky-forms-pro/skyforms/custom/custom-sky-forms.css">
-
-        <link rel="stylesheet" type="text/css"  href="assets/plugins/bootstrap-datepicker-1.6.1-dist/css/bootstrap-datepicker.css"/>
-
         <!-- CSS Customization -->
         <link rel="stylesheet" href="assets/css/custom.css">
     </head>
@@ -56,10 +48,11 @@
             <!--=== Breadcrumbs ===-->
             <div class="breadcrumbs">
                 <div class="container">
-                    <h1 class="pull-left">Pozycje rabatów</h1>
+                    <h1 class="pull-left">Słownik kategorii </h1>
                     <ul class="pull-right breadcrumb">
-                        <li><a href="list_discounts_backend.html">Rabaty</a></li>
-                        <li><a href="">Pozyje rabatów</a></li>
+                        <li><a href="index_backend.html">Home</a></li>
+                        <li><a href="index_backend.html">Ustawienia</a></li>
+                        <li><a href="list_categories.html">Słownik kategorii</a></li>
                     </ul>
                 </div>
             </div><!--/breadcrumbs-->
@@ -73,40 +66,11 @@
                     <div class="col-md-12 margin-bottom-50">
                         <div class="margin-bottom-20">
                             <div class="btn-group">
-                                <a href="edit_discount.html" class="button btn-u pull-right"><i class="fa fa-plus fa-fw"></i>Dodaj rabat</a>
+                                <a href="add_category.html" class="button btn-u pull-right"><i class="fa fa-plus fa-fw"></i>Dodaj kategorię</a>
                             </div>
                             <!-- End Single button -->                    
                         </div>
                         <hr>
-
-                        <div class="row">
-                            <div class="col-md-5">
-                                <label>Nazwa</label>
-                                <input type="text" class="form-control" placeholder="Wyszukaj ... ">
-                            </div>
-                            <div class="col-md-3">
-                                <label>Kategoria</label>
-                                <div class="input-group" style="width:100%">
-                                    <select class="selectpicker input-block-level" data-live-search="true" multiple="" data-selected-text-format="count>2" title='Filtruj...' data-width="100%">
-                                        <option  data-hidden="true"></option>
-                                        <option value="1">Sala Fitness</option>
-                                        <option value="2">Siłownia</option>
-                                        <option value="3" selected>Sprzęt Cardio</option>
-                                        <option value="4">Sumplementy i Odżywki</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <label>Data obowiązywania</label>
-                                <div class="input-group inline-group input-daterange input-group">
-                                    <input type="text" class="form-control" name="start" placeholder="od"/>
-                                    <span class="input-group-addon">-</span>
-                                    <input type="text" class="form-control" name="end" placeholder="do"/>
-                                </div>
-                            </div>
-                        </div>
-                        <hr>
-
                         <div>
                             <div class="row">
                                 <div class="btn-group col-sm-9">
@@ -128,104 +92,137 @@
                                     </div>
                                 </div>
                             </div>
-                            <div>
-                                <table id="discountsList" class="display" cellspacing="0" width="100%" style="text-align: left">
-                                    <thead>
+                            <table id="operatorsList" class="display" cellspacing="0" width="100%" style="text-align: left">
+                                <thead>
                                     <tr>
                                         <th>#</th>
                                         <th>Nazwa</th>
-                                        <th>Kategoria</th>
-                                        <th>Pocżatkowa data&nbsp;obowiązywania</th>
-                                        <th>Końcowa data&nbsp;obowiązywania</th>
-                                        <th>Opublikowany</th>
-                                        <th>Więcej</th>
+                                        <th>Rodzaj</th>
+                                        <th class="t-ali">Więcej</th>
                                     </tr>
-                                    </thead>
-                                    <tbody>
+                                </thead>
+                                <tbody>
                                     <tr>
                                         <td>1</td>
-                                        <td>T7xi Bieżnia klubowa Matrix</td>
-                                        <td class="hidden-sm hidden-xs">Sprzęt Cardio</td>
-                                        <td class="hidden-sm hidden-xs">2016-09-12</td>
-                                        <td class="hidden-sm hidden-xs">2016-12-07</td>
-                                        <td>Tak</td>
+                                        <td>Baza wiedzy</td>
+                                        <td>Artykuł</td>
                                         <td>
-                                            <div class="btn-group">
+                                            <div class="btn-group pull-right">
                                                 <button type="button" class="btn-u btn-brd color-red btn-brd-hover btn-u-sm dropdown-toggle bars" data-toggle="dropdown">
                                                     <i class="fa fa fa-bars"></i>
-                                                    <span class="sr-only">Toggle Dropdown</span>
+                                                    <span class="sr-only">Toggle Dropdown</span>                            
                                                 </button>
                                                 <ul class="dropdown-menu" role="menu">
-
-                                                    <li><a href="edit_discount.html"><i class="fa fa-edit"></i> Edytuj</a></li>
-                                                    <li><a href="#"><i class="fa fa-eye"></i> Podgląd w Strefie</a></li>
-                                                    <li>
-                                                        <a href="#" data-toggle="modal" data-target="#publishModal"><i class="fa fa-ban"></i> Ukryj</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#" data-toggle="modal" data-target="#publishModal"><i class="fa fa-trash"></i> Usuń</a>
-                                                    </li>
+                                                    <li><a href="edit_category.html"><i class="fa fa-edit"></i> Edytuj</a></li>
+                                                    <li><a href="remove_category.html"><i class="fa fa-trash"></i> Usuń</a></li>
                                                 </ul>
                                             </div>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>2</td>
-                                        <td>S7xi Stepper klubowy Matrix</td>
-                                        <td class="hidden-sm hidden-xs">Sprzęt Cardio</td>
-                                        <td class="hidden-sm hidden-xs">2016-11-12</td>
-                                        <td class="hidden-sm hidden-xs">2016-12-07</td>
-                                        <td>Tak</td>
+                                        <td>Sport, turystyka i rekreacjaD</td>
+                                        <td>Artykuł</td>
                                         <td>
-                                            <div class="btn-group">
+                                            <div class="btn-group pull-right">
                                                 <button type="button" class="btn-u btn-brd color-red btn-brd-hover btn-u-sm dropdown-toggle bars" data-toggle="dropdown">
                                                     <i class="fa fa fa-bars"></i>
                                                     <span class="sr-only">Toggle Dropdown</span>
                                                 </button>
                                                 <ul class="dropdown-menu" role="menu">
-
-                                                    <li><a href="edit_discount.html"><i class="fa fa-edit"></i> Edytuj</a></li>
-                                                    <li><a href="#"><i class="fa fa-eye"></i> Podgląd w Strefie</a></li>
-                                                    <li>
-                                                        <a href="#" data-toggle="modal" data-target="#publishModal" id="confirmPublish"><i class="fa fa-ban"></i> Ukryj</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#" data-toggle="modal" data-target="#publishModal"><i class="fa fa-trash"></i> Usuń</a>
-                                                    </li>
+                                                    <li><a href="edit_category.html"><i class="fa fa-edit"></i> Edytuj</a></li>
+                                                    <li><a href="remove_category.html"><i class="fa fa-trash"></i> Usuń</a></li>
                                                 </ul>
                                             </div>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>3</td>
-                                        <td>S5x Stepper klubowy Matrix</td>
-                                        <td class="hidden-sm hidden-xs">Sprzęt Cardio</td>
-                                        <td class="hidden-sm hidden-xs">2016-10-02</td>
-                                        <td class="hidden-sm hidden-xs">2016-10-07</td>
-                                        <td>NIe</td>
+                                        <td>Strefa Kardio</td>
+                                        <td>Oferta</td>
                                         <td>
-                                            <div class="btn-group">
+                                            <div class="btn-group pull-right">
                                                 <button type="button" class="btn-u btn-brd color-red btn-brd-hover btn-u-sm dropdown-toggle bars" data-toggle="dropdown">
                                                     <i class="fa fa fa-bars"></i>
                                                     <span class="sr-only">Toggle Dropdown</span>
                                                 </button>
                                                 <ul class="dropdown-menu" role="menu">
-
-                                                    <li><a href="edit_discount.html"><i class="fa fa-edit"></i> Edytuj</a></li>
-                                                    <li><a href="#"><i class="fa fa-eye"></i> Podgląd w Strefie</a></li>
-                                                    <li>
-                                                        <a href="#" data-toggle="modal" data-target="#publishModal" ><i class="fa fa-ban"></i> Ukryj</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#" data-toggle="modal" data-target="#publishModal"><i class="fa fa-trash"></i> Usuń</a>
-                                                    </li>
+                                                    <li><a href="edit_category.html"><i class="fa fa-edit"></i> Edytuj</a></li>
+                                                    <li><a href="remove_category.html"><i class="fa fa-trash"></i> Usuń</a></li>
                                                 </ul>
                                             </div>
                                         </td>
                                     </tr>
-                                    </tbody>
-                                </table>
-                            </div>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>Sala fitness</td>
+                                        <td>Oferta</td>
+                                        <td>
+                                            <div class="btn-group pull-right">
+                                                <button type="button" class="btn-u btn-brd color-red btn-brd-hover btn-u-sm dropdown-toggle bars" data-toggle="dropdown">
+                                                    <i class="fa fa fa-bars"></i>
+                                                    <span class="sr-only">Toggle Dropdown</span>
+                                                </button>
+                                                <ul class="dropdown-menu" role="menu">
+                                                    <li><a href="edit_category.html"><i class="fa fa-edit"></i> Edytuj</a></li>
+                                                    <li><a href="remove_category.html"><i class="fa fa-trash"></i> Usuń</a></li>
+                                                </ul>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td>Siłownia</td>
+                                        <td>Oferta</td>
+                                        <td>
+                                            <div class="btn-group pull-right">
+                                                <button type="button" class="btn-u btn-brd color-red btn-brd-hover btn-u-sm dropdown-toggle bars" data-toggle="dropdown">
+                                                    <i class="fa fa fa-bars"></i>
+                                                    <span class="sr-only">Toggle Dropdown</span>
+                                                </button>
+                                                <ul class="dropdown-menu" role="menu">
+                                                    <li><a href="edit_category.html"><i class="fa fa-edit"></i> Edytuj</a></li>
+                                                    <li><a href="remove_category.html"><i class="fa fa-trash"></i> Usuń</a></li>
+                                                </ul>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>6</td>
+                                        <td>Suplementy i odżywki</td>
+                                        <td>Oferta</td>
+                                        <td>
+                                            <div class="btn-group pull-right">
+                                                <button type="button" class="btn-u btn-brd color-red btn-brd-hover btn-u-sm dropdown-toggle bars" data-toggle="dropdown">
+                                                    <i class="fa fa fa-bars"></i>
+                                                    <span class="sr-only">Toggle Dropdown</span>
+                                                </button>
+                                                <ul class="dropdown-menu" role="menu">
+                                                    <li><a href="edit_category.html"><i class="fa fa-edit"></i> Edytuj</a></li>
+                                                    <li><a href="remove_category.html"><i class="fa fa-trash"></i> Usuń</a></li>
+                                                </ul>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>7</td>
+                                        <td>Trening EMS</td>
+                                        <td>Oferta</td>
+                                        <td>
+                                            <div class="btn-group pull-right">
+                                                <button type="button" class="btn-u btn-brd color-red btn-brd-hover btn-u-sm dropdown-toggle bars" data-toggle="dropdown">
+                                                    <i class="fa fa fa-bars"></i>
+                                                    <span class="sr-only">Toggle Dropdown</span>
+                                                </button>
+                                                <ul class="dropdown-menu" role="menu">
+                                                    <li><a href="edit_category.html"><i class="fa fa-edit"></i> Edytuj</a></li>
+                                                    <li><a href="remove_category.html"><i class="fa fa-trash"></i> Usuń</a></li>
+                                                </ul>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
 
                     </div>
@@ -253,29 +250,11 @@
         <script type="text/javascript" src="assets/js/app.js"></script>
         <!-- JS DataTables -->
         <script type="text/javascript" language="javascript" src="assets/plugins/datatable/js/jquery.dataTables.js"></script>
-
-        <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/js/bootstrap-select.min.js"></script>
-
-        <script src="assets/plugins/sky-forms-pro/skyforms/js/jquery-ui.min.js"></script>
-        <script src="assets/plugins/sky-forms-pro/skyforms/js/jquery.form.min.js"></script>
-
-        <script src="https://cdn.jsdelivr.net/momentjs/2.10.6/moment.min.js"></script>
-        <script type="text/javascript" src="assets/plugins/bootstrap-datepicker-1.6.1-dist/js/bootstrap-datepicker.min.js"></script>
-        <script type="text/javascript" src="assets/plugins/bootstrap-datepicker-1.6.1-dist/locales/bootstrap-datepicker.pl.min"></script>
-
         <script type="text/javascript">
             jQuery(document).ready(function () {
                 App.init();
-
-                $('.input-daterange').datepicker({
-                    format: "dd-mm-yyyy",
-                    language: "pl",
-                    multidateSeparator: "-"
-                });
-
                 $(document).ready(function () {
-
-                    $('#discountsList').DataTable({
+                    $('#operatorsList').DataTable({
                         "language": {
                             "url": "assets/plugins/datatable/lang/Polish.json"
                         },
