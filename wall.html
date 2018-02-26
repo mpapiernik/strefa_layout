@@ -116,6 +116,45 @@
                     <li>
                         <time class="cbp_tmtime" datetime="">
                             <span>4/1/08 18:65</span>
+                            <span></span>
+                        </time>
+                        <i class="cbp_tmicon rounded-x hidden-xs"></i>
+                        <div class="cbp_tmlabel">
+                            <h2>Nowe programy wsparcia już dostępne</h2>
+                            <div class="row post-clear">
+                                <div class="col-md-12">
+                                    <p>Winter purslane courgette pumpkin quandong komatsuna fennel green bean cucumber
+                                        watercress. Pea sprouts wattle seed rutabaga okra yarrow cress avocado
+                                        grape.</p>
+                                    <p>Cabbage lentil cucumber chickpea sorrel gram garbanzo plantain lotus root bok
+                                        choy squash cress potato.
+                                    </p>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="btn-group pull-right">
+                                                <button type="button" class="btn-u btn-brand-outline" onclick="">Czytaj
+                                                    więcej
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row post-blurred">
+                                <p>Zaakceptuj regulamin, aby zobaczyć więcej szczegółów</p>
+
+                                <div class="btn-group text-center">
+                                    <button type="button" class="btn-u btn-brand-outline" data-toggle="modal" data-target="#modalCTA">Zaakceptuj regulamin
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <time class="cbp_tmtime" datetime="">
+                            <span>4/1/08 18:65</span>
                             <span>January</span>
                         </time>
                         <i class="cbp_tmicon rounded-x hidden-xs"></i>
@@ -151,37 +190,7 @@
                             </div>
                         </div>
                     </li>
-                    <li>
-                        <time class="cbp_tmtime" datetime="">
-                            <span>4/1/08 18:65</span>
-                            <span></span>
-                        </time>
-                        <i class="cbp_tmicon rounded-x hidden-xs"></i>
-                        <div class="cbp_tmlabel">
-                            <h2>życzenia noworoczne</h2>
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <p>Winter purslane courgette pumpkin quandong komatsuna fennel green bean cucumber
-                                        watercress. Pea sprouts wattle seed rutabaga okra yarrow cress avocado
-                                        grape.</p>
-                                    <p>Cabbage lentil cucumber chickpea sorrel gram garbanzo plantain lotus root bok
-                                        choy squash cress potato.
-                                    </p>
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="btn-group pull-right">
-                                                <button type="button" class="btn-u btn-brand-outline" onclick="">Czytaj
-                                                    więcej
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
+
 
 
                     <li>
@@ -230,6 +239,9 @@
          aria-hidden="true"></div>
     <div class="modal fade" id="confirmModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
          aria-hidden="true"></div>
+    <div class="modal fade" id="modalCTA" tabindex="-1" role="dialog"
+         aria-labelledby="modalNumberLabel" aria-hidden="true">
+    </div>
 
 
 </div><!--/End Wrapepr-->
@@ -290,6 +302,7 @@
     jQuery(document).ready(function () {
         App.init();
         StyleSwitcher.initStyleSwitcher();
+        $(".post-clear").hide();
     });
 </script>
 <script>
@@ -305,6 +318,19 @@
             }
         });
         $("#myModal").load("post_modal.html");
+        $("#modalCTA").load("program_modal.html");
+
+
+        setTimeout(function () {
+            $('.dropdown-toggle').dropdown();
+
+            $('#modalCTA').on('hidden.bs.modal', function () {
+                $('.post-blurred').hide();
+                $('.post-clear').show();
+
+            })
+
+        }, 1000);
 
         var chartData = 30;
         var maxchartData = 120;

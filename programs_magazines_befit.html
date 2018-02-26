@@ -81,8 +81,9 @@
             <!-- Left Sidebar -->
             <div class="col-md-9 md-margin-bottom-60">
                 <!--Blog Post-->
-                <div class="blog margin-bottom-40">
+                <div class="blog margin-bottom-40 article-clear">
                     <h2>Magazyn BEFIT - Dwumiesięcznik dedykowany partnerom Benefit Systems</h2>
+
                     <div class="blog-img img-article">
                         <div class="carousel slide carousel-v1 " id="myCarousel">
                             <div class="carousel-inner img-center ">
@@ -231,6 +232,10 @@
                     <!--End Blog Post-->
                 </div>
 
+                <div class="blog margin-bottom-40 article-blurred">
+                    <!--End Blog Post-->
+                </div>
+
             </div>
             <!-- End Left Sidebar -->
 
@@ -263,6 +268,8 @@
 <script type="text/javascript">
     jQuery(document).ready(function () {
         App.init();
+        $('.article-clear').hide();
+
     });
 </script>
 <script>
@@ -274,8 +281,21 @@
             $('#confirmModal').modal('show');
 
         });
+
+        setTimeout(function () {
+
+            $('#confirmModal').on('hidden.bs.modal', function () {
+                $('.article-clear').show();
+                $('.article-blurred').hide();
+
+            })
+
+        }, 1000);
+
+
     });
 </script>
+
 <!--[if lt IE 9]>
 <script src="assets/plugins/respond.js"></script>
 <script src="assets/plugins/html5shiv.js"></script>

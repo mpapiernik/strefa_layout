@@ -1726,3 +1726,30 @@ li.sortable-placeholder {
 .wall-chart .c3-tooltip td {
     color: #555;
 }
+
+.post-blurred {
+    background: url(../img/blur/post_blurred_3.jpg);
+    height: 214px;
+    margin: -10px -10px;
+    text-align: center;
+}
+.post-blurred p {
+    color: #333;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 60px 0 20px;
+}
+
+.header .dropdown > a.two-line:after {
+    top: 20px;
+    right: 15px;
+    content: "\f107";
+}
+
+
+.article-blurred {
+    background: url(../img/blur/post_blurred_3.jpg);
+    height: 1000px;
+    margin: -10px -10px;
+    text-align: center;
+}
