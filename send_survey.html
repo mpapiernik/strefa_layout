@@ -1,7 +1,7 @@
-<!DOCTYPE html> 
-<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->  
-<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->  
-<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->  
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
     <head>
         <title>Panel Benefit Systems</title>
 
@@ -43,12 +43,12 @@
 
     </head>
 
-    <body>    
+    <body>
         <div class="wrapper">
-            <!--=== Header ===-->    
+            <!--=== Header ===-->
             <div class="header" id="includedContentHeader">
             </div>
-            <!--=== End Header ===--> 
+            <!--=== End Header ===-->
             <!--=== Breadcrumbs ===-->
             <div class="breadcrumbs">
                 <div class="container">
@@ -63,7 +63,7 @@
             <!--=== End Breadcrumbs ===-->
 
             <!--=== Content Part ===-->
-            <div class="container content">     
+            <div class="container content">
                 <div class="row">
                     <!-- Begin Content -->
                     <div class="col-md-8 col-md-offset-2 margin-bottom-50">
@@ -72,11 +72,12 @@
                             <fieldset>
                                 <section id="radios">
                                     <label class="label">Wybierz odbiorców</label>
-                                    <label class="radio"><input type="radio" name="radio" checked=""><i class="rounded-x"></i>Wybierz Partnerów</label>
-                                    <label class="radio"><input type="radio" name="radio"><i class="rounded-x"></i>Wybierz operatorów</label>
+                                    <label class="radio"><input type="radio" name="radio" checked="" value="0"><i class="rounded-x"></i>Wybierz Partnerów</label>
+                                    <label class="radio"><input type="radio" name="radio" value="1"><i class="rounded-x"></i>Wybierz użytkowników</label>
+                                    <label class="radio"><input type="radio" name="radio" value="2"><i class="rounded-x"></i>Wybierz wszystkich użytkowników</label>
                                 </section>
                             </fieldset>
-                            <fieldset id="partnersState">      
+                            <fieldset id="partnersState">
                                 <div class="row">
                                     <section class="col col-5">
                                         <div class="row">
@@ -90,9 +91,9 @@
                                             <section class="col col-12">
                                                 <label class="label">Wybierz grupy Partnerów</label>
                                                 <select  id="service-select-group" class="selectpicker input-block-level" data-live-search="true" data-size="10"  multiple title='Wybierz...' data-selected-text-format="count>1" data-width="280px">
-                                                    <option value="330" data-entry="0">Grupa A</option>	
-                                                    <option value="332" data-entry="0">Grupa B</option>	
-                                                    <option value="332" data-entry="0">Grupa Tyger Gym i Calypso</option>	
+                                                    <option value="330" data-entry="0">Grupa A</option>
+                                                    <option value="332" data-entry="0">Grupa B</option>
+                                                    <option value="332" data-entry="0">Grupa Tyger Gym i Calypso</option>
                                                 </select>
                                             </section>
                                         </div>
@@ -107,7 +108,7 @@
                                             </button>
                                             <button type="button" class="btn btn-default col-md-8 col-md-offset-2" data-type="stl" style="margin-bottom: 10px;">
                                                 <span class="glyphicon glyphicon-chevron-left"></span>
-                                            </button>       
+                                            </button>
                                             <button type="button" class="btn btn-default col-md-8 col-md-offset-2" data-type="atl" style="margin-bottom: 10px;">
                                                 <span class="glyphicon glyphicon-chevron-left"></span> <span class="glyphicon glyphicon-list"></span>
                                             </button>
@@ -125,18 +126,30 @@
                                 </div>
                                 <hr>
                                 <section>
-                                    <label class="label">Ogranicz odbiorców do roli (hierarchicznie)</label>
-                                    <label class="select">
-                                        <select name="role">
-                                            <option value="1">Operator Partnera + Operator FK + Administrator</option>
-                                            <option value="2">Operator FK + Administrator</option>
-                                            <option value="3">Administrator</option>
-                                        </select>
-                                        <i></i>
-                                    </label>
+                                    <label class="label"> Ogranicz odbiorców do roli</label>
+                                    <div class="row">
+                                        <div class="col col-12">
+                                            <label class="checkbox"><input id="select-all-roles" type="checkbox" name="checkbox"><i></i> Zaznacz/odznacz wszystkie role</label>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="row role-checkboxes">
+                                        <div class="col col-6">
+                                            <label class="checkbox"><input type="checkbox" class="role-checkbox" name="appbundle_survey_send[limitVisibilityToRole][]" value="ROLE_PARTNER_OPERATOR"><i></i>Użytkownik</label>
+                                        </div>
+                                        <div class="col col-6">
+                                            <label class="checkbox"><input type="checkbox" class="role-checkbox" name="appbundle_survey_send[limitVisibilityToRole][]" value="ROLE_PARTNER_FK"><i></i>Użytkownik księgowy</label>
+                                        </div>
+                                        <div class="col col-6">
+                                            <label class="checkbox"><input type="checkbox" class="role-checkbox" name="appbundle_survey_send[limitVisibilityToRole][]" value="ROLE_PARTNER_ADMIN"><i></i>Administrator</label>
+                                        </div>
+                                        <div class="col col-6">
+                                            <label class="checkbox"><input type="checkbox" class="role-checkbox" name="appbundle_survey_send[limitVisibilityToRole][]" value="ROLE_PARTNER_EXTERNAL_FK"><i></i>Użytkownik księgowy zewnętrzny</label>
+                                        </div>
+                                    </div>
                                 </section>
                             </fieldset>
-                            <fieldset id="operatorsState">    
+                            <fieldset id="operatorsState">
                                 <div class="row">
                                     <!--Button Addons-->
                                     <div class="col-md-6">
@@ -146,7 +159,8 @@
                                             <select  id="partner-select" class="selectpicker input-block-level" data-live-search="true"  title='Wybierz...' data-width="100%">
                                             </select>
                                             <span class="input-group-btn">
-                                                <button id="setPartners" class="btn-u margin-left-5"  tabindex="-1"  type="button"><span class="fa fa-chevron-down" aria-hidden="true"></span> Ustaw</button>
+                                                <button id="findPartnerSubmit" type="button" class="btn-u" data-without-session="true"><i class="fa fa-search"></i></button>
+                                                <button id="findPartnerReset" class="btn-u btn-u-dark margin-left-5" tabindex="-1" type="button"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
                                             </span>
                                         </div>
                                     </div>
@@ -159,13 +173,13 @@
                                             <section class="col col-12">
                                                 <label class="label">Wybierz Operatorów</label>
                                                 <select  id="operator-select" class="selectpicker input-block-level" data-live-search="true" data-size="10"  multiple title='Wybierz...' data-selected-text-format="count>1" data-width="280px">
-                                                    <option  data-hidden="true"></option>	
-                                                    <option value="" data-entry="0">Tomasz Tomaszewski - Administrator</option>	
-                                                    <option value="" data-entry="0">Adam Adamowski - Operator FK</option>	
-                                                    <option value="" data-entry="0">Jacek Cygan - Operator</option>	
-                                                    <option value="" data-entry="0">Tomasz Jankowski - Operator</option>	
-                                                    <option value="" data-entry="0">Adam Pawłowski - Operator</option>	
-                                                    <option value="" data-entry="0">Jacek Cygański - Operator</option>	
+                                                    <option  data-hidden="true"></option>
+                                                    <option value="" data-entry="0">Tomasz Tomaszewski - Administrator</option>
+                                                    <option value="" data-entry="0">Adam Adamowski - Operator FK</option>
+                                                    <option value="" data-entry="0">Jacek Cygan - Operator</option>
+                                                    <option value="" data-entry="0">Tomasz Jankowski - Operator</option>
+                                                    <option value="" data-entry="0">Adam Pawłowski - Operator</option>
+                                                    <option value="" data-entry="0">Jacek Cygański - Operator</option>
                                                 </select>
                                             </section>
                                         </div>
@@ -180,7 +194,7 @@
                                             </button>
                                             <button type="button" class="btn btn-default col-md-8 col-md-offset-2" data-type="stl" style="margin-bottom: 10px;">
                                                 <span class="glyphicon glyphicon-chevron-left"></span>
-                                            </button>       
+                                            </button>
                                             <button type="button" class="btn btn-default col-md-8 col-md-offset-2" data-type="atl" style="margin-bottom: 10px;">
                                                 <span class="glyphicon glyphicon-chevron-left"></span> <span class="glyphicon glyphicon-list"></span>
                                             </button>
@@ -201,7 +215,7 @@
                                 <button type="button" class="btn-u btn-u-default" onclick="window.history.back();">Wróć</button>
                                 <a href="view_survey_operators.html" class="btn-u">Zapisz</a>
                             </footer>
-                        </form>         
+                        </form>
                         <!-- Post -->
                     </div>
                     <!-- End Content -->
@@ -209,17 +223,17 @@
                     <div class="col-md-3" id="includedContentSideBar">
                     </div>
                     <!-- End Sidebar Menu -->
-                </div>          
-            </div><!--/container-->     
+                </div>
+            </div><!--/container-->
             <!--=== End Content Part ===-->
 
         </div><!--/End Wrapepr-->
         <!--=== Footer Version 1 ===-->
         <div class="footer-v1" id="includedContentFooter">
-        </div>     
+        </div>
         <!--=== End Footer Version 1 ===-->
 
-        <!-- JS Global Compulsory -->           
+        <!-- JS Global Compulsory -->
         <script type="text/javascript" src="assets/plugins/jquery/jquery.min.js"></script>
         <script type="text/javascript" src="assets/plugins/jquery/jquery-migrate.min.js"></script>
         <script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
@@ -232,7 +246,7 @@
         <script src="assets/plugins/sky-forms-pro/skyforms/js/jquery.form.min.js"></script>
         <!-- JS Customization -->
         <script type="text/javascript" src="assets/js/custom.js"></script>
-        <!-- JS Page Level -->           
+        <!-- JS Page Level -->
         <script type="text/javascript" src="assets/js/app.js"></script>
         <script type="text/javascript" src="assets/js/forms/contact.js"></script>
         <script type="text/javascript" src="assets/js/plugins/masking.js"></script>
@@ -259,14 +273,10 @@
                 }, 2000);
 
 
-                $('#operatorsState').slideToggle('fast', function () {
-                });
-                $('#operatorsSelect').slideToggle('fast', function () {
-                        // Animation complete.
-                    });
+                $('#operatorsState').hide();
 
             });
-        </script> 
+        </script>
         <!--[if lt IE 9]>
             <script src="assets/plugins/respond.js"></script>
             <script src="assets/plugins/html5shiv.js"></script>
@@ -276,17 +286,22 @@
             jQuery(document).ready(function () {
 
                 $('#radios input').on('change', function () {
-                    $('#operatorsState').slideToggle('fast', function () {
-                    });
-                    $('#partnersState').slideToggle('fast', function () {
-                    });
+
+                    if ($(this).val() == 0) {
+                        $('#partnersState').show();
+                        $('#operatorsState').hide();
+                    }
+                    else if ($(this).val() == 1) {
+                        $('#partnersState').hide();
+                        $('#operatorsState').show();
+                    }
+                    else {
+                        $('#partnersState').hide();
+                        $('#operatorsState').hide();
+                    }
                 });
 
-                $('#setPartners').click(function () {
-                    $('#operatorsSelect').slideToggle('fast', function () {
-                        // Animation complete.
-                    });
-                });
+
 
             });
         </script>
