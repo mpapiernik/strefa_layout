@@ -79,7 +79,7 @@
                                 </section>
 
                                 <section>
-                                    <label class="label">Typ pytania</label>
+                                    <label class="label">Typ parametru</label>
                                     <label class="select">
                                         <select name="type" onchange="operatorBSSlide(this.value)">
                                             <option value="1" selected>Data</option>
@@ -111,15 +111,12 @@
                                 </section>
                                 <section id="operatorBSState">
                                     <label class="label">Wybierz Operatora Benefit</label>
-                                    <div class="input-group">
+                                    <div class="input-group" style="width:100%">
                                         <select  id="service-select" class="selectpicker input-block-level" data-live-search="true" title='Wybierz...' data-selected-text-format="count>1" data-width="100%">
                                             <option value="" data-entry="0">Tomasz Tomaszewski</option>	
                                             <option value="" data-entry="0">Adam Adamowski</option>	
                                             <option value="" data-entry="0">Jacek Cygan</option>	
                                         </select>
-                                        <span class="input-group-btn">
-                                            <button class="btn-u btn-u-dark margin-left-5"  tabindex="-1"  type="button"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Odznacz</button>
-                                        </span>
                                     </div>
                                 </section>
                                 <section id="placeState">
@@ -130,17 +127,14 @@
                                     </label>
                                 </section>
                                 <section id="agreementState">
-                                    <label class="label">Wybierz zgody, którą zaakceptował Użytkownikt</label>
-                                    <div class="input-group">
+                                    <label class="label">Wybierz zgody, którą zaakceptował Użytkownik</label>
+                                    <div class="input-group" style="width:100%">
                                         <select  id="" class="selectpicker input-block-level" multiple data-live-search="true" title='Wybierz...' data-selected-text-format="count>1" data-width="100%">
                                             <option value="" data-entry="0">Zgoda na otrzymywanie prenumeraty magazynu BE-FIT</option>
                                             <option value="" data-entry="0">Zgoda na regulamin korzystanie z Programów Wsparcia</option>
                                             <option value="" data-entry="0">Zgoda nr 3</option>
                                             <option value="" data-entry="0">Zgoda nr 4</option>
                                         </select>
-                                        <span class="input-group-btn">
-                                            <button class="btn-u btn-u-dark margin-left-5"  tabindex="-1"  type="button"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Odznacz</button>
-                                        </span>
                                     </div>
                                 </section>
                             </fieldset>
@@ -201,7 +195,7 @@
                                         Datepicker.initDatepicker();
                                     });
                                     function operatorBSSlide(number) {
-                                        alert('The option with value ' + number);
+
                                         if (number == 1) {
                                             $('#dateState').slideToggle('fast', function () {
                                                 $('.activeState').slideToggle('fast', function () {
