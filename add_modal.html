@@ -48,6 +48,9 @@
         <!--[if lt IE 9]><link rel="stylesheet" href="assets/plugins/sky-forms-pro/skyforms/css/sky-forms-ie8.css"><![endif]-->
 
 
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/css/bootstrap-select.min.css" />
+
+
         <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.css">
         <link rel="stylesheet" type="text/css" href="assets/css/bootstrap-duallistbox.css">
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
@@ -68,7 +71,7 @@
             <!--=== Breadcrumbs ===-->
             <div class="breadcrumbs">
                 <div class="container">
-                    <h1 class="pull-left">Dodaj szablon okna pop-up</h1>
+                    <h1 class="pull-left">Dodaj okno pop-up</h1>
                     <ul class="pull-right breadcrumb">
                         <li><a href="index_backend.html">Home</a></li>
                         <li>Ustawienia</li>
@@ -82,7 +85,7 @@
             <div class="container content">     
                 <div class="row">
                     <!-- Begin Content -->
-                    <div class="col-md-8 col-md-offset-2 margin-bottom-50">
+                    <section class="col-md-8 col-md-offset-2 margin-bottom-50">
                         <!-- Post -->
                         <form action="assets/php/demo-contacts-process.php" method="post" id="sky-form3" class="sky-form">
                             <fieldset>                  
@@ -90,25 +93,59 @@
                                     <label class="label">Tytuł</label>
                                     <label class="input">
                                         <i class="icon-append fa fa-tag"></i>
-                                        <input type="text" name="name" id="name" value="">
+                                        <input type="text" name="name" id="name" value="Skorzystaj z Programów Wsparcia">
                                     </label>
                                 </section>
+
+                                <section>
+                                    <label class="label">Wymagane zgody</label>
+                                    <div class="input-group" style="width:100%">
+                                        <select  id="service-select" class="selectpicker input-block-level" multiple data-selected-text-format="count>3" data-live-search="true"  title='Wybierz...' data-width="100%">
+                                            <option  data-hidden="true"></option>
+                                            <option value="1">Zgoda 1</option>
+                                            <option value="2" selected>Zgoda 2</option>
+                                            <option value="3" selected>Zgoda 3</option>
+                                            <option value="4">Zgoda 4</option>
+                                            <option value="5" selected>Zgoda 5</option>
+                                            <option value="6">Zgoda 6</option>
+                                            <option value="7">Zgoda 7</option>
+                                        </select>
+                                    </div>
+                                </section>
+
                             </fieldset>
                             <fieldset>
                                 <section>
                                     <label class="label">Treść</label>
                                     <div class="well">
-                                        <ul><b>Dostępne tagi:</b>
-                                            <li>{{ zgody:rodzaj1 }} - wyświetli zdefiniowaną w słowniku listę treści zgód - wskazanego rodzaju</li>
-                                            <li>{{ zgody[key] }} - wyświetli zdefiniowaną w słowniku treść zgody - o wskazanym kluczu</li>
-                                            <li>{{ partnerzy }} - wyświetli HTML pola partnerzy z modułu rabatów</li>
-                                            <li>{{ partnerzyDymek|przykładowy tekst }} - Wyświetli treść pola partnerzy z modułu rabatów jako dymek</li>
+                                <ul><b>Dostępne tagi:</b>
+                                            <li>{{ zaakceptowaneZgody  }} - wyświetli listę checkboxów z zaakceptowanymi zgodami przez użytkowanika</li>
+                                            <li>{{ niezaakceptowaneZgody  }} - wyświetli listę checkboxów z niezaakceptowanymi zgodami przez użytkowanika</li>
+                                            <li>{{ zgody[about_programs] }} - wyświetli checkbox zgody (zaakceptowanej lub niezaakceptowanej) - o wskazanym kluczu np. about_programs</li>
                                         </ul>
                                     </div>
 
                                     //** Miejsce na CKEditor **//
                                     <label class="textarea state-success">
-                                        <textarea rows="10" name="description" id="message" class="valid"></textarea>
+                                        <textarea rows="20" name="description" id="message" class="valid">
+{% if zaakceptowaneZgody %}
+ Obecnie zaakceptowałeś poniższe zgody z Programów Wsparcia:
+
+{{ zaakceptowaneZgody }}
+{% endif %}
+
+<b>Nie masz dostepu do korzystania z Programów Wsparcia, ponieważ wymagane jest zaakceptowanie poniższych zgód:</b>
+
+{{ niezaakceptowaneZgody }}
+
+BenefitSystems jest administratorem Twoich danych. Podanie danych osobowych i wyrażenie zgody jest dobrowolne, jednak ich brak uniemożliwia korzystanie z elementów serwisu.
+Przysługuje Ci prawo dostępu do treści swoich danych oraz ich poprawiania i sprostowania oraz – w zakresie wynikającym z przepisów - do usunięcia, ograniczenia przetwarzania wniesienia sprzeciwu wobec przetwarzania.
+Przysługuje Ci również prawo do wniesienia skargi do organu nadzorczego właściwego dla przetwarzania danych (GIODO).
+Każda zgoda może być wycofana w dowolnym momencie, nie wpływa to na wcześniejszą zgodność z prawem przetwarzania danych.
+Dane Kontaktowe do Administratora Bezpieczeństwa Informacji:abi@benefitsystems.pl
+
+W dowolnym momencie możesz zmieniać swoje zgody w <b><a href="http://83.144.70.78:8082/strefa-partnera-layout/profile_operator_settings.html" target="_blank">Profilu</a></b>.
+                                        </textarea>
                                     </label>
                                 </section>
                             </fieldset>
@@ -153,6 +190,9 @@
         <script type="text/javascript" src="assets/js/plugins/masking.js"></script>
         <script type="text/javascript" src="assets/js/plugins/datepicker.js"></script>
         <script type="text/javascript" src="assets/js/plugins/validation.js"></script>
+
+
+        <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/js/bootstrap-select.min.js"></script>
         <script type="text/javascript">
                                     jQuery(document).ready(function () {
                                         App.init();
