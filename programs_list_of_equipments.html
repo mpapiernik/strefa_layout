@@ -751,6 +751,11 @@
         $("#includedContentHeader").load("header.html");
         $("#includedContentFooter").load("footer.html");
         $("#attachemntsModal").load("modal_offers.html");
+		$('#confirmModal').on('hidden.bs.modal', function () {
+                $('.article-clear').show();
+                $('.article-blurred').hide();
+
+            });
         $("#confirmModal").load("program_modal.html", function () {
             $('#confirmModal').modal('show');
 
@@ -784,11 +789,7 @@
         setTimeout(function () {
             $('.dropdown-toggle').dropdown();
 
-            $('#confirmModal').on('hidden.bs.modal', function () {
-                $('.article-clear').show();
-                $('.article-blurred').hide();
-
-            })
+            
 
         }, 1000);
 
