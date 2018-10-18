@@ -180,80 +180,83 @@
                     <fieldset>
                         <div class="row">
                             <div class="col-md-6">
-                                <label class="">Jaką kwotę chcesz pożyczyć?</label>
-                                <!-- Regular Slider Option One -->
-                                <div class="form-group g-mb-20">
-                                    <input id="rent_amount_slider"
-                                            class="js-range-slider" type="text"
-                                           data-extra-classes="u-slider--v4 u-slider--v4--grid" data-type="single"
-                                           data-min="0" data-max="5000" data-from="1000" data-grid="true"
-                                           data-hide-from-to="false"
-                                           data-result-min="#rent_amount_input" data-result-max="#rent_amount_input">
-                                </div>
-                                <!-- End Regular Slider Option One -->
-                                <label class="input">
-                                    <i class="icon-append">zł</i>
-                                    <input id="rent_amount_input"
-                                           class="form-control text-center g-brd-gray-light-v7 g-px-5 g-py-8 ml-auto"
-                                           type="text">
-                                </label>
+                                <section>
+                                    <label class="">Jaką kwotę chcesz pożyczyć?</label>
+                                    <!-- Regular Slider Option One -->
+                                    <div class="form-group g-mb-20">
+                                        <input id="rent_amount_slider"
+                                               class="js-range-slider" type="text"
+                                               data-extra-classes="u-slider--v4 u-slider--v4--grid" data-type="single"
+                                               data-min="0" data-max="5000" data-from="1000" data-grid="true"
+                                               data-hide-from-to="false"
+                                               data-result-min="#rent_amount_input"
+                                               data-result-max="#rent_amount_input">
+                                    </div>
+                                    <!-- End Regular Slider Option One -->
+                                    <label class="input hidden">
+                                        <i class="icon-append">zł</i>
+                                        <input id="rent_amount_input"
+                                               class="form-control text-center g-brd-gray-light-v7 g-px-5 g-py-8 ml-auto"
+                                               type="text">
+                                    </label>
+                                </section>
+                                <section>
+                                    <label class="">Jak liczba rat miesięcznych?</label>
+                                    <!-- Regular Slider Option One -->
+                                    <div class="form-group g-mb-20">
+                                        <input id="rent_months_slider"
+                                               class="js-range-slider" type="number"
+                                               data-extra-classes="u-slider--v4 u-slider--v4--grid" data-type="single"
+                                               data-min="1" data-max="60" data-from="12" data-grid="true"
+                                               data-hide-from-to="false"
+                                               data-result-min="#rent_months_input"
+                                               data-result-max="#rent_months_input">
+                                    </div>
+                                    <!-- End Regular Slider Option One -->
+                                    <label class=" hidden">
+                                        <i class="icon-append fa fa-calendar"></i>
+                                        <input id="rent_months_input"
+                                               class="form-control text-center g-brd-gray-light-v7 g-px-5 g-py-8 ml-auto"
+                                               type="number"
+                                        >
+                                    </label>
+                                </section>
                             </div>
                             <div class="col-md-6">
-                                <label class="">Jak liczba rat miesięcznych?</label>
-                                <!-- Regular Slider Option One -->
-                                <div class="form-group g-mb-20">
-                                    <input id="rent_months_slider"
-                                            class="js-range-slider" type="number"
-                                           data-extra-classes="u-slider--v4 u-slider--v4--grid" data-type="single"
-                                           data-min="1" data-max="60" data-from="12" data-grid="true"
-                                           data-hide-from-to="false"
-                                           data-result-min="#rent_months_input" data-result-max="#rent_months_input">
-                                </div>
-                                <!-- End Regular Slider Option One -->
-                                <label class="input">
-                                    <i class="icon-append fa fa-calendar"></i>
-                                    <input id="rent_months_input"
-                                           class="form-control text-center g-brd-gray-light-v7 g-px-5 g-py-8 ml-auto"
-                                           type="number"
-                                    >
-                                </label>
+                                <section>
+                                    <label class="">Kwota raty: </label>
+                                    <label class="input">
+                                        <i class="icon-append">zł</i>
+                                        <input id="installment_amount"
+                                               class="form-control text-center g-brd-gray-light-v7 g-px-5 g-py-8 ml-auto disabled"
+                                               readonly="readonly"
+                                               type="number">
+                                    </label>
+                                </section>
+                                <section>
+                                    <label>Całkowita kwota do spłaty: </label>
+                                    <label class="input">
+                                        <i class="icon-append">zł</i>
+                                        <input id="rental_amount"
+                                               class="form-control text-center g-brd-gray-light-v7 g-px-5 g-py-8 ml-auto  disabled"
+                                               readonly="readonly"
+                                               type="number">
+                                    </label>
+                                </section>
+                                <section>
+                                    <label>Oprocentowanie: </label>
+                                    <label class="input">
+                                        <i class="icon-append">%</i>
+                                        <input id="rental_interest_output"
+                                               class="form-control text-center g-brd-gray-light-v7 g-px-5 g-py-8 ml-auto disabled state-disabled"
+                                               readonly="readonly"
+                                               type="number"
+                                        >
+                                    </label>
+                                </section>
                             </div>
                         </div>
-                    </fieldset>
-                    <fieldset>
-                        <div class="row">
-                            <div class="col-xs-4">
-                                <h5><strong>Kwota raty: </strong></h5>
-                                <label class="input">
-                                    <i class="icon-append">zł</i>
-                                    <input id="installment_amount"
-                                           class="form-control text-center g-brd-gray-light-v7 g-px-5 g-py-8 ml-auto disabled"
-                                           readonly="readonly"
-                                           type="number">
-                                </label>
-                            </div>
-                            <div class="col-xs-4">
-                                <h5><strong>Całkowita kwota do spłaty: </strong></h5>
-                                <label class="input">
-                                    <i class="icon-append">zł</i>
-                                    <input id="rental_amount"
-                                           class="form-control text-center g-brd-gray-light-v7 g-px-5 g-py-8 ml-auto  disabled"
-                                           readonly="readonly"
-                                           type="number">
-                                </label>
-                            </div>
-                            <div class="col-xs-4">
-                                <h5><strong>Oprocentowanie: </strong></h5>
-                                <label class="input">
-                                    <i class="icon-append">%</i>
-                                    <input id="rental_interest_output"
-                                           class="form-control text-center g-brd-gray-light-v7 g-px-5 g-py-8 ml-auto disabled state-disabled"
-                                           readonly="readonly"
-                                           type="number"
-                                    >
-                                </label>
-                            </div>
-                        </div>
+
                     </fieldset>
 
                     <footer style="text-align: right;">
@@ -400,11 +403,11 @@
         output.innerHTML = slider.value; // Display the default slider value
 
         // Update the current slider value (each time you drag the slider handle)
-        slider.oninput = function() {
+        slider.oninput = function () {
             output.innerHTML = this.value * interest;
         }
 
-        sliderInput.oninput = function() {
+        sliderInput.oninput = function () {
             output.innerHTML = this.value * interest;
         }
     });
