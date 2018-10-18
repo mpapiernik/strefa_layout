@@ -4,5 +4,10 @@
     <content url="file://$MODULE_DIR$" />
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="popper" level="application" />
+    <orderEntry type="library" name="jquery.cookie" level="application" />
+    <orderEntry type="library" name="bootstrap-select" level="application" />
+    <orderEntry type="library" name="appear" level="application" />
+    <orderEntry type="library" name="ion.rangeSlider" level="application" />
   </component>
 </module>

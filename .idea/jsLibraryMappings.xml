@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="JavaScriptLibraryMappings">
+    <file url="PROJECT" libraries="{appear, bootstrap-select, ion.rangeSlider, jquery.cookie, popper}" />
+  </component>
+</project>

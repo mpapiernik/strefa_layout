@@ -1,0 +1,209 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Title -->
+    <title>Slider Controls | Unify - Responsive Website Template</title>
+
+    <!-- Required Meta Tags Always Come First -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+
+    <!-- CSS Global Compulsory -->
+    <link rel="stylesheet" href="https://htmlstream.com/preview/unify-v2.6/assets/vendor/bootstrap/bootstrap.min.css">
+    <!-- CSS Global Icons -->
+    <link rel="stylesheet" href="https://htmlstream.com/preview/unify-v2.6/assets/vendor/icon-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://htmlstream.com/preview/unify-v2.6/assets/vendor/icon-line/css/simple-line-icons.css">
+    <link rel="stylesheet" href="https://htmlstream.com/preview/unify-v2.6/assets/vendor/icon-etlinefont/style.css">
+    <link rel="stylesheet" href="https://htmlstream.com/preview/unify-v2.6/assets/vendor/icon-line-pro/style.css">
+    <link rel="stylesheet" href="https://htmlstream.com/preview/unify-v2.6/assets/vendor/icon-hs/style.css">
+
+    <link rel="stylesheet" href="https://htmlstream.com/preview/unify-v2.6/admin-template/assets/vendor/hs-admin-icons/hs-admin-icons.css">
+    <link rel="stylesheet" href="https://htmlstream.com/preview/unify-v2.6/assets/vendor/animate.css">
+    <link rel="stylesheet" href="https://htmlstream.com/preview/unify-v2.6/assets/vendor/malihu-scrollbar/jquery.mCustomScrollbar.min.css">
+    <link rel="stylesheet" href="https://htmlstream.com/preview/unify-v2.6/admin-template/assets/vendor/bootstrap-select/css/bootstrap-select.min.css">
+    <link rel="stylesheet" href="https://htmlstream.com/preview/unify-v2.6/admin-template/assets/vendor/bootstrap-tagsinput/css/bootstrap-tagsinput.css">
+    <link rel="stylesheet" href="https://htmlstream.com/preview/unify-v2.6/admin-template/assets/vendor/ion-range-slider/css/ion.rangeSlider.css">
+    <link rel="stylesheet" href="https://htmlstream.com/preview/unify-v2.6/admin-template/assets/vendor/chartist-js/chartist.min.css">
+
+    <link rel="stylesheet" href="https://htmlstream.com/preview/unify-v2.6/assets/vendor/hamburgers/hamburgers.min.css">
+
+    <!-- CSS Unify -->
+    <link rel="stylesheet" href="https://htmlstream.com/preview/unify-v2.6/admin-template/assets/css/unify-admin.css">
+
+    <!-- CSS Customization -->
+    <link rel="stylesheet" href="https://htmlstream.com/preview/unify-v2.6/assets/css/custom.css">
+</head>
+
+<body>
+<main>
+
+    <section class="container-fluid px-0 g-pt-65">
+        <div class="row no-gutters g-pos-rel g-overflow-x-hidden">
+
+
+            <div class="col g-ml-45 g-ml-0--lg g-pb-65--md">
+
+                <div class="g-pa-20">
+
+                    <div class="g-brd-around g-brd-gray-light-v7 g-rounded-4 g-pa-20 g-mb-30">
+                        <!-- Slider Forms -->
+                        <form>
+                            <h3 class="h6 g-font-weight-700 g-mb-20">Basic slider</h3>
+
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <!-- Regular Slider Option One -->
+                                    <div class="form-group g-mb-20">
+                                        <input class="js-range-slider" type="text" data-extra-classes="u-slider--v4" data-type="double" data-min="0" data-max="115" data-from="25" data-to="100" data-result-min="#result1min" data-result-max="#result1max">
+                                    </div>
+
+                                    <div class="form-group d-flex g-mb-30 g-mb-0--md">
+                                        <input id="result1min" class="form-control text-center g-width-40 g-brd-gray-light-v7 g-px-5 g-py-8" type="text">
+                                        <input id="result1max" class="form-control text-center g-width-40 g-brd-gray-light-v7 g-px-5 g-py-8 ml-auto" type="text">
+                                    </div>
+                                    <!-- End Regular Slider Option One -->
+                                </div>
+
+                                <div class="col-md-4">
+                                    <!-- Regular Slider Option Two -->
+                                    <div class="form-group g-mb-20">
+                                        <input class="js-range-slider" type="text" data-extra-classes="u-slider--v4 u-slider--v4--single" data-type="single" data-min="0" data-max="125" data-from="100" data-result-min="#result2min">
+                                    </div>
+
+                                    <div class="form-group d-flex align-items-center g-mb-30 g-mb-0--md">
+                                        <span class="g-color-gray-light-v11">Select Required Amount</span>
+
+                                        <div class="input-group g-width-100 ml-auto">
+                                            <div class="input-group-prepend g-bg-gray-light-v8">
+                                                <div class="input-group-text justify-content-center g-width-40 g-brd-gray-light-v7">$</div>
+                                            </div>
+
+                                            <input id="result2min" class="form-control text-center g-brd-gray-light-v7 g-px-5 g-py-8 ml-auto" type="text">
+                                        </div>
+                                    </div>
+                                    <!-- End Regular Slider Option Two -->
+                                </div>
+
+                                <div class="col-md-4">
+                                    <!-- Regular Slider Option Three -->
+                                    <div class="form-group g-mb-20">
+                                        <input class="js-range-slider" type="text" data-extra-classes="u-slider--v4 u-slider--v4--step-rounded" data-type="single" data-grid="true" data-step="25" data-min="0" data-max="100" data-from="75" data-result-min="#result3min">
+                                    </div>
+
+                                    <div class="form-group d-flex align-items-center mb-0">
+                                        <span id="result3min"></span><span class="g-color-gray-light-v11 ml-2">Selected Amount</span>
+                                    </div>
+                                    <!-- End Regular Slider Option Three -->
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="g-brd-around g-brd-gray-light-v7 g-rounded-4 g-pa-20 g-mb-30">
+                        <!-- Slider Forms -->
+                        <form>
+                            <h3 class="h6 g-font-weight-700 g-mb-20">Range slider</h3>
+
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <!-- Range Slider Option One -->
+                                    <div class="form-group g-mb-30 g-mb-0--md">
+                                        <input class="js-range-slider" type="text" data-extra-classes="u-slider--v4 u-slider--v4--grid" data-type="double" data-grid="true" data-hide-from-to="false" data-min="0" data-max="100">
+                                    </div>
+                                    <!-- End Range Slider Option One -->
+                                </div>
+
+                                <div class="col-md-4">
+                                    <!-- Range Slider Option Two -->
+                                    <div class="form-group mb-0">
+                                        <input class="js-range-slider" type="text" data-extra-classes="u-slider--v4 u-slider--v4--grid-v2" data-type="double" data-grid="true" data-hide-from-to="false" data-min="0" data-max="100">
+                                    </div>
+
+                                    <div class="form-group d-flex align-items-center g-mb-20 g-mb-0--md">
+                                        <span>Min</span>
+                                        <span class="ml-auto">Max</span>
+                                    </div>
+                                    <!-- End Range Slider Option Two -->
+                                </div>
+
+                                <div class="col-md-4">
+                                    <!-- Range Slider Option Three -->
+                                    <div class="form-group mb-0">
+                                        <input class="js-range-slider" type="text" data-extra-classes="u-slider--v4 u-slider--v4--grid" data-type="single" data-grid="true" data-step="25" data-min="0" data-max="100" data-from="75">
+                                    </div>
+                                    <!-- End Range Slider Option Three -->
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- JS Global Compulsory -->
+<script src="https://htmlstream.com/preview/unify-v2.6/admin-template/assets/vendor/jquery/jquery.min.js"></script>
+<script src="https://htmlstream.com/preview/unify-v2.6/admin-template/assets/vendor/jquery-migrate/jquery-migrate.min.js"></script>
+
+<script src="https://htmlstream.com/preview/unify-v2.6/assets/vendor/popper.min.js"></script>
+<script src="https://htmlstream.com/preview/unify-v2.6/assets/vendor/bootstrap/bootstrap.min.js"></script>
+
+<script src="https://htmlstream.com/preview/unify-v2.6/assets/vendor/cookiejs/jquery.cookie.js"></script>
+
+
+<!-- JS Plugins Init. -->
+<script src="https://htmlstream.com/preview/unify-v2.6/assets/vendor/appear.js"></script>
+<script src="https://htmlstream.com/preview/unify-v2.6/admin-template/assets/vendor/bootstrap-select/js/bootstrap-select.min.js"></script>
+<script src="https://htmlstream.com/preview/unify-v2.6/assets/vendor/malihu-scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="https://htmlstream.com/preview/unify-v2.6/admin-template/assets/vendor/ion-range-slider/js/ion.rangeSlider.min.js"></script>
+<script src="https://htmlstream.com/preview/unify-v2.6/admin-template/assets/vendor/chartist-js/chartist.min.js"></script>
+
+<!-- JS Unify -->
+<script src="https://htmlstream.com/preview/unify-v2.6/assets/js/hs.core.js"></script>
+<script src="https://htmlstream.com/preview/unify-v2.6/admin-template/assets/js/components/hs.side-nav.js"></script>
+<script src="https://htmlstream.com/preview/unify-v2.6/assets/js/helpers/hs.hamburgers.js"></script>
+<script src="https://htmlstream.com/preview/unify-v2.6/assets/js/components/hs.dropdown.js"></script>
+<script src="https://htmlstream.com/preview/unify-v2.6/assets/js/components/hs.scrollbar.js"></script>
+<script src="https://htmlstream.com/preview/unify-v2.6/admin-template/assets/js/components/hs.range-slider.js"></script>
+<script src="https://htmlstream.com/preview/unify-v2.6/admin-template/assets/js/components/hs.area-chart.js"></script>
+<script src="https://htmlstream.com/preview/unify-v2.6/admin-template/assets/js/components/hs.bar-chart.js"></script>
+<script src="https://htmlstream.com/preview/unify-v2.6/assets/js/helpers/hs.focus-state.js"></script>
+
+<!-- JS Custom -->
+<script src="https://htmlstream.com/preview/unify-v2.6/assets/js/custom.js"></script>
+
+<!-- JS Plugins Init. -->
+<script>
+    $(document).on('ready', function () {
+        // initialization of custom select
+        $('.js-select').selectpicker();
+
+        // initialization of sidebar navigation component
+        $.HSCore.components.HSSideNav.init('.js-side-nav');
+
+        // initialization of hamburger
+        $.HSCore.helpers.HSHamburgers.init('.hamburger');
+
+        // initialization of HSDropdown component
+        $.HSCore.components.HSDropdown.init($('[data-dropdown-target]'), {
+            dropdownHideOnScroll: false
+        });
+
+        // initialization of custom scrollbar
+        $.HSCore.components.HSScrollBar.init($('.js-custom-scroll'));
+
+        // initialization of forms
+        $.HSCore.components.HSRangeSlider.init('.js-range-slider');
+
+    });
+
+</script>
+</body>
+
+</html>
