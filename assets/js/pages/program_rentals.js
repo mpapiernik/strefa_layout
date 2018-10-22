@@ -3,7 +3,7 @@ jQuery(document).ready(function () {
 });
 $(function () {
    var interest = 105;
-    document.getElementById("rental_interest_output").value = interest;
+    //document.getElementById("rental_interest_output").value = interest;
     var slider = document.getElementById("rent_amount_slider");
     var sliderInput = document.getElementById("rent_amount_input");
     var sliderMonths = document.getElementById("rent_months_slider");
