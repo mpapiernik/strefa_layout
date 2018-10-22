@@ -58,7 +58,12 @@
 
 
     <link rel="stylesheet" href="assets/plugins/sky-forms-pro/skyforms/css/sky-forms.css">
+
+
+    <link rel="stylesheet" href="assets/css/unify_v2.6.css">
     <link rel="stylesheet" href="assets/plugins/sky-forms-pro/skyforms/custom/custom-sky-forms.css">
+
+
 
 
 </head>
@@ -222,7 +227,8 @@
                                     </label>
                                 </section>
                             </div>
-                            <div class="col-md-6" style="display: flex; flex-direction: column; justify-content: center">
+                            <div class="col-md-6"
+                                 style="display: flex; flex-direction: column; justify-content: center">
                                 <section>
                                     <label class="">Kwota raty: </label>
                                     <label class="input">
@@ -231,6 +237,19 @@
                                                class="form-control text-center g-brd-gray-light-v7 g-px-5 g-py-8 ml-auto disabled"
                                                readonly="readonly"
                                                type="number">
+                                    </label>
+                                </section>
+
+                                <section>
+                                    <label>Oprocentowanie: </label>
+                                    <label class="input">
+                                        <i class="icon-append">%</i>
+                                        <input id="rental_interest_output"
+                                               class="form-control text-center g-brd-gray-light-v7 g-px-5 g-py-8 ml-auto disabled state-disabled"
+                                               readonly="readonly"
+                                               type="text"
+                                               value="3% + WIBOR 3M"
+                                        >
                                     </label>
                                 </section>
                                 <section>
@@ -243,22 +262,102 @@
                                                type="number">
                                     </label>
                                 </section>
-                                <section>
-                                    <label>Oprocentowanie: </label>
-                                    <label class="input">
-                                        <i class="icon-append">%</i>
-                                        <input id="rental_interest_output"
-                                               class="form-control text-center g-brd-gray-light-v7 g-px-5 g-py-8 ml-auto disabled state-disabled"
-                                               readonly="readonly"
-                                               type="number"
-                                        >
-                                    </label>
-                                </section>
                             </div>
                         </div>
-
                     </fieldset>
+                    <fieldset>
+                        <section class="">
+                            <div class="row justify-content-center g-mb-60">
+                                <div class="col-md-12">
+                                    <!-- Heading -->
+                                    <div class="text-center">
+                                        <h2>Masz pytania?</h2>
+                                        <p class="mb-0">Poniżej znajdziesz osoby odpowiadające za udzielanie pożyczek w firmie. </p>
+                                    </div>
+                                    <!-- End Heading -->
+                                </div>
+                            </div>
 
+                            <!-- Panel Body -->
+                            <div class="card-block g-pa-0">
+                                <!-- User Contacts -->
+                                <div class="row">
+                                    <div class="col-md-6 g-mb-30 g-mb-0--md">
+                                        <!-- Figure -->
+                                        <figure class="g-bg-white g-brd-around g-brd-gray-light-v4 g-brd-darkred--hover g-transition-0_2 text-center">
+                                            <div class="g-py-40 g-px-20">
+                                                <!-- Figure Image -->
+                                                <img class="g-width-200 rounded-circle g-mb-20" src="https://htmlstream.com/preview/unify-v2.6/assets/img-temp/400x550/img1.jpg" alt="Image Description">
+                                                <!-- Figure Image -->
+
+                                                <!-- Figure Info -->
+                                                <h4 class="h5 g-mb-5">Mikela Andrews</h4>
+                                                <!-- End Figure Info -->
+                                            </div>
+
+                                            <hr class="g-brd-gray-light-v4 g-my-0">
+
+                                            <!-- Figure List -->
+                                            <ul class="row who list-inline g-py-20 g-ma-0" style="display: grid">
+                                                <li class="col">
+                                                    <a class="u-icon-v1 u-icon-size--sm  g-bg-transparent " href="mailto:adam.kowalski@benefitsystems.pl?Subject=Wiadomość%20Strefa%20Partnera">
+                                                        <i class="fa fa-envelope"> </i>
+                                                        mikela.andrews@benefitsystems.pl
+                                                    </a>
+                                                </li>
+                                                <li class="col">
+                                                    <a class="u-icon-v1 u-icon-size--sm  g-bg-transparent " href="#!">
+                                                        <i class="fa fa-phone"> </i>
+                                                        525-514-454
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                            <!-- End Figure List -->
+                                        </figure>
+                                        <!-- End Figure -->
+                                    </div>
+
+                                    <div class="col-md-6 g-mb-30 g-mb-0--md">
+                                        <!-- Figure -->
+                                        <figure class="g-bg-white g-brd-around g-brd-gray-light-v4 g-brd-darkred--hover g-transition-0_2 text-center">
+                                            <div class="g-py-40 g-px-20">
+                                                <!-- Figure Image -->
+                                                <img class="g-width-200 rounded-circle g-mb-20" src="https://htmlstream.com/preview/unify-v2.6/assets/img-temp/400x550/img2.jpg" alt="Image Description">
+                                                <!-- Figure Image -->
+
+                                                <!-- Figure Info -->
+                                                <h4 class="h5 g-mb-5">Natasha Kolnikova</h4>
+                                                <!-- End Figure Info -->
+                                            </div>
+
+                                            <hr class="g-brd-gray-light-v4 g-my-0">
+
+                                            <!-- Figure List -->
+                                            <ul class="row who list-inline g-py-20 g-ma-0" style="display: grid">
+                                                <li class="col">
+                                                    <a class="u-icon-v1 u-icon-size--sm  g-bg-transparent " href="mailto:adam.kowalski@benefitsystems.pl?Subject=Wiadomość%20Strefa%20Partnera">
+                                                        <i class="fa fa-envelope"> </i>
+                                                        natasha.kolnikova@benefitsystems.pl
+                                                    </a>
+                                                </li>
+                                                <li class="col">
+                                                    <a class="u-icon-v1 u-icon-size--sm  g-bg-transparent " href="#!">
+                                                        <i class="fa fa-phone"> </i>
+                                                        525-514-454
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                            <!-- End Figure List -->
+                                        </figure>
+                                        <!-- End Figure -->
+                                    </div>
+                                </div>
+                                <!-- End User Contacts -->
+                            </div>
+                            <!-- End Panel Body -->
+
+                        </section>
+                    </fieldset>
                     <footer style="text-align: right;">
 
                         <div class="row">
