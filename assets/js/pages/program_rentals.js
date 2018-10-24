@@ -12,11 +12,12 @@ $(function () {
     var rentalAmountOutput = document.getElementById("rental_amount");
     installmentAmountOutput.innerHTML = slider.value; // Display the default slider value
 
+
+
     var months = 12;
     var rentalAmmount = 1000;
     rentalAmountOutput.value = (Math.round((rentalAmmount * interest)) / 100).toFixed(2);
     installmentAmountOutput.value = (Math.round((rentalAmmount * interest)) /months / 100).toFixed(2);
-    rentalAmountOutput.value
 
     sliderMonths.oninput = function() {
         months = this.value;
