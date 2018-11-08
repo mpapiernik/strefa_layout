@@ -526,6 +526,7 @@ Slider v4
     padding: 10px;
 }
 
+
 .u-slider--v4--grid {
     height: 120px;
 }
@@ -787,4 +788,10 @@ Slider v4
 ------------------------------------*/
 .u-has-error-v3 label.error {
     display: none !important;
+}
+
+
+figure img {
+    width: 78px !important;
+    height: auto !important;
 }
