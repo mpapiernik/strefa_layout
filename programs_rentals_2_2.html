@@ -180,6 +180,131 @@
                                 </div>
                             </div>
                         </div>
+
+                        <div class="row post-blurred">
+                            <p>Kalkulator jest jedynie symulacją pożyczki..</p>
+                            <div class="btn-group text-center">
+                                <button onclick="showCalc()" type="button" class="btn-u btn-brand-outline">OK
+                                </button>
+                            </div>
+                        </div>
+                        <form class="sky-form post-clear">
+                            <fieldset>
+                                <div class="row " style="display: flex">
+                                    <div class="col-md-8">
+                                        <section>
+                                            <label class="">Jaką kwotę chcesz pożyczyć?</label>
+                                            <!-- Regular Slider Option One -->
+                                            <div class="form-group g-mb-20">
+                                                <input id="rent_amount_slider"
+                                                       class="js-range-slider" type="text"
+                                                       data-extra-classes="u-slider--v4 u-slider--v4--grid"
+                                                       data-type="single"
+                                                       data-min="0" data-max="5000" data-from="1000"
+                                                       data-grid="true"
+                                                       data-hide-from-to="false"
+                                                       data-result-min="#rent_amount_input"
+                                                       data-result-max="#rent_amount_input">
+                                            </div>
+                                            <!-- End Regular Slider Option One -->
+                                            <label class="input">
+                                                <i class="icon-append">zł</i>
+                                                <input id="rent_amount_input"
+                                                       class="form-control text-center g-brd-gray-light-v7 g-px-5 g-py-8 ml-auto"
+                                                       type="text">
+                                            </label>
+                                        </section>
+                                        <section>
+                                            <label class="">Jak liczba rat miesięcznych?</label>
+                                            <!-- Regular Slider Option One -->
+                                            <div class="form-group g-mb-20">
+                                                <input id="rent_months_slider"
+                                                       class="js-range-slider" type="number"
+                                                       data-extra-classes="u-slider--v4 u-slider--v4--grid"
+                                                       data-type="single"
+                                                       data-min="1" data-max="60" data-from="12"
+                                                       data-grid="true"
+                                                       data-hide-from-to="false"
+                                                       data-result-min="#rent_months_input"
+                                                       data-result-max="#rent_months_input">
+                                            </div>
+                                            <!-- End Regular Slider Option One -->
+                                            <label class="input">
+                                                <i class="icon-append fa fa-calendar"></i>
+                                                <input id="rent_months_input"
+                                                       class="form-control text-center g-brd-gray-light-v7 g-px-5 g-py-8 ml-auto"
+                                                       type="number"
+                                                >
+                                            </label>
+                                        </section>
+                                    </div>
+                                    <div class="col-md-4"
+                                         style="display: flex; flex-direction: column; justify-content: center">
+                                        <section>
+                                            <label class="">Kwota raty: </label>
+                                            <label class="input">
+                                                <i class="icon-append">zł</i>
+                                                <input id="installment_amount"
+                                                       class="form-control text-center g-brd-gray-light-v7 g-px-5 g-py-8 ml-auto disabled"
+                                                       readonly="readonly"
+                                                       type="number">
+                                            </label>
+                                        </section>
+
+                                        <section>
+                                            <label>Oprocentowanie:<span class="color-red">*</span> </label>
+                                            <label class="input">
+                                                <i class="icon-append">%</i>
+                                                <input id="rental_interest_output"
+                                                       class="form-control text-center g-brd-gray-light-v7 g-px-5 g-py-8 ml-auto disabled state-disabled"
+                                                       readonly="readonly"
+                                                       type="text"
+                                                       value="3% + WIBOR 3M"
+                                                >
+                                            </label>
+                                        </section>
+                                        <section>
+                                            <label>Całkowita kwota do spłaty: </label>
+                                            <label class="input">
+                                                <i class="icon-append">zł</i>
+                                                <input id="rental_amount"
+                                                       class="form-control text-center g-brd-gray-light-v7 g-px-5 g-py-8 ml-auto  disabled"
+                                                       readonly="readonly"
+                                                       type="number">
+                                            </label>
+                                        </section>
+                                        <section>
+                                            <p><span class="color-red">*</span>
+                                                RRSO = 5,11%
+                                            </p>
+                                        </section>
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <fieldset>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <section>
+                                            <label>Treść <span
+                                                    class="color-red">*</span></label>
+                                            <textarea rows="4" name="message"
+                                                      class="form-control">Chciałbym skorzystać z pożyczki...</textarea>
+                                        </section>
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <fieldset>
+                                <section>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <button type="button" class="btn-u pull-right" onclick="">
+                                                Wyślij wniosek
+                                            </button>
+                                        </div>
+                                    </div>
+                                </section>
+                            </fieldset>
+                        </form>
                     </div>
                     <hr>
                     <div class="row blog blog-medium">
@@ -241,144 +366,134 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div class="row post-blurred">
-                    <p>Kalkulator jest jedynie symulacją pożyczki..</p>
-                    <div class="btn-group text-center">
-                        <button onclick="showCalc()" type="button" class="btn-u btn-brand-outline">OK
-                        </button>
-                    </div>
-                </div>
-                <form class="sky-form post-clear">
-                    <fieldset class="tab-v1">
-                        <ul class="nav nav-tabs">
-                            <li class="active"><a href="#KAT1" id="rental_1" data-toggle="tab">Pożyczka na modernizację
-                                obiektu</a></li>
-                            <li><a href="#KAT1" data-toggle="tab">Pożyczka na otwarcie nowego obiektu</a></li>
-                        </ul>
-                        <div class="tab-content">
-                            <div class="tab-pane fade in active" id="KAT1">
-                                <!--Blog Post-->
-                                <fieldset>
-                                    <div class="row " style="display: flex">
-                                        <div class="col-md-8">
-                                            <section>
-                                                <label class="">Jaką kwotę chcesz pożyczyć?</label>
-                                                <!-- Regular Slider Option One -->
-                                                <div class="form-group g-mb-20">
-                                                    <input id="rent_amount_slider"
-                                                           class="js-range-slider" type="text"
-                                                           data-extra-classes="u-slider--v4 u-slider--v4--grid"
-                                                           data-type="single"
-                                                           data-min="0" data-max="5000" data-from="1000"
-                                                           data-grid="true"
-                                                           data-hide-from-to="false"
-                                                           data-result-min="#rent_amount_input"
-                                                           data-result-max="#rent_amount_input">
-                                                </div>
-                                                <!-- End Regular Slider Option One -->
-                                                <label class="input">
-                                                    <i class="icon-append">zł</i>
-                                                    <input id="rent_amount_input"
-                                                           class="form-control text-center g-brd-gray-light-v7 g-px-5 g-py-8 ml-auto"
-                                                           type="text">
-                                                </label>
-                                            </section>
-                                            <section>
-                                                <label class="">Jak liczba rat miesięcznych?</label>
-                                                <!-- Regular Slider Option One -->
-                                                <div class="form-group g-mb-20">
-                                                    <input id="rent_months_slider"
-                                                           class="js-range-slider" type="number"
-                                                           data-extra-classes="u-slider--v4 u-slider--v4--grid"
-                                                           data-type="single"
-                                                           data-min="1" data-max="60" data-from="12"
-                                                           data-grid="true"
-                                                           data-hide-from-to="false"
-                                                           data-result-min="#rent_months_input"
-                                                           data-result-max="#rent_months_input">
-                                                </div>
-                                                <!-- End Regular Slider Option One -->
-                                                <label class="input">
-                                                    <i class="icon-append fa fa-calendar"></i>
-                                                    <input id="rent_months_input"
-                                                           class="form-control text-center g-brd-gray-light-v7 g-px-5 g-py-8 ml-auto"
-                                                           type="number"
-                                                    >
-                                                </label>
-                                            </section>
-                                        </div>
-                                        <div class="col-md-4"
-                                             style="display: flex; flex-direction: column; justify-content: center">
-                                            <section>
-                                                <label class="">Kwota raty: </label>
-                                                <label class="input">
-                                                    <i class="icon-append">zł</i>
-                                                    <input id="installment_amount"
-                                                           class="form-control text-center g-brd-gray-light-v7 g-px-5 g-py-8 ml-auto disabled"
-                                                           readonly="readonly"
-                                                           type="number">
-                                                </label>
-                                            </section>
 
-                                            <section>
-                                                <label>Oprocentowanie:<span class="color-red">*</span> </label>
-                                                <label class="input">
-                                                    <i class="icon-append">%</i>
-                                                    <input id="rental_interest_output"
-                                                           class="form-control text-center g-brd-gray-light-v7 g-px-5 g-py-8 ml-auto disabled state-disabled"
-                                                           readonly="readonly"
-                                                           type="text"
-                                                           value="3% + WIBOR 3M"
-                                                    >
-                                                </label>
-                                            </section>
-                                            <section>
-                                                <label>Całkowita kwota do spłaty: </label>
-                                                <label class="input">
-                                                    <i class="icon-append">zł</i>
-                                                    <input id="rental_amount"
-                                                           class="form-control text-center g-brd-gray-light-v7 g-px-5 g-py-8 ml-auto  disabled"
-                                                           readonly="readonly"
-                                                           type="number">
-                                                </label>
-                                            </section>
-                                            <section>
-                                                <p><span class="color-red">*</span>
-                                                    RRSO = 5,11%
-                                                </p>
-                                            </section>
-                                        </div>
-                                    </div>
-                                </fieldset>
-                                <!--End Blog Post-->
-                            </div>
-                        </div>
-                    </fieldset>
-                    <fieldset>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <section>
-                                    <label>Treść <span
-                                            class="color-red">*</span></label>
-                                    <textarea rows="4" name="message"
-                                              class="form-control">Chciałbym skorzystać z pożyczki...</textarea>
-                                </section>
-                            </div>
-                        </div>
-                    </fieldset>
-                    <fieldset>
-                        <section>
-                            <div class="row">
-                            <div class="col-md-12">
-                                <button type="button" class="btn-u pull-right" onclick="">
-                                    Wyślij wniosek
+                        <div class="row post-blurred">
+                            <p>Kalkulator jest jedynie symulacją pożyczki..</p>
+                            <div class="btn-group text-center">
+                                <button onclick="showCalc()" type="button" class="btn-u btn-brand-outline">OK
                                 </button>
                             </div>
-                            </div>
-                        </section>
-                    </fieldset>
+                        </div>
+                        <form class="sky-form post-clear">
+                            <fieldset>
+                                <div class="row " style="display: flex">
+                                    <div class="col-md-8">
+                                        <section>
+                                            <label class="">Jaką kwotę chcesz pożyczyć?</label>
+                                            <!-- Regular Slider Option One -->
+                                            <div class="form-group g-mb-20">
+                                                <input id="rent_amount_slider"
+                                                       class="js-range-slider" type="text"
+                                                       data-extra-classes="u-slider--v4 u-slider--v4--grid"
+                                                       data-type="single"
+                                                       data-min="0" data-max="5000" data-from="1000"
+                                                       data-grid="true"
+                                                       data-hide-from-to="false"
+                                                       data-result-min="#rent_amount_input"
+                                                       data-result-max="#rent_amount_input">
+                                            </div>
+                                            <!-- End Regular Slider Option One -->
+                                            <label class="input">
+                                                <i class="icon-append">zł</i>
+                                                <input id="rent_amount_input"
+                                                       class="form-control text-center g-brd-gray-light-v7 g-px-5 g-py-8 ml-auto"
+                                                       type="text">
+                                            </label>
+                                        </section>
+                                        <section>
+                                            <label class="">Jak liczba rat miesięcznych?</label>
+                                            <!-- Regular Slider Option One -->
+                                            <div class="form-group g-mb-20">
+                                                <input id="rent_months_slider"
+                                                       class="js-range-slider" type="number"
+                                                       data-extra-classes="u-slider--v4 u-slider--v4--grid"
+                                                       data-type="single"
+                                                       data-min="1" data-max="60" data-from="12"
+                                                       data-grid="true"
+                                                       data-hide-from-to="false"
+                                                       data-result-min="#rent_months_input"
+                                                       data-result-max="#rent_months_input">
+                                            </div>
+                                            <!-- End Regular Slider Option One -->
+                                            <label class="input">
+                                                <i class="icon-append fa fa-calendar"></i>
+                                                <input id="rent_months_input"
+                                                       class="form-control text-center g-brd-gray-light-v7 g-px-5 g-py-8 ml-auto"
+                                                       type="number"
+                                                >
+                                            </label>
+                                        </section>
+                                    </div>
+                                    <div class="col-md-4"
+                                         style="display: flex; flex-direction: column; justify-content: center">
+                                        <section>
+                                            <label class="">Kwota raty: </label>
+                                            <label class="input">
+                                                <i class="icon-append">zł</i>
+                                                <input id="installment_amount"
+                                                       class="form-control text-center g-brd-gray-light-v7 g-px-5 g-py-8 ml-auto disabled"
+                                                       readonly="readonly"
+                                                       type="number">
+                                            </label>
+                                        </section>
+
+                                        <section>
+                                            <label>Oprocentowanie:<span class="color-red">*</span> </label>
+                                            <label class="input">
+                                                <i class="icon-append">%</i>
+                                                <input id="rental_interest_output"
+                                                       class="form-control text-center g-brd-gray-light-v7 g-px-5 g-py-8 ml-auto disabled state-disabled"
+                                                       readonly="readonly"
+                                                       type="text"
+                                                       value="3% + WIBOR 3M"
+                                                >
+                                            </label>
+                                        </section>
+                                        <section>
+                                            <label>Całkowita kwota do spłaty: </label>
+                                            <label class="input">
+                                                <i class="icon-append">zł</i>
+                                                <input id="rental_amount"
+                                                       class="form-control text-center g-brd-gray-light-v7 g-px-5 g-py-8 ml-auto  disabled"
+                                                       readonly="readonly"
+                                                       type="number">
+                                            </label>
+                                        </section>
+                                        <section>
+                                            <p><span class="color-red">*</span>
+                                                RRSO = 5,11%
+                                            </p>
+                                        </section>
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <fieldset>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <section>
+                                            <label>Treść <span
+                                                    class="color-red">*</span></label>
+                                            <textarea rows="4" name="message"
+                                                      class="form-control">Chciałbym skorzystać z pożyczki...</textarea>
+                                        </section>
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <fieldset>
+                                <section>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <button type="button" class="btn-u pull-right" onclick="">
+                                                Wyślij wniosek
+                                            </button>
+                                        </div>
+                                    </div>
+                                </section>
+                            </fieldset>
+                        </form>
+
+                    </div>
+                    <hr>
                     <fieldset>
                         <section class="">
                             <div class="row justify-content-center">
@@ -386,7 +501,8 @@
                                     <!-- Heading -->
                                     <div class="text-center">
                                         <h2>Masz pytania?</h2>
-                                        <p class="mb-0">Poniżej znajdziesz osoby odpowiadające za udzielanie pożyczek w
+                                        <p class="mb-0">Poniżej znajdziesz osoby odpowiadające za udzielanie
+                                            pożyczek w
                                             firmie. </p>
                                     </div>
                                     <!-- End Heading -->
@@ -415,7 +531,8 @@
                                             <hr class="g-brd-gray-light-v4 g-my-0">
 
                                             <!-- Figure List -->
-                                            <ul class="row who list-inline g-py-20 g-ma-0" style="display: grid">
+                                            <ul class="row who list-inline g-py-20 g-ma-0"
+                                                style="display: grid">
                                                 <li class="col">
                                                     <a class="u-icon-v1 u-icon-size--sm  g-bg-transparent "
                                                        href="mailto:adam.kowalski@benefitsystems.pl?Subject=Wiadomość%20Strefa%20Partnera">
@@ -424,7 +541,8 @@
                                                     </a>
                                                 </li>
                                                 <li class="col">
-                                                    <a class="u-icon-v1 u-icon-size--sm  g-bg-transparent " href="#!">
+                                                    <a class="u-icon-v1 u-icon-size--sm  g-bg-transparent "
+                                                       href="#!">
                                                         <i class="fa fa-phone"> </i>
                                                         525-514-454
                                                     </a>
@@ -453,7 +571,8 @@
                                             <hr class="g-brd-gray-light-v4 g-my-0">
 
                                             <!-- Figure List -->
-                                            <ul class="row who list-inline g-py-20 g-ma-0" style="display: grid">
+                                            <ul class="row who list-inline g-py-20 g-ma-0"
+                                                style="display: grid">
                                                 <li class="col">
                                                     <a class="u-icon-v1 u-icon-size--sm  g-bg-transparent "
                                                        href="mailto:adam.kowalski@benefitsystems.pl?Subject=Wiadomość%20Strefa%20Partnera">
@@ -462,7 +581,8 @@
                                                     </a>
                                                 </li>
                                                 <li class="col">
-                                                    <a class="u-icon-v1 u-icon-size--sm  g-bg-transparent " href="#!">
+                                                    <a class="u-icon-v1 u-icon-size--sm  g-bg-transparent "
+                                                       href="#!">
                                                         <i class="fa fa-phone"> </i>
                                                         525-514-454
                                                     </a>
@@ -482,9 +602,12 @@
                                     <!-- Heading -->
                                     <div class="text-center">
                                         <p class="mb-0">Przedstawiona informacja nie stanowi oferty w rozumieniu
-                                            przepisów Kodeksu Cywilnego, a decyzja o udzieleniu pożyczki zależy od oceny
-                                            ryzyka pożyczkowego. Benefit Systems zastrzega sobie prawo uzyskania od
-                                            Partnera ubiegającego się o udzielenie pożyczki dodatkowych dokumentów i
+                                            przepisów Kodeksu Cywilnego, a decyzja o udzieleniu pożyczki zależy
+                                            od oceny
+                                            ryzyka pożyczkowego. Benefit Systems zastrzega sobie prawo uzyskania
+                                            od
+                                            Partnera ubiegającego się o udzielenie pożyczki dodatkowych
+                                            dokumentów i
                                             informacji niezbędnych do dokonania oceny ryzyka pożyczkowego</p>
                                     </div>
                                     <!-- End Heading -->
@@ -493,7 +616,7 @@
 
                         </section>
                     </fieldset>
-                </form>
+                </div>
             </div>
             <!-- End Left Sidebar -->
 
