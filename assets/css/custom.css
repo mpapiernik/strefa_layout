@@ -791,7 +791,35 @@ Slider v4
 }
 
 
-figure img {
+.card-block figure img {
     width: 78px !important;
     height: auto !important;
+}
+
+.our-clients img
+{
+    width: 260px;
+}
+
+.our-clients li {
+    width: 260px;
+}
+
+#effect-2 figure .img-hover {
+    background-color: #eee;
+    line-height: 4.5em;
+}
+
+#effect-2 figure h4 {
+    color: black;
+    padding-top: 5% !important;
+}
+
+#effect-2 figure .img-hover  p {
+    height: 120px;
+    line-height: 1.6em;
+}
+
+#effect-2 figure button {
+    font: 400 13.3333px Arial;
 }
