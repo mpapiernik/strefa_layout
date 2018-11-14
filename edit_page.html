@@ -78,6 +78,9 @@
     <link href="assets/css/plugins/cropbox/jquery.cropbox.css" rel="stylesheet">
 
 
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/css/bootstrap-select.min.css" />
+
+
 </head>
 
 <body>
@@ -232,16 +235,16 @@
                     <fieldset>
                         <section>
                             <label class="label">Kategoria</label>
-                            <label class="select">
-                                <select name="category">
+                            <div class="input-group" style="width:100%">
+                                <select  id="" class="selectpicker input-block-level" multiple data-live-search="true" title='Wybierz...' data-selected-text-format="count>5" data-width="100%">
                                     <option value="0">Brak</option>
                                     <option value="1">Sala Fitness</option>
                                     <option value="2">Siłownia</option>
                                     <option value="3">Sprzet Cardio</option>
                                     <option value="4">Suplemnety i Odżywki</option>
                                 </select>
-                                <i></i>
-                            </label>
+                                </select>
+                            </div>
                         </section>
                     </fieldset>
                     <fieldset>
@@ -452,14 +455,12 @@
                                 Format: PDF
                                 <br>
                                 Maksymalny rozmiar: 20MB
-                                <p>Wybierz pliki i przypisz do dostawców</p>
                             </div>
                             <table role="presentation" id="offers_presentation" class="table table-striped">
                                 <thead>
                                     <tr role="row">
-                                        <th class="sorting_disabled t-align-l col-5" rowspan="1" colspan="1">Nazwa pliku</th>
-                                        <th class="sorting_disabled col-md-4" rowspan="1" colspan="1">Dostawca</th>
-                                        <th class="sorting_disabled col-3" rowspan="1" colspan="1">
+                                        <th class="sorting_disabled t-align-l col-6" rowspan="1" colspan="1">Nazwa pliku</th>
+                                        <th class="sorting_disabled col-2" rowspan="1" colspan="1">
                                             Akcja
                                         </th>
                                     </tr>
@@ -470,19 +471,7 @@
                                             <p class="name">Test (1).pdf</p>
                                             <strong class="error text-danger"></strong>
                                         </td>
-                                        <td>
-                                            <label class="select">
-                                                <select name="category">
-                                                    <option value="0">Brak</option>
-                                                    <option value="1" selected>Technology Gym</option>
-                                                    <option value="2">Biomotion</option>
-                                                    <option value="3">CrossFit</option>
-                                                    <option value="4">Precor</option>
-                                                    <option value="5">Matrix</option>
-                                                </select>
-                                                <i></i>
-                                            </label>
-                                        </td>
+
                                         <td>
                                             <button type="button" class="btn btn-u">
                                                 <i class="fa fa-download"></i>
@@ -497,20 +486,6 @@
                                         <td>
                                             <p class="name">Oferta-Technology Gym-1.pdf</p>
                                             <strong class="error text-danger"></strong>
-                                        </td>
-                                        <td>
-                                            <label class="select">
-                                                <select name="category">
-                                                    <option value="0">Brak</option>
-                                                    <option value="1" selected>Technology Gym</option>
-                                                    <option value="2">Biomotion</option>
-                                                    <option value="3">CrossFit</option>
-                                                    <option value="4">Precor</option>
-                                                    <option value="5">Matrix</option>
-                                                </select>
-                                                <i></i>
-                                            </label>
-
                                         </td>
                                         <td>
                                             <button type="button" class="btn btn-u">
@@ -613,6 +588,8 @@
 <script type="text/javascript"
         src="//cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.6/jquery.mousewheel.js"></script>
 <script type="text/javascript" src="assets/js/plugins/cropbox/jquery.cropbox.js"></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/js/bootstrap-select.min.js"></script>
 
 <script type="text/javascript">
     jQuery(document).ready(function () {
