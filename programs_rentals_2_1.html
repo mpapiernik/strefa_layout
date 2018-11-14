@@ -189,98 +189,102 @@
                                     </div>
                                 </div>
 
+                                <div class="row " style="display: flex">
+                                    <div class="col-md-8">
+                                        <section>
+                                            <label class="">Jaką kwotę chcesz pożyczyć?</label>
+                                            <!-- Regular Slider Option One -->
+                                            <div class="form-group g-mb-20">
+                                                <input id="rent_amount_slider"
+                                                       class="js-range-slider" type="text"
+                                                       data-extra-classes="u-slider--v4 u-slider--v4--grid"
+                                                       data-type="single"
+                                                       data-min="0" data-max="5000" data-from="1000"
+                                                       data-grid="true"
+                                                       data-hide-from-to="false"
+                                                       data-result-min="#rent_amount_input"
+                                                       data-result-max="#rent_amount_input">
+                                            </div>
+                                            <!-- End Regular Slider Option One -->
+                                            <label class="input">
+                                                <i class="icon-append">zł</i>
+                                                <input id="rent_amount_input"
+                                                       class="form-control text-center g-brd-gray-light-v7 g-px-5 g-py-8 ml-auto"
+                                                       type="text">
+                                            </label>
+                                        </section>
+                                        <section>
+                                            <label class="">Jak liczba rat miesięcznych?</label>
+                                            <!-- Regular Slider Option One -->
+                                            <div class="form-group g-mb-20">
+                                                <input id="rent_months_slider"
+                                                       class="js-range-slider" type="text"
+                                                       data-extra-classes="u-slider--v4 u-slider--v4--grid"
+                                                       data-type="single"
+                                                       data-min="1" data-max="60" data-from="12"
+                                                       data-grid="true"
+                                                       data-hide-from-to="false"
+                                                       data-result-min="#rent_months_input"
+                                                       data-result-max="#rent_months_input">
+                                            </div>
+                                            <!-- End Regular Slider Option One -->
+                                            <label class="input">
+                                                <i class="icon-append fa fa-calendar"></i>
+                                                <input id="rent_months_input"
+                                                       class="form-control text-center g-brd-gray-light-v7 g-px-5 g-py-8 ml-auto"
+                                                       type="text"
+                                                >
+                                            </label>
+                                        </section>
+                                    </div>
+                                    <div class="col-md-4"
+                                         style="display: flex; flex-direction: column; justify-content: center">
+                                        <section>
+                                            <label class="">Kwota raty: </label>
+                                            <label class="input">
+                                                <i class="icon-append">zł</i>
+                                                <input id="installment_amount"
+                                                       class="form-control text-center g-brd-gray-light-v7 g-px-5 g-py-8 ml-auto disabled"
+                                                       readonly="readonly"
+                                                       type="text">
+                                            </label>
+                                        </section>
+
+                                        <section>
+                                            <label>Oprocentowanie:<span class="color-red">*</span> </label>
+                                            <label class="input">
+                                                <i class="icon-append">%</i>
+                                                <input id="rental_interest_output"
+                                                       class="form-control text-center g-brd-gray-light-v7 g-px-5 g-py-8 ml-auto disabled state-disabled"
+                                                       readonly="readonly"
+                                                       type="text"
+                                                       value="3% + WIBOR 3M"
+                                                >
+                                            </label>
+                                        </section>
+                                        <section>
+                                            <label>Całkowita kwota do spłaty: </label>
+                                            <label class="input">
+                                                <i class="icon-append">zł</i>
+                                                <input id="rental_amount"
+                                                       class="form-control text-center g-brd-gray-light-v7 g-px-5 g-py-8 ml-auto  disabled"
+                                                       readonly="readonly"
+                                                       type="text">
+                                            </label>
+                                        </section>
+                                        <section>
+                                            <p><span class="color-red">*</span>
+                                                RRSO = 5,11%
+                                            </p>
+                                        </section>
+                                    </div>
+                                </div>
+
+
                                 <!--Blog Post-->
                                 <fieldset>
-                                    <div class="row " style="display: flex">
-                                        <div class="col-md-8">
-                                            <section>
-                                                <label class="">Jaką kwotę chcesz pożyczyć?</label>
-                                                <!-- Regular Slider Option One -->
-                                                <div class="form-group g-mb-20">
-                                                    <input id="rent_amount_slider"
-                                                           class="js-range-slider" type="text"
-                                                           data-extra-classes="u-slider--v4 u-slider--v4--grid"
-                                                           data-type="single"
-                                                           data-min="0" data-max="5000" data-from="1000"
-                                                           data-grid="true"
-                                                           data-hide-from-to="false"
-                                                           data-result-min="#rent_amount_input"
-                                                           data-result-max="#rent_amount_input">
-                                                </div>
-                                                <!-- End Regular Slider Option One -->
-                                                <label class="input">
-                                                    <i class="icon-append">zł</i>
-                                                    <input id="rent_amount_input"
-                                                           class="form-control text-center g-brd-gray-light-v7 g-px-5 g-py-8 ml-auto"
-                                                           type="text">
-                                                </label>
-                                            </section>
-                                            <section>
-                                                <label class="">Jak liczba rat miesięcznych?</label>
-                                                <!-- Regular Slider Option One -->
-                                                <div class="form-group g-mb-20">
-                                                    <input id="rent_months_slider"
-                                                           class="js-range-slider" type="number"
-                                                           data-extra-classes="u-slider--v4 u-slider--v4--grid"
-                                                           data-type="single"
-                                                           data-min="1" data-max="60" data-from="12"
-                                                           data-grid="true"
-                                                           data-hide-from-to="false"
-                                                           data-result-min="#rent_months_input"
-                                                           data-result-max="#rent_months_input">
-                                                </div>
-                                                <!-- End Regular Slider Option One -->
-                                                <label class="input">
-                                                    <i class="icon-append fa fa-calendar"></i>
-                                                    <input id="rent_months_input"
-                                                           class="form-control text-center g-brd-gray-light-v7 g-px-5 g-py-8 ml-auto"
-                                                           type="number"
-                                                    >
-                                                </label>
-                                            </section>
-                                        </div>
-                                        <div class="col-md-4"
-                                             style="display: flex; flex-direction: column; justify-content: center">
-                                            <section>
-                                                <label class="">Kwota raty: </label>
-                                                <label class="input">
-                                                    <i class="icon-append">zł</i>
-                                                    <input id="installment_amount"
-                                                           class="form-control text-center g-brd-gray-light-v7 g-px-5 g-py-8 ml-auto disabled"
-                                                           readonly="readonly"
-                                                           type="number">
-                                                </label>
-                                            </section>
 
-                                            <section>
-                                                <label>Oprocentowanie:<span class="color-red">*</span> </label>
-                                                <label class="input">
-                                                    <i class="icon-append">%</i>
-                                                    <input id="rental_interest_output"
-                                                           class="form-control text-center g-brd-gray-light-v7 g-px-5 g-py-8 ml-auto disabled state-disabled"
-                                                           readonly="readonly"
-                                                           type="text"
-                                                           value="3% + WIBOR 3M"
-                                                    >
-                                                </label>
-                                            </section>
-                                            <section>
-                                                <label>Całkowita kwota do spłaty: </label>
-                                                <label class="input">
-                                                    <i class="icon-append">zł</i>
-                                                    <input id="rental_amount"
-                                                           class="form-control text-center g-brd-gray-light-v7 g-px-5 g-py-8 ml-auto  disabled"
-                                                           readonly="readonly"
-                                                           type="number">
-                                                </label>
-                                            </section>
-                                            <section>
-                                                <p><span class="color-red">*</span>
-                                                    RRSO = 5,11%
-                                                </p>
-                                            </section>
-                                        </div>
-                                    </div>
+
                                 </fieldset>
                                 <!--End Blog Post-->
                             </div>
@@ -511,37 +515,6 @@
         $("#confirmModal").load("program_modal.html", function () {
             $('#confirmModal').modal('show');
 
-        });
-
-        $('#modernization_presentation').slideToggle('fast', function () {
-        });
-        $('#new_object_presentation').slideToggle('fast', function () {
-        });
-
-        $('#appendModernizationsDetails').click(function () {
-            $('#modernization_presentation').slideToggle('fast', function () {
-
-                if ($('.offerArrow').hasClass('fa-chevron-down')) {
-                    $('.offerArrow').removeClass('fa-chevron-down');
-                    $('.offerArrow').addClass('fa-chevron-up');
-                } else {
-                    $('.offerArrow').removeClass('fa-chevron-up');
-                    $('.offerArrow').addClass('fa-chevron-down');
-                }
-            });
-        });
-
-        $('#appendNewObjectDetails').click(function () {
-            $('#new_object_presentation').slideToggle('fast', function () {
-
-                if ($('.appendNewObjectArrow').hasClass('fa-chevron-down')) {
-                    $('.appendNewObjectArrow').removeClass('fa-chevron-down');
-                    $('.appendNewObjectArrow').addClass('fa-chevron-up');
-                } else {
-                    $('.appendNewObjectArrow').removeClass('fa-chevron-up');
-                    $('.appendNewObjectArrow').addClass('fa-chevron-down');
-                }
-            });
         });
 
         var interest = 0.05;
