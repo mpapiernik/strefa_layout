@@ -282,24 +282,11 @@
                                 </div>
                             </fieldset>
                             <fieldset>
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <section>
-                                            <label>Treść <span
-                                                    class="color-red">*</span></label>
-                                            <textarea rows="4" name="message"
-                                                      class="form-control">Chciałbym skorzystać z pożyczki...</textarea>
-                                        </section>
-                                    </div>
-                                </div>
-                            </fieldset>
-                            <fieldset>
                                 <section>
                                     <div class="row">
                                         <div class="col-md-12">
-                                            <button type="button" class="btn-u pull-right" onclick="">
-                                                Wyślij wniosek
-                                            </button>
+                                            <a href="" class="btn-u pull-right" data-toggle="modal" data-target="#modalCTA">
+                                                Złoż wniosek</a>
                                         </div>
                                     </div>
                                 </section>
@@ -468,24 +455,11 @@
                                 </div>
                             </fieldset>
                             <fieldset>
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <section>
-                                            <label>Treść <span
-                                                    class="color-red">*</span></label>
-                                            <textarea rows="4" name="message"
-                                                      class="form-control">Chciałbym skorzystać z pożyczki...</textarea>
-                                        </section>
-                                    </div>
-                                </div>
-                            </fieldset>
-                            <fieldset>
                                 <section>
                                     <div class="row">
                                         <div class="col-md-12">
-                                            <button type="button" class="btn-u pull-right" onclick="">
-                                                Wyślij wniosek
-                                            </button>
+                                            <a href="" class="btn-u pull-right" data-toggle="modal" data-target="#modalCTA">
+                                                Złoż wniosek</a>
                                         </div>
                                     </div>
                                 </section>
@@ -627,7 +601,114 @@
     </div><!--/container-->
     <!--=== End Content Part ===-->
 
-</div><!--/End Wrapepr-->
+
+    <!-- Modal -->
+    <div class="modal fade" id="modalCTA" tabindex="-1" role="dialog"
+         aria-labelledby="modalNumberLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button aria-hidden="true" data-dismiss="modal" class="close"
+                            type="button">×
+                    </button>
+                    <h4 class="modal-title">Złóż wniosek o pożyczkę</h4>
+                </div>
+                <div id="sky-form-number" class="sky-form">
+                    <fieldset>
+                        <div class="row">
+                            <section class="col col-6">
+                                <label class="">Imię i nazwisko</label>
+                                <label class="input state-disabled">
+                                    <input type="text" name="first-name"
+                                           ng-model="first-name"
+                                           value="Karolina Sobieraj">
+                                </label>
+                            </section>
+                            <section class="col col-6">
+                                <label class="">E-mail</label>
+                                <label class="input state-disabled">
+                                    <input type="text" name="last-name" readonly
+                                           disabled
+                                           ng-model="last-name"
+                                           value="k.sobieraj@calypso.com">
+                                </label>
+                            </section>
+                        </div>
+                        <div class="row">
+                            <section class="col col-6">
+                                <label class="">Nazwa Partnera</label>
+                                <label class="input state-disabled">
+                                    <input type="text" name="club-name" readonly
+                                           disabled
+                                           value="Calypso spółka akcyjna">
+                                </label>
+                            </section>
+                            <section class="col col-6">
+                                <label class="">Telefon</label>
+                                <label class="input state-disabled">
+                                    <input type="text" name="phone" readonly
+                                           disabled value="540-535-532">
+                                </label>
+                            </section>
+                        </div>
+                        <div class="row">
+                            <section class="col col-6">
+                                <label class="">Kwota raty <span
+                                        class="color-red">*</span></label>
+                                <label class="input">
+                                    <i class="icon-append">zł</i>
+                                    <input id="rent_amount_input_modal"
+                                           class="form-control text-center g-brd-gray-light-v7 g-px-5 g-py-8 ml-auto"
+                                           type="text">
+                                </label>
+                            </section>
+                            <section class="col col-md-6">
+                                <label class="">Ilość rat <span
+                                        class="color-red">*</span></label>
+                                <label class="input">
+                                    <i class="icon-append fa fa-calendar"></i>
+                                    <input id="rent_months_input_modal"
+                                           class="form-control text-center g-brd-gray-light-v7 g-px-5 g-py-8 ml-auto"
+                                           type="text"
+                                    >
+                                </label>
+                            </section>
+                        </div>
+                        <div class="row">
+                            <section class="col-md-12">
+                                <label>Treść <span
+                                        class="color-red">*</span></label>
+                                <textarea rows="4" name="message"
+                                          class="form-control">Chciałbym skorzystać z pożyczki...</textarea>
+                            </section>
+
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <div class="row">
+                            <section class="col-md-12">
+                                <label><b>Kalkulator jest tylko symulacją...  (Tekst do ustalenia)</b>
+                                    </br>
+                                    Przedstawiona informacja nie stanowi oferty w rozumieniu przepisów Kodeksu Cywilnego, a decyzja o udzieleniu pożyczki zależy od oceny ryzyka pożyczkowego. Benefit Systems zastrzega sobie prawo uzyskania od Partnera ubiegającego się o udzielenie pożyczki dodatkowych dokumentów i informacji niezbędnych do dokonania oceny ryzyka pożyczkowego
+                                </label>
+                            </section>
+                        </div>
+                    </fieldset>
+                </div>
+                <div class="modal-footer">
+                    <button data-dismiss="modal" class="btn-u btn-u-default"
+                            type="button">Anuluj
+                    </button>
+                    <button data-dismiss="modal" type="button"
+                            class="btn-u add_correct_possition">Wyślij
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Modal -->
+
+</div><!--/End Wrapper-->
 <!--=== Footer Version 1 ===-->
 <div class="footer-v1" id="includedContentFooter">
 </div>
@@ -751,7 +832,6 @@
         }
 
         $(".post-clear").hide();
-
 
     });
 
