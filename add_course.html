@@ -408,8 +408,8 @@
                                 </fieldset>
                             <footer style="text-align: right;">
                                 <button type="button" class="btn-u btn-u-default" onclick="window.history.back();">Wróć</button>
-                                <a href="wall_post_preview.html" target="_blank" class="btn-u btn-u-dark">Podgląd</a>
-                                <a href="index_backend.html" class="btn-u">Zapisz</a>
+                                <a href="" target="_blank" class="btn-u btn-u-dark">Podgląd</a>
+                                <a href="list_courses.html" class="btn-u">Zapisz</a>
                             </footer>
                         </form>         
                         <!-- Post -->
@@ -429,61 +429,69 @@
         </div>     
         <!--=== End Footer Version 1 ===-->
 
-        <!-- JS Global Compulsory -->           
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
-        <script type="text/javascript" src="assets/plugins/jquery/jquery-migrate.min.js"></script>
-        <script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+        <!-- JS Global Compulsory -->
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+<script type="text/javascript" src="assets/plugins/jquery/jquery-migrate.min.js"></script>
+<script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
 
 
-        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-        <script src="//cdnjs.cloudflare.com/ajax/libs/prettify/r298/run_prettify.min.js"></script>
-        <script src="assets/js/jquery.bootstrap-duallistbox.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/prettify/r298/run_prettify.min.js"></script>
+<script src="assets/js/jquery.bootstrap-duallistbox.js"></script>
 
-        <!-- JS Implementing Plugins -->
-        <script type="text/javascript" src="assets/plugins/back-to-top.js"></script>
-        <script type="text/javascript" src="assets/plugins/smoothScroll.js"></script>
-        <script src="assets/plugins/sky-forms-pro/skyforms/js/jquery.validate.min.js"></script>
-        <script src="assets/plugins/sky-forms-pro/skyforms/js/jquery.maskedinput.min.js"></script>
+<!-- JS Implementing Plugins -->
+<script type="text/javascript" src="assets/plugins/back-to-top.js"></script>
+<script type="text/javascript" src="assets/plugins/smoothScroll.js"></script>
+<script src="assets/plugins/sky-forms-pro/skyforms/js/jquery.validate.min.js"></script>
+<script src="assets/plugins/sky-forms-pro/skyforms/js/jquery.maskedinput.min.js"></script>
 
 
-        <script
-  src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
-  integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
-  crossorigin="anonymous"></script>
-        <script src="assets/plugins/sky-forms-pro/skyforms/js/jquery.form.min.js"></script>
-        
-        <!-- JS Page Level -->
-        <script type="text/javascript" src="assets/js/app.js"></script>
-        <script type="text/javascript" src="assets/js/plugins/datepicker.js"></script>
-        <script type="text/javascript" src="assets/js/jquery.timepicker.js"></script>
-        
+<script src="assets/js/plugins/jquery-ui/jquery-ui.min.js"/>
+<script src="assets/plugins/sky-forms-pro/skyforms/js/jquery.form.min.js"></script>
+<!-- JS Customization -->
+<script type="text/javascript" src="assets/js/custom.js"></script>
+<!-- JS Page Level -->
+<script type="text/javascript" src="assets/js/app.js"></script>
+<script type="text/javascript" src="assets/js/forms/contact.js"></script>
+<script type="text/javascript" src="assets/js/plugins/masking.js"></script>
+<script type="text/javascript" src="assets/js/plugins/datepicker.js"></script>
+<script type="text/javascript" src="assets/js/plugins/validation.js"></script>
+<script type="text/javascript" src="assets/js/jquery.timepicker.js"></script>
 <script type="text/javascript" src="assets/plugins/fancybox/source/jquery.fancybox.pack.js"></script>
 <!-- JS Customization -->
 <script type="text/javascript" src="assets/js/custom.js"></script>
+<!-- JS Page Level -->
+<script type="text/javascript" src="assets/js/app.js"></script>
 <script type="text/javascript" src="assets/js/plugins/fancy-box.js"></script>
 <script type="text/javascript" src="assets/js/site.js"></script>
 
-        <!-- DROPZONE -->
-        <script src="assets/js/plugins/dropzone/dropzone.js"></script>
+<!-- DROPZONE -->
+<script src="assets/js/plugins/dropzone/dropzone.js"></script>
 
-        <!-- CROPBOX -->
-        <script type="text/javascript"
-                src="//cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.6/jquery.mousewheel.js"></script>
-        <script type="text/javascript" src="assets/js/plugins/cropbox/jquery.cropbox.js"></script>
+<!-- CROPBOX -->
+<script type="text/javascript"
+        src="//cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.6/jquery.mousewheel.js"></script>
+<script type="text/javascript" src="assets/js/plugins/cropbox/jquery.cropbox.js"></script>
 
-        <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/js/bootstrap-select.min.js"></script>
-        <script type="text/javascript">
-        jQuery(document).ready(function () {
-                    App.init();
-                    Datepicker.initDatepicker();
-        });
-    </script>
-    <script>
-        $(function () {
-            $("#includedContentHeader").load("header_backend.html");
-            $("#includedContentFooter").load("footer.html");
-        });
-    </script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/js/bootstrap-select.min.js"></script>
+
+<script type="text/javascript">
+    jQuery(document).ready(function () {
+        App.init();
+        ContactForm.initContactForm();
+        Masking.initMasking();
+        Datepicker.initDatepicker();
+        Validation.initValidation();
+        FancyBox.initFancybox();
+    });
+</script>
+<script>
+    $(function () {
+        $("#includedContentHeader").load("header_backend.html");
+        $("#includedContentFooter").load("footer.html");
+    });
+</script>
 
 
         <script type="text/javascript" defer>
@@ -567,7 +575,6 @@
                 $('#courseProject').change(function () {
                     refreshLimits(this.value);
                 });
-                  
             });
         </script>
 
