@@ -1,4 +1,11 @@
+
+
 /* Add here all your css styles (customizations) */
+
+
+a {
+    color: #a10f2b;
+}
 
 td a.btn-u {
     color: #555 !important;
@@ -134,7 +141,7 @@ td a.btn-u {
 
 }
 
-.reg-block a{
+.reg-block a .reg-block-col-2 a{
     text-decoration: underline;
 }
 
@@ -145,6 +152,26 @@ td a.btn-u {
     color: #fff;
     padding: 0px 30px 20px 30px;
 }
+
+.reg-block-col-2 {
+    width: 860px;
+    padding: 20px;
+    margin: 40px auto 10px auto !important;
+    background: #fff;
+    border-top: solid 2px #a10f2b;
+}
+
+.reg-block-col-2 > .row > .col-md-6:first-child { 
+    padding-right: 5px;
+    border-right: solid 1px #eee;
+}
+
+.reg-block-header {
+    padding-bottom: 5px;
+    margin-bottom: 30px;
+    border-bottom: solid 1px #eee;
+}
+
 
 @media (max-width: 480px) {
 
