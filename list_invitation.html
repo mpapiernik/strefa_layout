@@ -1,0 +1,500 @@
+<!DOCTYPE html> 
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->  
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->  
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->  
+    <head>
+        <title>Panel Benefit Systems</title>
+
+        <!-- Meta -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <!-- Favicon -->
+        <link rel="shortcut icon" href="favicon.ico">
+
+        <!-- Web Fonts -->
+        <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:400,300,600&amp;subset=cyrillic,latin">
+
+        <!-- CSS Global Compulsory -->
+        <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+
+        <!-- CSS Header and Footer -->
+        <link rel="stylesheet" href="assets/css/headers/header-default.css">
+        <link rel="stylesheet" href="assets/css/footers/footer-v1.css">
+
+        <!-- CSS Implementing Plugins -->
+        <link rel="stylesheet" href="assets/plugins/animate.css">
+        <link rel="stylesheet" href="assets/plugins/line-icons/line-icons.css">
+        <link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.min.css">
+
+        <!-- CSS Page Style -->    
+        <link rel="stylesheet" href="assets/css/pages/shortcode_timeline2.css">
+
+        <!-- CSS Customization -->
+        <link rel="stylesheet" href="assets/css/theme-colors/dark-red.css">
+
+        <!-- DataTables -->
+        <link rel="stylesheet" type="text/css" href="assets/plugins/datatable/css/jquery.dataTables.css">
+
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/css/bootstrap-select.min.css" />
+
+
+        <link rel="stylesheet" href="assets/plugins/sky-forms-pro/skyforms/css/sky-forms.css">
+        <link rel="stylesheet" href="assets/plugins/sky-forms-pro/skyforms/custom/custom-sky-forms.css">
+
+        <link rel="stylesheet" type="text/css"  href="assets/plugins/bootstrap-datepicker-1.6.1-dist/css/bootstrap-datepicker.css"/>
+
+        <!-- CSS Customization -->
+        <link rel="stylesheet" href="assets/css/custom.css">
+    </head>
+
+    <body>    
+        <div class="wrapper">
+            <!--=== Header ===-->    
+            <div class="header" id="includedContentHeader">
+            </div>
+            <!--=== End Header ===--> 
+            <!--=== Breadcrumbs ===-->
+            <div class="breadcrumbs">
+                <div class="container">
+                    <h1 class="pull-left">Lista zaproszeń/zgłoszeń {:tytuł szkolenia lub lista globalna}</h1>
+                    <ul class="pull-right breadcrumb">
+                        <li><a href="wall.html">Home</a></li>
+                        <li><a href="list_invitation.html">Lista szkoleń</a></li>
+                    </ul>
+                </div>
+            </div><!--/breadcrumbs-->
+            <!--=== End Breadcrumbs ===-->
+
+            <!--=== Content Part ===-->
+            <div class="container content">     
+                <div class="row">
+                    <!-- Begin Content -->
+                    
+                    <div class="col-md-12 margin-bottom-50">
+                        <div class="margin-bottom-20">
+                            <div class="btn-group">
+                                <a href="send_invitation.html" class="button btn-u pull-right"><i class="fa fa-send fa-fw"></i>Wyślij zaproszenie</a>         
+                            </div>
+                            <!-- End Single button -->                    
+                        </div>
+                        <hr>
+
+                        <!-- Tab v1 -->                
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <label>Wybierz Partnera</label>
+                                        <small>(wpisz NIP lub nazwę)</small>
+                                        <div class="input-group" style="width:100%">
+                                            <select class="selectpicker input-block-level" data-live-search="true" multiple=""   data-selected-text-format="count>1" title='Wybierz...' data-width="100%">
+                                                <option  data-hidden="true"></option>	
+                                                <option value="1">19292929210 - Tyger Gym</option>	
+                                                <option value="2">12345678910 - Calypso</option>	
+                                                <option value="3">19292929215 - FitProfit</option>	
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2">
+                                            <label>Adres e-mail uczestnika</label>
+                                            <input type="text" class="form-control" placeholder="Wpisz... ">
+                                        </div>
+                                    <div class="col-md-2">
+                                        <label>Typ projektu</label>
+                                        <div class="input-group" style="width:100%">
+                                            <select class="selectpicker input-block-level" multiple="" data-selected-text-format="count>1" title='Wybierz...' data-width="100%">
+                                                <option  data-hidden="true"></option>	
+                                                <option value="1">PP</option>	
+                                                <option value="2">AMT</option>	
+                                                <option value="3">BMEP</option>	
+                                                <option value="4">BMEPE</option>	
+                                                <option value="5">RODO</option>
+                                            </select>
+                                    </div>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <label>Data wysłania</label>
+                                        <div class="input-group inline-group input-daterange input-group">
+                                            <input type="text" class="form-control" name="start" placeholder="od"/>
+                                            <span class="input-group-addon">-</span>
+                                            <input type="text" class="form-control" name="end" placeholder="do"/>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="col-md-1">
+                                            <label>Wypełnione</label>
+                                            <div class="input-group" style="width:100%">
+                                                    <select class="selectpicker input-block-level" title='Wybierz...' data-width="100%">
+                                                        <option  data-hidden="true"></option>	
+                                                        <option value="1" selected>Tak</option>	
+                                                        <option value="2">Nie</option>	
+                                                    </select>
+                                            </div>
+                                        </div>
+                                    <div class="col-md-2">
+                                        <label>Data wypełnienienia</label>
+                                        <div class="input-group inline-group input-daterange input-group">
+                                            <input type="text" class="form-control" name="start" placeholder="od"/>
+                                            <span class="input-group-addon">-</span>
+                                            <input type="text" class="form-control" name="end" placeholder="do"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row margin-bottom-20">
+                                        
+                                    <div class="btn-group col-sm-1">
+                                        <div class="input-group spinner">
+                                            <input type="text" class="form-control" value="10">
+                                            <div class="input-group-btn-vertical text-center">
+                                                <button class="btn" type="button"><i class="fa fa-angle-up"></i></button>
+                                                <button class="btn" type="button"><i class="fa fa-angle-down"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-2">
+                                            <a href="#" class="button btn-u"><i class="fa fa-download fa-fw"></i>Pobierz CSV</a>         
+                                        </div>
+                                    <div class="search-open pull-right col-sm-3">
+                                        <div class="input-group inline-group">
+                                            <input type="text" class="form-control" placeholder="Wyszukaj tytułu, Partnera ... ">
+                                            <span class="input-group-btn">
+                                                <a href="" class="button btn-u"><i class="fa fa-search"></i></a>
+                                            </span>
+                                        </div>
+                                    </div>
+                                   
+                                   
+                                </div>
+                                <table id="spList" class="display" cellspacing="0" width="100%" style="text-align: left">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>Adres e-mail</th>
+                                            <th>Partner</th>
+                                            <th>Tytuł szkolenia</th>
+                                            <th>Typ projektu</th>
+                                            <th class="hidden-sm hidden-xs">Data wysłania</th>
+                                            <th class="hidden-sm hidden-xs">Wypełnione</th>
+                                            <th class="hidden-sm hidden-xs">Data wypełnienia</th>
+                                            <th>Więcej</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>test@test.com</td>
+                                            <td>19292929210 - Tyger Gym S. z o.o.</td>
+                                            <td>Szkolenie otwarte z pierwszej pomocy 2019</td>
+                                            <td>PP</td>
+                                            <td class="hidden-sm hidden-xs">2019-05-08</td>
+                                            <td>Nie</td>
+                                            <td class="hidden-sm hidden-xs">2019-05-09</td>
+                                            <td>
+                                                <div class="btn-group">
+                                                    <button type="button" class="btn-u btn-brd color-red btn-brd-hover btn-u-sm dropdown-toggle bars" data-toggle="dropdown">
+                                                        <i class="fa fa fa-bars"></i>
+                                                        <span class="sr-only">Toggle Dropdown</span>                            
+                                                    </button>
+                                                    <ul class="dropdown-menu" role="menu">
+                                                        <li><a href="view_invitation.html"><i class="fa fa-eye"></i> Zobacz szczegóły</a></li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>a@a.com</td>
+                                            <td>19292929210 - Tyger Gym S. z o.o.</td>
+                                            <td>Weryfikacja RODO - kroki postępowania</td>
+                                            <td>RODO</td>
+                                            <td class="hidden-sm hidden-xs">2019-09-22</td>
+                                            <td>Nie</td>
+                                            <td class="hidden-sm hidden-xs">2019-09-22</td>
+                                            <td>
+                                                <div class="btn-group">
+                                                    <button type="button" class="btn-u btn-brd color-red btn-brd-hover btn-u-sm dropdown-toggle bars" data-toggle="dropdown">
+                                                        <i class="fa fa fa-bars"></i>
+                                                        <span class="sr-only">Toggle Dropdown</span>                            
+                                                    </button>
+                                                    <ul class="dropdown-menu" role="menu">
+                                                            <li><a href="view_invitation.html"><i class="fa fa-eye"></i> Zobacz szczegóły</a></li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                        <td>11</td>
+                                                <td>a@a.com</td>
+                                                <td>19292929210 - Tyger Gym S. z o.o.</td>
+                                                <td>Weryfikacja RODO - kroki postępowania</td>
+                                                <td>RODO</td>
+                                                <td class="hidden-sm hidden-xs">2019-02-22</td>
+                                                <td>Nie</td>
+                                                <td class="hidden-sm hidden-xs">2019-02-22</td>
+                                                <td>
+                                                    <div class="btn-group">
+                                                        <button type="button" class="btn-u btn-brd color-red btn-brd-hover btn-u-sm dropdown-toggle bars" data-toggle="dropdown">
+                                                            <i class="fa fa fa-bars"></i>
+                                                            <span class="sr-only">Toggle Dropdown</span>                            
+                                                        </button>
+                                                        <ul class="dropdown-menu" role="menu">
+                                                                <li><a href="view_invitation.html"><i class="fa fa-eye"></i> Zobacz szczegóły</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                    <td>12</td>
+                                                    <td>a@a.com</td>
+                                                    <td>19292929210 - Tyger Gym S. z o.o.</td>
+                                                    <td>Weryfikacja RODO - kroki postępowania</td>
+                                                    <td>RODO</td>
+                                                    <td class="hidden-sm hidden-xs">2019-09-22</td>
+                                                    <td>Tak</td>
+                                                    <td class="hidden-sm hidden-xs">2019-09-22</td>
+                                                    <td>
+                                                        <div class="btn-group">
+                                                            <button type="button" class="btn-u btn-brd color-red btn-brd-hover btn-u-sm dropdown-toggle bars" data-toggle="dropdown">
+                                                                <i class="fa fa fa-bars"></i>
+                                                                <span class="sr-only">Toggle Dropdown</span>                            
+                                                            </button>
+                                                            <ul class="dropdown-menu" role="menu">
+                                                                    <li><a href="view_invitation.html"><i class="fa fa-eye"></i> Zobacz szczegóły</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>10</td>
+                                                        <td>a@a.com</td>
+                                                        <td>19294429210 - Calypso</td>
+                                                        <td>Weryfikacja RODO - kroki postępowania</td>
+                                                        <td>RODO</td>
+                                                        <td class="hidden-sm hidden-xs">2019-08-22</td>
+                                                        
+                                                <td>Nie</td>
+                                                        <td class="hidden-sm hidden-xs">2019-08-22</td>
+                                                        <td>
+                                                            <div class="btn-group">
+                                                                <button type="button" class="btn-u btn-brd color-red btn-brd-hover btn-u-sm dropdown-toggle bars" data-toggle="dropdown">
+                                                                    <i class="fa fa fa-bars"></i>
+                                                                    <span class="sr-only">Toggle Dropdown</span>                            
+                                                                </button>
+                                                                <ul class="dropdown-menu" role="menu">
+                                                                        <li><a href="view_invitation.html"><i class="fa fa-eye"></i> Zobacz szczegóły</a></li>
+                                                                </ul>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                        <tr>
+                                                <td>3</td>
+                                                <td>pan@pasp.dads</td>
+                                                <td>19292929210 - Tyger Gym S. z o.o.</td>
+                                                <td>Pierwsza pomoc - szkolenie praktyczne RKO </td>
+                                                <td>PP</td>
+                                              
+                                                <td class="hidden-sm hidden-xs">2019-05-22</td>
+                                                <td>Tak</td>
+                                                <td class="hidden-sm hidden-xs">2019-05-22</td>
+                                                <td>
+                                                    <div class="btn-group">
+                                                        <button type="button" class="btn-u btn-brd color-red btn-brd-hover btn-u-sm dropdown-toggle bars" data-toggle="dropdown">
+                                                            <i class="fa fa fa-bars"></i>
+                                                            <span class="sr-only">Toggle Dropdown</span>                            
+                                                        </button>
+                                                        <ul class="dropdown-menu" role="menu">
+                                                                <li><a href="view_invitation.html"><i class="fa fa-eye"></i> Zobacz szczegóły</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                    <td>9</td>
+                                                    <td>a@a.com</td>
+                                                    <td>19292929215 - Multisport Profit</td>
+                                                    <td>Akademia Multisport - cz 2.</td>
+                                                    <td>AMS</td>
+                                                    <td class="hidden-sm hidden-xs">2019-03-09</td>
+                                                    
+                                                <td>Nie</td>
+                                                    <td class="hidden-sm hidden-xs">2019-03-22</td>
+                                                    <td>
+                                                        <div class="btn-group">
+                                                            <button type="button" class="btn-u btn-brd color-red btn-brd-hover btn-u-sm dropdown-toggle bars" data-toggle="dropdown">
+                                                                <i class="fa fa fa-bars"></i>
+                                                                <span class="sr-only">Toggle Dropdown</span>                            
+                                                            </button>
+                                                            <ul class="dropdown-menu" role="menu">
+                                                                <li><a href="view_invitation.html"><i class="fa fa-eye"></i> Zobacz szczegóły</a></li>
+                                                        </ul>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>4</td>
+                                                        <td>a@a.com</td>
+                                                        <td>19292929215 - FitProfit</td>
+                                                        <td>Akademia Multisport - cz 1.</td>
+                                                        <td>AMS</td>
+                                                        <td class="hidden-sm hidden-xs">2019-03-09</td>
+                                                        
+                                                <td>Nie</td>
+                                                        <td class="hidden-sm hidden-xs">2019-03-22</td>
+                                                        <td>
+                                                            <div class="btn-group">
+                                                                <button type="button" class="btn-u btn-brd color-red btn-brd-hover btn-u-sm dropdown-toggle bars" data-toggle="dropdown">
+                                                                    <i class="fa fa fa-bars"></i>
+                                                                    <span class="sr-only">Toggle Dropdown</span>                            
+                                                                </button>
+                                                                <ul class="dropdown-menu" role="menu">
+                                                                <li><a href="view_invitation.html"><i class="fa fa-eye"></i> Zobacz szczegóły</a></li>
+                                                        </ul>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                            <td>5</td>
+                                                            <td>a@a.com</td>
+                                                            <td>19292929215 - FitProfit</td>
+                                                            <td>Akademia Multisport - cz 2.</td>
+                                                            <td>AMS</td>
+                                                            <td class="hidden-sm hidden-xs">2019-03-10</td>
+                                                            
+                                                <td>Nie</td>
+                                                            <td class="hidden-sm hidden-xs">2019-03-10</td>
+                                                            <td>
+                                                                <div class="btn-group">
+                                                                    <button type="button" class="btn-u btn-brd color-red btn-brd-hover btn-u-sm dropdown-toggle bars" data-toggle="dropdown">
+                                                                        <i class="fa fa fa-bars"></i>
+                                                                        <span class="sr-only">Toggle Dropdown</span>                            
+                                                                    </button>
+                                                                    <ul class="dropdown-menu" role="menu">
+                                                                            <li><a href="view_invitation.html"><i class="fa fa-eye"></i> Zobacz szczegóły</a></li>
+                                                                    </ul>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                                <td>6</td>
+                                                                <td>a@a.com</td>
+                                                                <td>19292929215 - FitProfit</td>
+                                                                <td>Akademia Multisport - cz 3.</td>
+                                                                <td>AMS</td>
+                                                                <td class="hidden-sm hidden-xs">2019-03-11</td>
+                                                                
+                                                <td>Nie</td>
+                                                                <td class="hidden-sm hidden-xs">2019-03-11</td>
+                                                                <td>
+                                                                    <div class="btn-group">
+                                                                        <button type="button" class="btn-u btn-brd color-red btn-brd-hover btn-u-sm dropdown-toggle bars" data-toggle="dropdown">
+                                                                            <i class="fa fa fa-bars"></i>
+                                                                            <span class="sr-only">Toggle Dropdown</span>                            
+                                                                        </button>
+                                                                        <ul class="dropdown-menu" role="menu">
+                                                                                <li><a href="view_invitation.html"><i class="fa fa-eye"></i> Zobacz szczegóły</a></li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Content -->
+                </div>          
+            </div><!--/container-->     
+            <!--=== End Content Part ===-->
+        </div><!--/End Wrapepr-->
+        <!--=== Footer Version 1 ===-->
+        <div class="footer-v1" id="includedContentFooter">
+        </div>     
+        <!--=== End Footer Version 1 ===-->
+        <!-- JS Global Compulsory -->           
+        <script type="text/javascript" src="assets/plugins/jquery/jquery.min.js"></script>
+        <script type="text/javascript" src="assets/plugins/jquery/jquery-migrate.min.js"></script>
+        <script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+        <!-- JS Implementing Plugins -->
+        <script type="text/javascript" src="assets/plugins/back-to-top.js"></script>
+        <script type="text/javascript" src="assets/plugins/smoothScroll.js"></script>
+        <!-- JS Customization -->
+        <script type="text/javascript" src="assets/js/custom.js"></script>
+        <!-- JS Page Level -->           
+        <script type="text/javascript" src="assets/js/app.js"></script>
+        <script type="text/javascript" src="assets/js/plugins/datepicker.js"></script>
+        <!-- JS DataTables -->
+        <script type="text/javascript" language="javascript" src="assets/plugins/datatable/js/jquery.dataTables.js"></script>
+
+        <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/js/bootstrap-select.min.js"></script>
+
+        <script src="assets/plugins/sky-forms-pro/skyforms/js/jquery-ui.min.js"></script>
+        <script src="assets/plugins/sky-forms-pro/skyforms/js/jquery.form.min.js"></script>
+
+        <script src="https://cdn.jsdelivr.net/momentjs/2.10.6/moment.min.js"></script>
+        <script type="text/javascript" src="assets/plugins/bootstrap-datepicker-1.6.1-dist/js/bootstrap-datepicker.min.js"></script>
+        <script type="text/javascript" src="assets/plugins/bootstrap-datepicker-1.6.1-dist/locales/bootstrap-datepicker.pl.min"></script>
+        <!-- JS Customization -->
+
+
+        <script type="text/javascript" src="assets/js/custom.js"></script>
+        <!-- JS Page Level -->           
+        <script type="text/javascript">
+            jQuery(document).ready(function () {
+                App.init();
+
+                $('.input-daterange').datepicker({
+                    format: "dd-mm",
+                    language: "pl",
+                    multidateSeparator: "-"
+                });
+
+
+                $(document).ready(function () {
+                    var i = 0;
+                    var table = $('#spList').DataTable({
+                        "language": {
+                            "url": "assets/plugins/datatable/lang/Polish.json"
+                        },
+                        searching: false,
+                        lengthChange: false,
+                    });
+
+
+                    $('#eodList').DataTable({
+                        "language": {
+                            "url": "assets/plugins/datatable/lang/Polish.json"
+                        },
+                        searching: false,
+                        lengthChange: false,
+                        "aoColumnDefs": [
+                            {'bSortable': false, 'aTargets': [0, 1, 2, 3, 4, 7]}
+                        ]
+                    });
+                });
+
+                setTimeout(function () {
+                    $('.dropdown-toggle').dropdown();
+                }, 2000);
+
+            });
+        </script>
+        <script>
+            $(function () {
+                $("#includedContentHeader").load("header_backend.html");
+                $("#includedContentFooter").load("footer.html");
+            });
+        </script> 
+        <!--[if lt IE 9]>
+            <script src="assets/plugins/respond.js"></script>
+            <script src="assets/plugins/html5shiv.js"></script>
+            <script src="assets/plugins/placeholder-IE-fixes.js"></script>
+        <![endif]-->
+
+    </body>
+</html> 

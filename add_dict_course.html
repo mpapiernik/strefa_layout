@@ -1,0 +1,293 @@
+<!DOCTYPE html> 
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->  
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->  
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->  
+    <head>
+        <title>Panel Benefit Systems</title>
+
+        <!-- Meta -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <!-- Favicon -->
+        <link rel="shortcut icon" href="favicon.ico">
+
+        <!-- Web Fonts -->
+        <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:400,300,600&amp;subset=cyrillic,latin">
+
+        <!-- CSS Global Compulsory -->
+        <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+
+        <!-- CSS Header and Footer -->
+        <link rel="stylesheet" href="assets/css/headers/header-default.css">
+        <link rel="stylesheet" href="assets/css/footers/footer-v1.css">
+
+        <!-- CSS Implementing Plugins -->
+        <link rel="stylesheet" href="assets/plugins/animate.css">
+        <link rel="stylesheet" href="assets/plugins/line-icons/line-icons.css">
+        <link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.min.css">
+
+        <!-- CSS Customization -->
+        <link rel="stylesheet" href="assets/css/theme-colors/dark-red.css">
+
+        <!-- CSS Implementing Plugins -->
+        <link rel="stylesheet" href="assets/plugins/animate.css">
+        <link rel="stylesheet" href="assets/plugins/line-icons/line-icons.css">
+        <link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="assets/plugins/sky-forms-pro/skyforms/css/sky-forms.css">
+        <link rel="stylesheet" href="assets/plugins/sky-forms-pro/skyforms/custom/custom-sky-forms.css">
+        <!--[if lt IE 9]><link rel="stylesheet" href="assets/plugins/sky-forms-pro/skyforms/css/sky-forms-ie8.css"><![endif]-->
+
+        <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/bootstrap-duallistbox.css">
+
+        <link rel="stylesheet" type="text/css" href="assets/css/jquery.timepicker.css" />
+
+        <link rel="stylesheet" href="assets/css/jquery.fileupload.css">
+        <link rel="stylesheet" href="assets/css/jquery.fileupload-ui.css">
+        <!-- CSS adjustments for browsers with JavaScript disabled -->
+        <noscript><link rel="stylesheet" href="assets/css/jquery.fileupload-noscript.css"></noscript>
+        <noscript><link rel="stylesheet" href="assets/css/jquery.fileupload-ui-noscript.css"></noscript>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+        <script src="assets/js/plugins/jquery-ui/jquery-ui.min.js"></script>
+        <link href="assets/css/plugins/cropbox/jquery.cropbox.css" rel="stylesheet">
+
+    </head>
+
+    <body>    
+        <div class="wrapper">
+            <!--=== Header ===-->    
+            <div class="header" id="includedContentHeader">
+            </div>
+            <!--=== End Header ===--> 
+            <!--=== Breadcrumbs ===-->
+            <div class="breadcrumbs">
+                <div class="container">
+                    <h1 class="pull-left">Nowy projekt szkoleniowy</h1>
+                    <ul class="pull-right breadcrumb">
+                        <li><a href="index_backend.html">Home</a></li>
+                        <li><a href="dict_courses.html">Słownik projektów szkoleniowych</a></li>
+                    </ul>
+                </div>
+            </div><!--/breadcrumbs-->
+            <!--=== End Breadcrumbs ===-->
+
+            <!--=== Content Part ===-->
+            <div class="container content">     
+                <div class="row">
+                    <!-- Begin Content -->
+                    <div class="col-md-10 col-md-offset-1 margin-bottom-50">
+                        <!-- Post -->
+                        <form action="" method="post" id="sky-form3" class="sky-form">
+                            <fieldset>
+                                <section>
+                                        <label class="label">Nazwa skrócona <span class="color-red">*</span></label>
+                                        <label class="input">
+                                            <i class="icon-append fa fa-tag"></i>
+                                            <input type="text" name="subject" id="abbr">
+                                        </label>
+                                    </section>
+                                <section>
+                                    <label class="label">Nazwa pełna <span class="color-red">*</span></label>
+                                    <label class="input">
+                                        <i class="icon-append fa fa-tag"></i>
+                                        <input type="text" name="subject" id="subject">
+                                    </label>
+                                </section>
+                                <section>
+                                    <label class="label">Opis</label>
+                                    <label class="textarea">
+                                        <i class="icon-append fa fa-comment"></i>
+                                        <textarea rows="6" name="message" id="message"></textarea>
+                                    </label>
+                                </section>
+                                <section>
+                                    <label class="label">Grafika tytułowa</label>
+                                    <div class="input-group">
+                                        <section>
+                                            <span class="btn btn-u fileinput-button state-success" id="fileButton">
+                                                <i class="fa fa-plus"></i>
+                                                <span>Wybierz plik </span>
+                                                <input type="file" id="appbundle_invoice_confirm_files"
+                                                        name="appbundle_invoice_confirm[files][]">
+                                            </span>
+                                        </section>
+                                    </div>
+                                    <p>
+                                        Format: png, jpg, jpeg, bmp.
+                                        </br>
+                                        Wymiar: 650px na 250px
+                                    </p>
+                                </section>
+                                <section>
+                                    <p>Przesuwając obszar zdjęcia wybierz jego optymalne kadrowanie.</p>
+                                    <div class="img-article margin-bottom-20 text-center">
+                                        <div class="carousel slide carousel-v1 " id="myCarousel">
+                                            <div class="carousel-inner img-center ">
+                                                <div class="item active">
+                                                    <img id="cropImage" class="cropimage" alt="" src="assets/img/demo.jpg"
+                                                            cropwidth="650"
+                                                            cropheight="250"/>
+                                                    <div class="download">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <table role="presentation" class="table table-striped">
+                                            <tbody class="files">
+                                            <tr class="template-upload fade in">
+                                                <td class="t-align-l">
+                                                    <p class="name">Test (1).img</p>
+                                                    <strong class="error text-danger"></strong>
+                                                </td>
+                                                <td class="t-align-r" style="text-align: right;">
+                                                    <a href="#" class="margin-right-5" download="crop.png">
+                                                        <button type="button" class="btn btn-u">
+                                                            <i class="fa fa-download"></i>
+                                                            <span>Pobierz</span>
+                                                        </button>
+                                                    </a>
+                                                    <button class="btn btn-u btn-u-dark cancel stamp-delete-link" type="button">
+                                                        <i class="fa fa-trash"></i>
+                                                        <span>Usuń</span>
+                                                    </button>
+                                                </td>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </section>
+                            </fieldset>
+                            <fieldset>
+                                <div class="row" >
+                                    <section class="col col-6">
+                                        <div class="row">
+                                            <section class="col col-6">
+                                                    <label class="label">Min liczba uczestników/label>
+                                                    
+                                                <label class="input">
+                                                    <i class="icon-append fa fa-user-times"></i>
+                                                    <input type="text" id="minApplicant">
+                                                </label>
+                                            </section>
+                                            <section class="col col-6">
+                                                    <label class="label">Lista podstawowa</label>
+                                                <label class="input">
+                                                    <i class="icon-append fa fa-user"></i>
+                                                    <input type="text" id="basicList">
+                                                </label>
+                                            </section>
+                                        </div>
+                                    </section>
+                                    <section class="col col-6">
+                                        <div class="row">
+                                            <section class="col col-6">
+                                                    <label class="label">Lista rezerwowa</label>
+                                                <label class="input">
+                                                    <i class="icon-append fa fa-user-plus"></i>
+                                                    <input type="text" id="reserveList">
+                                                </label>
+                                            </section>
+                                            <section class="col col-6">
+                                                    <label class="label">Max liczba zgłoszeń</label>
+                                                <label class="input">
+                                                    <i class="icon-append fa fa-users"></i>
+                                                    <input type="text" id="maxApplication">
+                                                </label>
+                                            </section>
+                                        </div>
+                                    </section>
+                                </div>
+                            </fieldset>
+                            <footer style="text-align: right;">
+                                <button type="button" class="btn-u btn-u-default" onclick="window.history.back();">Wróć</button>
+                                <a href="list_courses.html" class="btn-u">Zapisz</a>
+                            </footer>
+                        </form>         
+                        <!-- Post -->
+                    </div>
+                    <!-- End Content -->
+                    <!-- Begin Sidebar Menu -->
+                    <div class="col-md-3" id="includedContentSideBar">
+                    </div>
+                    <!-- End Sidebar Menu -->
+                </div>          
+            </div><!--/container-->     
+            <!--=== End Content Part ===-->
+
+        </div><!--/End Wrapepr-->
+        <!--=== Footer Version 1 ===-->
+        <div class="footer-v1" id="includedContentFooter">
+        </div>     
+        <!--=== End Footer Version 1 ===-->
+
+        <!-- JS Global Compulsory -->
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+<script type="text/javascript" src="assets/plugins/jquery/jquery-migrate.min.js"></script>
+<script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+
+
+<!-- JS Implementing Plugins -->
+<script type="text/javascript" src="assets/plugins/back-to-top.js"></script>
+<script type="text/javascript" src="assets/plugins/smoothScroll.js"></script>
+<script src="assets/js/plugins/jquery-ui/jquery-ui.min.js"/>
+<script src="assets/plugins/sky-forms-pro/skyforms/js/jquery.form.min.js"></script>
+<!-- JS Customization -->
+<script type="text/javascript" src="assets/js/custom.js"></script>
+<!-- JS Page Level -->
+<script type="text/javascript" src="assets/js/app.js"></script>
+
+<!-- DROPZONE -->
+<script src="assets/js/plugins/dropzone/dropzone.js"></script>
+
+<!-- CROPBOX -->
+<script type="text/javascript"
+        src="//cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.6/jquery.mousewheel.js"></script>
+<script type="text/javascript" src="assets/js/plugins/cropbox/jquery.cropbox.js"></script>
+=
+
+<script type="text/javascript">
+    jQuery(document).ready(function () {
+        App.init();
+    });
+</script>
+<script>
+    $(function () {
+        $("#includedContentHeader").load("header_backend.html");
+        $("#includedContentFooter").load("footer.html");
+    });
+</script>
+    <script type="text/javascript" defer>
+        $(function () {
+            $('.cropimage').each(function () {
+                var image = $(this),
+                        cropwidth = image.attr('cropwidth'),
+                        cropheight = image.attr('cropheight'),
+                        results = image.next('.results'),
+                        x = $('.cropX', results),
+                        y = $('.cropY', results),
+                        w = $('.cropW', results),
+                        h = $('.cropH', results),
+                        download = results.next('.download').find('a');
+
+                image.cropbox({width: cropwidth, height: cropheight, showControls: 'auto'})
+                        .on('cropbox', function (event, results, img) {
+                            download.attr('href', img.getDataURL());
+                        });
+            });
+
+            $('#select').on('change', function () {
+                var size = parseInt(this.value);
+                $('.cropimage').each(function () {
+                    $(this).cropbox({width: size, height: size})
+                });
+            });
+
+        });
+    </script>
+    </body>
+</html> 

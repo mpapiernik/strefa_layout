@@ -3,7 +3,7 @@
 <!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->  
 <!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->  
     <head>
-        <title>Panel Partnera Benefit Systems</title>
+        <title>Panelu Partnera Benefit Systems</title>
 
         <!-- Meta -->
         <meta charset="utf-8">
@@ -33,15 +33,12 @@
         <!-- CSS Customization -->
         <link rel="stylesheet" href="assets/css/theme-colors/dark-red.css">
 
-        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/css/bootstrap-select.min.css" />
-
         <!-- DataTables -->
         <link rel="stylesheet" type="text/css" href="assets/plugins/datatable/css/jquery.dataTables.css">
 
         <!-- CSS Customization -->
         <link rel="stylesheet" href="assets/css/custom.css">
     </head>
-
     <body>    
         <div class="wrapper">
             <!--=== Header ===-->    
@@ -51,11 +48,11 @@
             <!--=== Breadcrumbs ===-->
             <div class="breadcrumbs">
                 <div class="container">
-                    <h1 class="pull-left">Lista partnerów</h1>
+                    <h1 class="pull-left">Słownik projektów szkoleniowych</h1>
                     <ul class="pull-right breadcrumb">
-                        <li><a href="wall.html">Home</a></li>
-                        <li><a href="list_Partners.html">Partnerzy</a></li>
-                        <li><a href="list_partners.html">Lista Partnerów</a></li>
+                        <li><a href="index_backend.html">Home</a></li>
+                        <li><a href="index_backend.html">Szkolenia</a></li>
+                        <li><a href="dict_courses.html">Słownik projektów szkoleniowych</a></li>
                     </ul>
                 </div>
             </div><!--/breadcrumbs-->
@@ -65,25 +62,13 @@
             <div class="container content">     
                 <div class="row">
                     <!-- Begin Content -->
-                    <div class="col-md-12 margin-bottom-50">
-                        <div class="row">
-                            <!--Button Addons-->
-                            <div class="col-md-6">
-                                <label>Wybierz Partnera</label>
-                                <small>(wpisz NIP lub nazwę)</small>
-                                <div class="input-group">
-                                    <select  id="service-select" class="selectpicker " multiple data-selected-text-format="count>1" data-live-search="true"  title='Wybierz...' data-width="100%">
-                                        <option  data-hidden="true"></option>	
-                                        <option value="1">19292929210 - Tyger Gym</option>	
-                                        <option value="2" >19292929215 - FitProfit</option>	
-                                        <option value="3" data-icon="fa fa-exclamation-triangle">12345678910 - Calypso</option>	
-                                    </select>
-                                    <span class="input-group-btn">
-                                        <button class="btn-u"  tabindex="-1"  type="button"><span class="fa fa-search" aria-hidden="true"></span></button>
-                                    </span>
-                                </div>
-                            </div>
 
+                    <div class="col-md-12 margin-bottom-50">
+                        <div class="margin-bottom-20">
+                            <div class="btn-group">
+                                <a href="add_dict_course.html" class="button btn-u pull-right"><i class="fa fa-plus fa-fw"></i>Dodaj projekt</a>
+                            </div>
+                            <!-- End Single button -->                    
                         </div>
                         <hr>
                         <div>
@@ -111,71 +96,94 @@
                                 <thead>
                                     <tr>
                                         <th>#</th>
-                                        <th>Nazwa</th>
-                                        <th class="hidden-sm hidden-xs">Status</th>
-                                        <th class="hidden-sm hidden-xs">Może mieć standardowy mod. rozl.?</th>
-										<th class="hidden-sm hidden-xs">Otrzymał dostęp do SP?</th>
-                                        <th class="hidden-sm hidden-xs">Otrzymał dostęp do mod. rozl.?</th>
-                                        <th class="hidden-sm hidden-xs">Opiekun</th>
-                                        <th>Więcej</th>
+                                        <th>Nazwa skrócona</th>
+                                        <th>Nazwła pełna</th>
+                                        <th class="t-ali">Więcej</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
                                         <td>1</td>
-                                        <td><a href="profile_partner.html">Calypso Spółka Akcyjna</a></td>
-                                        <td class="hidden-sm hidden-xs">Aktywny</td>
-										<td class="hidden-sm hidden-xs">Tak</td>
-                                        <td class="hidden-sm hidden-xs">Nie</td>
-                                        <td class="hidden-sm hidden-xs">Tak</td>
-                                        <td class="hidden-sm hidden-xs"><a href="profile_benefit_operator.html">Jacek Benefitowski</a></td>
+                                        <td>PP</td>
+                                        <td>Pierwsza pomoc</td>
                                         <td>
-                                            <div class="btn-group">
+                                            <div class="btn-group pull-right">
                                                 <button type="button" class="btn-u btn-brd color-red btn-brd-hover btn-u-sm dropdown-toggle bars" data-toggle="dropdown">
                                                     <i class="fa fa fa-bars"></i>
                                                     <span class="sr-only">Toggle Dropdown</span>                            
                                                 </button>
                                                 <ul class="dropdown-menu" role="menu">
-                                                    <li><a href="profile_partner.html"><i class="fa fa-user"></i> Zobacz szczegóły</a></li>
-                                                    <li><a href="profile_partner_settings.html"><i class="fa fa-wrench"></i> Ustawienia Partnera</a></li>
-                                                    <li><a href="list_operators_backend.html"><i class="fa fa-users"></i> Lista operatorów</a></li>
-                                                    <li><a href="facility_backend.html"><i class="fa fa-home"></i> Obiekty</a></li>
-                                                    <li><a href="profile_activity_statistics.html"><i class="fa fa-bar-chart"></i> Raport aktywności</a></li>
-                                                    <li><a href="wall_preview.html"><i class="fa fa-th-list"></i> Podgląd Wall</a></li>
-                                                    <li><a href="profile_statistics.html"><i class="fa fa-area-chart"></i> Podgląd statystyk</a></li>
-                                                    <li><a href="list_accident_report.html"><i class="fa fa-warning"></i> Lista zgłoszeń awarii terminala</a></li>
-                                                    <li><a href="list_reports.html"><i class="fa fa-file-zip-o"></i> Lista raportów awaryjnych</a></li>
-                                                    <li><a href="generate_invoice_preview.html"><i class="fa fa-share"></i> Podgląd osoatniej propozycji</a></li>
+                                                    <li><a href="add_dict_course.html"><i class="fa fa-edit"></i> Edytuj</a></li>
+                                                    <li><a href="remove_dict_course.html"><i class="fa fa-trash"></i> Usuń</a></li>
                                                 </ul>
                                             </div>
                                         </td>
                                     </tr>
-                                    <tr style="background-color: #f2dede;">
-                                        <td>2</td>
-                                        <td><a href="profile_partner.html"> <i class="fa fa-exclamation-triangle"></i> Nie mój Partner</a></td>
-                                        <td class="hidden-sm hidden-xs">Aktywny</td>
-                                        <td class="hidden-sm hidden-xs">Tak</td>
-                                        <td class="hidden-sm hidden-xs">Nie</td>
-                                        <td class="hidden-sm hidden-xs">Tak</td>
-                                        <td class="hidden-sm hidden-xs"><a href="profile_benefit_operator.html">Jacek Benefitowski</a></td>
+                                    <tr>
+                                            <td>2</td>
+                                            <td>AM</td>
+                                            <td>Akademia Multisport</td>
+                                            <td>
+                                                <div class="btn-group pull-right">
+                                                    <button type="button" class="btn-u btn-brd color-red btn-brd-hover btn-u-sm dropdown-toggle bars" data-toggle="dropdown">
+                                                        <i class="fa fa fa-bars"></i>
+                                                        <span class="sr-only">Toggle Dropdown</span>                            
+                                                    </button>
+                                                    <ul class="dropdown-menu" role="menu">
+                                                        <li><a href="add_dict_course.html"><i class="fa fa-edit"></i> Edytuj</a></li>
+                                                        <li><a href="remove_dict_course.html"><i class="fa fa-trash"></i> Usuń</a></li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>BMEP</td>
+                                        <td>Business Management Executive Program</td>
                                         <td>
-                                            <div class="btn-group">
+                                            <div class="btn-group pull-right">
                                                 <button type="button" class="btn-u btn-brd color-red btn-brd-hover btn-u-sm dropdown-toggle bars" data-toggle="dropdown">
                                                     <i class="fa fa fa-bars"></i>
-                                                    <span class="sr-only">Toggle Dropdown</span>                            
+                                                    <span class="sr-only">Toggle Dropdown</span>
                                                 </button>
                                                 <ul class="dropdown-menu" role="menu">
-                                                    <li><a href="profile_partner.html"><i class="fa fa-user"></i> Zobacz szczegóły</a></li>
-                                                    <li><a href="profile_partner_settings.html"><i class="fa fa-wrench"></i> Ustawienia Partnera</a></li>
-                                                    <li><a href="list_operators_backend.html"><i class="fa fa-users"></i> Lista operatorów</a></li>
-                                                    <li><a href="facility_backend.html"><i class="fa fa-home"></i> Obiekty</a></li>
-                                                    <li><a href="profile_activity_statistics.html"><i class="fa fa-bar-chart"></i> Raport aktywności</a></li>
-                                                    <li><a href="wall_preview.html"><i class="fa fa-th-list"></i> Podgląd Wall</a></li>
-                                                    <li><a href="profile_statistics.html"><i class="fa fa-area-chart"></i> Podgląd statystyk</a></li>
-                                                    <li><a href="list_accident_report.html"><i class="fa fa-warning"></i> Lista zgłoszeń awarii terminala</a></li>
-                                                    <li><a href="list_reports.html"><i class="fa fa-file-zip-o"></i> Lista raportów awaryjnych</a></li>
-                                                    <li><a href="generate_invoice_preview.html"><i class="fa fa-share"></i> Podgląd osoatniej propozycji</a></li>
-                                                </ul>
+                                                        <li><a href="add_dict_course.html"><i class="fa fa-edit"></i> Edytuj</a></li>
+                                                        <li><a href="remove_dict_course.html"><i class="fa fa-trash"></i> Usuń</a></li>
+                                                    </ul>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>BMEPE</td>
+                                        <td>Business Management Executive Program Excellence</td>
+                                        <td>
+                                            <div class="btn-group pull-right">
+                                                <button type="button" class="btn-u btn-brd color-red btn-brd-hover btn-u-sm dropdown-toggle bars" data-toggle="dropdown">
+                                                    <i class="fa fa fa-bars"></i>
+                                                    <span class="sr-only">Toggle Dropdown</span>
+                                                </button>
+                                                <ul class="dropdown-menu" role="menu">
+                                                        <li><a href="add_dict_course.html"><i class="fa fa-edit"></i> Edytuj</a></li>
+                                                        <li><a href="remove_dict_course.html"><i class="fa fa-trash"></i> Usuń</a></li>
+                                                    </ul>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td>RODO</td>
+                                        <td>Vadamecum RODO</td>
+                                        <td>
+                                            <div class="btn-group pull-right">
+                                                <button type="button" class="btn-u btn-brd color-red btn-brd-hover btn-u-sm dropdown-toggle bars" data-toggle="dropdown">
+                                                    <i class="fa fa fa-bars"></i>
+                                                    <span class="sr-only">Toggle Dropdown</span>
+                                                </button>
+                                                <ul class="dropdown-menu" role="menu">
+                                                        <li><a href="add_dict_course.html"><i class="fa fa-edit"></i> Edytuj</a></li>
+                                                        <li><a href="remove_dict_course.html"><i class="fa fa-trash"></i> Usuń</a></li>
+                                                    </ul>
                                             </div>
                                         </td>
                                     </tr>
@@ -188,7 +196,7 @@
                 </div>          
             </div><!--/container-->     
             <!--=== End Content Part ===-->
-            <div class="modal fade" id="confirmBlockOperator" tabindex="-1" role="dialog" aria-hidden="true"></div>
+            <div class="modal fade" id="confirmDelete" tabindex="-1" role="dialog" aria-hidden="true"></div>
 
         </div><!--/End Wrapepr-->
         <!--=== Footer Version 1 ===-->
@@ -208,8 +216,6 @@
         <script type="text/javascript" src="assets/js/app.js"></script>
         <!-- JS DataTables -->
         <script type="text/javascript" language="javascript" src="assets/plugins/datatable/js/jquery.dataTables.js"></script>
-
-        <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/js/bootstrap-select.min.js"></script>
         <script type="text/javascript">
             jQuery(document).ready(function () {
                 App.init();
@@ -219,7 +225,7 @@
                             "url": "assets/plugins/datatable/lang/Polish.json"
                         },
                         searching: false,
-                        lengthChange: false,
+                        lengthChange: false
                     });
                 });
             });
@@ -228,6 +234,7 @@
             $(function () {
                 $("#includedContentHeader").load("header_backend.html");
                 $("#includedContentFooter").load("footer.html");
+                $("#confirmDelete").load("delete_vat_rate.html");
                 setTimeout(function () {
                     $('.dropdown-toggle').dropdown();
                 }, 2000);
