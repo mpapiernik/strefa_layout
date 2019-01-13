@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
+    <head>
+        <title>Panel Benefit Systems</title>
+
+        <!-- Meta -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <!-- Favicon -->
+        <link rel="shortcut icon" href="favicon.ico">
+
+        <!-- Web Fonts -->
+        <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:400,300,600&amp;subset=cyrillic,latin">
+
+        <!-- CSS Global Compulsory -->
+        <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+
+        <!-- CSS Header and Footer -->
+        <link rel="stylesheet" href="assets/css/headers/header-default.css">
+        <link rel="stylesheet" href="assets/css/footers/footer-v1.css">
+
+        <!-- CSS Customization -->
+        <link rel="stylesheet" href="assets/css/theme-colors/dark-red.css">
+
+
+
+
+        <!-- CSS Implementing Plugins -->
+        <link rel="stylesheet" href="assets/plugins/animate.css">
+        <link rel="stylesheet" href="assets/plugins/line-icons/line-icons.css">
+        <link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="assets/plugins/sky-forms-pro/skyforms/css/sky-forms.css">
+        <link rel="stylesheet" href="assets/plugins/sky-forms-pro/skyforms/custom/custom-sky-forms.css">
+        <!--[if lt IE 9]><link rel="stylesheet" href="assets/plugins/sky-forms-pro/skyforms/css/sky-forms-ie8.css"><![endif]-->
+
+        <link rel="stylesheet" type="text/css" href="assets/css/jquery.timepicker.css" />
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/css/bootstrap-select.min.css" />
+
+        <link rel="stylesheet" href="assets/css/jquery.fileupload.css">
+        <link rel="stylesheet" href="assets/css/jquery.fileupload-ui.css">
+        <!-- CSS adjustments for browsers with JavaScript disabled -->
+        <noscript><link rel="stylesheet" href="assets/css/jquery.fileupload-noscript.css"></noscript>
+        <noscript><link rel="stylesheet" href="assets/css/jquery.fileupload-ui-noscript.css"></noscript>
+        
+    
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>-->
+
+
+    </head>
+
+    <body>
+        <div class="wrapper">
+            <!--=== Header ===-->
+            <div class="header" id="includedContentHeader">
+            </div>
+            <!--=== End Header ===-->
+            <!--=== Breadcrumbs ===-->
+            <div class="breadcrumbs">
+                <div class="container">
+                    <h1 class="pull-left">Wyślij zaproszenie</h1>
+                    <ul class="pull-right breadcrumb">
+                        <li><a href="wall.html">Home</a></li>
+                        <li><a href="">Szkolenia</a></li>
+                        <li><a href="#">Lista zaproszeń</a></li>
+                    </ul>
+                </div>
+            </div><!--/breadcrumbs-->
+            <!--=== End Breadcrumbs ===-->
+
+            <!--=== Content Part ===-->
+            <div class="container content">
+                <div class="row">
+                    <!-- Begin Content -->
+                    <div class="col-md-10 col-md-offset-1 margin-bottom-50">
+                        <!-- Post -->
+                        <form action="" method="post" id="sky-form3" class="sky-form">
+                            <fieldset class="margin-bottom-20">
+                                <h4>Szkolenia</h4>
+                                <div class="row">
+                                <div class="col-md-12">
+                                        <label class="">Wybierz szkolenie </label>
+                                        <small>(pozostaw domyślny wybór lub wybierz dodatkowe pozycje)</small>
+                                        
+                                        <div class="input-group" style="max-width: fit-content">
+                                            <select  id="course-select" class="selectpicker input-block-level" multiple data-live-search="true"  title='Wybierz...'  data-selected-text-format="count>2" data-width="280px">
+                                                    <option  data-hidden="true"></option>	
+                                                    <option value="1" selected>Akademia Multisport - etap 1</option>	
+                                                    <option value="2">Pierwsza pomoc - </option>	
+                                                    <option value="3">Weryfikacja RODO - kroki postępowania</option>	
+                                                    <option value="4">Pierwsza pomoc - szkolenie praktyczne RKO</option>	
+                                                    <option value="5">Akademia Multisport - cz. 2.</option>
+                                                    <option value="6">Akademia Multisport - cz. 3.</option>
+                                            </select>
+                                            <span class="input-group-btn">
+                                                <button id="findPartnerReset" class="btn-u btn-u-dark margin-left-5" tabindex="-1" type="button"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Odznacz wszystko</button>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <fieldset>
+                                <h4>Odbiorcy</h4>
+                                <section id="radios">
+                                    <label class="">Wybierz odbiorców</label>
+                                    <label class="radio"><input type="radio" name="radio" checked="" value="0"><i class="rounded-x"></i>Wybierz Partnerów</label>
+                                    <label class="radio"><input type="radio" name="radio" value="1"><i class="rounded-x"></i>Dodaj adresy e-mail</label>
+                                    <label class="radio"><input type="radio" name="radio" value="2"><i class="rounded-x"></i>Wgraj odbiorców z pliku CSV</label>
+                                </section>
+                            </fieldset>
+                            <fieldset id="partnersState">
+                                <section class="">
+                                    <label class="">Wybierz Partnera</label>
+                                    <small>(wpisz NIP lub nazwę)</small>
+                                    <div class="input-group">
+                                        <select  id="service-select-partner" class=" selectpicker input-block-level" data-live-search="true" data-size="10"  multiple title='Wybierz...' data-selected-text-format="count>1" data-width="560px">
+                                                <option  data-hidden="true"></option>	
+                                                <option value="1">19292929210 - Tyger Gym</option>	
+                                                <option value="2">12345678910 - Calypso</option>	
+                                                <option value="3">19292929215 - FitProfit</option>	
+                                        </select>
+                                    </div>
+                                </section>
+                                <section>
+                                        <label class="label"> Ogranicz odbiorców do roli</label>
+                                        <div class="row">
+                                            <div class="col col-12">
+                                                <label class="checkbox"><input id="select-all-roles" checked type="checkbox" name="checkbox"><i></i> Zaznacz/odznacz wszystkie role</label>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <div class="row role-checkboxes">
+                                            <div class="col col-6">
+                                                <label class="checkbox"><input type="checkbox" checked class="role-checkbox" name="appbundle_survey_send[limitVisibilityToRole][]" value="ROLE_PARTNER_OPERATOR"><i></i>Użytkownik</label>
+                                            </div>
+                                            <div class="col col-6">
+                                                <label class="checkbox"><input type="checkbox" checked class="role-checkbox" name="appbundle_survey_send[limitVisibilityToRole][]" value="ROLE_PARTNER_FK"><i></i>Użytkownik księgowy</label>
+                                            </div>
+                                            <div class="col col-6">
+                                                <label class="checkbox"><input type="checkbox" checked class="role-checkbox" name="appbundle_survey_send[limitVisibilityToRole][]" value="ROLE_PARTNER_ADMIN"><i></i>Administrator</label>
+                                            </div>
+                                            <div class="col col-6">
+                                                <label class="checkbox"><input type="checkbox" checked class="role-checkbox" name="appbundle_survey_send[limitVisibilityToRole][]" value="ROLE_PARTNER_EXTERNAL_FK"><i></i>Użytkownik księgowy zewnętrzny</label>
+                                            </div>
+                                        </div>
+                                    </section>
+                               
+                            </fieldset>
+                            <fieldset id="operatorsState">
+                                <section>
+                                        <div class="row">
+                                                <!--Button Addons-->
+                                                <div class="col-md-6">
+                                                    <label class="">Wybierz Partnera</label>
+                                                    <small>(wpisz NIP lub nazwę)</small>
+                                                    <div class="input-group" style="width: 100%">
+                                                        <select  id="partner-select" class="selectpicker input-block-level" data-live-search="true"  title='Wybierz...' data-width="100%">
+                                                                <option value="0">Brak</option>	
+                                                                <option value="1">19292929210 - Tyger Gym</option>	
+                                                                <option value="2">12345678910 - Calypso</option>	
+                                                                <option value="3">19292929215 - FitProfit</option>	
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                        <label class="">Wpisz NIP Partnera</label>
+                                                        <label id="partner-input" class="input" >
+                                                                <i class="icon-append fa fa-user"></i>
+                                                                <input type="number">
+                                                            </label>
+                                                    </div>
+                                            </div>
+                                </section>
+                               
+                               <section>
+                                    <label class="">Adresy e-mail</label>
+                                            <label id="partner-input" class="input" >
+                                                <input type="text" value="djsdakj@dsjkd.ds, dsaasd@dsa.dsa" data-role="tagsinput">
+                                            </label>
+                               </section>
+                            </fieldset>
+                            <fieldset id="fileState">
+                                <section>
+                                    <div class="input-group">
+                                            <section>
+                                                <span class="btn btn-u fileinput-button state-success" id="fileButton">
+                                                    <i class="fa fa-plus"></i>
+                                                    <span>Wybierz plik </span>
+                                                    <input type="file" id="appbundle_invoice_confirm_files"
+                                                            name="appbundle_invoice_confirm[files][]">
+                                                </span>
+                                            </section>
+                                        </div>
+                                        <p>
+                                            Rozszerzenie pliku: CSV.
+                                            </br>
+                                            Format: Adres_E-mail,NIP_Partnera;
+                                        </p>
+                                </section>
+                                <table role="presentation" class="table table-striped">
+                                        <tbody class="files">
+                                        <tr class="template-upload fade in">
+                                            <td class="t-align-l">
+                                                <p class="name">Test (1).img</p>
+                                                <strong class="error text-danger"></strong>
+                                            </td>
+                                            <td class="t-align-r" style="text-align: right;">
+                                                <a href="#" class="margin-right-5" download="crop.png">
+                                                    <button type="button" class="btn btn-u">
+                                                        <i class="fa fa-download"></i>
+                                                        <span>Pobierz</span>
+                                                    </button>
+                                                </a>
+                                                <button class="btn btn-u btn-u-dark cancel stamp-delete-link" type="button">
+                                                    <i class="fa fa-trash"></i>
+                                                    <span>Usuń</span>
+                                                </button>
+                                            </td>
+                                        </tbody>
+                                    </table>
+
+                            </fieldset>
+                            <footer style="text-align: right;">
+                                <button type="button" class="btn-u btn-u-default" onclick="window.history.back();">Wróć</button>
+                                <a href="view_survey_operators.html" class="btn-u">Zapisz</a>
+                            </footer>
+                        </form>
+                        <!-- Post -->
+                    </div>
+                    <!-- End Content -->
+                    <!-- Begin Sidebar Menu -->
+                    <div class="col-md-3" id="includedContentSideBar">
+                    </div>
+                    <!-- End Sidebar Menu -->
+                </div>
+            </div><!--/container-->
+            <!--=== End Content Part ===-->
+
+        </div><!--/End Wrapepr-->
+        <!--=== Footer Version 1 ===-->
+        <div class="footer-v1" id="includedContentFooter">
+        </div>
+        <!--=== End Footer Version 1 ===-->
+
+        <!-- JS Global Compulsory -->
+        <script type="text/javascript" src="assets/plugins/jquery/jquery.min.js"></script>
+        <script type="text/javascript" src="assets/plugins/jquery/jquery-migrate.min.js"></script>
+        <script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+        <!-- JS Implementing Plugins -->
+        <script type="text/javascript" src="assets/plugins/back-to-top.js"></script>
+        <script type="text/javascript" src="assets/plugins/smoothScroll.js"></script>
+        <script src="assets/plugins/sky-forms-pro/skyforms/js/jquery.validate.min.js"></script>
+        <script src="assets/plugins/sky-forms-pro/skyforms/js/jquery.maskedinput.min.js"></script>
+        <script src="assets/plugins/sky-forms-pro/skyforms/js/jquery-ui.min.js"></script>
+        <script src="assets/plugins/sky-forms-pro/skyforms/js/jquery.form.min.js"></script>
+        <!-- JS Customization -->
+        <script type="text/javascript" src="assets/js/custom.js"></script>
+        <!-- JS Page Level -->
+        <script type="text/javascript" src="assets/js/app.js"></script>
+        <script type="text/javascript" src="assets/js/forms/contact.js"></script>
+        <script type="text/javascript" src="assets/js/plugins/masking.js"></script>
+        <script type="text/javascript" src="assets/js/plugins/datepicker.js"></script>
+        <script type="text/javascript" src="assets/js/plugins/validation.js"></script>
+        <script type="text/javascript" src="assets/js/jquery.timepicker.js"></script>
+
+        <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/js/bootstrap-select.min.js"></script>
+        
+
+        <script type="text/javascript">
+                                    jQuery(document).ready(function () {
+                                        App.init();
+                                        ContactForm.initContactForm();
+                                        Datepicker.initDatepicker();
+                                    });
+        </script>
+        <script>
+            $(function () {
+                $("#includedContentHeader").load("header_backend.html");
+                $("#includedContentFooter").load("footer.html");
+
+                setTimeout(function () {
+                    $('.dropdown-toggle').dropdown();
+                }, 1000);
+
+                $('#operatorsState').hide();
+                $('#fileState').hide();
+
+            });
+        </script>
+        <!--[if lt IE 9]>
+            <script src="assets/plugins/respond.js"></script>
+            <script src="assets/plugins/html5shiv.js"></script>
+            <script src="assets/plugins/placeholder-IE-fixes.js"></script>
+        <![endif]-->
+        <script type="text/javascript">
+            jQuery(document).ready(function () {
+
+                $('#radios input').on('change', function () {
+
+                    if ($(this).val() == 0) {
+                        $('#partnersState').show();
+                        $('#operatorsState').hide();
+                        $('#fileState').hide();
+                    }
+                    else if ($(this).val() == 1) {
+                        $('#partnersState').hide();
+                        $('#fileState').hide();
+                        $('#operatorsState').show();
+                    }
+                    else {
+                        $('#partnersState').hide();
+                        $('#operatorsState').hide();
+                        $('#fileState').show();
+                    }
+                });
+
+
+                $('#partner-select').change(function () {
+                    if($('#partner-select').val() > 0 ) {
+                        $('#partner-input').addClass("state-disabled");
+                        $('#partner-input>input').attr('readonly');
+                    }
+                    else {
+                        $('#partner-input').removeClass("state-disabled");
+                        $('#partner-input>input').removeAttr('readonly');
+                    }
+                });
+
+            });
+        </script>
+
+    </body>
+</html> 
