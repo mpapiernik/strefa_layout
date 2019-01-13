@@ -50,7 +50,7 @@
         
     
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
 
     </head>
@@ -170,9 +170,9 @@
                                                 </div>
                                                 <div class="col-md-6">
                                                         <label class="">Wpisz NIP Partnera</label>
-                                                        <label id="partner-input" class="input" >
+                                                        <label id="partner-nip" class="input" >
                                                                 <i class="icon-append fa fa-user"></i>
-                                                                <input type="number">
+                                                                <input id="partner-input" type="number">
                                                             </label>
                                                     </div>
                                             </div>
@@ -180,7 +180,7 @@
                                
                                <section>
                                     <label class="">Adresy e-mail</label>
-                                            <label id="partner-input" class="input" >
+                                            <label class="input" >
                                                 <input type="text" value="djsdakj@dsjkd.ds, dsaasd@dsa.dsa" data-role="tagsinput">
                                             </label>
                                </section>
@@ -228,7 +228,7 @@
                             </fieldset>
                             <footer style="text-align: right;">
                                 <button type="button" class="btn-u btn-u-default" onclick="window.history.back();">Wróć</button>
-                                <a href="view_survey_operators.html" class="btn-u">Zapisz</a>
+                                <a href="view_survey_operators.html" class="btn-u">Wyślij</a>
                             </footer>
                         </form>
                         <!-- Post -->
@@ -323,12 +323,14 @@
 
                 $('#partner-select').change(function () {
                     if($('#partner-select').val() > 0 ) {
-                        $('#partner-input').addClass("state-disabled");
-                        $('#partner-input>input').attr('readonly');
+                        $('#partner-nip').addClass("state-disabled");
+                        $('#partner-input').attr("readonly", "readonly");
+                        $('#partner-input').attr("disabled", "disabled");
                     }
                     else {
-                        $('#partner-input').removeClass("state-disabled");
-                        $('#partner-input>input').removeAttr('readonly');
+                        $('#partner-nip').removeClass("state-disabled");
+                        $('#partner-input').removeAttr("readonly");
+                        $('#partner-input').removeAttr("disabled");
                     }
                 });
 
