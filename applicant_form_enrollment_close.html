@@ -55,12 +55,6 @@
         
 
         <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/css/bootstrap-select.min.css" />
-        
-        <link rel="stylesheet" href="assets/css/jquery.fileupload.css">
-        <link rel="stylesheet" href="assets/css/jquery.fileupload-ui.css">
-        <!-- CSS adjustments for browsers with JavaScript disabled -->
-        <noscript><link rel="stylesheet" href="assets/css/jquery.fileupload-noscript.css"></noscript>
-        <noscript><link rel="stylesheet" href="assets/css/jquery.fileupload-ui-noscript.css"></noscript>
 
         
         
@@ -77,10 +71,10 @@
             <div class="breadcrumbs">
                 <div class="container">
 
-                    <h1 class="pull-left">Potwierdź formularz rejestracyjny</h1>
+                    <h1 class="pull-left">Formularz rejestracyjny</h1>
                     <ul class="pull-right breadcrumb">
                         <li><a href="#">Szkolenia</a></li>
-                        <li><a href="applicant_form_upload_file.html">Potwierdź formularz rejestracyjny</a></li>
+                        <li><a href="applicant_form.html">Formularz rejestracyjny</a></li>
                     </ul>
                 </div>
             </div><!--/breadcrumbs-->
@@ -91,7 +85,14 @@
                 <div class="row blog-page blog-item">
                     <!-- Left Sidebar -->
                     <div class="col-md-10 col-md-offset-1 md-margin-bottom-60">
-                        <!--Survey Desc-->        
+                        <!--Survey Desc-->
+                        
+                        <div class="alert alert-warning fade in text-center">
+                                <h4>
+                                    Zapisy na szkolenie są zamknięte.</h4>
+                                    Dziękujemy serdecznie za zainteresowanie.
+                        </div>
+
                         <div class="blog margin-bottom-40">
                             <div class="tag-box tag-box-v3">
                                     <!--Invoice Detials-->
@@ -100,7 +101,7 @@
                                         <div class="col-xs-6">
                                             <ul class="list-unstyled">
                                                 <li><strong>Status: </strong>
-                                                    <span class="badge badge-u">Zapisy otwarte</span>
+                                                    <span class="badge badge-u">Zapisy zamknięte</span>
                                                 </li>
                                                 <li><strong>Projekt szkoleniowy: </strong>Akademia Multisport</li>
                                                 <li><strong>Publikacja: </strong>2019-01-02  08:00 - Trwa</li>
@@ -115,81 +116,21 @@
                                         </div>
                                     </div>
                                 </div>
-                        </div>
-
-                        <div class="blog-img img-article">
-                                <div class="carousel slide carousel-v1 " id="myCarousel">
-                                    <div class="carousel-inner img-center ">
-                                        <div class="item active">
-                                            <img alt="" src="assets/img/befit.jpg">
+                                <div class="blog-img img-article">
+                                        <div class="carousel slide carousel-v1 " id="myCarousel">
+                                            <div class="carousel-inner img-center ">
+                                                <div class="item active">
+                                                    <img alt="" src="assets/img/befit.jpg">
+                                                </div>
+                
+                                            </div>
                                         </div>
-        
                                     </div>
-                                </div>
-                            </div>
 
-                        <div class="tag-box tag-box-v3">
-                            At vero eos et accusamus et <b> iusto odio </b> dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non libero consectetur adipiscing elit magna. Sed et quam lacus. Fusce condimentum eleifend enim a feugiat. Pellentesque viverra vehicula sem ut volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non libero magna. Sed et quam lacus. Fusce condimentum eleifend enim a feugiat mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio lorem ipsum dolor sit amet, mollitia animi, id est laborum et dolorum fug consectetur adipiscing elit. Ut non libero consectetur adipiscing elit magna.
-                        
-                        </div>
-
-                        <!--End Survey Desc-->        
-                        <div class=" margin-bottom-50">
-                            <!-- Post -->
-                            <form action="" method="post" id="sky-form3" class="sky-form">
-                                <fieldset>
-                                        <section>
-                                                <label class="label">Skan podpisanego regulaminu</label>
-                                                <div class="input-group">
-                                                    <section>
-                                                        <span class="btn btn-u fileinput-button state-success" id="fileButton">
-                                                            <i class="fa fa-plus"></i>
-                                                            <span>Wybierz plik </span>
-                                                            <input type="file" id="appbundle_invoice_confirm_files"
-                                                                    name="appbundle_invoice_confirm[files][]">
-                                                        </span>
-                                                    </section>
-                                                </div>
-                                                <p>
-                                                    Format: png, jpg, jpeg, bmp, pdf.
-                                                    </br>
-                                                    Maksymalny rozmiar: 5 MB.
-                                                </p>
-                                            </section>
-                                            <section>
-                                                <div class="img-article margin-bottom-20 text-center">
-                                                    <table role="presentation" class="table table-striped">
-                                                        <tbody class="files">
-                                                        <tr class="template-upload fade in">
-                                                            <td class="t-align-l">
-                                                                <p class="name">Test (1).img</p>
-                                                                <strong class="error text-danger"></strong>
-                                                            </td>
-                                                            <td class="t-align-r" style="text-align: right;">
-                                                                <a href="#" class="margin-right-5" download="crop.png">
-                                                                    <button type="button" class="btn btn-u">
-                                                                        <i class="fa fa-download"></i>
-                                                                        <span>Pobierz</span>
-                                                                    </button>
-                                                                </a>
-                                                                <button class="btn btn-u btn-u-dark cancel stamp-delete-link" type="button">
-                                                                    <i class="fa fa-trash"></i>
-                                                                    <span>Usuń</span>
-                                                                </button>
-                                                            </td>
-                                                        </tbody>
-                                                    </table>
-                                                </div>
-                                            </section>
-                                </fieldset>
+                                <div class="tag-box tag-box-v3">
+                                    At vero eos et accusamus et <b> iusto odio </b> dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non libero consectetur adipiscing elit magna. Sed et quam lacus. Fusce condimentum eleifend enim a feugiat. Pellentesque viverra vehicula sem ut volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non libero magna. Sed et quam lacus. Fusce condimentum eleifend enim a feugiat mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio lorem ipsum dolor sit amet, mollitia animi, id est laborum et dolorum fug consectetur adipiscing elit. Ut non libero consectetur adipiscing elit magna.
                                 
-                                <footer style="text-align: right;">
-                                    <button type="button" class="btn-u btn-u-default" onclick="window.history.back();">Wróć</button>
-                                    <a href="applicant_form.html" class="btn-u btn-u-dark">Podgląd zgłoszenia</a>  
-                                    <a href="application_confirm_finish.html" class="btn-u">Wyślij</a>  
-                                </footer>
-                            </form>         
-                            <!-- Post -->
+                                </div>
                         </div>
                     </div>
                     <!-- End Left Sidebar -->
@@ -229,8 +170,8 @@
         </script>
         <script>
             $(function () {
-                $("#includedContentSideBar").load("sidebar.html");
-                $("#includedContentHeader").load("header.html");
+             
+                $("#includedContentHeader").load("header_guest.html");
                 $("#includedContentFooter").load("footer.html");
 
 
