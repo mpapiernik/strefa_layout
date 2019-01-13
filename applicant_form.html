@@ -84,7 +84,7 @@
             <div class="container content">		
                 <div class="row blog-page blog-item">
                     <!-- Left Sidebar -->
-                    <div class="col-md-9 md-margin-bottom-60">
+                    <div class="col-md-10 col-md-offset-1 md-margin-bottom-60">
                         <!--Survey Desc-->        
                         <div class="blog margin-bottom-40">
                             <div class="tag-box tag-box-v3">
@@ -244,7 +244,7 @@
                                             <label class="checkbox">
                                                     <input class="confirm_value" type="checkbox" name="checkbox" checked="">
                                                     <i></i>
-                                                    Zapoznałem się i akceptuję treść <b><a href="http://83.144.70.78:8082/strefa-partnera-layout/about_programs.html" target="_blank">Programów Wsparcia</a></b>.
+                                                    Zapoznałem się i akceptuję treść regulaminu <b><a href="http://83.144.70.78:8082/strefa-partnera-layout/about_programs.html" target="_blank">(Wydrukuj i podpisz)</a></b>.
                                                 </label>
                                         </div>
                                     </section>
@@ -257,15 +257,13 @@
                                 </fieldset>
                                 <footer style="text-align: right;">
                                     <button type="button" class="btn-u btn-u-default" onclick="window.history.back();">Wróć</button>
-                                    <a href="view_survey_backend.html" class="btn-u">Wyślij</a>  
+                                    <a href="application_confirm.html" class="btn-u">Wyślij</a>  
                                 </footer>
                             </form>         
                             <!-- Post -->
                         </div>
                     </div>
                     <!-- End Left Sidebar -->
-                    <div class="col-md-3" id="includedContentSideBar">
-                    </div>
                 </div><!--/row-->        
             </div><!--/container-->		
             <!--=== End Content Part ===-->
@@ -302,8 +300,8 @@
         </script>
         <script>
             $(function () {
-                $("#includedContentSideBar").load("sidebar.html");
-                $("#includedContentHeader").load("header.html");
+             
+                $("#includedContentHeader").load("header_guest.html");
                 $("#includedContentFooter").load("footer.html");
 
 
