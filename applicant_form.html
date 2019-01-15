@@ -257,7 +257,7 @@
                                 </fieldset>
                                 <footer style="text-align: right;">
                                     <button type="button" class="btn-u btn-u-default" onclick="window.history.back();">Wróć</button>
-                                    <a href="application_confirm_resign.html" class="btn-u btn-u-orange">Zrezygnuj</a>  
+                                    <button type="button" class="btn-u btn-u-orange" onclick="$('#resignModal').modal('show');">Zrezygnuj</button>   
                                     <a href="application_confirm.html" class="btn-u">Wyślij</a>  
                                 </footer>
                             </form>         
@@ -269,7 +269,31 @@
             </div><!--/container-->		
             <!--=== End Content Part ===-->
 
+            <div class="modal fade" id="resignModal" tabindex="-1" role="dialog">
+                <div class="modal-dialog modal-md">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button aria-hidden="true" data-dismiss="modal" class="close" type="button">×</button>
+                            <h4  class="modal-title">Rezygnacja ze szkolenia</h4>
+                        </div>
+                        <div class="modal-body">
+                            <fieldset>
+                                <h5>W celu potwierdzenia rezygnacji kliknij przycisk <b>Zrezygnuj</b></h5>
 
+                                <h5>Zgodnie z regulaminem, z późną rezygnacją związane są koszty, które możliwe, że będziesz musiał ponieść.</h5>
+                               
+                            </fieldset>
+                            <hr class="hr-md">
+                            <fieldset>
+                                <div class="cbp_tmlabel text-center" >
+                                    <button type="button" class="btn-u btn-u-default" onclick="window.service.back();">Anuluj</button>
+                                    <a class="btn-u margin-bottom-5" data-dismiss="modal"></i> Zrezygnuj</a>
+                                </div>
+                            </fieldset>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
         </div><!--/End Wrapepr-->
         <!--=== Footer Version 1 ===-->

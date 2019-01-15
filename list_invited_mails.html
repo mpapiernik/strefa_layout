@@ -60,10 +60,11 @@
             <!--=== Breadcrumbs ===-->
             <div class="breadcrumbs">
                 <div class="container">
-                    <h1 class="pull-left">Lista zaproszeń {:tytuł szkolenia lub lista globalna}</h1>
+                    <h1 class="pull-left">Lista zaproszonych osób</h1>
                     <ul class="pull-right breadcrumb">
                         <li><a href="wall.html">Home</a></li>
                         <li><a href="list_invitations.html">Lista zaproszeń</a></li>
+                        <li><a href="list_invited_mails.html">Lista zaproszonych osób</a></li>
                     </ul>
                 </div>
             </div><!--/breadcrumbs-->
@@ -75,40 +76,35 @@
                     <!-- Begin Content -->
                     
                     <div class="col-md-12 margin-bottom-50">
-                        <div class="margin-bottom-20">
-                            <div class="btn-group">
-                                <a href="send_invitation.html" class="button btn-u pull-right"><i class="fa fa-plus fa-fw"></i>Dodaj zaproszenie</a>         
-                            </div>
-                            <!-- End Single button -->                    
-                        </div>
-                        <hr>
-
                         <!-- Tab v1 -->                
                         <div class="row">
                             <div class="col-sm-12">
                                 <div class="row">
+
+                                        <div class="col-md-2">
+                                                <label>Adres e-mail uczestnika</label>
+                                                <input type="text" class="form-control" placeholder="Wpisz... ">
+                                            </div>
+                                    
                                     <div class="col-md-3">
                                         <label>Wybierz Partnera</label>
                                         <small>(wpisz NIP lub nazwę)</small>
                                         <div class="input-group" style="width:100%">
                                             <select class="selectpicker input-block-level" data-live-search="true" multiple=""   data-selected-text-format="count>1" title='Wybierz...' data-width="100%">
                                                 <option  data-hidden="true"></option>	
-                                                <option value="1" selected>19292929210 - Tyger Gym</option>	
-                                                <option value="2" selected>12345678910 - Calypso</option>	
+                                                <option value="1">19292929210 - Tyger Gym</option>	
+                                                <option value="2">12345678910 - Calypso</option>	
                                                 <option value="3">19292929215 - FitProfit</option>	
                                             </select>
                                         </div>
                                     </div>
-                                    <div class="col-md-4">
-                                            <label>Tytuł szkolenia</label>
-                                            <input type="text" class="form-control" placeholder="Wpisz... ">
-                                        </div>
+                                   
                                         <div class="col-md-3">
                                                 <label>Typ projektu</label>
                                                 <div class="input-group" style="width:100%">
                                                     <select class="selectpicker input-block-level" multiple="" data-selected-text-format="count>1" title='Wybierz...' data-width="100%">
                                                         <option  data-hidden="true"></option>	
-                                                        <option value="1" selected>PP - Pierwsza pomoc</option>
+                                                        <option value="1">PP - Pierwsza pomoc</option>
                                                         <option value="2" selected>AM - Akademia Multisport</option>
                                                         <option value="3">BMEP - Business Management Executive Program</option>
                                                         <option value="4">BMEPE - Business Management Executive Program Excellence</option>
@@ -116,14 +112,33 @@
                                                     </select>
                                             </div>
                                         </div>
-                                    
+                                    <div class="col-md-1">
+                                            <label>Wypełnione</label>
+                                            <div class="input-group" style="width:100%">
+                                                    <select class="selectpicker input-block-level" title='Wybierz...' data-width="100%">
+                                                        <option  data-hidden="true"></option>	
+                                                        <option value="1" selected>Tak</option>	
+                                                        <option value="2">Nie</option>	
+                                                    </select>
+                                            </div>
+                                        </div>
                                     <div class="col-md-2">
-                                        <label>Data wysłania</label>
+                                        <label>Data wypełnienienia</label>
                                         <div class="input-group inline-group input-daterange input-group">
                                             <input type="text" class="form-control" name="start" placeholder="od"/>
                                             <span class="input-group-addon">-</span>
                                             <input type="text" class="form-control" name="end" placeholder="do"/>
                                         </div>
+                                    </div>
+                                    <div class="col-md-1">
+                                            <label>Zablokowane</label>
+                                            <div class="input-group" style="width:100%">
+                                                    <select class="selectpicker input-block-level" title='Wybierz...' data-width="100%">
+                                                        <option  data-hidden="true"></option>	
+                                                        <option value="1" selected>Tak</option>	
+                                                        <option value="2">Nie</option>	
+                                                    </select>
+                                            </div>
                                     </div>
                                 </div>
                                 <hr>
@@ -153,18 +168,26 @@
                                     <thead>
                                         <tr>
                                             <th>#</th>
+                                            <th>Adres e-mail</th>
                                             <th>Partner</th>
                                             <th>Tytuł szkolenia</th>
+                                            <th>Typ projektu</th>
                                             <th class="hidden-sm hidden-xs">Data wysłania</th>
+                                            <th class="hidden-sm hidden-xs">Wypełnione</th>
+                                            <th class="hidden-sm hidden-xs">Data wypełnienia</th>
                                             <th>Więcej</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
                                             <td>1</td>
-                                            <td>19292929210 - Tyger Gym S. z o.o.<br> 12345678910 - Calypso <br> 19292929215 - FitProfit</td>
-                                            <td>Szkolenie otwarte z pierwszej pomocy 2019; Pierwsza pomoc - szkolenie praktyczne RKO ,</td>
+                                            <td>test@test.com</td>
+                                            <td>19292929210 - Tyger Gym S. z o.o.</td>
+                                            <td>Szkolenie otwarte z pierwszej pomocy 2019</td>
+                                            <td>PP</td>
                                             <td class="hidden-sm hidden-xs">2019-05-08</td>
+                                            <td>Nie</td>
+                                            <td class="hidden-sm hidden-xs">2019-05-09</td>
                                             <td>
                                                 <div class="btn-group">
                                                     <button type="button" class="btn-u btn-brd color-red btn-brd-hover btn-u-sm dropdown-toggle bars" data-toggle="dropdown">
@@ -172,16 +195,104 @@
                                                         <span class="sr-only">Toggle Dropdown</span>                            
                                                     </button>
                                                     <ul class="dropdown-menu" role="menu">
-                                                        <li><a href="send_invitation.html"><i class="fa fa-pencil"></i> Edytuj</a></li>
-                                                        <li><a href="list_invited_mails.html"><i class="fa fa-at"></i> Lista zaproszonych</a></li>
-                                                        <li><a onclick=" $('#confirmBlocked').modal('show')"><i class="fa fa-lock"></i> Zablokuj</a></li>
+                                                            <li><a onclick=" $('#confirmDelete').modal('show')"><i class="fa fa-trash"></i> Usuń</a></li>
                                                     </ul>
                                                 </div>
                                             </td>
                                         </tr>
+                                        <tr>
                                             <td>2</td>
+                                            <td>a@a.com</td>
+                                            <td>19292929210 - Tyger Gym S. z o.o.</td>
+                                            <td>Weryfikacja RODO - kroki postępowania</td>
+                                            <td>RODO</td>
+                                            <td class="hidden-sm hidden-xs">2019-09-22</td>
+                                            <td>Nie</td>
+                                            <td class="hidden-sm hidden-xs">2019-09-22</td>
+                                            <td>
+                                                <div class="btn-group">
+                                                    <button type="button" class="btn-u btn-brd color-red btn-brd-hover btn-u-sm dropdown-toggle bars" data-toggle="dropdown">
+                                                        <i class="fa fa fa-bars"></i>
+                                                        <span class="sr-only">Toggle Dropdown</span>                            
+                                                    </button>
+                                                    <ul class="dropdown-menu" role="menu">
+                                                            <li><a onclick=" $('#confirmDelete').modal('show')"><i class="fa fa-trash"></i> Usuń</a></li>                                                  
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>11</td>
+                                            <td>a@a.com</td>
+                                            <td>19292929210 - Tyger Gym S. z o.o.</td>
+                                            <td>Weryfikacja RODO - kroki postępowania</td>
+                                            <td>RODO</td>
+                                            <td class="hidden-sm hidden-xs">2019-02-22</td>
+                                            <td>Nie</td>
+                                            <td class="hidden-sm hidden-xs">2019-02-22</td>
+                                            <td>
+                                                <div class="btn-group">
+                                                    <button type="button" class="btn-u btn-brd color-red btn-brd-hover btn-u-sm dropdown-toggle bars" data-toggle="dropdown">
+                                                        <i class="fa fa fa-bars"></i>
+                                                        <span class="sr-only">Toggle Dropdown</span>                            
+                                                    </button>
+                                                    <ul class="dropdown-menu" role="menu">
+                                                            <li><a onclick=" $('#confirmDelete').modal('show')"><i class="fa fa-trash"></i> Usuń</a></li>                                                  
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>12</td>
+                                            <td>a@a.com</td>
+                                            <td>19292929210 - Tyger Gym S. z o.o.</td>
+                                            <td>Weryfikacja RODO - kroki postępowania</td>
+                                            <td>RODO</td>
+                                            <td class="hidden-sm hidden-xs">2019-09-22</td>
+                                            <td>Tak</td>
+                                            <td class="hidden-sm hidden-xs">2019-09-22</td>
+                                            <td>
+                                                <div class="btn-group">
+                                                    <button type="button" class="btn-u btn-brd color-red btn-brd-hover btn-u-sm dropdown-toggle bars" data-toggle="dropdown">
+                                                        <i class="fa fa fa-bars"></i>
+                                                        <span class="sr-only">Toggle Dropdown</span>                            
+                                                    </button>
+                                                    <ul class="dropdown-menu" role="menu">
+                                                            <li><a onclick=" $('#confirmDelete').modal('show')"><i class="fa fa-trash"></i> Usuń</a></li>                                                  
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>10</td>
+                                            <td>a@a.com</td>
+                                            <td>19294429210 - Calypso</td>
+                                            <td>Weryfikacja RODO - kroki postępowania</td>
+                                            <td>RODO</td>
+                                            <td class="hidden-sm hidden-xs">2019-08-22</td>
+                                            <td>Nie</td>
+                                            <td class="hidden-sm hidden-xs">2019-08-22</td>
+                                            <td>
+                                                <div class="btn-group">
+                                                    <button type="button" class="btn-u btn-brd color-red btn-brd-hover btn-u-sm dropdown-toggle bars" data-toggle="dropdown">
+                                                        <i class="fa fa fa-bars"></i>
+                                                        <span class="sr-only">Toggle Dropdown</span>                            
+                                                    </button>
+                                                    <ul class="dropdown-menu" role="menu">
+                                                            <li><a onclick=" $('#confirmDelete').modal('show')"><i class="fa fa-trash"></i> Usuń</a></li>                                                  
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>pan@pasp.dads</td>
                                             <td>19292929210 - Tyger Gym S. z o.o.</td>
                                             <td>Pierwsza pomoc - szkolenie praktyczne RKO </td>
+                                            <td>PP</td>
+                                            
+                                            <td class="hidden-sm hidden-xs">2019-05-22</td>
+                                            <td>Tak</td>
                                             <td class="hidden-sm hidden-xs">2019-05-22</td>
                                             <td>
                                                 <div class="btn-group">
@@ -190,18 +301,20 @@
                                                         <span class="sr-only">Toggle Dropdown</span>                            
                                                     </button>
                                                     <ul class="dropdown-menu" role="menu">
-                                                            <li><a href="send_invitation.html"><i class="fa fa-pencil"></i> Edytuj</a></li>
-                                                            <li><a href="list_invited_mails.html"><i class="fa fa-at"></i> Lista zaproszonych</a></li>
-                                                            <li><a onclick=" $('#confirmBlocked').modal('show')"><i class="fa fa-lock"></i> Zablokuj</a></li>
-                                                        </ul>
+                                                            <li><a onclick=" $('#confirmDelete').modal('show')"><i class="fa fa-trash"></i> Usuń</a></li>                                                  
+                                                    </ul>
                                                 </div>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td>3</td>
+                                            <td>9</td>
+                                            <td>a@a.com</td>
                                             <td>19292929215 - Multisport Profit</td>
-                                            <td>Akademia Multisport - cz 1.<br>Akademia Multisport - cz 2.</td>
+                                            <td>Akademia Multisport - cz 2.</td>
+                                            <td>AMS</td>
                                             <td class="hidden-sm hidden-xs">2019-03-09</td>
+                                            <td>Nie</td>
+                                            <td class="hidden-sm hidden-xs">2019-03-22</td>
                                             <td>
                                                 <div class="btn-group">
                                                     <button type="button" class="btn-u btn-brd color-red btn-brd-hover btn-u-sm dropdown-toggle bars" data-toggle="dropdown">
@@ -209,22 +322,20 @@
                                                         <span class="sr-only">Toggle Dropdown</span>                            
                                                     </button>
                                                     <ul class="dropdown-menu" role="menu">
-                                                            <li><a href="send_invitation.html"><i class="fa fa-pencil"></i> Edytuj</a></li>
-                                                            <li><a href="list_invited_mails.html"><i class="fa fa-at"></i> Lista zaproszonych</a></li>
-                                                            <li><a onclick=" $('#confirmBlocked').modal('show')"><i class="fa fa-lock"></i> Zablokuj</a></li>
-                                                        
+                                                        <li><a onclick=" $('#confirmDelete').modal('show')"><i class="fa fa-trash"></i> Usuń</a></li>                                                  
                                                 </ul>
                                                 </div>
                                             </td>
                                         </tr>
                                         <tr>
                                             <td>4</td>
-                                          
+                                            <td>a@a.com</td>
                                             <td>19292929215 - FitProfit</td>
                                             <td>Akademia Multisport - cz 1.</td>
-                                           
+                                            <td>AMS</td>
                                             <td class="hidden-sm hidden-xs">2019-03-09</td>
-                                           
+                                            <td>Nie</td>
+                                            <td class="hidden-sm hidden-xs">2019-03-22</td>
                                             <td>
                                                 <div class="btn-group">
                                                     <button type="button" class="btn-u btn-brd color-red btn-brd-hover btn-u-sm dropdown-toggle bars" data-toggle="dropdown">
@@ -232,20 +343,19 @@
                                                         <span class="sr-only">Toggle Dropdown</span>                            
                                                     </button>
                                                     <ul class="dropdown-menu" role="menu">
-                                                            <li><a href="send_invitation.html"><i class="fa fa-pencil"></i> Edytuj</a></li>
-                                                            <li><a href="list_invited_mails.html"><i class="fa fa-at"></i> Lista zaproszonych</a></li>
-                                                            <li><a onclick=" $('#confirmBlocked').modal('show')"><i class="fa fa-lock"></i> Zablokuj</a></li>
-                                                        
-                                                 </ul>
+                                                        <li><a onclick=" $('#confirmDelete').modal('show')"><i class="fa fa-trash"></i> Usuń</a></li>                                                  
+                                                    </ul>
                                                 </div>
                                             </td>
                                         </tr>
                                         <tr>
                                             <td>5</td>
-                                         
-                                            <td>19292929210 - Tyger Gym S. z o.o.<br> 19292929215 - FitProfit</td>
+                                            <td>a@a.com</td>
+                                            <td>19292929215 - FitProfit</td>
                                             <td>Akademia Multisport - cz 2.</td>
-                                           
+                                            <td>AMS</td>
+                                            <td class="hidden-sm hidden-xs">2019-03-10</td>
+                                            <td>Nie</td>
                                             <td class="hidden-sm hidden-xs">2019-03-10</td>
                                             <td>
                                                 <div class="btn-group">
@@ -254,20 +364,19 @@
                                                         <span class="sr-only">Toggle Dropdown</span>                            
                                                     </button>
                                                     <ul class="dropdown-menu" role="menu">
-                                                            <li><a href="send_invitation.html"><i class="fa fa-pencil"></i> Edytuj</a></li>
-                                                            <li><a href="list_invited_mails.html"><i class="fa fa-at"></i> Lista zaproszonych</a></li>
-                                                            <li><a onclick=" $('#confirmBlocked').modal('show')"><i class="fa fa-lock"></i> Zablokuj</a></li>
-                                                        
-                                                </ul>
+                                                        <li><a onclick=" $('#confirmDelete').modal('show')"><i class="fa fa-trash"></i> Usuń</a></li>                                                  
+                                                    </ul>
                                                 </div>
                                             </td>
                                         </tr>
                                         <tr>
                                             <td>6</td>
-                                           
-                                            <td>19292929210 - Tyger Gym S. z o.o.<br> 19292929215 - FitProfit</td>
-                                            <td>Akademia Multisport - cz 1.<br>Akademia Multisport - cz 2. <br> Akademia Multisport - cz 3.</td>
-                                        
+                                            <td>a@a.com</td>
+                                            <td>19292929215 - FitProfit</td>
+                                            <td>Akademia Multisport - cz 3.</td>
+                                            <td>AMS</td>
+                                            <td class="hidden-sm hidden-xs">2019-03-11</td>
+                                            <td>Nie</td>
                                             <td class="hidden-sm hidden-xs">2019-03-11</td>
                                             <td>
                                                 <div class="btn-group">
@@ -276,11 +385,8 @@
                                                         <span class="sr-only">Toggle Dropdown</span>                            
                                                     </button>
                                                     <ul class="dropdown-menu" role="menu">
-                                                            <li><a href="send_invitation.html"><i class="fa fa-pencil"></i> Edytuj</a></li>
-                                                            <li><a href="list_invited_mails.html"><i class="fa fa-at"></i> Lista zaproszonych</a></li>
-                                                            <li><a onclick=" $('#confirmBlocked').modal('show')"><i class="fa fa-lock"></i> Zablokuj</a></li>
-                                                        
-                                                </ul>
+                                                            <li><a onclick=" $('#confirmDelete').modal('show')"><i class="fa fa-trash"></i> Usuń</a></li>                                                  
+                                                    </ul>
                                                 </div>
                                             </td>
                                         </tr>            
@@ -296,17 +402,18 @@
         </div><!--/End Wrapepr-->
 
 
+        <div class="modal fade" id="confirmDelete" tabindex="-1" role="dialog" aria-hidden="true">
 <!-- Modal -->
-<div class="modal fade" id="confirmBlocked" tabindex="-1" role="dialog" aria-hidden="true">
+
 <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
                 <button aria-hidden="true" data-dismiss="modal" class="close" type="button">×</button>
-                <h4 id="myModalPublish" class="modal-title">Zablokuj zaproszenie</h4>
+                <h4 id="myModalPublish" class="modal-title">Usuń zaproszenie e-mail</h4>
             </div>
             <div class="modal-body">
                 <div class="cbp_tmlabel">
-                    <p>Czy na pewno chcesz zablokować zaproszenie? Spowoduje to zablokowanie dostępu dla wszytskich e-maili z zaproszenia.
+                    <p>Czy na pewno chcesz usunąć zaproszenie dla wskazanego adresu e-mail?
                     </p>
                     <p>
                         Tej operacji nie można cofnąć!
@@ -314,13 +421,15 @@
                 </div>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn-u btn-u-default" onclick=" $('#confirmBlocked').modal('hide')">Anuluj</button>
-                 <button id="confirmButton" type="button" class="btn-u" onclick=" $('#confirmBlocked').modal('hide')">Zablokuj</button>
+                <button type="button" class="btn-u btn-u-default" onclick=" $('#confirmDelete').modal('hide')">Anuluj</button>
+                 <button id="confirmButton" type="button" class="btn-u" onclick=" $('#confirmDelete').modal('hide')">Usuń</button>
             </div>
         </div>
     </div>
     <!-- End Modal -->
-    </div>
+
+        </div>
+
 
         <!--=== Footer Version 1 ===-->
         <div class="footer-v1" id="includedContentFooter">
@@ -390,7 +499,7 @@
 
                 setTimeout(function () {
                     $('.dropdown-toggle').dropdown();
-                }, 1000);
+                }, 2000);
 
             });
         </script>
