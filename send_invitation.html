@@ -85,23 +85,41 @@
                                 <h4>Szkolenia</h4>
                                 <div class="row">
                                 <div class="col-md-12">
-                                        <label class="">Wybierz szkolenie </label>
-                                        <small>(pozostaw domyślny wybór lub wybierz dodatkowe pozycje)</small>
-                                        
-                                        <div class="input-group" style="max-width: fit-content">
-                                            <select  id="course-select" class="selectpicker input-block-level" multiple data-live-search="true"  title='Wybierz...'  data-selected-text-format="count>2" data-width="280px">
+                                    <section>
+                                            <label>Typ projektu</label>
+                                            <div class="input-group" style="width:100%">
+                                                <select class="selectpicker input-block-level"  data-selected-text-format="count>1" title='Wybierz...' data-width="100%">
                                                     <option  data-hidden="true"></option>	
-                                                    <option value="1" selected>Akademia Multisport - etap 1</option>	
-                                                    <option value="2">Pierwsza pomoc - </option>	
-                                                    <option value="3">Weryfikacja RODO - kroki postępowania</option>	
-                                                    <option value="4">Pierwsza pomoc - szkolenie praktyczne RKO</option>	
-                                                    <option value="5">Akademia Multisport - cz. 2.</option>
-                                                    <option value="6">Akademia Multisport - cz. 3.</option>
-                                            </select>
-                                            <span class="input-group-btn">
-                                                <button id="findPartnerReset" class="btn-u btn-u-dark margin-left-5" tabindex="-1" type="button"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Odznacz wszystko</button>
-                                            </span>
+                                                    <option value="1" >PP - Pierwsza pomoc</option>
+                                                    <option value="2" selected>AM - Akademia Multisport</option>
+                                                    <option value="3">BMEP - Business Management Executive Program</option>
+                                                    <option value="4">BMEPE - Business Management Executive Program Excellence</option>
+                                                    <option value="5">RODO - Vademecum RODO</option>
+                                                </select>
                                         </div>
+                                    </section>
+<section>
+        <label class="">Wybierz szkolenie </label>
+        <small>(pozostaw domyślny wybór lub wybierz dodatkowe pozycje)</small>
+        
+        <div class="input-group" style="max-width: fit-content">
+            <select  id="course-select" class="selectpicker input-block-level" multiple data-live-search="true"  title='Wybierz...'  data-selected-text-format="count>2" data-width="280px">
+                    <option  data-hidden="true"></option>	
+                    <option value="1" >Akademia Multisport - etap 1: 2019-01-12 10:00 - 2019-01-12 13:00; Gdańsk ul Grunwaldzka 2343, 80-214</option>	
+        <option value="2" >Akademia Multisport - etap 1: 2019-02-12 10:00 - 2019-02-12 13:00; Gdańsk ul Grunwaldzka 2343, 80-214</option>	
+        <option value="3" >Akademia Multisport - etap 1: 2019-02-12 10:00 - 2019-02-12 13:00; Warszawa ul. Plac Europejski 43, 00-43</option>
+        <option value="3" >Akademia Multisport - etap 2: 2019-06-12 10:00 - 2019-62-12 13:00; Warszawa ul. Plac Europejski 43, 00-43</option>
+        <option value="3" >Akademia Multisport - etap 3: 2019-08-22 10:00 - 2019-08-22 13:00; Warszawa ul. Plac Europejski 43, 00-43</option>
+
+            </select>
+            <span class="input-group-btn">
+                <button id="findPartnerReset" class="btn-u btn-u-dark margin-left-5" tabindex="-1" type="button"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Odznacz wszystko</button>
+            </span>
+        </div>
+</section>
+                                       
+
+                                       
                                     </div>
                                 </div>
                             </fieldset>
