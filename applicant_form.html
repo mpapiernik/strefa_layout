@@ -85,50 +85,74 @@
                 <div class="row blog-page blog-item">
                     <!-- Left Sidebar -->
                     <div class="col-md-10 col-md-offset-1 md-margin-bottom-60">
-                        <!--Survey Desc-->        
-                        <div class="blog margin-bottom-40">
-                            <div class="tag-box tag-box-v3">
-                                    <!--Invoice Detials-->
-                                    <h2>Akademia Multisport - etap 1</h2>
-                                    <div class="row invoice-info">
-                                        <div class="col-xs-6">
-                                            <ul class="list-unstyled">
-                                                <li><strong>Status: </strong>
-                                                    <span class="badge badge-u">Zapisy otwarte</span>
-                                                </li>
-                                                <li><strong>Projekt szkoleniowy: </strong>Akademia Multisport</li>
-                                                <li><strong>Publikacja: </strong>2019-01-02  08:00 - Trwa</li>
-                                            </ul>
-                                                 </ul>
-                                        </div>
-                                        <div class="col-xs-6">
-                                            <ul class="list-unstyled">
-                                                <li><strong>Czas trwania: </strong>2019-01-12 10:00 - 2019-01-12 13:00</li>
-                                                <li><strong>Zapisy: </strong>2019-01-02  08:00 - 2019-01-10 23:59</li>
-                                               
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="blog-img img-article">
-                                        <div class="carousel slide carousel-v1 " id="myCarousel">
-                                            <div class="carousel-inner img-center ">
-                                                <div class="item active">
-                                                    <img alt="" src="assets/img/befit.jpg">
-                                                </div>
-                
-                                            </div>
-                                        </div>
-                                    </div>
+                        <!--Survey Desc-->   
+                      
 
-                                <div class="tag-box tag-box-v3">
-                                    At vero eos et accusamus et <b> iusto odio </b> dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non libero consectetur adipiscing elit magna. Sed et quam lacus. Fusce condimentum eleifend enim a feugiat. Pellentesque viverra vehicula sem ut volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non libero magna. Sed et quam lacus. Fusce condimentum eleifend enim a feugiat mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio lorem ipsum dolor sit amet, mollitia animi, id est laborum et dolorum fug consectetur adipiscing elit. Ut non libero consectetur adipiscing elit magna.
-                                
-                                </div>
-                        </div>
+                       
                         <!--End Survey Desc-->        
                         <div class=" margin-bottom-50">
                             <!-- Post -->
-                            <form action="" method="post" id="sky-form3" class="sky-form">
+                          
+
+                            <form action="" method="post" class="sky-form blog margin-bottom-20">
+                                    <fieldset>
+                                        <section>
+
+                            <label class="label">Wybierz termin i miejsce szkolenia</label>
+                            <div class="input-group" style="width: 100%">
+                                <select  id="course-select" class="selectpicker input-block-level" data-live-search="true"  title='Wybierz...' data-width="100%">
+                                        <option value="0">Wybierz</option>	
+                                        <option value="1" >Akademia Multisport - etap 1: 2019-01-12 10:00 - 2019-01-12 13:00; Gdańsk ul Grunwaldzka 2343, 80-214</option>	
+                                        <option value="2" >Akademia Multisport - etap 1: 2019-02-12 10:00 - 2019-02-12 13:00; Gdańsk ul Grunwaldzka 2343, 80-214</option>	
+                                        <option value="3" >Akademia Multisport - etap 1: 2019-02-12 10:00 - 2019-02-12 13:00; Warszawa ul. Plac Europejski 43, 00-43</option>
+                                </select>
+                            </div>
+                        </section>
+                           </fieldset>
+                           </form>
+                                    <div class="blog margin-top-20"  id="info-section">
+                                            <div class="blog-img img-article">
+                                                    <div class="carousel slide carousel-v1 " id="myCarousel">
+                                                        <div class="carousel-inner img-center ">
+                                                            <div class="item active">
+                                                                <img id="img" alt="" src="assets/img/befit.jpg">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>    
+                                        
+                                        <div class="tag-box tag-box-v3">
+                                                    <!--Invoice Detials-->
+                                                    <h2 id="subject">Akademia Multisport - etap 1</h2>
+                                                    <div class="row invoice-info">
+                                                        <div class="col-xs-6">
+                                                            <ul class="list-unstyled">
+                                                                <li><strong>Status: </strong>
+                                                                    <span class="badge badge-u">Zapisy otwarte</span>
+                                                                </li>
+                                                                <li><strong>Projekt szkoleniowy: </strong>Akademia Multisport</li>
+                                                                <li><strong>Lokalizacja: </strong><span id="location">Gdańsk</span></li>
+                                                              
+                                                                 </ul>
+                                                        </div>
+                                                        <div class="col-xs-6">
+                                                            <ul class="list-unstyled">
+                                                                <li><strong>Czas trwania: </strong><span id="time">2019-01-12 10:00 - 2019-01-12 13:00</span></li>
+                                                               <li><strong>Zapisy: </strong><span id="enrollTime">2019-01-02  08:00 - 2019-01-10 23:59</span></li>
+                                                               
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                                                        
+                
+                                                <div class="tag-box tag-box-v3" id="text">
+                                                    At vero eos et accusamus et <b> iusto odio </b> dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non libero consectetur adipiscing elit magna. Sed et quam lacus. Fusce condimentum eleifend enim a feugiat. Pellentesque viverra vehicula sem ut volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non libero magna. Sed et quam lacus. Fusce condimentum eleifend enim a feugiat mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio lorem ipsum dolor sit amet, mollitia animi, id est laborum et dolorum fug consectetur adipiscing elit. Ut non libero consectetur adipiscing elit magna.
+                                                
+                                                </div>
+                                        </div>
+
+                                        <form action="" method="post" id="sky-form3" class="sky-form">
                                     <fieldset>
                                         <h4>Dane Partnera</h4>                  
                                             
@@ -351,6 +375,45 @@
                 setTimeout(function () {
                     $('.dropdown-toggle').dropdown();
                 }, 1000);
+
+                $('#info-section').hide();
+
+
+
+                var course = [
+                ["-", "-", "-","-","-"],
+                    ["Akademia Multisport - etap 1", "Opis 1 - lista prowadzacych", "2019-01-12 10:00 - 2019-01-12 13:00", "2019-01-01 8:00 - 2019-01-10 23:59", "Gdańsk ul Grunwaldzka 2343, 80-214"],
+                    ["Akademia Multisport - etap 1", "Opis 2 - lista prowadzacych", "2019-02-12 10:00 - 2019-02-12 13:00", "2019-02-01 8:00 - 2019-02-10 23:59", "Gdańsk ul Grunwaldzka 2343, 80-214"],
+                    ["Akademia Multisport - etap 1", "Opis 3 - lista prowadzacych", "2019-02-12 10:00 - 2019-02-12 13:00", "2019-02-01 8:00 - 2019-02-10 23:59", "Warszawa ul . Plan Europejski 43, 00-431"],
+                  
+                ];
+
+                function refreshCourse(project) {
+                    $('#subject').text(course[project][0]);
+                    $('#text').text(course[project][1]);
+                    $('#time').text(course[project][2]);
+                    $('#enrollTime').text(course[project][3]);
+                    $('#location').text(course[project][4]);
+
+                    $("#img").attr("src","assets/img/img" + project + ".jpg");
+                };
+
+
+
+                $('#course-select').change(function () {
+                    if($('#course-select').val() > 0 ) {
+                        refreshCourse($('#course-select').val());
+                        $('#info-section').show();
+                    }
+                    else {
+                        $('#info-section').hide();
+                    }
+
+                });
+
+
+
+                
             });
         </script> 
         <!--[if lt IE 9]>
