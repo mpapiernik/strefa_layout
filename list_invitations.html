@@ -87,18 +87,6 @@
                         <div class="row">
                             <div class="col-sm-12">
                                 <div class="row">
-                                    <div class="col-md-3">
-                                        <label>Wybierz Partnera</label>
-                                        <small>(wpisz NIP lub nazwę)</small>
-                                        <div class="input-group" style="width:100%">
-                                            <select class="selectpicker input-block-level" data-live-search="true" multiple=""   data-selected-text-format="count>1" title='Wybierz...' data-width="100%">
-                                                <option  data-hidden="true"></option>	
-                                                <option value="1" selected>19292929210 - Tyger Gym</option>	
-                                                <option value="2" selected>12345678910 - Calypso</option>	
-                                                <option value="3">19292929215 - FitProfit</option>	
-                                            </select>
-                                        </div>
-                                    </div>
                                     <div class="col-md-4">
                                             <label>Tytuł szkolenia</label>
                                             <input type="text" class="form-control" placeholder="Wpisz... ">
@@ -117,7 +105,7 @@
                                             </div>
                                         </div>
                                     
-                                    <div class="col-md-2">
+                                    <div class="col-md-5">
                                         <label>Data wysłania</label>
                                         <div class="input-group inline-group input-daterange input-group">
                                             <input type="text" class="form-control" name="start" placeholder="od"/>
@@ -137,8 +125,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-sm-2">
-                                            <a href="#" class="button btn-u"><i class="fa fa-download fa-fw"></i>Pobierz CSV</a>         
+                                    <div class="col-sm-6">       
                                         </div>
                                     <div class="search-open pull-right col-sm-3">
                                         <div class="input-group inline-group">
@@ -153,7 +140,6 @@
                                     <thead>
                                         <tr>
                                             <th>#</th>
-                                            <th>Partner</th>
                                             <th>Tytuł szkolenia</th>
                                             <th class="hidden-sm hidden-xs">Data wysłania</th>
                                             <th>Więcej</th>
@@ -162,7 +148,6 @@
                                     <tbody>
                                         <tr>
                                             <td>1</td>
-                                            <td>19292929210 - Tyger Gym S. z o.o.<br> 12345678910 - Calypso <br> 19292929215 - FitProfit</td>
                                             <td>Szkolenie otwarte z pierwszej pomocy 2019; Pierwsza pomoc - szkolenie praktyczne RKO ,</td>
                                             <td class="hidden-sm hidden-xs">2019-05-08</td>
                                             <td>
@@ -172,15 +157,16 @@
                                                         <span class="sr-only">Toggle Dropdown</span>                            
                                                     </button>
                                                     <ul class="dropdown-menu" role="menu">
+
+                                                            <li><a href=""><i class="fa fa-clipboard"></i> Skopiuj link do schowka</a></li>
                                                         <li><a href="send_invitation.html"><i class="fa fa-pencil"></i> Edytuj</a></li>
-                                                        <li><a href="list_invited_mails.html"><i class="fa fa-at"></i> Lista zaproszonych</a></li><li><a href="list_courses.html"><i class="fa fa-list"></i> Lista szkoleń</a></li>
+                                                        <li><a href="list_courses.html"><i class="fa fa-list"></i> Lista szkoleń</a></li>
                                                         <li><a onclick=" $('#confirmBlocked').modal('show')"><i class="fa fa-lock"></i> Zablokuj</a></li>
                                                     </ul>
                                                 </div>
                                             </td>
                                         </tr>
-                                            <td>2</td>
-                                            <td>19292929210 - Tyger Gym S. z o.o.</td>
+                                        <td>2</td>
                                             <td>Pierwsza pomoc - szkolenie praktyczne RKO </td>
                                             <td class="hidden-sm hidden-xs">2019-05-22</td>
                                             <td>
@@ -190,8 +176,10 @@
                                                         <span class="sr-only">Toggle Dropdown</span>                            
                                                     </button>
                                                     <ul class="dropdown-menu" role="menu">
+
+                                                            <li><a href=""><i class="fa fa-clipboard"></i> Skopiuj link do schowka</a></li>
                                                             <li><a href="send_invitation.html"><i class="fa fa-pencil"></i> Edytuj</a></li>
-                                                            <li><a href="list_invited_mails.html"><i class="fa fa-at"></i> Lista zaproszonych</a></li>
+                                                            
                                                             <li><a href="list_courses.html"><i class="fa fa-list"></i> Lista szkoleń</a></li>
                                                             <li><a onclick=" $('#confirmBlocked').modal('show')"><i class="fa fa-lock"></i> Zablokuj</a></li>
                                                         </ul>
@@ -200,7 +188,6 @@
                                         </tr>
                                         <tr>
                                             <td>3</td>
-                                            <td>19292929215 - Multisport Profit</td>
                                             <td>Akademia Multisport - cz 1.<br>Akademia Multisport - cz 2.</td>
                                             <td class="hidden-sm hidden-xs">2019-03-09</td>
                                             <td>
@@ -210,8 +197,10 @@
                                                         <span class="sr-only">Toggle Dropdown</span>                            
                                                     </button>
                                                     <ul class="dropdown-menu" role="menu">
+                                                        
+                                                            <li><a href=""><i class="fa fa-clipboard"></i> Skopiuj link do schowka</a></li>
                                                             <li><a href="send_invitation.html"><i class="fa fa-pencil"></i> Edytuj</a></li>
-                                                            <li><a href="list_invited_mails.html"><i class="fa fa-at"></i> Lista zaproszonych</a></li><li><a href="list_courses.html"><i class="fa fa-list"></i> Lista szkoleń</a></li>
+                                                            <li><a href="list_courses.html"><i class="fa fa-list"></i> Lista szkoleń</a></li>
                                                             <li><a onclick=" $('#confirmBlocked').modal('show')"><i class="fa fa-lock"></i> Zablokuj</a></li>
                                                         
                                                 </ul>
@@ -221,7 +210,6 @@
                                         <tr>
                                             <td>4</td>
                                           
-                                            <td>19292929215 - FitProfit</td>
                                             <td>Akademia Multisport - cz 1.</td>
                                            
                                             <td class="hidden-sm hidden-xs">2019-03-09</td>
@@ -233,8 +221,10 @@
                                                         <span class="sr-only">Toggle Dropdown</span>                            
                                                     </button>
                                                     <ul class="dropdown-menu" role="menu">
+
+                                                            <li><a href=""><i class="fa fa-clipboard"></i> Skopiuj link do schowka</a></li>
                                                             <li><a href="send_invitation.html"><i class="fa fa-pencil"></i> Edytuj</a></li>
-                                                            <li><a href="list_invited_mails.html"><i class="fa fa-at"></i> Lista zaproszonych</a></li><li><a href="list_courses.html"><i class="fa fa-list"></i> Lista szkoleń</a></li>
+                                                            <li><a href="list_courses.html"><i class="fa fa-list"></i> Lista szkoleń</a></li>
                                                             <li><a onclick=" $('#confirmBlocked').modal('show')"><i class="fa fa-lock"></i> Zablokuj</a></li>
                                                         
                                                  </ul>
@@ -244,7 +234,6 @@
                                         <tr>
                                             <td>5</td>
                                          
-                                            <td>19292929210 - Tyger Gym S. z o.o.<br> 19292929215 - FitProfit</td>
                                             <td>Akademia Multisport - cz 2.</td>
                                            
                                             <td class="hidden-sm hidden-xs">2019-03-10</td>
@@ -255,8 +244,10 @@
                                                         <span class="sr-only">Toggle Dropdown</span>                            
                                                     </button>
                                                     <ul class="dropdown-menu" role="menu">
+
+                                                            <li><a href=""><i class="fa fa-clipboard"></i> Skopiuj link do schowka</a></li>
                                                             <li><a href="send_invitation.html"><i class="fa fa-pencil"></i> Edytuj</a></li>
-                                                            <li><a href="list_invited_mails.html"><i class="fa fa-at"></i> Lista zaproszonych</a></li><li><a href="list_courses.html"><i class="fa fa-list"></i> Lista szkoleń</a></li>
+                                                            <li><a href="list_courses.html"><i class="fa fa-list"></i> Lista szkoleń</a></li>
                                                             <li><a onclick=" $('#confirmBlocked').modal('show')"><i class="fa fa-lock"></i> Zablokuj</a></li>
                                                         
                                                 </ul>
@@ -266,7 +257,6 @@
                                         <tr>
                                             <td>6</td>
                                            
-                                            <td>19292929210 - Tyger Gym S. z o.o.<br> 19292929215 - FitProfit</td>
                                             <td>Akademia Multisport - cz 1.<br>Akademia Multisport - cz 2. <br> Akademia Multisport - cz 3.</td>
                                         
                                             <td class="hidden-sm hidden-xs">2019-03-11</td>
@@ -277,8 +267,10 @@
                                                         <span class="sr-only">Toggle Dropdown</span>                            
                                                     </button>
                                                     <ul class="dropdown-menu" role="menu">
+
+                                                            <li><a href=""><i class="fa fa-clipboard"></i> Skopiuj link do schowka</a></li>
                                                             <li><a href="send_invitation.html"><i class="fa fa-pencil"></i> Edytuj</a></li>
-                                                            <li><a href="list_invited_mails.html"><i class="fa fa-at"></i> Lista zaproszonych</a></li><li><a href="list_courses.html"><i class="fa fa-list"></i> Lista szkoleń</a></li>
+                                                            <li><a href="list_courses.html"><i class="fa fa-list"></i> Lista szkoleń</a></li>
                                                             <li><a onclick=" $('#confirmBlocked').modal('show')"><i class="fa fa-lock"></i> Zablokuj</a></li>
                                                         
                                                 </ul>
@@ -307,7 +299,7 @@
             </div>
             <div class="modal-body">
                 <div class="cbp_tmlabel">
-                    <p>Czy na pewno chcesz zablokować zaproszenie? Spowoduje to zablokowanie dostępu dla wszytskich e-maili z zaproszenia.
+                    <p>Czy na pewno chcesz zablokować zaproszenie? Spowoduje to zablokowanie dostępu dla wszytskich osób, który otrzymały link do zaproszenia.
                     </p>
                     <p>
                         Tej operacji nie można cofnąć!
