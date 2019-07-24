@@ -147,7 +147,7 @@
                                     <p>
                                         Format: png, jpg, jpeg, bmp.
                                         </br>
-                                        Wymiar: 650px na 250px
+                                        Wymiar: 650px na 350px
                                     </p>
                                 </section>
                                 <section>
@@ -158,7 +158,7 @@
                                                 <div class="item active">
                                                     <img id="cropImage" class="cropimage" alt="" src="assets/img/demo.jpg"
                                                             cropwidth="650"
-                                                            cropheight="250"/>
+                                                            cropheight="350"/>
                                                     <div class="download">
                                                     </div>
                                                 </div>
@@ -573,11 +573,11 @@
 
                 var limits = [
                 ["-", "-", 0, 0, 0, 0],
-                    ["Pierwsza pomoc", "Opis 1", 10, 14, 10, 72],
-                    ["Akademia Multisport", "Opis 2", 21, 25, 20, 105],
-                    ["Business Management Executive Program", "Opis 3", 25, 28, 10, 114],
+                    ["Bezpłatne szkolenia dla Partnerów Benefit Systems - zapisz się!", "Zadbaj o bezpieczeństwo w Twoim obiekcie! \n Rusza kolejna edycja bezpłatnych szkoleń z Pierwszej Pomocy dla Partnerów Benefit Systems pod hasłem „Po pierwsze: BEZPIECZNIE!”. \n\nZapisz się na praktyczne warsztaty pod okiem profesjonalistów i zyskaj cenną wiedzę.\n Nie zwlekaj – liczba miejsc ograniczona!  \n\nJak się zapisać? \n Dostępne terminy\nSprawdź dostępne terminy: \n7 maja – Warszawa \n10 maja – Poznań", 10, 14, 10, 72],
+                    ["Akademia MultiSport -  IV moduł tematyczny", "„Skuteczny marketing nowoczesnego podmiotu działającego w branży fitness & wellness.”\n Dowiedz się więcej o tematyce szkolenia i naszych trenerach.", 21, 25, 20, 105],
+                    ["Zapisz się już dziś! - Business Management Executive Program", "Business Management Executive Program\n\nTo program szkoleniowy dedykowany dla właścicieli \ni menedżerów obiektów partnerskich zainteresowanych poszerzeniem swojego spojrzenia na organizację i uzyskaniem wiedzy na temat najnowszych trendów w zarządzaniu. \n\nDOWIEDZ SIĘ WIĘCEJ \nTutaj znajdziesz również terminy zjazdów\n\n\nDlaczego warto? \nszkolenie prowadzone jest przez ICAN Institute, który jest polskim liderem w propagowaniu najnowszych trendów i metod zarządzania\n• omawiane case study pomogą Ci spojrzeć na własną firmę z zupełnie nowej perspektywy\n• otrzymasz prestiżowy certyfikat światowego autorytetu w dziedzinie edukacji menedżerów\nKoszt \nW ramach współpracy z Benefit Systems, koszt uczestnictwa dla naszych Partnerów to tylko 1000 PLN netto.", 25, 28, 10, 114],
                     ["Business Management Executive Program Excellence", "Opis 4", 25, 28, 10, 114],
-                    ["Vademecum RODO", "Opis 5", 0,  0 , 0,  0]
+                    ["Ochrona danych osobowych – „Vademecum RODO” - Zapisz się na szkolenie w Rzeszowie!", "Jak przetwarzać dane osobowe zgodnie z RODO?\n\nRusza kolejna edycja bezpłatnych szkoleń\n\n Ochrona danych osobowych – „Vademecum RODO”.\n\nZapisz się na praktyczne warsztaty pod okiem profesjonalistów i zyskaj cenną wiedzę. Dowiedz się WIĘCEJ o tematyce szkolenia i naszych trenerach. \n\n\nZapisz się na szkolenie\n31 maja w godz. 9.00-17.00.\n\n\nRzeszów\nCentrum Konferencyjne „Hetman” \nUl. Langiewicza 29 \n35-021 Rzeszów \n", 0,  0 , 0,  0]
                 ];
 
                 function refreshLimits(project) {
@@ -588,7 +588,7 @@
                     $('#reserveList').val(limits[project][4]);
                     $('#maxApplication').val(limits[project][5]);
 
-                    $("#cropImage").attr("src","assets/img/img" + project + ".jpg");
+                    $("#cropImage").attr("src","assets/img/courses/course_" + project + ".png");
                 };
 
 
