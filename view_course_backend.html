@@ -813,7 +813,8 @@
                 });
 
                 $('.addRowButton').on('click', function() {
-                    dt.row.add(['Calypso Fitness Gym (432342423)','342 - Galeria Morena','Pracownik','Anna Nowak (a.nowak@calypso.com)','2018-02-02 12:23:23','Poza listą','Nowe', buttons])
+                    var curDate = new Date().toJSON().replace('T', ' ').slice(0,19);
+                    dt.row.add(['Calypso Fitness Gym (432342423)','342 - Galeria Morena','Pracownik','Anna Nowak (a.nowak@calypso.com)',curDate,'Poza listą','Nowe', buttons])
                     .draw(false);
                     updateListLimits();
                 });
