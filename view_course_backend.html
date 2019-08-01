@@ -590,9 +590,7 @@
                                     <thead>
                                         <tr>
                                             <tr>
-                                               
-                                                <th>Nazwa Partnera</th>
-                                                <th>NIP Partnera</th>
+                                                <th>Nazwa Partnera (NIP)</th>
                                                 <th>Obiekt</th>
                                                 <th>Stanowisko</th>
                                                 <th>Uczestnik</th>
@@ -714,7 +712,7 @@
                     var rows = document.getElementById('example').rows,
                         len = rows.length,
                         i,
-                        cellNum = 6,
+                        cellNum = 5,
                         count = 0,
                         cell;
 
@@ -732,7 +730,7 @@
                     var rows = document.getElementById('example').rows,
                         len = rows.length,
                         i,
-                        cellNum = 6,
+                        cellNum = 5,
                         count = 0,
                         cell;
 
@@ -791,24 +789,24 @@
                 var deleteButton = '<button type="button" class="tabledit-delete-button btn-u btn-brd btn-u-dark btn-brd-hover btn-u-sm margin-left-5" style="float: none;" title="Usuń" >\
                                         <i class="fa fa-trash"></i>\
                                     </button>';
-                var viewButton = '<button type="button" class="tabledit-preview-button btn-u btn-brd btn-brd-hover btn-u-sm margin-left-5" style="float: none;" title="Zobacz szczegóły"  onclick="location.href = \'applicant_form.html\'">\
+                var viewButton = '<button type="button" class="tabledit-preview-button btn-u btn-brd btn-brd-hover btn-u-sm margin-left-5" style="float: none;" title="Zobacz szczegóły"  onclick="location.href = \'applicant_form_view.html\'">\
                                         <i class="fa fa-eye"></i>\
                                     </button>';
                 var buttons = '<div class="tabledit-toolbar btn-toolbar" style="text-align: left;">'
                                 + verifyButton + confirmButton + rejectButton + resignButton + deleteButton + viewButton + '</div>';
                 var rows = [
-                    ['Calypso Fitness Gym','432342423','342 - Galeria Morena','Pracownik','Anna Nowak (a.nowak@calypso.com)','2018-02-02 12:23:23','Lista podstawowa','Potwierdzone',
+                    ['Calypso Fitness Gym (432342423)','342 - Galeria Morena','Pracownik','Anna Nowak (a.nowak@calypso.com)','2018-02-02 12:23:23','Lista podstawowa','Potwierdzone',
                      buttons],
-                    ['Calypso Fitness Gym','432342423','342 - Galeria Morena','Pracownik','Anna Nowak (a.nowak@calypso.com)','2018-02-02 12:23:23','Lista podstawowa','Potwierdzone', buttons],
-                    ['Calypso Fitness Gym','432342423','342 - Galeria Morena','Pracownik','Anna Nowak (a.nowak@calypso.com)','2018-02-02 12:23:23','Lista podstawowa','Potwierdzone', buttons],
-                    ['Calypso Fitness Gym','432342423','342 - Galeria Morena','Pracownik','Anna Nowak (a.nowak@calypso.com)','2018-02-02 12:23:23','Lista podstawowa','Potwierdzone', buttons],
-                    ['Calypso Fitness Gym','432342423','342 - Galeria Morena','Pracownik','Anna Nowak (a.nowak@calypso.com)','2018-02-02 12:23:23','Lista podstawowa','Weryfikacja', buttons],
-                    ['Calypso Fitness Gym','432342423','342 - Galeria Morena','Pracownik','Anna Nowak (a.nowak@calypso.com)','2018-02-02 12:23:23','Lista rezerwowa','Weryfikacja', buttons],
-                    ['Calypso Fitness Gym','432342423','342 - Galeria Morena','Pracownik','Anna Nowak (a.nowak@calypso.com)','2018-02-02 12:23:23','Lista rezerwowa','Potwierdzone', buttons],
-                    ['Calypso Fitness Gym','432342423','342 - Galeria Morena','Pracownik','Anna Nowak (a.nowak@calypso.com)','2018-02-02 12:23:23','Lista rezerwowa','Weryfikacja', buttons],
-                    ['Calypso Fitness Gym','432342423','342 - Galeria Morena','Pracownik','Anna Nowak (a.nowak@calypso.com)','2018-02-02 12:23:23','Lista rezerwowa','Weryfikacja', buttons],
-                    ['Calypso Fitness Gym','432342423','342 - Galeria Morena','Pracownik','Anna Nowak (a.nowak@calypso.com)','2018-02-02 12:23:23','Poza listą','Nowe', buttons],
-                    ['Calypso Fitness Gym','432342423','342 - Galeria Morena','Pracownik','Anna Nowak (a.nowak@calypso.com)','2018-02-02 12:23:23','Poza listą','Odrzucone', buttons]
+                    ['Calypso Fitness Gym (432342423)','342 - Galeria Morena','Pracownik','Anna Nowak (a.nowak@calypso.com)','2018-02-02 12:23:23','Lista podstawowa','Potwierdzone', buttons],
+                    ['Calypso Fitness Gym (432342423)','342 - Galeria Morena','Pracownik','Anna Nowak (a.nowak@calypso.com)','2018-02-02 12:23:23','Lista podstawowa','Potwierdzone', buttons],
+                    ['Calypso Fitness Gym (432342423)','342 - Galeria Morena','Pracownik','Anna Nowak (a.nowak@calypso.com)','2018-02-02 12:23:23','Lista podstawowa','Potwierdzone', buttons],
+                    ['Calypso Fitness Gym (432342423)','342 - Galeria Morena','Pracownik','Anna Nowak (a.nowak@calypso.com)','2018-02-02 12:23:23','Lista podstawowa','Weryfikacja', buttons],
+                    ['Calypso Fitness Gym (432342423)','342 - Galeria Morena','Pracownik','Anna Nowak (a.nowak@calypso.com)','2018-02-02 12:23:23','Lista rezerwowa','Weryfikacja', buttons],
+                    ['Calypso Fitness Gym (432342423)','342 - Galeria Morena','Pracownik','Anna Nowak (a.nowak@calypso.com)','2018-02-02 12:23:23','Lista rezerwowa','Potwierdzone', buttons],
+                    ['Calypso Fitness Gym (432342423)','342 - Galeria Morena','Pracownik','Anna Nowak (a.nowak@calypso.com)','2018-02-02 12:23:23','Lista rezerwowa','Weryfikacja', buttons],
+                    ['Calypso Fitness Gym (432342423)','342 - Galeria Morena','Pracownik','Anna Nowak (a.nowak@calypso.com)','2018-02-02 12:23:23','Lista rezerwowa','Weryfikacja', buttons],
+                    ['Calypso Fitness Gym (432342423)','342 - Galeria Morena','Pracownik','Anna Nowak (a.nowak@calypso.com)','2018-02-02 12:23:23','Poza listą','Nowe', buttons],
+                    ['Calypso Fitness Gym (432342423)','342 - Galeria Morena','Pracownik','Anna Nowak (a.nowak@calypso.com)','2018-02-02 12:23:23','Poza listą','Odrzucone', buttons]
                 ];
     
                 var idIncrement = 1;
@@ -821,7 +819,7 @@
                         targets:   0,
                     },
                     {
-                        targets: 8,
+                        targets: 7,
                         createdCell: function (td, cellData, rowData, row, col) {
                             $(td).css('white-space', 'nowrap');
                         }
@@ -844,14 +842,15 @@
                 });
 
                 $('.addRowButton').on('click', function() {
-                    dt.row.add(['Calypso Fitness Gym','432342423','342 - Galeria Morena','Pracownik','Anna Nowak (a.nowak@calypso.com)','2018-02-02 12:23:23','Poza listą','Nowe', buttons])
+                    var curDate = new Date().toJSON().replace('T', ' ').slice(0,19);
+                    dt.row.add(['Calypso Fitness Gym (432342423)','342 - Galeria Morena','Pracownik','Anna Nowak (a.nowak@calypso.com)',curDate,'Poza listą','Nowe', buttons])
                     .draw(false);
                     updateListLimits();
                 });
 
                 $(document).on('click', '.tabledit-verify-button', function() {
-                    $(this).parents().eq(2).find('td:nth-child(8)').text('Weryfikacja');
-                    var listState = $(this).parents().eq(2).find('td:nth-child(7)');
+                    $(this).parents().eq(2).find('td:nth-child(7)').text('Weryfikacja');
+                    var listState = $(this).parents().eq(2).find('td:nth-child(6)');
                     if (listState.text() === 'Poza listą') {
                         if (!basicLimitReached()) {
                             listState.text('Lista podstawowa');
@@ -864,8 +863,8 @@
                 });
 
                 $(document).on('click', '.tabledit-confirm-button', function() {
-                    $(this).parents().eq(2).find('td:nth-child(8)').text('Potwierdzone');
-                    var listState = $(this).parents().eq(2).find('td:nth-child(7)');
+                    $(this).parents().eq(2).find('td:nth-child(7)').text('Potwierdzone');
+                    var listState = $(this).parents().eq(2).find('td:nth-child(6)');
                     if (listState.text() === 'Poza listą') {
                         if (!basicLimitReached()) {
                             listState.text('Lista podstawowa');
@@ -878,8 +877,8 @@
                 });
 
                 $(document).on('click', '.tabledit-reject-button', function() {
-                    $(this).parents().eq(2).find('td:nth-child(8)').text('Odrzucone');
-                    var listState = $(this).parents().eq(2).find('td:nth-child(7)');
+                    $(this).parents().eq(2).find('td:nth-child(7)').text('Odrzucone');
+                    var listState = $(this).parents().eq(2).find('td:nth-child(6)');
                     if (listState.text() === 'Lista podstawowa' || listState.text() === 'Lista rezerwowa') {
                         listState.text('Poza listą');
                     }
@@ -888,8 +887,8 @@
                 });
 
                 $(document).on('click', '.tabledit-resign-button', function() {
-                    $(this).parents().eq(2).find('td:nth-child(8)').text('Rezygnacja');
-                    var listState = $(this).parents().eq(2).find('td:nth-child(7)');
+                    $(this).parents().eq(2).find('td:nth-child(7)').text('Rezygnacja');
+                    var listState = $(this).parents().eq(2).find('td:nth-child(6)');
                     if (listState.text() === 'Lista podstawowa' || listState.text() === 'Lista rezerwowa') {
                         listState.text('Poza listą');
                     }
@@ -907,7 +906,6 @@
         </script>
         <script>
             $(function () {
-                $("#includedContentHeader").load("header_backend.html");
                 $("#includedContentFooter").load("footer.html");
                 $("#includedContentSideBar").load("sidebar.html");
                
