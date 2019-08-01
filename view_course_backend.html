@@ -189,7 +189,7 @@
                                                     <p class="name">Liczba zgłoszeń</p>
                                                 </th>
                                                 <th class="t-align-r">
-                                                    <p id="totalCount">17</p>
+                                                    <p id="totalCount">11</p>
                                                 </th>
                                                 <th class="t-align-r">
                                                         <p>30</p>
@@ -313,7 +313,7 @@
                                                             </label>
                                                         </section>
                                                         <section class="col col-6">
-                                                                <label class="label">Potwierdzone <span class="color-red">*</span></label>
+                                                                <label class="label">Lista podstawowa <span class="color-red">*</span></label>
                                                             <label class="input">
                                                                 <i class="icon-append fa fa-user"></i>
                                                                 <input type="text" id="basicList" value="25">
@@ -324,7 +324,7 @@
                                                 <section class="col col-6">
                                                     <div class="row">
                                                         <section class="col col-6">
-                                                                <label class="label">Weryfikacja <span class="color-red">*</span></label>
+                                                                <label class="label">Lista rezerwowa <span class="color-red">*</span></label>
                                                             <label class="input">
                                                                 <i class="icon-append fa fa-user-plus"></i>
                                                                 <input type="text" id="reserveList" value="10">
@@ -570,12 +570,12 @@
                                             <label>Stanowisko</label>
                                             <div class="input-group" style="width:100%">
                                                 <select class="selectpicker input-block-level"  data-selected-text-format="count>1"  multiple="" title='Wybierz...' data-width="100%">
-                                                    <option  data-hidden="true"></option>	
-                                                    <option value="1"  >Właściciel</option>	
-                                                    <option value="2"  >Trener</option>
-                                                    <option value="3"  >Instruktor</option>
-                                                    <option value="4"  selected>Pracownik recepcji</option>
-                                                    <option value="5"  >Manager</option>
+                                                    <option value="0"  >Pracownik administracyjny/marketing</option>	
+                                                    <option value="1"  >Trener</option>	
+                                                    <option value="2"  >Instruktor</option>
+                                                    <option value="3"  >Właściciel</option>
+                                                    <option value="4"  >Manager</option>
+                                                    <option value="5"  selected>Pracownik recepcji</option>
                                                 </select>
                                             </div>
                                         </div>
@@ -590,7 +590,8 @@
                                     <thead>
                                         <tr>
                                             <tr>
-                                                <th>Nazwa Partnera (NIP)</th>
+                                                <th>Nazwa Partnera</th>
+                                                <th>NIP</th>
                                                 <th>Obiekt</th>
                                                 <th>Stanowisko</th>
                                                 <th>Uczestnik</th>
@@ -761,8 +762,9 @@
                     $('#basicListCount').text(basicListCount);
                     var reserveListCount = countReserveList();
                     $('#reserveListCount').text(reserveListCount);
-                    $('#unlistedCount').text(document.getElementById('example').rows.length - (basicListCount + reserveListCount));
-                    $('#totalCount').text(basicListCount + reserveListCount);
+                    var unlistedCount = document.getElementById('example').rows.length - (basicListCount + reserveListCount);
+                    $('#unlistedCount').text(unlistedCount);
+                    $('#totalCount').text(basicListCount + reserveListCount + unlistedCount);
                 }
 
                 function updateLists() {
@@ -795,18 +797,18 @@
                 var buttons = '<div class="tabledit-toolbar btn-toolbar" style="text-align: left;">'
                                 + verifyButton + confirmButton + rejectButton + resignButton + deleteButton + viewButton + '</div>';
                 var rows = [
-                    ['Calypso Fitness Gym (432342423)','342 - Galeria Morena','Pracownik','Anna Nowak (a.nowak@calypso.com)','2018-02-02 12:23:23','Lista podstawowa','Potwierdzone',
+                    ['Calypso Fitness Gym','432342423','342 - Galeria Morena','Pracownik','Anna Nowak (a.nowak@calypso.com)','2018-02-02 12:23:23','Lista podstawowa','Potwierdzone',
                      buttons],
-                    ['Calypso Fitness Gym (432342423)','342 - Galeria Morena','Pracownik','Anna Nowak (a.nowak@calypso.com)','2018-02-02 12:23:23','Lista podstawowa','Potwierdzone', buttons],
-                    ['Calypso Fitness Gym (432342423)','342 - Galeria Morena','Pracownik','Anna Nowak (a.nowak@calypso.com)','2018-02-02 12:23:23','Lista podstawowa','Potwierdzone', buttons],
-                    ['Calypso Fitness Gym (432342423)','342 - Galeria Morena','Pracownik','Anna Nowak (a.nowak@calypso.com)','2018-02-02 12:23:23','Lista podstawowa','Potwierdzone', buttons],
-                    ['Calypso Fitness Gym (432342423)','342 - Galeria Morena','Pracownik','Anna Nowak (a.nowak@calypso.com)','2018-02-02 12:23:23','Lista podstawowa','Weryfikacja', buttons],
-                    ['Calypso Fitness Gym (432342423)','342 - Galeria Morena','Pracownik','Anna Nowak (a.nowak@calypso.com)','2018-02-02 12:23:23','Lista rezerwowa','Weryfikacja', buttons],
-                    ['Calypso Fitness Gym (432342423)','342 - Galeria Morena','Pracownik','Anna Nowak (a.nowak@calypso.com)','2018-02-02 12:23:23','Lista rezerwowa','Potwierdzone', buttons],
-                    ['Calypso Fitness Gym (432342423)','342 - Galeria Morena','Pracownik','Anna Nowak (a.nowak@calypso.com)','2018-02-02 12:23:23','Lista rezerwowa','Weryfikacja', buttons],
-                    ['Calypso Fitness Gym (432342423)','342 - Galeria Morena','Pracownik','Anna Nowak (a.nowak@calypso.com)','2018-02-02 12:23:23','Lista rezerwowa','Weryfikacja', buttons],
-                    ['Calypso Fitness Gym (432342423)','342 - Galeria Morena','Pracownik','Anna Nowak (a.nowak@calypso.com)','2018-02-02 12:23:23','Poza listą','Nowe', buttons],
-                    ['Calypso Fitness Gym (432342423)','342 - Galeria Morena','Pracownik','Anna Nowak (a.nowak@calypso.com)','2018-02-02 12:23:23','Poza listą','Odrzucone', buttons]
+                    ['Calypso Fitness Gym','432342423','342 - Galeria Morena','Pracownik','Anna Nowak (a.nowak@calypso.com)','2018-02-02 12:23:23','Lista podstawowa','Potwierdzone', buttons],
+                    ['Calypso Fitness Gym','432342423','342 - Galeria Morena','Pracownik','Anna Nowak (a.nowak@calypso.com)','2018-02-02 12:23:23','Lista podstawowa','Potwierdzone', buttons],
+                    ['Calypso Fitness Gym','432342423','342 - Galeria Morena','Pracownik','Anna Nowak (a.nowak@calypso.com)','2018-02-02 12:23:23','Lista podstawowa','Potwierdzone', buttons],
+                    ['Calypso Fitness Gym','432342423','342 - Galeria Morena','Pracownik','Anna Nowak (a.nowak@calypso.com)','2018-02-02 12:23:23','Lista podstawowa','Weryfikacja', buttons],
+                    ['Calypso Fitness Gym','432342423','342 - Galeria Morena','Pracownik','Anna Nowak (a.nowak@calypso.com)','2018-02-02 12:23:23','Lista rezerwowa','Weryfikacja', buttons],
+                    ['Calypso Fitness Gym','432342423','342 - Galeria Morena','Pracownik','Anna Nowak (a.nowak@calypso.com)','2018-02-02 12:23:23','Lista rezerwowa','Potwierdzone', buttons],
+                    ['Calypso Fitness Gym','432342423','342 - Galeria Morena','Pracownik','Anna Nowak (a.nowak@calypso.com)','2018-02-02 12:23:23','Lista rezerwowa','Weryfikacja', buttons],
+                    ['Calypso Fitness Gym','432342423','342 - Galeria Morena','Pracownik','Anna Nowak (a.nowak@calypso.com)','2018-02-02 12:23:23','Lista rezerwowa','Weryfikacja', buttons],
+                    ['Calypso Fitness Gym','432342423','342 - Galeria Morena','Pracownik','Anna Nowak (a.nowak@calypso.com)','2018-02-02 12:23:23','Poza listą','Nowe', buttons],
+                    ['Calypso Fitness Gym','432342423','342 - Galeria Morena','Pracownik','Anna Nowak (a.nowak@calypso.com)','2018-02-02 12:23:23','Poza listą','Odrzucone', buttons]
                 ];
     
                 var idIncrement = 1;
@@ -843,7 +845,7 @@
 
                 $('.addRowButton').on('click', function() {
                     var curDate = new Date().toJSON().replace('T', ' ').slice(0,19);
-                    dt.row.add(['Calypso Fitness Gym (432342423)','342 - Galeria Morena','Pracownik','Anna Nowak (a.nowak@calypso.com)',curDate,'Poza listą','Nowe', buttons])
+                    dt.row.add(['Calypso Fitness Gym','432342423','342 - Galeria Morena','Pracownik','Anna Nowak (a.nowak@calypso.com)',curDate,'Poza listą','Nowe', buttons])
                     .draw(false);
                     updateListLimits();
                 });
