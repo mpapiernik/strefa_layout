@@ -797,18 +797,18 @@
                 var buttons = '<div class="tabledit-toolbar btn-toolbar" style="text-align: left;">'
                                 + verifyButton + confirmButton + rejectButton + resignButton + deleteButton + viewButton + '</div>';
                 var rows = [
-                    ['Calypso Fitness Gym','432342423','342 - Galeria Morena','Pracownik','Anna Nowak (a.nowak@calypso.com)','2018-02-02 12:23:23','Lista podstawowa','Potwierdzone',
+                    ['Calypso Fitness Gym','432342423','342 - Galeria Morena','Instruktor','Anna Nowak (a.nowak@calypso.com)','2018-02-02 12:23:23','Lista podstawowa','Potwierdzone',
                      buttons],
-                    ['Calypso Fitness Gym','432342423','342 - Galeria Morena','Pracownik','Anna Nowak (a.nowak@calypso.com)','2018-02-02 12:23:23','Lista podstawowa','Potwierdzone', buttons],
-                    ['Calypso Fitness Gym','432342423','342 - Galeria Morena','Pracownik','Anna Nowak (a.nowak@calypso.com)','2018-02-02 12:23:23','Lista podstawowa','Potwierdzone', buttons],
-                    ['Calypso Fitness Gym','432342423','342 - Galeria Morena','Pracownik','Anna Nowak (a.nowak@calypso.com)','2018-02-02 12:23:23','Lista podstawowa','Potwierdzone', buttons],
-                    ['Calypso Fitness Gym','432342423','342 - Galeria Morena','Pracownik','Anna Nowak (a.nowak@calypso.com)','2018-02-02 12:23:23','Lista podstawowa','Weryfikacja', buttons],
-                    ['Calypso Fitness Gym','432342423','342 - Galeria Morena','Pracownik','Anna Nowak (a.nowak@calypso.com)','2018-02-02 12:23:23','Lista rezerwowa','Weryfikacja', buttons],
-                    ['Calypso Fitness Gym','432342423','342 - Galeria Morena','Pracownik','Anna Nowak (a.nowak@calypso.com)','2018-02-02 12:23:23','Lista rezerwowa','Potwierdzone', buttons],
-                    ['Calypso Fitness Gym','432342423','342 - Galeria Morena','Pracownik','Anna Nowak (a.nowak@calypso.com)','2018-02-02 12:23:23','Lista rezerwowa','Weryfikacja', buttons],
-                    ['Calypso Fitness Gym','432342423','342 - Galeria Morena','Pracownik','Anna Nowak (a.nowak@calypso.com)','2018-02-02 12:23:23','Lista rezerwowa','Weryfikacja', buttons],
-                    ['Calypso Fitness Gym','432342423','342 - Galeria Morena','Pracownik','Anna Nowak (a.nowak@calypso.com)','2018-02-02 12:23:23','Poza listą','Nowe', buttons],
-                    ['Calypso Fitness Gym','432342423','342 - Galeria Morena','Pracownik','Anna Nowak (a.nowak@calypso.com)','2018-02-02 12:23:23','Poza listą','Odrzucone', buttons]
+                    ['Calypso Fitness Gym','432342423','342 - Galeria Morena','Instruktor','Anna Nowak (a.nowak@calypso.com)','2018-02-02 12:23:23','Lista podstawowa','Potwierdzone', buttons],
+                    ['Calypso Fitness Gym','432342423','342 - Galeria Morena','Instruktor','Anna Nowak (a.nowak@calypso.com)','2018-02-02 12:23:23','Lista podstawowa','Potwierdzone', buttons],
+                    ['Calypso Fitness Gym','432342423','342 - Galeria Morena','Instruktor','Anna Nowak (a.nowak@calypso.com)','2018-02-02 12:23:23','Lista podstawowa','Potwierdzone', buttons],
+                    ['Calypso Fitness Gym','432342423','342 - Galeria Morena','Instruktor','Anna Nowak (a.nowak@calypso.com)','2018-02-02 12:23:23','Lista podstawowa','Weryfikacja', buttons],
+                    ['Calypso Fitness Gym','432342423','342 - Galeria Morena','Instruktor','Anna Nowak (a.nowak@calypso.com)','2018-02-02 12:23:23','Lista rezerwowa','Weryfikacja', buttons],
+                    ['Calypso Fitness Gym','432342423','342 - Galeria Morena','Instruktor','Anna Nowak (a.nowak@calypso.com)','2018-02-02 12:23:23','Lista rezerwowa','Potwierdzone', buttons],
+                    ['Calypso Fitness Gym','432342423','342 - Galeria Morena','Instruktor','Anna Nowak (a.nowak@calypso.com)','2018-02-02 12:23:23','Lista rezerwowa','Weryfikacja', buttons],
+                    ['Calypso Fitness Gym','432342423','342 - Galeria Morena','Instruktor','Anna Nowak (a.nowak@calypso.com)','2018-02-02 12:23:23','Lista rezerwowa','Weryfikacja', buttons],
+                    ['Calypso Fitness Gym','432342423','342 - Galeria Morena','Instruktor','Anna Nowak (a.nowak@calypso.com)','2018-02-02 12:23:23','Poza listą','Nowe', buttons],
+                    ['Calypso Fitness Gym','432342423','342 - Galeria Morena','Instruktor','Anna Nowak (a.nowak@calypso.com)','2018-02-02 12:23:23','Poza listą','Odrzucone', buttons]
                 ];
     
                 var idIncrement = 1;
@@ -845,7 +845,7 @@
 
                 $('.addRowButton').on('click', function() {
                     var curDate = new Date().toJSON().replace('T', ' ').slice(0,19);
-                    dt.row.add(['Calypso Fitness Gym','432342423','342 - Galeria Morena','Pracownik','Anna Nowak (a.nowak@calypso.com)',curDate,'Poza listą','Nowe', buttons])
+                    dt.row.add(['Calypso Fitness Gym','432342423','342 - Galeria Morena','Instruktor','Anna Nowak (a.nowak@calypso.com)',curDate,'Poza listą','Nowe', buttons])
                     .draw(false);
                     updateListLimits();
                 });
