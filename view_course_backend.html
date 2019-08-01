@@ -58,11 +58,11 @@
         <!-- CSS Customization -->
         <link rel="stylesheet" href="assets/css/custom.css">
 
-        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/css/bootstrap-select.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/css/bootstrap-select.min.css" />
 
         <!-- JS Global Compulsory -->           
         <script type="text/javascript" src="assets/plugins/jquery/jquery.min.js"></script>
-        <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/js/bootstrap-select.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/js/bootstrap-select.min.js"></script>
 
 
     </head>
@@ -151,10 +151,10 @@
                                                             <p class="name">Lista podstawowa</p>
                                                         </td>
                                                         <td class="t-align-r">
-                                                            <p>25</p>
+                                                            <p id="basicListCount">5</p>
                                                         </td>
                                                         <td class="t-align-r">
-                                                            <p>25</p>
+                                                            <p>10</p>
                                                         </td>
                                                     </tr>
                                                 <tr>
@@ -162,10 +162,10 @@
                                                         <p class="name">Lista rezerwowa</p>
                                                     </td>
                                                     <td class="t-align-r">
-                                                        <p>3</p>
+                                                        <p id="reserveListCount">4</p>
                                                     </td>
                                                     <td class="t-align-r">
-                                                            <p>10</p>
+                                                            <p>5</p>
                                                         </td>
                                                 </tr>
                                                 <tr>
@@ -173,7 +173,7 @@
                                                             <p class="name">Poza listą (nowe lub odrzucone)</p>
                                                         </td>
                                                         <td class="t-align-r">
-                                                            <p>7</p>
+                                                            <p id="unlistedCount">2</p>
                                                         </td>
                                                         <td class="t-align-r">
                                                                 <p>15</p>
@@ -189,10 +189,10 @@
                                                     <p class="name">Liczba zgłoszeń</p>
                                                 </th>
                                                 <th class="t-align-r">
-                                                    <p>35</p>
+                                                    <p id="totalCount">17</p>
                                                 </th>
                                                 <th class="t-align-r">
-                                                        <p>50</p>
+                                                        <p>30</p>
                                                     </th>
                                             </tr>
                                         </tfoot>         
@@ -508,6 +508,9 @@
                         <form action="" id="sky-form" class="sky-form">
                             <fieldset>
                                 <h4>Lista zgłoszeń</h4>
+                                <button type="button" class="btn-u btn-u-default addRowButton">
+                                    Dodaj zgłoszenie
+                                </button>
                                 <div class="row">
                                     <div class="col-md-2">
                                         <label>Status</label>
@@ -564,7 +567,6 @@
                                                 <th>Obiekt</th>
                                                 <th>Stanowisko</th>
                                                 <th>Uczestnik</th>
-                                                <th>E-mail uczestnika</th>
                                                 <th>Sygnatura czasowa</th>
                                                 <th>Lista</th>
                                                 <th>Status</th>
@@ -573,383 +575,7 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
-                                           
-                                            <td>Calypso Fitness Gym</td>
-                                            <td>432342423</td>
-                                            <td>342 - Galeria Morena</td>
-                                            <td>Pracownik</td>
-                                            <td>Anna Nowak </td>
-                                            <td style="white-space: nowrap; width: 1%;">a.nowak@calypso.com</td>
-                                            <td >2018-02-02 12:23:23</td>
-                                            <td>Poza listą</td>
-                                            <td>Nowe</td>
-                                            <td style="white-space: nowrap; width: 1%;">
-                                                <div class="tabledit-toolbar btn-toolbar" style="text-align: left;">
-                                                    <button type="button" class="tabledit-edit-button btn-u btn-brd btn-u-orange btn-brd-hover btn-u-sm btn-u-s" style="float: none;" title="Odrzuć" >
-                                                        <i class="fa fa-ban"></i>
-                                                    </button>
-                                                    <button type="button" class="tabledit-delete-button btn-u btn-brd btn-u-dark btn-brd-hover btn-u-sm margin-left-5" style="float: none;" title="Usuń" >
-                                                        <i class="fa fa-trash"></i>
-                                                     </button>
-                                                     <button type="button" class="tabledit-preview-button btn-u btn-brd btn-brd-hover btn-u-sm margin-left-5" style="float: none;" title="Zobacz szczegóły"  onclick="location.href = 'applicant_form.html'">
-                                                            <i class="fa fa-eye"></i>
-                                                         </button>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr class="danger">
-                                           
-                                            <td>Calypso Fitness Gym</td>
-                                            <td>432342423</td>
-                                            <td>342 - Galeria Morena</td>
-                                            <td>Pracownik</td>
-                                            <td>Anna Nowak </td>
-                                            <td style="white-space: nowrap; width: 1%;">a.nowak@calypso.com</td>
-                                            <td >2018-02-02 12:23:23</td><td>Poza listą</td>
-                                            <td>Odrzucone</td>
-                                            <td style="white-space: nowrap; width: 1%;">
-                                                <div class="tabledit-toolbar btn-toolbar" style="text-align: left;">
-                                                    <button type="button" class="tabledit-edit-button btn-u btn-brd btn-u-orange btn-brd-hover btn-u-sm btn-u-s" style="float: none;" title="Odrzuć" >
-                                                        <i class="fa fa-ban"></i>
-                                                    </button>
-                                                    <button type="button" class="tabledit-delete-button btn-u btn-brd btn-u-dark btn-brd-hover btn-u-sm margin-left-5" style="float: none;" title="Usuń" >
-                                                        <i class="fa fa-trash"></i>
-                                                     </button>
-                                                     <button type="button" class="tabledit-preview-button btn-u btn-brd btn-brd-hover btn-u-sm margin-left-5" style="float: none;" title="Zobacz szczegóły"  onclick="location.href = 'applicant_form.html'"> 
-                                                            <i class="fa fa-eye"></i>
-                                                         </button>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr class="danger">
-                                           
-                                            <td>Calypso Fitness Gym</td>
-                                            <td>432342423</td>
-                                            <td>342 - Galeria Morena</td>
-                                            <td>Pracownik</td>
-                                            <td>Anna Nowak </td>
-                                            <td style="white-space: nowrap; width: 1%;">a.nowak@calypso.com</td>
-                                            <td >2018-02-02 12:23:23</td><td>Poza listą</td>
-                                            <td>Nowe</td>
-                                            <td style="white-space: nowrap; width: 1%;">
-                                                <div class="tabledit-toolbar btn-toolbar" style="text-align: left;">
-                                                    <button type="button" class="tabledit-edit-button btn-u btn-brd btn-u-orange btn-brd-hover btn-u-sm btn-u-s" style="float: none;" title="Odrzuć" >
-                                                        <i class="fa fa-ban"></i>
-                                                    </button>
-                                                    <button type="button" class="tabledit-delete-button btn-u btn-brd btn-u-dark btn-brd-hover btn-u-sm margin-left-5" style="float: none;" title="Usuń" >
-                                                        <i class="fa fa-trash"></i>
-                                                        </button>
-                                                        <button type="button" class="tabledit-preview-button btn-u btn-brd btn-brd-hover btn-u-sm margin-left-5" style="float: none;" title="Zobacz szczegóły"  onclick="location.href = 'applicant_form.html'">
-                                                            <i class="fa fa-eye"></i>
-                                                            </button>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                           
-                                            <td>Calypso Fitness Gym</td>
-                                            <td>432342423</td>
-                                            <td>342 - Galeria Morena</td>
-                                            <td>Pracownik</td>
-                                            <td>Anna Nowak </td>
-                                            <td style="white-space: nowrap; width: 1%;">a.nowak@calypso.com</td>
-                                            <td >2018-02-02 12:23:23</td><td>Poza listą</td>
-                                            <td>Nowe</td>
-                                            <td style="white-space: nowrap; width: 1%;">
-                                                <div class="tabledit-toolbar btn-toolbar" style="text-align: left;">
-                                                    <button type="button" class="tabledit-edit-button btn-u btn-brd btn-u-orange btn-brd-hover btn-u-sm btn-u-s" style="float: none;" title="Odrzuć" >
-                                                        <i class="fa fa-ban"></i>
-                                                    </button>
-                                                    <button type="button" class="tabledit-delete-button btn-u btn-brd btn-u-dark btn-brd-hover btn-u-sm margin-left-5" style="float: none;" title="Usuń" >
-                                                        <i class="fa fa-trash"></i>
-                                                        </button>
-                                                        <button type="button" class="tabledit-preview-button btn-u btn-brd btn-brd-hover btn-u-sm margin-left-5" style="float: none;" title="Zobacz szczegóły"  onclick="location.href = 'applicant_form.html'">
-                                                            <i class="fa fa-eye"></i>
-                                                            </button>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr class="danger">
-                                           
-                                            <td>Calypso Fitness Gym</td>
-                                            <td>432342423</td>
-                                            <td>342 - Galeria Morena</td>
-                                            <td>Pracownik</td>
-                                            <td>Anna Nowak </td>
-                                            <td style="white-space: nowrap; width: 1%;">a.nowak@calypso.com</td>
-                                            <td >2018-02-02 12:23:23</td><td>Lista rezerwowa</td>
-                                            <td>Potwierdzone</td>
-                                            <td style="white-space: nowrap; width: 1%;">
-                                                <div class="tabledit-toolbar btn-toolbar" style="text-align: left;">
-                                                    <button type="button" class="tabledit-edit-button btn-u btn-brd btn-u-orange btn-brd-hover btn-u-sm btn-u-s" style="float: none;" title="Odrzuć" >
-                                                        <i class="fa fa-ban"></i>
-                                                    </button>
-                                                    <button type="button" class="tabledit-delete-button btn-u btn-brd btn-u-dark btn-brd-hover btn-u-sm margin-left-5" style="float: none;" title="Usuń" >
-                                                        <i class="fa fa-trash"></i>
-                                                        </button>
-                                                        <button type="button" class="tabledit-preview-button btn-u btn-brd btn-brd-hover btn-u-sm margin-left-5" style="float: none;" title="Zobacz szczegóły"  onclick="location.href = 'applicant_form.html'">
-                                                            <i class="fa fa-eye"></i>
-                                                            </button>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr class="danger">
-                                               
-                                                <td>Calypso Fitness Gym</td>
-                                                <td>432342423</td>
-                                                <td>342 - Galeria Morena</td>
-                                                <td>Pracownik</td>
-                                                <td>Anna Nowak </td>
-                                                <td style="white-space: nowrap; width: 1%;">a.nowak@calypso.com</td>
-                                                <td >2018-02-02 12:23:23</td><td>Poza listą</td>
-                                                <td>Odrzucone</td>
-                                                <td style="white-space: nowrap; width: 1%;">
-                                                    <div class="tabledit-toolbar btn-toolbar" style="text-align: left;">
-                                                        <button type="button" class="tabledit-edit-button btn-u btn-brd btn-u-orange btn-brd-hover btn-u-sm btn-u-s" style="float: none;" title="Odrzuć" >
-                                                            <i class="fa fa-ban"></i>
-                                                        </button>
-                                                        <button type="button" class="tabledit-delete-button btn-u btn-brd btn-u-dark btn-brd-hover btn-u-sm margin-left-5" style="float: none;" title="Usuń" >
-                                                            <i class="fa fa-trash"></i>
-                                                            </button>
-                                                            <button type="button" class="tabledit-preview-button btn-u btn-brd btn-brd-hover btn-u-sm margin-left-5" style="float: none;" title="Zobacz szczegóły"  onclick="location.href = 'applicant_form.html'">
-                                                                <i class="fa fa-eye"></i>
-                                                                </button>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                   
-                                                    <td>Calypso Fitness Gym</td>
-                                                    <td>432342423</td>
-                                                    <td>342 - Galeria Morena</td>
-                                                    <td>Pracownik</td>
-                                                    <td>Anna Nowak </td>
-                                                    <td style="white-space: nowrap; width: 1%;">a.nowak@calypso.com</td>
-                                                    <td >2018-02-02 12:23:23</td><td>Lista rezerwowa</td>
-                                                    <td>Weryfikacja</td>
-                                                    <td style="white-space: nowrap; width: 1%;">
-                                                        <div class="tabledit-toolbar btn-toolbar" style="text-align: left;">
-                                                            <button type="button" class="tabledit-edit-button btn-u btn-brd btn-u-orange btn-brd-hover btn-u-sm btn-u-s" style="float: none;" title="Odrzuć" >
-                                                                <i class="fa fa-ban"></i>
-                                                            </button>
-                                                            <button type="button" class="tabledit-delete-button btn-u btn-brd btn-u-dark btn-brd-hover btn-u-sm margin-left-5" style="float: none;" title="Usuń" >
-                                                                <i class="fa fa-trash"></i>
-                                                                </button>
-                                                                <button type="button" class="tabledit-preview-button btn-u btn-brd btn-brd-hover btn-u-sm margin-left-5" style="float: none;" title="Zobacz szczegóły"  onclick="location.href = 'applicant_form.html'">
-                                                                    <i class="fa fa-eye"></i>
-                                                                    </button>
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                       
-                                                        <td>Calypso Fitness Gym</td>
-                                                        <td>432342423</td>
-                                                        <td>342 - Galeria Morena</td>
-                                                        <td>Pracownik</td>
-                                                        <td>Anna Nowak </td>
-                                                        <td style="white-space: nowrap; width: 1%;">a.nowak@calypso.com</td>
-                                                        <td >2018-02-02 12:23:23</td><td>Lista rezerwowa</td>
-                                                        <td>Weryfikacja</td>
-                                                        <td style="white-space: nowrap; width: 1%;">
-                                                            <div class="tabledit-toolbar btn-toolbar" style="text-align: left;">
-                                                                <button type="button" class="tabledit-edit-button btn-u btn-brd btn-u-orange btn-brd-hover btn-u-sm btn-u-s" style="float: none;" title="Odrzuć" >
-                                                                    <i class="fa fa-ban"></i>
-                                                                </button>
-                                                                <button type="button" class="tabledit-delete-button btn-u btn-brd btn-u-dark btn-brd-hover btn-u-sm margin-left-5" style="float: none;" title="Usuń" >
-                                                                    <i class="fa fa-trash"></i>
-                                                                    </button>
-                                                                    <button type="button" class="tabledit-preview-button btn-u btn-brd btn-brd-hover btn-u-sm margin-left-5" style="float: none;" title="Zobacz szczegóły"  onclick="location.href = 'applicant_form.html'">
-                                                                        <i class="fa fa-eye"></i>
-                                                                        </button>
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                           
-                                                            <td>Calypso Fitness Gym</td>
-                                                            <td>432342423</td>
-                                                            <td>342 - Galeria Morena</td>
-                                                            <td>Pracownik</td>
-                                                            <td>Anna Nowak </td>
-                                                            <td style="white-space: nowrap; width: 1%;">a.nowak@calypso.com</td>
-                                                            <td >2018-02-02 12:23:23</td><td>Poza listą</td>
-                                                            <td>Nowe</td>
-                                                            <td style="white-space: nowrap; width: 1%;">
-                                                                <div class="tabledit-toolbar btn-toolbar" style="text-align: left;">
-                                                                    <button type="button" class="tabledit-edit-button btn-u btn-brd btn-u-orange btn-brd-hover btn-u-sm btn-u-s" style="float: none;" title="Odrzuć" >
-                                                                        <i class="fa fa-ban"></i>
-                                                                    </button>
-                                                                    <button type="button" class="tabledit-delete-button btn-u btn-brd btn-u-dark btn-brd-hover btn-u-sm margin-left-5" style="float: none;" title="Usuń" >
-                                                                        <i class="fa fa-trash"></i>
-                                                                        </button>
-                                                                        <button type="button" class="tabledit-preview-button btn-u btn-brd btn-brd-hover btn-u-sm margin-left-5" style="float: none;" title="Zobacz szczegóły"  onclick="location.href = 'applicant_form.html'">
-                                                                            <i class="fa fa-eye"></i>
-                                                                            </button>
-                                                                    </div>
-                                                                </div>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                               
-                                                                <td>Calypso Fitness Gym</td>
-                                                                <td>432342423</td>
-                                                                <td>342 - Galeria Morena</td>
-                                                                <td>Pracownik</td>
-                                                                <td>Anna Nowak </td>
-                                                                <td style="white-space: nowrap; width: 1%;">a.nowak@calypso.com</td>
-                                                                <td >2018-02-02 12:23:23</td><td>Lista podstawowa</td>
-                                                                <td>Potwierdzone</td>
-                                                                <td style="white-space: nowrap; width: 1%;">
-                                                                    <div class="tabledit-toolbar btn-toolbar" style="text-align: left;">
-                                                                        <button type="button" class="tabledit-edit-button btn-u btn-brd btn-u-orange btn-brd-hover btn-u-sm btn-u-s" style="float: none;" title="Odrzuć" >
-                                                                            <i class="fa fa-ban"></i>
-                                                                        </button>
-                                                                        <button type="button" class="tabledit-delete-button btn-u btn-brd btn-u-dark btn-brd-hover btn-u-sm margin-left-5" style="float: none;" title="Usuń" >
-                                                                            <i class="fa fa-trash"></i>
-                                                                            </button>
-                                                                            <button type="button" class="tabledit-preview-button btn-u btn-brd btn-brd-hover btn-u-sm margin-left-5" style="float: none;" title="Zobacz szczegóły"  onclick="location.href = 'applicant_form.html'">
-                                                                                <i class="fa fa-eye"></i>
-                                                                                </button>
-                                                                        </div>
-                                                                    </div>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                   
-                                                                    <td>Calypso Fitness Gym</td>
-                                                                    <td>432342423</td>
-                                                                    <td>342 - Galeria Morena</td>
-                                                                    <td>Pracownik</td>
-                                                                    <td>Anna Nowak </td>
-                                                                    <td style="white-space: nowrap; width: 1%;">a.nowak@calypso.com</td>
-                                                                    <td >2018-02-02 12:23:23</td><td>Lista podstawowa</td>
-                                                                    <td>Potwierdzone</td>
-                                                                    <td style="white-space: nowrap; width: 1%;">
-                                                                        <div class="tabledit-toolbar btn-toolbar" style="text-align: left;">
-                                                                            <button type="button" class="tabledit-edit-button btn-u btn-brd btn-u-orange btn-brd-hover btn-u-sm btn-u-s" style="float: none;" title="Odrzuć" >
-                                                                                <i class="fa fa-ban"></i>
-                                                                            </button>
-                                                                            <button type="button" class="tabledit-delete-button btn-u btn-brd btn-u-dark btn-brd-hover btn-u-sm margin-left-5" style="float: none;" title="Usuń" >
-                                                                                <i class="fa fa-trash"></i>
-                                                                                </button>
-                                                                                <button type="button" class="tabledit-preview-button btn-u btn-brd btn-brd-hover btn-u-sm margin-left-5" style="float: none;" title="Zobacz szczegóły"  onclick="location.href = 'applicant_form.html'">
-                                                                                    <i class="fa fa-eye"></i>
-                                                                                    </button>
-                                                                            </div>
-                                                                        </div>
-                                                                    </td>
-                                                                </tr>
-                                                                <tr>
-                                                                       
-                                                                        <td>Calypso Fitness Gym</td>
-                                                                        <td>432342423</td>
-                                                                        <td>342 - Galeria Morena</td>
-                                                                        <td>Pracownik</td>
-                                                                        <td>Anna Nowak </td>
-                                                                        <td style="white-space: nowrap; width: 1%;">a.nowak@calypso.com</td>
-                                                                        <td >2018-02-02 12:23:23</td><td>Poza listą</td>
-                                                                        <td>Nowe</td>
-                                                                        <td style="white-space: nowrap; width: 1%;">
-                                                                            <div class="tabledit-toolbar btn-toolbar" style="text-align: left;">
-                                                                                <button type="button" class="tabledit-edit-button btn-u btn-brd btn-u-orange btn-brd-hover btn-u-sm btn-u-s" style="float: none;" title="Odrzuć" >
-                                                                                    <i class="fa fa-ban"></i>
-                                                                                </button>
-                                                                                <button type="button" class="tabledit-delete-button btn-u btn-brd btn-u-dark btn-brd-hover btn-u-sm margin-left-5" style="float: none;" title="Usuń" >
-                                                                                    <i class="fa fa-trash"></i>
-                                                                                    </button>
-                                                                                    <button type="button" class="tabledit-preview-button btn-u btn-brd btn-brd-hover btn-u-sm margin-left-5" style="float: none;" title="Zobacz szczegóły"  onclick="location.href = 'applicant_form.html'">
-                                                                                        <i class="fa fa-eye"></i>
-                                                                                        </button>
-                                                                                </div>
-                                                                            </div>
-                                                                        </td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                           
-                                                                            <td>Calypso Fitness Gym</td>
-                                                                            <td>432342423</td>
-                                                                            <td>342 - Galeria Morena</td>
-                                                                            <td>Pracownik</td>
-                                                                            <td>Anna Nowak </td>
-                                                                            <td style="white-space: nowrap; width: 1%;">a.nowak@calypso.com</td>
-                                                                            <td >2018-02-02 12:23:23</td><td>Lista podstawowa</td>
-                                                                            <td>Potwierdzone</td>
-                                                                            <td style="white-space: nowrap; width: 1%;">
-                                                                                <div class="tabledit-toolbar btn-toolbar" style="text-align: left;">
-                                                                                    <button type="button" class="tabledit-edit-button btn-u btn-brd btn-u-orange btn-brd-hover btn-u-sm btn-u-s" style="float: none;" title="Odrzuć" >
-                                                                                        <i class="fa fa-ban"></i>
-                                                                                    </button>
-                                                                                    <button type="button" class="tabledit-delete-button btn-u btn-brd btn-u-dark btn-brd-hover btn-u-sm margin-left-5" style="float: none;" title="Usuń" >
-                                                                                        <i class="fa fa-trash"></i>
-                                                                                        </button>
-                                                                                        <button type="button" class="tabledit-preview-button btn-u btn-brd btn-brd-hover btn-u-sm margin-left-5" style="float: none;" title="Zobacz szczegóły"  onclick="location.href = 'applicant_form.html'">
-                                                                                            <i class="fa fa-eye"></i>
-                                                                                            </button>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </td>
-                                                                        </tr>
-                                                                        <tr>
-                                                                               
-                                                                                <td>Calypso Fitness Gym</td>
-                                                                                <td>432342423</td>
-                                                                                <td>342 - Galeria Morena</td>
-                                                                                <td>Pracownik</td>
-                                                                                <td>Anna Nowak </td>
-                                                                                <td style="white-space: nowrap; width: 1%;">a.nowak@calypso.com</td>
-                                                                                <td >2018-02-02 12:23:23</td><td>Lista podstawowa</td>
-                                                                                <td>Potwierdzone</td>
-                                                                                <td style="white-space: nowrap; width: 1%;">
-                                                                                    <div class="tabledit-toolbar btn-toolbar" style="text-align: left;">
-                                                                                        <button type="button" class="tabledit-edit-button btn-u btn-brd btn-u-orange btn-brd-hover btn-u-sm btn-u-s" style="float: none;" title="Odrzuć" >
-                                                                                            <i class="fa fa-ban"></i>
-                                                                                        </button>
-                                                                                        <button type="button" class="tabledit-delete-button btn-u btn-brd btn-u-dark btn-brd-hover btn-u-sm margin-left-5" style="float: none;" title="Usuń" >
-                                                                                            <i class="fa fa-trash"></i>
-                                                                                            </button>
-                                                                                            <button type="button" class="tabledit-preview-button btn-u btn-brd btn-brd-hover btn-u-sm margin-left-5" style="float: none;" title="Zobacz szczegóły"  onclick="location.href = 'applicant_form.html'">
-                                                                                                <i class="fa fa-eye"></i>
-                                                                                                </button>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </td>
-                                                                            </tr>
-                                                                            <tr>
-                                                                                   
-                                                                                    <td>Calypso Fitness Gym</td>
-                                                                                    <td>432342423</td>
-                                                                                    <td>342 - Galeria Morena</td>
-                                                                                    <td>Pracownik</td>
-                                                                                    <td>Anna Nowak </td>
-                                                                                    <td style="white-space: nowrap; width: 1%;">a.nowak@calypso.com</td>
-                                                                                    <td >2018-02-02 12:23:23</td><td>Lista podstawowa</td>
-                                                                                    <td>Weryfikacja</td>
-                                                                                    <td style="white-space: nowrap; width: 1%;">
-                                                                                        <div class="tabledit-toolbar btn-toolbar" style="text-align: left;">
-                                                                                            <button type="button" class="tabledit-edit-button btn-u btn-brd btn-u-orange btn-brd-hover btn-u-sm btn-u-s" style="float: none;" title="Odrzuć" >
-                                                                                                <i class="fa fa-ban"></i>
-                                                                                            </button>
-                                                                                            <button type="button" class="tabledit-delete-button btn-u btn-brd btn-u-dark btn-brd-hover btn-u-sm margin-left-5" style="float: none;" title="Usuń" >
-                                                                                                <i class="fa fa-trash"></i>
-                                                                                                </button>
-                                                                                                <button type="button" class="tabledit-preview-button btn-u btn-brd btn-brd-hover btn-u-sm margin-left-5" style="float: none;" title="Zobacz szczegóły"  onclick="location.href = 'applicant_form.html'">
-                                                                                                    <i class="fa fa-eye"></i>
-                                                                                                    </button>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                    </td>
-                                                                                </tr>
-
+                                        
                                     </tbody>
                                 </table>
                             </fieldset>
@@ -982,7 +608,7 @@
                                 <i class="fa fa-exclamation-circle fa-lg"></i> 
                                 O poniższych zmianach statusów nie zostali powiadomienie uczestnicy. 
                                 <br>
-                                Wybierz przycisk Powiadom, a zostanie wysłane pomiadomienie e-mail do uczesstników.
+                                Wybierz przycisk Powiadom, a zostanie wysłane pomiadomienie e-mail do uczestników.
                             </div>
                             <table class="table table-striped col-xs-4">
                                 <thead>
@@ -1051,14 +677,125 @@
             });
             $(document).ready(function () {
 
-    
-                $('#example').DataTable({
-                   
+                var basicLimit = 10;
+                var reserveLimit = 5;
+                var totalLimit = 30;
 
+                function countBasicList() {
+                    var rows = document.getElementById('example').rows,
+                        len = rows.length,
+                        i,
+                        cellNum = 6,
+                        count = 0,
+                        cell;
+
+                    for (i = 2; i < len; i++) {
+                        cell = rows[i].cells[cellNum];
+                        if (cell.innerHTML === 'Lista podstawowa') {
+                            count++;
+                        }
+                    }
+
+                    return count;
+                }
+
+                function countReserveList() {
+                    var rows = document.getElementById('example').rows,
+                        len = rows.length,
+                        i,
+                        cellNum = 6,
+                        count = 0,
+                        cell;
+
+                    for (i = 2; i < len; i++) {
+                        cell = rows[i].cells[cellNum];
+                        if (cell.innerHTML === 'Lista rezerwowa') {
+                            count++;
+                        }
+                    }
+
+                    return count;
+                }
+
+                function basicLimitReached() {
+                    if (countBasicList() >= basicLimit) return true;
+
+                    return false
+                }
+
+                function reserveLimitReached() {
+                    if (countReserveList() >= reserveLimit) return true;
+
+                    return false
+                }
+
+                function updateListLimits() {
+                    var basicListCount = countBasicList();
+                    $('#basicListCount').text(basicListCount);
+                    var reserveListCount = countReserveList();
+                    $('#reserveListCount').text(reserveListCount);
+                    $('#unlistedCount').text(document.getElementById('example').rows.length - (basicListCount + reserveListCount));
+                    $('#totalCount').text(basicListCount + reserveListCount);
+                }
+
+                function updateLists() {
+                    while (!basicLimitReached() && countReserveList() > 0) {
+                        var reserveList = $(document.getElementById('example').rows).find("td:contains('Lista rezerwowa')");
+                        $(reserveList[0]).text('Lista podstawowa')
+                    }
+                }
+
+                var verifyButton = '<button type="button" class="tabledit-verify-button btn-u btn-brd btn-u-dark btn-brd-hover btn-u-sm margin-left-5" style="float: none;" title="Zweryfikuj">\
+                                        <i class="fa fa-certificate"></i>\
+                                    </button>';
+                
+                var confirmButton = '<button type="button" class="tabledit-confirm-button btn-u btn-brd btn-u-dark btn-brd-hover btn-u-sm margin-left-5" style="float: none;" title="Potwierdź">\
+                                        <i class="fa fa-check"></i>\
+                                    </button>';
+
+                var rejectButton = '<button type="button" class="tabledit-reject-button btn-u btn-brd btn-u-orange btn-brd-hover btn-u-sm btn-u-s margin-left-5" style="float: none;" title="Odrzuć" >\
+                                        <i class="fa fa-ban"></i>\
+                                    </button>';
+                var resignButton = '<button type="button" class="tabledit-resign-button btn-u btn-brd btn-u-orange btn-brd-hover btn-u-sm btn-u-s margin-left-5" style="float: none;" title="Zrezygnuj" >\
+                    <i class="fa fa-stop-circle"></i>\
+                </button>';                                        
+                var deleteButton = '<button type="button" class="tabledit-delete-button btn-u btn-brd btn-u-dark btn-brd-hover btn-u-sm margin-left-5" style="float: none;" title="Usuń" >\
+                                        <i class="fa fa-trash"></i>\
+                                    </button>';
+                var viewButton = '<button type="button" class="tabledit-preview-button btn-u btn-brd btn-brd-hover btn-u-sm margin-left-5" style="float: none;" title="Zobacz szczegóły"  onclick="location.href = \'applicant_form.html\'">\
+                                        <i class="fa fa-eye"></i>\
+                                    </button>';
+                var buttons = '<div class="tabledit-toolbar btn-toolbar" style="text-align: left;">'
+                                + verifyButton + confirmButton + rejectButton + resignButton + deleteButton + viewButton + '</div>';
+                var rows = [
+                    ['Calypso Fitness Gym','432342423','342 - Galeria Morena','Pracownik','Anna Nowak (a.nowak@calypso.com)','2018-02-02 12:23:23','Lista podstawowa','Potwierdzone',
+                     buttons],
+                    ['Calypso Fitness Gym','432342423','342 - Galeria Morena','Pracownik','Anna Nowak (a.nowak@calypso.com)','2018-02-02 12:23:23','Lista podstawowa','Potwierdzone', buttons],
+                    ['Calypso Fitness Gym','432342423','342 - Galeria Morena','Pracownik','Anna Nowak (a.nowak@calypso.com)','2018-02-02 12:23:23','Lista podstawowa','Potwierdzone', buttons],
+                    ['Calypso Fitness Gym','432342423','342 - Galeria Morena','Pracownik','Anna Nowak (a.nowak@calypso.com)','2018-02-02 12:23:23','Lista podstawowa','Potwierdzone', buttons],
+                    ['Calypso Fitness Gym','432342423','342 - Galeria Morena','Pracownik','Anna Nowak (a.nowak@calypso.com)','2018-02-02 12:23:23','Lista podstawowa','Weryfikacja', buttons],
+                    ['Calypso Fitness Gym','432342423','342 - Galeria Morena','Pracownik','Anna Nowak (a.nowak@calypso.com)','2018-02-02 12:23:23','Lista rezerwowa','Weryfikacja', buttons],
+                    ['Calypso Fitness Gym','432342423','342 - Galeria Morena','Pracownik','Anna Nowak (a.nowak@calypso.com)','2018-02-02 12:23:23','Lista rezerwowa','Potwierdzone', buttons],
+                    ['Calypso Fitness Gym','432342423','342 - Galeria Morena','Pracownik','Anna Nowak (a.nowak@calypso.com)','2018-02-02 12:23:23','Lista rezerwowa','Weryfikacja', buttons],
+                    ['Calypso Fitness Gym','432342423','342 - Galeria Morena','Pracownik','Anna Nowak (a.nowak@calypso.com)','2018-02-02 12:23:23','Lista rezerwowa','Weryfikacja', buttons],
+                    ['Calypso Fitness Gym','432342423','342 - Galeria Morena','Pracownik','Anna Nowak (a.nowak@calypso.com)','2018-02-02 12:23:23','Poza listą','Nowe', buttons],
+                    ['Calypso Fitness Gym','432342423','342 - Galeria Morena','Pracownik','Anna Nowak (a.nowak@calypso.com)','2018-02-02 12:23:23','Poza listą','Odrzucone', buttons]
+                ];
+    
+                var idIncrement = 1;
+                var dt = $('#example').DataTable({
+                   
+                    data: rows,
                     columnDefs: [ {
                         orderable: false,
                         className: '',
-                        targets:   0
+                        targets:   0,
+                    },
+                    {
+                        targets: 8,
+                        createdCell: function (td, cellData, rowData, row, col) {
+                            $(td).css('white-space', 'nowrap');
+                        }
                     } ],
                    
                     order: [[ 7, 'asc' ]],
@@ -1070,9 +807,72 @@
                     "scrollCollapse": true,
                     "language": {
                         "url": "assets/plugins/datatable/lang/Polish.json"
+                    },
+                    "createdRow": function( row, data, dataIndex ) {
+                        $(row).attr( 'data-row-id', idIncrement );
+                        idIncrement++;
                     }
                 });
-            
+
+                $('.addRowButton').on('click', function() {
+                    dt.row.add(['Calypso Fitness Gym','432342423','342 - Galeria Morena','Pracownik','Anna Nowak (a.nowak@calypso.com)','2018-02-02 12:23:23','Poza listą','Nowe', buttons])
+                    .draw(false);
+                    updateListLimits();
+                });
+
+                $(document).on('click', '.tabledit-verify-button', function() {
+                    $(this).parents().eq(2).find('td:nth-child(8)').text('Weryfikacja');
+                    var listState = $(this).parents().eq(2).find('td:nth-child(7)');
+                    if (listState.text() === 'Poza listą') {
+                        if (!basicLimitReached()) {
+                            listState.text('Lista podstawowa');
+                        } else if (!reserveLimitReached()) {
+                            listState.text('Lista rezerwowa');
+                        }
+                    }
+                    updateLists();
+                    updateListLimits();
+                });
+
+                $(document).on('click', '.tabledit-confirm-button', function() {
+                    $(this).parents().eq(2).find('td:nth-child(8)').text('Potwierdzone');
+                    var listState = $(this).parents().eq(2).find('td:nth-child(7)');
+                    if (listState.text() === 'Poza listą') {
+                        if (!basicLimitReached()) {
+                            listState.text('Lista podstawowa');
+                        } else if (!reserveLimitReached()) {
+                            listState.text('Lista rezerwowa');
+                        }
+                    }
+                    updateLists();
+                    updateListLimits();
+                });
+
+                $(document).on('click', '.tabledit-reject-button', function() {
+                    $(this).parents().eq(2).find('td:nth-child(8)').text('Odrzucone');
+                    var listState = $(this).parents().eq(2).find('td:nth-child(7)');
+                    if (listState.text() === 'Lista podstawowa' || listState.text() === 'Lista rezerwowa') {
+                        listState.text('Poza listą');
+                    }
+                    updateLists();
+                    updateListLimits();
+                });
+
+                $(document).on('click', '.tabledit-resign-button', function() {
+                    $(this).parents().eq(2).find('td:nth-child(8)').text('Rezygnacja');
+                    var listState = $(this).parents().eq(2).find('td:nth-child(7)');
+                    if (listState.text() === 'Lista podstawowa' || listState.text() === 'Lista rezerwowa') {
+                        listState.text('Poza listą');
+                    }
+                    updateLists();
+                    updateListLimits();
+                });
+
+                $(document).on('click', '.tabledit-delete-button', function() {
+                    $('#example').DataTable().row($(this).parents().eq(2)).remove().draw();
+                    updateLists();
+                    updateListLimits();
+                });
             
             });
         </script>
